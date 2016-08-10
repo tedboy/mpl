@@ -1,0 +1,422 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.2.17.123. matplotlib.pyplot.Line2D.set_snap &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="1.2.17. matplotlib.pyplot.Line2D" href="matplotlib.pyplot.Line2D.html"/>
+        <link rel="next" title="1.2.17.124. matplotlib.pyplot.Line2D.set_solid_capstyle" href="matplotlib.pyplot.Line2D.set_solid_capstyle.html"/>
+        <link rel="prev" title="1.2.17.122. matplotlib.pyplot.Line2D.set_sketch_params" href="matplotlib.pyplot.Line2D.set_sketch_params.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.pyplot.html">1. matplotlib.pyplot</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.pyplot.html#functions">1.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.pyplot.html#classes">1.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Annotation.html">1.2.1. matplotlib.pyplot.Annotation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Arrow.html">1.2.2. matplotlib.pyplot.Arrow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Artist.html">1.2.3. matplotlib.pyplot.Artist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.AutoLocator.html">1.2.4. matplotlib.pyplot.AutoLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Axes.html">1.2.5. matplotlib.pyplot.Axes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Button.html">1.2.6. matplotlib.pyplot.Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Circle.html">1.2.7. matplotlib.pyplot.Circle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Figure.html">1.2.8. matplotlib.pyplot.Figure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.FigureCanvasBase.html">1.2.9. matplotlib.pyplot.FigureCanvasBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.FixedFormatter.html">1.2.10. matplotlib.pyplot.FixedFormatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.FixedLocator.html">1.2.11. matplotlib.pyplot.FixedLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.FormatStrFormatter.html">1.2.12. matplotlib.pyplot.FormatStrFormatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Formatter.html">1.2.13. matplotlib.pyplot.Formatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.FuncFormatter.html">1.2.14. matplotlib.pyplot.FuncFormatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.GridSpec.html">1.2.15. matplotlib.pyplot.GridSpec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.IndexLocator.html">1.2.16. matplotlib.pyplot.IndexLocator</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="matplotlib.pyplot.Line2D.html">1.2.17. matplotlib.pyplot.Line2D</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.axes.html">1.2.17.1. matplotlib.pyplot.Line2D.axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.mouseover.html">1.2.17.2. matplotlib.pyplot.Line2D.mouseover</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.stale.html">1.2.17.3. matplotlib.pyplot.Line2D.stale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.add_callback.html">1.2.17.4. matplotlib.pyplot.Line2D.add_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.contains.html">1.2.17.5. matplotlib.pyplot.Line2D.contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.convert_xunits.html">1.2.17.6. matplotlib.pyplot.Line2D.convert_xunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.convert_yunits.html">1.2.17.7. matplotlib.pyplot.Line2D.convert_yunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.draw.html">1.2.17.8. matplotlib.pyplot.Line2D.draw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.findobj.html">1.2.17.9. matplotlib.pyplot.Line2D.findobj</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.format_cursor_data.html">1.2.17.10. matplotlib.pyplot.Line2D.format_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_aa.html">1.2.17.11. matplotlib.pyplot.Line2D.get_aa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_agg_filter.html">1.2.17.12. matplotlib.pyplot.Line2D.get_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_alpha.html">1.2.17.13. matplotlib.pyplot.Line2D.get_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_animated.html">1.2.17.14. matplotlib.pyplot.Line2D.get_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_antialiased.html">1.2.17.15. matplotlib.pyplot.Line2D.get_antialiased</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_axes.html">1.2.17.16. matplotlib.pyplot.Line2D.get_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_c.html">1.2.17.17. matplotlib.pyplot.Line2D.get_c</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_children.html">1.2.17.18. matplotlib.pyplot.Line2D.get_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_clip_box.html">1.2.17.19. matplotlib.pyplot.Line2D.get_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_clip_on.html">1.2.17.20. matplotlib.pyplot.Line2D.get_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_clip_path.html">1.2.17.21. matplotlib.pyplot.Line2D.get_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_color.html">1.2.17.22. matplotlib.pyplot.Line2D.get_color</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_contains.html">1.2.17.23. matplotlib.pyplot.Line2D.get_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_cursor_data.html">1.2.17.24. matplotlib.pyplot.Line2D.get_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_dash_capstyle.html">1.2.17.25. matplotlib.pyplot.Line2D.get_dash_capstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_dash_joinstyle.html">1.2.17.26. matplotlib.pyplot.Line2D.get_dash_joinstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_data.html">1.2.17.27. matplotlib.pyplot.Line2D.get_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_drawstyle.html">1.2.17.28. matplotlib.pyplot.Line2D.get_drawstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_figure.html">1.2.17.29. matplotlib.pyplot.Line2D.get_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_fillstyle.html">1.2.17.30. matplotlib.pyplot.Line2D.get_fillstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_gid.html">1.2.17.31. matplotlib.pyplot.Line2D.get_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_label.html">1.2.17.32. matplotlib.pyplot.Line2D.get_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_linestyle.html">1.2.17.33. matplotlib.pyplot.Line2D.get_linestyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_linewidth.html">1.2.17.34. matplotlib.pyplot.Line2D.get_linewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_ls.html">1.2.17.35. matplotlib.pyplot.Line2D.get_ls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_lw.html">1.2.17.36. matplotlib.pyplot.Line2D.get_lw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_marker.html">1.2.17.37. matplotlib.pyplot.Line2D.get_marker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_markeredgecolor.html">1.2.17.38. matplotlib.pyplot.Line2D.get_markeredgecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_markeredgewidth.html">1.2.17.39. matplotlib.pyplot.Line2D.get_markeredgewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_markerfacecolor.html">1.2.17.40. matplotlib.pyplot.Line2D.get_markerfacecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_markerfacecoloralt.html">1.2.17.41. matplotlib.pyplot.Line2D.get_markerfacecoloralt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_markersize.html">1.2.17.42. matplotlib.pyplot.Line2D.get_markersize</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_markevery.html">1.2.17.43. matplotlib.pyplot.Line2D.get_markevery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_mec.html">1.2.17.44. matplotlib.pyplot.Line2D.get_mec</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_mew.html">1.2.17.45. matplotlib.pyplot.Line2D.get_mew</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_mfc.html">1.2.17.46. matplotlib.pyplot.Line2D.get_mfc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_mfcalt.html">1.2.17.47. matplotlib.pyplot.Line2D.get_mfcalt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_ms.html">1.2.17.48. matplotlib.pyplot.Line2D.get_ms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_path.html">1.2.17.49. matplotlib.pyplot.Line2D.get_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_path_effects.html">1.2.17.50. matplotlib.pyplot.Line2D.get_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_picker.html">1.2.17.51. matplotlib.pyplot.Line2D.get_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_pickradius.html">1.2.17.52. matplotlib.pyplot.Line2D.get_pickradius</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_rasterized.html">1.2.17.53. matplotlib.pyplot.Line2D.get_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_sketch_params.html">1.2.17.54. matplotlib.pyplot.Line2D.get_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_snap.html">1.2.17.55. matplotlib.pyplot.Line2D.get_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_solid_capstyle.html">1.2.17.56. matplotlib.pyplot.Line2D.get_solid_capstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_solid_joinstyle.html">1.2.17.57. matplotlib.pyplot.Line2D.get_solid_joinstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_transform.html">1.2.17.58. matplotlib.pyplot.Line2D.get_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_transformed_clip_path_and_affine.html">1.2.17.59. matplotlib.pyplot.Line2D.get_transformed_clip_path_and_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_url.html">1.2.17.60. matplotlib.pyplot.Line2D.get_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_visible.html">1.2.17.61. matplotlib.pyplot.Line2D.get_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_window_extent.html">1.2.17.62. matplotlib.pyplot.Line2D.get_window_extent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_xdata.html">1.2.17.63. matplotlib.pyplot.Line2D.get_xdata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_xydata.html">1.2.17.64. matplotlib.pyplot.Line2D.get_xydata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_ydata.html">1.2.17.65. matplotlib.pyplot.Line2D.get_ydata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.get_zorder.html">1.2.17.66. matplotlib.pyplot.Line2D.get_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.have_units.html">1.2.17.67. matplotlib.pyplot.Line2D.have_units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.hitlist.html">1.2.17.68. matplotlib.pyplot.Line2D.hitlist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.is_dashed.html">1.2.17.69. matplotlib.pyplot.Line2D.is_dashed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.is_figure_set.html">1.2.17.70. matplotlib.pyplot.Line2D.is_figure_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.is_transform_set.html">1.2.17.71. matplotlib.pyplot.Line2D.is_transform_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.pchanged.html">1.2.17.72. matplotlib.pyplot.Line2D.pchanged</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.pick.html">1.2.17.73. matplotlib.pyplot.Line2D.pick</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.pickable.html">1.2.17.74. matplotlib.pyplot.Line2D.pickable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.properties.html">1.2.17.75. matplotlib.pyplot.Line2D.properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.recache.html">1.2.17.76. matplotlib.pyplot.Line2D.recache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.recache_always.html">1.2.17.77. matplotlib.pyplot.Line2D.recache_always</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.remove.html">1.2.17.78. matplotlib.pyplot.Line2D.remove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.remove_callback.html">1.2.17.79. matplotlib.pyplot.Line2D.remove_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set.html">1.2.17.80. matplotlib.pyplot.Line2D.set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_aa.html">1.2.17.81. matplotlib.pyplot.Line2D.set_aa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_agg_filter.html">1.2.17.82. matplotlib.pyplot.Line2D.set_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_alpha.html">1.2.17.83. matplotlib.pyplot.Line2D.set_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_animated.html">1.2.17.84. matplotlib.pyplot.Line2D.set_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_antialiased.html">1.2.17.85. matplotlib.pyplot.Line2D.set_antialiased</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_axes.html">1.2.17.86. matplotlib.pyplot.Line2D.set_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_c.html">1.2.17.87. matplotlib.pyplot.Line2D.set_c</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_clip_box.html">1.2.17.88. matplotlib.pyplot.Line2D.set_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_clip_on.html">1.2.17.89. matplotlib.pyplot.Line2D.set_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_clip_path.html">1.2.17.90. matplotlib.pyplot.Line2D.set_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_color.html">1.2.17.91. matplotlib.pyplot.Line2D.set_color</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_contains.html">1.2.17.92. matplotlib.pyplot.Line2D.set_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_dash_capstyle.html">1.2.17.93. matplotlib.pyplot.Line2D.set_dash_capstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_dash_joinstyle.html">1.2.17.94. matplotlib.pyplot.Line2D.set_dash_joinstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_dashes.html">1.2.17.95. matplotlib.pyplot.Line2D.set_dashes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_data.html">1.2.17.96. matplotlib.pyplot.Line2D.set_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_drawstyle.html">1.2.17.97. matplotlib.pyplot.Line2D.set_drawstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_figure.html">1.2.17.98. matplotlib.pyplot.Line2D.set_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_fillstyle.html">1.2.17.99. matplotlib.pyplot.Line2D.set_fillstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_gid.html">1.2.17.100. matplotlib.pyplot.Line2D.set_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_label.html">1.2.17.101. matplotlib.pyplot.Line2D.set_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_linestyle.html">1.2.17.102. matplotlib.pyplot.Line2D.set_linestyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_linewidth.html">1.2.17.103. matplotlib.pyplot.Line2D.set_linewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_ls.html">1.2.17.104. matplotlib.pyplot.Line2D.set_ls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_lw.html">1.2.17.105. matplotlib.pyplot.Line2D.set_lw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_marker.html">1.2.17.106. matplotlib.pyplot.Line2D.set_marker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_markeredgecolor.html">1.2.17.107. matplotlib.pyplot.Line2D.set_markeredgecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_markeredgewidth.html">1.2.17.108. matplotlib.pyplot.Line2D.set_markeredgewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_markerfacecolor.html">1.2.17.109. matplotlib.pyplot.Line2D.set_markerfacecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_markerfacecoloralt.html">1.2.17.110. matplotlib.pyplot.Line2D.set_markerfacecoloralt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_markersize.html">1.2.17.111. matplotlib.pyplot.Line2D.set_markersize</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_markevery.html">1.2.17.112. matplotlib.pyplot.Line2D.set_markevery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_mec.html">1.2.17.113. matplotlib.pyplot.Line2D.set_mec</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_mew.html">1.2.17.114. matplotlib.pyplot.Line2D.set_mew</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_mfc.html">1.2.17.115. matplotlib.pyplot.Line2D.set_mfc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_mfcalt.html">1.2.17.116. matplotlib.pyplot.Line2D.set_mfcalt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_ms.html">1.2.17.117. matplotlib.pyplot.Line2D.set_ms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_path_effects.html">1.2.17.118. matplotlib.pyplot.Line2D.set_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_picker.html">1.2.17.119. matplotlib.pyplot.Line2D.set_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_pickradius.html">1.2.17.120. matplotlib.pyplot.Line2D.set_pickradius</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_rasterized.html">1.2.17.121. matplotlib.pyplot.Line2D.set_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_sketch_params.html">1.2.17.122. matplotlib.pyplot.Line2D.set_sketch_params</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">1.2.17.123. matplotlib.pyplot.Line2D.set_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_solid_capstyle.html">1.2.17.124. matplotlib.pyplot.Line2D.set_solid_capstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_solid_joinstyle.html">1.2.17.125. matplotlib.pyplot.Line2D.set_solid_joinstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_transform.html">1.2.17.126. matplotlib.pyplot.Line2D.set_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_url.html">1.2.17.127. matplotlib.pyplot.Line2D.set_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_visible.html">1.2.17.128. matplotlib.pyplot.Line2D.set_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_xdata.html">1.2.17.129. matplotlib.pyplot.Line2D.set_xdata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_ydata.html">1.2.17.130. matplotlib.pyplot.Line2D.set_ydata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.set_zorder.html">1.2.17.131. matplotlib.pyplot.Line2D.set_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.update.html">1.2.17.132. matplotlib.pyplot.Line2D.update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Line2D.update_from.html">1.2.17.133. matplotlib.pyplot.Line2D.update_from</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.LinearLocator.html">1.2.18. matplotlib.pyplot.LinearLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Locator.html">1.2.19. matplotlib.pyplot.Locator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.LogFormatter.html">1.2.20. matplotlib.pyplot.LogFormatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.LogFormatterExponent.html">1.2.21. matplotlib.pyplot.LogFormatterExponent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.LogFormatterMathtext.html">1.2.22. matplotlib.pyplot.LogFormatterMathtext</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.LogLocator.html">1.2.23. matplotlib.pyplot.LogLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.MaxNLocator.html">1.2.24. matplotlib.pyplot.MaxNLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.MultipleLocator.html">1.2.25. matplotlib.pyplot.MultipleLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Normalize.html">1.2.26. matplotlib.pyplot.Normalize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.NullFormatter.html">1.2.27. matplotlib.pyplot.NullFormatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.NullLocator.html">1.2.28. matplotlib.pyplot.NullLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.PolarAxes.html">1.2.29. matplotlib.pyplot.PolarAxes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Polygon.html">1.2.30. matplotlib.pyplot.Polygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Rectangle.html">1.2.31. matplotlib.pyplot.Rectangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.ScalarFormatter.html">1.2.32. matplotlib.pyplot.ScalarFormatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Slider.html">1.2.33. matplotlib.pyplot.Slider</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Subplot.html">1.2.34. matplotlib.pyplot.Subplot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.SubplotTool.html">1.2.35. matplotlib.pyplot.SubplotTool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Text.html">1.2.36. matplotlib.pyplot.Text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.TickHelper.html">1.2.37. matplotlib.pyplot.TickHelper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Widget.html">1.2.38. matplotlib.pyplot.Widget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.silent_list.html">1.2.39. matplotlib.pyplot.silent_list</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">2. matplotlib.cm</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../mpl.pyplot.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.pyplot.html">1. matplotlib.pyplot</a> &raquo;</li>
+        
+          <li><a href="matplotlib.pyplot.Line2D.html">1.2.17. matplotlib.pyplot.Line2D</a> &raquo;</li>
+        
+      <li>1.2.17.123. matplotlib.pyplot.Line2D.set_snap</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.pyplot.Line2D.set_snap.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-pyplot-line2d-set-snap">
+<h1>1.2.17.123. matplotlib.pyplot.Line2D.set_snap<a class="headerlink" href="#matplotlib-pyplot-line2d-set-snap" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="matplotlib.pyplot.Line2D.set_snap">
+<code class="descclassname">Line2D.</code><code class="descname">set_snap</code><span class="sig-paren">(</span><em>snap</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.pyplot.Line2D.set_snap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the snap setting which may be:</p>
+<blockquote>
+<div><ul class="simple">
+<li>True: snap vertices to the nearest pixel center</li>
+<li>False: leave vertices as-is</li>
+<li>None: (auto) If the path contains only rectilinear line
+segments, round to the nearest pixel center</li>
+</ul>
+</div></blockquote>
+<p>Only supported by the Agg and MacOSX backends.</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.pyplot.Line2D.set_solid_capstyle.html" class="btn btn-neutral float-right" title="1.2.17.124. matplotlib.pyplot.Line2D.set_solid_capstyle" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.pyplot.Line2D.set_sketch_params.html" class="btn btn-neutral" title="1.2.17.122. matplotlib.pyplot.Line2D.set_sketch_params" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

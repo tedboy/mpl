@@ -1,0 +1,412 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.2.36.63. matplotlib.pyplot.Text.get_wrap &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="1.2.36. matplotlib.pyplot.Text" href="matplotlib.pyplot.Text.html"/>
+        <link rel="next" title="1.2.36.64. matplotlib.pyplot.Text.get_zorder" href="matplotlib.pyplot.Text.get_zorder.html"/>
+        <link rel="prev" title="1.2.36.62. matplotlib.pyplot.Text.get_window_extent" href="matplotlib.pyplot.Text.get_window_extent.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.pyplot.html">1. matplotlib.pyplot</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.pyplot.html#functions">1.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.pyplot.html#classes">1.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Annotation.html">1.2.1. matplotlib.pyplot.Annotation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Arrow.html">1.2.2. matplotlib.pyplot.Arrow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Artist.html">1.2.3. matplotlib.pyplot.Artist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.AutoLocator.html">1.2.4. matplotlib.pyplot.AutoLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Axes.html">1.2.5. matplotlib.pyplot.Axes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Button.html">1.2.6. matplotlib.pyplot.Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Circle.html">1.2.7. matplotlib.pyplot.Circle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Figure.html">1.2.8. matplotlib.pyplot.Figure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.FigureCanvasBase.html">1.2.9. matplotlib.pyplot.FigureCanvasBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.FixedFormatter.html">1.2.10. matplotlib.pyplot.FixedFormatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.FixedLocator.html">1.2.11. matplotlib.pyplot.FixedLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.FormatStrFormatter.html">1.2.12. matplotlib.pyplot.FormatStrFormatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Formatter.html">1.2.13. matplotlib.pyplot.Formatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.FuncFormatter.html">1.2.14. matplotlib.pyplot.FuncFormatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.GridSpec.html">1.2.15. matplotlib.pyplot.GridSpec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.IndexLocator.html">1.2.16. matplotlib.pyplot.IndexLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Line2D.html">1.2.17. matplotlib.pyplot.Line2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.LinearLocator.html">1.2.18. matplotlib.pyplot.LinearLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Locator.html">1.2.19. matplotlib.pyplot.Locator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.LogFormatter.html">1.2.20. matplotlib.pyplot.LogFormatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.LogFormatterExponent.html">1.2.21. matplotlib.pyplot.LogFormatterExponent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.LogFormatterMathtext.html">1.2.22. matplotlib.pyplot.LogFormatterMathtext</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.LogLocator.html">1.2.23. matplotlib.pyplot.LogLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.MaxNLocator.html">1.2.24. matplotlib.pyplot.MaxNLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.MultipleLocator.html">1.2.25. matplotlib.pyplot.MultipleLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Normalize.html">1.2.26. matplotlib.pyplot.Normalize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.NullFormatter.html">1.2.27. matplotlib.pyplot.NullFormatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.NullLocator.html">1.2.28. matplotlib.pyplot.NullLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.PolarAxes.html">1.2.29. matplotlib.pyplot.PolarAxes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Polygon.html">1.2.30. matplotlib.pyplot.Polygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Rectangle.html">1.2.31. matplotlib.pyplot.Rectangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.ScalarFormatter.html">1.2.32. matplotlib.pyplot.ScalarFormatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Slider.html">1.2.33. matplotlib.pyplot.Slider</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Subplot.html">1.2.34. matplotlib.pyplot.Subplot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.SubplotTool.html">1.2.35. matplotlib.pyplot.SubplotTool</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="matplotlib.pyplot.Text.html">1.2.36. matplotlib.pyplot.Text</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.axes.html">1.2.36.1. matplotlib.pyplot.Text.axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.mouseover.html">1.2.36.2. matplotlib.pyplot.Text.mouseover</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.stale.html">1.2.36.3. matplotlib.pyplot.Text.stale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.add_callback.html">1.2.36.4. matplotlib.pyplot.Text.add_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.contains.html">1.2.36.5. matplotlib.pyplot.Text.contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.convert_xunits.html">1.2.36.6. matplotlib.pyplot.Text.convert_xunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.convert_yunits.html">1.2.36.7. matplotlib.pyplot.Text.convert_yunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.draw.html">1.2.36.8. matplotlib.pyplot.Text.draw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.findobj.html">1.2.36.9. matplotlib.pyplot.Text.findobj</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.format_cursor_data.html">1.2.36.10. matplotlib.pyplot.Text.format_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_agg_filter.html">1.2.36.11. matplotlib.pyplot.Text.get_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_alpha.html">1.2.36.12. matplotlib.pyplot.Text.get_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_animated.html">1.2.36.13. matplotlib.pyplot.Text.get_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_axes.html">1.2.36.14. matplotlib.pyplot.Text.get_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_bbox_patch.html">1.2.36.15. matplotlib.pyplot.Text.get_bbox_patch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_children.html">1.2.36.16. matplotlib.pyplot.Text.get_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_clip_box.html">1.2.36.17. matplotlib.pyplot.Text.get_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_clip_on.html">1.2.36.18. matplotlib.pyplot.Text.get_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_clip_path.html">1.2.36.19. matplotlib.pyplot.Text.get_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_color.html">1.2.36.20. matplotlib.pyplot.Text.get_color</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_contains.html">1.2.36.21. matplotlib.pyplot.Text.get_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_cursor_data.html">1.2.36.22. matplotlib.pyplot.Text.get_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_family.html">1.2.36.23. matplotlib.pyplot.Text.get_family</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_figure.html">1.2.36.24. matplotlib.pyplot.Text.get_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_font_properties.html">1.2.36.25. matplotlib.pyplot.Text.get_font_properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_fontfamily.html">1.2.36.26. matplotlib.pyplot.Text.get_fontfamily</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_fontname.html">1.2.36.27. matplotlib.pyplot.Text.get_fontname</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_fontproperties.html">1.2.36.28. matplotlib.pyplot.Text.get_fontproperties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_fontsize.html">1.2.36.29. matplotlib.pyplot.Text.get_fontsize</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_fontstretch.html">1.2.36.30. matplotlib.pyplot.Text.get_fontstretch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_fontstyle.html">1.2.36.31. matplotlib.pyplot.Text.get_fontstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_fontvariant.html">1.2.36.32. matplotlib.pyplot.Text.get_fontvariant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_fontweight.html">1.2.36.33. matplotlib.pyplot.Text.get_fontweight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_gid.html">1.2.36.34. matplotlib.pyplot.Text.get_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_ha.html">1.2.36.35. matplotlib.pyplot.Text.get_ha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_horizontalalignment.html">1.2.36.36. matplotlib.pyplot.Text.get_horizontalalignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_label.html">1.2.36.37. matplotlib.pyplot.Text.get_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_name.html">1.2.36.38. matplotlib.pyplot.Text.get_name</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_path_effects.html">1.2.36.39. matplotlib.pyplot.Text.get_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_picker.html">1.2.36.40. matplotlib.pyplot.Text.get_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_position.html">1.2.36.41. matplotlib.pyplot.Text.get_position</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_prop_tup.html">1.2.36.42. matplotlib.pyplot.Text.get_prop_tup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_rasterized.html">1.2.36.43. matplotlib.pyplot.Text.get_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_rotation.html">1.2.36.44. matplotlib.pyplot.Text.get_rotation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_rotation_mode.html">1.2.36.45. matplotlib.pyplot.Text.get_rotation_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_size.html">1.2.36.46. matplotlib.pyplot.Text.get_size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_sketch_params.html">1.2.36.47. matplotlib.pyplot.Text.get_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_snap.html">1.2.36.48. matplotlib.pyplot.Text.get_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_stretch.html">1.2.36.49. matplotlib.pyplot.Text.get_stretch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_style.html">1.2.36.50. matplotlib.pyplot.Text.get_style</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_text.html">1.2.36.51. matplotlib.pyplot.Text.get_text</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_transform.html">1.2.36.52. matplotlib.pyplot.Text.get_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_transformed_clip_path_and_affine.html">1.2.36.53. matplotlib.pyplot.Text.get_transformed_clip_path_and_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_unitless_position.html">1.2.36.54. matplotlib.pyplot.Text.get_unitless_position</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_url.html">1.2.36.55. matplotlib.pyplot.Text.get_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_usetex.html">1.2.36.56. matplotlib.pyplot.Text.get_usetex</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_va.html">1.2.36.57. matplotlib.pyplot.Text.get_va</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_variant.html">1.2.36.58. matplotlib.pyplot.Text.get_variant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_verticalalignment.html">1.2.36.59. matplotlib.pyplot.Text.get_verticalalignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_visible.html">1.2.36.60. matplotlib.pyplot.Text.get_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_weight.html">1.2.36.61. matplotlib.pyplot.Text.get_weight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_window_extent.html">1.2.36.62. matplotlib.pyplot.Text.get_window_extent</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">1.2.36.63. matplotlib.pyplot.Text.get_wrap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.get_zorder.html">1.2.36.64. matplotlib.pyplot.Text.get_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.have_units.html">1.2.36.65. matplotlib.pyplot.Text.have_units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.hitlist.html">1.2.36.66. matplotlib.pyplot.Text.hitlist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.is_figure_set.html">1.2.36.67. matplotlib.pyplot.Text.is_figure_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.is_math_text.html">1.2.36.68. matplotlib.pyplot.Text.is_math_text</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.is_transform_set.html">1.2.36.69. matplotlib.pyplot.Text.is_transform_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.pchanged.html">1.2.36.70. matplotlib.pyplot.Text.pchanged</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.pick.html">1.2.36.71. matplotlib.pyplot.Text.pick</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.pickable.html">1.2.36.72. matplotlib.pyplot.Text.pickable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.properties.html">1.2.36.73. matplotlib.pyplot.Text.properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.remove.html">1.2.36.74. matplotlib.pyplot.Text.remove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.remove_callback.html">1.2.36.75. matplotlib.pyplot.Text.remove_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set.html">1.2.36.76. matplotlib.pyplot.Text.set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_agg_filter.html">1.2.36.77. matplotlib.pyplot.Text.set_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_alpha.html">1.2.36.78. matplotlib.pyplot.Text.set_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_animated.html">1.2.36.79. matplotlib.pyplot.Text.set_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_axes.html">1.2.36.80. matplotlib.pyplot.Text.set_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_backgroundcolor.html">1.2.36.81. matplotlib.pyplot.Text.set_backgroundcolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_bbox.html">1.2.36.82. matplotlib.pyplot.Text.set_bbox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_clip_box.html">1.2.36.83. matplotlib.pyplot.Text.set_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_clip_on.html">1.2.36.84. matplotlib.pyplot.Text.set_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_clip_path.html">1.2.36.85. matplotlib.pyplot.Text.set_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_color.html">1.2.36.86. matplotlib.pyplot.Text.set_color</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_contains.html">1.2.36.87. matplotlib.pyplot.Text.set_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_family.html">1.2.36.88. matplotlib.pyplot.Text.set_family</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_figure.html">1.2.36.89. matplotlib.pyplot.Text.set_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_font_properties.html">1.2.36.90. matplotlib.pyplot.Text.set_font_properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_fontname.html">1.2.36.91. matplotlib.pyplot.Text.set_fontname</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_fontproperties.html">1.2.36.92. matplotlib.pyplot.Text.set_fontproperties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_fontsize.html">1.2.36.93. matplotlib.pyplot.Text.set_fontsize</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_fontstretch.html">1.2.36.94. matplotlib.pyplot.Text.set_fontstretch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_fontstyle.html">1.2.36.95. matplotlib.pyplot.Text.set_fontstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_fontvariant.html">1.2.36.96. matplotlib.pyplot.Text.set_fontvariant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_fontweight.html">1.2.36.97. matplotlib.pyplot.Text.set_fontweight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_gid.html">1.2.36.98. matplotlib.pyplot.Text.set_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_ha.html">1.2.36.99. matplotlib.pyplot.Text.set_ha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_horizontalalignment.html">1.2.36.100. matplotlib.pyplot.Text.set_horizontalalignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_label.html">1.2.36.101. matplotlib.pyplot.Text.set_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_linespacing.html">1.2.36.102. matplotlib.pyplot.Text.set_linespacing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_ma.html">1.2.36.103. matplotlib.pyplot.Text.set_ma</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_multialignment.html">1.2.36.104. matplotlib.pyplot.Text.set_multialignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_name.html">1.2.36.105. matplotlib.pyplot.Text.set_name</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_path_effects.html">1.2.36.106. matplotlib.pyplot.Text.set_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_picker.html">1.2.36.107. matplotlib.pyplot.Text.set_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_position.html">1.2.36.108. matplotlib.pyplot.Text.set_position</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_rasterized.html">1.2.36.109. matplotlib.pyplot.Text.set_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_rotation.html">1.2.36.110. matplotlib.pyplot.Text.set_rotation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_rotation_mode.html">1.2.36.111. matplotlib.pyplot.Text.set_rotation_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_size.html">1.2.36.112. matplotlib.pyplot.Text.set_size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_sketch_params.html">1.2.36.113. matplotlib.pyplot.Text.set_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_snap.html">1.2.36.114. matplotlib.pyplot.Text.set_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_stretch.html">1.2.36.115. matplotlib.pyplot.Text.set_stretch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_style.html">1.2.36.116. matplotlib.pyplot.Text.set_style</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_text.html">1.2.36.117. matplotlib.pyplot.Text.set_text</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_transform.html">1.2.36.118. matplotlib.pyplot.Text.set_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_url.html">1.2.36.119. matplotlib.pyplot.Text.set_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_usetex.html">1.2.36.120. matplotlib.pyplot.Text.set_usetex</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_va.html">1.2.36.121. matplotlib.pyplot.Text.set_va</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_variant.html">1.2.36.122. matplotlib.pyplot.Text.set_variant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_verticalalignment.html">1.2.36.123. matplotlib.pyplot.Text.set_verticalalignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_visible.html">1.2.36.124. matplotlib.pyplot.Text.set_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_weight.html">1.2.36.125. matplotlib.pyplot.Text.set_weight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_wrap.html">1.2.36.126. matplotlib.pyplot.Text.set_wrap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_x.html">1.2.36.127. matplotlib.pyplot.Text.set_x</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_y.html">1.2.36.128. matplotlib.pyplot.Text.set_y</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.set_zorder.html">1.2.36.129. matplotlib.pyplot.Text.set_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.update.html">1.2.36.130. matplotlib.pyplot.Text.update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.update_bbox_position_size.html">1.2.36.131. matplotlib.pyplot.Text.update_bbox_position_size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Text.update_from.html">1.2.36.132. matplotlib.pyplot.Text.update_from</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.TickHelper.html">1.2.37. matplotlib.pyplot.TickHelper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Widget.html">1.2.38. matplotlib.pyplot.Widget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.silent_list.html">1.2.39. matplotlib.pyplot.silent_list</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">2. matplotlib.cm</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../mpl.pyplot.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.pyplot.html">1. matplotlib.pyplot</a> &raquo;</li>
+        
+          <li><a href="matplotlib.pyplot.Text.html">1.2.36. matplotlib.pyplot.Text</a> &raquo;</li>
+        
+      <li>1.2.36.63. matplotlib.pyplot.Text.get_wrap</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.pyplot.Text.get_wrap.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-pyplot-text-get-wrap">
+<h1>1.2.36.63. matplotlib.pyplot.Text.get_wrap<a class="headerlink" href="#matplotlib-pyplot-text-get-wrap" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="matplotlib.pyplot.Text.get_wrap">
+<code class="descclassname">Text.</code><code class="descname">get_wrap</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/text.html#Text.get_wrap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.pyplot.Text.get_wrap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the wrapping state for the text.</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.pyplot.Text.get_zorder.html" class="btn btn-neutral float-right" title="1.2.36.64. matplotlib.pyplot.Text.get_zorder" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.pyplot.Text.get_window_extent.html" class="btn btn-neutral" title="1.2.36.62. matplotlib.pyplot.Text.get_window_extent" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,251 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>matplotlib.pyplot.Subplot.set_ylim &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">1. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">2. matplotlib.cm</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>matplotlib.pyplot.Subplot.set_ylim</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.pyplot.Subplot.set_ylim.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-pyplot-subplot-set-ylim">
+<h1>matplotlib.pyplot.Subplot.set_ylim<a class="headerlink" href="#matplotlib-pyplot-subplot-set-ylim" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="matplotlib.pyplot.Subplot.set_ylim">
+<code class="descclassname">Subplot.</code><code class="descname">set_ylim</code><span class="sig-paren">(</span><em>bottom=None</em>, <em>top=None</em>, <em>emit=True</em>, <em>auto=False</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.pyplot.Subplot.set_ylim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">set_ylim</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>Set the data limits for the yaxis</p>
+<p>Examples:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">set_ylim</span><span class="p">((</span><span class="n">bottom</span><span class="p">,</span> <span class="n">top</span><span class="p">))</span>
+<span class="n">set_ylim</span><span class="p">(</span><span class="n">bottom</span><span class="p">,</span> <span class="n">top</span><span class="p">)</span>
+<span class="n">set_ylim</span><span class="p">(</span><span class="n">bottom</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># top unchanged</span>
+<span class="n">set_ylim</span><span class="p">(</span><span class="n">top</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># bottom unchanged</span>
+</pre></div>
+</div>
+<p>Keyword arguments:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt><em>bottom</em>: scalar</dt>
+<dd>The bottom ylim; the previous name, <em>ymin</em>, may still be used</dd>
+<dt><em>top</em>: scalar</dt>
+<dd>The top ylim; the previous name, <em>ymax</em>, may still be used</dd>
+<dt><em>emit</em>: [ <em>True</em> | <em>False</em> ]</dt>
+<dd>Notify observers of limit change</dd>
+<dt><em>auto</em>: [ <em>True</em> | <em>False</em> | <em>None</em> ]</dt>
+<dd>Turn <em>y</em> autoscaling on (<em>True</em>), off (<em>False</em>; default),
+or leave unchanged (<em>None</em>)</dd>
+</dl>
+</div></blockquote>
+<p>Note, the <em>bottom</em> (formerly <em>ymin</em>) value may be greater than
+the <em>top</em> (formerly <em>ymax</em>).
+For example, suppose <em>y</em> is depth in the ocean.
+Then one might use:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">5000</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>so 5000 m depth is at the bottom of the plot and the
+surface, 0 m, is at the top.</p>
+<p>Returns the current ylimits as a length 2 tuple</p>
+<p>ACCEPTS: length 2 sequence of floats</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,459 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>matplotlib.pyplot.Subplot.plot &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">1. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">2. matplotlib.cm</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>matplotlib.pyplot.Subplot.plot</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.pyplot.Subplot.plot.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-pyplot-subplot-plot">
+<h1>matplotlib.pyplot.Subplot.plot<a class="headerlink" href="#matplotlib-pyplot-subplot-plot" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="matplotlib.pyplot.Subplot.plot">
+<code class="descclassname">Subplot.</code><code class="descname">plot</code><span class="sig-paren">(</span><em>ax</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.pyplot.Subplot.plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot lines and/or markers to the
+<code class="xref py py-class docutils literal"><span class="pre">Axes</span></code>.  <em>args</em> is a variable length
+argument, allowing for multiple <em>x</em>, <em>y</em> pairs with an
+optional format string.  For example, each of the following is
+legal:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>        <span class="c1"># plot x and y using default line style and color</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;bo&#39;</span><span class="p">)</span>  <span class="c1"># plot x and y using blue circle markers</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>           <span class="c1"># plot y using x as index array 0..N-1</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="s1">&#39;r+&#39;</span><span class="p">)</span>     <span class="c1"># ditto, but with red plusses</span>
+</pre></div>
+</div>
+<p>If <em>x</em> and/or <em>y</em> is 2-dimensional, then the corresponding columns
+will be plotted.</p>
+<p>If used with labeled data, make sure that the color spec is not
+included as an element in data, as otherwise the last case
+<code class="docutils literal"><span class="pre">plot(&quot;v&quot;,&quot;r&quot;,</span> <span class="pre">data={&quot;v&quot;:...,</span> <span class="pre">&quot;r&quot;:...)</span></code>
+can be interpreted as the first case which would do <code class="docutils literal"><span class="pre">plot(v,</span> <span class="pre">r)</span></code>
+using the default line style and color.</p>
+<p>If not used with labeled data (i.e., without a data argument),
+an arbitrary number of <em>x</em>, <em>y</em>, <em>fmt</em> groups can be specified, as in:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="s1">&#39;g^&#39;</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="s1">&#39;g-&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Return value is a list of lines that were added.</p>
+<p>By default, each line is assigned a different style specified by a
+&#8216;style cycle&#8217;.  To change this behavior, you can edit the
+axes.prop_cycle rcParam.</p>
+<p>The following format string characters are accepted to control
+the line style or marker:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">character</th>
+<th class="head">description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">'-'</span></code></td>
+<td>solid line style</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">'--'</span></code></td>
+<td>dashed line style</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">'-.'</span></code></td>
+<td>dash-dot line style</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">':'</span></code></td>
+<td>dotted line style</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">'.'</span></code></td>
+<td>point marker</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">','</span></code></td>
+<td>pixel marker</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">'o'</span></code></td>
+<td>circle marker</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">'v'</span></code></td>
+<td>triangle_down marker</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">'^'</span></code></td>
+<td>triangle_up marker</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">'&lt;'</span></code></td>
+<td>triangle_left marker</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">'&gt;'</span></code></td>
+<td>triangle_right marker</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">'1'</span></code></td>
+<td>tri_down marker</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">'2'</span></code></td>
+<td>tri_up marker</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">'3'</span></code></td>
+<td>tri_left marker</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">'4'</span></code></td>
+<td>tri_right marker</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">'s'</span></code></td>
+<td>square marker</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">'p'</span></code></td>
+<td>pentagon marker</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">'*'</span></code></td>
+<td>star marker</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">'h'</span></code></td>
+<td>hexagon1 marker</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">'H'</span></code></td>
+<td>hexagon2 marker</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">'+'</span></code></td>
+<td>plus marker</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">'x'</span></code></td>
+<td>x marker</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">'D'</span></code></td>
+<td>diamond marker</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">'d'</span></code></td>
+<td>thin_diamond marker</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">'|'</span></code></td>
+<td>vline marker</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">'_'</span></code></td>
+<td>hline marker</td>
+</tr>
+</tbody>
+</table>
+<p>The following color abbreviations are supported:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="56%" />
+<col width="44%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">character</th>
+<th class="head">color</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>&#8216;b&#8217;</td>
+<td>blue</td>
+</tr>
+<tr class="row-odd"><td>&#8216;g&#8217;</td>
+<td>green</td>
+</tr>
+<tr class="row-even"><td>&#8216;r&#8217;</td>
+<td>red</td>
+</tr>
+<tr class="row-odd"><td>&#8216;c&#8217;</td>
+<td>cyan</td>
+</tr>
+<tr class="row-even"><td>&#8216;m&#8217;</td>
+<td>magenta</td>
+</tr>
+<tr class="row-odd"><td>&#8216;y&#8217;</td>
+<td>yellow</td>
+</tr>
+<tr class="row-even"><td>&#8216;k&#8217;</td>
+<td>black</td>
+</tr>
+<tr class="row-odd"><td>&#8216;w&#8217;</td>
+<td>white</td>
+</tr>
+</tbody>
+</table>
+<p>In addition, you can specify colors in many weird and
+wonderful ways, including full names (<code class="docutils literal"><span class="pre">'green'</span></code>), hex
+strings (<code class="docutils literal"><span class="pre">'#008000'</span></code>), RGB or RGBA tuples (<code class="docutils literal"><span class="pre">(0,1,0,1)</span></code>) or
+grayscale intensities as a string (<code class="docutils literal"><span class="pre">'0.8'</span></code>).  Of these, the
+string specifications can be used in place of a <code class="docutils literal"><span class="pre">fmt</span></code> group,
+but the tuple forms can be used only as <code class="docutils literal"><span class="pre">kwargs</span></code>.</p>
+<p>Line styles and colors are combined in a single format string, as in
+<code class="docutils literal"><span class="pre">'bo'</span></code> for blue circles.</p>
+<p>The <em>kwargs</em> can be used to set line properties (any property that has
+a <code class="docutils literal"><span class="pre">set_*</span></code> method).  You can use this to set a line label (for auto
+legends), linewidth, anitialising, marker face color, etc.  Here is an
+example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="s1">&#39;go-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;line 1&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">9</span><span class="p">],</span> <span class="s1">&#39;rs&#39;</span><span class="p">,</span>  <span class="n">label</span><span class="o">=</span><span class="s1">&#39;line 2&#39;</span><span class="p">)</span>
+<span class="n">axis</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+<span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>If you make multiple lines with one plot command, the kwargs
+apply to all those lines, e.g.:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">antialiased</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Neither line will be antialiased.</p>
+<p>You do not need to use format strings, which are just
+abbreviations.  All of the line properties can be controlled
+by keyword arguments.  For example, you can set the color,
+marker, linestyle, and markercolor with:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span>
+     <span class="n">markerfacecolor</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>See <code class="xref py py-class docutils literal"><span class="pre">Line2D</span></code> for details.</p>
+<p>The kwargs are <code class="xref py py-class docutils literal"><span class="pre">Line2D</span></code> properties:</p>
+<blockquote>
+<div>agg_filter: unknown
+alpha: float (0.0 transparent through 1.0 opaque) 
+animated: [True | False] 
+antialiased or aa: [True | False] 
+axes: an <code class="xref py py-class docutils literal"><span class="pre">Axes</span></code> instance 
+clip_box: a <code class="xref py py-class docutils literal"><span class="pre">matplotlib.transforms.Bbox</span></code> instance 
+clip_on: [True | False] 
+clip_path: [ (<code class="xref py py-class docutils literal"><span class="pre">Path</span></code>, <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code>) | <code class="xref py py-class docutils literal"><span class="pre">Patch</span></code> | None ] 
+color or c: any matplotlib color 
+contains: a callable function 
+dash_capstyle: [&#8216;butt&#8217; | &#8216;round&#8217; | &#8216;projecting&#8217;] 
+dash_joinstyle: [&#8216;miter&#8217; | &#8216;round&#8217; | &#8216;bevel&#8217;] 
+dashes: sequence of on/off ink in points 
+drawstyle: [&#8216;default&#8217; | &#8216;steps&#8217; | &#8216;steps-pre&#8217; | &#8216;steps-mid&#8217; | &#8216;steps-post&#8217;] 
+figure: a <code class="xref py py-class docutils literal"><span class="pre">matplotlib.figure.Figure</span></code> instance 
+fillstyle: [&#8216;full&#8217; | &#8216;left&#8217; | &#8216;right&#8217; | &#8216;bottom&#8217; | &#8216;top&#8217; | &#8216;none&#8217;] 
+gid: an id string 
+label: string or anything printable with &#8216;%s&#8217; conversion. 
+linestyle or ls: [&#8216;solid&#8217; | &#8216;dashed&#8217;, &#8216;dashdot&#8217;, &#8216;dotted&#8217; | (offset, on-off-dash-seq) | <code class="docutils literal"><span class="pre">'-'</span></code> | <code class="docutils literal"><span class="pre">'--'</span></code> | <code class="docutils literal"><span class="pre">'-.'</span></code> | <code class="docutils literal"><span class="pre">':'</span></code> | <code class="docutils literal"><span class="pre">'None'</span></code> | <code class="docutils literal"><span class="pre">'</span> <span class="pre">'</span></code> | <code class="docutils literal"><span class="pre">''</span></code>]
+linewidth or lw: float value in points 
+marker: <code class="xref py py-mod docutils literal"><span class="pre">A</span> <span class="pre">valid</span> <span class="pre">marker</span> <span class="pre">style</span></code>
+markeredgecolor or mec: any matplotlib color 
+markeredgewidth or mew: float value in points 
+markerfacecolor or mfc: any matplotlib color 
+markerfacecoloralt or mfcalt: any matplotlib color 
+markersize or ms: float 
+markevery: [None | int | length-2 tuple of int | slice | list/array of int | float | length-2 tuple of float]
+path_effects: unknown
+picker: float distance in points or callable pick function <code class="docutils literal"><span class="pre">fn(artist,</span> <span class="pre">event)</span></code> 
+pickradius: float distance in points 
+rasterized: [True | False | None] 
+sketch_params: unknown
+snap: unknown
+solid_capstyle: [&#8216;butt&#8217; | &#8216;round&#8217; |  &#8216;projecting&#8217;] 
+solid_joinstyle: [&#8216;miter&#8217; | &#8216;round&#8217; | &#8216;bevel&#8217;] 
+transform: a <code class="xref py py-class docutils literal"><span class="pre">matplotlib.transforms.Transform</span></code> instance 
+url: a url string 
+visible: [True | False] 
+xdata: 1D array 
+ydata: 1D array 
+zorder: any number</div></blockquote>
+<p>kwargs <em>scalex</em> and <em>scaley</em>, if defined, are passed on to
+<code class="xref py py-meth docutils literal"><span class="pre">autoscale_view()</span></code> to determine
+whether the <em>x</em> and <em>y</em> axes are autoscaled; the default is
+<em>True</em>.</p>
+<p class="rubric">Notes</p>
+<p>In addition to the above described arguments, this function can take a
+<strong>data</strong> keyword argument. If such a <strong>data</strong> argument is given, the
+following arguments are replaced by <strong>data[&lt;arg&gt;]</strong>:</p>
+<ul class="simple">
+<li>All arguments with the following names: &#8216;y&#8217;, &#8216;x&#8217;.</li>
+</ul>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,352 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.2.25. matplotlib.pyplot.MultipleLocator &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="1. matplotlib.pyplot" href="../matplotlib.pyplot.html"/>
+        <link rel="prev" title="1.2.24.14. matplotlib.pyplot.MaxNLocator.zoom" href="matplotlib.pyplot.MaxNLocator.zoom.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.pyplot.html">1. matplotlib.pyplot</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.pyplot.html#functions">1.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.pyplot.html#classes">1.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Annotation.html">1.2.1. matplotlib.pyplot.Annotation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Arrow.html">1.2.2. matplotlib.pyplot.Arrow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Artist.html">1.2.3. matplotlib.pyplot.Artist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.AutoLocator.html">1.2.4. matplotlib.pyplot.AutoLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Axes.html">1.2.5. matplotlib.pyplot.Axes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Button.html">1.2.6. matplotlib.pyplot.Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Circle.html">1.2.7. matplotlib.pyplot.Circle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Figure.html">1.2.8. matplotlib.pyplot.Figure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.FigureCanvasBase.html">1.2.9. matplotlib.pyplot.FigureCanvasBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.FixedFormatter.html">1.2.10. matplotlib.pyplot.FixedFormatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.FixedLocator.html">1.2.11. matplotlib.pyplot.FixedLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.FormatStrFormatter.html">1.2.12. matplotlib.pyplot.FormatStrFormatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Formatter.html">1.2.13. matplotlib.pyplot.Formatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.FuncFormatter.html">1.2.14. matplotlib.pyplot.FuncFormatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.GridSpec.html">1.2.15. matplotlib.pyplot.GridSpec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.IndexLocator.html">1.2.16. matplotlib.pyplot.IndexLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Line2D.html">1.2.17. matplotlib.pyplot.Line2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.LinearLocator.html">1.2.18. matplotlib.pyplot.LinearLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Locator.html">1.2.19. matplotlib.pyplot.Locator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.LogFormatter.html">1.2.20. matplotlib.pyplot.LogFormatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.LogFormatterExponent.html">1.2.21. matplotlib.pyplot.LogFormatterExponent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.LogFormatterMathtext.html">1.2.22. matplotlib.pyplot.LogFormatterMathtext</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.LogLocator.html">1.2.23. matplotlib.pyplot.LogLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.MaxNLocator.html">1.2.24. matplotlib.pyplot.MaxNLocator</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1.2.25. matplotlib.pyplot.MultipleLocator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.MultipleLocator.autoscale.html">1.2.25.1. matplotlib.pyplot.MultipleLocator.autoscale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.MultipleLocator.create_dummy_axis.html">1.2.25.2. matplotlib.pyplot.MultipleLocator.create_dummy_axis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.MultipleLocator.pan.html">1.2.25.3. matplotlib.pyplot.MultipleLocator.pan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.MultipleLocator.raise_if_exceeds.html">1.2.25.4. matplotlib.pyplot.MultipleLocator.raise_if_exceeds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.MultipleLocator.refresh.html">1.2.25.5. matplotlib.pyplot.MultipleLocator.refresh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.MultipleLocator.set_axis.html">1.2.25.6. matplotlib.pyplot.MultipleLocator.set_axis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.MultipleLocator.set_bounds.html">1.2.25.7. matplotlib.pyplot.MultipleLocator.set_bounds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.MultipleLocator.set_data_interval.html">1.2.25.8. matplotlib.pyplot.MultipleLocator.set_data_interval</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.MultipleLocator.set_params.html">1.2.25.9. matplotlib.pyplot.MultipleLocator.set_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.MultipleLocator.set_view_interval.html">1.2.25.10. matplotlib.pyplot.MultipleLocator.set_view_interval</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.MultipleLocator.tick_values.html">1.2.25.11. matplotlib.pyplot.MultipleLocator.tick_values</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.MultipleLocator.view_limits.html">1.2.25.12. matplotlib.pyplot.MultipleLocator.view_limits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.MultipleLocator.zoom.html">1.2.25.13. matplotlib.pyplot.MultipleLocator.zoom</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Normalize.html">1.2.26. matplotlib.pyplot.Normalize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.NullFormatter.html">1.2.27. matplotlib.pyplot.NullFormatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.NullLocator.html">1.2.28. matplotlib.pyplot.NullLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.PolarAxes.html">1.2.29. matplotlib.pyplot.PolarAxes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Polygon.html">1.2.30. matplotlib.pyplot.Polygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Rectangle.html">1.2.31. matplotlib.pyplot.Rectangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.ScalarFormatter.html">1.2.32. matplotlib.pyplot.ScalarFormatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Slider.html">1.2.33. matplotlib.pyplot.Slider</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Subplot.html">1.2.34. matplotlib.pyplot.Subplot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.SubplotTool.html">1.2.35. matplotlib.pyplot.SubplotTool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Text.html">1.2.36. matplotlib.pyplot.Text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.TickHelper.html">1.2.37. matplotlib.pyplot.TickHelper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Widget.html">1.2.38. matplotlib.pyplot.Widget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.silent_list.html">1.2.39. matplotlib.pyplot.silent_list</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">2. matplotlib.cm</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../mpl.pyplot.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.pyplot.html">1. matplotlib.pyplot</a> &raquo;</li>
+        
+      <li>1.2.25. matplotlib.pyplot.MultipleLocator</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.pyplot.MultipleLocator.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-pyplot-multiplelocator">
+<h1>1.2.25. matplotlib.pyplot.MultipleLocator<a class="headerlink" href="#matplotlib-pyplot-multiplelocator" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="matplotlib.pyplot.MultipleLocator">
+<em class="property">class </em><code class="descclassname">matplotlib.pyplot.</code><code class="descname">MultipleLocator</code><span class="sig-paren">(</span><em>base=1.0</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/ticker.html#MultipleLocator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.pyplot.MultipleLocator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a tick on every integer that is multiple of base in the
+view interval</p>
+<p class="rubric">Attributes</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="29%" />
+<col width="71%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>axis</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">__call__</span></code>()</td>
+<td>Return the locations of the ticks</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.MultipleLocator.autoscale.html#matplotlib.pyplot.MultipleLocator.autoscale" title="matplotlib.pyplot.MultipleLocator.autoscale"><code class="xref py py-obj docutils literal"><span class="pre">autoscale</span></code></a>()</td>
+<td>autoscale the view limits</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.MultipleLocator.create_dummy_axis.html#matplotlib.pyplot.MultipleLocator.create_dummy_axis" title="matplotlib.pyplot.MultipleLocator.create_dummy_axis"><code class="xref py py-obj docutils literal"><span class="pre">create_dummy_axis</span></code></a>(**kwargs)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.MultipleLocator.pan.html#matplotlib.pyplot.MultipleLocator.pan" title="matplotlib.pyplot.MultipleLocator.pan"><code class="xref py py-obj docutils literal"><span class="pre">pan</span></code></a>(numsteps)</td>
+<td>Pan numticks (can be positive or negative)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.MultipleLocator.raise_if_exceeds.html#matplotlib.pyplot.MultipleLocator.raise_if_exceeds" title="matplotlib.pyplot.MultipleLocator.raise_if_exceeds"><code class="xref py py-obj docutils literal"><span class="pre">raise_if_exceeds</span></code></a>(locs)</td>
+<td>raise a RuntimeError if Locator attempts to create more than</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.MultipleLocator.refresh.html#matplotlib.pyplot.MultipleLocator.refresh" title="matplotlib.pyplot.MultipleLocator.refresh"><code class="xref py py-obj docutils literal"><span class="pre">refresh</span></code></a>()</td>
+<td>refresh internal information based on current lim</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.MultipleLocator.set_axis.html#matplotlib.pyplot.MultipleLocator.set_axis" title="matplotlib.pyplot.MultipleLocator.set_axis"><code class="xref py py-obj docutils literal"><span class="pre">set_axis</span></code></a>(axis)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.MultipleLocator.set_bounds.html#matplotlib.pyplot.MultipleLocator.set_bounds" title="matplotlib.pyplot.MultipleLocator.set_bounds"><code class="xref py py-obj docutils literal"><span class="pre">set_bounds</span></code></a>(vmin,&nbsp;vmax)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.MultipleLocator.set_data_interval.html#matplotlib.pyplot.MultipleLocator.set_data_interval" title="matplotlib.pyplot.MultipleLocator.set_data_interval"><code class="xref py py-obj docutils literal"><span class="pre">set_data_interval</span></code></a>(vmin,&nbsp;vmax)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.MultipleLocator.set_params.html#matplotlib.pyplot.MultipleLocator.set_params" title="matplotlib.pyplot.MultipleLocator.set_params"><code class="xref py py-obj docutils literal"><span class="pre">set_params</span></code></a>(base)</td>
+<td>Set parameters within this locator.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.MultipleLocator.set_view_interval.html#matplotlib.pyplot.MultipleLocator.set_view_interval" title="matplotlib.pyplot.MultipleLocator.set_view_interval"><code class="xref py py-obj docutils literal"><span class="pre">set_view_interval</span></code></a>(vmin,&nbsp;vmax)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.MultipleLocator.tick_values.html#matplotlib.pyplot.MultipleLocator.tick_values" title="matplotlib.pyplot.MultipleLocator.tick_values"><code class="xref py py-obj docutils literal"><span class="pre">tick_values</span></code></a>(vmin,&nbsp;vmax)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.MultipleLocator.view_limits.html#matplotlib.pyplot.MultipleLocator.view_limits" title="matplotlib.pyplot.MultipleLocator.view_limits"><code class="xref py py-obj docutils literal"><span class="pre">view_limits</span></code></a>(dmin,&nbsp;dmax)</td>
+<td>Set the view limits to the nearest multiples of base that</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.MultipleLocator.zoom.html#matplotlib.pyplot.MultipleLocator.zoom" title="matplotlib.pyplot.MultipleLocator.zoom"><code class="xref py py-obj docutils literal"><span class="pre">zoom</span></code></a>(direction)</td>
+<td>Zoom in/out on axis; if direction is &gt;0 zoom in, else zoom out</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="matplotlib.pyplot.MaxNLocator.zoom.html" class="btn btn-neutral" title="1.2.24.14. matplotlib.pyplot.MaxNLocator.zoom" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

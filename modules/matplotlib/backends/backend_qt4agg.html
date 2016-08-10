@@ -1,0 +1,297 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>matplotlib.backends.backend_qt4agg &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../../index.html"/>
+        <link rel="up" title="matplotlib.backends" href="../backends.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.pyplot.html">1. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.cm.html">2. matplotlib.cm</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../../matplotlib.html">matplotlib</a> &raquo;</li>
+        
+          <li><a href="../backends.html">matplotlib.backends</a> &raquo;</li>
+        
+      <li>matplotlib.backends.backend_qt4agg</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for matplotlib.backends.backend_qt4agg</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Render to qt from agg</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="p">(</span><span class="n">absolute_import</span><span class="p">,</span> <span class="n">division</span><span class="p">,</span> <span class="n">print_function</span><span class="p">,</span>
+                        <span class="n">unicode_literals</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">matplotlib.externals</span> <span class="k">import</span> <span class="n">six</span>
+
+<span class="kn">import</span> <span class="nn">os</span>  <span class="c1"># not used</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">ctypes</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib</span>
+<span class="kn">from</span> <span class="nn">matplotlib.figure</span> <span class="k">import</span> <span class="n">Figure</span>
+
+
+<span class="kn">from</span> <span class="nn">.backend_qt5agg</span> <span class="k">import</span> <span class="n">FigureCanvasQTAggBase</span> <span class="k">as</span> <span class="n">_FigureCanvasQTAggBase</span>
+
+<span class="kn">from</span> <span class="nn">.backend_agg</span> <span class="k">import</span> <span class="n">FigureCanvasAgg</span>
+<span class="kn">from</span> <span class="nn">.backend_qt4</span> <span class="k">import</span> <span class="n">QtCore</span>
+<span class="kn">from</span> <span class="nn">.backend_qt4</span> <span class="k">import</span> <span class="n">FigureManagerQT</span>
+<span class="kn">from</span> <span class="nn">.backend_qt4</span> <span class="k">import</span> <span class="n">FigureCanvasQT</span>
+<span class="kn">from</span> <span class="nn">.backend_qt4</span> <span class="k">import</span> <span class="n">NavigationToolbar2QT</span>
+<span class="c1">##### not used</span>
+<span class="kn">from</span> <span class="nn">.backend_qt4</span> <span class="k">import</span> <span class="n">show</span>
+<span class="kn">from</span> <span class="nn">.backend_qt4</span> <span class="k">import</span> <span class="n">draw_if_interactive</span>
+<span class="kn">from</span> <span class="nn">.backend_qt4</span> <span class="k">import</span> <span class="n">backend_version</span>
+<span class="c1">######</span>
+
+<span class="n">DEBUG</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="n">_decref</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">pythonapi</span><span class="o">.</span><span class="n">Py_DecRef</span>
+<span class="n">_decref</span><span class="o">.</span><span class="n">argtypes</span> <span class="o">=</span> <span class="p">[</span><span class="n">ctypes</span><span class="o">.</span><span class="n">py_object</span><span class="p">]</span>
+<span class="n">_decref</span><span class="o">.</span><span class="n">restype</span> <span class="o">=</span> <span class="kc">None</span>
+
+
+<div class="viewcode-block" id="new_figure_manager"><a class="viewcode-back" href="../../../generated/matplotlib.pyplot.new_figure_manager.html#matplotlib.pyplot.new_figure_manager">[docs]</a><span class="k">def</span> <span class="nf">new_figure_manager</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Create a new figure manager instance</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">DEBUG</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;backend_qt4agg.new_figure_manager&#39;</span><span class="p">)</span>
+    <span class="n">FigureClass</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;FigureClass&#39;</span><span class="p">,</span> <span class="n">Figure</span><span class="p">)</span>
+    <span class="n">thisFig</span> <span class="o">=</span> <span class="n">FigureClass</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">new_figure_manager_given_figure</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">thisFig</span><span class="p">)</span></div>
+
+
+<span class="k">def</span> <span class="nf">new_figure_manager_given_figure</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">figure</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Create a new figure manager instance for the given figure.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">canvas</span> <span class="o">=</span> <span class="n">FigureCanvasQTAgg</span><span class="p">(</span><span class="n">figure</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">FigureManagerQT</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">num</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">FigureCanvasQTAggBase</span><span class="p">(</span><span class="n">_FigureCanvasQTAggBase</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">figure</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_agg_draw_pending</span> <span class="o">=</span> <span class="kc">False</span>
+
+
+<span class="k">class</span> <span class="nc">FigureCanvasQTAgg</span><span class="p">(</span><span class="n">FigureCanvasQTAggBase</span><span class="p">,</span>
+                        <span class="n">FigureCanvasQT</span><span class="p">,</span> <span class="n">FigureCanvasAgg</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The canvas the figure renders into.  Calls the draw and print fig</span>
+<span class="sd">    methods, creates the renderers, etc...</span>
+
+<span class="sd">    Public attribute</span>
+
+<span class="sd">      figure - A Figure instance</span>
+<span class="sd">   &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">figure</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">DEBUG</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;FigureCanvasQtAgg: &#39;</span><span class="p">,</span> <span class="n">figure</span><span class="p">)</span>
+        <span class="n">FigureCanvasQT</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">figure</span><span class="p">)</span>
+        <span class="n">FigureCanvasQTAggBase</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">figure</span><span class="p">)</span>
+        <span class="n">FigureCanvasAgg</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">figure</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_drawRect</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">blitbox</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setAttribute</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">WA_OpaquePaintEvent</span><span class="p">)</span>
+
+
+<span class="n">FigureCanvas</span> <span class="o">=</span> <span class="n">FigureCanvasQTAgg</span>
+<span class="n">FigureManager</span> <span class="o">=</span> <span class="n">FigureManagerQT</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

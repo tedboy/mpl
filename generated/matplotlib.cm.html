@@ -1,0 +1,274 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2. matplotlib.cm &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../index.html"/>
+        <link rel="up" title="&lt;no title&gt;" href="../mpl.pyplot.html"/>
+        <link rel="next" title="2.1.1. matplotlib.cm.get_cmap" href="matplotlib.cm.get_cmap.html"/>
+        <link rel="prev" title="1.2.39.9. matplotlib.pyplot.silent_list.sort" href="generated/matplotlib.pyplot.silent_list.sort.html"/> 
+
+  
+  <script src="../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.pyplot.html">1. matplotlib.pyplot</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. matplotlib.cm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#functions">2.1. Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cm.get_cmap.html">2.1.1. matplotlib.cm.get_cmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cm.register_cmap.html">2.1.2. matplotlib.cm.register_cmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cm.revcmap.html">2.1.3. matplotlib.cm.revcmap</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#classes">2.2. Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.cm.ScalarMappable.html">2.2.1. matplotlib.cm.ScalarMappable</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../mpl.pyplot.html">&lt;no title&gt;</a> &raquo;</li>
+        
+      <li>2. matplotlib.cm</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../sources/generated/matplotlib.cm.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-matplotlib.cm">
+<span id="matplotlib-cm"></span><h1>2. matplotlib.cm<a class="headerlink" href="#module-matplotlib.cm" title="Permalink to this headline">¶</a></h1>
+<p>This module provides a large set of colormaps, functions for
+registering new colormaps and for getting a colormap by name,
+and a mixin class for adding color mapping functionality.</p>
+<div class="section" id="functions">
+<h2>2.1. Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.cm.get_cmap.html#matplotlib.cm.get_cmap" title="matplotlib.cm.get_cmap"><code class="xref py py-obj docutils literal"><span class="pre">get_cmap</span></code></a>([name,&nbsp;lut])</td>
+<td>Get a colormap instance, defaulting to rc values if <em>name</em> is None.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.cm.register_cmap.html#matplotlib.cm.register_cmap" title="matplotlib.cm.register_cmap"><code class="xref py py-obj docutils literal"><span class="pre">register_cmap</span></code></a>([name,&nbsp;cmap,&nbsp;data,&nbsp;lut])</td>
+<td>Add a colormap to the set recognized by <a class="reference internal" href="matplotlib.cm.get_cmap.html#matplotlib.cm.get_cmap" title="matplotlib.cm.get_cmap"><code class="xref py py-func docutils literal"><span class="pre">get_cmap()</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.cm.revcmap.html#matplotlib.cm.revcmap" title="matplotlib.cm.revcmap"><code class="xref py py-obj docutils literal"><span class="pre">revcmap</span></code></a>(data)</td>
+<td>Can only handle specification <em>data</em> in dictionary format.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="classes">
+<h2>2.2. Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.cm.ScalarMappable.html#matplotlib.cm.ScalarMappable" title="matplotlib.cm.ScalarMappable"><code class="xref py py-obj docutils literal"><span class="pre">ScalarMappable</span></code></a>([norm,&nbsp;cmap])</td>
+<td>This is a mixin class to support scalar data to RGBA mapping.</td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.cm.get_cmap.html" class="btn btn-neutral float-right" title="2.1.1. matplotlib.cm.get_cmap" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="generated/matplotlib.pyplot.silent_list.sort.html" class="btn btn-neutral" title="1.2.39.9. matplotlib.pyplot.silent_list.sort" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../static/jquery.js"></script>
+      <script type="text/javascript" src="../static/underscore.js"></script>
+      <script type="text/javascript" src="../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

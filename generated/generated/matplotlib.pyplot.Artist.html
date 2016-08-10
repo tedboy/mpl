@@ -1,0 +1,565 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.2.3. matplotlib.pyplot.Artist &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="1. matplotlib.pyplot" href="../matplotlib.pyplot.html"/>
+        <link rel="next" title="1.2.3.1. matplotlib.pyplot.Artist.axes" href="matplotlib.pyplot.Artist.axes.html"/>
+        <link rel="prev" title="1.2.2.103. matplotlib.pyplot.Arrow.update_from" href="matplotlib.pyplot.Arrow.update_from.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.pyplot.html">1. matplotlib.pyplot</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.pyplot.html#functions">1.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.pyplot.html#classes">1.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Annotation.html">1.2.1. matplotlib.pyplot.Annotation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Arrow.html">1.2.2. matplotlib.pyplot.Arrow</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1.2.3. matplotlib.pyplot.Artist</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.axes.html">1.2.3.1. matplotlib.pyplot.Artist.axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.mouseover.html">1.2.3.2. matplotlib.pyplot.Artist.mouseover</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.stale.html">1.2.3.3. matplotlib.pyplot.Artist.stale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.add_callback.html">1.2.3.4. matplotlib.pyplot.Artist.add_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.contains.html">1.2.3.5. matplotlib.pyplot.Artist.contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.convert_xunits.html">1.2.3.6. matplotlib.pyplot.Artist.convert_xunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.convert_yunits.html">1.2.3.7. matplotlib.pyplot.Artist.convert_yunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.draw.html">1.2.3.8. matplotlib.pyplot.Artist.draw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.findobj.html">1.2.3.9. matplotlib.pyplot.Artist.findobj</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.format_cursor_data.html">1.2.3.10. matplotlib.pyplot.Artist.format_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.get_agg_filter.html">1.2.3.11. matplotlib.pyplot.Artist.get_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.get_alpha.html">1.2.3.12. matplotlib.pyplot.Artist.get_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.get_animated.html">1.2.3.13. matplotlib.pyplot.Artist.get_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.get_axes.html">1.2.3.14. matplotlib.pyplot.Artist.get_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.get_children.html">1.2.3.15. matplotlib.pyplot.Artist.get_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.get_clip_box.html">1.2.3.16. matplotlib.pyplot.Artist.get_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.get_clip_on.html">1.2.3.17. matplotlib.pyplot.Artist.get_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.get_clip_path.html">1.2.3.18. matplotlib.pyplot.Artist.get_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.get_contains.html">1.2.3.19. matplotlib.pyplot.Artist.get_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.get_cursor_data.html">1.2.3.20. matplotlib.pyplot.Artist.get_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.get_figure.html">1.2.3.21. matplotlib.pyplot.Artist.get_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.get_gid.html">1.2.3.22. matplotlib.pyplot.Artist.get_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.get_label.html">1.2.3.23. matplotlib.pyplot.Artist.get_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.get_path_effects.html">1.2.3.24. matplotlib.pyplot.Artist.get_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.get_picker.html">1.2.3.25. matplotlib.pyplot.Artist.get_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.get_rasterized.html">1.2.3.26. matplotlib.pyplot.Artist.get_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.get_sketch_params.html">1.2.3.27. matplotlib.pyplot.Artist.get_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.get_snap.html">1.2.3.28. matplotlib.pyplot.Artist.get_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.get_transform.html">1.2.3.29. matplotlib.pyplot.Artist.get_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.get_transformed_clip_path_and_affine.html">1.2.3.30. matplotlib.pyplot.Artist.get_transformed_clip_path_and_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.get_url.html">1.2.3.31. matplotlib.pyplot.Artist.get_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.get_visible.html">1.2.3.32. matplotlib.pyplot.Artist.get_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.get_window_extent.html">1.2.3.33. matplotlib.pyplot.Artist.get_window_extent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.get_zorder.html">1.2.3.34. matplotlib.pyplot.Artist.get_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.have_units.html">1.2.3.35. matplotlib.pyplot.Artist.have_units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.hitlist.html">1.2.3.36. matplotlib.pyplot.Artist.hitlist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.is_figure_set.html">1.2.3.37. matplotlib.pyplot.Artist.is_figure_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.is_transform_set.html">1.2.3.38. matplotlib.pyplot.Artist.is_transform_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.pchanged.html">1.2.3.39. matplotlib.pyplot.Artist.pchanged</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.pick.html">1.2.3.40. matplotlib.pyplot.Artist.pick</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.pickable.html">1.2.3.41. matplotlib.pyplot.Artist.pickable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.properties.html">1.2.3.42. matplotlib.pyplot.Artist.properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.remove.html">1.2.3.43. matplotlib.pyplot.Artist.remove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.remove_callback.html">1.2.3.44. matplotlib.pyplot.Artist.remove_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.set.html">1.2.3.45. matplotlib.pyplot.Artist.set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.set_agg_filter.html">1.2.3.46. matplotlib.pyplot.Artist.set_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.set_alpha.html">1.2.3.47. matplotlib.pyplot.Artist.set_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.set_animated.html">1.2.3.48. matplotlib.pyplot.Artist.set_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.set_axes.html">1.2.3.49. matplotlib.pyplot.Artist.set_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.set_clip_box.html">1.2.3.50. matplotlib.pyplot.Artist.set_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.set_clip_on.html">1.2.3.51. matplotlib.pyplot.Artist.set_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.set_clip_path.html">1.2.3.52. matplotlib.pyplot.Artist.set_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.set_contains.html">1.2.3.53. matplotlib.pyplot.Artist.set_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.set_figure.html">1.2.3.54. matplotlib.pyplot.Artist.set_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.set_gid.html">1.2.3.55. matplotlib.pyplot.Artist.set_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.set_label.html">1.2.3.56. matplotlib.pyplot.Artist.set_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.set_path_effects.html">1.2.3.57. matplotlib.pyplot.Artist.set_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.set_picker.html">1.2.3.58. matplotlib.pyplot.Artist.set_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.set_rasterized.html">1.2.3.59. matplotlib.pyplot.Artist.set_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.set_sketch_params.html">1.2.3.60. matplotlib.pyplot.Artist.set_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.set_snap.html">1.2.3.61. matplotlib.pyplot.Artist.set_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.set_transform.html">1.2.3.62. matplotlib.pyplot.Artist.set_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.set_url.html">1.2.3.63. matplotlib.pyplot.Artist.set_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.set_visible.html">1.2.3.64. matplotlib.pyplot.Artist.set_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.set_zorder.html">1.2.3.65. matplotlib.pyplot.Artist.set_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.update.html">1.2.3.66. matplotlib.pyplot.Artist.update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Artist.update_from.html">1.2.3.67. matplotlib.pyplot.Artist.update_from</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.AutoLocator.html">1.2.4. matplotlib.pyplot.AutoLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Axes.html">1.2.5. matplotlib.pyplot.Axes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Button.html">1.2.6. matplotlib.pyplot.Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Circle.html">1.2.7. matplotlib.pyplot.Circle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Figure.html">1.2.8. matplotlib.pyplot.Figure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.FigureCanvasBase.html">1.2.9. matplotlib.pyplot.FigureCanvasBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.FixedFormatter.html">1.2.10. matplotlib.pyplot.FixedFormatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.FixedLocator.html">1.2.11. matplotlib.pyplot.FixedLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.FormatStrFormatter.html">1.2.12. matplotlib.pyplot.FormatStrFormatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Formatter.html">1.2.13. matplotlib.pyplot.Formatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.FuncFormatter.html">1.2.14. matplotlib.pyplot.FuncFormatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.GridSpec.html">1.2.15. matplotlib.pyplot.GridSpec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.IndexLocator.html">1.2.16. matplotlib.pyplot.IndexLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Line2D.html">1.2.17. matplotlib.pyplot.Line2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.LinearLocator.html">1.2.18. matplotlib.pyplot.LinearLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Locator.html">1.2.19. matplotlib.pyplot.Locator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.LogFormatter.html">1.2.20. matplotlib.pyplot.LogFormatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.LogFormatterExponent.html">1.2.21. matplotlib.pyplot.LogFormatterExponent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.LogFormatterMathtext.html">1.2.22. matplotlib.pyplot.LogFormatterMathtext</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.LogLocator.html">1.2.23. matplotlib.pyplot.LogLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.MaxNLocator.html">1.2.24. matplotlib.pyplot.MaxNLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.MultipleLocator.html">1.2.25. matplotlib.pyplot.MultipleLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Normalize.html">1.2.26. matplotlib.pyplot.Normalize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.NullFormatter.html">1.2.27. matplotlib.pyplot.NullFormatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.NullLocator.html">1.2.28. matplotlib.pyplot.NullLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.PolarAxes.html">1.2.29. matplotlib.pyplot.PolarAxes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Polygon.html">1.2.30. matplotlib.pyplot.Polygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Rectangle.html">1.2.31. matplotlib.pyplot.Rectangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.ScalarFormatter.html">1.2.32. matplotlib.pyplot.ScalarFormatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Slider.html">1.2.33. matplotlib.pyplot.Slider</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Subplot.html">1.2.34. matplotlib.pyplot.Subplot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.SubplotTool.html">1.2.35. matplotlib.pyplot.SubplotTool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Text.html">1.2.36. matplotlib.pyplot.Text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.TickHelper.html">1.2.37. matplotlib.pyplot.TickHelper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Widget.html">1.2.38. matplotlib.pyplot.Widget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.silent_list.html">1.2.39. matplotlib.pyplot.silent_list</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">2. matplotlib.cm</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../mpl.pyplot.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.pyplot.html">1. matplotlib.pyplot</a> &raquo;</li>
+        
+      <li>1.2.3. matplotlib.pyplot.Artist</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.pyplot.Artist.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-pyplot-artist">
+<h1>1.2.3. matplotlib.pyplot.Artist<a class="headerlink" href="#matplotlib-pyplot-artist" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="matplotlib.pyplot.Artist">
+<em class="property">class </em><code class="descclassname">matplotlib.pyplot.</code><code class="descname">Artist</code><a class="reference internal" href="../../modules/matplotlib/artist.html#Artist"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.pyplot.Artist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abstract base class for someone who renders into a
+<code class="xref py py-class docutils literal"><span class="pre">FigureCanvas</span></code>.</p>
+<p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Artist.axes.html#matplotlib.pyplot.Artist.axes" title="matplotlib.pyplot.Artist.axes"><code class="xref py py-obj docutils literal"><span class="pre">axes</span></code></a></td>
+<td>The <code class="xref py py-class docutils literal"><span class="pre">Axes</span></code> instance the artist resides in, or <em>None</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Artist.mouseover.html#matplotlib.pyplot.Artist.mouseover" title="matplotlib.pyplot.Artist.mouseover"><code class="xref py py-obj docutils literal"><span class="pre">mouseover</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Artist.stale.html#matplotlib.pyplot.Artist.stale" title="matplotlib.pyplot.Artist.stale"><code class="xref py py-obj docutils literal"><span class="pre">stale</span></code></a></td>
+<td>If the artist is &#8216;stale&#8217; and needs to be re-drawn for the output to match the internal state of the artist.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Artist.add_callback.html#matplotlib.pyplot.Artist.add_callback" title="matplotlib.pyplot.Artist.add_callback"><code class="xref py py-obj docutils literal"><span class="pre">add_callback</span></code></a>(func)</td>
+<td>Adds a callback function that will be called whenever one of the <a class="reference internal" href="#matplotlib.pyplot.Artist" title="matplotlib.pyplot.Artist"><code class="xref py py-class docutils literal"><span class="pre">Artist</span></code></a>&#8216;s properties changes.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Artist.contains.html#matplotlib.pyplot.Artist.contains" title="matplotlib.pyplot.Artist.contains"><code class="xref py py-obj docutils literal"><span class="pre">contains</span></code></a>(mouseevent)</td>
+<td>Test whether the artist contains the mouse event.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Artist.convert_xunits.html#matplotlib.pyplot.Artist.convert_xunits" title="matplotlib.pyplot.Artist.convert_xunits"><code class="xref py py-obj docutils literal"><span class="pre">convert_xunits</span></code></a>(x)</td>
+<td>For artists in an axes, if the xaxis has units support,</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Artist.convert_yunits.html#matplotlib.pyplot.Artist.convert_yunits" title="matplotlib.pyplot.Artist.convert_yunits"><code class="xref py py-obj docutils literal"><span class="pre">convert_yunits</span></code></a>(y)</td>
+<td>For artists in an axes, if the yaxis has units support,</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Artist.draw.html#matplotlib.pyplot.Artist.draw" title="matplotlib.pyplot.Artist.draw"><code class="xref py py-obj docutils literal"><span class="pre">draw</span></code></a>(renderer,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Derived classes drawing method</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Artist.findobj.html#matplotlib.pyplot.Artist.findobj" title="matplotlib.pyplot.Artist.findobj"><code class="xref py py-obj docutils literal"><span class="pre">findobj</span></code></a>([match,&nbsp;include_self])</td>
+<td>Find artist objects.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Artist.format_cursor_data.html#matplotlib.pyplot.Artist.format_cursor_data" title="matplotlib.pyplot.Artist.format_cursor_data"><code class="xref py py-obj docutils literal"><span class="pre">format_cursor_data</span></code></a>(data)</td>
+<td>Return <em>cursor data</em> string formatted.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Artist.get_agg_filter.html#matplotlib.pyplot.Artist.get_agg_filter" title="matplotlib.pyplot.Artist.get_agg_filter"><code class="xref py py-obj docutils literal"><span class="pre">get_agg_filter</span></code></a>()</td>
+<td>return filter function to be used for agg filter</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Artist.get_alpha.html#matplotlib.pyplot.Artist.get_alpha" title="matplotlib.pyplot.Artist.get_alpha"><code class="xref py py-obj docutils literal"><span class="pre">get_alpha</span></code></a>()</td>
+<td>Return the alpha value used for blending - not supported on all</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Artist.get_animated.html#matplotlib.pyplot.Artist.get_animated" title="matplotlib.pyplot.Artist.get_animated"><code class="xref py py-obj docutils literal"><span class="pre">get_animated</span></code></a>()</td>
+<td>Return the artist&#8217;s animated state</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Artist.get_axes.html#matplotlib.pyplot.Artist.get_axes" title="matplotlib.pyplot.Artist.get_axes"><code class="xref py py-obj docutils literal"><span class="pre">get_axes</span></code></a>()</td>
+<td>Return the <code class="xref py py-class docutils literal"><span class="pre">Axes</span></code> instance the artist resides in, or <em>None</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Artist.get_children.html#matplotlib.pyplot.Artist.get_children" title="matplotlib.pyplot.Artist.get_children"><code class="xref py py-obj docutils literal"><span class="pre">get_children</span></code></a>()</td>
+<td>Return a list of the child <code class="xref py py-class docutils literal"><span class="pre">Artist`s</span> <span class="pre">this</span> <span class="pre">:class:`Artist</span></code> contains.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Artist.get_clip_box.html#matplotlib.pyplot.Artist.get_clip_box" title="matplotlib.pyplot.Artist.get_clip_box"><code class="xref py py-obj docutils literal"><span class="pre">get_clip_box</span></code></a>()</td>
+<td>Return artist clipbox</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Artist.get_clip_on.html#matplotlib.pyplot.Artist.get_clip_on" title="matplotlib.pyplot.Artist.get_clip_on"><code class="xref py py-obj docutils literal"><span class="pre">get_clip_on</span></code></a>()</td>
+<td>Return whether artist uses clipping</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Artist.get_clip_path.html#matplotlib.pyplot.Artist.get_clip_path" title="matplotlib.pyplot.Artist.get_clip_path"><code class="xref py py-obj docutils literal"><span class="pre">get_clip_path</span></code></a>()</td>
+<td>Return artist clip path</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Artist.get_contains.html#matplotlib.pyplot.Artist.get_contains" title="matplotlib.pyplot.Artist.get_contains"><code class="xref py py-obj docutils literal"><span class="pre">get_contains</span></code></a>()</td>
+<td>Return the _contains test used by the artist, or <em>None</em> for default.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Artist.get_cursor_data.html#matplotlib.pyplot.Artist.get_cursor_data" title="matplotlib.pyplot.Artist.get_cursor_data"><code class="xref py py-obj docutils literal"><span class="pre">get_cursor_data</span></code></a>(event)</td>
+<td>Get the cursor data for a given event.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Artist.get_figure.html#matplotlib.pyplot.Artist.get_figure" title="matplotlib.pyplot.Artist.get_figure"><code class="xref py py-obj docutils literal"><span class="pre">get_figure</span></code></a>()</td>
+<td>Return the <code class="xref py py-class docutils literal"><span class="pre">Figure</span></code> instance the artist belongs to.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Artist.get_gid.html#matplotlib.pyplot.Artist.get_gid" title="matplotlib.pyplot.Artist.get_gid"><code class="xref py py-obj docutils literal"><span class="pre">get_gid</span></code></a>()</td>
+<td>Returns the group id</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Artist.get_label.html#matplotlib.pyplot.Artist.get_label" title="matplotlib.pyplot.Artist.get_label"><code class="xref py py-obj docutils literal"><span class="pre">get_label</span></code></a>()</td>
+<td>Get the label used for this artist in the legend.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Artist.get_path_effects.html#matplotlib.pyplot.Artist.get_path_effects" title="matplotlib.pyplot.Artist.get_path_effects"><code class="xref py py-obj docutils literal"><span class="pre">get_path_effects</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Artist.get_picker.html#matplotlib.pyplot.Artist.get_picker" title="matplotlib.pyplot.Artist.get_picker"><code class="xref py py-obj docutils literal"><span class="pre">get_picker</span></code></a>()</td>
+<td>Return the picker object used by this artist</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Artist.get_rasterized.html#matplotlib.pyplot.Artist.get_rasterized" title="matplotlib.pyplot.Artist.get_rasterized"><code class="xref py py-obj docutils literal"><span class="pre">get_rasterized</span></code></a>()</td>
+<td>return True if the artist is to be rasterized</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Artist.get_sketch_params.html#matplotlib.pyplot.Artist.get_sketch_params" title="matplotlib.pyplot.Artist.get_sketch_params"><code class="xref py py-obj docutils literal"><span class="pre">get_sketch_params</span></code></a>()</td>
+<td>Returns the sketch parameters for the artist.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Artist.get_snap.html#matplotlib.pyplot.Artist.get_snap" title="matplotlib.pyplot.Artist.get_snap"><code class="xref py py-obj docutils literal"><span class="pre">get_snap</span></code></a>()</td>
+<td>Returns the snap setting which may be:</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Artist.get_transform.html#matplotlib.pyplot.Artist.get_transform" title="matplotlib.pyplot.Artist.get_transform"><code class="xref py py-obj docutils literal"><span class="pre">get_transform</span></code></a>()</td>
+<td>Return the <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code> instance used by this artist.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Artist.get_transformed_clip_path_and_affine.html#matplotlib.pyplot.Artist.get_transformed_clip_path_and_affine" title="matplotlib.pyplot.Artist.get_transformed_clip_path_and_affine"><code class="xref py py-obj docutils literal"><span class="pre">get_transformed_clip_path_and_affine</span></code></a>()</td>
+<td>Return the clip path with the non-affine part of its transformation applied, and the remaining affine part of its transformation.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Artist.get_url.html#matplotlib.pyplot.Artist.get_url" title="matplotlib.pyplot.Artist.get_url"><code class="xref py py-obj docutils literal"><span class="pre">get_url</span></code></a>()</td>
+<td>Returns the url</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Artist.get_visible.html#matplotlib.pyplot.Artist.get_visible" title="matplotlib.pyplot.Artist.get_visible"><code class="xref py py-obj docutils literal"><span class="pre">get_visible</span></code></a>()</td>
+<td>Return the artist&#8217;s visiblity</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Artist.get_window_extent.html#matplotlib.pyplot.Artist.get_window_extent" title="matplotlib.pyplot.Artist.get_window_extent"><code class="xref py py-obj docutils literal"><span class="pre">get_window_extent</span></code></a>(renderer)</td>
+<td>Get the axes bounding box in display space.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Artist.get_zorder.html#matplotlib.pyplot.Artist.get_zorder" title="matplotlib.pyplot.Artist.get_zorder"><code class="xref py py-obj docutils literal"><span class="pre">get_zorder</span></code></a>()</td>
+<td>Return the <a class="reference internal" href="#matplotlib.pyplot.Artist" title="matplotlib.pyplot.Artist"><code class="xref py py-class docutils literal"><span class="pre">Artist</span></code></a>&#8216;s zorder.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Artist.have_units.html#matplotlib.pyplot.Artist.have_units" title="matplotlib.pyplot.Artist.have_units"><code class="xref py py-obj docutils literal"><span class="pre">have_units</span></code></a>()</td>
+<td>Return <em>True</em> if units are set on the <em>x</em> or <em>y</em> axes</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Artist.hitlist.html#matplotlib.pyplot.Artist.hitlist" title="matplotlib.pyplot.Artist.hitlist"><code class="xref py py-obj docutils literal"><span class="pre">hitlist</span></code></a>(event)</td>
+<td>List the children of the artist which contain the mouse event <em>event</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Artist.is_figure_set.html#matplotlib.pyplot.Artist.is_figure_set" title="matplotlib.pyplot.Artist.is_figure_set"><code class="xref py py-obj docutils literal"><span class="pre">is_figure_set</span></code></a>()</td>
+<td>Returns True if the artist is assigned to a <code class="xref py py-class docutils literal"><span class="pre">Figure</span></code>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Artist.is_transform_set.html#matplotlib.pyplot.Artist.is_transform_set" title="matplotlib.pyplot.Artist.is_transform_set"><code class="xref py py-obj docutils literal"><span class="pre">is_transform_set</span></code></a>()</td>
+<td>Returns <em>True</em> if <a class="reference internal" href="#matplotlib.pyplot.Artist" title="matplotlib.pyplot.Artist"><code class="xref py py-class docutils literal"><span class="pre">Artist</span></code></a> has a transform explicitly set.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Artist.pchanged.html#matplotlib.pyplot.Artist.pchanged" title="matplotlib.pyplot.Artist.pchanged"><code class="xref py py-obj docutils literal"><span class="pre">pchanged</span></code></a>()</td>
+<td>Fire an event when property changed, calling all of the registered callbacks.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Artist.pick.html#matplotlib.pyplot.Artist.pick" title="matplotlib.pyplot.Artist.pick"><code class="xref py py-obj docutils literal"><span class="pre">pick</span></code></a>(mouseevent)</td>
+<td>call signature:</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Artist.pickable.html#matplotlib.pyplot.Artist.pickable" title="matplotlib.pyplot.Artist.pickable"><code class="xref py py-obj docutils literal"><span class="pre">pickable</span></code></a>()</td>
+<td>Return <em>True</em> if <a class="reference internal" href="#matplotlib.pyplot.Artist" title="matplotlib.pyplot.Artist"><code class="xref py py-class docutils literal"><span class="pre">Artist</span></code></a> is pickable.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Artist.properties.html#matplotlib.pyplot.Artist.properties" title="matplotlib.pyplot.Artist.properties"><code class="xref py py-obj docutils literal"><span class="pre">properties</span></code></a>()</td>
+<td>return a dictionary mapping property name -&gt; value for all Artist props</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Artist.remove.html#matplotlib.pyplot.Artist.remove" title="matplotlib.pyplot.Artist.remove"><code class="xref py py-obj docutils literal"><span class="pre">remove</span></code></a>()</td>
+<td>Remove the artist from the figure if possible.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Artist.remove_callback.html#matplotlib.pyplot.Artist.remove_callback" title="matplotlib.pyplot.Artist.remove_callback"><code class="xref py py-obj docutils literal"><span class="pre">remove_callback</span></code></a>(oid)</td>
+<td>Remove a callback based on its <em>id</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Artist.set.html#matplotlib.pyplot.Artist.set" title="matplotlib.pyplot.Artist.set"><code class="xref py py-obj docutils literal"><span class="pre">set</span></code></a>(**kwargs)</td>
+<td>A property batch setter.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Artist.set_agg_filter.html#matplotlib.pyplot.Artist.set_agg_filter" title="matplotlib.pyplot.Artist.set_agg_filter"><code class="xref py py-obj docutils literal"><span class="pre">set_agg_filter</span></code></a>(filter_func)</td>
+<td>set agg_filter fuction.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Artist.set_alpha.html#matplotlib.pyplot.Artist.set_alpha" title="matplotlib.pyplot.Artist.set_alpha"><code class="xref py py-obj docutils literal"><span class="pre">set_alpha</span></code></a>(alpha)</td>
+<td>Set the alpha value used for blending - not supported on all backends.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Artist.set_animated.html#matplotlib.pyplot.Artist.set_animated" title="matplotlib.pyplot.Artist.set_animated"><code class="xref py py-obj docutils literal"><span class="pre">set_animated</span></code></a>(b)</td>
+<td>Set the artist&#8217;s animation state.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Artist.set_axes.html#matplotlib.pyplot.Artist.set_axes" title="matplotlib.pyplot.Artist.set_axes"><code class="xref py py-obj docutils literal"><span class="pre">set_axes</span></code></a>(axes)</td>
+<td>Set the <code class="xref py py-class docutils literal"><span class="pre">Axes</span></code> instance in which the artist resides, if any.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Artist.set_clip_box.html#matplotlib.pyplot.Artist.set_clip_box" title="matplotlib.pyplot.Artist.set_clip_box"><code class="xref py py-obj docutils literal"><span class="pre">set_clip_box</span></code></a>(clipbox)</td>
+<td>Set the artist&#8217;s clip <code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Artist.set_clip_on.html#matplotlib.pyplot.Artist.set_clip_on" title="matplotlib.pyplot.Artist.set_clip_on"><code class="xref py py-obj docutils literal"><span class="pre">set_clip_on</span></code></a>(b)</td>
+<td>Set whether artist uses clipping.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Artist.set_clip_path.html#matplotlib.pyplot.Artist.set_clip_path" title="matplotlib.pyplot.Artist.set_clip_path"><code class="xref py py-obj docutils literal"><span class="pre">set_clip_path</span></code></a>(path[,&nbsp;transform])</td>
+<td>Set the artist&#8217;s clip path, which may be:</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Artist.set_contains.html#matplotlib.pyplot.Artist.set_contains" title="matplotlib.pyplot.Artist.set_contains"><code class="xref py py-obj docutils literal"><span class="pre">set_contains</span></code></a>(picker)</td>
+<td>Replace the contains test used by this artist.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Artist.set_figure.html#matplotlib.pyplot.Artist.set_figure" title="matplotlib.pyplot.Artist.set_figure"><code class="xref py py-obj docutils literal"><span class="pre">set_figure</span></code></a>(fig)</td>
+<td>Set the <code class="xref py py-class docutils literal"><span class="pre">Figure</span></code> instance the artist belongs to.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Artist.set_gid.html#matplotlib.pyplot.Artist.set_gid" title="matplotlib.pyplot.Artist.set_gid"><code class="xref py py-obj docutils literal"><span class="pre">set_gid</span></code></a>(gid)</td>
+<td>Sets the (group) id for the artist</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Artist.set_label.html#matplotlib.pyplot.Artist.set_label" title="matplotlib.pyplot.Artist.set_label"><code class="xref py py-obj docutils literal"><span class="pre">set_label</span></code></a>(s)</td>
+<td>Set the label to <em>s</em> for auto legend.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Artist.set_path_effects.html#matplotlib.pyplot.Artist.set_path_effects" title="matplotlib.pyplot.Artist.set_path_effects"><code class="xref py py-obj docutils literal"><span class="pre">set_path_effects</span></code></a>(path_effects)</td>
+<td>set path_effects, which should be a list of instances of</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Artist.set_picker.html#matplotlib.pyplot.Artist.set_picker" title="matplotlib.pyplot.Artist.set_picker"><code class="xref py py-obj docutils literal"><span class="pre">set_picker</span></code></a>(picker)</td>
+<td>Set the epsilon for picking used by this artist</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Artist.set_rasterized.html#matplotlib.pyplot.Artist.set_rasterized" title="matplotlib.pyplot.Artist.set_rasterized"><code class="xref py py-obj docutils literal"><span class="pre">set_rasterized</span></code></a>(rasterized)</td>
+<td>Force rasterized (bitmap) drawing in vector backend output.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Artist.set_sketch_params.html#matplotlib.pyplot.Artist.set_sketch_params" title="matplotlib.pyplot.Artist.set_sketch_params"><code class="xref py py-obj docutils literal"><span class="pre">set_sketch_params</span></code></a>([scale,&nbsp;length,&nbsp;randomness])</td>
+<td>Sets the sketch parameters.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Artist.set_snap.html#matplotlib.pyplot.Artist.set_snap" title="matplotlib.pyplot.Artist.set_snap"><code class="xref py py-obj docutils literal"><span class="pre">set_snap</span></code></a>(snap)</td>
+<td>Sets the snap setting which may be:</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Artist.set_transform.html#matplotlib.pyplot.Artist.set_transform" title="matplotlib.pyplot.Artist.set_transform"><code class="xref py py-obj docutils literal"><span class="pre">set_transform</span></code></a>(t)</td>
+<td>Set the <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code> instance used by this artist.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Artist.set_url.html#matplotlib.pyplot.Artist.set_url" title="matplotlib.pyplot.Artist.set_url"><code class="xref py py-obj docutils literal"><span class="pre">set_url</span></code></a>(url)</td>
+<td>Sets the url for the artist</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Artist.set_visible.html#matplotlib.pyplot.Artist.set_visible" title="matplotlib.pyplot.Artist.set_visible"><code class="xref py py-obj docutils literal"><span class="pre">set_visible</span></code></a>(b)</td>
+<td>Set the artist&#8217;s visiblity.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Artist.set_zorder.html#matplotlib.pyplot.Artist.set_zorder" title="matplotlib.pyplot.Artist.set_zorder"><code class="xref py py-obj docutils literal"><span class="pre">set_zorder</span></code></a>(level)</td>
+<td>Set the zorder for the artist.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Artist.update.html#matplotlib.pyplot.Artist.update" title="matplotlib.pyplot.Artist.update"><code class="xref py py-obj docutils literal"><span class="pre">update</span></code></a>(props)</td>
+<td>Update the properties of this <a class="reference internal" href="#matplotlib.pyplot.Artist" title="matplotlib.pyplot.Artist"><code class="xref py py-class docutils literal"><span class="pre">Artist</span></code></a> from the dictionary <em>prop</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Artist.update_from.html#matplotlib.pyplot.Artist.update_from" title="matplotlib.pyplot.Artist.update_from"><code class="xref py py-obj docutils literal"><span class="pre">update_from</span></code></a>(other)</td>
+<td>Copy properties from <em>other</em> to <em>self</em>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.pyplot.Artist.axes.html" class="btn btn-neutral float-right" title="1.2.3.1. matplotlib.pyplot.Artist.axes" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.pyplot.Arrow.update_from.html" class="btn btn-neutral" title="1.2.2.103. matplotlib.pyplot.Arrow.update_from" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

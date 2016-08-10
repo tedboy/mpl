@@ -1,0 +1,269 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>matplotlib.pyplot.Subplot.streamplot &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">1. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">2. matplotlib.cm</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>matplotlib.pyplot.Subplot.streamplot</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.pyplot.Subplot.streamplot.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-pyplot-subplot-streamplot">
+<h1>matplotlib.pyplot.Subplot.streamplot<a class="headerlink" href="#matplotlib-pyplot-subplot-streamplot" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="matplotlib.pyplot.Subplot.streamplot">
+<code class="descclassname">Subplot.</code><code class="descname">streamplot</code><span class="sig-paren">(</span><em>ax</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.pyplot.Subplot.streamplot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draws streamlines of a vector flow.</p>
+<dl class="docutils">
+<dt><em>x</em>, <em>y</em></dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">1d arrays</span><dd>an <em>evenly spaced</em> grid.</dd>
+<dt><em>u</em>, <em>v</em></dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">2d arrays</span><dd>x and y-velocities. Number of rows should match length of y, and
+the number of columns should match x.</dd>
+<dt><em>density</em></dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">float or 2-tuple</span><dd>Controls the closeness of streamlines. When <cite>density = 1</cite>, the domain
+is divided into a 30x30 grid&#8212;<em>density</em> linearly scales this grid.
+Each cell in the grid can have, at most, one traversing streamline.
+For different densities in each direction, use [density_x, density_y].</dd>
+<dt><em>linewidth</em></dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">numeric or 2d array</span><dd>vary linewidth when given a 2d array with the same shape as velocities.</dd>
+<dt><em>color</em></dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">matplotlib color code, or 2d array</span><dd>Streamline color. When given an array with the same shape as
+velocities, <em>color</em> values are converted to colors using <em>cmap</em>.</dd>
+<dt><em>cmap</em></dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier"><code class="xref py py-class docutils literal"><span class="pre">Colormap</span></code></span><dd>Colormap used to plot streamlines and arrows. Only necessary when using
+an array input for <em>color</em>.</dd>
+<dt><em>norm</em></dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier"><code class="xref py py-class docutils literal"><span class="pre">Normalize</span></code></span><dd>Normalize object used to scale luminance data to 0, 1. If None, stretch
+(min, max) to (0, 1). Only necessary when <em>color</em> is an array.</dd>
+<dt><em>arrowsize</em></dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">float</span><dd>Factor scale arrow size.</dd>
+<dt><em>arrowstyle</em></dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">str</span><dd>Arrow style specification.
+See <code class="xref py py-class docutils literal"><span class="pre">FancyArrowPatch</span></code>.</dd>
+<dt><em>minlength</em></dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">float</span><dd>Minimum length of streamline in axes coordinates.</dd>
+<dt><em>start_points</em>: Nx2 array</dt>
+<dd>Coordinates of starting points for the streamlines.
+In data coordinates, the same as the <code class="docutils literal"><span class="pre">x</span></code> and <code class="docutils literal"><span class="pre">y</span></code> arrays.</dd>
+<dt><em>zorder</em></dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">int</span><dd>any number</dd>
+</dl>
+<p>Returns:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt><em>stream_container</em></dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">StreamplotSet</span><dd><p class="first">Container object with attributes</p>
+<blockquote>
+<div><ul class="simple">
+<li>lines: <cite>matplotlib.collections.LineCollection</cite> of streamlines</li>
+<li>arrows: collection of <cite>matplotlib.patches.FancyArrowPatch</cite>
+objects representing arrows half-way along stream
+lines.</li>
+</ul>
+</div></blockquote>
+<p class="last">This container will probably change in the future to allow changes
+to the colormap, alpha, etc. for both lines and arrows, but these
+changes should be backward compatible.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

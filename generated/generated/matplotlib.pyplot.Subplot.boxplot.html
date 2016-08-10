@@ -1,0 +1,401 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>matplotlib.pyplot.Subplot.boxplot &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">1. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">2. matplotlib.cm</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>matplotlib.pyplot.Subplot.boxplot</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.pyplot.Subplot.boxplot.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-pyplot-subplot-boxplot">
+<h1>matplotlib.pyplot.Subplot.boxplot<a class="headerlink" href="#matplotlib-pyplot-subplot-boxplot" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="matplotlib.pyplot.Subplot.boxplot">
+<code class="descclassname">Subplot.</code><code class="descname">boxplot</code><span class="sig-paren">(</span><em>ax</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.pyplot.Subplot.boxplot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make a box and whisker plot.</p>
+<p>Call signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">boxplot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">notch</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sym</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">vert</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">whis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">positions</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">widths</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">patch_artist</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">bootstrap</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">usermedians</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">conf_intervals</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">meanline</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">showmeans</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">showcaps</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">showbox</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">showfliers</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">boxprops</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">flierprops</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">medianprops</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">meanprops</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">capprops</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">whiskerprops</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">manage_xticks</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>Make a box and whisker plot for each column of <em>x</em> or each
+vector in sequence <em>x</em>.  The box extends from the lower to
+upper quartile values of the data, with a line at the median.
+The whiskers extend from the box to show the range of the
+data.  Flier points are those past the end of the whiskers.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>x</strong> : Array or a sequence of vectors.</p>
+<blockquote>
+<div><p>The input data.</p>
+</div></blockquote>
+<p><strong>notch</strong> : bool, default = False</p>
+<blockquote>
+<div><p>If False, produces a rectangular box plot.
+If True, will produce a notched box plot</p>
+</div></blockquote>
+<p><strong>sym</strong> : str or None, default = None</p>
+<blockquote>
+<div><p>The default symbol for flier points.
+Enter an empty string (&#8216;&#8217;) if you don&#8217;t want to show fliers.
+If <cite>None</cite>, then the fliers default to &#8216;b+&#8217;  If you want more
+control use the flierprops kwarg.</p>
+</div></blockquote>
+<p><strong>vert</strong> : bool, default = True</p>
+<blockquote>
+<div><p>If True (default), makes the boxes vertical.
+If False, makes horizontal boxes.</p>
+</div></blockquote>
+<p><strong>whis</strong> : float, sequence (default = 1.5) or string</p>
+<blockquote>
+<div><p>As a float, determines the reach of the whiskers past the first
+and third quartiles (e.g., Q3 + whis*IQR, IQR = interquartile
+range, Q3-Q1). Beyond the whiskers, data are considered outliers
+and are plotted as individual points. Set this to an unreasonably
+high value to force the whiskers to show the min and max values.
+Alternatively, set this to an ascending sequence of percentile
+(e.g., [5, 95]) to set the whiskers at specific percentiles of
+the data. Finally, <em>whis</em> can be the string &#8216;range&#8217; to force the
+whiskers to the min and max of the data. In the edge case that
+the 25th and 75th percentiles are equivalent, <em>whis</em> will be
+automatically set to &#8216;range&#8217;.</p>
+</div></blockquote>
+<p><strong>bootstrap</strong> : None (default) or integer</p>
+<blockquote>
+<div><p>Specifies whether to bootstrap the confidence intervals
+around the median for notched boxplots. If bootstrap==None,
+no bootstrapping is performed, and notches are calculated
+using a Gaussian-based asymptotic approximation  (see McGill, R.,
+Tukey, J.W., and Larsen, W.A., 1978, and Kendall and Stuart,
+1967). Otherwise, bootstrap specifies the number of times to
+bootstrap the median to determine it&#8217;s 95% confidence intervals.
+Values between 1000 and 10000 are recommended.</p>
+</div></blockquote>
+<p><strong>usermedians</strong> : array-like or None (default)</p>
+<blockquote>
+<div><p>An array or sequence whose first dimension (or length) is
+compatible with <em>x</em>. This overrides the medians computed by
+matplotlib for each element of <em>usermedians</em> that is not None.
+When an element of <em>usermedians</em> == None, the median will be
+computed by matplotlib as normal.</p>
+</div></blockquote>
+<p><strong>conf_intervals</strong> : array-like or None (default)</p>
+<blockquote>
+<div><p>Array or sequence whose first dimension (or length) is compatible
+with <em>x</em> and whose second dimension is 2. When the current element
+of <em>conf_intervals</em> is not None, the notch locations computed by
+matplotlib are overridden (assuming notch is True). When an
+element of <em>conf_intervals</em> is None, boxplot compute notches the
+method specified by the other kwargs (e.g., <em>bootstrap</em>).</p>
+</div></blockquote>
+<p><strong>positions</strong> : array-like, default = [1, 2, ..., n]</p>
+<blockquote>
+<div><p>Sets the positions of the boxes. The ticks and limits
+are automatically set to match the positions.</p>
+</div></blockquote>
+<p><strong>widths</strong> : array-like, default = 0.5</p>
+<blockquote>
+<div><p>Either a scalar or a vector and sets the width of each box. The
+default is 0.5, or <code class="docutils literal"><span class="pre">0.15*(distance</span> <span class="pre">between</span> <span class="pre">extreme</span> <span class="pre">positions)</span></code>
+if that is smaller.</p>
+</div></blockquote>
+<p><strong>labels</strong> : sequence or None (default)</p>
+<blockquote>
+<div><p>Labels for each dataset. Length must be compatible with
+dimensions  of <em>x</em></p>
+</div></blockquote>
+<p><strong>patch_artist</strong> : bool, default = False</p>
+<blockquote>
+<div><p>If False produces boxes with the Line2D artist
+If True produces boxes with the Patch artist</p>
+</div></blockquote>
+<p><strong>showmeans</strong> : bool, default = False</p>
+<blockquote>
+<div><p>If True, will toggle one the rendering of the means</p>
+</div></blockquote>
+<p><strong>showcaps</strong> : bool, default = True</p>
+<blockquote>
+<div><p>If True, will toggle one the rendering of the caps</p>
+</div></blockquote>
+<p><strong>showbox</strong> : bool, default = True</p>
+<blockquote>
+<div><p>If True, will toggle one the rendering of box</p>
+</div></blockquote>
+<p><strong>showfliers</strong> : bool, default = True</p>
+<blockquote>
+<div><p>If True, will toggle one the rendering of the fliers</p>
+</div></blockquote>
+<p><strong>boxprops</strong> : dict or None (default)</p>
+<blockquote>
+<div><p>If provided, will set the plotting style of the boxes</p>
+</div></blockquote>
+<p><strong>whiskerprops</strong> : dict or None (default)</p>
+<blockquote>
+<div><p>If provided, will set the plotting style of the whiskers</p>
+</div></blockquote>
+<p><strong>capprops</strong> : dict or None (default)</p>
+<blockquote>
+<div><p>If provided, will set the plotting style of the caps</p>
+</div></blockquote>
+<p><strong>flierprops</strong> : dict or None (default)</p>
+<blockquote>
+<div><p>If provided, will set the plotting style of the fliers</p>
+</div></blockquote>
+<p><strong>medianprops</strong> : dict or None (default)</p>
+<blockquote>
+<div><p>If provided, will set the plotting style of the medians</p>
+</div></blockquote>
+<p><strong>meanprops</strong> : dict or None (default)</p>
+<blockquote>
+<div><p>If provided, will set the plotting style of the means</p>
+</div></blockquote>
+<p><strong>meanline</strong> : bool, default = False</p>
+<blockquote>
+<div><p>If True (and <em>showmeans</em> is True), will try to render the mean
+as a line spanning the full width of the box according to
+<em>meanprops</em>. Not recommended if <em>shownotches</em> is also True.
+Otherwise, means will be shown as points.</p>
+</div></blockquote>
+<p><strong>manage_xticks</strong> : bool, default = True</p>
+<blockquote>
+<div><p>If the function should adjust the xlim and xtick locations.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>result</strong> : dict</p>
+<blockquote class="last">
+<div><p>A dictionary mapping each component of the boxplot
+to a list of the <code class="xref py py-class docutils literal"><span class="pre">matplotlib.lines.Line2D</span></code>
+instances created. That dictionary has the following keys
+(assuming vertical boxplots):</p>
+<ul class="simple">
+<li>boxes: the main body of the boxplot showing the quartiles
+and the median&#8217;s confidence intervals if enabled.</li>
+<li>medians: horizonal lines at the median of each box.</li>
+<li>whiskers: the vertical lines extending to the most extreme,
+n-outlier data points.</li>
+<li>caps: the horizontal lines at the ends of the whiskers.</li>
+<li>fliers: points representing data that extend beyond the
+whiskers (outliers).</li>
+<li>means: points or lines representing the means.</li>
+</ul>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>In addition to the above described arguments, this function can take a
+<strong>data</strong> keyword argument. If such a <strong>data</strong> argument is given, the
+following arguments are replaced by <strong>data[&lt;arg&gt;]</strong>:</p>
+<ul class="simple">
+<li>All positional and all keyword arguments.</li>
+</ul>
+<p class="rubric">Examples</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

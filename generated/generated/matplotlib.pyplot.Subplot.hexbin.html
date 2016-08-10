@@ -1,0 +1,357 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>matplotlib.pyplot.Subplot.hexbin &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">1. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">2. matplotlib.cm</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>matplotlib.pyplot.Subplot.hexbin</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.pyplot.Subplot.hexbin.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-pyplot-subplot-hexbin">
+<h1>matplotlib.pyplot.Subplot.hexbin<a class="headerlink" href="#matplotlib-pyplot-subplot-hexbin" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="matplotlib.pyplot.Subplot.hexbin">
+<code class="descclassname">Subplot.</code><code class="descname">hexbin</code><span class="sig-paren">(</span><em>ax</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.pyplot.Subplot.hexbin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make a hexagonal binning plot.</p>
+<p>Call signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">hexbin</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">C</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">gridsize</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+       <span class="n">xscale</span> <span class="o">=</span> <span class="s1">&#39;linear&#39;</span><span class="p">,</span> <span class="n">yscale</span> <span class="o">=</span> <span class="s1">&#39;linear&#39;</span><span class="p">,</span>
+       <span class="n">cmap</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+       <span class="n">alpha</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">linewidths</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;none&#39;</span>
+       <span class="n">reduce_C_function</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">,</span> <span class="n">mincnt</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">marginals</span><span class="o">=</span><span class="kc">True</span>
+       <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Make a hexagonal binning plot of <em>x</em> versus <em>y</em>, where <em>x</em>,
+<em>y</em> are 1-D sequences of the same length, <em>N</em>. If <em>C</em> is <em>None</em>
+(the default), this is a histogram of the number of occurences
+of the observations at (x[i],y[i]).</p>
+<p>If <em>C</em> is specified, it specifies values at the coordinate
+(x[i],y[i]). These values are accumulated for each hexagonal
+bin and then reduced according to <em>reduce_C_function</em>, which
+defaults to numpy&#8217;s mean function (np.mean). (If <em>C</em> is
+specified, it must also be a 1-D sequence of the same length
+as <em>x</em> and <em>y</em>.)</p>
+<p><em>x</em>, <em>y</em> and/or <em>C</em> may be masked arrays, in which case only
+unmasked points will be plotted.</p>
+<p>Optional keyword arguments:</p>
+<dl class="docutils">
+<dt><em>gridsize</em>: [ 100 | integer ]</dt>
+<dd>The number of hexagons in the <em>x</em>-direction, default is
+100. The corresponding number of hexagons in the
+<em>y</em>-direction is chosen such that the hexagons are
+approximately regular. Alternatively, gridsize can be a
+tuple with two elements specifying the number of hexagons
+in the <em>x</em>-direction and the <em>y</em>-direction.</dd>
+<dt><em>bins</em>: [ <em>None</em> | &#8216;log&#8217; | integer | sequence ]</dt>
+<dd><p class="first">If <em>None</em>, no binning is applied; the color of each hexagon
+directly corresponds to its count value.</p>
+<p>If &#8216;log&#8217;, use a logarithmic scale for the color
+map. Internally, <span class="math">\(log_{10}(i+1)\)</span> is used to
+determine the hexagon color.</p>
+<p>If an integer, divide the counts in the specified number
+of bins, and color the hexagons accordingly.</p>
+<p class="last">If a sequence of values, the values of the lower bound of
+the bins to be used.</p>
+</dd>
+<dt><em>xscale</em>: [ &#8216;linear&#8217; | &#8216;log&#8217; ]</dt>
+<dd>Use a linear or log10 scale on the horizontal axis.</dd>
+<dt><em>scale</em>: [ &#8216;linear&#8217; | &#8216;log&#8217; ]</dt>
+<dd>Use a linear or log10 scale on the vertical axis.</dd>
+<dt><em>mincnt</em>: [ <em>None</em> | a positive integer ]</dt>
+<dd>If not <em>None</em>, only display cells with more than <em>mincnt</em>
+number of points in the cell</dd>
+<dt><em>marginals</em>: [ <em>True</em> | <em>False</em> ]</dt>
+<dd>if marginals is <em>True</em>, plot the marginal density as
+colormapped rectagles along the bottom of the x-axis and
+left of the y-axis</dd>
+<dt><em>extent</em>: [ <em>None</em> | scalars (left, right, bottom, top) ]</dt>
+<dd>The limits of the bins. The default assigns the limits
+based on gridsize, x, y, xscale and yscale.</dd>
+</dl>
+<p>Other keyword arguments controlling color mapping and normalization
+arguments:</p>
+<dl class="docutils">
+<dt><em>cmap</em>: [ <em>None</em> | Colormap ]</dt>
+<dd>a <code class="xref py py-class docutils literal"><span class="pre">matplotlib.colors.Colormap</span></code> instance. If <em>None</em>,
+defaults to rc <code class="docutils literal"><span class="pre">image.cmap</span></code>.</dd>
+<dt><em>norm</em>: [ <em>None</em> | Normalize ]</dt>
+<dd><code class="xref py py-class docutils literal"><span class="pre">matplotlib.colors.Normalize</span></code> instance is used to
+scale luminance data to 0,1.</dd>
+<dt><em>vmin</em> / <em>vmax</em>: scalar</dt>
+<dd><em>vmin</em> and <em>vmax</em> are used in conjunction with <em>norm</em> to normalize
+luminance data.  If either are <em>None</em>, the min and max of the color
+array <em>C</em> is used.  Note if you pass a norm instance, your settings
+for <em>vmin</em> and <em>vmax</em> will be ignored.</dd>
+<dt><em>alpha</em>: scalar between 0 and 1, or <em>None</em></dt>
+<dd>the alpha value for the patches</dd>
+<dt><em>linewidths</em>: [ <em>None</em> | scalar ]</dt>
+<dd>If <em>None</em>, defaults to rc lines.linewidth. Note that this
+is a tuple, and if you set the linewidths argument you
+must set it as a sequence of floats, as required by
+<code class="xref py py-class docutils literal"><span class="pre">RegularPolyCollection</span></code>.</dd>
+</dl>
+<p>Other keyword arguments controlling the Collection properties:</p>
+<dl class="docutils">
+<dt><em>edgecolors</em>: [ <em>None</em> | <code class="docutils literal"><span class="pre">'none'</span></code> | mpl color | color sequence ]</dt>
+<dd><p class="first">If <code class="docutils literal"><span class="pre">'none'</span></code>, draws the edges in the same color as the fill color.
+This is the default, as it avoids unsightly unpainted pixels
+between the hexagons.</p>
+<p>If <em>None</em>, draws the outlines in the default color.</p>
+<p class="last">If a matplotlib color arg or sequence of rgba tuples, draws the
+outlines in the specified color.</p>
+</dd>
+</dl>
+<p>Here are the standard descriptions of all the
+<code class="xref py py-class docutils literal"><span class="pre">Collection</span></code> kwargs:</p>
+<blockquote>
+<div>agg_filter: unknown
+alpha: float or None 
+animated: [True | False] 
+antialiased or antialiaseds: Boolean or sequence of booleans 
+array: unknown
+axes: an <code class="xref py py-class docutils literal"><span class="pre">Axes</span></code> instance 
+clim: a length 2 sequence of floats 
+clip_box: a <code class="xref py py-class docutils literal"><span class="pre">matplotlib.transforms.Bbox</span></code> instance 
+clip_on: [True | False] 
+clip_path: [ (<code class="xref py py-class docutils literal"><span class="pre">Path</span></code>, <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code>) | <code class="xref py py-class docutils literal"><span class="pre">Patch</span></code> | None ] 
+cmap: a colormap or registered colormap name 
+color: matplotlib color arg or sequence of rgba tuples
+contains: a callable function 
+edgecolor or edgecolors: matplotlib color spec or sequence of specs 
+facecolor or facecolors: matplotlib color spec or sequence of specs 
+figure: a <code class="xref py py-class docutils literal"><span class="pre">matplotlib.figure.Figure</span></code> instance 
+gid: an id string 
+hatch: [ &#8216;/&#8217; | &#8216;\&#8217; | &#8216;|&#8217; | &#8216;-&#8216; | &#8216;+&#8217; | &#8216;x&#8217; | &#8216;o&#8217; | &#8216;O&#8217; | &#8216;.&#8217; | &#8216;*&#8217; ] 
+label: string or anything printable with &#8216;%s&#8217; conversion. 
+linestyle or linestyles or dashes: [&#8216;solid&#8217; | &#8216;dashed&#8217;, &#8216;dashdot&#8217;, &#8216;dotted&#8217; | (offset, on-off-dash-seq) | <code class="docutils literal"><span class="pre">'-'</span></code> | <code class="docutils literal"><span class="pre">'--'</span></code> | <code class="docutils literal"><span class="pre">'-.'</span></code> | <code class="docutils literal"><span class="pre">':'</span></code> | <code class="docutils literal"><span class="pre">'None'</span></code> | <code class="docutils literal"><span class="pre">'</span> <span class="pre">'</span></code> | <code class="docutils literal"><span class="pre">''</span></code>]
+linewidth or lw or linewidths: float or sequence of floats 
+norm: unknown
+offset_position: unknown
+offsets: float or sequence of floats 
+path_effects: unknown
+picker: [None|float|boolean|callable] 
+pickradius: unknown
+rasterized: [True | False | None] 
+sketch_params: unknown
+snap: unknown
+transform: <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code> instance 
+url: a url string 
+urls: unknown
+visible: [True | False] 
+zorder: any number</div></blockquote>
+<p>The return value is a
+<code class="xref py py-class docutils literal"><span class="pre">PolyCollection</span></code> instance; use
+<code class="xref py py-meth docutils literal"><span class="pre">get_array()</span></code> on
+this <code class="xref py py-class docutils literal"><span class="pre">PolyCollection</span></code> to get
+the counts in each hexagon. If <em>marginals</em> is <em>True</em>, horizontal
+bar and vertical bar (both PolyCollections) will be attached
+to the return collection as attributes <em>hbar</em> and <em>vbar</em>.</p>
+<p><strong>Example:</strong></p>
+<p class="rubric">Notes</p>
+<p>In addition to the above described arguments, this function can take a
+<strong>data</strong> keyword argument. If such a <strong>data</strong> argument is given, the
+following arguments are replaced by <strong>data[&lt;arg&gt;]</strong>:</p>
+<ul class="simple">
+<li>All arguments with the following names: &#8216;y&#8217;, &#8216;x&#8217;.</li>
+</ul>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

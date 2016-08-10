@@ -1,0 +1,843 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.1.27. matplotlib.pyplot.colormaps &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../index.html"/>
+        <link rel="up" title="1. matplotlib.pyplot" href="matplotlib.pyplot.html"/>
+        <link rel="next" title="1.1.28. matplotlib.pyplot.colors" href="matplotlib.pyplot.colors.html"/>
+        <link rel="prev" title="1.1.26. matplotlib.pyplot.colorbar" href="matplotlib.pyplot.colorbar.html"/> 
+
+  
+  <script src="../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="matplotlib.pyplot.html">1. matplotlib.pyplot</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="matplotlib.pyplot.html#functions">1.1. Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.acorr.html">1.1.1. matplotlib.pyplot.acorr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.angle_spectrum.html">1.1.2. matplotlib.pyplot.angle_spectrum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.annotate.html">1.1.3. matplotlib.pyplot.annotate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.arrow.html">1.1.4. matplotlib.pyplot.arrow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.autoscale.html">1.1.5. matplotlib.pyplot.autoscale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.autumn.html">1.1.6. matplotlib.pyplot.autumn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.axes.html">1.1.7. matplotlib.pyplot.axes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.axhline.html">1.1.8. matplotlib.pyplot.axhline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.axhspan.html">1.1.9. matplotlib.pyplot.axhspan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.axis.html">1.1.10. matplotlib.pyplot.axis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.axvline.html">1.1.11. matplotlib.pyplot.axvline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.axvspan.html">1.1.12. matplotlib.pyplot.axvspan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.bar.html">1.1.13. matplotlib.pyplot.bar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.barbs.html">1.1.14. matplotlib.pyplot.barbs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.barh.html">1.1.15. matplotlib.pyplot.barh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.bone.html">1.1.16. matplotlib.pyplot.bone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.box.html">1.1.17. matplotlib.pyplot.box</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.boxplot.html">1.1.18. matplotlib.pyplot.boxplot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.broken_barh.html">1.1.19. matplotlib.pyplot.broken_barh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.cla.html">1.1.20. matplotlib.pyplot.cla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.clabel.html">1.1.21. matplotlib.pyplot.clabel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.clf.html">1.1.22. matplotlib.pyplot.clf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.clim.html">1.1.23. matplotlib.pyplot.clim</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.close.html">1.1.24. matplotlib.pyplot.close</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.cohere.html">1.1.25. matplotlib.pyplot.cohere</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.colorbar.html">1.1.26. matplotlib.pyplot.colorbar</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1.1.27. matplotlib.pyplot.colormaps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.colors.html">1.1.28. matplotlib.pyplot.colors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.connect.html">1.1.29. matplotlib.pyplot.connect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.contour.html">1.1.30. matplotlib.pyplot.contour</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.contourf.html">1.1.31. matplotlib.pyplot.contourf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.cool.html">1.1.32. matplotlib.pyplot.cool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.copper.html">1.1.33. matplotlib.pyplot.copper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.csd.html">1.1.34. matplotlib.pyplot.csd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.cycler.html">1.1.35. matplotlib.pyplot.cycler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.dedent.html">1.1.36. matplotlib.pyplot.dedent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.delaxes.html">1.1.37. matplotlib.pyplot.delaxes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.disconnect.html">1.1.38. matplotlib.pyplot.disconnect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.draw.html">1.1.39. matplotlib.pyplot.draw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.draw_if_interactive.html">1.1.40. matplotlib.pyplot.draw_if_interactive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.errorbar.html">1.1.41. matplotlib.pyplot.errorbar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.eventplot.html">1.1.42. matplotlib.pyplot.eventplot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.figaspect.html">1.1.43. matplotlib.pyplot.figaspect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.figimage.html">1.1.44. matplotlib.pyplot.figimage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.figlegend.html">1.1.45. matplotlib.pyplot.figlegend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.fignum_exists.html">1.1.46. matplotlib.pyplot.fignum_exists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.figtext.html">1.1.47. matplotlib.pyplot.figtext</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.figure.html">1.1.48. matplotlib.pyplot.figure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.fill.html">1.1.49. matplotlib.pyplot.fill</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.fill_between.html">1.1.50. matplotlib.pyplot.fill_between</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.fill_betweenx.html">1.1.51. matplotlib.pyplot.fill_betweenx</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.findobj.html">1.1.52. matplotlib.pyplot.findobj</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.flag.html">1.1.53. matplotlib.pyplot.flag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.gca.html">1.1.54. matplotlib.pyplot.gca</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.gcf.html">1.1.55. matplotlib.pyplot.gcf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.gci.html">1.1.56. matplotlib.pyplot.gci</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.get.html">1.1.57. matplotlib.pyplot.get</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.get_backend.html">1.1.58. matplotlib.pyplot.get_backend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.get_cmap.html">1.1.59. matplotlib.pyplot.get_cmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.get_current_fig_manager.html">1.1.60. matplotlib.pyplot.get_current_fig_manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.get_figlabels.html">1.1.61. matplotlib.pyplot.get_figlabels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.get_fignums.html">1.1.62. matplotlib.pyplot.get_fignums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.get_plot_commands.html">1.1.63. matplotlib.pyplot.get_plot_commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.get_scale_docs.html">1.1.64. matplotlib.pyplot.get_scale_docs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.get_scale_names.html">1.1.65. matplotlib.pyplot.get_scale_names</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.getp.html">1.1.66. matplotlib.pyplot.getp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.ginput.html">1.1.67. matplotlib.pyplot.ginput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.gray.html">1.1.68. matplotlib.pyplot.gray</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.grid.html">1.1.69. matplotlib.pyplot.grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.hexbin.html">1.1.70. matplotlib.pyplot.hexbin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.hist.html">1.1.71. matplotlib.pyplot.hist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.hist2d.html">1.1.72. matplotlib.pyplot.hist2d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.hlines.html">1.1.73. matplotlib.pyplot.hlines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.hold.html">1.1.74. matplotlib.pyplot.hold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.hot.html">1.1.75. matplotlib.pyplot.hot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.hsv.html">1.1.76. matplotlib.pyplot.hsv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.imread.html">1.1.77. matplotlib.pyplot.imread</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.imsave.html">1.1.78. matplotlib.pyplot.imsave</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.imshow.html">1.1.79. matplotlib.pyplot.imshow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.inferno.html">1.1.80. matplotlib.pyplot.inferno</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.install_repl_displayhook.html">1.1.81. matplotlib.pyplot.install_repl_displayhook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.interactive.html">1.1.82. matplotlib.pyplot.interactive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.ioff.html">1.1.83. matplotlib.pyplot.ioff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.ion.html">1.1.84. matplotlib.pyplot.ion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.is_numlike.html">1.1.85. matplotlib.pyplot.is_numlike</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.is_string_like.html">1.1.86. matplotlib.pyplot.is_string_like</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.ishold.html">1.1.87. matplotlib.pyplot.ishold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.isinteractive.html">1.1.88. matplotlib.pyplot.isinteractive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.jet.html">1.1.89. matplotlib.pyplot.jet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.legend.html">1.1.90. matplotlib.pyplot.legend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.locator_params.html">1.1.91. matplotlib.pyplot.locator_params</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.loglog.html">1.1.92. matplotlib.pyplot.loglog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.magma.html">1.1.93. matplotlib.pyplot.magma</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.magnitude_spectrum.html">1.1.94. matplotlib.pyplot.magnitude_spectrum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.margins.html">1.1.95. matplotlib.pyplot.margins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.matshow.html">1.1.96. matplotlib.pyplot.matshow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.minorticks_off.html">1.1.97. matplotlib.pyplot.minorticks_off</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.minorticks_on.html">1.1.98. matplotlib.pyplot.minorticks_on</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.new_figure_manager.html">1.1.99. matplotlib.pyplot.new_figure_manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.over.html">1.1.100. matplotlib.pyplot.over</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.pause.html">1.1.101. matplotlib.pyplot.pause</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.pcolor.html">1.1.102. matplotlib.pyplot.pcolor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.pcolormesh.html">1.1.103. matplotlib.pyplot.pcolormesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.phase_spectrum.html">1.1.104. matplotlib.pyplot.phase_spectrum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.pie.html">1.1.105. matplotlib.pyplot.pie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.pink.html">1.1.106. matplotlib.pyplot.pink</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.plasma.html">1.1.107. matplotlib.pyplot.plasma</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.plot.html">1.1.108. matplotlib.pyplot.plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.plot_date.html">1.1.109. matplotlib.pyplot.plot_date</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.plotfile.html">1.1.110. matplotlib.pyplot.plotfile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.plotting.html">1.1.111. matplotlib.pyplot.plotting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.polar.html">1.1.112. matplotlib.pyplot.polar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.prism.html">1.1.113. matplotlib.pyplot.prism</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.psd.html">1.1.114. matplotlib.pyplot.psd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.pylab_setup.html">1.1.115. matplotlib.pyplot.pylab_setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.quiver.html">1.1.116. matplotlib.pyplot.quiver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.quiverkey.html">1.1.117. matplotlib.pyplot.quiverkey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.rc.html">1.1.118. matplotlib.pyplot.rc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.rc_context.html">1.1.119. matplotlib.pyplot.rc_context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.rcdefaults.html">1.1.120. matplotlib.pyplot.rcdefaults</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.register_cmap.html">1.1.121. matplotlib.pyplot.register_cmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.rgrids.html">1.1.122. matplotlib.pyplot.rgrids</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.savefig.html">1.1.123. matplotlib.pyplot.savefig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.sca.html">1.1.124. matplotlib.pyplot.sca</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.scatter.html">1.1.125. matplotlib.pyplot.scatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.sci.html">1.1.126. matplotlib.pyplot.sci</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.semilogx.html">1.1.127. matplotlib.pyplot.semilogx</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.semilogy.html">1.1.128. matplotlib.pyplot.semilogy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.set_cmap.html">1.1.129. matplotlib.pyplot.set_cmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.setp.html">1.1.130. matplotlib.pyplot.setp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.show.html">1.1.131. matplotlib.pyplot.show</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.specgram.html">1.1.132. matplotlib.pyplot.specgram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.spectral.html">1.1.133. matplotlib.pyplot.spectral</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.spring.html">1.1.134. matplotlib.pyplot.spring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.spy.html">1.1.135. matplotlib.pyplot.spy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.stackplot.html">1.1.136. matplotlib.pyplot.stackplot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.stem.html">1.1.137. matplotlib.pyplot.stem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.step.html">1.1.138. matplotlib.pyplot.step</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.streamplot.html">1.1.139. matplotlib.pyplot.streamplot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.subplot.html">1.1.140. matplotlib.pyplot.subplot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.subplot2grid.html">1.1.141. matplotlib.pyplot.subplot2grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.subplot_tool.html">1.1.142. matplotlib.pyplot.subplot_tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.subplots.html">1.1.143. matplotlib.pyplot.subplots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.subplots_adjust.html">1.1.144. matplotlib.pyplot.subplots_adjust</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.summer.html">1.1.145. matplotlib.pyplot.summer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.suptitle.html">1.1.146. matplotlib.pyplot.suptitle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.switch_backend.html">1.1.147. matplotlib.pyplot.switch_backend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.table.html">1.1.148. matplotlib.pyplot.table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.text.html">1.1.149. matplotlib.pyplot.text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.thetagrids.html">1.1.150. matplotlib.pyplot.thetagrids</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.tick_params.html">1.1.151. matplotlib.pyplot.tick_params</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.ticklabel_format.html">1.1.152. matplotlib.pyplot.ticklabel_format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.tight_layout.html">1.1.153. matplotlib.pyplot.tight_layout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.title.html">1.1.154. matplotlib.pyplot.title</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.tricontour.html">1.1.155. matplotlib.pyplot.tricontour</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.tricontourf.html">1.1.156. matplotlib.pyplot.tricontourf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.tripcolor.html">1.1.157. matplotlib.pyplot.tripcolor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.triplot.html">1.1.158. matplotlib.pyplot.triplot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.twinx.html">1.1.159. matplotlib.pyplot.twinx</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.twiny.html">1.1.160. matplotlib.pyplot.twiny</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.uninstall_repl_displayhook.html">1.1.161. matplotlib.pyplot.uninstall_repl_displayhook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.violinplot.html">1.1.162. matplotlib.pyplot.violinplot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.viridis.html">1.1.163. matplotlib.pyplot.viridis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.vlines.html">1.1.164. matplotlib.pyplot.vlines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.waitforbuttonpress.html">1.1.165. matplotlib.pyplot.waitforbuttonpress</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.winter.html">1.1.166. matplotlib.pyplot.winter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.xcorr.html">1.1.167. matplotlib.pyplot.xcorr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.xkcd.html">1.1.168. matplotlib.pyplot.xkcd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.xlabel.html">1.1.169. matplotlib.pyplot.xlabel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.xlim.html">1.1.170. matplotlib.pyplot.xlim</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.xscale.html">1.1.171. matplotlib.pyplot.xscale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.xticks.html">1.1.172. matplotlib.pyplot.xticks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.ylabel.html">1.1.173. matplotlib.pyplot.ylabel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.ylim.html">1.1.174. matplotlib.pyplot.ylim</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.yscale.html">1.1.175. matplotlib.pyplot.yscale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.yticks.html">1.1.176. matplotlib.pyplot.yticks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="matplotlib.pyplot.html#classes">1.2. Classes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.cm.html">2. matplotlib.cm</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../mpl.pyplot.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="matplotlib.pyplot.html">1. matplotlib.pyplot</a> &raquo;</li>
+        
+      <li>1.1.27. matplotlib.pyplot.colormaps</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../sources/generated/matplotlib.pyplot.colormaps.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-pyplot-colormaps">
+<h1>1.1.27. matplotlib.pyplot.colormaps<a class="headerlink" href="#matplotlib-pyplot-colormaps" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="matplotlib.pyplot.colormaps">
+<code class="descclassname">matplotlib.pyplot.</code><code class="descname">colormaps</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../modules/matplotlib/pyplot.html#colormaps"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.pyplot.colormaps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Matplotlib provides a number of colormaps, and others can be added using
+<a class="reference internal" href="matplotlib.cm.register_cmap.html#matplotlib.cm.register_cmap" title="matplotlib.cm.register_cmap"><code class="xref py py-func docutils literal"><span class="pre">register_cmap()</span></code></a>.  This function documents the built-in
+colormaps, and will also return a list of all registered colormaps if called.</p>
+<p>You can set the colormap for an image, pcolor, scatter, etc,
+using a keyword argument:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">imshow</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cm</span><span class="o">.</span><span class="n">hot</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>or using the <a class="reference internal" href="matplotlib.pyplot.set_cmap.html#matplotlib.pyplot.set_cmap" title="matplotlib.pyplot.set_cmap"><code class="xref py py-func docutils literal"><span class="pre">set_cmap()</span></code></a> function:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">imshow</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">set_cmap</span><span class="p">(</span><span class="s1">&#39;hot&#39;</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">set_cmap</span><span class="p">(</span><span class="s1">&#39;jet&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In interactive mode, <a class="reference internal" href="matplotlib.pyplot.set_cmap.html#matplotlib.pyplot.set_cmap" title="matplotlib.pyplot.set_cmap"><code class="xref py py-func docutils literal"><span class="pre">set_cmap()</span></code></a> will update the colormap post-hoc,
+allowing you to see which one works best for your data.</p>
+<p>All built-in colormaps can be reversed by appending <code class="docutils literal"><span class="pre">_r</span></code>: For instance,
+<code class="docutils literal"><span class="pre">gray_r</span></code> is the reverse of <code class="docutils literal"><span class="pre">gray</span></code>.</p>
+<p>There are several common color schemes used in visualization:</p>
+<dl class="docutils">
+<dt>Sequential schemes</dt>
+<dd>for unipolar data that progresses from low to high</dd>
+<dt>Diverging schemes</dt>
+<dd>for bipolar data that emphasizes positive or negative deviations from a
+central value</dd>
+<dt>Cyclic schemes</dt>
+<dd>meant for plotting values that wrap around at the
+endpoints, such as phase angle, wind direction, or time of day</dd>
+<dt>Qualitative schemes</dt>
+<dd>for nominal data that has no inherent ordering, where color is used
+only to distinguish categories</dd>
+</dl>
+<p>The base colormaps are derived from those of the same name provided
+with Matlab:</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Colormap</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>autumn</td>
+<td>sequential linearly-increasing shades of red-orange-yellow</td>
+</tr>
+<tr class="row-odd"><td>bone</td>
+<td>sequential increasing black-white color map with
+a tinge of blue, to emulate X-ray film</td>
+</tr>
+<tr class="row-even"><td>cool</td>
+<td>linearly-decreasing shades of cyan-magenta</td>
+</tr>
+<tr class="row-odd"><td>copper</td>
+<td>sequential increasing shades of black-copper</td>
+</tr>
+<tr class="row-even"><td>flag</td>
+<td>repetitive red-white-blue-black pattern (not cyclic at
+endpoints)</td>
+</tr>
+<tr class="row-odd"><td>gray</td>
+<td>sequential linearly-increasing black-to-white
+grayscale</td>
+</tr>
+<tr class="row-even"><td>hot</td>
+<td>sequential black-red-yellow-white, to emulate blackbody
+radiation from an object at increasing temperatures</td>
+</tr>
+<tr class="row-odd"><td>hsv</td>
+<td>cyclic red-yellow-green-cyan-blue-magenta-red, formed
+by changing the hue component in the HSV color space</td>
+</tr>
+<tr class="row-even"><td>inferno</td>
+<td>perceptually uniform shades of black-red-yellow</td>
+</tr>
+<tr class="row-odd"><td>jet</td>
+<td>a spectral map with dark endpoints, blue-cyan-yellow-red;
+based on a fluid-jet simulation by NCSA <a class="footnote-reference" href="#id6" id="id1">[1]</a></td>
+</tr>
+<tr class="row-even"><td>magma</td>
+<td>perceptually uniform shades of black-red-white</td>
+</tr>
+<tr class="row-odd"><td>pink</td>
+<td>sequential increasing pastel black-pink-white, meant
+for sepia tone colorization of photographs</td>
+</tr>
+<tr class="row-even"><td>plasma</td>
+<td>perceptually uniform shades of blue-red-yellow</td>
+</tr>
+<tr class="row-odd"><td>prism</td>
+<td>repetitive red-yellow-green-blue-purple-...-green pattern
+(not cyclic at endpoints)</td>
+</tr>
+<tr class="row-even"><td>spring</td>
+<td>linearly-increasing shades of magenta-yellow</td>
+</tr>
+<tr class="row-odd"><td>summer</td>
+<td>sequential linearly-increasing shades of green-yellow</td>
+</tr>
+<tr class="row-even"><td>viridis</td>
+<td>perceptually uniform shades of blue-green-yellow</td>
+</tr>
+<tr class="row-odd"><td>winter</td>
+<td>linearly-increasing shades of blue-green</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>For the above list only, you can also set the colormap using the
+corresponding pylab shortcut interface function, similar to Matlab:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">imshow</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">hot</span><span class="p">()</span>
+<span class="n">jet</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The next set of palettes are from the <a class="reference external" href="http://dhmunro.github.io/yorick-doc/">Yorick scientific visualisation
+package</a>, an evolution of
+the GIST package, both by David H. Munro:</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="82%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Colormap</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>gist_earth</td>
+<td>mapmaker&#8217;s colors from dark blue deep ocean to green
+lowlands to brown highlands to white mountains</td>
+</tr>
+<tr class="row-odd"><td>gist_heat</td>
+<td>sequential increasing black-red-orange-white, to emulate
+blackbody radiation from an iron bar as it grows hotter</td>
+</tr>
+<tr class="row-even"><td>gist_ncar</td>
+<td>pseudo-spectral black-blue-green-yellow-red-purple-white
+colormap from National Center for Atmospheric
+Research <a class="footnote-reference" href="#id7" id="id2">[2]</a></td>
+</tr>
+<tr class="row-odd"><td>gist_rainbow</td>
+<td>runs through the colors in spectral order from red to
+violet at full saturation (like <em>hsv</em> but not cyclic)</td>
+</tr>
+<tr class="row-even"><td>gist_stern</td>
+<td>&#8220;Stern special&#8221; color table from Interactive Data
+Language software</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>The following colormaps are based on the <a class="reference external" href="http://colorbrewer.org">ColorBrewer</a> color specifications and designs developed by
+Cynthia Brewer:</p>
+<p>ColorBrewer Diverging (luminance is highest at the midpoint, and
+decreases towards differently-colored endpoints):</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="81%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Colormap</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>BrBG</td>
+<td>brown, white, blue-green</td>
+</tr>
+<tr class="row-odd"><td>PiYG</td>
+<td>pink, white, yellow-green</td>
+</tr>
+<tr class="row-even"><td>PRGn</td>
+<td>purple, white, green</td>
+</tr>
+<tr class="row-odd"><td>PuOr</td>
+<td>orange, white, purple</td>
+</tr>
+<tr class="row-even"><td>RdBu</td>
+<td>red, white, blue</td>
+</tr>
+<tr class="row-odd"><td>RdGy</td>
+<td>red, white, gray</td>
+</tr>
+<tr class="row-even"><td>RdYlBu</td>
+<td>red, yellow, blue</td>
+</tr>
+<tr class="row-odd"><td>RdYlGn</td>
+<td>red, yellow, green</td>
+</tr>
+<tr class="row-even"><td>Spectral</td>
+<td>red, orange, yellow, green, blue</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>ColorBrewer Sequential (luminance decreases monotonically):</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="82%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Colormap</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Blues</td>
+<td>white to dark blue</td>
+</tr>
+<tr class="row-odd"><td>BuGn</td>
+<td>white, light blue, dark green</td>
+</tr>
+<tr class="row-even"><td>BuPu</td>
+<td>white, light blue, dark purple</td>
+</tr>
+<tr class="row-odd"><td>GnBu</td>
+<td>white, light green, dark blue</td>
+</tr>
+<tr class="row-even"><td>Greens</td>
+<td>white to dark green</td>
+</tr>
+<tr class="row-odd"><td>Greys</td>
+<td>white to black (not linear)</td>
+</tr>
+<tr class="row-even"><td>Oranges</td>
+<td>white, orange, dark brown</td>
+</tr>
+<tr class="row-odd"><td>OrRd</td>
+<td>white, orange, dark red</td>
+</tr>
+<tr class="row-even"><td>PuBu</td>
+<td>white, light purple, dark blue</td>
+</tr>
+<tr class="row-odd"><td>PuBuGn</td>
+<td>white, light purple, dark green</td>
+</tr>
+<tr class="row-even"><td>PuRd</td>
+<td>white, light purple, dark red</td>
+</tr>
+<tr class="row-odd"><td>Purples</td>
+<td>white to dark purple</td>
+</tr>
+<tr class="row-even"><td>RdPu</td>
+<td>white, pink, dark purple</td>
+</tr>
+<tr class="row-odd"><td>Reds</td>
+<td>white to dark red</td>
+</tr>
+<tr class="row-even"><td>YlGn</td>
+<td>light yellow, dark green</td>
+</tr>
+<tr class="row-odd"><td>YlGnBu</td>
+<td>light yellow, light green, dark blue</td>
+</tr>
+<tr class="row-even"><td>YlOrBr</td>
+<td>light yellow, orange, dark brown</td>
+</tr>
+<tr class="row-odd"><td>YlOrRd</td>
+<td>light yellow, orange, dark red</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>ColorBrewer Qualitative:</p>
+<p>(For plotting nominal data, <code class="xref py py-class docutils literal"><span class="pre">ListedColormap</span></code> should be used,
+not <code class="xref py py-class docutils literal"><span class="pre">LinearSegmentedColormap</span></code>.  Different sets of colors are
+recommended for different numbers of categories.  These continuous
+versions of the qualitative schemes may be removed or converted in the
+future.)</p>
+<ul class="simple">
+<li>Accent</li>
+<li>Dark2</li>
+<li>Paired</li>
+<li>Pastel1</li>
+<li>Pastel2</li>
+<li>Set1</li>
+<li>Set2</li>
+<li>Set3</li>
+</ul>
+<p>Other miscellaneous schemes:</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="81%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Colormap</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>afmhot</td>
+<td>sequential black-orange-yellow-white blackbody
+spectrum, commonly used in atomic force microscopy</td>
+</tr>
+<tr class="row-odd"><td>brg</td>
+<td>blue-red-green</td>
+</tr>
+<tr class="row-even"><td>bwr</td>
+<td>diverging blue-white-red</td>
+</tr>
+<tr class="row-odd"><td>coolwarm</td>
+<td>diverging blue-gray-red, meant to avoid issues with 3D
+shading, color blindness, and ordering of colors <a class="footnote-reference" href="#id8" id="id3">[3]</a></td>
+</tr>
+<tr class="row-even"><td>CMRmap</td>
+<td>&#8220;Default colormaps on color images often reproduce to
+confusing grayscale images. The proposed colormap
+maintains an aesthetically pleasing color image that
+automatically reproduces to a monotonic grayscale with
+discrete, quantifiable saturation levels.&#8221; <a class="footnote-reference" href="#id9" id="id4">[4]</a></td>
+</tr>
+<tr class="row-odd"><td>cubehelix</td>
+<td>Unlike most other color schemes cubehelix was designed
+by D.A. Green to be monotonically increasing in terms
+of perceived brightness. Also, when printed on a black
+and white postscript printer, the scheme results in a
+greyscale with monotonically increasing brightness.
+This color scheme is named cubehelix because the r,g,b
+values produced can be visualised as a squashed helix
+around the diagonal in the r,g,b color cube.</td>
+</tr>
+<tr class="row-even"><td>gnuplot</td>
+<td>gnuplot&#8217;s traditional pm3d scheme
+(black-blue-red-yellow)</td>
+</tr>
+<tr class="row-odd"><td>gnuplot2</td>
+<td>sequential color printable as gray
+(black-blue-violet-yellow-white)</td>
+</tr>
+<tr class="row-even"><td>ocean</td>
+<td>green-blue-white</td>
+</tr>
+<tr class="row-odd"><td>rainbow</td>
+<td>spectral purple-blue-green-yellow-orange-red colormap
+with diverging luminance</td>
+</tr>
+<tr class="row-even"><td>seismic</td>
+<td>diverging blue-white-red</td>
+</tr>
+<tr class="row-odd"><td>nipy_spectral</td>
+<td>black-purple-blue-green-yellow-red-white spectrum,
+originally from the Neuroimaging in Python project</td>
+</tr>
+<tr class="row-even"><td>terrain</td>
+<td>mapmaker&#8217;s colors, blue-green-yellow-brown-white,
+originally from IGOR Pro</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>The following colormaps are redundant and may be removed in future
+versions.  It&#8217;s recommended to use the names in the descriptions
+instead, which produce identical output:</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="86%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Colormap</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>gist_gray</td>
+<td>identical to <em>gray</em></td>
+</tr>
+<tr class="row-odd"><td>gist_yarg</td>
+<td>identical to <em>gray_r</em></td>
+</tr>
+<tr class="row-even"><td>binary</td>
+<td>identical to <em>gray_r</em></td>
+</tr>
+<tr class="row-odd"><td>spectral</td>
+<td>identical to <em>nipy_spectral</em> <a class="footnote-reference" href="#id10" id="id5">[5]</a></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p class="rubric">Footnotes</p>
+<table class="docutils footnote" frame="void" id="id6" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Rainbow colormaps, <code class="docutils literal"><span class="pre">jet</span></code> in particular, are considered a poor
+choice for scientific visualization by many researchers: <a class="reference external" href="http://www.jwave.vt.edu/%7Erkriz/Projects/create_color_table/color_07.pdf">Rainbow Color
+Map (Still) Considered Harmful</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id7" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>Resembles &#8220;BkBlAqGrYeOrReViWh200&#8221; from NCAR Command
+Language. See <a class="reference external" href="http://www.ncl.ucar.edu/Document/Graphics/color_table_gallery.shtml">Color Table Gallery</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id8" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[3]</a></td><td>See <a class="reference external" href="http://www.cs.unm.edu/~kmorel/documents/ColorMaps/">Diverging Color Maps for Scientific Visualization</a> by Kenneth
+Moreland.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id9" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id4">[4]</a></td><td>See <a class="reference external" href="http://www.mathworks.com/matlabcentral/fileexchange/2662-cmrmap-m">A Color Map for Effective Black-and-White Rendering of
+Color-Scale Images</a>
+by Carey Rappaport</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id10" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id5">[5]</a></td><td>Changed to distinguish from ColorBrewer&#8217;s <em>Spectral</em> map.
+<a class="reference internal" href="matplotlib.pyplot.spectral.html#matplotlib.pyplot.spectral" title="matplotlib.pyplot.spectral"><code class="xref py py-func docutils literal"><span class="pre">spectral()</span></code></a> still works, but
+<code class="docutils literal"><span class="pre">set_cmap('nipy_spectral')</span></code> is recommended for clarity.</td></tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.pyplot.colors.html" class="btn btn-neutral float-right" title="1.1.28. matplotlib.pyplot.colors" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.pyplot.colorbar.html" class="btn btn-neutral" title="1.1.26. matplotlib.pyplot.colorbar" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../static/jquery.js"></script>
+      <script type="text/javascript" src="../static/underscore.js"></script>
+      <script type="text/javascript" src="../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
