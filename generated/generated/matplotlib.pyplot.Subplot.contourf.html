@@ -82,8 +82,15 @@
             
                 <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">1. matplotlib.pyplot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">2. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">3. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backend_bases.html">4. matplotlib.backend_bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">5. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">6. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">8. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">9. matplotlib.widgets</a></li>
 </ul>
 
             
@@ -219,16 +226,16 @@ specified.</p>
 <dt><em>alpha</em>: float</dt>
 <dd>The alpha blending value</dd>
 <dt><em>cmap</em>: [ <em>None</em> | Colormap ]</dt>
-<dd>A cm <code class="xref py py-class docutils literal"><span class="pre">Colormap</span></code> instance or
+<dd>A cm <a class="reference internal" href="matplotlib.colors.Colormap.html#matplotlib.colors.Colormap" title="matplotlib.colors.Colormap"><code class="xref py py-class docutils literal"><span class="pre">Colormap</span></code></a> instance or
 <em>None</em>. If <em>cmap</em> is <em>None</em> and <em>colors</em> is <em>None</em>, a
 default Colormap is used.</dd>
 <dt><em>norm</em>: [ <em>None</em> | Normalize ]</dt>
-<dd>A <code class="xref py py-class docutils literal"><span class="pre">matplotlib.colors.Normalize</span></code> instance for
+<dd>A <a class="reference internal" href="matplotlib.colors.Normalize.html#matplotlib.colors.Normalize" title="matplotlib.colors.Normalize"><code class="xref py py-class docutils literal"><span class="pre">matplotlib.colors.Normalize</span></code></a> instance for
 scaling data values to colors. If <em>norm</em> is <em>None</em> and
 <em>colors</em> is <em>None</em>, the default linear scaling is used.</dd>
 <dt><em>vmin</em>, <em>vmax</em>: [ <em>None</em> | scalar ]</dt>
 <dd>If not <em>None</em>, either or both of these values will be
-supplied to the <code class="xref py py-class docutils literal"><span class="pre">matplotlib.colors.Normalize</span></code>
+supplied to the <a class="reference internal" href="matplotlib.colors.Normalize.html#matplotlib.colors.Normalize" title="matplotlib.colors.Normalize"><code class="xref py py-class docutils literal"><span class="pre">matplotlib.colors.Normalize</span></code></a>
 instance, overriding the default color scaling based on
 <em>levels</em>.</dd>
 <dt><em>levels</em>: [level0, level1, ..., leveln]</dt>
@@ -266,8 +273,8 @@ added to one or both ends of the range so that all data
 are included. These added ranges are then mapped to the
 special colormap values which default to the ends of the
 colormap range, but can be set via
-<code class="xref py py-meth docutils literal"><span class="pre">matplotlib.colors.Colormap.set_under()</span></code> and
-<code class="xref py py-meth docutils literal"><span class="pre">matplotlib.colors.Colormap.set_over()</span></code> methods.</dd>
+<a class="reference internal" href="matplotlib.colors.Colormap.set_under.html#matplotlib.colors.Colormap.set_under" title="matplotlib.colors.Colormap.set_under"><code class="xref py py-meth docutils literal"><span class="pre">matplotlib.colors.Colormap.set_under()</span></code></a> and
+<a class="reference internal" href="matplotlib.colors.Colormap.set_over.html#matplotlib.colors.Colormap.set_over" title="matplotlib.colors.Colormap.set_over"><code class="xref py py-meth docutils literal"><span class="pre">matplotlib.colors.Colormap.set_over()</span></code></a> methods.</dd>
 <dt><em>xunits</em>, <em>yunits</em>: [ <em>None</em> | registered units ]</dt>
 <dd>Override axis units by specifying an instance of a
 <code class="xref py py-class docutils literal"><span class="pre">matplotlib.units.ConversionInterface</span></code>.</dd>

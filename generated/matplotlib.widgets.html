@@ -1,0 +1,365 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>9. matplotlib.widgets &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../index.html"/>
+        <link rel="up" title="&lt;no title&gt;" href="../mpl.pyplot.html"/>
+        <link rel="next" title="9.1.1.1. matplotlib.widgets.blended_transform_factory" href="matplotlib.widgets.blended_transform_factory.html"/>
+        <link rel="prev" title="8.2.10.82. matplotlib.image.PcolorImage.update_from" href="generated/matplotlib.image.PcolorImage.update_from.html"/> 
+
+  
+  <script src="../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.cm.html">3. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.backend_bases.html">4. matplotlib.backend_bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.patches.html">5. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.cbook.html">6. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.image.html">8. matplotlib.image</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">9. matplotlib.widgets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#gui-neutral-widgets">9.1. GUI neutral widgets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#functions">9.1.1. Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.widgets.blended_transform_factory.html">9.1.1.1. matplotlib.widgets.blended_transform_factory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.widgets.dist.html">9.1.1.2. matplotlib.widgets.dist</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#classes">9.1.2. Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.widgets.AxesWidget.html">9.1.2.1. matplotlib.widgets.AxesWidget</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.widgets.Button.html">9.1.2.2. matplotlib.widgets.Button</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.widgets.CheckButtons.html">9.1.2.3. matplotlib.widgets.CheckButtons</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.widgets.Circle.html">9.1.2.4. matplotlib.widgets.Circle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.widgets.Cursor.html">9.1.2.5. matplotlib.widgets.Cursor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.widgets.Ellipse.html">9.1.2.6. matplotlib.widgets.Ellipse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.widgets.EllipseSelector.html">9.1.2.7. matplotlib.widgets.EllipseSelector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.widgets.Lasso.html">9.1.2.8. matplotlib.widgets.Lasso</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.widgets.LassoSelector.html">9.1.2.9. matplotlib.widgets.LassoSelector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.widgets.Line2D.html">9.1.2.10. matplotlib.widgets.Line2D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.widgets.LockDraw.html">9.1.2.11. matplotlib.widgets.LockDraw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.widgets.MultiCursor.html">9.1.2.12. matplotlib.widgets.MultiCursor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.widgets.RadioButtons.html">9.1.2.13. matplotlib.widgets.RadioButtons</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.widgets.Rectangle.html">9.1.2.14. matplotlib.widgets.Rectangle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.widgets.RectangleSelector.html">9.1.2.15. matplotlib.widgets.RectangleSelector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.widgets.Slider.html">9.1.2.16. matplotlib.widgets.Slider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.widgets.SpanSelector.html">9.1.2.17. matplotlib.widgets.SpanSelector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.widgets.SubplotTool.html">9.1.2.18. matplotlib.widgets.SubplotTool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.widgets.ToolHandles.html">9.1.2.19. matplotlib.widgets.ToolHandles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.widgets.Widget.html">9.1.2.20. matplotlib.widgets.Widget</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.widgets.zip.html">9.1.2.21. matplotlib.widgets.zip</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../mpl.pyplot.html">&lt;no title&gt;</a> &raquo;</li>
+        
+      <li>9. matplotlib.widgets</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../sources/generated/matplotlib.widgets.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-matplotlib.widgets">
+<span id="matplotlib-widgets"></span><h1>9. matplotlib.widgets<a class="headerlink" href="#module-matplotlib.widgets" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="gui-neutral-widgets">
+<h2>9.1. GUI neutral widgets<a class="headerlink" href="#gui-neutral-widgets" title="Permalink to this headline">¶</a></h2>
+<p>Widgets that are designed to work for any of the GUI backends.
+All of these widgets require you to predefine a <code class="xref py py-class docutils literal"><span class="pre">matplotlib.axes.Axes</span></code>
+instance and pass that as the first arg.  matplotlib doesn&#8217;t try to
+be too smart with respect to layout &#8211; you will have to figure out how
+wide and tall you want your Axes to be to accommodate your widget.</p>
+<div class="section" id="functions">
+<h3>9.1.1. Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.widgets.blended_transform_factory.html#matplotlib.widgets.blended_transform_factory" title="matplotlib.widgets.blended_transform_factory"><code class="xref py py-obj docutils literal"><span class="pre">blended_transform_factory</span></code></a>(x_transform,&nbsp;...)</td>
+<td>Create a new &#8220;blended&#8221; transform using <em>x_transform</em> to transform the <em>x</em>-axis and <em>y_transform</em> to transform the <em>y</em>-axis.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.widgets.dist.html#matplotlib.widgets.dist" title="matplotlib.widgets.dist"><code class="xref py py-obj docutils literal"><span class="pre">dist</span></code></a>(x,&nbsp;y)</td>
+<td>Return the distance between two points.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="classes">
+<h3>9.1.2. Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.widgets.AxesWidget.html#matplotlib.widgets.AxesWidget" title="matplotlib.widgets.AxesWidget"><code class="xref py py-obj docutils literal"><span class="pre">AxesWidget</span></code></a>(ax)</td>
+<td>Widget that is connected to a single <code class="xref py py-class docutils literal"><span class="pre">Axes</span></code>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.widgets.Button.html#matplotlib.widgets.Button" title="matplotlib.widgets.Button"><code class="xref py py-obj docutils literal"><span class="pre">Button</span></code></a>(ax,&nbsp;label[,&nbsp;image,&nbsp;color,&nbsp;hovercolor])</td>
+<td>A GUI neutral button.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.widgets.CheckButtons.html#matplotlib.widgets.CheckButtons" title="matplotlib.widgets.CheckButtons"><code class="xref py py-obj docutils literal"><span class="pre">CheckButtons</span></code></a>(ax,&nbsp;labels,&nbsp;actives)</td>
+<td>A GUI neutral radio button.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.widgets.Circle.html#matplotlib.widgets.Circle" title="matplotlib.widgets.Circle"><code class="xref py py-obj docutils literal"><span class="pre">Circle</span></code></a>(xy[,&nbsp;radius])</td>
+<td>A circle patch.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.widgets.Cursor.html#matplotlib.widgets.Cursor" title="matplotlib.widgets.Cursor"><code class="xref py py-obj docutils literal"><span class="pre">Cursor</span></code></a>(ax[,&nbsp;horizOn,&nbsp;vertOn,&nbsp;useblit])</td>
+<td>A horizontal and vertical line that spans the axes and moves with the pointer.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.widgets.Ellipse.html#matplotlib.widgets.Ellipse" title="matplotlib.widgets.Ellipse"><code class="xref py py-obj docutils literal"><span class="pre">Ellipse</span></code></a>(xy,&nbsp;width,&nbsp;height[,&nbsp;angle])</td>
+<td>A scale-free ellipse.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.widgets.EllipseSelector.html#matplotlib.widgets.EllipseSelector" title="matplotlib.widgets.EllipseSelector"><code class="xref py py-obj docutils literal"><span class="pre">EllipseSelector</span></code></a>(ax,&nbsp;onselect[,&nbsp;drawtype,&nbsp;...])</td>
+<td>Select an elliptical region of an axes.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.widgets.Lasso.html#matplotlib.widgets.Lasso" title="matplotlib.widgets.Lasso"><code class="xref py py-obj docutils literal"><span class="pre">Lasso</span></code></a>(ax,&nbsp;xy[,&nbsp;callback,&nbsp;useblit])</td>
+<td>Selection curve of an arbitrary shape.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.widgets.LassoSelector.html#matplotlib.widgets.LassoSelector" title="matplotlib.widgets.LassoSelector"><code class="xref py py-obj docutils literal"><span class="pre">LassoSelector</span></code></a>(ax[,&nbsp;onselect,&nbsp;useblit,&nbsp;...])</td>
+<td>Selection curve of an arbitrary shape.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.widgets.Line2D.html#matplotlib.widgets.Line2D" title="matplotlib.widgets.Line2D"><code class="xref py py-obj docutils literal"><span class="pre">Line2D</span></code></a>(xdata,&nbsp;ydata[,&nbsp;linewidth,&nbsp;linestyle,&nbsp;...])</td>
+<td>A line - the line can have both a solid linestyle connecting all the vertices, and a marker at each vertex.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.widgets.LockDraw.html#matplotlib.widgets.LockDraw" title="matplotlib.widgets.LockDraw"><code class="xref py py-obj docutils literal"><span class="pre">LockDraw</span></code></a>()</td>
+<td>Some widgets, like the cursor, draw onto the canvas, and this is not desirable under all circumstances, like when the toolbar is in zoom-to-rect mode and drawing a rectangle.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.widgets.MultiCursor.html#matplotlib.widgets.MultiCursor" title="matplotlib.widgets.MultiCursor"><code class="xref py py-obj docutils literal"><span class="pre">MultiCursor</span></code></a>(canvas,&nbsp;axes[,&nbsp;useblit,&nbsp;...])</td>
+<td>Provide a vertical (default) and/or horizontal line cursor shared between multiple axes.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.widgets.RadioButtons.html#matplotlib.widgets.RadioButtons" title="matplotlib.widgets.RadioButtons"><code class="xref py py-obj docutils literal"><span class="pre">RadioButtons</span></code></a>(ax,&nbsp;labels[,&nbsp;active,&nbsp;activecolor])</td>
+<td>A GUI neutral radio button.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.widgets.Rectangle.html#matplotlib.widgets.Rectangle" title="matplotlib.widgets.Rectangle"><code class="xref py py-obj docutils literal"><span class="pre">Rectangle</span></code></a>(xy,&nbsp;width,&nbsp;height[,&nbsp;angle])</td>
+<td>Draw a rectangle with lower left at <em>xy</em> = (<em>x</em>, <em>y</em>) with specified <em>width</em> and <em>height</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.widgets.RectangleSelector.html#matplotlib.widgets.RectangleSelector" title="matplotlib.widgets.RectangleSelector"><code class="xref py py-obj docutils literal"><span class="pre">RectangleSelector</span></code></a>(ax,&nbsp;onselect[,&nbsp;drawtype,&nbsp;...])</td>
+<td>Select a rectangular region of an axes.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.widgets.Slider.html#matplotlib.widgets.Slider" title="matplotlib.widgets.Slider"><code class="xref py py-obj docutils literal"><span class="pre">Slider</span></code></a>(ax,&nbsp;label,&nbsp;valmin,&nbsp;valmax[,&nbsp;valinit,&nbsp;...])</td>
+<td>A slider representing a floating point range.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.widgets.SpanSelector.html#matplotlib.widgets.SpanSelector" title="matplotlib.widgets.SpanSelector"><code class="xref py py-obj docutils literal"><span class="pre">SpanSelector</span></code></a>(ax,&nbsp;onselect,&nbsp;direction[,&nbsp;...])</td>
+<td>Select a min/max range of the x or y axes for a matplotlib Axes.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.widgets.SubplotTool.html#matplotlib.widgets.SubplotTool" title="matplotlib.widgets.SubplotTool"><code class="xref py py-obj docutils literal"><span class="pre">SubplotTool</span></code></a>(targetfig,&nbsp;toolfig)</td>
+<td>A tool to adjust the subplot params of a <code class="xref py py-class docutils literal"><span class="pre">matplotlib.figure.Figure</span></code>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.widgets.ToolHandles.html#matplotlib.widgets.ToolHandles" title="matplotlib.widgets.ToolHandles"><code class="xref py py-obj docutils literal"><span class="pre">ToolHandles</span></code></a>(ax,&nbsp;x,&nbsp;y[,&nbsp;marker,&nbsp;...])</td>
+<td>Control handles for canvas tools.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.widgets.Widget.html#matplotlib.widgets.Widget" title="matplotlib.widgets.Widget"><code class="xref py py-obj docutils literal"><span class="pre">Widget</span></code></a></td>
+<td>Abstract base class for GUI neutral widgets</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.widgets.zip.html#matplotlib.widgets.zip" title="matplotlib.widgets.zip"><code class="xref py py-obj docutils literal"><span class="pre">zip</span></code></a></td>
+<td>alias of <code class="xref py py-class docutils literal"><span class="pre">izip</span></code></td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.widgets.blended_transform_factory.html" class="btn btn-neutral float-right" title="9.1.1.1. matplotlib.widgets.blended_transform_factory" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="generated/matplotlib.image.PcolorImage.update_from.html" class="btn btn-neutral" title="8.2.10.82. matplotlib.image.PcolorImage.update_from" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../static/jquery.js"></script>
+      <script type="text/javascript" src="../static/underscore.js"></script>
+      <script type="text/javascript" src="../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

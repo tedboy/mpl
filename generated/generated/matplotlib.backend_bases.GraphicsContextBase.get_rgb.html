@@ -1,0 +1,308 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4.2.9.15. matplotlib.backend_bases.GraphicsContextBase.get_rgb &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="4.2.9. matplotlib.backend_bases.GraphicsContextBase" href="matplotlib.backend_bases.GraphicsContextBase.html"/>
+        <link rel="next" title="4.2.9.16. matplotlib.backend_bases.GraphicsContextBase.get_sketch_params" href="matplotlib.backend_bases.GraphicsContextBase.get_sketch_params.html"/>
+        <link rel="prev" title="4.2.9.14. matplotlib.backend_bases.GraphicsContextBase.get_linewidth" href="matplotlib.backend_bases.GraphicsContextBase.get_linewidth.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">3. matplotlib.cm</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.backend_bases.html">4. matplotlib.backend_bases</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.backend_bases.html#functions">4.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.backend_bases.html#classes">4.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.Affine2D.html">4.2.1. matplotlib.backend_bases.Affine2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.Bbox.html">4.2.2. matplotlib.backend_bases.Bbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.CloseEvent.html">4.2.3. matplotlib.backend_bases.CloseEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.DrawEvent.html">4.2.4. matplotlib.backend_bases.DrawEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.Event.html">4.2.5. matplotlib.backend_bases.Event</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.html">4.2.6. matplotlib.backend_bases.FigureCanvasBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.FigureManagerBase.html">4.2.7. matplotlib.backend_bases.FigureManagerBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.Gcf.html">4.2.8. matplotlib.backend_bases.Gcf</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.html">4.2.9. matplotlib.backend_bases.GraphicsContextBase</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.copy_properties.html">4.2.9.1. matplotlib.backend_bases.GraphicsContextBase.copy_properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.get_alpha.html">4.2.9.2. matplotlib.backend_bases.GraphicsContextBase.get_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.get_antialiased.html">4.2.9.3. matplotlib.backend_bases.GraphicsContextBase.get_antialiased</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.get_capstyle.html">4.2.9.4. matplotlib.backend_bases.GraphicsContextBase.get_capstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.get_clip_path.html">4.2.9.5. matplotlib.backend_bases.GraphicsContextBase.get_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.get_clip_rectangle.html">4.2.9.6. matplotlib.backend_bases.GraphicsContextBase.get_clip_rectangle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.get_dashes.html">4.2.9.7. matplotlib.backend_bases.GraphicsContextBase.get_dashes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.get_forced_alpha.html">4.2.9.8. matplotlib.backend_bases.GraphicsContextBase.get_forced_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.get_gid.html">4.2.9.9. matplotlib.backend_bases.GraphicsContextBase.get_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.get_hatch.html">4.2.9.10. matplotlib.backend_bases.GraphicsContextBase.get_hatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.get_hatch_path.html">4.2.9.11. matplotlib.backend_bases.GraphicsContextBase.get_hatch_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.get_joinstyle.html">4.2.9.12. matplotlib.backend_bases.GraphicsContextBase.get_joinstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.get_linestyle.html">4.2.9.13. matplotlib.backend_bases.GraphicsContextBase.get_linestyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.get_linewidth.html">4.2.9.14. matplotlib.backend_bases.GraphicsContextBase.get_linewidth</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">4.2.9.15. matplotlib.backend_bases.GraphicsContextBase.get_rgb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.get_sketch_params.html">4.2.9.16. matplotlib.backend_bases.GraphicsContextBase.get_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.get_snap.html">4.2.9.17. matplotlib.backend_bases.GraphicsContextBase.get_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.get_url.html">4.2.9.18. matplotlib.backend_bases.GraphicsContextBase.get_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.restore.html">4.2.9.19. matplotlib.backend_bases.GraphicsContextBase.restore</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.set_alpha.html">4.2.9.20. matplotlib.backend_bases.GraphicsContextBase.set_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.set_antialiased.html">4.2.9.21. matplotlib.backend_bases.GraphicsContextBase.set_antialiased</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.set_capstyle.html">4.2.9.22. matplotlib.backend_bases.GraphicsContextBase.set_capstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.set_clip_path.html">4.2.9.23. matplotlib.backend_bases.GraphicsContextBase.set_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.set_clip_rectangle.html">4.2.9.24. matplotlib.backend_bases.GraphicsContextBase.set_clip_rectangle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.set_dashes.html">4.2.9.25. matplotlib.backend_bases.GraphicsContextBase.set_dashes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.set_foreground.html">4.2.9.26. matplotlib.backend_bases.GraphicsContextBase.set_foreground</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.set_gid.html">4.2.9.27. matplotlib.backend_bases.GraphicsContextBase.set_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.set_graylevel.html">4.2.9.28. matplotlib.backend_bases.GraphicsContextBase.set_graylevel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.set_hatch.html">4.2.9.29. matplotlib.backend_bases.GraphicsContextBase.set_hatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.set_joinstyle.html">4.2.9.30. matplotlib.backend_bases.GraphicsContextBase.set_joinstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.set_linestyle.html">4.2.9.31. matplotlib.backend_bases.GraphicsContextBase.set_linestyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.set_linewidth.html">4.2.9.32. matplotlib.backend_bases.GraphicsContextBase.set_linewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.set_sketch_params.html">4.2.9.33. matplotlib.backend_bases.GraphicsContextBase.set_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.set_snap.html">4.2.9.34. matplotlib.backend_bases.GraphicsContextBase.set_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.set_url.html">4.2.9.35. matplotlib.backend_bases.GraphicsContextBase.set_url</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.IdleEvent.html">4.2.10. matplotlib.backend_bases.IdleEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.KeyEvent.html">4.2.11. matplotlib.backend_bases.KeyEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.LocationEvent.html">4.2.12. matplotlib.backend_bases.LocationEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.MouseEvent.html">4.2.13. matplotlib.backend_bases.MouseEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.NavigationToolbar2.html">4.2.14. matplotlib.backend_bases.NavigationToolbar2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.Path.html">4.2.15. matplotlib.backend_bases.Path</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.PickEvent.html">4.2.16. matplotlib.backend_bases.PickEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.RendererBase.html">4.2.17. matplotlib.backend_bases.RendererBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.ResizeEvent.html">4.2.18. matplotlib.backend_bases.ResizeEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.ShowBase.html">4.2.19. matplotlib.backend_bases.ShowBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.StatusbarBase.html">4.2.20. matplotlib.backend_bases.StatusbarBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.TimerBase.html">4.2.21. matplotlib.backend_bases.TimerBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.ToolContainerBase.html">4.2.22. matplotlib.backend_bases.ToolContainerBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.TransformedBbox.html">4.2.23. matplotlib.backend_bases.TransformedBbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.xrange.html">4.2.24. matplotlib.backend_bases.xrange</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.backend_bases.html#exceptions">4.3. Exceptions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">5. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">6. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">8. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">9. matplotlib.widgets</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../mpl.pyplot.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.backend_bases.html">4. matplotlib.backend_bases</a> &raquo;</li>
+        
+          <li><a href="matplotlib.backend_bases.GraphicsContextBase.html">4.2.9. matplotlib.backend_bases.GraphicsContextBase</a> &raquo;</li>
+        
+      <li>4.2.9.15. matplotlib.backend_bases.GraphicsContextBase.get_rgb</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.backend_bases.GraphicsContextBase.get_rgb.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-backend-bases-graphicscontextbase-get-rgb">
+<h1>4.2.9.15. matplotlib.backend_bases.GraphicsContextBase.get_rgb<a class="headerlink" href="#matplotlib-backend-bases-graphicscontextbase-get-rgb" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="matplotlib.backend_bases.GraphicsContextBase.get_rgb">
+<code class="descclassname">GraphicsContextBase.</code><code class="descname">get_rgb</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/backend_bases.html#GraphicsContextBase.get_rgb"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.backend_bases.GraphicsContextBase.get_rgb" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns a tuple of three or four floats from 0-1.</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.backend_bases.GraphicsContextBase.get_sketch_params.html" class="btn btn-neutral float-right" title="4.2.9.16. matplotlib.backend_bases.GraphicsContextBase.get_sketch_params" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.backend_bases.GraphicsContextBase.get_linewidth.html" class="btn btn-neutral" title="4.2.9.14. matplotlib.backend_bases.GraphicsContextBase.get_linewidth" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

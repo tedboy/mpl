@@ -1,0 +1,425 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4.2.1. matplotlib.backend_bases.Affine2D &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="4. matplotlib.backend_bases" href="../matplotlib.backend_bases.html"/>
+        <link rel="next" title="4.2.1.1. matplotlib.backend_bases.Affine2D.depth" href="matplotlib.backend_bases.Affine2D.depth.html"/>
+        <link rel="prev" title="4.1.8. matplotlib.backend_bases.warn_deprecated" href="../matplotlib.backend_bases.warn_deprecated.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">3. matplotlib.cm</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.backend_bases.html">4. matplotlib.backend_bases</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.backend_bases.html#functions">4.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.backend_bases.html#classes">4.2. Classes</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">4.2.1. matplotlib.backend_bases.Affine2D</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.Affine2D.depth.html">4.2.1.1. matplotlib.backend_bases.Affine2D.depth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.Affine2D.is_separable.html">4.2.1.2. matplotlib.backend_bases.Affine2D.is_separable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.Affine2D.clear.html">4.2.1.3. matplotlib.backend_bases.Affine2D.clear</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.Affine2D.contains_branch.html">4.2.1.4. matplotlib.backend_bases.Affine2D.contains_branch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.Affine2D.contains_branch_seperately.html">4.2.1.5. matplotlib.backend_bases.Affine2D.contains_branch_seperately</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.Affine2D.from_values.html">4.2.1.6. matplotlib.backend_bases.Affine2D.from_values</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.Affine2D.frozen.html">4.2.1.7. matplotlib.backend_bases.Affine2D.frozen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.Affine2D.get_affine.html">4.2.1.8. matplotlib.backend_bases.Affine2D.get_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.Affine2D.get_matrix.html">4.2.1.9. matplotlib.backend_bases.Affine2D.get_matrix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.Affine2D.identity.html">4.2.1.10. matplotlib.backend_bases.Affine2D.identity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.Affine2D.invalidate.html">4.2.1.11. matplotlib.backend_bases.Affine2D.invalidate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.Affine2D.inverted.html">4.2.1.12. matplotlib.backend_bases.Affine2D.inverted</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.Affine2D.matrix_from_values.html">4.2.1.13. matplotlib.backend_bases.Affine2D.matrix_from_values</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.Affine2D.rotate.html">4.2.1.14. matplotlib.backend_bases.Affine2D.rotate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.Affine2D.rotate_around.html">4.2.1.15. matplotlib.backend_bases.Affine2D.rotate_around</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.Affine2D.rotate_deg.html">4.2.1.16. matplotlib.backend_bases.Affine2D.rotate_deg</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.Affine2D.rotate_deg_around.html">4.2.1.17. matplotlib.backend_bases.Affine2D.rotate_deg_around</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.Affine2D.scale.html">4.2.1.18. matplotlib.backend_bases.Affine2D.scale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.Affine2D.set.html">4.2.1.19. matplotlib.backend_bases.Affine2D.set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.Affine2D.set_children.html">4.2.1.20. matplotlib.backend_bases.Affine2D.set_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.Affine2D.set_matrix.html">4.2.1.21. matplotlib.backend_bases.Affine2D.set_matrix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.Affine2D.skew.html">4.2.1.22. matplotlib.backend_bases.Affine2D.skew</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.Affine2D.skew_deg.html">4.2.1.23. matplotlib.backend_bases.Affine2D.skew_deg</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.Affine2D.to_values.html">4.2.1.24. matplotlib.backend_bases.Affine2D.to_values</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.Affine2D.transform.html">4.2.1.25. matplotlib.backend_bases.Affine2D.transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.Affine2D.transform_affine.html">4.2.1.26. matplotlib.backend_bases.Affine2D.transform_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.Affine2D.transform_angles.html">4.2.1.27. matplotlib.backend_bases.Affine2D.transform_angles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.Affine2D.transform_bbox.html">4.2.1.28. matplotlib.backend_bases.Affine2D.transform_bbox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.Affine2D.transform_non_affine.html">4.2.1.29. matplotlib.backend_bases.Affine2D.transform_non_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.Affine2D.transform_path.html">4.2.1.30. matplotlib.backend_bases.Affine2D.transform_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.Affine2D.transform_path_affine.html">4.2.1.31. matplotlib.backend_bases.Affine2D.transform_path_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.Affine2D.transform_path_non_affine.html">4.2.1.32. matplotlib.backend_bases.Affine2D.transform_path_non_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.Affine2D.transform_point.html">4.2.1.33. matplotlib.backend_bases.Affine2D.transform_point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.Affine2D.translate.html">4.2.1.34. matplotlib.backend_bases.Affine2D.translate</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.Bbox.html">4.2.2. matplotlib.backend_bases.Bbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.CloseEvent.html">4.2.3. matplotlib.backend_bases.CloseEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.DrawEvent.html">4.2.4. matplotlib.backend_bases.DrawEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.Event.html">4.2.5. matplotlib.backend_bases.Event</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.html">4.2.6. matplotlib.backend_bases.FigureCanvasBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.FigureManagerBase.html">4.2.7. matplotlib.backend_bases.FigureManagerBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.Gcf.html">4.2.8. matplotlib.backend_bases.Gcf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.html">4.2.9. matplotlib.backend_bases.GraphicsContextBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.IdleEvent.html">4.2.10. matplotlib.backend_bases.IdleEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.KeyEvent.html">4.2.11. matplotlib.backend_bases.KeyEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.LocationEvent.html">4.2.12. matplotlib.backend_bases.LocationEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.MouseEvent.html">4.2.13. matplotlib.backend_bases.MouseEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.NavigationToolbar2.html">4.2.14. matplotlib.backend_bases.NavigationToolbar2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.Path.html">4.2.15. matplotlib.backend_bases.Path</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.PickEvent.html">4.2.16. matplotlib.backend_bases.PickEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.RendererBase.html">4.2.17. matplotlib.backend_bases.RendererBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.ResizeEvent.html">4.2.18. matplotlib.backend_bases.ResizeEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.ShowBase.html">4.2.19. matplotlib.backend_bases.ShowBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.StatusbarBase.html">4.2.20. matplotlib.backend_bases.StatusbarBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.TimerBase.html">4.2.21. matplotlib.backend_bases.TimerBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.ToolContainerBase.html">4.2.22. matplotlib.backend_bases.ToolContainerBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.TransformedBbox.html">4.2.23. matplotlib.backend_bases.TransformedBbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.xrange.html">4.2.24. matplotlib.backend_bases.xrange</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.backend_bases.html#exceptions">4.3. Exceptions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">5. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">6. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">8. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">9. matplotlib.widgets</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../mpl.pyplot.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.backend_bases.html">4. matplotlib.backend_bases</a> &raquo;</li>
+        
+      <li>4.2.1. matplotlib.backend_bases.Affine2D</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.backend_bases.Affine2D.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-backend-bases-affine2d">
+<h1>4.2.1. matplotlib.backend_bases.Affine2D<a class="headerlink" href="#matplotlib-backend-bases-affine2d" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="matplotlib.backend_bases.Affine2D">
+<em class="property">class </em><code class="descclassname">matplotlib.backend_bases.</code><code class="descname">Affine2D</code><span class="sig-paren">(</span><em>matrix=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/transforms.html#Affine2D"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.backend_bases.Affine2D" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mutable 2D affine transformation.</p>
+<p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.backend_bases.Affine2D.depth.html#matplotlib.backend_bases.Affine2D.depth" title="matplotlib.backend_bases.Affine2D.depth"><code class="xref py py-obj docutils literal"><span class="pre">depth</span></code></a></td>
+<td>Returns the number of transforms which have been chained together to form this Transform instance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.backend_bases.Affine2D.is_separable.html#matplotlib.backend_bases.Affine2D.is_separable" title="matplotlib.backend_bases.Affine2D.is_separable"><code class="xref py py-obj docutils literal"><span class="pre">is_separable</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.backend_bases.Affine2D.clear.html#matplotlib.backend_bases.Affine2D.clear" title="matplotlib.backend_bases.Affine2D.clear"><code class="xref py py-obj docutils literal"><span class="pre">clear</span></code></a>()</td>
+<td>Reset the underlying matrix to the identity transform.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.backend_bases.Affine2D.contains_branch.html#matplotlib.backend_bases.Affine2D.contains_branch" title="matplotlib.backend_bases.Affine2D.contains_branch"><code class="xref py py-obj docutils literal"><span class="pre">contains_branch</span></code></a>(other)</td>
+<td>Return whether the given transform is a sub-tree of this transform.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.backend_bases.Affine2D.contains_branch_seperately.html#matplotlib.backend_bases.Affine2D.contains_branch_seperately" title="matplotlib.backend_bases.Affine2D.contains_branch_seperately"><code class="xref py py-obj docutils literal"><span class="pre">contains_branch_seperately</span></code></a>(other_transform)</td>
+<td>Returns whether the given branch is a sub-tree of this transform on each seperate dimension.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.backend_bases.Affine2D.from_values.html#matplotlib.backend_bases.Affine2D.from_values" title="matplotlib.backend_bases.Affine2D.from_values"><code class="xref py py-obj docutils literal"><span class="pre">from_values</span></code></a>(a,&nbsp;b,&nbsp;c,&nbsp;d,&nbsp;e,&nbsp;f)</td>
+<td>(staticmethod) Create a new Affine2D instance from the given</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.backend_bases.Affine2D.frozen.html#matplotlib.backend_bases.Affine2D.frozen" title="matplotlib.backend_bases.Affine2D.frozen"><code class="xref py py-obj docutils literal"><span class="pre">frozen</span></code></a>()</td>
+<td>Returns a frozen copy of this transform node.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.backend_bases.Affine2D.get_affine.html#matplotlib.backend_bases.Affine2D.get_affine" title="matplotlib.backend_bases.Affine2D.get_affine"><code class="xref py py-obj docutils literal"><span class="pre">get_affine</span></code></a>()</td>
+<td>Get the affine part of this transform.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.backend_bases.Affine2D.get_matrix.html#matplotlib.backend_bases.Affine2D.get_matrix" title="matplotlib.backend_bases.Affine2D.get_matrix"><code class="xref py py-obj docutils literal"><span class="pre">get_matrix</span></code></a>()</td>
+<td>Get the underlying transformation matrix as a 3x3 numpy array:</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.backend_bases.Affine2D.identity.html#matplotlib.backend_bases.Affine2D.identity" title="matplotlib.backend_bases.Affine2D.identity"><code class="xref py py-obj docutils literal"><span class="pre">identity</span></code></a>()</td>
+<td>(staticmethod) Return a new <a class="reference internal" href="#matplotlib.backend_bases.Affine2D" title="matplotlib.backend_bases.Affine2D"><code class="xref py py-class docutils literal"><span class="pre">Affine2D</span></code></a> object that is</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.backend_bases.Affine2D.invalidate.html#matplotlib.backend_bases.Affine2D.invalidate" title="matplotlib.backend_bases.Affine2D.invalidate"><code class="xref py py-obj docutils literal"><span class="pre">invalidate</span></code></a>()</td>
+<td>Invalidate this <code class="xref py py-class docutils literal"><span class="pre">TransformNode</span></code> and triggers an invalidation of its ancestors.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.backend_bases.Affine2D.inverted.html#matplotlib.backend_bases.Affine2D.inverted" title="matplotlib.backend_bases.Affine2D.inverted"><code class="xref py py-obj docutils literal"><span class="pre">inverted</span></code></a>()</td>
+<td>Return the corresponding inverse transformation.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.backend_bases.Affine2D.matrix_from_values.html#matplotlib.backend_bases.Affine2D.matrix_from_values" title="matplotlib.backend_bases.Affine2D.matrix_from_values"><code class="xref py py-obj docutils literal"><span class="pre">matrix_from_values</span></code></a>(a,&nbsp;b,&nbsp;c,&nbsp;d,&nbsp;e,&nbsp;f)</td>
+<td>(staticmethod) Create a new transformation matrix as a 3x3</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.backend_bases.Affine2D.rotate.html#matplotlib.backend_bases.Affine2D.rotate" title="matplotlib.backend_bases.Affine2D.rotate"><code class="xref py py-obj docutils literal"><span class="pre">rotate</span></code></a>(theta)</td>
+<td>Add a rotation (in radians) to this transform in place.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.backend_bases.Affine2D.rotate_around.html#matplotlib.backend_bases.Affine2D.rotate_around" title="matplotlib.backend_bases.Affine2D.rotate_around"><code class="xref py py-obj docutils literal"><span class="pre">rotate_around</span></code></a>(x,&nbsp;y,&nbsp;theta)</td>
+<td>Add a rotation (in radians) around the point (x, y) in place.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.backend_bases.Affine2D.rotate_deg.html#matplotlib.backend_bases.Affine2D.rotate_deg" title="matplotlib.backend_bases.Affine2D.rotate_deg"><code class="xref py py-obj docutils literal"><span class="pre">rotate_deg</span></code></a>(degrees)</td>
+<td>Add a rotation (in degrees) to this transform in place.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.backend_bases.Affine2D.rotate_deg_around.html#matplotlib.backend_bases.Affine2D.rotate_deg_around" title="matplotlib.backend_bases.Affine2D.rotate_deg_around"><code class="xref py py-obj docutils literal"><span class="pre">rotate_deg_around</span></code></a>(x,&nbsp;y,&nbsp;degrees)</td>
+<td>Add a rotation (in degrees) around the point (x, y) in place.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.backend_bases.Affine2D.scale.html#matplotlib.backend_bases.Affine2D.scale" title="matplotlib.backend_bases.Affine2D.scale"><code class="xref py py-obj docutils literal"><span class="pre">scale</span></code></a>(sx[,&nbsp;sy])</td>
+<td>Adds a scale in place.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.backend_bases.Affine2D.set.html#matplotlib.backend_bases.Affine2D.set" title="matplotlib.backend_bases.Affine2D.set"><code class="xref py py-obj docutils literal"><span class="pre">set</span></code></a>(other)</td>
+<td>Set this transformation from the frozen copy of another <code class="xref py py-class docutils literal"><span class="pre">Affine2DBase</span></code> object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.backend_bases.Affine2D.set_children.html#matplotlib.backend_bases.Affine2D.set_children" title="matplotlib.backend_bases.Affine2D.set_children"><code class="xref py py-obj docutils literal"><span class="pre">set_children</span></code></a>(*children)</td>
+<td>Set the children of the transform, to let the invalidation system know which transforms can invalidate this transform.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.backend_bases.Affine2D.set_matrix.html#matplotlib.backend_bases.Affine2D.set_matrix" title="matplotlib.backend_bases.Affine2D.set_matrix"><code class="xref py py-obj docutils literal"><span class="pre">set_matrix</span></code></a>(mtx)</td>
+<td>Set the underlying transformation matrix from a 3x3 numpy array:</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.backend_bases.Affine2D.skew.html#matplotlib.backend_bases.Affine2D.skew" title="matplotlib.backend_bases.Affine2D.skew"><code class="xref py py-obj docutils literal"><span class="pre">skew</span></code></a>(xShear,&nbsp;yShear)</td>
+<td>Adds a skew in place.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.backend_bases.Affine2D.skew_deg.html#matplotlib.backend_bases.Affine2D.skew_deg" title="matplotlib.backend_bases.Affine2D.skew_deg"><code class="xref py py-obj docutils literal"><span class="pre">skew_deg</span></code></a>(xShear,&nbsp;yShear)</td>
+<td>Adds a skew in place.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.backend_bases.Affine2D.to_values.html#matplotlib.backend_bases.Affine2D.to_values" title="matplotlib.backend_bases.Affine2D.to_values"><code class="xref py py-obj docutils literal"><span class="pre">to_values</span></code></a>()</td>
+<td>Return the values of the matrix as a sequence (a,b,c,d,e,f)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.backend_bases.Affine2D.transform.html#matplotlib.backend_bases.Affine2D.transform" title="matplotlib.backend_bases.Affine2D.transform"><code class="xref py py-obj docutils literal"><span class="pre">transform</span></code></a>(values)</td>
+<td>Performs the transformation on the given array of values.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.backend_bases.Affine2D.transform_affine.html#matplotlib.backend_bases.Affine2D.transform_affine" title="matplotlib.backend_bases.Affine2D.transform_affine"><code class="xref py py-obj docutils literal"><span class="pre">transform_affine</span></code></a>(points)</td>
+<td>Performs only the affine part of this transformation on the given array of values.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.backend_bases.Affine2D.transform_angles.html#matplotlib.backend_bases.Affine2D.transform_angles" title="matplotlib.backend_bases.Affine2D.transform_angles"><code class="xref py py-obj docutils literal"><span class="pre">transform_angles</span></code></a>(angles,&nbsp;pts[,&nbsp;radians,&nbsp;pushoff])</td>
+<td>Performs transformation on a set of angles anchored at specific locations.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.backend_bases.Affine2D.transform_bbox.html#matplotlib.backend_bases.Affine2D.transform_bbox" title="matplotlib.backend_bases.Affine2D.transform_bbox"><code class="xref py py-obj docutils literal"><span class="pre">transform_bbox</span></code></a>(bbox)</td>
+<td>Transform the given bounding box.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.backend_bases.Affine2D.transform_non_affine.html#matplotlib.backend_bases.Affine2D.transform_non_affine" title="matplotlib.backend_bases.Affine2D.transform_non_affine"><code class="xref py py-obj docutils literal"><span class="pre">transform_non_affine</span></code></a>(points)</td>
+<td>Performs only the non-affine part of the transformation.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.backend_bases.Affine2D.transform_path.html#matplotlib.backend_bases.Affine2D.transform_path" title="matplotlib.backend_bases.Affine2D.transform_path"><code class="xref py py-obj docutils literal"><span class="pre">transform_path</span></code></a>(path)</td>
+<td>Returns a transformed path.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.backend_bases.Affine2D.transform_path_affine.html#matplotlib.backend_bases.Affine2D.transform_path_affine" title="matplotlib.backend_bases.Affine2D.transform_path_affine"><code class="xref py py-obj docutils literal"><span class="pre">transform_path_affine</span></code></a>(path)</td>
+<td>Returns a path, transformed only by the affine part of this transform.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.backend_bases.Affine2D.transform_path_non_affine.html#matplotlib.backend_bases.Affine2D.transform_path_non_affine" title="matplotlib.backend_bases.Affine2D.transform_path_non_affine"><code class="xref py py-obj docutils literal"><span class="pre">transform_path_non_affine</span></code></a>(path)</td>
+<td>Returns a path, transformed only by the non-affine part of this transform.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.backend_bases.Affine2D.transform_point.html#matplotlib.backend_bases.Affine2D.transform_point" title="matplotlib.backend_bases.Affine2D.transform_point"><code class="xref py py-obj docutils literal"><span class="pre">transform_point</span></code></a>(point)</td>
+<td>A convenience function that returns the transformed copy of a single point.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.backend_bases.Affine2D.translate.html#matplotlib.backend_bases.Affine2D.translate" title="matplotlib.backend_bases.Affine2D.translate"><code class="xref py py-obj docutils literal"><span class="pre">translate</span></code></a>(tx,&nbsp;ty)</td>
+<td>Adds a translation in place.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.backend_bases.Affine2D.depth.html" class="btn btn-neutral float-right" title="4.2.1.1. matplotlib.backend_bases.Affine2D.depth" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../matplotlib.backend_bases.warn_deprecated.html" class="btn btn-neutral" title="4.1.8. matplotlib.backend_bases.warn_deprecated" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

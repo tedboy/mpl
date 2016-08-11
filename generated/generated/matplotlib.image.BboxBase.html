@@ -1,0 +1,472 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>8.2.3. matplotlib.image.BboxBase &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="8. matplotlib.image" href="../matplotlib.image.html"/>
+        <link rel="next" title="8.2.3.1. matplotlib.image.BboxBase.bounds" href="matplotlib.image.BboxBase.bounds.html"/>
+        <link rel="prev" title="8.2.2.64. matplotlib.image.Bbox.update_from_path" href="matplotlib.image.Bbox.update_from_path.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">3. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backend_bases.html">4. matplotlib.backend_bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">5. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">6. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.image.html">8. matplotlib.image</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.image.html#functions">8.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.image.html#classes">8.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.AxesImage.html">8.2.1. matplotlib.image.AxesImage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.Bbox.html">8.2.2. matplotlib.image.Bbox</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">8.2.3. matplotlib.image.BboxBase</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.bounds.html">8.2.3.1. matplotlib.image.BboxBase.bounds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.extents.html">8.2.3.2. matplotlib.image.BboxBase.extents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.height.html">8.2.3.3. matplotlib.image.BboxBase.height</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.intervalx.html">8.2.3.4. matplotlib.image.BboxBase.intervalx</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.intervaly.html">8.2.3.5. matplotlib.image.BboxBase.intervaly</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.max.html">8.2.3.6. matplotlib.image.BboxBase.max</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.min.html">8.2.3.7. matplotlib.image.BboxBase.min</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.p0.html">8.2.3.8. matplotlib.image.BboxBase.p0</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.p1.html">8.2.3.9. matplotlib.image.BboxBase.p1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.size.html">8.2.3.10. matplotlib.image.BboxBase.size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.width.html">8.2.3.11. matplotlib.image.BboxBase.width</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.x0.html">8.2.3.12. matplotlib.image.BboxBase.x0</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.x1.html">8.2.3.13. matplotlib.image.BboxBase.x1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.xmax.html">8.2.3.14. matplotlib.image.BboxBase.xmax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.xmin.html">8.2.3.15. matplotlib.image.BboxBase.xmin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.y0.html">8.2.3.16. matplotlib.image.BboxBase.y0</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.y1.html">8.2.3.17. matplotlib.image.BboxBase.y1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.ymax.html">8.2.3.18. matplotlib.image.BboxBase.ymax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.ymin.html">8.2.3.19. matplotlib.image.BboxBase.ymin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.anchored.html">8.2.3.20. matplotlib.image.BboxBase.anchored</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.contains.html">8.2.3.21. matplotlib.image.BboxBase.contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.containsx.html">8.2.3.22. matplotlib.image.BboxBase.containsx</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.containsy.html">8.2.3.23. matplotlib.image.BboxBase.containsy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.corners.html">8.2.3.24. matplotlib.image.BboxBase.corners</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.count_contains.html">8.2.3.25. matplotlib.image.BboxBase.count_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.count_overlaps.html">8.2.3.26. matplotlib.image.BboxBase.count_overlaps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.expanded.html">8.2.3.27. matplotlib.image.BboxBase.expanded</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.frozen.html">8.2.3.28. matplotlib.image.BboxBase.frozen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.fully_contains.html">8.2.3.29. matplotlib.image.BboxBase.fully_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.fully_containsx.html">8.2.3.30. matplotlib.image.BboxBase.fully_containsx</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.fully_containsy.html">8.2.3.31. matplotlib.image.BboxBase.fully_containsy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.fully_overlaps.html">8.2.3.32. matplotlib.image.BboxBase.fully_overlaps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.get_points.html">8.2.3.33. matplotlib.image.BboxBase.get_points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.intersection.html">8.2.3.34. matplotlib.image.BboxBase.intersection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.invalidate.html">8.2.3.35. matplotlib.image.BboxBase.invalidate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.inverse_transformed.html">8.2.3.36. matplotlib.image.BboxBase.inverse_transformed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.is_unit.html">8.2.3.37. matplotlib.image.BboxBase.is_unit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.overlaps.html">8.2.3.38. matplotlib.image.BboxBase.overlaps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.padded.html">8.2.3.39. matplotlib.image.BboxBase.padded</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.rotated.html">8.2.3.40. matplotlib.image.BboxBase.rotated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.set_children.html">8.2.3.41. matplotlib.image.BboxBase.set_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.shrunk.html">8.2.3.42. matplotlib.image.BboxBase.shrunk</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.shrunk_to_aspect.html">8.2.3.43. matplotlib.image.BboxBase.shrunk_to_aspect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.splitx.html">8.2.3.44. matplotlib.image.BboxBase.splitx</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.splity.html">8.2.3.45. matplotlib.image.BboxBase.splity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.transformed.html">8.2.3.46. matplotlib.image.BboxBase.transformed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.translated.html">8.2.3.47. matplotlib.image.BboxBase.translated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.BboxBase.union.html">8.2.3.48. matplotlib.image.BboxBase.union</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.BboxImage.html">8.2.4. matplotlib.image.BboxImage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.BytesIO.html">8.2.5. matplotlib.image.BytesIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.FigureImage.html">8.2.6. matplotlib.image.FigureImage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.IdentityTransform.html">8.2.7. matplotlib.image.IdentityTransform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.Image.html">8.2.8. matplotlib.image.Image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.NonUniformImage.html">8.2.9. matplotlib.image.NonUniformImage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.PcolorImage.html">8.2.10. matplotlib.image.PcolorImage</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">9. matplotlib.widgets</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../mpl.pyplot.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.image.html">8. matplotlib.image</a> &raquo;</li>
+        
+      <li>8.2.3. matplotlib.image.BboxBase</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.image.BboxBase.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-image-bboxbase">
+<h1>8.2.3. matplotlib.image.BboxBase<a class="headerlink" href="#matplotlib-image-bboxbase" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="matplotlib.image.BboxBase">
+<em class="property">class </em><code class="descclassname">matplotlib.image.</code><code class="descname">BboxBase</code><span class="sig-paren">(</span><em>shorthand_name=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/transforms.html#BboxBase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.image.BboxBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the base class of all bounding boxes, and provides
+read-only access to its data.  A mutable bounding box is provided
+by the <a class="reference internal" href="matplotlib.image.Bbox.html#matplotlib.image.Bbox" title="matplotlib.image.Bbox"><code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code></a> class.</p>
+<p>The canonical representation is as two points, with no
+restrictions on their ordering.  Convenience properties are
+provided to get the left, bottom, right and top edges and width
+and height, but these are not stored explicitly.</p>
+<p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.image.BboxBase.bounds.html#matplotlib.image.BboxBase.bounds" title="matplotlib.image.BboxBase.bounds"><code class="xref py py-obj docutils literal"><span class="pre">bounds</span></code></a></td>
+<td>(property) Returns (<a class="reference internal" href="matplotlib.image.BboxBase.x0.html#matplotlib.image.BboxBase.x0" title="matplotlib.image.BboxBase.x0"><code class="xref py py-attr docutils literal"><span class="pre">x0</span></code></a>, <a class="reference internal" href="matplotlib.image.BboxBase.y0.html#matplotlib.image.BboxBase.y0" title="matplotlib.image.BboxBase.y0"><code class="xref py py-attr docutils literal"><span class="pre">y0</span></code></a>, <a class="reference internal" href="matplotlib.image.BboxBase.width.html#matplotlib.image.BboxBase.width" title="matplotlib.image.BboxBase.width"><code class="xref py py-attr docutils literal"><span class="pre">width</span></code></a>,</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.image.BboxBase.extents.html#matplotlib.image.BboxBase.extents" title="matplotlib.image.BboxBase.extents"><code class="xref py py-obj docutils literal"><span class="pre">extents</span></code></a></td>
+<td>(property) Returns (<a class="reference internal" href="matplotlib.image.BboxBase.x0.html#matplotlib.image.BboxBase.x0" title="matplotlib.image.BboxBase.x0"><code class="xref py py-attr docutils literal"><span class="pre">x0</span></code></a>, <a class="reference internal" href="matplotlib.image.BboxBase.y0.html#matplotlib.image.BboxBase.y0" title="matplotlib.image.BboxBase.y0"><code class="xref py py-attr docutils literal"><span class="pre">y0</span></code></a>, <a class="reference internal" href="matplotlib.image.BboxBase.x1.html#matplotlib.image.BboxBase.x1" title="matplotlib.image.BboxBase.x1"><code class="xref py py-attr docutils literal"><span class="pre">x1</span></code></a>,</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.image.BboxBase.height.html#matplotlib.image.BboxBase.height" title="matplotlib.image.BboxBase.height"><code class="xref py py-obj docutils literal"><span class="pre">height</span></code></a></td>
+<td>(property) The height of the bounding box.  It may be negative if</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.image.BboxBase.intervalx.html#matplotlib.image.BboxBase.intervalx" title="matplotlib.image.BboxBase.intervalx"><code class="xref py py-obj docutils literal"><span class="pre">intervalx</span></code></a></td>
+<td>(property) <a class="reference internal" href="matplotlib.image.BboxBase.intervalx.html#matplotlib.image.BboxBase.intervalx" title="matplotlib.image.BboxBase.intervalx"><code class="xref py py-attr docutils literal"><span class="pre">intervalx</span></code></a> is the pair of <em>x</em> coordinates that define</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.image.BboxBase.intervaly.html#matplotlib.image.BboxBase.intervaly" title="matplotlib.image.BboxBase.intervaly"><code class="xref py py-obj docutils literal"><span class="pre">intervaly</span></code></a></td>
+<td>(property) <a class="reference internal" href="matplotlib.image.BboxBase.intervaly.html#matplotlib.image.BboxBase.intervaly" title="matplotlib.image.BboxBase.intervaly"><code class="xref py py-attr docutils literal"><span class="pre">intervaly</span></code></a> is the pair of <em>y</em> coordinates that define</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.image.BboxBase.max.html#matplotlib.image.BboxBase.max" title="matplotlib.image.BboxBase.max"><code class="xref py py-obj docutils literal"><span class="pre">max</span></code></a></td>
+<td>(property) <a class="reference internal" href="matplotlib.image.BboxBase.max.html#matplotlib.image.BboxBase.max" title="matplotlib.image.BboxBase.max"><code class="xref py py-attr docutils literal"><span class="pre">max</span></code></a> is the top-right corner of the bounding box.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.image.BboxBase.min.html#matplotlib.image.BboxBase.min" title="matplotlib.image.BboxBase.min"><code class="xref py py-obj docutils literal"><span class="pre">min</span></code></a></td>
+<td>(property) <a class="reference internal" href="matplotlib.image.BboxBase.min.html#matplotlib.image.BboxBase.min" title="matplotlib.image.BboxBase.min"><code class="xref py py-attr docutils literal"><span class="pre">min</span></code></a> is the bottom-left corner of the bounding</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.image.BboxBase.p0.html#matplotlib.image.BboxBase.p0" title="matplotlib.image.BboxBase.p0"><code class="xref py py-obj docutils literal"><span class="pre">p0</span></code></a></td>
+<td>(property) <a class="reference internal" href="matplotlib.image.BboxBase.p0.html#matplotlib.image.BboxBase.p0" title="matplotlib.image.BboxBase.p0"><code class="xref py py-attr docutils literal"><span class="pre">p0</span></code></a> is the first pair of (<em>x</em>, <em>y</em>) coordinates</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.image.BboxBase.p1.html#matplotlib.image.BboxBase.p1" title="matplotlib.image.BboxBase.p1"><code class="xref py py-obj docutils literal"><span class="pre">p1</span></code></a></td>
+<td>(property) <a class="reference internal" href="matplotlib.image.BboxBase.p1.html#matplotlib.image.BboxBase.p1" title="matplotlib.image.BboxBase.p1"><code class="xref py py-attr docutils literal"><span class="pre">p1</span></code></a> is the second pair of (<em>x</em>, <em>y</em>) coordinates</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.image.BboxBase.size.html#matplotlib.image.BboxBase.size" title="matplotlib.image.BboxBase.size"><code class="xref py py-obj docutils literal"><span class="pre">size</span></code></a></td>
+<td>(property) The width and height of the bounding box.  May be negative,</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.image.BboxBase.width.html#matplotlib.image.BboxBase.width" title="matplotlib.image.BboxBase.width"><code class="xref py py-obj docutils literal"><span class="pre">width</span></code></a></td>
+<td>(property) The width of the bounding box.  It may be negative if</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.image.BboxBase.x0.html#matplotlib.image.BboxBase.x0" title="matplotlib.image.BboxBase.x0"><code class="xref py py-obj docutils literal"><span class="pre">x0</span></code></a></td>
+<td>(property) <a class="reference internal" href="matplotlib.image.BboxBase.x0.html#matplotlib.image.BboxBase.x0" title="matplotlib.image.BboxBase.x0"><code class="xref py py-attr docutils literal"><span class="pre">x0</span></code></a> is the first of the pair of <em>x</em> coordinates that</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.image.BboxBase.x1.html#matplotlib.image.BboxBase.x1" title="matplotlib.image.BboxBase.x1"><code class="xref py py-obj docutils literal"><span class="pre">x1</span></code></a></td>
+<td>(property) <a class="reference internal" href="matplotlib.image.BboxBase.x1.html#matplotlib.image.BboxBase.x1" title="matplotlib.image.BboxBase.x1"><code class="xref py py-attr docutils literal"><span class="pre">x1</span></code></a> is the second of the pair of <em>x</em> coordinates</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.image.BboxBase.xmax.html#matplotlib.image.BboxBase.xmax" title="matplotlib.image.BboxBase.xmax"><code class="xref py py-obj docutils literal"><span class="pre">xmax</span></code></a></td>
+<td>(property) <a class="reference internal" href="matplotlib.image.BboxBase.xmax.html#matplotlib.image.BboxBase.xmax" title="matplotlib.image.BboxBase.xmax"><code class="xref py py-attr docutils literal"><span class="pre">xmax</span></code></a> is the right edge of the bounding box.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.image.BboxBase.xmin.html#matplotlib.image.BboxBase.xmin" title="matplotlib.image.BboxBase.xmin"><code class="xref py py-obj docutils literal"><span class="pre">xmin</span></code></a></td>
+<td>(property) <a class="reference internal" href="matplotlib.image.BboxBase.xmin.html#matplotlib.image.BboxBase.xmin" title="matplotlib.image.BboxBase.xmin"><code class="xref py py-attr docutils literal"><span class="pre">xmin</span></code></a> is the left edge of the bounding box.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.image.BboxBase.y0.html#matplotlib.image.BboxBase.y0" title="matplotlib.image.BboxBase.y0"><code class="xref py py-obj docutils literal"><span class="pre">y0</span></code></a></td>
+<td>(property) <a class="reference internal" href="matplotlib.image.BboxBase.y0.html#matplotlib.image.BboxBase.y0" title="matplotlib.image.BboxBase.y0"><code class="xref py py-attr docutils literal"><span class="pre">y0</span></code></a> is the first of the pair of <em>y</em> coordinates that</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.image.BboxBase.y1.html#matplotlib.image.BboxBase.y1" title="matplotlib.image.BboxBase.y1"><code class="xref py py-obj docutils literal"><span class="pre">y1</span></code></a></td>
+<td>(property) <a class="reference internal" href="matplotlib.image.BboxBase.y1.html#matplotlib.image.BboxBase.y1" title="matplotlib.image.BboxBase.y1"><code class="xref py py-attr docutils literal"><span class="pre">y1</span></code></a> is the second of the pair of <em>y</em> coordinates</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.image.BboxBase.ymax.html#matplotlib.image.BboxBase.ymax" title="matplotlib.image.BboxBase.ymax"><code class="xref py py-obj docutils literal"><span class="pre">ymax</span></code></a></td>
+<td>(property) <a class="reference internal" href="matplotlib.image.BboxBase.ymax.html#matplotlib.image.BboxBase.ymax" title="matplotlib.image.BboxBase.ymax"><code class="xref py py-attr docutils literal"><span class="pre">ymax</span></code></a> is the top edge of the bounding box.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.image.BboxBase.ymin.html#matplotlib.image.BboxBase.ymin" title="matplotlib.image.BboxBase.ymin"><code class="xref py py-obj docutils literal"><span class="pre">ymin</span></code></a></td>
+<td>(property) <a class="reference internal" href="matplotlib.image.BboxBase.ymin.html#matplotlib.image.BboxBase.ymin" title="matplotlib.image.BboxBase.ymin"><code class="xref py py-attr docutils literal"><span class="pre">ymin</span></code></a> is the bottom edge of the bounding box.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.image.BboxBase.anchored.html#matplotlib.image.BboxBase.anchored" title="matplotlib.image.BboxBase.anchored"><code class="xref py py-obj docutils literal"><span class="pre">anchored</span></code></a>(c[,&nbsp;container])</td>
+<td>Return a copy of the <a class="reference internal" href="matplotlib.image.Bbox.html#matplotlib.image.Bbox" title="matplotlib.image.Bbox"><code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code></a>, shifted to position <em>c</em> within a container.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.image.BboxBase.contains.html#matplotlib.image.BboxBase.contains" title="matplotlib.image.BboxBase.contains"><code class="xref py py-obj docutils literal"><span class="pre">contains</span></code></a>(x,&nbsp;y)</td>
+<td>Returns <em>True</em> if (<em>x</em>, <em>y</em>) is a coordinate inside the bounding box or on its edge.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.image.BboxBase.containsx.html#matplotlib.image.BboxBase.containsx" title="matplotlib.image.BboxBase.containsx"><code class="xref py py-obj docutils literal"><span class="pre">containsx</span></code></a>(x)</td>
+<td>Returns True if <em>x</em> is between or equal to <a class="reference internal" href="matplotlib.image.BboxBase.x0.html#matplotlib.image.BboxBase.x0" title="matplotlib.image.BboxBase.x0"><code class="xref py py-attr docutils literal"><span class="pre">x0</span></code></a> and <a class="reference internal" href="matplotlib.image.BboxBase.x1.html#matplotlib.image.BboxBase.x1" title="matplotlib.image.BboxBase.x1"><code class="xref py py-attr docutils literal"><span class="pre">x1</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.image.BboxBase.containsy.html#matplotlib.image.BboxBase.containsy" title="matplotlib.image.BboxBase.containsy"><code class="xref py py-obj docutils literal"><span class="pre">containsy</span></code></a>(y)</td>
+<td>Returns True if <em>y</em> is between or equal to <a class="reference internal" href="matplotlib.image.BboxBase.y0.html#matplotlib.image.BboxBase.y0" title="matplotlib.image.BboxBase.y0"><code class="xref py py-attr docutils literal"><span class="pre">y0</span></code></a> and <a class="reference internal" href="matplotlib.image.BboxBase.y1.html#matplotlib.image.BboxBase.y1" title="matplotlib.image.BboxBase.y1"><code class="xref py py-attr docutils literal"><span class="pre">y1</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.image.BboxBase.corners.html#matplotlib.image.BboxBase.corners" title="matplotlib.image.BboxBase.corners"><code class="xref py py-obj docutils literal"><span class="pre">corners</span></code></a>()</td>
+<td>Return an array of points which are the four corners of this rectangle.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.image.BboxBase.count_contains.html#matplotlib.image.BboxBase.count_contains" title="matplotlib.image.BboxBase.count_contains"><code class="xref py py-obj docutils literal"><span class="pre">count_contains</span></code></a>(vertices)</td>
+<td>Count the number of vertices contained in the <a class="reference internal" href="matplotlib.image.Bbox.html#matplotlib.image.Bbox" title="matplotlib.image.Bbox"><code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.image.BboxBase.count_overlaps.html#matplotlib.image.BboxBase.count_overlaps" title="matplotlib.image.BboxBase.count_overlaps"><code class="xref py py-obj docutils literal"><span class="pre">count_overlaps</span></code></a>(bboxes)</td>
+<td>Count the number of bounding boxes that overlap this one.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.image.BboxBase.expanded.html#matplotlib.image.BboxBase.expanded" title="matplotlib.image.BboxBase.expanded"><code class="xref py py-obj docutils literal"><span class="pre">expanded</span></code></a>(sw,&nbsp;sh)</td>
+<td>Return a new <a class="reference internal" href="matplotlib.image.Bbox.html#matplotlib.image.Bbox" title="matplotlib.image.Bbox"><code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code></a> which is this <a class="reference internal" href="matplotlib.image.Bbox.html#matplotlib.image.Bbox" title="matplotlib.image.Bbox"><code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code></a> expanded around its center by the given factors <em>sw</em> and <em>sh</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.image.BboxBase.frozen.html#matplotlib.image.BboxBase.frozen" title="matplotlib.image.BboxBase.frozen"><code class="xref py py-obj docutils literal"><span class="pre">frozen</span></code></a>()</td>
+<td><code class="xref py py-class docutils literal"><span class="pre">TransformNode</span></code> is the base class for anything that</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.image.BboxBase.fully_contains.html#matplotlib.image.BboxBase.fully_contains" title="matplotlib.image.BboxBase.fully_contains"><code class="xref py py-obj docutils literal"><span class="pre">fully_contains</span></code></a>(x,&nbsp;y)</td>
+<td>Returns True if (<em>x</em>, <em>y</em>) is a coordinate inside the bounding box, but not on its edge.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.image.BboxBase.fully_containsx.html#matplotlib.image.BboxBase.fully_containsx" title="matplotlib.image.BboxBase.fully_containsx"><code class="xref py py-obj docutils literal"><span class="pre">fully_containsx</span></code></a>(x)</td>
+<td>Returns True if <em>x</em> is between but not equal to <a class="reference internal" href="matplotlib.image.BboxBase.x0.html#matplotlib.image.BboxBase.x0" title="matplotlib.image.BboxBase.x0"><code class="xref py py-attr docutils literal"><span class="pre">x0</span></code></a> and <a class="reference internal" href="matplotlib.image.BboxBase.x1.html#matplotlib.image.BboxBase.x1" title="matplotlib.image.BboxBase.x1"><code class="xref py py-attr docutils literal"><span class="pre">x1</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.image.BboxBase.fully_containsy.html#matplotlib.image.BboxBase.fully_containsy" title="matplotlib.image.BboxBase.fully_containsy"><code class="xref py py-obj docutils literal"><span class="pre">fully_containsy</span></code></a>(y)</td>
+<td>Returns True if <em>y</em> is between but not equal to <a class="reference internal" href="matplotlib.image.BboxBase.y0.html#matplotlib.image.BboxBase.y0" title="matplotlib.image.BboxBase.y0"><code class="xref py py-attr docutils literal"><span class="pre">y0</span></code></a> and <a class="reference internal" href="matplotlib.image.BboxBase.y1.html#matplotlib.image.BboxBase.y1" title="matplotlib.image.BboxBase.y1"><code class="xref py py-attr docutils literal"><span class="pre">y1</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.image.BboxBase.fully_overlaps.html#matplotlib.image.BboxBase.fully_overlaps" title="matplotlib.image.BboxBase.fully_overlaps"><code class="xref py py-obj docutils literal"><span class="pre">fully_overlaps</span></code></a>(other)</td>
+<td>Returns True if this bounding box overlaps with the given bounding box <em>other</em>, but not on its edge alone.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.image.BboxBase.get_points.html#matplotlib.image.BboxBase.get_points" title="matplotlib.image.BboxBase.get_points"><code class="xref py py-obj docutils literal"><span class="pre">get_points</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.image.BboxBase.intersection.html#matplotlib.image.BboxBase.intersection" title="matplotlib.image.BboxBase.intersection"><code class="xref py py-obj docutils literal"><span class="pre">intersection</span></code></a>(bbox1,&nbsp;bbox2)</td>
+<td>Return the intersection of the two bboxes or None if they do not intersect.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.image.BboxBase.invalidate.html#matplotlib.image.BboxBase.invalidate" title="matplotlib.image.BboxBase.invalidate"><code class="xref py py-obj docutils literal"><span class="pre">invalidate</span></code></a>()</td>
+<td>Invalidate this <code class="xref py py-class docutils literal"><span class="pre">TransformNode</span></code> and triggers an invalidation of its ancestors.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.image.BboxBase.inverse_transformed.html#matplotlib.image.BboxBase.inverse_transformed" title="matplotlib.image.BboxBase.inverse_transformed"><code class="xref py py-obj docutils literal"><span class="pre">inverse_transformed</span></code></a>(transform)</td>
+<td>Return a new <a class="reference internal" href="matplotlib.image.Bbox.html#matplotlib.image.Bbox" title="matplotlib.image.Bbox"><code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code></a> object, statically transformed by the inverse of the given transform.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.image.BboxBase.is_unit.html#matplotlib.image.BboxBase.is_unit" title="matplotlib.image.BboxBase.is_unit"><code class="xref py py-obj docutils literal"><span class="pre">is_unit</span></code></a>()</td>
+<td>Returns True if the <a class="reference internal" href="matplotlib.image.Bbox.html#matplotlib.image.Bbox" title="matplotlib.image.Bbox"><code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code></a> is the unit bounding box from (0, 0) to (1, 1).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.image.BboxBase.overlaps.html#matplotlib.image.BboxBase.overlaps" title="matplotlib.image.BboxBase.overlaps"><code class="xref py py-obj docutils literal"><span class="pre">overlaps</span></code></a>(other)</td>
+<td>Returns True if this bounding box overlaps with the given bounding box <em>other</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.image.BboxBase.padded.html#matplotlib.image.BboxBase.padded" title="matplotlib.image.BboxBase.padded"><code class="xref py py-obj docutils literal"><span class="pre">padded</span></code></a>(p)</td>
+<td>Return a new <a class="reference internal" href="matplotlib.image.Bbox.html#matplotlib.image.Bbox" title="matplotlib.image.Bbox"><code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code></a> that is padded on all four sides by the given value.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.image.BboxBase.rotated.html#matplotlib.image.BboxBase.rotated" title="matplotlib.image.BboxBase.rotated"><code class="xref py py-obj docutils literal"><span class="pre">rotated</span></code></a>(radians)</td>
+<td>Return a new bounding box that bounds a rotated version of this bounding box by the given radians.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.image.BboxBase.set_children.html#matplotlib.image.BboxBase.set_children" title="matplotlib.image.BboxBase.set_children"><code class="xref py py-obj docutils literal"><span class="pre">set_children</span></code></a>(*children)</td>
+<td>Set the children of the transform, to let the invalidation system know which transforms can invalidate this transform.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.image.BboxBase.shrunk.html#matplotlib.image.BboxBase.shrunk" title="matplotlib.image.BboxBase.shrunk"><code class="xref py py-obj docutils literal"><span class="pre">shrunk</span></code></a>(mx,&nbsp;my)</td>
+<td>Return a copy of the <a class="reference internal" href="matplotlib.image.Bbox.html#matplotlib.image.Bbox" title="matplotlib.image.Bbox"><code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code></a>, shrunk by the factor <em>mx</em> in the <em>x</em> direction and the factor <em>my</em> in the <em>y</em> direction.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.image.BboxBase.shrunk_to_aspect.html#matplotlib.image.BboxBase.shrunk_to_aspect" title="matplotlib.image.BboxBase.shrunk_to_aspect"><code class="xref py py-obj docutils literal"><span class="pre">shrunk_to_aspect</span></code></a>(box_aspect[,&nbsp;container,&nbsp;...])</td>
+<td>Return a copy of the <a class="reference internal" href="matplotlib.image.Bbox.html#matplotlib.image.Bbox" title="matplotlib.image.Bbox"><code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code></a>, shrunk so that it is as large as it can be while having the desired aspect ratio, <em>box_aspect</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.image.BboxBase.splitx.html#matplotlib.image.BboxBase.splitx" title="matplotlib.image.BboxBase.splitx"><code class="xref py py-obj docutils literal"><span class="pre">splitx</span></code></a>(*args)</td>
+<td>e.g., <code class="docutils literal"><span class="pre">bbox.splitx(f1,</span> <span class="pre">f2,</span> <span class="pre">...)</span></code></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.image.BboxBase.splity.html#matplotlib.image.BboxBase.splity" title="matplotlib.image.BboxBase.splity"><code class="xref py py-obj docutils literal"><span class="pre">splity</span></code></a>(*args)</td>
+<td>e.g., <code class="docutils literal"><span class="pre">bbox.splitx(f1,</span> <span class="pre">f2,</span> <span class="pre">...)</span></code></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.image.BboxBase.transformed.html#matplotlib.image.BboxBase.transformed" title="matplotlib.image.BboxBase.transformed"><code class="xref py py-obj docutils literal"><span class="pre">transformed</span></code></a>(transform)</td>
+<td>Return a new <a class="reference internal" href="matplotlib.image.Bbox.html#matplotlib.image.Bbox" title="matplotlib.image.Bbox"><code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code></a> object, statically transformed by the given transform.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.image.BboxBase.translated.html#matplotlib.image.BboxBase.translated" title="matplotlib.image.BboxBase.translated"><code class="xref py py-obj docutils literal"><span class="pre">translated</span></code></a>(tx,&nbsp;ty)</td>
+<td>Return a copy of the <a class="reference internal" href="matplotlib.image.Bbox.html#matplotlib.image.Bbox" title="matplotlib.image.Bbox"><code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code></a>, statically translated by <em>tx</em> and <em>ty</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.image.BboxBase.union.html#matplotlib.image.BboxBase.union" title="matplotlib.image.BboxBase.union"><code class="xref py py-obj docutils literal"><span class="pre">union</span></code></a>(bboxes)</td>
+<td>Return a <a class="reference internal" href="matplotlib.image.Bbox.html#matplotlib.image.Bbox" title="matplotlib.image.Bbox"><code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code></a> that contains all of the given bboxes.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.image.BboxBase.bounds.html" class="btn btn-neutral float-right" title="8.2.3.1. matplotlib.image.BboxBase.bounds" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.image.Bbox.update_from_path.html" class="btn btn-neutral" title="8.2.2.64. matplotlib.image.Bbox.update_from_path" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

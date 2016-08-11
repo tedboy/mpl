@@ -1,0 +1,268 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>matplotlib.widgets.RectangleSelector.__init__ &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">3. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backend_bases.html">4. matplotlib.backend_bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">5. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">6. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">8. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">9. matplotlib.widgets</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>matplotlib.widgets.RectangleSelector.__init__</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.widgets.RectangleSelector.__init__.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-widgets-rectangleselector-init">
+<h1>matplotlib.widgets.RectangleSelector.__init__<a class="headerlink" href="#matplotlib-widgets-rectangleselector-init" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="matplotlib.widgets.RectangleSelector.__init__">
+<code class="descclassname">RectangleSelector.</code><code class="descname">__init__</code><span class="sig-paren">(</span><em>ax</em>, <em>onselect</em>, <em>drawtype=u'box'</em>, <em>minspanx=None</em>, <em>minspany=None</em>, <em>useblit=False</em>, <em>lineprops=None</em>, <em>rectprops=None</em>, <em>spancoords=u'data'</em>, <em>button=None</em>, <em>maxdist=10</em>, <em>marker_props=None</em>, <em>interactive=False</em>, <em>state_modifier_keys=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/widgets.html#RectangleSelector.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.widgets.RectangleSelector.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a selector in <em>ax</em>.  When a selection is made, clear
+the span and call onselect with:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">onselect</span><span class="p">(</span><span class="n">pos_1</span><span class="p">,</span> <span class="n">pos_2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>and clear the drawn box/line. The <code class="docutils literal"><span class="pre">pos_1</span></code> and <code class="docutils literal"><span class="pre">pos_2</span></code> are
+arrays of length 2 containing the x- and y-coordinate.</p>
+<p>If <em>minspanx</em> is not <em>None</em> then events smaller than <em>minspanx</em>
+in x direction are ignored (it&#8217;s the same for y).</p>
+<p>The rectangle is drawn with <em>rectprops</em>; default:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">rectprops</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span>
+                 <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The line is drawn with <em>lineprops</em>; default:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">lineprops</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span>
+                 <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Use <em>drawtype</em> if you want the mouse to draw a line,
+a box or nothing between click and actual position by setting</p>
+<p><code class="docutils literal"><span class="pre">drawtype</span> <span class="pre">=</span> <span class="pre">'line'</span></code>, <code class="docutils literal"><span class="pre">drawtype='box'</span></code> or <code class="docutils literal"><span class="pre">drawtype</span> <span class="pre">=</span> <span class="pre">'none'</span></code>.</p>
+<p><em>spancoords</em> is one of &#8216;data&#8217; or &#8216;pixels&#8217;.  If &#8216;data&#8217;, <em>minspanx</em>
+and <em>minspanx</em> will be interpreted in the same coordinates as
+the x and y axis. If &#8216;pixels&#8217;, they are in pixels.</p>
+<p><em>button</em> is a list of integers indicating which mouse buttons should
+be used for rectangle selection.  You can also specify a single
+integer if only a single button is desired.  Default is <em>None</em>,
+which does not limit which button can be used.</p>
+<dl class="docutils">
+<dt>Note, typically:</dt>
+<dd>1 = left mouse button
+2 = center mouse button (scroll wheel)
+3 = right mouse button</dd>
+</dl>
+<p><em>interactive</em> will draw a set of handles and allow you interact
+with the widget after it is drawn.</p>
+<p><em>state_modifier_keys</em> are keyboard modifiers that affect the behavior
+of the widget.</p>
+<p>The defaults are:
+dict(move=&#8217; &#8216;, clear=&#8217;escape&#8217;, square=&#8217;shift&#8217;, center=&#8217;ctrl&#8217;)</p>
+<p>Keyboard modifiers, which:
+&#8216;move&#8217;: Move the existing shape.
+&#8216;clear&#8217;: Clear the current shape.
+&#8216;square&#8217;: Makes the shape square.
+&#8216;center&#8217;: Make the initial point the center of the shape.
+&#8216;square&#8217; and &#8216;center&#8217; can be combined.</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

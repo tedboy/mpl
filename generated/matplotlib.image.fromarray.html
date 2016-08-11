@@ -1,0 +1,260 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>8.1.3. matplotlib.image.fromarray &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../index.html"/>
+        <link rel="up" title="8. matplotlib.image" href="matplotlib.image.html"/>
+        <link rel="next" title="8.1.4. matplotlib.image.frombuffer" href="matplotlib.image.frombuffer.html"/>
+        <link rel="prev" title="8.1.2. matplotlib.image.from_images" href="matplotlib.image.from_images.html"/> 
+
+  
+  <script src="../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.cm.html">3. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.backend_bases.html">4. matplotlib.backend_bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.patches.html">5. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.cbook.html">6. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="matplotlib.image.html">8. matplotlib.image</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="matplotlib.image.html#functions">8.1. Functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.allow_rasterization.html">8.1.1. matplotlib.image.allow_rasterization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.from_images.html">8.1.2. matplotlib.image.from_images</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">8.1.3. matplotlib.image.fromarray</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.frombuffer.html">8.1.4. matplotlib.image.frombuffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.frombyte.html">8.1.5. matplotlib.image.frombyte</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.imread.html">8.1.6. matplotlib.image.imread</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.imsave.html">8.1.7. matplotlib.image.imsave</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.pcolor.html">8.1.8. matplotlib.image.pcolor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.pcolor2.html">8.1.9. matplotlib.image.pcolor2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.pil_to_array.html">8.1.10. matplotlib.image.pil_to_array</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.thumbnail.html">8.1.11. matplotlib.image.thumbnail</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.urlopen.html">8.1.12. matplotlib.image.urlopen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.urlparse.html">8.1.13. matplotlib.image.urlparse</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="matplotlib.image.html#classes">8.2. Classes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.widgets.html">9. matplotlib.widgets</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../mpl.pyplot.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="matplotlib.image.html">8. matplotlib.image</a> &raquo;</li>
+        
+      <li>8.1.3. matplotlib.image.fromarray</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../sources/generated/matplotlib.image.fromarray.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-image-fromarray">
+<h1>8.1.3. matplotlib.image.fromarray<a class="headerlink" href="#matplotlib-image-fromarray" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="matplotlib.image.fromarray">
+<code class="descclassname">matplotlib.image.</code><code class="descname">fromarray</code><span class="sig-paren">(</span><em>A</em>, <em>isoutput</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.image.fromarray" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the image from a numpy array
+By default this function fills the input buffer, which can subsequently
+be resampled using resize.  If isoutput=1, fill the output buffer.
+This is used to support raw pixel images w/o resampling</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.image.frombuffer.html" class="btn btn-neutral float-right" title="8.1.4. matplotlib.image.frombuffer" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.image.from_images.html" class="btn btn-neutral" title="8.1.2. matplotlib.image.from_images" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../static/jquery.js"></script>
+      <script type="text/javascript" src="../static/underscore.js"></script>
+      <script type="text/javascript" src="../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

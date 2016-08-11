@@ -1,0 +1,719 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5.2.10. matplotlib.patches.FancyArrow &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="5. matplotlib.patches" href="../matplotlib.patches.html"/>
+        <link rel="next" title="5.2.10.1. matplotlib.patches.FancyArrow.axes" href="matplotlib.patches.FancyArrow.axes.html"/>
+        <link rel="prev" title="5.2.9.103. matplotlib.patches.Ellipse.update_from" href="matplotlib.patches.Ellipse.update_from.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">3. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backend_bases.html">4. matplotlib.backend_bases</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.patches.html">5. matplotlib.patches</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.patches.html#functions">5.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.patches.html#classes">5.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Arc.html">5.2.1. matplotlib.patches.Arc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Arrow.html">5.2.2. matplotlib.patches.Arrow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.ArrowStyle.html">5.2.3. matplotlib.patches.ArrowStyle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.BoxStyle.html">5.2.4. matplotlib.patches.BoxStyle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Circle.html">5.2.5. matplotlib.patches.Circle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.CirclePolygon.html">5.2.6. matplotlib.patches.CirclePolygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.ConnectionPatch.html">5.2.7. matplotlib.patches.ConnectionPatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.ConnectionStyle.html">5.2.8. matplotlib.patches.ConnectionStyle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Ellipse.html">5.2.9. matplotlib.patches.Ellipse</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">5.2.10. matplotlib.patches.FancyArrow</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.axes.html">5.2.10.1. matplotlib.patches.FancyArrow.axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.fill.html">5.2.10.2. matplotlib.patches.FancyArrow.fill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.mouseover.html">5.2.10.3. matplotlib.patches.FancyArrow.mouseover</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.stale.html">5.2.10.4. matplotlib.patches.FancyArrow.stale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.xy.html">5.2.10.5. matplotlib.patches.FancyArrow.xy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.add_callback.html">5.2.10.6. matplotlib.patches.FancyArrow.add_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.contains.html">5.2.10.7. matplotlib.patches.FancyArrow.contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.contains_point.html">5.2.10.8. matplotlib.patches.FancyArrow.contains_point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.convert_xunits.html">5.2.10.9. matplotlib.patches.FancyArrow.convert_xunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.convert_yunits.html">5.2.10.10. matplotlib.patches.FancyArrow.convert_yunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.draw.html">5.2.10.11. matplotlib.patches.FancyArrow.draw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.findobj.html">5.2.10.12. matplotlib.patches.FancyArrow.findobj</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.format_cursor_data.html">5.2.10.13. matplotlib.patches.FancyArrow.format_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_aa.html">5.2.10.14. matplotlib.patches.FancyArrow.get_aa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_agg_filter.html">5.2.10.15. matplotlib.patches.FancyArrow.get_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_alpha.html">5.2.10.16. matplotlib.patches.FancyArrow.get_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_animated.html">5.2.10.17. matplotlib.patches.FancyArrow.get_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_antialiased.html">5.2.10.18. matplotlib.patches.FancyArrow.get_antialiased</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_axes.html">5.2.10.19. matplotlib.patches.FancyArrow.get_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_capstyle.html">5.2.10.20. matplotlib.patches.FancyArrow.get_capstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_children.html">5.2.10.21. matplotlib.patches.FancyArrow.get_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_clip_box.html">5.2.10.22. matplotlib.patches.FancyArrow.get_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_clip_on.html">5.2.10.23. matplotlib.patches.FancyArrow.get_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_clip_path.html">5.2.10.24. matplotlib.patches.FancyArrow.get_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_closed.html">5.2.10.25. matplotlib.patches.FancyArrow.get_closed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_contains.html">5.2.10.26. matplotlib.patches.FancyArrow.get_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_cursor_data.html">5.2.10.27. matplotlib.patches.FancyArrow.get_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_data_transform.html">5.2.10.28. matplotlib.patches.FancyArrow.get_data_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_ec.html">5.2.10.29. matplotlib.patches.FancyArrow.get_ec</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_edgecolor.html">5.2.10.30. matplotlib.patches.FancyArrow.get_edgecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_extents.html">5.2.10.31. matplotlib.patches.FancyArrow.get_extents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_facecolor.html">5.2.10.32. matplotlib.patches.FancyArrow.get_facecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_fc.html">5.2.10.33. matplotlib.patches.FancyArrow.get_fc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_figure.html">5.2.10.34. matplotlib.patches.FancyArrow.get_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_fill.html">5.2.10.35. matplotlib.patches.FancyArrow.get_fill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_gid.html">5.2.10.36. matplotlib.patches.FancyArrow.get_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_hatch.html">5.2.10.37. matplotlib.patches.FancyArrow.get_hatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_joinstyle.html">5.2.10.38. matplotlib.patches.FancyArrow.get_joinstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_label.html">5.2.10.39. matplotlib.patches.FancyArrow.get_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_linestyle.html">5.2.10.40. matplotlib.patches.FancyArrow.get_linestyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_linewidth.html">5.2.10.41. matplotlib.patches.FancyArrow.get_linewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_ls.html">5.2.10.42. matplotlib.patches.FancyArrow.get_ls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_lw.html">5.2.10.43. matplotlib.patches.FancyArrow.get_lw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_patch_transform.html">5.2.10.44. matplotlib.patches.FancyArrow.get_patch_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_path.html">5.2.10.45. matplotlib.patches.FancyArrow.get_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_path_effects.html">5.2.10.46. matplotlib.patches.FancyArrow.get_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_picker.html">5.2.10.47. matplotlib.patches.FancyArrow.get_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_rasterized.html">5.2.10.48. matplotlib.patches.FancyArrow.get_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_sketch_params.html">5.2.10.49. matplotlib.patches.FancyArrow.get_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_snap.html">5.2.10.50. matplotlib.patches.FancyArrow.get_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_transform.html">5.2.10.51. matplotlib.patches.FancyArrow.get_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_transformed_clip_path_and_affine.html">5.2.10.52. matplotlib.patches.FancyArrow.get_transformed_clip_path_and_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_url.html">5.2.10.53. matplotlib.patches.FancyArrow.get_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_verts.html">5.2.10.54. matplotlib.patches.FancyArrow.get_verts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_visible.html">5.2.10.55. matplotlib.patches.FancyArrow.get_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_window_extent.html">5.2.10.56. matplotlib.patches.FancyArrow.get_window_extent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_xy.html">5.2.10.57. matplotlib.patches.FancyArrow.get_xy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_zorder.html">5.2.10.58. matplotlib.patches.FancyArrow.get_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.have_units.html">5.2.10.59. matplotlib.patches.FancyArrow.have_units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.hitlist.html">5.2.10.60. matplotlib.patches.FancyArrow.hitlist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.is_figure_set.html">5.2.10.61. matplotlib.patches.FancyArrow.is_figure_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.is_transform_set.html">5.2.10.62. matplotlib.patches.FancyArrow.is_transform_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.pchanged.html">5.2.10.63. matplotlib.patches.FancyArrow.pchanged</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.pick.html">5.2.10.64. matplotlib.patches.FancyArrow.pick</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.pickable.html">5.2.10.65. matplotlib.patches.FancyArrow.pickable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.properties.html">5.2.10.66. matplotlib.patches.FancyArrow.properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.remove.html">5.2.10.67. matplotlib.patches.FancyArrow.remove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.remove_callback.html">5.2.10.68. matplotlib.patches.FancyArrow.remove_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set.html">5.2.10.69. matplotlib.patches.FancyArrow.set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_aa.html">5.2.10.70. matplotlib.patches.FancyArrow.set_aa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_agg_filter.html">5.2.10.71. matplotlib.patches.FancyArrow.set_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_alpha.html">5.2.10.72. matplotlib.patches.FancyArrow.set_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_animated.html">5.2.10.73. matplotlib.patches.FancyArrow.set_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_antialiased.html">5.2.10.74. matplotlib.patches.FancyArrow.set_antialiased</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_axes.html">5.2.10.75. matplotlib.patches.FancyArrow.set_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_capstyle.html">5.2.10.76. matplotlib.patches.FancyArrow.set_capstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_clip_box.html">5.2.10.77. matplotlib.patches.FancyArrow.set_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_clip_on.html">5.2.10.78. matplotlib.patches.FancyArrow.set_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_clip_path.html">5.2.10.79. matplotlib.patches.FancyArrow.set_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_closed.html">5.2.10.80. matplotlib.patches.FancyArrow.set_closed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_color.html">5.2.10.81. matplotlib.patches.FancyArrow.set_color</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_contains.html">5.2.10.82. matplotlib.patches.FancyArrow.set_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_ec.html">5.2.10.83. matplotlib.patches.FancyArrow.set_ec</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_edgecolor.html">5.2.10.84. matplotlib.patches.FancyArrow.set_edgecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_facecolor.html">5.2.10.85. matplotlib.patches.FancyArrow.set_facecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_fc.html">5.2.10.86. matplotlib.patches.FancyArrow.set_fc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_figure.html">5.2.10.87. matplotlib.patches.FancyArrow.set_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_fill.html">5.2.10.88. matplotlib.patches.FancyArrow.set_fill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_gid.html">5.2.10.89. matplotlib.patches.FancyArrow.set_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_hatch.html">5.2.10.90. matplotlib.patches.FancyArrow.set_hatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_joinstyle.html">5.2.10.91. matplotlib.patches.FancyArrow.set_joinstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_label.html">5.2.10.92. matplotlib.patches.FancyArrow.set_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_linestyle.html">5.2.10.93. matplotlib.patches.FancyArrow.set_linestyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_linewidth.html">5.2.10.94. matplotlib.patches.FancyArrow.set_linewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_ls.html">5.2.10.95. matplotlib.patches.FancyArrow.set_ls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_lw.html">5.2.10.96. matplotlib.patches.FancyArrow.set_lw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_path_effects.html">5.2.10.97. matplotlib.patches.FancyArrow.set_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_picker.html">5.2.10.98. matplotlib.patches.FancyArrow.set_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_rasterized.html">5.2.10.99. matplotlib.patches.FancyArrow.set_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_sketch_params.html">5.2.10.100. matplotlib.patches.FancyArrow.set_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_snap.html">5.2.10.101. matplotlib.patches.FancyArrow.set_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_transform.html">5.2.10.102. matplotlib.patches.FancyArrow.set_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_url.html">5.2.10.103. matplotlib.patches.FancyArrow.set_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_visible.html">5.2.10.104. matplotlib.patches.FancyArrow.set_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_xy.html">5.2.10.105. matplotlib.patches.FancyArrow.set_xy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_zorder.html">5.2.10.106. matplotlib.patches.FancyArrow.set_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.update.html">5.2.10.107. matplotlib.patches.FancyArrow.update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.update_from.html">5.2.10.108. matplotlib.patches.FancyArrow.update_from</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.FancyArrowPatch.html">5.2.11. matplotlib.patches.FancyArrowPatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.FancyBboxPatch.html">5.2.12. matplotlib.patches.FancyBboxPatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Patch.html">5.2.13. matplotlib.patches.Patch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Path.html">5.2.14. matplotlib.patches.Path</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.PathPatch.html">5.2.15. matplotlib.patches.PathPatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Polygon.html">5.2.16. matplotlib.patches.Polygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Rectangle.html">5.2.17. matplotlib.patches.Rectangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.RegularPolygon.html">5.2.18. matplotlib.patches.RegularPolygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Shadow.html">5.2.19. matplotlib.patches.Shadow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Wedge.html">5.2.20. matplotlib.patches.Wedge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.YAArrow.html">5.2.21. matplotlib.patches.YAArrow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.map.html">5.2.22. matplotlib.patches.map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.zip.html">5.2.23. matplotlib.patches.zip</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">6. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">8. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">9. matplotlib.widgets</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../mpl.pyplot.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.patches.html">5. matplotlib.patches</a> &raquo;</li>
+        
+      <li>5.2.10. matplotlib.patches.FancyArrow</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.patches.FancyArrow.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-patches-fancyarrow">
+<h1>5.2.10. matplotlib.patches.FancyArrow<a class="headerlink" href="#matplotlib-patches-fancyarrow" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="matplotlib.patches.FancyArrow">
+<em class="property">class </em><code class="descclassname">matplotlib.patches.</code><code class="descname">FancyArrow</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>dx</em>, <em>dy</em>, <em>width=0.001</em>, <em>length_includes_head=False</em>, <em>head_width=None</em>, <em>head_length=None</em>, <em>shape=u'full'</em>, <em>overhang=0</em>, <em>head_starts_at_zero=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/patches.html#FancyArrow"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.patches.FancyArrow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Like Arrow, but lets you set head width and head height independently.</p>
+<p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.axes.html#matplotlib.patches.FancyArrow.axes" title="matplotlib.patches.FancyArrow.axes"><code class="xref py py-obj docutils literal"><span class="pre">axes</span></code></a></td>
+<td>The <code class="xref py py-class docutils literal"><span class="pre">Axes</span></code> instance the artist resides in, or <em>None</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.fill.html#matplotlib.patches.FancyArrow.fill" title="matplotlib.patches.FancyArrow.fill"><code class="xref py py-obj docutils literal"><span class="pre">fill</span></code></a></td>
+<td>return whether fill is set</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.mouseover.html#matplotlib.patches.FancyArrow.mouseover" title="matplotlib.patches.FancyArrow.mouseover"><code class="xref py py-obj docutils literal"><span class="pre">mouseover</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.stale.html#matplotlib.patches.FancyArrow.stale" title="matplotlib.patches.FancyArrow.stale"><code class="xref py py-obj docutils literal"><span class="pre">stale</span></code></a></td>
+<td>If the artist is &#8216;stale&#8217; and needs to be re-drawn for the output to match the internal state of the artist.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.xy.html#matplotlib.patches.FancyArrow.xy" title="matplotlib.patches.FancyArrow.xy"><code class="xref py py-obj docutils literal"><span class="pre">xy</span></code></a></td>
+<td>Set/get the vertices of the polygon.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.add_callback.html#matplotlib.patches.FancyArrow.add_callback" title="matplotlib.patches.FancyArrow.add_callback"><code class="xref py py-obj docutils literal"><span class="pre">add_callback</span></code></a>(func)</td>
+<td>Adds a callback function that will be called whenever one of the <code class="xref py py-class docutils literal"><span class="pre">Artist</span></code>&#8216;s properties changes.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.contains.html#matplotlib.patches.FancyArrow.contains" title="matplotlib.patches.FancyArrow.contains"><code class="xref py py-obj docutils literal"><span class="pre">contains</span></code></a>(mouseevent[,&nbsp;radius])</td>
+<td>Test whether the mouse event occurred in the patch.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.contains_point.html#matplotlib.patches.FancyArrow.contains_point" title="matplotlib.patches.FancyArrow.contains_point"><code class="xref py py-obj docutils literal"><span class="pre">contains_point</span></code></a>(point[,&nbsp;radius])</td>
+<td>Returns <em>True</em> if the given point is inside the path (transformed with its transform attribute).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.convert_xunits.html#matplotlib.patches.FancyArrow.convert_xunits" title="matplotlib.patches.FancyArrow.convert_xunits"><code class="xref py py-obj docutils literal"><span class="pre">convert_xunits</span></code></a>(x)</td>
+<td>For artists in an axes, if the xaxis has units support,</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.convert_yunits.html#matplotlib.patches.FancyArrow.convert_yunits" title="matplotlib.patches.FancyArrow.convert_yunits"><code class="xref py py-obj docutils literal"><span class="pre">convert_yunits</span></code></a>(y)</td>
+<td>For artists in an axes, if the yaxis has units support,</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.draw.html#matplotlib.patches.FancyArrow.draw" title="matplotlib.patches.FancyArrow.draw"><code class="xref py py-obj docutils literal"><span class="pre">draw</span></code></a>(artist,&nbsp;renderer,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Draw the <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a> to the given <em>renderer</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.findobj.html#matplotlib.patches.FancyArrow.findobj" title="matplotlib.patches.FancyArrow.findobj"><code class="xref py py-obj docutils literal"><span class="pre">findobj</span></code></a>([match,&nbsp;include_self])</td>
+<td>Find artist objects.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.format_cursor_data.html#matplotlib.patches.FancyArrow.format_cursor_data" title="matplotlib.patches.FancyArrow.format_cursor_data"><code class="xref py py-obj docutils literal"><span class="pre">format_cursor_data</span></code></a>(data)</td>
+<td>Return <em>cursor data</em> string formatted.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_aa.html#matplotlib.patches.FancyArrow.get_aa" title="matplotlib.patches.FancyArrow.get_aa"><code class="xref py py-obj docutils literal"><span class="pre">get_aa</span></code></a>()</td>
+<td>Returns True if the <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a> is to be drawn with antialiasing.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_agg_filter.html#matplotlib.patches.FancyArrow.get_agg_filter" title="matplotlib.patches.FancyArrow.get_agg_filter"><code class="xref py py-obj docutils literal"><span class="pre">get_agg_filter</span></code></a>()</td>
+<td>return filter function to be used for agg filter</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_alpha.html#matplotlib.patches.FancyArrow.get_alpha" title="matplotlib.patches.FancyArrow.get_alpha"><code class="xref py py-obj docutils literal"><span class="pre">get_alpha</span></code></a>()</td>
+<td>Return the alpha value used for blending - not supported on all</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_animated.html#matplotlib.patches.FancyArrow.get_animated" title="matplotlib.patches.FancyArrow.get_animated"><code class="xref py py-obj docutils literal"><span class="pre">get_animated</span></code></a>()</td>
+<td>Return the artist&#8217;s animated state</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_antialiased.html#matplotlib.patches.FancyArrow.get_antialiased" title="matplotlib.patches.FancyArrow.get_antialiased"><code class="xref py py-obj docutils literal"><span class="pre">get_antialiased</span></code></a>()</td>
+<td>Returns True if the <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a> is to be drawn with antialiasing.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_axes.html#matplotlib.patches.FancyArrow.get_axes" title="matplotlib.patches.FancyArrow.get_axes"><code class="xref py py-obj docutils literal"><span class="pre">get_axes</span></code></a>()</td>
+<td>Return the <code class="xref py py-class docutils literal"><span class="pre">Axes</span></code> instance the artist resides in, or <em>None</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_capstyle.html#matplotlib.patches.FancyArrow.get_capstyle" title="matplotlib.patches.FancyArrow.get_capstyle"><code class="xref py py-obj docutils literal"><span class="pre">get_capstyle</span></code></a>()</td>
+<td>Return the current capstyle</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_children.html#matplotlib.patches.FancyArrow.get_children" title="matplotlib.patches.FancyArrow.get_children"><code class="xref py py-obj docutils literal"><span class="pre">get_children</span></code></a>()</td>
+<td>Return a list of the child <code class="xref py py-class docutils literal"><span class="pre">Artist`s</span> <span class="pre">this</span> <span class="pre">:class:`Artist</span></code> contains.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_clip_box.html#matplotlib.patches.FancyArrow.get_clip_box" title="matplotlib.patches.FancyArrow.get_clip_box"><code class="xref py py-obj docutils literal"><span class="pre">get_clip_box</span></code></a>()</td>
+<td>Return artist clipbox</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_clip_on.html#matplotlib.patches.FancyArrow.get_clip_on" title="matplotlib.patches.FancyArrow.get_clip_on"><code class="xref py py-obj docutils literal"><span class="pre">get_clip_on</span></code></a>()</td>
+<td>Return whether artist uses clipping</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_clip_path.html#matplotlib.patches.FancyArrow.get_clip_path" title="matplotlib.patches.FancyArrow.get_clip_path"><code class="xref py py-obj docutils literal"><span class="pre">get_clip_path</span></code></a>()</td>
+<td>Return artist clip path</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_closed.html#matplotlib.patches.FancyArrow.get_closed" title="matplotlib.patches.FancyArrow.get_closed"><code class="xref py py-obj docutils literal"><span class="pre">get_closed</span></code></a>()</td>
+<td>Returns if the polygon is closed</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_contains.html#matplotlib.patches.FancyArrow.get_contains" title="matplotlib.patches.FancyArrow.get_contains"><code class="xref py py-obj docutils literal"><span class="pre">get_contains</span></code></a>()</td>
+<td>Return the _contains test used by the artist, or <em>None</em> for default.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_cursor_data.html#matplotlib.patches.FancyArrow.get_cursor_data" title="matplotlib.patches.FancyArrow.get_cursor_data"><code class="xref py py-obj docutils literal"><span class="pre">get_cursor_data</span></code></a>(event)</td>
+<td>Get the cursor data for a given event.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_data_transform.html#matplotlib.patches.FancyArrow.get_data_transform" title="matplotlib.patches.FancyArrow.get_data_transform"><code class="xref py py-obj docutils literal"><span class="pre">get_data_transform</span></code></a>()</td>
+<td>Return the <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code> instance which maps data coordinates to physical coordinates.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_ec.html#matplotlib.patches.FancyArrow.get_ec" title="matplotlib.patches.FancyArrow.get_ec"><code class="xref py py-obj docutils literal"><span class="pre">get_ec</span></code></a>()</td>
+<td>Return the edge color of the <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_edgecolor.html#matplotlib.patches.FancyArrow.get_edgecolor" title="matplotlib.patches.FancyArrow.get_edgecolor"><code class="xref py py-obj docutils literal"><span class="pre">get_edgecolor</span></code></a>()</td>
+<td>Return the edge color of the <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_extents.html#matplotlib.patches.FancyArrow.get_extents" title="matplotlib.patches.FancyArrow.get_extents"><code class="xref py py-obj docutils literal"><span class="pre">get_extents</span></code></a>()</td>
+<td>Return a <code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code> object defining the axis-aligned extents of the <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_facecolor.html#matplotlib.patches.FancyArrow.get_facecolor" title="matplotlib.patches.FancyArrow.get_facecolor"><code class="xref py py-obj docutils literal"><span class="pre">get_facecolor</span></code></a>()</td>
+<td>Return the face color of the <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_fc.html#matplotlib.patches.FancyArrow.get_fc" title="matplotlib.patches.FancyArrow.get_fc"><code class="xref py py-obj docutils literal"><span class="pre">get_fc</span></code></a>()</td>
+<td>Return the face color of the <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_figure.html#matplotlib.patches.FancyArrow.get_figure" title="matplotlib.patches.FancyArrow.get_figure"><code class="xref py py-obj docutils literal"><span class="pre">get_figure</span></code></a>()</td>
+<td>Return the <code class="xref py py-class docutils literal"><span class="pre">Figure</span></code> instance the artist belongs to.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_fill.html#matplotlib.patches.FancyArrow.get_fill" title="matplotlib.patches.FancyArrow.get_fill"><code class="xref py py-obj docutils literal"><span class="pre">get_fill</span></code></a>()</td>
+<td>return whether fill is set</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_gid.html#matplotlib.patches.FancyArrow.get_gid" title="matplotlib.patches.FancyArrow.get_gid"><code class="xref py py-obj docutils literal"><span class="pre">get_gid</span></code></a>()</td>
+<td>Returns the group id</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_hatch.html#matplotlib.patches.FancyArrow.get_hatch" title="matplotlib.patches.FancyArrow.get_hatch"><code class="xref py py-obj docutils literal"><span class="pre">get_hatch</span></code></a>()</td>
+<td>Return the current hatching pattern</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_joinstyle.html#matplotlib.patches.FancyArrow.get_joinstyle" title="matplotlib.patches.FancyArrow.get_joinstyle"><code class="xref py py-obj docutils literal"><span class="pre">get_joinstyle</span></code></a>()</td>
+<td>Return the current joinstyle</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_label.html#matplotlib.patches.FancyArrow.get_label" title="matplotlib.patches.FancyArrow.get_label"><code class="xref py py-obj docutils literal"><span class="pre">get_label</span></code></a>()</td>
+<td>Get the label used for this artist in the legend.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_linestyle.html#matplotlib.patches.FancyArrow.get_linestyle" title="matplotlib.patches.FancyArrow.get_linestyle"><code class="xref py py-obj docutils literal"><span class="pre">get_linestyle</span></code></a>()</td>
+<td>Return the linestyle.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_linewidth.html#matplotlib.patches.FancyArrow.get_linewidth" title="matplotlib.patches.FancyArrow.get_linewidth"><code class="xref py py-obj docutils literal"><span class="pre">get_linewidth</span></code></a>()</td>
+<td>Return the line width in points.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_ls.html#matplotlib.patches.FancyArrow.get_ls" title="matplotlib.patches.FancyArrow.get_ls"><code class="xref py py-obj docutils literal"><span class="pre">get_ls</span></code></a>()</td>
+<td>Return the linestyle.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_lw.html#matplotlib.patches.FancyArrow.get_lw" title="matplotlib.patches.FancyArrow.get_lw"><code class="xref py py-obj docutils literal"><span class="pre">get_lw</span></code></a>()</td>
+<td>Return the line width in points.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_patch_transform.html#matplotlib.patches.FancyArrow.get_patch_transform" title="matplotlib.patches.FancyArrow.get_patch_transform"><code class="xref py py-obj docutils literal"><span class="pre">get_patch_transform</span></code></a>()</td>
+<td>Return the <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code> instance which takes patch coordinates to data coordinates.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_path.html#matplotlib.patches.FancyArrow.get_path" title="matplotlib.patches.FancyArrow.get_path"><code class="xref py py-obj docutils literal"><span class="pre">get_path</span></code></a>()</td>
+<td>Get the path of the polygon</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_path_effects.html#matplotlib.patches.FancyArrow.get_path_effects" title="matplotlib.patches.FancyArrow.get_path_effects"><code class="xref py py-obj docutils literal"><span class="pre">get_path_effects</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_picker.html#matplotlib.patches.FancyArrow.get_picker" title="matplotlib.patches.FancyArrow.get_picker"><code class="xref py py-obj docutils literal"><span class="pre">get_picker</span></code></a>()</td>
+<td>Return the picker object used by this artist</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_rasterized.html#matplotlib.patches.FancyArrow.get_rasterized" title="matplotlib.patches.FancyArrow.get_rasterized"><code class="xref py py-obj docutils literal"><span class="pre">get_rasterized</span></code></a>()</td>
+<td>return True if the artist is to be rasterized</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_sketch_params.html#matplotlib.patches.FancyArrow.get_sketch_params" title="matplotlib.patches.FancyArrow.get_sketch_params"><code class="xref py py-obj docutils literal"><span class="pre">get_sketch_params</span></code></a>()</td>
+<td>Returns the sketch parameters for the artist.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_snap.html#matplotlib.patches.FancyArrow.get_snap" title="matplotlib.patches.FancyArrow.get_snap"><code class="xref py py-obj docutils literal"><span class="pre">get_snap</span></code></a>()</td>
+<td>Returns the snap setting which may be:</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_transform.html#matplotlib.patches.FancyArrow.get_transform" title="matplotlib.patches.FancyArrow.get_transform"><code class="xref py py-obj docutils literal"><span class="pre">get_transform</span></code></a>()</td>
+<td>Return the <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code> applied to the <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_transformed_clip_path_and_affine.html#matplotlib.patches.FancyArrow.get_transformed_clip_path_and_affine" title="matplotlib.patches.FancyArrow.get_transformed_clip_path_and_affine"><code class="xref py py-obj docutils literal"><span class="pre">get_transformed_clip_path_and_affine</span></code></a>()</td>
+<td>Return the clip path with the non-affine part of its transformation applied, and the remaining affine part of its transformation.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_url.html#matplotlib.patches.FancyArrow.get_url" title="matplotlib.patches.FancyArrow.get_url"><code class="xref py py-obj docutils literal"><span class="pre">get_url</span></code></a>()</td>
+<td>Returns the url</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_verts.html#matplotlib.patches.FancyArrow.get_verts" title="matplotlib.patches.FancyArrow.get_verts"><code class="xref py py-obj docutils literal"><span class="pre">get_verts</span></code></a>()</td>
+<td>Return a copy of the vertices used in this patch</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_visible.html#matplotlib.patches.FancyArrow.get_visible" title="matplotlib.patches.FancyArrow.get_visible"><code class="xref py py-obj docutils literal"><span class="pre">get_visible</span></code></a>()</td>
+<td>Return the artist&#8217;s visiblity</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_window_extent.html#matplotlib.patches.FancyArrow.get_window_extent" title="matplotlib.patches.FancyArrow.get_window_extent"><code class="xref py py-obj docutils literal"><span class="pre">get_window_extent</span></code></a>([renderer])</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_xy.html#matplotlib.patches.FancyArrow.get_xy" title="matplotlib.patches.FancyArrow.get_xy"><code class="xref py py-obj docutils literal"><span class="pre">get_xy</span></code></a>()</td>
+<td>Get the vertices of the path</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.get_zorder.html#matplotlib.patches.FancyArrow.get_zorder" title="matplotlib.patches.FancyArrow.get_zorder"><code class="xref py py-obj docutils literal"><span class="pre">get_zorder</span></code></a>()</td>
+<td>Return the <code class="xref py py-class docutils literal"><span class="pre">Artist</span></code>&#8216;s zorder.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.have_units.html#matplotlib.patches.FancyArrow.have_units" title="matplotlib.patches.FancyArrow.have_units"><code class="xref py py-obj docutils literal"><span class="pre">have_units</span></code></a>()</td>
+<td>Return <em>True</em> if units are set on the <em>x</em> or <em>y</em> axes</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.hitlist.html#matplotlib.patches.FancyArrow.hitlist" title="matplotlib.patches.FancyArrow.hitlist"><code class="xref py py-obj docutils literal"><span class="pre">hitlist</span></code></a>(event)</td>
+<td>List the children of the artist which contain the mouse event <em>event</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.is_figure_set.html#matplotlib.patches.FancyArrow.is_figure_set" title="matplotlib.patches.FancyArrow.is_figure_set"><code class="xref py py-obj docutils literal"><span class="pre">is_figure_set</span></code></a>()</td>
+<td>Returns True if the artist is assigned to a <code class="xref py py-class docutils literal"><span class="pre">Figure</span></code>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.is_transform_set.html#matplotlib.patches.FancyArrow.is_transform_set" title="matplotlib.patches.FancyArrow.is_transform_set"><code class="xref py py-obj docutils literal"><span class="pre">is_transform_set</span></code></a>()</td>
+<td>Returns <em>True</em> if <code class="xref py py-class docutils literal"><span class="pre">Artist</span></code> has a transform explicitly set.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.pchanged.html#matplotlib.patches.FancyArrow.pchanged" title="matplotlib.patches.FancyArrow.pchanged"><code class="xref py py-obj docutils literal"><span class="pre">pchanged</span></code></a>()</td>
+<td>Fire an event when property changed, calling all of the registered callbacks.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.pick.html#matplotlib.patches.FancyArrow.pick" title="matplotlib.patches.FancyArrow.pick"><code class="xref py py-obj docutils literal"><span class="pre">pick</span></code></a>(mouseevent)</td>
+<td>call signature:</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.pickable.html#matplotlib.patches.FancyArrow.pickable" title="matplotlib.patches.FancyArrow.pickable"><code class="xref py py-obj docutils literal"><span class="pre">pickable</span></code></a>()</td>
+<td>Return <em>True</em> if <code class="xref py py-class docutils literal"><span class="pre">Artist</span></code> is pickable.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.properties.html#matplotlib.patches.FancyArrow.properties" title="matplotlib.patches.FancyArrow.properties"><code class="xref py py-obj docutils literal"><span class="pre">properties</span></code></a>()</td>
+<td>return a dictionary mapping property name -&gt; value for all Artist props</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.remove.html#matplotlib.patches.FancyArrow.remove" title="matplotlib.patches.FancyArrow.remove"><code class="xref py py-obj docutils literal"><span class="pre">remove</span></code></a>()</td>
+<td>Remove the artist from the figure if possible.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.remove_callback.html#matplotlib.patches.FancyArrow.remove_callback" title="matplotlib.patches.FancyArrow.remove_callback"><code class="xref py py-obj docutils literal"><span class="pre">remove_callback</span></code></a>(oid)</td>
+<td>Remove a callback based on its <em>id</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set.html#matplotlib.patches.FancyArrow.set" title="matplotlib.patches.FancyArrow.set"><code class="xref py py-obj docutils literal"><span class="pre">set</span></code></a>(**kwargs)</td>
+<td>A property batch setter.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set_aa.html#matplotlib.patches.FancyArrow.set_aa" title="matplotlib.patches.FancyArrow.set_aa"><code class="xref py py-obj docutils literal"><span class="pre">set_aa</span></code></a>(aa)</td>
+<td>alias for set_antialiased</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set_agg_filter.html#matplotlib.patches.FancyArrow.set_agg_filter" title="matplotlib.patches.FancyArrow.set_agg_filter"><code class="xref py py-obj docutils literal"><span class="pre">set_agg_filter</span></code></a>(filter_func)</td>
+<td>set agg_filter fuction.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set_alpha.html#matplotlib.patches.FancyArrow.set_alpha" title="matplotlib.patches.FancyArrow.set_alpha"><code class="xref py py-obj docutils literal"><span class="pre">set_alpha</span></code></a>(alpha)</td>
+<td>Set the alpha tranparency of the patch.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set_animated.html#matplotlib.patches.FancyArrow.set_animated" title="matplotlib.patches.FancyArrow.set_animated"><code class="xref py py-obj docutils literal"><span class="pre">set_animated</span></code></a>(b)</td>
+<td>Set the artist&#8217;s animation state.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set_antialiased.html#matplotlib.patches.FancyArrow.set_antialiased" title="matplotlib.patches.FancyArrow.set_antialiased"><code class="xref py py-obj docutils literal"><span class="pre">set_antialiased</span></code></a>(aa)</td>
+<td>Set whether to use antialiased rendering</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set_axes.html#matplotlib.patches.FancyArrow.set_axes" title="matplotlib.patches.FancyArrow.set_axes"><code class="xref py py-obj docutils literal"><span class="pre">set_axes</span></code></a>(axes)</td>
+<td>Set the <code class="xref py py-class docutils literal"><span class="pre">Axes</span></code> instance in which the artist resides, if any.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set_capstyle.html#matplotlib.patches.FancyArrow.set_capstyle" title="matplotlib.patches.FancyArrow.set_capstyle"><code class="xref py py-obj docutils literal"><span class="pre">set_capstyle</span></code></a>(s)</td>
+<td>Set the patch capstyle</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set_clip_box.html#matplotlib.patches.FancyArrow.set_clip_box" title="matplotlib.patches.FancyArrow.set_clip_box"><code class="xref py py-obj docutils literal"><span class="pre">set_clip_box</span></code></a>(clipbox)</td>
+<td>Set the artist&#8217;s clip <code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set_clip_on.html#matplotlib.patches.FancyArrow.set_clip_on" title="matplotlib.patches.FancyArrow.set_clip_on"><code class="xref py py-obj docutils literal"><span class="pre">set_clip_on</span></code></a>(b)</td>
+<td>Set whether artist uses clipping.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set_clip_path.html#matplotlib.patches.FancyArrow.set_clip_path" title="matplotlib.patches.FancyArrow.set_clip_path"><code class="xref py py-obj docutils literal"><span class="pre">set_clip_path</span></code></a>(path[,&nbsp;transform])</td>
+<td>Set the artist&#8217;s clip path, which may be:</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set_closed.html#matplotlib.patches.FancyArrow.set_closed" title="matplotlib.patches.FancyArrow.set_closed"><code class="xref py py-obj docutils literal"><span class="pre">set_closed</span></code></a>(closed)</td>
+<td>Set if the polygon is closed</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set_color.html#matplotlib.patches.FancyArrow.set_color" title="matplotlib.patches.FancyArrow.set_color"><code class="xref py py-obj docutils literal"><span class="pre">set_color</span></code></a>(c)</td>
+<td>Set both the edgecolor and the facecolor.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set_contains.html#matplotlib.patches.FancyArrow.set_contains" title="matplotlib.patches.FancyArrow.set_contains"><code class="xref py py-obj docutils literal"><span class="pre">set_contains</span></code></a>(picker)</td>
+<td>Replace the contains test used by this artist.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set_ec.html#matplotlib.patches.FancyArrow.set_ec" title="matplotlib.patches.FancyArrow.set_ec"><code class="xref py py-obj docutils literal"><span class="pre">set_ec</span></code></a>(color)</td>
+<td>alias for set_edgecolor</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set_edgecolor.html#matplotlib.patches.FancyArrow.set_edgecolor" title="matplotlib.patches.FancyArrow.set_edgecolor"><code class="xref py py-obj docutils literal"><span class="pre">set_edgecolor</span></code></a>(color)</td>
+<td>Set the patch edge color</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set_facecolor.html#matplotlib.patches.FancyArrow.set_facecolor" title="matplotlib.patches.FancyArrow.set_facecolor"><code class="xref py py-obj docutils literal"><span class="pre">set_facecolor</span></code></a>(color)</td>
+<td>Set the patch face color</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set_fc.html#matplotlib.patches.FancyArrow.set_fc" title="matplotlib.patches.FancyArrow.set_fc"><code class="xref py py-obj docutils literal"><span class="pre">set_fc</span></code></a>(color)</td>
+<td>alias for set_facecolor</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set_figure.html#matplotlib.patches.FancyArrow.set_figure" title="matplotlib.patches.FancyArrow.set_figure"><code class="xref py py-obj docutils literal"><span class="pre">set_figure</span></code></a>(fig)</td>
+<td>Set the <code class="xref py py-class docutils literal"><span class="pre">Figure</span></code> instance the artist belongs to.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set_fill.html#matplotlib.patches.FancyArrow.set_fill" title="matplotlib.patches.FancyArrow.set_fill"><code class="xref py py-obj docutils literal"><span class="pre">set_fill</span></code></a>(b)</td>
+<td>Set whether to fill the patch</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set_gid.html#matplotlib.patches.FancyArrow.set_gid" title="matplotlib.patches.FancyArrow.set_gid"><code class="xref py py-obj docutils literal"><span class="pre">set_gid</span></code></a>(gid)</td>
+<td>Sets the (group) id for the artist</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set_hatch.html#matplotlib.patches.FancyArrow.set_hatch" title="matplotlib.patches.FancyArrow.set_hatch"><code class="xref py py-obj docutils literal"><span class="pre">set_hatch</span></code></a>(hatch)</td>
+<td>Set the hatching pattern</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set_joinstyle.html#matplotlib.patches.FancyArrow.set_joinstyle" title="matplotlib.patches.FancyArrow.set_joinstyle"><code class="xref py py-obj docutils literal"><span class="pre">set_joinstyle</span></code></a>(s)</td>
+<td>Set the patch joinstyle</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set_label.html#matplotlib.patches.FancyArrow.set_label" title="matplotlib.patches.FancyArrow.set_label"><code class="xref py py-obj docutils literal"><span class="pre">set_label</span></code></a>(s)</td>
+<td>Set the label to <em>s</em> for auto legend.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set_linestyle.html#matplotlib.patches.FancyArrow.set_linestyle" title="matplotlib.patches.FancyArrow.set_linestyle"><code class="xref py py-obj docutils literal"><span class="pre">set_linestyle</span></code></a>(ls)</td>
+<td>Set the patch linestyle</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set_linewidth.html#matplotlib.patches.FancyArrow.set_linewidth" title="matplotlib.patches.FancyArrow.set_linewidth"><code class="xref py py-obj docutils literal"><span class="pre">set_linewidth</span></code></a>(w)</td>
+<td>Set the patch linewidth in points</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set_ls.html#matplotlib.patches.FancyArrow.set_ls" title="matplotlib.patches.FancyArrow.set_ls"><code class="xref py py-obj docutils literal"><span class="pre">set_ls</span></code></a>(ls)</td>
+<td>alias for set_linestyle</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set_lw.html#matplotlib.patches.FancyArrow.set_lw" title="matplotlib.patches.FancyArrow.set_lw"><code class="xref py py-obj docutils literal"><span class="pre">set_lw</span></code></a>(lw)</td>
+<td>alias for set_linewidth</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set_path_effects.html#matplotlib.patches.FancyArrow.set_path_effects" title="matplotlib.patches.FancyArrow.set_path_effects"><code class="xref py py-obj docutils literal"><span class="pre">set_path_effects</span></code></a>(path_effects)</td>
+<td>set path_effects, which should be a list of instances of</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set_picker.html#matplotlib.patches.FancyArrow.set_picker" title="matplotlib.patches.FancyArrow.set_picker"><code class="xref py py-obj docutils literal"><span class="pre">set_picker</span></code></a>(picker)</td>
+<td>Set the epsilon for picking used by this artist</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set_rasterized.html#matplotlib.patches.FancyArrow.set_rasterized" title="matplotlib.patches.FancyArrow.set_rasterized"><code class="xref py py-obj docutils literal"><span class="pre">set_rasterized</span></code></a>(rasterized)</td>
+<td>Force rasterized (bitmap) drawing in vector backend output.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set_sketch_params.html#matplotlib.patches.FancyArrow.set_sketch_params" title="matplotlib.patches.FancyArrow.set_sketch_params"><code class="xref py py-obj docutils literal"><span class="pre">set_sketch_params</span></code></a>([scale,&nbsp;length,&nbsp;randomness])</td>
+<td>Sets the sketch parameters.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set_snap.html#matplotlib.patches.FancyArrow.set_snap" title="matplotlib.patches.FancyArrow.set_snap"><code class="xref py py-obj docutils literal"><span class="pre">set_snap</span></code></a>(snap)</td>
+<td>Sets the snap setting which may be:</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set_transform.html#matplotlib.patches.FancyArrow.set_transform" title="matplotlib.patches.FancyArrow.set_transform"><code class="xref py py-obj docutils literal"><span class="pre">set_transform</span></code></a>(t)</td>
+<td>Set the <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code> instance used by this artist.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set_url.html#matplotlib.patches.FancyArrow.set_url" title="matplotlib.patches.FancyArrow.set_url"><code class="xref py py-obj docutils literal"><span class="pre">set_url</span></code></a>(url)</td>
+<td>Sets the url for the artist</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set_visible.html#matplotlib.patches.FancyArrow.set_visible" title="matplotlib.patches.FancyArrow.set_visible"><code class="xref py py-obj docutils literal"><span class="pre">set_visible</span></code></a>(b)</td>
+<td>Set the artist&#8217;s visiblity.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set_xy.html#matplotlib.patches.FancyArrow.set_xy" title="matplotlib.patches.FancyArrow.set_xy"><code class="xref py py-obj docutils literal"><span class="pre">set_xy</span></code></a>(xy)</td>
+<td>Set the vertices of the polygon</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.set_zorder.html#matplotlib.patches.FancyArrow.set_zorder" title="matplotlib.patches.FancyArrow.set_zorder"><code class="xref py py-obj docutils literal"><span class="pre">set_zorder</span></code></a>(level)</td>
+<td>Set the zorder for the artist.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.update.html#matplotlib.patches.FancyArrow.update" title="matplotlib.patches.FancyArrow.update"><code class="xref py py-obj docutils literal"><span class="pre">update</span></code></a>(props)</td>
+<td>Update the properties of this <code class="xref py py-class docutils literal"><span class="pre">Artist</span></code> from the dictionary <em>prop</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.FancyArrow.update_from.html#matplotlib.patches.FancyArrow.update_from" title="matplotlib.patches.FancyArrow.update_from"><code class="xref py py-obj docutils literal"><span class="pre">update_from</span></code></a>(other)</td>
+<td>Updates this <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a> from the properties of <em>other</em>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.patches.FancyArrow.axes.html" class="btn btn-neutral float-right" title="5.2.10.1. matplotlib.patches.FancyArrow.axes" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.patches.Ellipse.update_from.html" class="btn btn-neutral" title="5.2.9.103. matplotlib.patches.Ellipse.update_from" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

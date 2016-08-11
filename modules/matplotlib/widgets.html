@@ -83,8 +83,15 @@
             
                 <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.pyplot.html">1. matplotlib.pyplot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.cm.html">2. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.cm.html">3. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.backend_bases.html">4. matplotlib.backend_bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.patches.html">5. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.cbook.html">6. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.image.html">8. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.widgets.html">9. matplotlib.widgets</a></li>
 </ul>
 
             
@@ -172,7 +179,7 @@
 <span class="kn">from</span> <span class="nn">.transforms</span> <span class="k">import</span> <span class="n">blended_transform_factory</span>
 
 
-<span class="k">class</span> <span class="nc">LockDraw</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="LockDraw"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.LockDraw.html#matplotlib.pyplot.LockDraw">[docs]</a><span class="k">class</span> <span class="nc">LockDraw</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Some widgets, like the cursor, draw onto the canvas, and this is not</span>
 <span class="sd">    desirable under all circumstances, like when the toolbar is in</span>
@@ -182,8 +189,8 @@
 <span class="sd">    other widgets from drawing while you&#39;re interacting with the canvas.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_owner</span> <span class="o">=</span> <span class="kc">None</span>
+<div class="viewcode-block" id="LockDraw.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.LockDraw.__init__.html#matplotlib.pyplot.LockDraw.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_owner</span> <span class="o">=</span> <span class="kc">None</span></div>
 
     <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;reserve the lock for *o*&quot;&quot;&quot;</span>
@@ -191,26 +198,26 @@
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;already locked&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_owner</span> <span class="o">=</span> <span class="n">o</span>
 
-    <span class="k">def</span> <span class="nf">release</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span>
+<div class="viewcode-block" id="LockDraw.release"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.LockDraw.release.html#matplotlib.pyplot.LockDraw.release">[docs]</a>    <span class="k">def</span> <span class="nf">release</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;release the lock&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">available</span><span class="p">(</span><span class="n">o</span><span class="p">):</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;you do not own this lock&#39;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_owner</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_owner</span> <span class="o">=</span> <span class="kc">None</span></div>
 
-    <span class="k">def</span> <span class="nf">available</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span>
+<div class="viewcode-block" id="LockDraw.available"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.LockDraw.available.html#matplotlib.pyplot.LockDraw.available">[docs]</a>    <span class="k">def</span> <span class="nf">available</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;drawing is available to *o*&quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">locked</span><span class="p">()</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">isowner</span><span class="p">(</span><span class="n">o</span><span class="p">)</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">locked</span><span class="p">()</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">isowner</span><span class="p">(</span><span class="n">o</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">isowner</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span>
+<div class="viewcode-block" id="LockDraw.isowner"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.LockDraw.isowner.html#matplotlib.pyplot.LockDraw.isowner">[docs]</a>    <span class="k">def</span> <span class="nf">isowner</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Return True if *o* owns this lock&quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_owner</span> <span class="ow">is</span> <span class="n">o</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_owner</span> <span class="ow">is</span> <span class="n">o</span></div>
 
-    <span class="k">def</span> <span class="nf">locked</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="LockDraw.locked"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.LockDraw.locked.html#matplotlib.pyplot.LockDraw.locked">[docs]</a>    <span class="k">def</span> <span class="nf">locked</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Return True if the lock is currently held by an owner&quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_owner</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_owner</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span></div></div>
 
 
-<div class="viewcode-block" id="Widget"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.Widget.html#matplotlib.pyplot.Widget">[docs]</a><span class="k">class</span> <span class="nc">Widget</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="Widget"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.Widget.html#matplotlib.pyplot.Widget">[docs]</a><span class="k">class</span> <span class="nc">Widget</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Abstract base class for GUI neutral widgets</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -218,12 +225,12 @@
     <span class="n">eventson</span> <span class="o">=</span> <span class="kc">True</span>
     <span class="n">_active</span> <span class="o">=</span> <span class="kc">True</span>
 
-<div class="viewcode-block" id="Widget.set_active"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.Widget.set_active.html#matplotlib.pyplot.Widget.set_active">[docs]</a>    <span class="k">def</span> <span class="nf">set_active</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">active</span><span class="p">):</span>
+<div class="viewcode-block" id="Widget.set_active"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.Widget.set_active.html#matplotlib.pyplot.Widget.set_active">[docs]</a>    <span class="k">def</span> <span class="nf">set_active</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">active</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Set whether the widget is active.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_active</span> <span class="o">=</span> <span class="n">active</span></div>
 
-<div class="viewcode-block" id="Widget.get_active"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.Widget.get_active.html#matplotlib.pyplot.Widget.get_active">[docs]</a>    <span class="k">def</span> <span class="nf">get_active</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Widget.get_active"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.Widget.get_active.html#matplotlib.pyplot.Widget.get_active">[docs]</a>    <span class="k">def</span> <span class="nf">get_active</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Get whether the widget is active.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_active</span></div>
@@ -232,7 +239,7 @@
     <span class="n">active</span> <span class="o">=</span> <span class="nb">property</span><span class="p">(</span><span class="n">get_active</span><span class="p">,</span> <span class="k">lambda</span> <span class="bp">self</span><span class="p">,</span> <span class="n">active</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">set_active</span><span class="p">(</span><span class="n">active</span><span class="p">),</span>
                       <span class="n">doc</span><span class="o">=</span><span class="s2">&quot;Is the widget active?&quot;</span><span class="p">)</span>
 
-<div class="viewcode-block" id="Widget.ignore"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.Widget.ignore.html#matplotlib.pyplot.Widget.ignore">[docs]</a>    <span class="k">def</span> <span class="nf">ignore</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+<div class="viewcode-block" id="Widget.ignore"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.Widget.ignore.html#matplotlib.pyplot.Widget.ignore">[docs]</a>    <span class="k">def</span> <span class="nf">ignore</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Return True if event should be ignored.</span>
 
 <span class="sd">        This method (or a version of it) should be called at the beginning</span>
@@ -241,7 +248,7 @@
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">active</span></div></div>
 
 
-<span class="k">class</span> <span class="nc">AxesWidget</span><span class="p">(</span><span class="n">Widget</span><span class="p">):</span>
+<div class="viewcode-block" id="AxesWidget"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.AxesWidget.html#matplotlib.pyplot.AxesWidget">[docs]</a><span class="k">class</span> <span class="nc">AxesWidget</span><span class="p">(</span><span class="n">Widget</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Widget that is connected to a single</span>
 <span class="sd">    :class:`~matplotlib.axes.Axes`.</span>
 
@@ -263,27 +270,27 @@
 <span class="sd">    *active* : bool</span>
 <span class="sd">        If False, the widget does not respond to events.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">):</span>
+<div class="viewcode-block" id="AxesWidget.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.AxesWidget.__init__.html#matplotlib.pyplot.AxesWidget.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">figure</span><span class="o">.</span><span class="n">canvas</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">cids</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cids</span> <span class="o">=</span> <span class="p">[]</span></div>
 
-    <span class="k">def</span> <span class="nf">connect_event</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="n">callback</span><span class="p">):</span>
+<div class="viewcode-block" id="AxesWidget.connect_event"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.AxesWidget.connect_event.html#matplotlib.pyplot.AxesWidget.connect_event">[docs]</a>    <span class="k">def</span> <span class="nf">connect_event</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="n">callback</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Connect callback with an event.</span>
 
 <span class="sd">        This should be used in lieu of `figure.canvas.mpl_connect` since this</span>
 <span class="sd">        function stores callback ids for later clean up.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">cid</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">mpl_connect</span><span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="n">callback</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">cids</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cid</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cids</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cid</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">disconnect_events</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="AxesWidget.disconnect_events"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.AxesWidget.disconnect_events.html#matplotlib.pyplot.AxesWidget.disconnect_events">[docs]</a>    <span class="k">def</span> <span class="nf">disconnect_events</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Disconnect all events created by this widget.&quot;&quot;&quot;</span>
         <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">cids</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">mpl_disconnect</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">mpl_disconnect</span><span class="p">(</span><span class="n">c</span><span class="p">)</span></div></div>
 
 
-<div class="viewcode-block" id="Button"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.Button.html#matplotlib.pyplot.Button">[docs]</a><span class="k">class</span> <span class="nc">Button</span><span class="p">(</span><span class="n">AxesWidget</span><span class="p">):</span>
+<div class="viewcode-block" id="Button"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.Button.html#matplotlib.pyplot.Button">[docs]</a><span class="k">class</span> <span class="nc">Button</span><span class="p">(</span><span class="n">AxesWidget</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A GUI neutral button.</span>
 
@@ -306,7 +313,7 @@
 <span class="sd">    Call :meth:`on_clicked` to connect to the button</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="Button.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.Button.__init__.html#matplotlib.pyplot.Button.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<div class="viewcode-block" id="Button.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.Button.__init__.html#matplotlib.pyplot.Button.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">color</span><span class="o">=</span><span class="s1">&#39;0.85&#39;</span><span class="p">,</span> <span class="n">hovercolor</span><span class="o">=</span><span class="s1">&#39;0.95&#39;</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Parameters</span>
@@ -389,7 +396,7 @@
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">drawon</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">figure</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 
-<div class="viewcode-block" id="Button.on_clicked"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.Button.on_clicked.html#matplotlib.pyplot.Button.on_clicked">[docs]</a>    <span class="k">def</span> <span class="nf">on_clicked</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
+<div class="viewcode-block" id="Button.on_clicked"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.Button.on_clicked.html#matplotlib.pyplot.Button.on_clicked">[docs]</a>    <span class="k">def</span> <span class="nf">on_clicked</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        When the button is clicked, call this *func* with event.</span>
 
@@ -401,7 +408,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">cnt</span> <span class="o">+=</span> <span class="mi">1</span>
         <span class="k">return</span> <span class="n">cid</span></div>
 
-<div class="viewcode-block" id="Button.disconnect"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.Button.disconnect.html#matplotlib.pyplot.Button.disconnect">[docs]</a>    <span class="k">def</span> <span class="nf">disconnect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cid</span><span class="p">):</span>
+<div class="viewcode-block" id="Button.disconnect"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.Button.disconnect.html#matplotlib.pyplot.Button.disconnect">[docs]</a>    <span class="k">def</span> <span class="nf">disconnect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cid</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;remove the observer with connection id *cid*&quot;&quot;&quot;</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">observers</span><span class="p">[</span><span class="n">cid</span><span class="p">]</span>
@@ -409,7 +416,7 @@
             <span class="k">pass</span></div></div>
 
 
-<div class="viewcode-block" id="Slider"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.Slider.html#matplotlib.pyplot.Slider">[docs]</a><span class="k">class</span> <span class="nc">Slider</span><span class="p">(</span><span class="n">AxesWidget</span><span class="p">):</span>
+<div class="viewcode-block" id="Slider"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.Slider.html#matplotlib.pyplot.Slider">[docs]</a><span class="k">class</span> <span class="nc">Slider</span><span class="p">(</span><span class="n">AxesWidget</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A slider representing a floating point range.</span>
 
@@ -446,7 +453,7 @@
 
 <span class="sd">    Call :meth:`on_changed` to connect to the slider event</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-<div class="viewcode-block" id="Slider.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.Slider.__init__.html#matplotlib.pyplot.Slider.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">valmin</span><span class="p">,</span> <span class="n">valmax</span><span class="p">,</span> <span class="n">valinit</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">valfmt</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%1.2f</span><span class="s1">&#39;</span><span class="p">,</span>
+<div class="viewcode-block" id="Slider.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.Slider.__init__.html#matplotlib.pyplot.Slider.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">valmin</span><span class="p">,</span> <span class="n">valmax</span><span class="p">,</span> <span class="n">valinit</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">valfmt</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%1.2f</span><span class="s1">&#39;</span><span class="p">,</span>
                  <span class="n">closedmin</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">closedmax</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">slidermin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">slidermax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dragging</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
@@ -581,7 +588,7 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
 
-<div class="viewcode-block" id="Slider.set_val"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.Slider.set_val.html#matplotlib.pyplot.Slider.set_val">[docs]</a>    <span class="k">def</span> <span class="nf">set_val</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+<div class="viewcode-block" id="Slider.set_val"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.Slider.set_val.html#matplotlib.pyplot.Slider.set_val">[docs]</a>    <span class="k">def</span> <span class="nf">set_val</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
         <span class="n">xy</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">poly</span><span class="o">.</span><span class="n">xy</span>
         <span class="n">xy</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span><span class="p">,</span> <span class="mi">1</span>
         <span class="n">xy</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span><span class="p">,</span> <span class="mi">0</span>
@@ -595,7 +602,7 @@
         <span class="k">for</span> <span class="n">cid</span><span class="p">,</span> <span class="n">func</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">observers</span><span class="p">):</span>
             <span class="n">func</span><span class="p">(</span><span class="n">val</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Slider.on_changed"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.Slider.on_changed.html#matplotlib.pyplot.Slider.on_changed">[docs]</a>    <span class="k">def</span> <span class="nf">on_changed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
+<div class="viewcode-block" id="Slider.on_changed"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.Slider.on_changed.html#matplotlib.pyplot.Slider.on_changed">[docs]</a>    <span class="k">def</span> <span class="nf">on_changed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        When the slider value is changed, call *func* with the new</span>
 <span class="sd">        slider position</span>
@@ -607,20 +614,20 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">cnt</span> <span class="o">+=</span> <span class="mi">1</span>
         <span class="k">return</span> <span class="n">cid</span></div>
 
-<div class="viewcode-block" id="Slider.disconnect"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.Slider.disconnect.html#matplotlib.pyplot.Slider.disconnect">[docs]</a>    <span class="k">def</span> <span class="nf">disconnect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cid</span><span class="p">):</span>
+<div class="viewcode-block" id="Slider.disconnect"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.Slider.disconnect.html#matplotlib.pyplot.Slider.disconnect">[docs]</a>    <span class="k">def</span> <span class="nf">disconnect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cid</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;remove the observer with connection id *cid*&quot;&quot;&quot;</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">observers</span><span class="p">[</span><span class="n">cid</span><span class="p">]</span>
         <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
             <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="Slider.reset"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.Slider.reset.html#matplotlib.pyplot.Slider.reset">[docs]</a>    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Slider.reset"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.Slider.reset.html#matplotlib.pyplot.Slider.reset">[docs]</a>    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;reset the slider to the initial value if needed&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">val</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">valinit</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">valinit</span><span class="p">)</span></div></div>
 
 
-<span class="k">class</span> <span class="nc">CheckButtons</span><span class="p">(</span><span class="n">AxesWidget</span><span class="p">):</span>
+<div class="viewcode-block" id="CheckButtons"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.CheckButtons.html#matplotlib.pyplot.CheckButtons">[docs]</a><span class="k">class</span> <span class="nc">CheckButtons</span><span class="p">(</span><span class="n">AxesWidget</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A GUI neutral radio button.</span>
 
@@ -646,7 +653,7 @@
 
 <span class="sd">    Connect to the CheckButtons with the :meth:`on_clicked` method</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">actives</span><span class="p">):</span>
+<div class="viewcode-block" id="CheckButtons.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.CheckButtons.__init__.html#matplotlib.pyplot.CheckButtons.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">actives</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Add check buttons to :class:`matplotlib.axes.Axes` instance *ax*</span>
 
@@ -707,7 +714,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">connect_event</span><span class="p">(</span><span class="s1">&#39;button_press_event&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_clicked</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">observers</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">observers</span> <span class="o">=</span> <span class="p">{}</span></div>
 
     <span class="k">def</span> <span class="nf">_clicked</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ignore</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
@@ -725,7 +732,7 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span>
 
-    <span class="k">def</span> <span class="nf">set_active</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+<div class="viewcode-block" id="CheckButtons.set_active"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.CheckButtons.set_active.html#matplotlib.pyplot.CheckButtons.set_active">[docs]</a>    <span class="k">def</span> <span class="nf">set_active</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Directly (de)activate a check button by index.</span>
 
@@ -749,9 +756,9 @@
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">eventson</span><span class="p">:</span>
             <span class="k">return</span>
         <span class="k">for</span> <span class="n">cid</span><span class="p">,</span> <span class="n">func</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">observers</span><span class="p">):</span>
-            <span class="n">func</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">get_text</span><span class="p">())</span>
+            <span class="n">func</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">get_text</span><span class="p">())</span></div>
 
-    <span class="k">def</span> <span class="nf">on_clicked</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
+<div class="viewcode-block" id="CheckButtons.on_clicked"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.CheckButtons.on_clicked.html#matplotlib.pyplot.CheckButtons.on_clicked">[docs]</a>    <span class="k">def</span> <span class="nf">on_clicked</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        When the button is clicked, call *func* with button label</span>
 
@@ -760,17 +767,17 @@
         <span class="n">cid</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cnt</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">observers</span><span class="p">[</span><span class="n">cid</span><span class="p">]</span> <span class="o">=</span> <span class="n">func</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cnt</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="k">return</span> <span class="n">cid</span>
+        <span class="k">return</span> <span class="n">cid</span></div>
 
-    <span class="k">def</span> <span class="nf">disconnect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cid</span><span class="p">):</span>
+<div class="viewcode-block" id="CheckButtons.disconnect"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.CheckButtons.disconnect.html#matplotlib.pyplot.CheckButtons.disconnect">[docs]</a>    <span class="k">def</span> <span class="nf">disconnect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cid</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;remove the observer with connection id *cid*&quot;&quot;&quot;</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">observers</span><span class="p">[</span><span class="n">cid</span><span class="p">]</span>
         <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
-            <span class="k">pass</span>
+            <span class="k">pass</span></div></div>
 
 
-<span class="k">class</span> <span class="nc">RadioButtons</span><span class="p">(</span><span class="n">AxesWidget</span><span class="p">):</span>
+<div class="viewcode-block" id="RadioButtons"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.RadioButtons.html#matplotlib.pyplot.RadioButtons">[docs]</a><span class="k">class</span> <span class="nc">RadioButtons</span><span class="p">(</span><span class="n">AxesWidget</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A GUI neutral radio button.</span>
 
@@ -796,7 +803,7 @@
 
 <span class="sd">    Connect to the RadioButtons with the :meth:`on_clicked` method</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">active</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">activecolor</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">):</span>
+<div class="viewcode-block" id="RadioButtons.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.RadioButtons.__init__.html#matplotlib.pyplot.RadioButtons.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">active</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">activecolor</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Add radio buttons to :class:`matplotlib.axes.Axes` instance *ax*</span>
 
@@ -845,7 +852,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">connect_event</span><span class="p">(</span><span class="s1">&#39;button_press_event&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_clicked</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">observers</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">observers</span> <span class="o">=</span> <span class="p">{}</span></div>
 
     <span class="k">def</span> <span class="nf">_clicked</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ignore</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
@@ -868,7 +875,7 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span>
 
-    <span class="k">def</span> <span class="nf">set_active</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+<div class="viewcode-block" id="RadioButtons.set_active"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.RadioButtons.set_active.html#matplotlib.pyplot.RadioButtons.set_active">[docs]</a>    <span class="k">def</span> <span class="nf">set_active</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Trigger which radio button to make active.</span>
 
@@ -897,9 +904,9 @@
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">eventson</span><span class="p">:</span>
             <span class="k">return</span>
         <span class="k">for</span> <span class="n">cid</span><span class="p">,</span> <span class="n">func</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">observers</span><span class="p">):</span>
-            <span class="n">func</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">get_text</span><span class="p">())</span>
+            <span class="n">func</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">get_text</span><span class="p">())</span></div>
 
-    <span class="k">def</span> <span class="nf">on_clicked</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
+<div class="viewcode-block" id="RadioButtons.on_clicked"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.RadioButtons.on_clicked.html#matplotlib.pyplot.RadioButtons.on_clicked">[docs]</a>    <span class="k">def</span> <span class="nf">on_clicked</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        When the button is clicked, call *func* with button label</span>
 
@@ -908,21 +915,21 @@
         <span class="n">cid</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cnt</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">observers</span><span class="p">[</span><span class="n">cid</span><span class="p">]</span> <span class="o">=</span> <span class="n">func</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cnt</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="k">return</span> <span class="n">cid</span>
+        <span class="k">return</span> <span class="n">cid</span></div>
 
-    <span class="k">def</span> <span class="nf">disconnect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cid</span><span class="p">):</span>
+<div class="viewcode-block" id="RadioButtons.disconnect"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.RadioButtons.disconnect.html#matplotlib.pyplot.RadioButtons.disconnect">[docs]</a>    <span class="k">def</span> <span class="nf">disconnect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cid</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;remove the observer with connection id *cid*&quot;&quot;&quot;</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">observers</span><span class="p">[</span><span class="n">cid</span><span class="p">]</span>
         <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
-            <span class="k">pass</span>
+            <span class="k">pass</span></div></div>
 
 
-<div class="viewcode-block" id="SubplotTool"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.SubplotTool.html#matplotlib.pyplot.SubplotTool">[docs]</a><span class="k">class</span> <span class="nc">SubplotTool</span><span class="p">(</span><span class="n">Widget</span><span class="p">):</span>
+<div class="viewcode-block" id="SubplotTool"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.SubplotTool.html#matplotlib.pyplot.SubplotTool">[docs]</a><span class="k">class</span> <span class="nc">SubplotTool</span><span class="p">(</span><span class="n">Widget</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A tool to adjust the subplot params of a :class:`matplotlib.figure.Figure`.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-<div class="viewcode-block" id="SubplotTool.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.SubplotTool.__init__.html#matplotlib.pyplot.SubplotTool.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">targetfig</span><span class="p">,</span> <span class="n">toolfig</span><span class="p">):</span>
+<div class="viewcode-block" id="SubplotTool.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.SubplotTool.__init__.html#matplotlib.pyplot.SubplotTool.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">targetfig</span><span class="p">,</span> <span class="n">toolfig</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        *targetfig*</span>
 <span class="sd">            The figure instance to adjust.</span>
@@ -1036,38 +1043,38 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">buttonreset</span><span class="o">.</span><span class="n">on_clicked</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
         <span class="n">toolfig</span><span class="o">.</span><span class="n">subplotpars</span><span class="o">.</span><span class="n">validate</span> <span class="o">=</span> <span class="n">validate</span></div>
 
-<div class="viewcode-block" id="SubplotTool.funcleft"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.SubplotTool.funcleft.html#matplotlib.pyplot.SubplotTool.funcleft">[docs]</a>    <span class="k">def</span> <span class="nf">funcleft</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+<div class="viewcode-block" id="SubplotTool.funcleft"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.SubplotTool.funcleft.html#matplotlib.pyplot.SubplotTool.funcleft">[docs]</a>    <span class="k">def</span> <span class="nf">funcleft</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">targetfig</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">left</span><span class="o">=</span><span class="n">val</span><span class="p">)</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">drawon</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">targetfig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="SubplotTool.funcright"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.SubplotTool.funcright.html#matplotlib.pyplot.SubplotTool.funcright">[docs]</a>    <span class="k">def</span> <span class="nf">funcright</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+<div class="viewcode-block" id="SubplotTool.funcright"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.SubplotTool.funcright.html#matplotlib.pyplot.SubplotTool.funcright">[docs]</a>    <span class="k">def</span> <span class="nf">funcright</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">targetfig</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">right</span><span class="o">=</span><span class="n">val</span><span class="p">)</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">drawon</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">targetfig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="SubplotTool.funcbottom"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.SubplotTool.funcbottom.html#matplotlib.pyplot.SubplotTool.funcbottom">[docs]</a>    <span class="k">def</span> <span class="nf">funcbottom</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+<div class="viewcode-block" id="SubplotTool.funcbottom"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.SubplotTool.funcbottom.html#matplotlib.pyplot.SubplotTool.funcbottom">[docs]</a>    <span class="k">def</span> <span class="nf">funcbottom</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">targetfig</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">bottom</span><span class="o">=</span><span class="n">val</span><span class="p">)</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">drawon</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">targetfig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="SubplotTool.functop"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.SubplotTool.functop.html#matplotlib.pyplot.SubplotTool.functop">[docs]</a>    <span class="k">def</span> <span class="nf">functop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+<div class="viewcode-block" id="SubplotTool.functop"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.SubplotTool.functop.html#matplotlib.pyplot.SubplotTool.functop">[docs]</a>    <span class="k">def</span> <span class="nf">functop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">targetfig</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">top</span><span class="o">=</span><span class="n">val</span><span class="p">)</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">drawon</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">targetfig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="SubplotTool.funcwspace"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.SubplotTool.funcwspace.html#matplotlib.pyplot.SubplotTool.funcwspace">[docs]</a>    <span class="k">def</span> <span class="nf">funcwspace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+<div class="viewcode-block" id="SubplotTool.funcwspace"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.SubplotTool.funcwspace.html#matplotlib.pyplot.SubplotTool.funcwspace">[docs]</a>    <span class="k">def</span> <span class="nf">funcwspace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">targetfig</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">wspace</span><span class="o">=</span><span class="n">val</span><span class="p">)</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">drawon</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">targetfig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="SubplotTool.funchspace"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.SubplotTool.funchspace.html#matplotlib.pyplot.SubplotTool.funchspace">[docs]</a>    <span class="k">def</span> <span class="nf">funchspace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+<div class="viewcode-block" id="SubplotTool.funchspace"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.SubplotTool.funchspace.html#matplotlib.pyplot.SubplotTool.funchspace">[docs]</a>    <span class="k">def</span> <span class="nf">funchspace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">targetfig</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">hspace</span><span class="o">=</span><span class="n">val</span><span class="p">)</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">drawon</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">targetfig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span></div></div>
 
 
-<span class="k">class</span> <span class="nc">Cursor</span><span class="p">(</span><span class="n">AxesWidget</span><span class="p">):</span>
+<div class="viewcode-block" id="Cursor"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.Cursor.html#matplotlib.pyplot.Cursor">[docs]</a><span class="k">class</span> <span class="nc">Cursor</span><span class="p">(</span><span class="n">AxesWidget</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A horizontal and vertical line that spans the axes and moves with</span>
 <span class="sd">    the pointer.  You can turn off the hline or vline respectively with</span>
@@ -1084,7 +1091,7 @@
 <span class="sd">    For the cursor to remain responsive you must keep a reference to</span>
 <span class="sd">    it.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">horizOn</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">vertOn</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">useblit</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<div class="viewcode-block" id="Cursor.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.Cursor.__init__.html#matplotlib.pyplot.Cursor.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">horizOn</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">vertOn</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">useblit</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
                  <span class="o">**</span><span class="n">lineprops</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Add a cursor to *ax*.  If ``useblit=True``, use the backend-</span>
@@ -1110,18 +1117,18 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">linev</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">ax</span><span class="o">.</span><span class="n">get_xbound</span><span class="p">()[</span><span class="mi">0</span><span class="p">],</span> <span class="n">visible</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">lineprops</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">background</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">needclear</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">needclear</span> <span class="o">=</span> <span class="kc">False</span></div>
 
-    <span class="k">def</span> <span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+<div class="viewcode-block" id="Cursor.clear"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.Cursor.clear.html#matplotlib.pyplot.Cursor.clear">[docs]</a>    <span class="k">def</span> <span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;clear the cursor&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ignore</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
             <span class="k">return</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">useblit</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">background</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">copy_from_bbox</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">bbox</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">linev</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">lineh</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lineh</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">onmove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+<div class="viewcode-block" id="Cursor.onmove"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.Cursor.onmove.html#matplotlib.pyplot.Cursor.onmove">[docs]</a>    <span class="k">def</span> <span class="nf">onmove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;on mouse motion draw the cursor if visible&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ignore</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
             <span class="k">return</span>
@@ -1144,7 +1151,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">linev</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">visible</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">vertOn</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">lineh</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">visible</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">horizOn</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_update</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_update</span><span class="p">()</span></div>
 
     <span class="k">def</span> <span class="nf">_update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
@@ -1158,10 +1165,10 @@
 
             <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw_idle</span><span class="p">()</span>
 
-        <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="kc">False</span></div>
 
 
-<span class="k">class</span> <span class="nc">MultiCursor</span><span class="p">(</span><span class="n">Widget</span><span class="p">):</span>
+<div class="viewcode-block" id="MultiCursor"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.MultiCursor.html#matplotlib.pyplot.MultiCursor">[docs]</a><span class="k">class</span> <span class="nc">MultiCursor</span><span class="p">(</span><span class="n">Widget</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Provide a vertical (default) and/or horizontal line cursor shared between</span>
 <span class="sd">    multiple axes.</span>
@@ -1190,7 +1197,7 @@
 <span class="sd">        show()</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">canvas</span><span class="p">,</span> <span class="n">axes</span><span class="p">,</span> <span class="n">useblit</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">horizOn</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">vertOn</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<div class="viewcode-block" id="MultiCursor.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.MultiCursor.__init__.html#matplotlib.pyplot.MultiCursor.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">canvas</span><span class="p">,</span> <span class="n">axes</span><span class="p">,</span> <span class="n">useblit</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">horizOn</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">vertOn</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
                  <span class="o">**</span><span class="n">lineprops</span><span class="p">):</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span> <span class="o">=</span> <span class="n">canvas</span>
@@ -1223,20 +1230,20 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">hlines</span> <span class="o">=</span> <span class="p">[]</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span></div>
 
-    <span class="k">def</span> <span class="nf">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="MultiCursor.connect"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.MultiCursor.connect.html#matplotlib.pyplot.MultiCursor.connect">[docs]</a>    <span class="k">def</span> <span class="nf">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;connect events&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_cidmotion</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">mpl_connect</span><span class="p">(</span><span class="s1">&#39;motion_notify_event&#39;</span><span class="p">,</span>
                                                   <span class="bp">self</span><span class="o">.</span><span class="n">onmove</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_ciddraw</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">mpl_connect</span><span class="p">(</span><span class="s1">&#39;draw_event&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">clear</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_ciddraw</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">mpl_connect</span><span class="p">(</span><span class="s1">&#39;draw_event&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">clear</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">disconnect</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="MultiCursor.disconnect"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.MultiCursor.disconnect.html#matplotlib.pyplot.MultiCursor.disconnect">[docs]</a>    <span class="k">def</span> <span class="nf">disconnect</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;disconnect events&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">mpl_disconnect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_cidmotion</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">mpl_disconnect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_ciddraw</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">mpl_disconnect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_ciddraw</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+<div class="viewcode-block" id="MultiCursor.clear"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.MultiCursor.clear.html#matplotlib.pyplot.MultiCursor.clear">[docs]</a>    <span class="k">def</span> <span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;clear the cursor&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ignore</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
             <span class="k">return</span>
@@ -1244,9 +1251,9 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">background</span> <span class="o">=</span> <span class="p">(</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">copy_from_bbox</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">figure</span><span class="o">.</span><span class="n">bbox</span><span class="p">))</span>
         <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">vlines</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">hlines</span><span class="p">:</span>
-            <span class="n">line</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+            <span class="n">line</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">onmove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+<div class="viewcode-block" id="MultiCursor.onmove"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.MultiCursor.onmove.html#matplotlib.pyplot.MultiCursor.onmove">[docs]</a>    <span class="k">def</span> <span class="nf">onmove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ignore</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
             <span class="k">return</span>
         <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">inaxes</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -1264,7 +1271,7 @@
             <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">hlines</span><span class="p">:</span>
                 <span class="n">line</span><span class="o">.</span><span class="n">set_ydata</span><span class="p">((</span><span class="n">event</span><span class="o">.</span><span class="n">ydata</span><span class="p">,</span> <span class="n">event</span><span class="o">.</span><span class="n">ydata</span><span class="p">))</span>
                 <span class="n">line</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">visible</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_update</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_update</span><span class="p">()</span></div>
 
     <span class="k">def</span> <span class="nf">_update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">useblit</span><span class="p">:</span>
@@ -1278,7 +1285,7 @@
                     <span class="n">ax</span><span class="o">.</span><span class="n">draw_artist</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">figure</span><span class="o">.</span><span class="n">bbox</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw_idle</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw_idle</span><span class="p">()</span></div>
 
 
 <span class="k">class</span> <span class="nc">_SelectorWidget</span><span class="p">(</span><span class="n">AxesWidget</span><span class="p">):</span>
@@ -1510,7 +1517,7 @@
             <span class="n">artist</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="n">visible</span><span class="p">)</span>
 
 
-<span class="k">class</span> <span class="nc">SpanSelector</span><span class="p">(</span><span class="n">_SelectorWidget</span><span class="p">):</span>
+<div class="viewcode-block" id="SpanSelector"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.SpanSelector.html#matplotlib.pyplot.SpanSelector">[docs]</a><span class="k">class</span> <span class="nc">SpanSelector</span><span class="p">(</span><span class="n">_SelectorWidget</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Select a min/max range of the x or y axes for a matplotlib Axes.</span>
 
@@ -1531,7 +1538,7 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">onselect</span><span class="p">,</span> <span class="n">direction</span><span class="p">,</span> <span class="n">minspan</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">useblit</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<div class="viewcode-block" id="SpanSelector.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.SpanSelector.__init__.html#matplotlib.pyplot.SpanSelector.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">onselect</span><span class="p">,</span> <span class="n">direction</span><span class="p">,</span> <span class="n">minspan</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">useblit</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
                  <span class="n">rectprops</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">onmove_callback</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">span_stays</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
                  <span class="n">button</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
@@ -1593,9 +1600,9 @@
 
         <span class="c1"># Reset canvas so that `new_axes` connects events.</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">new_axes</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">new_axes</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">new_axes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">):</span>
+<div class="viewcode-block" id="SpanSelector.new_axes"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.SpanSelector.new_axes.html#matplotlib.pyplot.SpanSelector.new_axes">[docs]</a>    <span class="k">def</span> <span class="nf">new_axes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">ax</span><span class="o">.</span><span class="n">figure</span><span class="o">.</span><span class="n">canvas</span><span class="p">:</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -1625,11 +1632,11 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">stay_rect</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">artists</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">artists</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="p">]</span></div>
 
-    <span class="k">def</span> <span class="nf">ignore</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+<div class="viewcode-block" id="SpanSelector.ignore"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.SpanSelector.ignore.html#matplotlib.pyplot.SpanSelector.ignore">[docs]</a>    <span class="k">def</span> <span class="nf">ignore</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;return *True* if *event* should be ignored&quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="n">_SelectorWidget</span><span class="o">.</span><span class="n">ignore</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">visible</span>
+        <span class="k">return</span> <span class="n">_SelectorWidget</span><span class="o">.</span><span class="n">ignore</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">visible</span></div>
 
     <span class="k">def</span> <span class="nf">_press</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;on button press event&quot;&quot;&quot;</span>
@@ -1716,10 +1723,10 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">onmove_callback</span><span class="p">(</span><span class="n">vmin</span><span class="p">,</span> <span class="n">vmax</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
-        <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="kc">False</span></div>
 
 
-<span class="k">class</span> <span class="nc">ToolHandles</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="ToolHandles"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.ToolHandles.html#matplotlib.pyplot.ToolHandles">[docs]</a><span class="k">class</span> <span class="nc">ToolHandles</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Control handles for canvas tools.</span>
 
 <span class="sd">    Parameters</span>
@@ -1734,7 +1741,7 @@
 <span class="sd">        Additional marker properties. See :class:`matplotlib.lines.Line2D`.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">marker_props</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">useblit</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<div class="viewcode-block" id="ToolHandles.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.ToolHandles.__init__.html#matplotlib.pyplot.ToolHandles.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">marker_props</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">useblit</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span>
 
         <span class="n">props</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">marker</span><span class="o">=</span><span class="n">marker</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">mfc</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span>
@@ -1742,7 +1749,7 @@
         <span class="n">props</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">marker_props</span> <span class="k">if</span> <span class="n">marker_props</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="p">{})</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_markers</span> <span class="o">=</span> <span class="n">Line2D</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">animated</span><span class="o">=</span><span class="n">useblit</span><span class="p">,</span> <span class="o">**</span><span class="n">props</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">add_line</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_markers</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">artist</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_markers</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">artist</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_markers</span></div>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">x</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -1752,20 +1759,20 @@
     <span class="k">def</span> <span class="nf">y</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_markers</span><span class="o">.</span><span class="n">get_ydata</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="nf">set_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pts</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="ToolHandles.set_data"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.ToolHandles.set_data.html#matplotlib.pyplot.ToolHandles.set_data">[docs]</a>    <span class="k">def</span> <span class="nf">set_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pts</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Set x and y positions of handles&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">y</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">x</span> <span class="o">=</span> <span class="n">pts</span>
             <span class="n">pts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">])</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_markers</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="n">pts</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_markers</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="n">pts</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">set_visible</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_markers</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+<div class="viewcode-block" id="ToolHandles.set_visible"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.ToolHandles.set_visible.html#matplotlib.pyplot.ToolHandles.set_visible">[docs]</a>    <span class="k">def</span> <span class="nf">set_visible</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_markers</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="n">val</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">set_animated</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_markers</span><span class="o">.</span><span class="n">set_animated</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+<div class="viewcode-block" id="ToolHandles.set_animated"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.ToolHandles.set_animated.html#matplotlib.pyplot.ToolHandles.set_animated">[docs]</a>    <span class="k">def</span> <span class="nf">set_animated</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_markers</span><span class="o">.</span><span class="n">set_animated</span><span class="p">(</span><span class="n">val</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">closest</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<div class="viewcode-block" id="ToolHandles.closest"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.ToolHandles.closest.html#matplotlib.pyplot.ToolHandles.closest">[docs]</a>    <span class="k">def</span> <span class="nf">closest</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Return index and pixel distance to closest index.&quot;&quot;&quot;</span>
         <span class="n">pts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">))</span>
         <span class="c1"># Transform data coordinates to pixel coordinates.</span>
@@ -1775,10 +1782,10 @@
             <span class="n">dist</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">diff</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
             <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">dist</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">dist</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">diff</span> <span class="o">**</span> <span class="mi">2</span><span class="p">))</span>
+            <span class="k">return</span> <span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">diff</span> <span class="o">**</span> <span class="mi">2</span><span class="p">))</span></div></div>
 
 
-<span class="k">class</span> <span class="nc">RectangleSelector</span><span class="p">(</span><span class="n">_SelectorWidget</span><span class="p">):</span>
+<div class="viewcode-block" id="RectangleSelector"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.RectangleSelector.html#matplotlib.pyplot.RectangleSelector">[docs]</a><span class="k">class</span> <span class="nc">RectangleSelector</span><span class="p">(</span><span class="n">_SelectorWidget</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Select a rectangular region of an axes.</span>
 
@@ -1818,7 +1825,7 @@
 
     <span class="n">_shape_klass</span> <span class="o">=</span> <span class="n">Rectangle</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">onselect</span><span class="p">,</span> <span class="n">drawtype</span><span class="o">=</span><span class="s1">&#39;box&#39;</span><span class="p">,</span>
+<div class="viewcode-block" id="RectangleSelector.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.RectangleSelector.__init__.html#matplotlib.pyplot.RectangleSelector.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">onselect</span><span class="p">,</span> <span class="n">drawtype</span><span class="o">=</span><span class="s1">&#39;box&#39;</span><span class="p">,</span>
                  <span class="n">minspanx</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">minspany</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">useblit</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
                  <span class="n">lineprops</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rectprops</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">spancoords</span><span class="o">=</span><span class="s1">&#39;data&#39;</span><span class="p">,</span>
                  <span class="n">button</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">maxdist</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">marker_props</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -1953,7 +1960,7 @@
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">interactive</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">artists</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">to_draw</span><span class="p">]</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_extents_on_press</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_extents_on_press</span> <span class="o">=</span> <span class="kc">None</span></div>
 
     <span class="k">def</span> <span class="nf">_press</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;on button press event&quot;&quot;&quot;</span>
@@ -2133,7 +2140,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">visible</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="nf">draw_shape</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">extents</span><span class="p">):</span>
+<div class="viewcode-block" id="RectangleSelector.draw_shape"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.RectangleSelector.draw_shape.html#matplotlib.pyplot.RectangleSelector.draw_shape">[docs]</a>    <span class="k">def</span> <span class="nf">draw_shape</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">extents</span><span class="p">):</span>
         <span class="n">x0</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">y1</span> <span class="o">=</span> <span class="n">extents</span>
         <span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">([</span><span class="n">x0</span><span class="p">,</span> <span class="n">x1</span><span class="p">])</span>
         <span class="n">ymin</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">([</span><span class="n">y0</span><span class="p">,</span> <span class="n">y1</span><span class="p">])</span>
@@ -2152,7 +2159,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">to_draw</span><span class="o">.</span><span class="n">set_height</span><span class="p">(</span><span class="n">ymax</span> <span class="o">-</span> <span class="n">ymin</span><span class="p">)</span>
 
         <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">drawtype</span> <span class="o">==</span> <span class="s1">&#39;line&#39;</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">to_draw</span><span class="o">.</span><span class="n">set_data</span><span class="p">([</span><span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span><span class="p">],</span> <span class="p">[</span><span class="n">ymin</span><span class="p">,</span> <span class="n">ymax</span><span class="p">])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">to_draw</span><span class="o">.</span><span class="n">set_data</span><span class="p">([</span><span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span><span class="p">],</span> <span class="p">[</span><span class="n">ymin</span><span class="p">,</span> <span class="n">ymax</span><span class="p">])</span></div>
 
     <span class="k">def</span> <span class="nf">_set_active_handle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Set active handle based on the location of the mouse event&quot;&quot;&quot;</span>
@@ -2192,10 +2199,10 @@
             <span class="n">y</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">xfm</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_draw</span><span class="o">.</span><span class="n">get_verts</span><span class="p">())</span><span class="o">.</span><span class="n">T</span>
             <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">])</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_draw</span><span class="o">.</span><span class="n">get_data</span><span class="p">())</span>
+            <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_draw</span><span class="o">.</span><span class="n">get_data</span><span class="p">())</span></div>
 
 
-<span class="k">class</span> <span class="nc">EllipseSelector</span><span class="p">(</span><span class="n">RectangleSelector</span><span class="p">):</span>
+<div class="viewcode-block" id="EllipseSelector"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.EllipseSelector.html#matplotlib.pyplot.EllipseSelector">[docs]</a><span class="k">class</span> <span class="nc">EllipseSelector</span><span class="p">(</span><span class="n">RectangleSelector</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Select an elliptical region of an axes.</span>
 
@@ -2234,7 +2241,7 @@
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">_shape_klass</span> <span class="o">=</span> <span class="n">Ellipse</span>
 
-    <span class="k">def</span> <span class="nf">draw_shape</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">extents</span><span class="p">):</span>
+<div class="viewcode-block" id="EllipseSelector.draw_shape"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.EllipseSelector.draw_shape.html#matplotlib.pyplot.EllipseSelector.draw_shape">[docs]</a>    <span class="k">def</span> <span class="nf">draw_shape</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">extents</span><span class="p">):</span>
         <span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">y2</span> <span class="o">=</span> <span class="n">extents</span>
         <span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">([</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">])</span>
         <span class="n">ymin</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">([</span><span class="n">y1</span><span class="p">,</span> <span class="n">y2</span><span class="p">])</span>
@@ -2250,7 +2257,7 @@
             <span class="n">rad</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">31</span><span class="p">)</span> <span class="o">*</span> <span class="mi">12</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">180</span>
             <span class="n">x</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">rad</span><span class="p">)</span> <span class="o">+</span> <span class="n">center</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
             <span class="n">y</span> <span class="o">=</span> <span class="n">b</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">rad</span><span class="p">)</span> <span class="o">+</span> <span class="n">center</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">to_draw</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">to_draw</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span></div>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">_rect_bbox</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -2263,10 +2270,10 @@
             <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_draw</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span>
             <span class="n">x0</span><span class="p">,</span> <span class="n">x1</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
             <span class="n">y0</span><span class="p">,</span> <span class="n">y1</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-            <span class="k">return</span> <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">x1</span> <span class="o">-</span> <span class="n">x0</span><span class="p">,</span> <span class="n">y1</span> <span class="o">-</span> <span class="n">y0</span>
+            <span class="k">return</span> <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">x1</span> <span class="o">-</span> <span class="n">x0</span><span class="p">,</span> <span class="n">y1</span> <span class="o">-</span> <span class="n">y0</span></div>
 
 
-<span class="k">class</span> <span class="nc">LassoSelector</span><span class="p">(</span><span class="n">_SelectorWidget</span><span class="p">):</span>
+<div class="viewcode-block" id="LassoSelector"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.LassoSelector.html#matplotlib.pyplot.LassoSelector">[docs]</a><span class="k">class</span> <span class="nc">LassoSelector</span><span class="p">(</span><span class="n">_SelectorWidget</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Selection curve of an arbitrary shape.</span>
 
 <span class="sd">    For the selector to remain responsive you must keep a reference to</span>
@@ -2309,7 +2316,7 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">onselect</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">useblit</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">lineprops</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<div class="viewcode-block" id="LassoSelector.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.LassoSelector.__init__.html#matplotlib.pyplot.LassoSelector.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">onselect</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">useblit</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">lineprops</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
             <span class="n">button</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="n">_SelectorWidget</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">onselect</span><span class="p">,</span> <span class="n">useblit</span><span class="o">=</span><span class="n">useblit</span><span class="p">,</span> <span class="n">button</span><span class="o">=</span><span class="n">button</span><span class="p">)</span>
 
@@ -2322,17 +2329,17 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">line</span> <span class="o">=</span> <span class="n">Line2D</span><span class="p">([],</span> <span class="p">[],</span> <span class="o">**</span><span class="n">lineprops</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">line</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">add_line</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">line</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">artists</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">line</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">artists</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">line</span><span class="p">]</span></div>
 
-    <span class="k">def</span> <span class="nf">onpress</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">press</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+<div class="viewcode-block" id="LassoSelector.onpress"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.LassoSelector.onpress.html#matplotlib.pyplot.LassoSelector.onpress">[docs]</a>    <span class="k">def</span> <span class="nf">onpress</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">press</span><span class="p">(</span><span class="n">event</span><span class="p">)</span></div>
 
     <span class="k">def</span> <span class="nf">_press</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">verts</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_data</span><span class="p">(</span><span class="n">event</span><span class="p">)]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">line</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">onrelease</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">release</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+<div class="viewcode-block" id="LassoSelector.onrelease"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.LassoSelector.onrelease.html#matplotlib.pyplot.LassoSelector.onrelease">[docs]</a>    <span class="k">def</span> <span class="nf">onrelease</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">release</span><span class="p">(</span><span class="n">event</span><span class="p">)</span></div>
 
     <span class="k">def</span> <span class="nf">_release</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verts</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -2349,10 +2356,10 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">line</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">verts</span><span class="p">)))</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">()</span></div>
 
 
-<span class="k">class</span> <span class="nc">Lasso</span><span class="p">(</span><span class="n">AxesWidget</span><span class="p">):</span>
+<div class="viewcode-block" id="Lasso"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.Lasso.html#matplotlib.pyplot.Lasso">[docs]</a><span class="k">class</span> <span class="nc">Lasso</span><span class="p">(</span><span class="n">AxesWidget</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Selection curve of an arbitrary shape.</span>
 
 <span class="sd">    The selected path can be used in conjunction with</span>
@@ -2374,7 +2381,7 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">xy</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">useblit</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<div class="viewcode-block" id="Lasso.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.Lasso.__init__.html#matplotlib.pyplot.Lasso.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">xy</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">useblit</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
         <span class="n">AxesWidget</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">useblit</span> <span class="o">=</span> <span class="n">useblit</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">supports_blit</span>
@@ -2387,9 +2394,9 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">add_line</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">line</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">callback</span> <span class="o">=</span> <span class="n">callback</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">connect_event</span><span class="p">(</span><span class="s1">&#39;button_release_event&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">onrelease</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">connect_event</span><span class="p">(</span><span class="s1">&#39;motion_notify_event&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">onmove</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">connect_event</span><span class="p">(</span><span class="s1">&#39;motion_notify_event&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">onmove</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">onrelease</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+<div class="viewcode-block" id="Lasso.onrelease"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.Lasso.onrelease.html#matplotlib.pyplot.Lasso.onrelease">[docs]</a>    <span class="k">def</span> <span class="nf">onrelease</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ignore</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
             <span class="k">return</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verts</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -2398,9 +2405,9 @@
                 <span class="bp">self</span><span class="o">.</span><span class="n">callback</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">verts</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">lines</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">line</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">verts</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">disconnect_events</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">disconnect_events</span><span class="p">()</span></div>
 
-    <span class="k">def</span> <span class="nf">onmove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+<div class="viewcode-block" id="Lasso.onmove"><a class="viewcode-back" href="../../generated/generated/matplotlib.widgets.Lasso.onmove.html#matplotlib.pyplot.Lasso.onmove">[docs]</a>    <span class="k">def</span> <span class="nf">onmove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ignore</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
             <span class="k">return</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verts</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -2418,7 +2425,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">draw_artist</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">line</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">bbox</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw_idle</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw_idle</span><span class="p">()</span></div></div>
 </pre></div>
 
            </div>

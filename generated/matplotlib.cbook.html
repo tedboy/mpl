@@ -1,0 +1,606 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>6. matplotlib.cbook &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../index.html"/>
+        <link rel="up" title="&lt;no title&gt;" href="../mpl.pyplot.html"/>
+        <link rel="next" title="6.1.1. matplotlib.cbook.align_iterators" href="matplotlib.cbook.align_iterators.html"/>
+        <link rel="prev" title="5.2.23. matplotlib.patches.zip" href="generated/matplotlib.patches.zip.html"/> 
+
+  
+  <script src="../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.cm.html">3. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.backend_bases.html">4. matplotlib.backend_bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.patches.html">5. matplotlib.patches</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">6. matplotlib.cbook</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#functions">6.1. Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.align_iterators.html">6.1.1. matplotlib.cbook.align_iterators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.allequal.html">6.1.2. matplotlib.cbook.allequal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.allpairs.html">6.1.3. matplotlib.cbook.allpairs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.alltrue.html">6.1.4. matplotlib.cbook.alltrue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.boxplot_stats.html">6.1.5. matplotlib.cbook.boxplot_stats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.dedent.html">6.1.6. matplotlib.cbook.dedent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.delete_masked_points.html">6.1.7. matplotlib.cbook.delete_masked_points</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.deprecated.html">6.1.8. matplotlib.cbook.deprecated</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.dict_delall.html">6.1.9. matplotlib.cbook.dict_delall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.exception_to_str.html">6.1.10. matplotlib.cbook.exception_to_str</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.file_requires_unicode.html">6.1.11. matplotlib.cbook.file_requires_unicode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.finddir.html">6.1.12. matplotlib.cbook.finddir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.flatten.html">6.1.13. matplotlib.cbook.flatten</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.get_label.html">6.1.14. matplotlib.cbook.get_label</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.get_recursive_filelist.html">6.1.15. matplotlib.cbook.get_recursive_filelist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.get_sample_data.html">6.1.16. matplotlib.cbook.get_sample_data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.get_split_ind.html">6.1.17. matplotlib.cbook.get_split_ind</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.index_of.html">6.1.18. matplotlib.cbook.index_of</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.is_math_text.html">6.1.19. matplotlib.cbook.is_math_text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.is_numlike.html">6.1.20. matplotlib.cbook.is_numlike</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.is_scalar.html">6.1.21. matplotlib.cbook.is_scalar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.is_scalar_or_string.html">6.1.22. matplotlib.cbook.is_scalar_or_string</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.is_sequence_of_strings.html">6.1.23. matplotlib.cbook.is_sequence_of_strings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.is_string_like.html">6.1.24. matplotlib.cbook.is_string_like</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.is_writable_file_like.html">6.1.25. matplotlib.cbook.is_writable_file_like</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.issubclass_safe.html">6.1.26. matplotlib.cbook.issubclass_safe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.iterable.html">6.1.27. matplotlib.cbook.iterable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.listFiles.html">6.1.28. matplotlib.cbook.listFiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.local_over_kwdict.html">6.1.29. matplotlib.cbook.local_over_kwdict</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.mkdirs.html">6.1.30. matplotlib.cbook.mkdirs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.onetrue.html">6.1.31. matplotlib.cbook.onetrue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.pieces.html">6.1.32. matplotlib.cbook.pieces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.popall.html">6.1.33. matplotlib.cbook.popall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.print_cycles.html">6.1.34. matplotlib.cbook.print_cycles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.pts_to_midstep.html">6.1.35. matplotlib.cbook.pts_to_midstep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.pts_to_poststep.html">6.1.36. matplotlib.cbook.pts_to_poststep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.pts_to_prestep.html">6.1.37. matplotlib.cbook.pts_to_prestep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.recursive_remove.html">6.1.38. matplotlib.cbook.recursive_remove</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.reduce.html">6.1.39. matplotlib.cbook.reduce</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.report_memory.html">6.1.40. matplotlib.cbook.report_memory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.restrict_dict.html">6.1.41. matplotlib.cbook.restrict_dict</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.reverse_dict.html">6.1.42. matplotlib.cbook.reverse_dict</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.safe_first_element.html">6.1.43. matplotlib.cbook.safe_first_element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.safe_masked_invalid.html">6.1.44. matplotlib.cbook.safe_masked_invalid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.safezip.html">6.1.45. matplotlib.cbook.safezip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.simple_linear_interpolation.html">6.1.46. matplotlib.cbook.simple_linear_interpolation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.soundex.html">6.1.47. matplotlib.cbook.soundex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.strip_math.html">6.1.48. matplotlib.cbook.strip_math</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.to_filehandle.html">6.1.49. matplotlib.cbook.to_filehandle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.unicode_safe.html">6.1.50. matplotlib.cbook.unicode_safe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.unique.html">6.1.51. matplotlib.cbook.unique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.unmasked_index_ranges.html">6.1.52. matplotlib.cbook.unmasked_index_ranges</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.violin_stats.html">6.1.53. matplotlib.cbook.violin_stats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.warn_deprecated.html">6.1.54. matplotlib.cbook.warn_deprecated</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.wrap.html">6.1.55. matplotlib.cbook.wrap</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#classes">6.2. Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.cbook.Bunch.html">6.2.1. matplotlib.cbook.Bunch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.cbook.CallbackRegistry.html">6.2.2. matplotlib.cbook.CallbackRegistry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.cbook.GetRealpathAndStat.html">6.2.3. matplotlib.cbook.GetRealpathAndStat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.cbook.Grouper.html">6.2.4. matplotlib.cbook.Grouper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.cbook.MemoryMonitor.html">6.2.5. matplotlib.cbook.MemoryMonitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.cbook.Null.html">6.2.6. matplotlib.cbook.Null</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.cbook.RingBuffer.html">6.2.7. matplotlib.cbook.RingBuffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.cbook.Sorter.html">6.2.8. matplotlib.cbook.Sorter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.cbook.Stack.html">6.2.9. matplotlib.cbook.Stack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.cbook.WeakKeyDictionary.html">6.2.10. matplotlib.cbook.WeakKeyDictionary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.cbook.Xlator.html">6.2.11. matplotlib.cbook.Xlator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.cbook.converter.html">6.2.12. matplotlib.cbook.converter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.cbook.maxdict.html">6.2.13. matplotlib.cbook.maxdict</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.cbook.ref.html">6.2.14. matplotlib.cbook.ref</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.cbook.repeat.html">6.2.15. matplotlib.cbook.repeat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.cbook.silent_list.html">6.2.16. matplotlib.cbook.silent_list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.cbook.todate.html">6.2.17. matplotlib.cbook.todate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.cbook.todatetime.html">6.2.18. matplotlib.cbook.todatetime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.cbook.tofloat.html">6.2.19. matplotlib.cbook.tofloat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.cbook.toint.html">6.2.20. matplotlib.cbook.toint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.cbook.tostr.html">6.2.21. matplotlib.cbook.tostr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.cbook.xrange.html">6.2.22. matplotlib.cbook.xrange</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.cbook.zip.html">6.2.23. matplotlib.cbook.zip</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#exceptions">6.3. Exceptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.IgnoredKeywordWarning.html">6.3.1. matplotlib.cbook.IgnoredKeywordWarning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.MatplotlibDeprecationWarning.html">6.3.2. matplotlib.cbook.MatplotlibDeprecationWarning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.mplDeprecation.html">6.3.3. matplotlib.cbook.mplDeprecation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.image.html">8. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.widgets.html">9. matplotlib.widgets</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../mpl.pyplot.html">&lt;no title&gt;</a> &raquo;</li>
+        
+      <li>6. matplotlib.cbook</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../sources/generated/matplotlib.cbook.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-matplotlib.cbook">
+<span id="matplotlib-cbook"></span><h1>6. matplotlib.cbook<a class="headerlink" href="#module-matplotlib.cbook" title="Permalink to this headline">¶</a></h1>
+<p>A collection of utility functions and classes.  Originally, many
+(but not all) were from the Python Cookbook &#8211; hence the name cbook.</p>
+<p>This module is safe to import from anywhere within matplotlib;
+it imports matplotlib only at runtime.</p>
+<div class="section" id="functions">
+<h2>6.1. Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.cbook.align_iterators.html#matplotlib.cbook.align_iterators" title="matplotlib.cbook.align_iterators"><code class="xref py py-obj docutils literal"><span class="pre">align_iterators</span></code></a>(func,&nbsp;*iterables)</td>
+<td>This generator takes a bunch of iterables that are ordered by func</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.cbook.allequal.html#matplotlib.cbook.allequal" title="matplotlib.cbook.allequal"><code class="xref py py-obj docutils literal"><span class="pre">allequal</span></code></a>(seq)</td>
+<td>Return <em>True</em> if all elements of <em>seq</em> compare equal.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.cbook.allpairs.html#matplotlib.cbook.allpairs" title="matplotlib.cbook.allpairs"><code class="xref py py-obj docutils literal"><span class="pre">allpairs</span></code></a>(x)</td>
+<td>return all possible pairs in sequence <em>x</em></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.cbook.alltrue.html#matplotlib.cbook.alltrue" title="matplotlib.cbook.alltrue"><code class="xref py py-obj docutils literal"><span class="pre">alltrue</span></code></a>(seq)</td>
+<td>Return <em>True</em> if all elements of <em>seq</em> evaluate to <em>True</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.cbook.boxplot_stats.html#matplotlib.cbook.boxplot_stats" title="matplotlib.cbook.boxplot_stats"><code class="xref py py-obj docutils literal"><span class="pre">boxplot_stats</span></code></a>(X[,&nbsp;whis,&nbsp;bootstrap,&nbsp;labels])</td>
+<td>Returns list of dictionaries of staticists to be use to draw a series of box and whisker plots.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.cbook.dedent.html#matplotlib.cbook.dedent" title="matplotlib.cbook.dedent"><code class="xref py py-obj docutils literal"><span class="pre">dedent</span></code></a>(s)</td>
+<td>Remove excess indentation from docstring <em>s</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.cbook.delete_masked_points.html#matplotlib.cbook.delete_masked_points" title="matplotlib.cbook.delete_masked_points"><code class="xref py py-obj docutils literal"><span class="pre">delete_masked_points</span></code></a>(*args)</td>
+<td>Find all masked and/or non-finite points in a set of arguments, and return the arguments with only the unmasked points remaining.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.cbook.deprecated.html#matplotlib.cbook.deprecated" title="matplotlib.cbook.deprecated"><code class="xref py py-obj docutils literal"><span class="pre">deprecated</span></code></a>(since[,&nbsp;message,&nbsp;name,&nbsp;...])</td>
+<td>Decorator to mark a function as deprecated.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.cbook.dict_delall.html#matplotlib.cbook.dict_delall" title="matplotlib.cbook.dict_delall"><code class="xref py py-obj docutils literal"><span class="pre">dict_delall</span></code></a>(d,&nbsp;keys)</td>
+<td>delete all of the <em>keys</em> from the <code class="xref py py-class docutils literal"><span class="pre">dict</span></code> <em>d</em></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.cbook.exception_to_str.html#matplotlib.cbook.exception_to_str" title="matplotlib.cbook.exception_to_str"><code class="xref py py-obj docutils literal"><span class="pre">exception_to_str</span></code></a>([s])</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.cbook.file_requires_unicode.html#matplotlib.cbook.file_requires_unicode" title="matplotlib.cbook.file_requires_unicode"><code class="xref py py-obj docutils literal"><span class="pre">file_requires_unicode</span></code></a>(x)</td>
+<td>Returns <cite>True</cite> if the given writable file-like object requires Unicode to be written to it.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.cbook.finddir.html#matplotlib.cbook.finddir" title="matplotlib.cbook.finddir"><code class="xref py py-obj docutils literal"><span class="pre">finddir</span></code></a>(o,&nbsp;match[,&nbsp;case])</td>
+<td>return all attributes of <em>o</em> which match string in match.  if case</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.cbook.flatten.html#matplotlib.cbook.flatten" title="matplotlib.cbook.flatten"><code class="xref py py-obj docutils literal"><span class="pre">flatten</span></code></a>(seq[,&nbsp;scalarp])</td>
+<td>Returns a generator of flattened nested containers</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.cbook.get_label.html#matplotlib.cbook.get_label" title="matplotlib.cbook.get_label"><code class="xref py py-obj docutils literal"><span class="pre">get_label</span></code></a>(y,&nbsp;default_name)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.cbook.get_recursive_filelist.html#matplotlib.cbook.get_recursive_filelist" title="matplotlib.cbook.get_recursive_filelist"><code class="xref py py-obj docutils literal"><span class="pre">get_recursive_filelist</span></code></a>(args)</td>
+<td>Recurse all the files and dirs in <em>args</em> ignoring symbolic links</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.cbook.get_sample_data.html#matplotlib.cbook.get_sample_data" title="matplotlib.cbook.get_sample_data"><code class="xref py py-obj docutils literal"><span class="pre">get_sample_data</span></code></a>(fname[,&nbsp;asfileobj])</td>
+<td>Return a sample data file.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.cbook.get_split_ind.html#matplotlib.cbook.get_split_ind" title="matplotlib.cbook.get_split_ind"><code class="xref py py-obj docutils literal"><span class="pre">get_split_ind</span></code></a>(seq,&nbsp;N)</td>
+<td><em>seq</em> is a list of words.  Return the index into seq such that:</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.cbook.index_of.html#matplotlib.cbook.index_of" title="matplotlib.cbook.index_of"><code class="xref py py-obj docutils literal"><span class="pre">index_of</span></code></a>(y)</td>
+<td>A helper function to get the index of an input to plot against if x values are not explicitly given.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.cbook.is_math_text.html#matplotlib.cbook.is_math_text" title="matplotlib.cbook.is_math_text"><code class="xref py py-obj docutils literal"><span class="pre">is_math_text</span></code></a>(s)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.cbook.is_numlike.html#matplotlib.cbook.is_numlike" title="matplotlib.cbook.is_numlike"><code class="xref py py-obj docutils literal"><span class="pre">is_numlike</span></code></a>(obj)</td>
+<td>return true if <em>obj</em> looks like a number</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.cbook.is_scalar.html#matplotlib.cbook.is_scalar" title="matplotlib.cbook.is_scalar"><code class="xref py py-obj docutils literal"><span class="pre">is_scalar</span></code></a>(obj)</td>
+<td>return true if <em>obj</em> is not string like and is not iterable</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.cbook.is_scalar_or_string.html#matplotlib.cbook.is_scalar_or_string" title="matplotlib.cbook.is_scalar_or_string"><code class="xref py py-obj docutils literal"><span class="pre">is_scalar_or_string</span></code></a>(val)</td>
+<td>Return whether the given object is a scalar or string like.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.cbook.is_sequence_of_strings.html#matplotlib.cbook.is_sequence_of_strings" title="matplotlib.cbook.is_sequence_of_strings"><code class="xref py py-obj docutils literal"><span class="pre">is_sequence_of_strings</span></code></a>(obj)</td>
+<td>Returns true if <em>obj</em> is iterable and contains strings</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.cbook.is_string_like.html#matplotlib.cbook.is_string_like" title="matplotlib.cbook.is_string_like"><code class="xref py py-obj docutils literal"><span class="pre">is_string_like</span></code></a>(obj)</td>
+<td>Return True if <em>obj</em> looks like a string</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.cbook.is_writable_file_like.html#matplotlib.cbook.is_writable_file_like" title="matplotlib.cbook.is_writable_file_like"><code class="xref py py-obj docutils literal"><span class="pre">is_writable_file_like</span></code></a>(obj)</td>
+<td>return true if <em>obj</em> looks like a file object with a <em>write</em> method</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.cbook.issubclass_safe.html#matplotlib.cbook.issubclass_safe" title="matplotlib.cbook.issubclass_safe"><code class="xref py py-obj docutils literal"><span class="pre">issubclass_safe</span></code></a>(x,&nbsp;klass)</td>
+<td>return issubclass(x, klass) and return False on a TypeError</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.cbook.iterable.html#matplotlib.cbook.iterable" title="matplotlib.cbook.iterable"><code class="xref py py-obj docutils literal"><span class="pre">iterable</span></code></a>(obj)</td>
+<td>return true if <em>obj</em> is iterable</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.cbook.listFiles.html#matplotlib.cbook.listFiles" title="matplotlib.cbook.listFiles"><code class="xref py py-obj docutils literal"><span class="pre">listFiles</span></code></a>(root[,&nbsp;patterns,&nbsp;recurse,&nbsp;...])</td>
+<td>Recursively list files</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.cbook.local_over_kwdict.html#matplotlib.cbook.local_over_kwdict" title="matplotlib.cbook.local_over_kwdict"><code class="xref py py-obj docutils literal"><span class="pre">local_over_kwdict</span></code></a>(local_var,&nbsp;kwargs,&nbsp;*keys)</td>
+<td>Enforces the priority of a local variable over potentially conflicting argument(s) from a kwargs dict.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.cbook.mkdirs.html#matplotlib.cbook.mkdirs" title="matplotlib.cbook.mkdirs"><code class="xref py py-obj docutils literal"><span class="pre">mkdirs</span></code></a>(newdir[,&nbsp;mode])</td>
+<td>make directory <em>newdir</em> recursively, and set <em>mode</em>.  Equivalent to</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.cbook.onetrue.html#matplotlib.cbook.onetrue" title="matplotlib.cbook.onetrue"><code class="xref py py-obj docutils literal"><span class="pre">onetrue</span></code></a>(seq)</td>
+<td>Return <em>True</em> if one element of <em>seq</em> is <em>True</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.cbook.pieces.html#matplotlib.cbook.pieces" title="matplotlib.cbook.pieces"><code class="xref py py-obj docutils literal"><span class="pre">pieces</span></code></a>(seq[,&nbsp;num])</td>
+<td>Break up the <em>seq</em> into <em>num</em> tuples</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.cbook.popall.html#matplotlib.cbook.popall" title="matplotlib.cbook.popall"><code class="xref py py-obj docutils literal"><span class="pre">popall</span></code></a>(seq)</td>
+<td>empty a list</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.cbook.print_cycles.html#matplotlib.cbook.print_cycles" title="matplotlib.cbook.print_cycles"><code class="xref py py-obj docutils literal"><span class="pre">print_cycles</span></code></a>(objects[,&nbsp;outstream,&nbsp;show_progress])</td>
+<td><em>objects</em></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.cbook.pts_to_midstep.html#matplotlib.cbook.pts_to_midstep" title="matplotlib.cbook.pts_to_midstep"><code class="xref py py-obj docutils literal"><span class="pre">pts_to_midstep</span></code></a>(x,&nbsp;*args)</td>
+<td>Covert continuous line to pre-steps</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.cbook.pts_to_poststep.html#matplotlib.cbook.pts_to_poststep" title="matplotlib.cbook.pts_to_poststep"><code class="xref py py-obj docutils literal"><span class="pre">pts_to_poststep</span></code></a>(x,&nbsp;*args)</td>
+<td>Covert continuous line to pre-steps</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.cbook.pts_to_prestep.html#matplotlib.cbook.pts_to_prestep" title="matplotlib.cbook.pts_to_prestep"><code class="xref py py-obj docutils literal"><span class="pre">pts_to_prestep</span></code></a>(x,&nbsp;*args)</td>
+<td>Covert continuous line to pre-steps</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.cbook.recursive_remove.html#matplotlib.cbook.recursive_remove" title="matplotlib.cbook.recursive_remove"><code class="xref py py-obj docutils literal"><span class="pre">recursive_remove</span></code></a>(path)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.cbook.reduce.html#matplotlib.cbook.reduce" title="matplotlib.cbook.reduce"><code class="xref py py-obj docutils literal"><span class="pre">reduce</span></code></a>((function,&nbsp;sequence[,&nbsp;initial])&nbsp;-&gt;&nbsp;value)</td>
+<td>Apply a function of two arguments cumulatively to the items of a sequence, from left to right, so as to reduce the sequence to a single value.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.cbook.report_memory.html#matplotlib.cbook.report_memory" title="matplotlib.cbook.report_memory"><code class="xref py py-obj docutils literal"><span class="pre">report_memory</span></code></a>([i])</td>
+<td>return the memory consumed by process</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.cbook.restrict_dict.html#matplotlib.cbook.restrict_dict" title="matplotlib.cbook.restrict_dict"><code class="xref py py-obj docutils literal"><span class="pre">restrict_dict</span></code></a>(d,&nbsp;keys)</td>
+<td>Return a dictionary that contains those keys that appear in both d and keys, with values from d.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.cbook.reverse_dict.html#matplotlib.cbook.reverse_dict" title="matplotlib.cbook.reverse_dict"><code class="xref py py-obj docutils literal"><span class="pre">reverse_dict</span></code></a>(d)</td>
+<td>reverse the dictionary &#8211; may lose data if values are not unique!</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.cbook.safe_first_element.html#matplotlib.cbook.safe_first_element" title="matplotlib.cbook.safe_first_element"><code class="xref py py-obj docutils literal"><span class="pre">safe_first_element</span></code></a>(obj)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.cbook.safe_masked_invalid.html#matplotlib.cbook.safe_masked_invalid" title="matplotlib.cbook.safe_masked_invalid"><code class="xref py py-obj docutils literal"><span class="pre">safe_masked_invalid</span></code></a>(x)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.cbook.safezip.html#matplotlib.cbook.safezip" title="matplotlib.cbook.safezip"><code class="xref py py-obj docutils literal"><span class="pre">safezip</span></code></a>(*args)</td>
+<td>make sure <em>args</em> are equal len before zipping</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.cbook.simple_linear_interpolation.html#matplotlib.cbook.simple_linear_interpolation" title="matplotlib.cbook.simple_linear_interpolation"><code class="xref py py-obj docutils literal"><span class="pre">simple_linear_interpolation</span></code></a>(a,&nbsp;steps)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.cbook.soundex.html#matplotlib.cbook.soundex" title="matplotlib.cbook.soundex"><code class="xref py py-obj docutils literal"><span class="pre">soundex</span></code></a>(name[,&nbsp;len])</td>
+<td>soundex module conforming to Odell-Russell algorithm</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.cbook.strip_math.html#matplotlib.cbook.strip_math" title="matplotlib.cbook.strip_math"><code class="xref py py-obj docutils literal"><span class="pre">strip_math</span></code></a>(s)</td>
+<td>remove latex formatting from mathtext</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.cbook.to_filehandle.html#matplotlib.cbook.to_filehandle" title="matplotlib.cbook.to_filehandle"><code class="xref py py-obj docutils literal"><span class="pre">to_filehandle</span></code></a>(fname[,&nbsp;flag,&nbsp;return_opened])</td>
+<td><em>fname</em> can be a filename or a file handle.  Support for gzipped</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.cbook.unicode_safe.html#matplotlib.cbook.unicode_safe" title="matplotlib.cbook.unicode_safe"><code class="xref py py-obj docutils literal"><span class="pre">unicode_safe</span></code></a>(s)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.cbook.unique.html#matplotlib.cbook.unique" title="matplotlib.cbook.unique"><code class="xref py py-obj docutils literal"><span class="pre">unique</span></code></a>(x)</td>
+<td>Return a list of unique elements of <em>x</em></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.cbook.unmasked_index_ranges.html#matplotlib.cbook.unmasked_index_ranges" title="matplotlib.cbook.unmasked_index_ranges"><code class="xref py py-obj docutils literal"><span class="pre">unmasked_index_ranges</span></code></a>(mask[,&nbsp;compressed])</td>
+<td>Find index ranges where <em>mask</em> is <em>False</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.cbook.violin_stats.html#matplotlib.cbook.violin_stats" title="matplotlib.cbook.violin_stats"><code class="xref py py-obj docutils literal"><span class="pre">violin_stats</span></code></a>(X,&nbsp;method[,&nbsp;points])</td>
+<td>Returns a list of dictionaries of data which can be used to draw a series of violin plots.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.cbook.warn_deprecated.html#matplotlib.cbook.warn_deprecated" title="matplotlib.cbook.warn_deprecated"><code class="xref py py-obj docutils literal"><span class="pre">warn_deprecated</span></code></a>(since[,&nbsp;message,&nbsp;name,&nbsp;...])</td>
+<td>Used to display deprecation warning in a standard way.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.cbook.wrap.html#matplotlib.cbook.wrap" title="matplotlib.cbook.wrap"><code class="xref py py-obj docutils literal"><span class="pre">wrap</span></code></a>(prefix,&nbsp;text,&nbsp;cols)</td>
+<td>wrap <em>text</em> with <em>prefix</em> at length <em>cols</em></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="classes">
+<h2>6.2. Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.cbook.Bunch.html#matplotlib.cbook.Bunch" title="matplotlib.cbook.Bunch"><code class="xref py py-obj docutils literal"><span class="pre">Bunch</span></code></a>(**kwds)</td>
+<td>Often we want to just collect a bunch of stuff together, naming each item of the bunch; a dictionary&#8217;s OK for that, but a small do- nothing class is even handier, and prettier to use.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.cbook.CallbackRegistry.html#matplotlib.cbook.CallbackRegistry" title="matplotlib.cbook.CallbackRegistry"><code class="xref py py-obj docutils literal"><span class="pre">CallbackRegistry</span></code></a>()</td>
+<td>Handle registering and disconnecting for a set of signals and</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.cbook.GetRealpathAndStat.html#matplotlib.cbook.GetRealpathAndStat" title="matplotlib.cbook.GetRealpathAndStat"><code class="xref py py-obj docutils literal"><span class="pre">GetRealpathAndStat</span></code></a>()</td>
+<td><p class="rubric">Methods</p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.cbook.Grouper.html#matplotlib.cbook.Grouper" title="matplotlib.cbook.Grouper"><code class="xref py py-obj docutils literal"><span class="pre">Grouper</span></code></a>([init])</td>
+<td>This class provides a lightweight way to group arbitrary objects together into disjoint sets when a full-blown graph data structure would be overkill.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.cbook.MemoryMonitor.html#matplotlib.cbook.MemoryMonitor" title="matplotlib.cbook.MemoryMonitor"><code class="xref py py-obj docutils literal"><span class="pre">MemoryMonitor</span></code></a>([nmax])</td>
+<td><p class="rubric">Methods</p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.cbook.Null.html#matplotlib.cbook.Null" title="matplotlib.cbook.Null"><code class="xref py py-obj docutils literal"><span class="pre">Null</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>Null objects always and reliably &#8220;do nothing.&#8221;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.cbook.RingBuffer.html#matplotlib.cbook.RingBuffer" title="matplotlib.cbook.RingBuffer"><code class="xref py py-obj docutils literal"><span class="pre">RingBuffer</span></code></a>(size_max)</td>
+<td>class that implements a not-yet-full buffer</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.cbook.Sorter.html#matplotlib.cbook.Sorter" title="matplotlib.cbook.Sorter"><code class="xref py py-obj docutils literal"><span class="pre">Sorter</span></code></a></td>
+<td>Sort by attribute or item</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.cbook.Stack.html#matplotlib.cbook.Stack" title="matplotlib.cbook.Stack"><code class="xref py py-obj docutils literal"><span class="pre">Stack</span></code></a>([default])</td>
+<td>Implement a stack where elements can be pushed on and you can move back and forth.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.cbook.WeakKeyDictionary.html#matplotlib.cbook.WeakKeyDictionary" title="matplotlib.cbook.WeakKeyDictionary"><code class="xref py py-obj docutils literal"><span class="pre">WeakKeyDictionary</span></code></a>([dict])</td>
+<td>Mapping class that references keys weakly.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.cbook.Xlator.html#matplotlib.cbook.Xlator" title="matplotlib.cbook.Xlator"><code class="xref py py-obj docutils literal"><span class="pre">Xlator</span></code></a></td>
+<td>All-in-one multiple-string-substitution class</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.cbook.converter.html#matplotlib.cbook.converter" title="matplotlib.cbook.converter"><code class="xref py py-obj docutils literal"><span class="pre">converter</span></code></a>([missing,&nbsp;missingval])</td>
+<td>Base class for handling string -&gt; python type with support for</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.cbook.maxdict.html#matplotlib.cbook.maxdict" title="matplotlib.cbook.maxdict"><code class="xref py py-obj docutils literal"><span class="pre">maxdict</span></code></a>(maxsize)</td>
+<td>A dictionary with a maximum size; this doesn&#8217;t override all the</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.cbook.ref.html#matplotlib.cbook.ref" title="matplotlib.cbook.ref"><code class="xref py py-obj docutils literal"><span class="pre">ref</span></code></a></td>
+<td>alias of <code class="xref py py-class docutils literal"><span class="pre">weakref</span></code></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.cbook.repeat.html#matplotlib.cbook.repeat" title="matplotlib.cbook.repeat"><code class="xref py py-obj docutils literal"><span class="pre">repeat</span></code></a></td>
+<td>for the specified number of times.  If not specified, returns the object</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.cbook.silent_list.html#matplotlib.cbook.silent_list" title="matplotlib.cbook.silent_list"><code class="xref py py-obj docutils literal"><span class="pre">silent_list</span></code></a>(type[,&nbsp;seq])</td>
+<td>override repr when returning a list of matplotlib artists to</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.cbook.todate.html#matplotlib.cbook.todate" title="matplotlib.cbook.todate"><code class="xref py py-obj docutils literal"><span class="pre">todate</span></code></a>([fmt,&nbsp;missing,&nbsp;missingval])</td>
+<td>convert to a date or None</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.cbook.todatetime.html#matplotlib.cbook.todatetime" title="matplotlib.cbook.todatetime"><code class="xref py py-obj docutils literal"><span class="pre">todatetime</span></code></a>([fmt,&nbsp;missing,&nbsp;missingval])</td>
+<td>convert to a datetime or None</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.cbook.tofloat.html#matplotlib.cbook.tofloat" title="matplotlib.cbook.tofloat"><code class="xref py py-obj docutils literal"><span class="pre">tofloat</span></code></a>([missing,&nbsp;missingval])</td>
+<td>convert to a float or None</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.cbook.toint.html#matplotlib.cbook.toint" title="matplotlib.cbook.toint"><code class="xref py py-obj docutils literal"><span class="pre">toint</span></code></a>([missing,&nbsp;missingval])</td>
+<td>convert to an int or None</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.cbook.tostr.html#matplotlib.cbook.tostr" title="matplotlib.cbook.tostr"><code class="xref py py-obj docutils literal"><span class="pre">tostr</span></code></a>([missing,&nbsp;missingval])</td>
+<td>convert to string or None</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.cbook.xrange.html#matplotlib.cbook.xrange" title="matplotlib.cbook.xrange"><code class="xref py py-obj docutils literal"><span class="pre">xrange</span></code></a></td>
+<td>xrange(start, stop[, step]) -&gt; xrange object</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.cbook.zip.html#matplotlib.cbook.zip" title="matplotlib.cbook.zip"><code class="xref py py-obj docutils literal"><span class="pre">zip</span></code></a></td>
+<td>alias of <code class="xref py py-class docutils literal"><span class="pre">izip</span></code></td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="exceptions">
+<h2>6.3. Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.cbook.IgnoredKeywordWarning.html#matplotlib.cbook.IgnoredKeywordWarning" title="matplotlib.cbook.IgnoredKeywordWarning"><code class="xref py py-obj docutils literal"><span class="pre">IgnoredKeywordWarning</span></code></a></td>
+<td>A class for issuing warnings about keyword arguments that will be ignored</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.cbook.MatplotlibDeprecationWarning.html#matplotlib.cbook.MatplotlibDeprecationWarning" title="matplotlib.cbook.MatplotlibDeprecationWarning"><code class="xref py py-obj docutils literal"><span class="pre">MatplotlibDeprecationWarning</span></code></a></td>
+<td>A class for issuing deprecation warnings for Matplotlib users.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.cbook.mplDeprecation.html#matplotlib.cbook.mplDeprecation" title="matplotlib.cbook.mplDeprecation"><code class="xref py py-obj docutils literal"><span class="pre">mplDeprecation</span></code></a></td>
+<td>alias of <a class="reference internal" href="matplotlib.cbook.MatplotlibDeprecationWarning.html#matplotlib.cbook.MatplotlibDeprecationWarning" title="matplotlib.cbook.MatplotlibDeprecationWarning"><code class="xref py py-class docutils literal"><span class="pre">MatplotlibDeprecationWarning</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.cbook.align_iterators.html" class="btn btn-neutral float-right" title="6.1.1. matplotlib.cbook.align_iterators" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="generated/matplotlib.patches.zip.html" class="btn btn-neutral" title="5.2.23. matplotlib.patches.zip" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../static/jquery.js"></script>
+      <script type="text/javascript" src="../static/underscore.js"></script>
+      <script type="text/javascript" src="../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -83,8 +83,15 @@
             
                 <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.pyplot.html">1. matplotlib.pyplot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.cm.html">2. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.cm.html">3. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.backend_bases.html">4. matplotlib.backend_bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.patches.html">5. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.cbook.html">6. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.image.html">8. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.widgets.html">9. matplotlib.widgets</a></li>
 </ul>
 
             
@@ -182,7 +189,7 @@
 <span class="kn">import</span> <span class="nn">numpy.ma</span> <span class="k">as</span> <span class="nn">ma</span>
 
 
-<span class="k">class</span> <span class="nc">MatplotlibDeprecationWarning</span><span class="p">(</span><span class="ne">UserWarning</span><span class="p">):</span>
+<div class="viewcode-block" id="MatplotlibDeprecationWarning"><a class="viewcode-back" href="../../generated/matplotlib.cbook.MatplotlibDeprecationWarning.html#matplotlib.cbook.MatplotlibDeprecationWarning">[docs]</a><span class="k">class</span> <span class="nc">MatplotlibDeprecationWarning</span><span class="p">(</span><span class="ne">UserWarning</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A class for issuing deprecation warnings for Matplotlib users.</span>
 
@@ -193,7 +200,7 @@
 
 <span class="sd">    http://docs.python.org/dev/whatsnew/2.7.html#the-future-for-python-2-x</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">pass</span>
+    <span class="k">pass</span></div>
 
 <span class="n">mplDeprecation</span> <span class="o">=</span> <span class="n">MatplotlibDeprecationWarning</span>
 
@@ -227,7 +234,7 @@
     <span class="k">return</span> <span class="n">message</span>
 
 
-<span class="k">def</span> <span class="nf">warn_deprecated</span><span class="p">(</span>
+<div class="viewcode-block" id="warn_deprecated"><a class="viewcode-back" href="../../generated/matplotlib.cbook.warn_deprecated.html#matplotlib.cbook.warn_deprecated">[docs]</a><span class="k">def</span> <span class="nf">warn_deprecated</span><span class="p">(</span>
         <span class="n">since</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">alternative</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">pending</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
         <span class="n">obj_type</span><span class="o">=</span><span class="s1">&#39;attribute&#39;</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
@@ -282,10 +289,10 @@
     <span class="n">message</span> <span class="o">=</span> <span class="n">_generate_deprecation_message</span><span class="p">(</span>
         <span class="n">since</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">alternative</span><span class="p">,</span> <span class="n">pending</span><span class="p">,</span> <span class="n">obj_type</span><span class="p">)</span>
 
-    <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">mplDeprecation</span><span class="p">,</span> <span class="n">stacklevel</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">mplDeprecation</span><span class="p">,</span> <span class="n">stacklevel</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></div>
 
 
-<span class="k">def</span> <span class="nf">deprecated</span><span class="p">(</span><span class="n">since</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">alternative</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">pending</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<div class="viewcode-block" id="deprecated"><a class="viewcode-back" href="../../generated/matplotlib.cbook.deprecated.html#matplotlib.cbook.deprecated">[docs]</a><span class="k">def</span> <span class="nf">deprecated</span><span class="p">(</span><span class="n">since</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">alternative</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">pending</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
                <span class="n">obj_type</span><span class="o">=</span><span class="s1">&#39;function&#39;</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Decorator to mark a function as deprecated.</span>
@@ -389,7 +396,7 @@
             <span class="n">deprecated_func</span> <span class="o">=</span> <span class="nb">classmethod</span><span class="p">(</span><span class="n">deprecated_func</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">deprecated_func</span>
 
-    <span class="k">return</span> <span class="n">deprecate</span>
+    <span class="k">return</span> <span class="n">deprecate</span></div>
 
 
 <span class="c1"># On some systems, locale.getpreferredencoding returns None,</span>
@@ -401,7 +408,7 @@
 <span class="c1"># On some systems, getpreferredencoding sets the locale, which has</span>
 <span class="c1"># side effects.  Passing False eliminates those side effects.</span>
 
-<span class="k">def</span> <span class="nf">unicode_safe</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<div class="viewcode-block" id="unicode_safe"><a class="viewcode-back" href="../../generated/matplotlib.cbook.unicode_safe.html#matplotlib.cbook.unicode_safe">[docs]</a><span class="k">def</span> <span class="nf">unicode_safe</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="kn">import</span> <span class="nn">matplotlib</span>
 
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">):</span>
@@ -417,82 +424,82 @@
             <span class="k">return</span> <span class="n">six</span><span class="o">.</span><span class="n">text_type</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">six</span><span class="o">.</span><span class="n">text_type</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">preferredencoding</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">s</span>
+    <span class="k">return</span> <span class="n">s</span></div>
 
 
-<span class="k">class</span> <span class="nc">converter</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="converter"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.converter.html#matplotlib.cbook.converter">[docs]</a><span class="k">class</span> <span class="nc">converter</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Base class for handling string -&gt; python type with support for</span>
 <span class="sd">    missing values</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">missing</span><span class="o">=</span><span class="s1">&#39;Null&#39;</span><span class="p">,</span> <span class="n">missingval</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="converter.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.converter.__init__.html#matplotlib.cbook.converter.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">missing</span><span class="o">=</span><span class="s1">&#39;Null&#39;</span><span class="p">,</span> <span class="n">missingval</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">missing</span> <span class="o">=</span> <span class="n">missing</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">missingval</span> <span class="o">=</span> <span class="n">missingval</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">missingval</span> <span class="o">=</span> <span class="n">missingval</span></div>
 
     <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">missing</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">missingval</span>
         <span class="k">return</span> <span class="n">s</span>
 
-    <span class="k">def</span> <span class="nf">is_missing</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
-        <span class="k">return</span> <span class="ow">not</span> <span class="n">s</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="ow">or</span> <span class="n">s</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">missing</span>
+<div class="viewcode-block" id="converter.is_missing"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.converter.is_missing.html#matplotlib.cbook.converter.is_missing">[docs]</a>    <span class="k">def</span> <span class="nf">is_missing</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="n">s</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="ow">or</span> <span class="n">s</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">missing</span></div></div>
 
 
-<span class="k">class</span> <span class="nc">tostr</span><span class="p">(</span><span class="n">converter</span><span class="p">):</span>
+<div class="viewcode-block" id="tostr"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.tostr.html#matplotlib.cbook.tostr">[docs]</a><span class="k">class</span> <span class="nc">tostr</span><span class="p">(</span><span class="n">converter</span><span class="p">):</span>
     <span class="s1">&#39;convert to string or None&#39;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">missing</span><span class="o">=</span><span class="s1">&#39;Null&#39;</span><span class="p">,</span> <span class="n">missingval</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
-        <span class="n">converter</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">missing</span><span class="o">=</span><span class="n">missing</span><span class="p">,</span> <span class="n">missingval</span><span class="o">=</span><span class="n">missingval</span><span class="p">)</span>
+<div class="viewcode-block" id="tostr.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.tostr.__init__.html#matplotlib.cbook.tostr.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">missing</span><span class="o">=</span><span class="s1">&#39;Null&#39;</span><span class="p">,</span> <span class="n">missingval</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="n">converter</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">missing</span><span class="o">=</span><span class="n">missing</span><span class="p">,</span> <span class="n">missingval</span><span class="o">=</span><span class="n">missingval</span><span class="p">)</span></div></div>
 
 
-<span class="k">class</span> <span class="nc">todatetime</span><span class="p">(</span><span class="n">converter</span><span class="p">):</span>
+<div class="viewcode-block" id="todatetime"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.todatetime.html#matplotlib.cbook.todatetime">[docs]</a><span class="k">class</span> <span class="nc">todatetime</span><span class="p">(</span><span class="n">converter</span><span class="p">):</span>
     <span class="s1">&#39;convert to a datetime or None&#39;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">missing</span><span class="o">=</span><span class="s1">&#39;Null&#39;</span><span class="p">,</span> <span class="n">missingval</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="todatetime.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.todatetime.__init__.html#matplotlib.cbook.todatetime.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">missing</span><span class="o">=</span><span class="s1">&#39;Null&#39;</span><span class="p">,</span> <span class="n">missingval</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="s1">&#39;use a :func:`time.strptime` format string for conversion&#39;</span>
         <span class="n">converter</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">missing</span><span class="p">,</span> <span class="n">missingval</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">fmt</span> <span class="o">=</span> <span class="n">fmt</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fmt</span> <span class="o">=</span> <span class="n">fmt</span></div>
 
     <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_missing</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">missingval</span>
         <span class="n">tup</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fmt</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="o">*</span><span class="n">tup</span><span class="p">[:</span><span class="mi">6</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="o">*</span><span class="n">tup</span><span class="p">[:</span><span class="mi">6</span><span class="p">])</span></div>
 
 
-<span class="k">class</span> <span class="nc">todate</span><span class="p">(</span><span class="n">converter</span><span class="p">):</span>
+<div class="viewcode-block" id="todate"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.todate.html#matplotlib.cbook.todate">[docs]</a><span class="k">class</span> <span class="nc">todate</span><span class="p">(</span><span class="n">converter</span><span class="p">):</span>
     <span class="s1">&#39;convert to a date or None&#39;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">missing</span><span class="o">=</span><span class="s1">&#39;Null&#39;</span><span class="p">,</span> <span class="n">missingval</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="todate.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.todate.__init__.html#matplotlib.cbook.todate.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">missing</span><span class="o">=</span><span class="s1">&#39;Null&#39;</span><span class="p">,</span> <span class="n">missingval</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="s1">&#39;use a :func:`time.strptime` format string for conversion&#39;</span>
         <span class="n">converter</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">missing</span><span class="p">,</span> <span class="n">missingval</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">fmt</span> <span class="o">=</span> <span class="n">fmt</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fmt</span> <span class="o">=</span> <span class="n">fmt</span></div>
 
     <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_missing</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">missingval</span>
         <span class="n">tup</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fmt</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="o">*</span><span class="n">tup</span><span class="p">[:</span><span class="mi">3</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="o">*</span><span class="n">tup</span><span class="p">[:</span><span class="mi">3</span><span class="p">])</span></div>
 
 
-<span class="k">class</span> <span class="nc">tofloat</span><span class="p">(</span><span class="n">converter</span><span class="p">):</span>
+<div class="viewcode-block" id="tofloat"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.tofloat.html#matplotlib.cbook.tofloat">[docs]</a><span class="k">class</span> <span class="nc">tofloat</span><span class="p">(</span><span class="n">converter</span><span class="p">):</span>
     <span class="s1">&#39;convert to a float or None&#39;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">missing</span><span class="o">=</span><span class="s1">&#39;Null&#39;</span><span class="p">,</span> <span class="n">missingval</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="tofloat.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.tofloat.__init__.html#matplotlib.cbook.tofloat.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">missing</span><span class="o">=</span><span class="s1">&#39;Null&#39;</span><span class="p">,</span> <span class="n">missingval</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="n">converter</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">missing</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">missingval</span> <span class="o">=</span> <span class="n">missingval</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">missingval</span> <span class="o">=</span> <span class="n">missingval</span></div>
 
     <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_missing</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">missingval</span>
-        <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">s</span><span class="p">)</span></div>
 
 
-<span class="k">class</span> <span class="nc">toint</span><span class="p">(</span><span class="n">converter</span><span class="p">):</span>
+<div class="viewcode-block" id="toint"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.toint.html#matplotlib.cbook.toint">[docs]</a><span class="k">class</span> <span class="nc">toint</span><span class="p">(</span><span class="n">converter</span><span class="p">):</span>
     <span class="s1">&#39;convert to an int or None&#39;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">missing</span><span class="o">=</span><span class="s1">&#39;Null&#39;</span><span class="p">,</span> <span class="n">missingval</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="n">converter</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">missing</span><span class="p">)</span>
+<div class="viewcode-block" id="toint.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.toint.__init__.html#matplotlib.cbook.toint.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">missing</span><span class="o">=</span><span class="s1">&#39;Null&#39;</span><span class="p">,</span> <span class="n">missingval</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="n">converter</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">missing</span><span class="p">)</span></div>
 
     <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_missing</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">missingval</span>
-        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">)</span></div>
 
 
 <span class="k">class</span> <span class="nc">_BoundMethodProxy</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
@@ -600,7 +607,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_hash</span>
 
 
-<span class="k">class</span> <span class="nc">CallbackRegistry</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="CallbackRegistry"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.CallbackRegistry.html#matplotlib.cbook.CallbackRegistry">[docs]</a><span class="k">class</span> <span class="nc">CallbackRegistry</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Handle registering and disconnecting for a set of signals and</span>
 <span class="sd">    callbacks:</span>
@@ -638,10 +645,10 @@
 <span class="sd">    `&quot;Mindtrove&quot; blog</span>
 <span class="sd">    &lt;http://mindtrove.info/articles/python-weak-references/&gt;`_.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="CallbackRegistry.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.CallbackRegistry.__init__.html#matplotlib.cbook.CallbackRegistry.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">callbacks</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_cid</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_func_cid_map</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_func_cid_map</span> <span class="o">=</span> <span class="p">{}</span></div>
 
     <span class="k">def</span> <span class="nf">__getstate__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># We cannot currently pickle the callables in the registry, so</span>
@@ -652,7 +659,7 @@
         <span class="c1"># re-initialise an empty callback registry</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="nf">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
+<div class="viewcode-block" id="CallbackRegistry.connect"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.CallbackRegistry.connect.html#matplotlib.cbook.CallbackRegistry.connect">[docs]</a>    <span class="k">def</span> <span class="nf">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        register *func* to be called when a signal *s* is generated</span>
 <span class="sd">        func will be called</span>
@@ -670,7 +677,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_func_cid_map</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">proxy</span><span class="p">]</span> <span class="o">=</span> <span class="n">cid</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">callbacks</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="nb">dict</span><span class="p">())</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">callbacks</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="n">cid</span><span class="p">]</span> <span class="o">=</span> <span class="n">proxy</span>
-        <span class="k">return</span> <span class="n">cid</span>
+        <span class="k">return</span> <span class="n">cid</span></div>
 
     <span class="k">def</span> <span class="nf">_remove_proxy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">proxy</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">signal</span><span class="p">,</span> <span class="n">proxies</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_func_cid_map</span><span class="p">)):</span>
@@ -683,7 +690,7 @@
                 <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">callbacks</span><span class="p">[</span><span class="n">signal</span><span class="p">]</span>
                 <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">_func_cid_map</span><span class="p">[</span><span class="n">signal</span><span class="p">]</span>
 
-    <span class="k">def</span> <span class="nf">disconnect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cid</span><span class="p">):</span>
+<div class="viewcode-block" id="CallbackRegistry.disconnect"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.CallbackRegistry.disconnect.html#matplotlib.cbook.CallbackRegistry.disconnect">[docs]</a>    <span class="k">def</span> <span class="nf">disconnect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cid</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        disconnect the callback registered with callback id *cid*</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -698,9 +705,9 @@
                     <span class="k">for</span> <span class="n">function</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="n">functions</span><span class="p">)):</span>
                         <span class="k">if</span> <span class="n">value</span> <span class="o">==</span> <span class="n">cid</span><span class="p">:</span>
                             <span class="k">del</span> <span class="n">functions</span><span class="p">[</span><span class="n">function</span><span class="p">]</span>
-                <span class="k">return</span>
+                <span class="k">return</span></div>
 
-    <span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="CallbackRegistry.process"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.CallbackRegistry.process.html#matplotlib.cbook.CallbackRegistry.process">[docs]</a>    <span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        process signal *s*.  All of the functions registered to receive</span>
 <span class="sd">        callbacks on *s* will be called with *\*args* and *\*\*kwargs*</span>
@@ -710,16 +717,16 @@
                 <span class="k">try</span><span class="p">:</span>
                     <span class="n">proxy</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
                 <span class="k">except</span> <span class="ne">ReferenceError</span><span class="p">:</span>
-                    <span class="bp">self</span><span class="o">.</span><span class="n">_remove_proxy</span><span class="p">(</span><span class="n">proxy</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_remove_proxy</span><span class="p">(</span><span class="n">proxy</span><span class="p">)</span></div></div>
 
 
-<div class="viewcode-block" id="silent_list"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.silent_list.html#matplotlib.pyplot.silent_list">[docs]</a><span class="k">class</span> <span class="nc">silent_list</span><span class="p">(</span><span class="nb">list</span><span class="p">):</span>
+<div class="viewcode-block" id="silent_list"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.silent_list.html#matplotlib.cbook.silent_list">[docs]</a><span class="k">class</span> <span class="nc">silent_list</span><span class="p">(</span><span class="nb">list</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    override repr when returning a list of matplotlib artists to</span>
 <span class="sd">    prevent long, meaningless output.  This is meant to be used for a</span>
 <span class="sd">    homogeneous list of a given type</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-<div class="viewcode-block" id="silent_list.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.silent_list.__init__.html#matplotlib.pyplot.silent_list.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">seq</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="silent_list.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.silent_list.__init__.html#matplotlib.cbook.silent_list.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">seq</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="nb">type</span>
         <span class="k">if</span> <span class="n">seq</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span></div>
@@ -739,15 +746,15 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">state</span><span class="p">[</span><span class="s1">&#39;seq&#39;</span><span class="p">])</span></div>
 
 
-<span class="k">class</span> <span class="nc">IgnoredKeywordWarning</span><span class="p">(</span><span class="ne">UserWarning</span><span class="p">):</span>
+<div class="viewcode-block" id="IgnoredKeywordWarning"><a class="viewcode-back" href="../../generated/matplotlib.cbook.IgnoredKeywordWarning.html#matplotlib.cbook.IgnoredKeywordWarning">[docs]</a><span class="k">class</span> <span class="nc">IgnoredKeywordWarning</span><span class="p">(</span><span class="ne">UserWarning</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A class for issuing warnings about keyword arguments that will be ignored</span>
 <span class="sd">    by matplotlib</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">pass</span>
+    <span class="k">pass</span></div>
 
 
-<span class="k">def</span> <span class="nf">local_over_kwdict</span><span class="p">(</span><span class="n">local_var</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">,</span> <span class="o">*</span><span class="n">keys</span><span class="p">):</span>
+<div class="viewcode-block" id="local_over_kwdict"><a class="viewcode-back" href="../../generated/matplotlib.cbook.local_over_kwdict.html#matplotlib.cbook.local_over_kwdict">[docs]</a><span class="k">def</span> <span class="nf">local_over_kwdict</span><span class="p">(</span><span class="n">local_var</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">,</span> <span class="o">*</span><span class="n">keys</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Enforces the priority of a local variable over potentially conflicting</span>
 <span class="sd">    argument(s) from a kwargs dict. The following possible output values are</span>
@@ -792,19 +799,19 @@
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;&quot;</span><span class="si">%s</span><span class="s1">&quot; keyword argument will be ignored&#39;</span> <span class="o">%</span> <span class="n">key</span><span class="p">,</span>
                               <span class="n">IgnoredKeywordWarning</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">out</span>
+    <span class="k">return</span> <span class="n">out</span></div>
 
 
-<span class="k">def</span> <span class="nf">strip_math</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<div class="viewcode-block" id="strip_math"><a class="viewcode-back" href="../../generated/matplotlib.cbook.strip_math.html#matplotlib.cbook.strip_math">[docs]</a><span class="k">def</span> <span class="nf">strip_math</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="s1">&#39;remove latex formatting from mathtext&#39;</span>
     <span class="n">remove</span> <span class="o">=</span> <span class="p">(</span><span class="s1">r&#39;\mathdefault&#39;</span><span class="p">,</span> <span class="s1">r&#39;\rm&#39;</span><span class="p">,</span> <span class="s1">r&#39;\cal&#39;</span><span class="p">,</span> <span class="s1">r&#39;\tt&#39;</span><span class="p">,</span> <span class="s1">r&#39;\it&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;{&#39;</span><span class="p">,</span> <span class="s1">&#39;}&#39;</span><span class="p">)</span>
     <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
     <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">remove</span><span class="p">:</span>
         <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">s</span>
+    <span class="k">return</span> <span class="n">s</span></div>
 
 
-<span class="k">class</span> <span class="nc">Bunch</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="Bunch"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.Bunch.html#matplotlib.cbook.Bunch">[docs]</a><span class="k">class</span> <span class="nc">Bunch</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Often we want to just collect a bunch of stuff together, naming each</span>
 <span class="sd">    item of the bunch; a dictionary&#39;s OK for that, but a small do- nothing</span>
@@ -817,31 +824,31 @@
 <span class="sd">      By: Alex Martelli</span>
 <span class="sd">      From: http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/52308</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__dict__</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds</span><span class="p">)</span>
+<div class="viewcode-block" id="Bunch.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.Bunch.__init__.html#matplotlib.cbook.Bunch.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__dict__</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds</span><span class="p">)</span></div>
 
     <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">keys</span> <span class="o">=</span> <span class="n">six</span><span class="o">.</span><span class="n">iterkeys</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__dict__</span><span class="p">)</span>
         <span class="k">return</span> <span class="s1">&#39;Bunch(</span><span class="si">%s</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">=</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__dict__</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
                                         <span class="k">for</span> <span class="n">k</span>
-                                        <span class="ow">in</span> <span class="n">keys</span><span class="p">])</span>
+                                        <span class="ow">in</span> <span class="n">keys</span><span class="p">])</span></div>
 
 
-<span class="k">def</span> <span class="nf">unique</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="viewcode-block" id="unique"><a class="viewcode-back" href="../../generated/matplotlib.cbook.unique.html#matplotlib.cbook.unique">[docs]</a><span class="k">def</span> <span class="nf">unique</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="s1">&#39;Return a list of unique elements of *x*&#39;</span>
-    <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">six</span><span class="o">.</span><span class="n">iterkeys</span><span class="p">(</span><span class="nb">dict</span><span class="p">([(</span><span class="n">val</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">x</span><span class="p">])))</span>
+    <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">six</span><span class="o">.</span><span class="n">iterkeys</span><span class="p">(</span><span class="nb">dict</span><span class="p">([(</span><span class="n">val</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">x</span><span class="p">])))</span></div>
 
 
-<span class="k">def</span> <span class="nf">iterable</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+<div class="viewcode-block" id="iterable"><a class="viewcode-back" href="../../generated/matplotlib.cbook.iterable.html#matplotlib.cbook.iterable">[docs]</a><span class="k">def</span> <span class="nf">iterable</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
     <span class="s1">&#39;return true if *obj* is iterable&#39;</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="nb">iter</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
     <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">False</span>
-    <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">True</span></div>
 
 
-<div class="viewcode-block" id="is_string_like"><a class="viewcode-back" href="../../generated/matplotlib.pyplot.is_string_like.html#matplotlib.pyplot.is_string_like">[docs]</a><span class="k">def</span> <span class="nf">is_string_like</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+<div class="viewcode-block" id="is_string_like"><a class="viewcode-back" href="../../generated/matplotlib.pyplot.is_string_like.html#matplotlib.cbook.is_string_like">[docs]</a><span class="k">def</span> <span class="nf">is_string_like</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
     <span class="s1">&#39;Return True if *obj* looks like a string&#39;</span>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">six</span><span class="o">.</span><span class="n">string_types</span><span class="p">):</span>
         <span class="k">return</span> <span class="kc">True</span>
@@ -858,7 +865,7 @@
     <span class="k">return</span> <span class="kc">True</span></div>
 
 
-<span class="k">def</span> <span class="nf">is_sequence_of_strings</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+<div class="viewcode-block" id="is_sequence_of_strings"><a class="viewcode-back" href="../../generated/matplotlib.cbook.is_sequence_of_strings.html#matplotlib.cbook.is_sequence_of_strings">[docs]</a><span class="k">def</span> <span class="nf">is_sequence_of_strings</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns true if *obj* is iterable and contains strings</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -873,15 +880,15 @@
     <span class="k">for</span> <span class="n">o</span> <span class="ow">in</span> <span class="n">obj</span><span class="p">:</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">is_string_like</span><span class="p">(</span><span class="n">o</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
-    <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">True</span></div>
 
 
-<span class="k">def</span> <span class="nf">is_writable_file_like</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+<div class="viewcode-block" id="is_writable_file_like"><a class="viewcode-back" href="../../generated/matplotlib.cbook.is_writable_file_like.html#matplotlib.cbook.is_writable_file_like">[docs]</a><span class="k">def</span> <span class="nf">is_writable_file_like</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
     <span class="s1">&#39;return true if *obj* looks like a file object with a *write* method&#39;</span>
-    <span class="k">return</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="s1">&#39;write&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">six</span><span class="o">.</span><span class="n">callable</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">write</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="s1">&#39;write&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">six</span><span class="o">.</span><span class="n">callable</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">write</span><span class="p">)</span></div>
 
 
-<span class="k">def</span> <span class="nf">file_requires_unicode</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="viewcode-block" id="file_requires_unicode"><a class="viewcode-back" href="../../generated/matplotlib.cbook.file_requires_unicode.html#matplotlib.cbook.file_requires_unicode">[docs]</a><span class="k">def</span> <span class="nf">file_requires_unicode</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns `True` if the given writable file-like object requires Unicode</span>
 <span class="sd">    to be written to it.</span>
@@ -891,15 +898,15 @@
     <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">True</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="kc">False</span></div>
 
 
-<span class="k">def</span> <span class="nf">is_scalar</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+<div class="viewcode-block" id="is_scalar"><a class="viewcode-back" href="../../generated/matplotlib.cbook.is_scalar.html#matplotlib.cbook.is_scalar">[docs]</a><span class="k">def</span> <span class="nf">is_scalar</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
     <span class="s1">&#39;return true if *obj* is not string like and is not iterable&#39;</span>
-    <span class="k">return</span> <span class="ow">not</span> <span class="n">is_string_like</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">iterable</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+    <span class="k">return</span> <span class="ow">not</span> <span class="n">is_string_like</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">iterable</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="is_numlike"><a class="viewcode-back" href="../../generated/matplotlib.pyplot.is_numlike.html#matplotlib.pyplot.is_numlike">[docs]</a><span class="k">def</span> <span class="nf">is_numlike</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+<div class="viewcode-block" id="is_numlike"><a class="viewcode-back" href="../../generated/matplotlib.pyplot.is_numlike.html#matplotlib.cbook.is_numlike">[docs]</a><span class="k">def</span> <span class="nf">is_numlike</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
     <span class="s1">&#39;return true if *obj* looks like a number&#39;</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">obj</span> <span class="o">+</span> <span class="mi">1</span>
@@ -909,7 +916,7 @@
         <span class="k">return</span> <span class="kc">True</span></div>
 
 
-<span class="k">def</span> <span class="nf">to_filehandle</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">flag</span><span class="o">=</span><span class="s1">&#39;rU&#39;</span><span class="p">,</span> <span class="n">return_opened</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="viewcode-block" id="to_filehandle"><a class="viewcode-back" href="../../generated/matplotlib.cbook.to_filehandle.html#matplotlib.cbook.to_filehandle">[docs]</a><span class="k">def</span> <span class="nf">to_filehandle</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">flag</span><span class="o">=</span><span class="s1">&#39;rU&#39;</span><span class="p">,</span> <span class="n">return_opened</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    *fname* can be a filename or a file handle.  Support for gzipped</span>
 <span class="sd">    files is automatic, if the filename ends in .gz.  *flag* is a</span>
@@ -935,12 +942,12 @@
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;fname must be a string or file handle&#39;</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">return_opened</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">fh</span><span class="p">,</span> <span class="n">opened</span>
-    <span class="k">return</span> <span class="n">fh</span>
+    <span class="k">return</span> <span class="n">fh</span></div>
 
 
-<span class="k">def</span> <span class="nf">is_scalar_or_string</span><span class="p">(</span><span class="n">val</span><span class="p">):</span>
+<div class="viewcode-block" id="is_scalar_or_string"><a class="viewcode-back" href="../../generated/matplotlib.cbook.is_scalar_or_string.html#matplotlib.cbook.is_scalar_or_string">[docs]</a><span class="k">def</span> <span class="nf">is_scalar_or_string</span><span class="p">(</span><span class="n">val</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Return whether the given object is a scalar or string like.&quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">is_string_like</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">iterable</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">is_string_like</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">iterable</span><span class="p">(</span><span class="n">val</span><span class="p">)</span></div>
 
 
 <span class="k">def</span> <span class="nf">_string_to_bool</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
@@ -953,7 +960,7 @@
     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;string argument must be either &#39;on&#39; or &#39;off&#39;&quot;</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">get_sample_data</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">asfileobj</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<div class="viewcode-block" id="get_sample_data"><a class="viewcode-back" href="../../generated/matplotlib.cbook.get_sample_data.html#matplotlib.cbook.get_sample_data">[docs]</a><span class="k">def</span> <span class="nf">get_sample_data</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">asfileobj</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Return a sample data file.  *fname* is a path relative to the</span>
 <span class="sd">    `mpl-data/sample_data` directory.  If *asfileobj* is `True`</span>
@@ -988,10 +995,10 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">mode</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">path</span>
+        <span class="k">return</span> <span class="n">path</span></div>
 
 
-<span class="k">def</span> <span class="nf">flatten</span><span class="p">(</span><span class="n">seq</span><span class="p">,</span> <span class="n">scalarp</span><span class="o">=</span><span class="n">is_scalar_or_string</span><span class="p">):</span>
+<div class="viewcode-block" id="flatten"><a class="viewcode-back" href="../../generated/matplotlib.cbook.flatten.html#matplotlib.cbook.flatten">[docs]</a><span class="k">def</span> <span class="nf">flatten</span><span class="p">(</span><span class="n">seq</span><span class="p">,</span> <span class="n">scalarp</span><span class="o">=</span><span class="n">is_scalar_or_string</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns a generator of flattened nested containers</span>
 
@@ -1011,10 +1018,10 @@
             <span class="k">yield</span> <span class="n">item</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">for</span> <span class="n">subitem</span> <span class="ow">in</span> <span class="n">flatten</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">scalarp</span><span class="p">):</span>
-                <span class="k">yield</span> <span class="n">subitem</span>
+                <span class="k">yield</span> <span class="n">subitem</span></div>
 
 
-<span class="k">class</span> <span class="nc">Sorter</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="Sorter"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.Sorter.html#matplotlib.cbook.Sorter">[docs]</a><span class="k">class</span> <span class="nc">Sorter</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Sort by attribute or item</span>
 
@@ -1040,7 +1047,7 @@
             <span class="n">data</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">result</span>
         <span class="k">return</span> <span class="n">result</span>
 
-    <span class="k">def</span> <span class="nf">byItem</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">itemindex</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<div class="viewcode-block" id="Sorter.byItem"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.Sorter.byItem.html#matplotlib.cbook.Sorter.byItem">[docs]</a>    <span class="k">def</span> <span class="nf">byItem</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">itemindex</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">itemindex</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">inplace</span><span class="p">:</span>
                 <span class="n">data</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
@@ -1051,18 +1058,18 @@
             <span class="k">return</span> <span class="n">result</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">aux</span> <span class="o">=</span> <span class="p">[(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">itemindex</span><span class="p">],</span> <span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))]</span>
-            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_helper</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">aux</span><span class="p">,</span> <span class="n">inplace</span><span class="p">)</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_helper</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">aux</span><span class="p">,</span> <span class="n">inplace</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">byAttribute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">attributename</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<div class="viewcode-block" id="Sorter.byAttribute"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.Sorter.byAttribute.html#matplotlib.cbook.Sorter.byAttribute">[docs]</a>    <span class="k">def</span> <span class="nf">byAttribute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">attributename</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
         <span class="n">aux</span> <span class="o">=</span> <span class="p">[(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">attributename</span><span class="p">),</span> <span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))]</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_helper</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">aux</span><span class="p">,</span> <span class="n">inplace</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_helper</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">aux</span><span class="p">,</span> <span class="n">inplace</span><span class="p">)</span></div>
 
     <span class="c1"># a couple of handy synonyms</span>
     <span class="n">sort</span> <span class="o">=</span> <span class="n">byItem</span>
-    <span class="n">__call__</span> <span class="o">=</span> <span class="n">byItem</span>
+    <span class="n">__call__</span> <span class="o">=</span> <span class="n">byItem</span></div>
 
 
-<span class="k">class</span> <span class="nc">Xlator</span><span class="p">(</span><span class="nb">dict</span><span class="p">):</span>
+<div class="viewcode-block" id="Xlator"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.Xlator.html#matplotlib.cbook.Xlator">[docs]</a><span class="k">class</span> <span class="nc">Xlator</span><span class="p">(</span><span class="nb">dict</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    All-in-one multiple-string-substitution class</span>
 
@@ -1089,12 +1096,12 @@
         <span class="sd">&quot;&quot;&quot; Handler invoked for each regex *match* &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">0</span><span class="p">)]</span>
 
-    <span class="k">def</span> <span class="nf">xlat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+<div class="viewcode-block" id="Xlator.xlat"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.Xlator.xlat.html#matplotlib.cbook.Xlator.xlat">[docs]</a>    <span class="k">def</span> <span class="nf">xlat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot; Translate *text*, returns the modified text. &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_regex</span><span class="p">()</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_regex</span><span class="p">()</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span></div></div>
 
 
-<span class="k">def</span> <span class="nf">soundex</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="nb">len</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
+<div class="viewcode-block" id="soundex"><a class="viewcode-back" href="../../generated/matplotlib.cbook.soundex.html#matplotlib.cbook.soundex">[docs]</a><span class="k">def</span> <span class="nf">soundex</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="nb">len</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; soundex module conforming to Odell-Russell algorithm &quot;&quot;&quot;</span>
 
     <span class="c1"># digits holds the soundex values for the alphabet</span>
@@ -1119,14 +1126,14 @@
     <span class="n">sndx</span> <span class="o">=</span> <span class="n">sndx</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
 
     <span class="c1"># Return soundex code truncated or 0-padded to len characters</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">sndx</span> <span class="o">+</span> <span class="p">(</span><span class="nb">len</span> <span class="o">*</span> <span class="s1">&#39;0&#39;</span><span class="p">))[:</span><span class="nb">len</span><span class="p">]</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">sndx</span> <span class="o">+</span> <span class="p">(</span><span class="nb">len</span> <span class="o">*</span> <span class="s1">&#39;0&#39;</span><span class="p">))[:</span><span class="nb">len</span><span class="p">]</span></div>
 
 
-<span class="k">class</span> <span class="nc">Null</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="Null"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.Null.html#matplotlib.cbook.Null">[docs]</a><span class="k">class</span> <span class="nc">Null</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; Null objects always and reliably &quot;do nothing.&quot; &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="k">pass</span>
+<div class="viewcode-block" id="Null.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.Null.__init__.html#matplotlib.cbook.Null.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">pass</span></div>
 
     <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span>
@@ -1151,10 +1158,10 @@
         <span class="k">return</span> <span class="bp">self</span>
 
     <span class="k">def</span> <span class="nf">__delattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span>
+        <span class="k">return</span> <span class="bp">self</span></div>
 
 
-<span class="k">def</span> <span class="nf">mkdirs</span><span class="p">(</span><span class="n">newdir</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="mo">0o777</span><span class="p">):</span>
+<div class="viewcode-block" id="mkdirs"><a class="viewcode-back" href="../../generated/matplotlib.cbook.mkdirs.html#matplotlib.cbook.mkdirs">[docs]</a><span class="k">def</span> <span class="nf">mkdirs</span><span class="p">(</span><span class="n">newdir</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="mo">0o777</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    make directory *newdir* recursively, and set *mode*.  Equivalent to ::</span>
 
@@ -1170,11 +1177,11 @@
             <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">newdir</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">)</span>
         <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">exception</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">exception</span><span class="o">.</span><span class="n">errno</span> <span class="o">!=</span> <span class="n">errno</span><span class="o">.</span><span class="n">EEXIST</span><span class="p">:</span>
-                <span class="k">raise</span>
+                <span class="k">raise</span></div>
 
-<span class="k">class</span> <span class="nc">GetRealpathAndStat</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span> <span class="o">=</span> <span class="p">{}</span>
+<div class="viewcode-block" id="GetRealpathAndStat"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.GetRealpathAndStat.html#matplotlib.cbook.GetRealpathAndStat">[docs]</a><span class="k">class</span> <span class="nc">GetRealpathAndStat</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="GetRealpathAndStat.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.GetRealpathAndStat.__init__.html#matplotlib.cbook.GetRealpathAndStat.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span> <span class="o">=</span> <span class="p">{}</span></div>
 
     <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
         <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
@@ -1187,24 +1194,24 @@
                 <span class="n">stat_key</span> <span class="o">=</span> <span class="p">(</span><span class="n">stat</span><span class="o">.</span><span class="n">st_ino</span><span class="p">,</span> <span class="n">stat</span><span class="o">.</span><span class="n">st_dev</span><span class="p">)</span>
             <span class="n">result</span> <span class="o">=</span> <span class="n">realpath</span><span class="p">,</span> <span class="n">stat_key</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="p">[</span><span class="n">path</span><span class="p">]</span> <span class="o">=</span> <span class="n">result</span>
-        <span class="k">return</span> <span class="n">result</span>
+        <span class="k">return</span> <span class="n">result</span></div>
 <span class="n">get_realpath_and_stat</span> <span class="o">=</span> <span class="n">GetRealpathAndStat</span><span class="p">()</span>
 
 
-<span class="k">def</span> <span class="nf">dict_delall</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">keys</span><span class="p">):</span>
+<div class="viewcode-block" id="dict_delall"><a class="viewcode-back" href="../../generated/matplotlib.cbook.dict_delall.html#matplotlib.cbook.dict_delall">[docs]</a><span class="k">def</span> <span class="nf">dict_delall</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">keys</span><span class="p">):</span>
     <span class="s1">&#39;delete all of the *keys* from the :class:`dict` *d*&#39;</span>
     <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">:</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="k">del</span> <span class="n">d</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
         <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
-            <span class="k">pass</span>
+            <span class="k">pass</span></div>
 
 
-<span class="k">class</span> <span class="nc">RingBuffer</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="RingBuffer"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.RingBuffer.html#matplotlib.cbook.RingBuffer">[docs]</a><span class="k">class</span> <span class="nc">RingBuffer</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; class that implements a not-yet-full buffer &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size_max</span><span class="p">):</span>
+<div class="viewcode-block" id="RingBuffer.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.RingBuffer.__init__.html#matplotlib.cbook.RingBuffer.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size_max</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">max</span> <span class="o">=</span> <span class="n">size_max</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="p">[]</span></div>
 
     <span class="k">class</span> <span class="nc">__Full</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot; class that implements a full buffer &quot;&quot;&quot;</span>
@@ -1217,23 +1224,23 @@
             <span class="sd">&quot;&quot;&quot; return list of elements in correct order &quot;&quot;&quot;</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">cur</span><span class="p">:]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[:</span><span class="bp">self</span><span class="o">.</span><span class="n">cur</span><span class="p">]</span>
 
-    <span class="k">def</span> <span class="nf">append</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<div class="viewcode-block" id="RingBuffer.append"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.RingBuffer.append.html#matplotlib.cbook.RingBuffer.append">[docs]</a>    <span class="k">def</span> <span class="nf">append</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;append an element at the end of the buffer&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">max</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">cur</span> <span class="o">=</span> <span class="mi">0</span>
             <span class="c1"># Permanently change self&#39;s class from non-full to full</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">__class__</span> <span class="o">=</span> <span class="n">__Full</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__class__</span> <span class="o">=</span> <span class="n">__Full</span></div>
 
-    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="RingBuffer.get"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.RingBuffer.get.html#matplotlib.cbook.RingBuffer.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot; Return a list of elements from the oldest to the newest. &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span></div>
 
     <span class="k">def</span> <span class="nf">__get_item__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)]</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)]</span></div>
 
 
-<span class="k">def</span> <span class="nf">get_split_ind</span><span class="p">(</span><span class="n">seq</span><span class="p">,</span> <span class="n">N</span><span class="p">):</span>
+<div class="viewcode-block" id="get_split_ind"><a class="viewcode-back" href="../../generated/matplotlib.cbook.get_split_ind.html#matplotlib.cbook.get_split_ind">[docs]</a><span class="k">def</span> <span class="nf">get_split_ind</span><span class="p">(</span><span class="n">seq</span><span class="p">,</span> <span class="n">N</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    *seq* is a list of words.  Return the index into seq such that::</span>
 
@@ -1248,10 +1255,10 @@
         <span class="n">sLen</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>  <span class="c1"># +1 to account for the len(&#39; &#39;)</span>
         <span class="k">if</span> <span class="n">sLen</span> <span class="o">&gt;=</span> <span class="n">N</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">ind</span>
-    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span></div>
 
 
-<span class="k">def</span> <span class="nf">wrap</span><span class="p">(</span><span class="n">prefix</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">cols</span><span class="p">):</span>
+<div class="viewcode-block" id="wrap"><a class="viewcode-back" href="../../generated/matplotlib.cbook.wrap.html#matplotlib.cbook.wrap">[docs]</a><span class="k">def</span> <span class="nf">wrap</span><span class="p">(</span><span class="n">prefix</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">cols</span><span class="p">):</span>
     <span class="s1">&#39;wrap *text* with *prefix* at length *cols*&#39;</span>
     <span class="n">pad</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">prefix</span><span class="o">.</span><span class="n">expandtabs</span><span class="p">())</span>
     <span class="n">available</span> <span class="o">=</span> <span class="n">cols</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">pad</span><span class="p">)</span>
@@ -1269,7 +1276,7 @@
     <span class="n">ret</span> <span class="o">=</span> <span class="n">prefix</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lines</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
     <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
         <span class="n">ret</span> <span class="o">+=</span> <span class="n">pad</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
-    <span class="k">return</span> <span class="n">ret</span>
+    <span class="k">return</span> <span class="n">ret</span></div>
 
 <span class="c1"># A regular expression used to determine the amount of space to</span>
 <span class="c1"># remove.  It looks for the first sequence of spaces immediately</span>
@@ -1279,7 +1286,7 @@
 <span class="n">_dedent_regex</span> <span class="o">=</span> <span class="p">{}</span>
 
 
-<div class="viewcode-block" id="dedent"><a class="viewcode-back" href="../../generated/matplotlib.pyplot.dedent.html#matplotlib.pyplot.dedent">[docs]</a><span class="k">def</span> <span class="nf">dedent</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<div class="viewcode-block" id="dedent"><a class="viewcode-back" href="../../generated/matplotlib.pyplot.dedent.html#matplotlib.cbook.dedent">[docs]</a><span class="k">def</span> <span class="nf">dedent</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Remove excess indentation from docstring *s*.</span>
 
@@ -1319,7 +1326,7 @@
     <span class="k">return</span> <span class="n">result</span></div>
 
 
-<span class="k">def</span> <span class="nf">listFiles</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">patterns</span><span class="o">=</span><span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="n">recurse</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">return_folders</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<div class="viewcode-block" id="listFiles"><a class="viewcode-back" href="../../generated/matplotlib.cbook.listFiles.html#matplotlib.cbook.listFiles">[docs]</a><span class="k">def</span> <span class="nf">listFiles</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">patterns</span><span class="o">=</span><span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="n">recurse</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">return_folders</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Recursively list files</span>
 
@@ -1344,10 +1351,10 @@
         <span class="k">if</span> <span class="ow">not</span> <span class="n">recurse</span><span class="p">:</span>
             <span class="k">break</span>
 
-    <span class="k">return</span> <span class="n">results</span>
+    <span class="k">return</span> <span class="n">results</span></div>
 
 
-<span class="k">def</span> <span class="nf">get_recursive_filelist</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+<div class="viewcode-block" id="get_recursive_filelist"><a class="viewcode-back" href="../../generated/matplotlib.cbook.get_recursive_filelist.html#matplotlib.cbook.get_recursive_filelist">[docs]</a><span class="k">def</span> <span class="nf">get_recursive_filelist</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Recurse all the files and dirs in *args* ignoring symbolic links</span>
 <span class="sd">    and return the files as a list of strings</span>
@@ -1362,10 +1369,10 @@
             <span class="n">newfiles</span> <span class="o">=</span> <span class="n">listFiles</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">recurse</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">return_folders</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
             <span class="n">files</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">newfiles</span><span class="p">)</span>
 
-    <span class="k">return</span> <span class="p">[</span><span class="n">f</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">files</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">islink</span><span class="p">(</span><span class="n">f</span><span class="p">)]</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">f</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">files</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">islink</span><span class="p">(</span><span class="n">f</span><span class="p">)]</span></div>
 
 
-<span class="k">def</span> <span class="nf">pieces</span><span class="p">(</span><span class="n">seq</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+<div class="viewcode-block" id="pieces"><a class="viewcode-back" href="../../generated/matplotlib.cbook.pieces.html#matplotlib.cbook.pieces">[docs]</a><span class="k">def</span> <span class="nf">pieces</span><span class="p">(</span><span class="n">seq</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
     <span class="s2">&quot;Break up the *seq* into *num* tuples&quot;</span>
     <span class="n">start</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">while</span> <span class="mi">1</span><span class="p">:</span>
@@ -1373,10 +1380,10 @@
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">len</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
             <span class="k">break</span>
         <span class="k">yield</span> <span class="n">item</span>
-        <span class="n">start</span> <span class="o">+=</span> <span class="n">num</span>
+        <span class="n">start</span> <span class="o">+=</span> <span class="n">num</span></div>
 
 
-<span class="k">def</span> <span class="nf">exception_to_str</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="exception_to_str"><a class="viewcode-back" href="../../generated/matplotlib.cbook.exception_to_str.html#matplotlib.cbook.exception_to_str">[docs]</a><span class="k">def</span> <span class="nf">exception_to_str</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">six</span><span class="o">.</span><span class="n">PY3</span><span class="p">:</span>
         <span class="n">sh</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">StringIO</span><span class="p">()</span>
     <span class="k">else</span><span class="p">:</span>
@@ -1384,10 +1391,10 @@
     <span class="k">if</span> <span class="n">s</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">sh</span><span class="p">)</span>
     <span class="n">traceback</span><span class="o">.</span><span class="n">print_exc</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="n">sh</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">sh</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">sh</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span></div>
 
 
-<span class="k">def</span> <span class="nf">allequal</span><span class="p">(</span><span class="n">seq</span><span class="p">):</span>
+<div class="viewcode-block" id="allequal"><a class="viewcode-back" href="../../generated/matplotlib.cbook.allequal.html#matplotlib.cbook.allequal">[docs]</a><span class="k">def</span> <span class="nf">allequal</span><span class="p">(</span><span class="n">seq</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Return *True* if all elements of *seq* compare equal.  If *seq* is</span>
 <span class="sd">    0 or 1 length, return *True*</span>
@@ -1399,10 +1406,10 @@
         <span class="n">thisval</span> <span class="o">=</span> <span class="n">seq</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
         <span class="k">if</span> <span class="n">thisval</span> <span class="o">!=</span> <span class="n">val</span><span class="p">:</span>
             <span class="k">return</span> <span class="kc">False</span>
-    <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">True</span></div>
 
 
-<span class="k">def</span> <span class="nf">alltrue</span><span class="p">(</span><span class="n">seq</span><span class="p">):</span>
+<div class="viewcode-block" id="alltrue"><a class="viewcode-back" href="../../generated/matplotlib.cbook.alltrue.html#matplotlib.cbook.alltrue">[docs]</a><span class="k">def</span> <span class="nf">alltrue</span><span class="p">(</span><span class="n">seq</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Return *True* if all elements of *seq* evaluate to *True*.  If</span>
 <span class="sd">    *seq* is empty, return *False*.</span>
@@ -1412,10 +1419,10 @@
     <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">seq</span><span class="p">:</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">val</span><span class="p">:</span>
             <span class="k">return</span> <span class="kc">False</span>
-    <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">True</span></div>
 
 
-<span class="k">def</span> <span class="nf">onetrue</span><span class="p">(</span><span class="n">seq</span><span class="p">):</span>
+<div class="viewcode-block" id="onetrue"><a class="viewcode-back" href="../../generated/matplotlib.cbook.onetrue.html#matplotlib.cbook.onetrue">[docs]</a><span class="k">def</span> <span class="nf">onetrue</span><span class="p">(</span><span class="n">seq</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Return *True* if one element of *seq* is *True*.  It *seq* is</span>
 <span class="sd">    empty, return *False*.</span>
@@ -1425,10 +1432,10 @@
     <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">seq</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">val</span><span class="p">:</span>
             <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="kc">False</span></div>
 
 
-<span class="k">def</span> <span class="nf">allpairs</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="viewcode-block" id="allpairs"><a class="viewcode-back" href="../../generated/matplotlib.cbook.allpairs.html#matplotlib.cbook.allpairs">[docs]</a><span class="k">def</span> <span class="nf">allpairs</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    return all possible pairs in sequence *x*</span>
 
@@ -1436,19 +1443,19 @@
 
 <span class="sd">    .. _thread: http://groups.google.com/groups?q=all+pairs+group:*python*&amp;hl=en&amp;lr=&amp;ie=UTF-8&amp;selm=mailman.4028.1096403649.5135.python-list%40python.org&amp;rnum=1</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="p">[(</span><span class="n">s</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:]]</span>
+    <span class="k">return</span> <span class="p">[(</span><span class="n">s</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:]]</span></div>
 
 
-<span class="k">class</span> <span class="nc">maxdict</span><span class="p">(</span><span class="nb">dict</span><span class="p">):</span>
+<div class="viewcode-block" id="maxdict"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.maxdict.html#matplotlib.cbook.maxdict">[docs]</a><span class="k">class</span> <span class="nc">maxdict</span><span class="p">(</span><span class="nb">dict</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A dictionary with a maximum size; this doesn&#39;t override all the</span>
 <span class="sd">    relevant methods to contrain size, just setitem, so use with</span>
 <span class="sd">    caution</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">maxsize</span><span class="p">):</span>
+<div class="viewcode-block" id="maxdict.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.maxdict.__init__.html#matplotlib.cbook.maxdict.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">maxsize</span><span class="p">):</span>
         <span class="nb">dict</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">maxsize</span> <span class="o">=</span> <span class="n">maxsize</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_killkeys</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_killkeys</span> <span class="o">=</span> <span class="p">[]</span></div>
 
     <span class="k">def</span> <span class="nf">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">k</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
@@ -1456,19 +1463,19 @@
                 <span class="k">del</span> <span class="bp">self</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_killkeys</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
                 <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">_killkeys</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_killkeys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
-        <span class="nb">dict</span><span class="o">.</span><span class="n">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+        <span class="nb">dict</span><span class="o">.</span><span class="n">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span></div>
 
 
-<span class="k">class</span> <span class="nc">Stack</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="Stack"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.Stack.html#matplotlib.cbook.Stack">[docs]</a><span class="k">class</span> <span class="nc">Stack</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Implement a stack where elements can be pushed on and you can move</span>
 <span class="sd">    back and forth.  But no pop.  Should mimic home / back / forward</span>
 <span class="sd">    in a browser</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="Stack.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.Stack.__init__.html#matplotlib.cbook.Stack.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_default</span> <span class="o">=</span> <span class="n">default</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_default</span> <span class="o">=</span> <span class="n">default</span></div>
 
     <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="s1">&#39;return the current element, or None&#39;</span>
@@ -1483,20 +1490,20 @@
     <span class="k">def</span> <span class="nf">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ind</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_elements</span><span class="o">.</span><span class="n">__getitem__</span><span class="p">(</span><span class="n">ind</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Stack.forward"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.Stack.forward.html#matplotlib.cbook.Stack.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="s1">&#39;move the position forward and return the current element&#39;</span>
         <span class="n">N</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_elements</span><span class="p">)</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pos</span> <span class="o">&lt;</span> <span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_pos</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">()</span></div>
 
-    <span class="k">def</span> <span class="nf">back</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Stack.back"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.Stack.back.html#matplotlib.cbook.Stack.back">[docs]</a>    <span class="k">def</span> <span class="nf">back</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="s1">&#39;move the position back and return the current element&#39;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pos</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_pos</span> <span class="o">-=</span> <span class="mi">1</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">()</span></div>
 
-    <span class="k">def</span> <span class="nf">push</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span>
+<div class="viewcode-block" id="Stack.push"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.Stack.push.html#matplotlib.cbook.Stack.push">[docs]</a>    <span class="k">def</span> <span class="nf">push</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        push object onto stack at current position - all elements</span>
 <span class="sd">        occurring later than the current position are discarded</span>
@@ -1504,24 +1511,24 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_elements</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_elements</span><span class="p">[:</span><span class="bp">self</span><span class="o">.</span><span class="n">_pos</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_elements</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">o</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_pos</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_elements</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">()</span></div>
 
-    <span class="k">def</span> <span class="nf">home</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Stack.home"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.Stack.home.html#matplotlib.cbook.Stack.home">[docs]</a>    <span class="k">def</span> <span class="nf">home</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="s1">&#39;push the first element onto the top of the stack&#39;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_elements</span><span class="p">):</span>
             <span class="k">return</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_elements</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">()</span></div>
 
-    <span class="k">def</span> <span class="nf">empty</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_elements</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+<div class="viewcode-block" id="Stack.empty"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.Stack.empty.html#matplotlib.cbook.Stack.empty">[docs]</a>    <span class="k">def</span> <span class="nf">empty</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_elements</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span></div>
 
-    <span class="k">def</span> <span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Stack.clear"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.Stack.clear.html#matplotlib.cbook.Stack.clear">[docs]</a>    <span class="k">def</span> <span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="s1">&#39;empty the stack&#39;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_pos</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_elements</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_elements</span> <span class="o">=</span> <span class="p">[]</span></div>
 
-    <span class="k">def</span> <span class="nf">bubble</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span>
+<div class="viewcode-block" id="Stack.bubble"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.Stack.bubble.html#matplotlib.cbook.Stack.bubble">[docs]</a>    <span class="k">def</span> <span class="nf">bubble</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        raise *o* to the top of the stack and return *o*.  *o* must be</span>
 <span class="sd">        in the stack</span>
@@ -1539,9 +1546,9 @@
                 <span class="bp">self</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="n">thiso</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">thiso</span> <span class="ow">in</span> <span class="n">bubbles</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="n">o</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">o</span>
+        <span class="k">return</span> <span class="n">o</span></div>
 
-    <span class="k">def</span> <span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span>
+<div class="viewcode-block" id="Stack.remove"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.Stack.remove.html#matplotlib.cbook.Stack.remove">[docs]</a>    <span class="k">def</span> <span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span>
         <span class="s1">&#39;remove element *o* from the stack&#39;</span>
         <span class="k">if</span> <span class="n">o</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_elements</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Unknown element o&#39;</span><span class="p">)</span>
@@ -1551,16 +1558,16 @@
             <span class="k">if</span> <span class="n">thiso</span> <span class="o">==</span> <span class="n">o</span><span class="p">:</span>
                 <span class="k">continue</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="n">thiso</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="n">thiso</span><span class="p">)</span></div></div>
 
 
-<span class="k">def</span> <span class="nf">popall</span><span class="p">(</span><span class="n">seq</span><span class="p">):</span>
+<div class="viewcode-block" id="popall"><a class="viewcode-back" href="../../generated/matplotlib.cbook.popall.html#matplotlib.cbook.popall">[docs]</a><span class="k">def</span> <span class="nf">popall</span><span class="p">(</span><span class="n">seq</span><span class="p">):</span>
     <span class="s1">&#39;empty a list&#39;</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">xrange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">seq</span><span class="p">)):</span>
-        <span class="n">seq</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+        <span class="n">seq</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span></div>
 
 
-<span class="k">def</span> <span class="nf">finddir</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">match</span><span class="p">,</span> <span class="n">case</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="viewcode-block" id="finddir"><a class="viewcode-back" href="../../generated/matplotlib.cbook.finddir.html#matplotlib.cbook.finddir">[docs]</a><span class="k">def</span> <span class="nf">finddir</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">match</span><span class="p">,</span> <span class="n">case</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    return all attributes of *o* which match string in match.  if case</span>
 <span class="sd">    is True require an exact case match.</span>
@@ -1571,23 +1578,23 @@
         <span class="n">names</span> <span class="o">=</span> <span class="p">[(</span><span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">(),</span> <span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">o</span><span class="p">)</span>
                  <span class="k">if</span> <span class="n">is_string_like</span><span class="p">(</span><span class="n">name</span><span class="p">)]</span>
         <span class="n">match</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-    <span class="k">return</span> <span class="p">[</span><span class="n">orig</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">orig</span> <span class="ow">in</span> <span class="n">names</span> <span class="k">if</span> <span class="n">name</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">match</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">]</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">orig</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">orig</span> <span class="ow">in</span> <span class="n">names</span> <span class="k">if</span> <span class="n">name</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">match</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">]</span></div>
 
 
-<span class="k">def</span> <span class="nf">reverse_dict</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
+<div class="viewcode-block" id="reverse_dict"><a class="viewcode-back" href="../../generated/matplotlib.cbook.reverse_dict.html#matplotlib.cbook.reverse_dict">[docs]</a><span class="k">def</span> <span class="nf">reverse_dict</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
     <span class="s1">&#39;reverse the dictionary -- may lose data if values are not unique!&#39;</span>
-    <span class="k">return</span> <span class="nb">dict</span><span class="p">([(</span><span class="n">v</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="n">d</span><span class="p">)])</span>
+    <span class="k">return</span> <span class="nb">dict</span><span class="p">([(</span><span class="n">v</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="n">d</span><span class="p">)])</span></div>
 
 
-<span class="k">def</span> <span class="nf">restrict_dict</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">keys</span><span class="p">):</span>
+<div class="viewcode-block" id="restrict_dict"><a class="viewcode-back" href="../../generated/matplotlib.cbook.restrict_dict.html#matplotlib.cbook.restrict_dict">[docs]</a><span class="k">def</span> <span class="nf">restrict_dict</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">keys</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Return a dictionary that contains those keys that appear in both</span>
 <span class="sd">    d and keys, with values from d.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="nb">dict</span><span class="p">([(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="k">if</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">])</span>
+    <span class="k">return</span> <span class="nb">dict</span><span class="p">([(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="k">if</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">])</span></div>
 
 
-<span class="k">def</span> <span class="nf">report_memory</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>  <span class="c1"># argument may go away</span>
+<div class="viewcode-block" id="report_memory"><a class="viewcode-back" href="../../generated/matplotlib.cbook.report_memory.html#matplotlib.cbook.report_memory">[docs]</a><span class="k">def</span> <span class="nf">report_memory</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>  <span class="c1"># argument may go away</span>
     <span class="s1">&#39;return the memory consumed by process&#39;</span>
     <span class="kn">from</span> <span class="nn">matplotlib.compat.subprocess</span> <span class="k">import</span> <span class="n">Popen</span><span class="p">,</span> <span class="n">PIPE</span>
     <span class="n">pid</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getpid</span><span class="p">()</span>
@@ -1630,48 +1637,48 @@
     <span class="k">else</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
             <span class="s2">&quot;We don&#39;t have a memory monitor for </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">sys</span><span class="o">.</span><span class="n">platform</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">mem</span>
+    <span class="k">return</span> <span class="n">mem</span></div>
 
 <span class="n">_safezip_msg</span> <span class="o">=</span> <span class="s1">&#39;In safezip, len(args[0])=</span><span class="si">%d</span><span class="s1"> but len(args[</span><span class="si">%d</span><span class="s1">])=</span><span class="si">%d</span><span class="s1">&#39;</span>
 
 
-<span class="k">def</span> <span class="nf">safezip</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+<div class="viewcode-block" id="safezip"><a class="viewcode-back" href="../../generated/matplotlib.cbook.safezip.html#matplotlib.cbook.safezip">[docs]</a><span class="k">def</span> <span class="nf">safezip</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
     <span class="s1">&#39;make sure *args* are equal len before zipping&#39;</span>
     <span class="n">Nx</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
     <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">arg</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">:]):</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span> <span class="o">!=</span> <span class="n">Nx</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">_safezip_msg</span> <span class="o">%</span> <span class="p">(</span><span class="n">Nx</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">arg</span><span class="p">)))</span>
-    <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">))</span>
+    <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">))</span></div>
 
 
-<span class="k">def</span> <span class="nf">issubclass_safe</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">klass</span><span class="p">):</span>
+<div class="viewcode-block" id="issubclass_safe"><a class="viewcode-back" href="../../generated/matplotlib.cbook.issubclass_safe.html#matplotlib.cbook.issubclass_safe">[docs]</a><span class="k">def</span> <span class="nf">issubclass_safe</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">klass</span><span class="p">):</span>
     <span class="s1">&#39;return issubclass(x, klass) and return False on a TypeError&#39;</span>
 
     <span class="k">try</span><span class="p">:</span>
         <span class="k">return</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">klass</span><span class="p">)</span>
     <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="kc">False</span></div>
 
 
-<span class="k">def</span> <span class="nf">safe_masked_invalid</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="viewcode-block" id="safe_masked_invalid"><a class="viewcode-back" href="../../generated/matplotlib.cbook.safe_masked_invalid.html#matplotlib.cbook.safe_masked_invalid">[docs]</a><span class="k">def</span> <span class="nf">safe_masked_invalid</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asanyarray</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">xm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ma</span><span class="o">.</span><span class="n">masked_invalid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
         <span class="n">xm</span><span class="o">.</span><span class="n">shrink_mask</span><span class="p">()</span>
     <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">x</span>
-    <span class="k">return</span> <span class="n">xm</span>
+    <span class="k">return</span> <span class="n">xm</span></div>
 
 
-<span class="k">class</span> <span class="nc">MemoryMonitor</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nmax</span><span class="o">=</span><span class="mi">20000</span><span class="p">):</span>
+<div class="viewcode-block" id="MemoryMonitor"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.MemoryMonitor.html#matplotlib.cbook.MemoryMonitor">[docs]</a><span class="k">class</span> <span class="nc">MemoryMonitor</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="MemoryMonitor.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.MemoryMonitor.__init__.html#matplotlib.cbook.MemoryMonitor.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nmax</span><span class="o">=</span><span class="mi">20000</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_nmax</span> <span class="o">=</span> <span class="n">nmax</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_mem</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">_nmax</span><span class="p">,),</span> <span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span></div>
 
-    <span class="k">def</span> <span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="MemoryMonitor.clear"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.MemoryMonitor.clear.html#matplotlib.cbook.MemoryMonitor.clear">[docs]</a>    <span class="k">def</span> <span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_n</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_overflow</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_overflow</span> <span class="o">=</span> <span class="kc">False</span></div>
 
     <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">mem</span> <span class="o">=</span> <span class="n">report_memory</span><span class="p">()</span>
@@ -1682,7 +1689,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">_overflow</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">return</span> <span class="n">mem</span>
 
-    <span class="k">def</span> <span class="nf">report</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">segments</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
+<div class="viewcode-block" id="MemoryMonitor.report"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.MemoryMonitor.report.html#matplotlib.cbook.MemoryMonitor.report">[docs]</a>    <span class="k">def</span> <span class="nf">report</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">segments</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
         <span class="n">n</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_n</span>
         <span class="n">segments</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">segments</span><span class="p">)</span>
         <span class="n">dn</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">n</span> <span class="o">/</span> <span class="n">segments</span><span class="p">)</span>
@@ -1699,23 +1706,23 @@
             <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%5d</span><span class="s1"> </span><span class="si">%5d</span><span class="s1"> </span><span class="si">%3d</span><span class="s1"> </span><span class="si">%8.3f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">ii</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mem</span><span class="p">[</span><span class="n">ii</span><span class="p">[</span><span class="n">i</span><span class="p">]],</span>
                                          <span class="n">dm</span><span class="p">,</span> <span class="n">dm</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">di</span><span class="p">)))</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_overflow</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Warning: array size was too small for the number of calls.&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Warning: array size was too small for the number of calls.&quot;</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">xy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">isub</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<div class="viewcode-block" id="MemoryMonitor.xy"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.MemoryMonitor.xy.html#matplotlib.cbook.MemoryMonitor.xy">[docs]</a>    <span class="k">def</span> <span class="nf">xy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">isub</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
         <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">i0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_n</span><span class="p">,</span> <span class="n">isub</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mem</span><span class="p">[</span><span class="n">i0</span><span class="p">:</span><span class="bp">self</span><span class="o">.</span><span class="n">_n</span><span class="p">:</span><span class="n">isub</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mem</span><span class="p">[</span><span class="n">i0</span><span class="p">:</span><span class="bp">self</span><span class="o">.</span><span class="n">_n</span><span class="p">:</span><span class="n">isub</span><span class="p">]</span></div>
 
-    <span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">isub</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">fig</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="MemoryMonitor.plot"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.MemoryMonitor.plot.html#matplotlib.cbook.MemoryMonitor.plot">[docs]</a>    <span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">isub</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">fig</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">fig</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="kn">from</span> <span class="nn">.pylab</span> <span class="k">import</span> <span class="n">figure</span>
             <span class="n">fig</span> <span class="o">=</span> <span class="n">figure</span><span class="p">()</span>
 
         <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
         <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">xy</span><span class="p">(</span><span class="n">i0</span><span class="p">,</span> <span class="n">isub</span><span class="p">))</span>
-        <span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span></div></div>
 
 
-<span class="k">def</span> <span class="nf">print_cycles</span><span class="p">(</span><span class="n">objects</span><span class="p">,</span> <span class="n">outstream</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">,</span> <span class="n">show_progress</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="viewcode-block" id="print_cycles"><a class="viewcode-back" href="../../generated/matplotlib.cbook.print_cycles.html#matplotlib.cbook.print_cycles">[docs]</a><span class="k">def</span> <span class="nf">print_cycles</span><span class="p">(</span><span class="n">objects</span><span class="p">,</span> <span class="n">outstream</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">,</span> <span class="n">show_progress</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    *objects*</span>
 <span class="sd">        A list of objects to find cycles in.  It is often useful to</span>
@@ -1779,10 +1786,10 @@
 
     <span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">objects</span><span class="p">:</span>
         <span class="n">outstream</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Examining: </span><span class="si">%r</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">obj</span><span class="p">,))</span>
-        <span class="n">recurse</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="p">{},</span> <span class="p">[])</span>
+        <span class="n">recurse</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="p">{},</span> <span class="p">[])</span></div>
 
 
-<span class="k">class</span> <span class="nc">Grouper</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="Grouper"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.Grouper.html#matplotlib.cbook.Grouper">[docs]</a><span class="k">class</span> <span class="nc">Grouper</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This class provides a lightweight way to group arbitrary objects</span>
 <span class="sd">    together into disjoint sets when a full-blown graph data structure</span>
@@ -1818,15 +1825,15 @@
 <span class="sd">        False</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">init</span><span class="o">=</span><span class="p">()):</span>
+<div class="viewcode-block" id="Grouper.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.Grouper.__init__.html#matplotlib.cbook.Grouper.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">init</span><span class="o">=</span><span class="p">()):</span>
         <span class="n">mapping</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mapping</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">init</span><span class="p">:</span>
-            <span class="n">mapping</span><span class="p">[</span><span class="n">ref</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[</span><span class="n">ref</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span>
+            <span class="n">mapping</span><span class="p">[</span><span class="n">ref</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[</span><span class="n">ref</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span></div>
 
     <span class="k">def</span> <span class="nf">__contains__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">ref</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mapping</span>
 
-    <span class="k">def</span> <span class="nf">clean</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Grouper.clean"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.Grouper.clean.html#matplotlib.cbook.Grouper.clean">[docs]</a>    <span class="k">def</span> <span class="nf">clean</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Clean dead weak references from the dictionary</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -1834,9 +1841,9 @@
         <span class="n">to_drop</span> <span class="o">=</span> <span class="p">[</span><span class="n">key</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">mapping</span> <span class="k">if</span> <span class="n">key</span><span class="p">()</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">]</span>
         <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">to_drop</span><span class="p">:</span>
             <span class="n">val</span> <span class="o">=</span> <span class="n">mapping</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-            <span class="n">val</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+            <span class="n">val</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">join</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+<div class="viewcode-block" id="Grouper.join"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.Grouper.join.html#matplotlib.cbook.Grouper.join">[docs]</a>    <span class="k">def</span> <span class="nf">join</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Join given arguments into the same set.  Accepts one or more</span>
 <span class="sd">        arguments.</span>
@@ -1856,9 +1863,9 @@
                 <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">set_b</span><span class="p">:</span>
                     <span class="n">mapping</span><span class="p">[</span><span class="n">elem</span><span class="p">]</span> <span class="o">=</span> <span class="n">set_a</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">clean</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">clean</span><span class="p">()</span></div>
 
-    <span class="k">def</span> <span class="nf">joined</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<div class="viewcode-block" id="Grouper.joined"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.Grouper.joined.html#matplotlib.cbook.Grouper.joined">[docs]</a>    <span class="k">def</span> <span class="nf">joined</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns True if *a* and *b* are members of the same set.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -1868,15 +1875,15 @@
         <span class="k">try</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">mapping</span><span class="p">[</span><span class="n">ref</span><span class="p">(</span><span class="n">a</span><span class="p">)]</span> <span class="ow">is</span> <span class="n">mapping</span><span class="p">[</span><span class="n">ref</span><span class="p">(</span><span class="n">b</span><span class="p">)]</span>
         <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
-            <span class="k">return</span> <span class="kc">False</span>
+            <span class="k">return</span> <span class="kc">False</span></div>
 
-    <span class="k">def</span> <span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
+<div class="viewcode-block" id="Grouper.remove"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.Grouper.remove.html#matplotlib.cbook.Grouper.remove">[docs]</a>    <span class="k">def</span> <span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">clean</span><span class="p">()</span>
 
         <span class="n">mapping</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mapping</span>
         <span class="n">seta</span> <span class="o">=</span> <span class="n">mapping</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">ref</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">seta</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">seta</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">ref</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+            <span class="n">seta</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">ref</span><span class="p">(</span><span class="n">a</span><span class="p">))</span></div>
 
     <span class="k">def</span> <span class="nf">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
@@ -1902,17 +1909,17 @@
             <span class="k">if</span> <span class="n">group</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">is</span> <span class="n">token</span><span class="p">:</span>
                 <span class="k">del</span> <span class="n">group</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 
-    <span class="k">def</span> <span class="nf">get_siblings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
+<div class="viewcode-block" id="Grouper.get_siblings"><a class="viewcode-back" href="../../generated/generated/matplotlib.cbook.Grouper.get_siblings.html#matplotlib.cbook.Grouper.get_siblings">[docs]</a>    <span class="k">def</span> <span class="nf">get_siblings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns all of the items joined with *a*, including itself.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">clean</span><span class="p">()</span>
 
         <span class="n">siblings</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mapping</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ref</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="p">[</span><span class="n">ref</span><span class="p">(</span><span class="n">a</span><span class="p">)])</span>
-        <span class="k">return</span> <span class="p">[</span><span class="n">x</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">siblings</span><span class="p">]</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">x</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">siblings</span><span class="p">]</span></div></div>
 
 
-<span class="k">def</span> <span class="nf">simple_linear_interpolation</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">steps</span><span class="p">):</span>
+<div class="viewcode-block" id="simple_linear_interpolation"><a class="viewcode-back" href="../../generated/matplotlib.cbook.simple_linear_interpolation.html#matplotlib.cbook.simple_linear_interpolation">[docs]</a><span class="k">def</span> <span class="nf">simple_linear_interpolation</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">steps</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">steps</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">a</span>
 
@@ -1930,10 +1937,10 @@
         <span class="n">result</span><span class="p">[</span><span class="n">i</span><span class="p">::</span><span class="n">steps</span><span class="p">]</span> <span class="o">=</span> <span class="n">delta</span> <span class="o">*</span> <span class="n">i</span> <span class="o">+</span> <span class="n">a0</span>
     <span class="n">result</span><span class="p">[</span><span class="n">steps</span><span class="p">::</span><span class="n">steps</span><span class="p">]</span> <span class="o">=</span> <span class="n">a1</span>
 
-    <span class="k">return</span> <span class="n">result</span>
+    <span class="k">return</span> <span class="n">result</span></div>
 
 
-<span class="k">def</span> <span class="nf">recursive_remove</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+<div class="viewcode-block" id="recursive_remove"><a class="viewcode-back" href="../../generated/matplotlib.cbook.recursive_remove.html#matplotlib.cbook.recursive_remove">[docs]</a><span class="k">def</span> <span class="nf">recursive_remove</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">fname</span> <span class="ow">in</span> <span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">))</span> <span class="o">+</span>
                       <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;.*&#39;</span><span class="p">))):</span>
@@ -1944,10 +1951,10 @@
                 <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
         <span class="c1">#os.removedirs(path)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></div>
 
 
-<span class="k">def</span> <span class="nf">delete_masked_points</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+<div class="viewcode-block" id="delete_masked_points"><a class="viewcode-back" href="../../generated/matplotlib.cbook.delete_masked_points.html#matplotlib.cbook.delete_masked_points">[docs]</a><span class="k">def</span> <span class="nf">delete_masked_points</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Find all masked and/or non-finite points in a set of arguments,</span>
 <span class="sd">    and return the arguments with only the unmasked points remaining.</span>
@@ -2021,10 +2028,10 @@
     <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">margs</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">seqlist</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">and</span> <span class="n">ma</span><span class="o">.</span><span class="n">isMA</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
             <span class="n">margs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">filled</span><span class="p">()</span>
-    <span class="k">return</span> <span class="n">margs</span>
+    <span class="k">return</span> <span class="n">margs</span></div>
 
 
-<span class="k">def</span> <span class="nf">boxplot_stats</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">whis</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">bootstrap</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="boxplot_stats"><a class="viewcode-back" href="../../generated/matplotlib.cbook.boxplot_stats.html#matplotlib.cbook.boxplot_stats">[docs]</a><span class="k">def</span> <span class="nf">boxplot_stats</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">whis</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">bootstrap</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Returns list of dictionaries of staticists to be use to draw a series of</span>
 <span class="sd">    box and whisker plots. See the `Returns` section below to the required</span>
@@ -2220,11 +2227,11 @@
         <span class="n">stats</span><span class="p">[</span><span class="s1">&#39;q1&#39;</span><span class="p">],</span> <span class="n">stats</span><span class="p">[</span><span class="s1">&#39;med&#39;</span><span class="p">],</span> <span class="n">stats</span><span class="p">[</span><span class="s1">&#39;q3&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">q1</span><span class="p">,</span> <span class="n">med</span><span class="p">,</span> <span class="n">q3</span>
 
 
-    <span class="k">return</span> <span class="n">bxpstats</span>
+    <span class="k">return</span> <span class="n">bxpstats</span></div>
 
 
 <span class="c1"># FIXME I don&#39;t think this is used anywhere</span>
-<span class="k">def</span> <span class="nf">unmasked_index_ranges</span><span class="p">(</span><span class="n">mask</span><span class="p">,</span> <span class="n">compressed</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<div class="viewcode-block" id="unmasked_index_ranges"><a class="viewcode-back" href="../../generated/matplotlib.cbook.unmasked_index_ranges.html#matplotlib.cbook.unmasked_index_ranges">[docs]</a><span class="k">def</span> <span class="nf">unmasked_index_ranges</span><span class="p">(</span><span class="n">mask</span><span class="p">,</span> <span class="n">compressed</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Find index ranges where *mask* is *False*.</span>
 
@@ -2271,7 +2278,7 @@
     <span class="n">breakpoints</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">seglengths</span><span class="p">)</span>
     <span class="n">ic0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(((</span><span class="mi">0</span><span class="p">,),</span> <span class="n">breakpoints</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
     <span class="n">ic1</span> <span class="o">=</span> <span class="n">breakpoints</span>
-    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">ic0</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">],</span> <span class="n">ic1</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">ic0</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">],</span> <span class="n">ic1</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></div>
 
 <span class="c1"># a dict to cross-map linestyle arguments</span>
 <span class="n">_linestyles</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39;solid&#39;</span><span class="p">),</span>
@@ -2286,7 +2293,7 @@
 <span class="n">ls_mapper_r</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">([(</span><span class="n">ls</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">ls</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="k">for</span> <span class="n">ls</span> <span class="ow">in</span> <span class="n">_linestyles</span><span class="p">])</span>
 
 
-<span class="k">def</span> <span class="nf">align_iterators</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="o">*</span><span class="n">iterables</span><span class="p">):</span>
+<div class="viewcode-block" id="align_iterators"><a class="viewcode-back" href="../../generated/matplotlib.cbook.align_iterators.html#matplotlib.cbook.align_iterators">[docs]</a><span class="k">def</span> <span class="nf">align_iterators</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="o">*</span><span class="n">iterables</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This generator takes a bunch of iterables that are ordered by func</span>
 <span class="sd">    It sends out ordered tuples::</span>
@@ -2327,10 +2334,10 @@
             <span class="n">minkey</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">minvals</span><span class="p">)</span>
             <span class="k">yield</span> <span class="p">(</span><span class="n">minkey</span><span class="p">,</span> <span class="p">[</span><span class="n">it</span><span class="p">(</span><span class="n">minkey</span><span class="p">)</span> <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">iters</span><span class="p">])</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">break</span>
+            <span class="k">break</span></div>
 
 
-<span class="k">def</span> <span class="nf">is_math_text</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<div class="viewcode-block" id="is_math_text"><a class="viewcode-back" href="../../generated/matplotlib.cbook.is_math_text.html#matplotlib.cbook.is_math_text">[docs]</a><span class="k">def</span> <span class="nf">is_math_text</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="c1"># Did we find an even number of non-escaped dollar signs?</span>
     <span class="c1"># If so, treat is as math text.</span>
     <span class="k">try</span><span class="p">:</span>
@@ -2343,7 +2350,7 @@
     <span class="n">dollar_count</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">r&#39;$&#39;</span><span class="p">)</span> <span class="o">-</span> <span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">r&#39;\$&#39;</span><span class="p">)</span>
     <span class="n">even_dollars</span> <span class="o">=</span> <span class="p">(</span><span class="n">dollar_count</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">dollar_count</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
 
-    <span class="k">return</span> <span class="n">even_dollars</span>
+    <span class="k">return</span> <span class="n">even_dollars</span></div>
 
 
 <span class="k">def</span> <span class="nf">_check_1d</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
@@ -2398,7 +2405,7 @@
     <span class="k">return</span> <span class="n">X</span>
 
 
-<span class="k">def</span> <span class="nf">violin_stats</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">points</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+<div class="viewcode-block" id="violin_stats"><a class="viewcode-back" href="../../generated/matplotlib.cbook.violin_stats.html#matplotlib.cbook.violin_stats">[docs]</a><span class="k">def</span> <span class="nf">violin_stats</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">points</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Returns a list of dictionaries of data which can be used to draw a series</span>
 <span class="sd">    of violin plots. See the `Returns` section below to view the required keys</span>
@@ -2466,7 +2473,7 @@
         <span class="c1"># Append to output</span>
         <span class="n">vpstats</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">stats</span><span class="p">)</span>
 
-    <span class="k">return</span> <span class="n">vpstats</span>
+    <span class="k">return</span> <span class="n">vpstats</span></div>
 
 
 <span class="k">class</span> <span class="nc">_NestedClassGetter</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
@@ -2526,7 +2533,7 @@
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="p">)</span> <span class="o">+</span> <span class="n">args</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">pts_to_prestep</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+<div class="viewcode-block" id="pts_to_prestep"><a class="viewcode-back" href="../../generated/matplotlib.cbook.pts_to_prestep.html#matplotlib.cbook.pts_to_prestep">[docs]</a><span class="k">def</span> <span class="nf">pts_to_prestep</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Covert continuous line to pre-steps</span>
 
@@ -2563,10 +2570,10 @@
     <span class="n">steps</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">::</span><span class="mi">2</span><span class="p">],</span> <span class="n">steps</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">vertices</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:],</span> <span class="n">vertices</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
     <span class="n">steps</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span> <span class="mi">0</span><span class="p">::</span><span class="mi">2</span><span class="p">],</span> <span class="n">steps</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span> <span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">vertices</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span> <span class="p">:],</span> <span class="n">vertices</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span> <span class="mi">1</span><span class="p">:]</span>
     <span class="c1"># convert 2D array back to tuple</span>
-    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">steps</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">steps</span><span class="p">)</span></div>
 
 
-<span class="k">def</span> <span class="nf">pts_to_poststep</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+<div class="viewcode-block" id="pts_to_poststep"><a class="viewcode-back" href="../../generated/matplotlib.cbook.pts_to_poststep.html#matplotlib.cbook.pts_to_poststep">[docs]</a><span class="k">def</span> <span class="nf">pts_to_poststep</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Covert continuous line to pre-steps</span>
 
@@ -2604,10 +2611,10 @@
     <span class="n">steps</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span> <span class="mi">0</span><span class="p">::</span><span class="mi">2</span><span class="p">],</span> <span class="n">steps</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span> <span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">vertices</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span> <span class="p">:],</span> <span class="n">vertices</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span> <span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 
     <span class="c1"># convert 2D array back to tuple</span>
-    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">steps</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">steps</span><span class="p">)</span></div>
 
 
-<span class="k">def</span> <span class="nf">pts_to_midstep</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+<div class="viewcode-block" id="pts_to_midstep"><a class="viewcode-back" href="../../generated/matplotlib.cbook.pts_to_midstep.html#matplotlib.cbook.pts_to_midstep">[docs]</a><span class="k">def</span> <span class="nf">pts_to_midstep</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Covert continuous line to pre-steps</span>
 
@@ -2647,7 +2654,7 @@
     <span class="n">steps</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span> <span class="mi">0</span><span class="p">::</span><span class="mi">2</span><span class="p">],</span> <span class="n">steps</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span> <span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">vertices</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span> <span class="p">:],</span> <span class="n">vertices</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span> <span class="p">:]</span>
 
     <span class="c1"># convert 2D array back to tuple</span>
-    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">steps</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">steps</span><span class="p">)</span></div>
 
 <span class="n">STEP_LOOKUP_MAP</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;pre&#39;</span><span class="p">:</span> <span class="n">pts_to_prestep</span><span class="p">,</span>
                    <span class="s1">&#39;post&#39;</span><span class="p">:</span> <span class="n">pts_to_poststep</span><span class="p">,</span>
@@ -2657,7 +2664,7 @@
                    <span class="s1">&#39;step-mid&#39;</span><span class="p">:</span> <span class="n">pts_to_midstep</span><span class="p">}</span>
 
 
-<span class="k">def</span> <span class="nf">index_of</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+<div class="viewcode-block" id="index_of"><a class="viewcode-back" href="../../generated/matplotlib.cbook.index_of.html#matplotlib.cbook.index_of">[docs]</a><span class="k">def</span> <span class="nf">index_of</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A helper function to get the index of an input to plot</span>
 <span class="sd">    against if x values are not explicitly given.</span>
@@ -2682,21 +2689,21 @@
         <span class="k">return</span> <span class="n">y</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">y</span><span class="o">.</span><span class="n">values</span>
     <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
         <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">),</span> <span class="n">y</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">),</span> <span class="n">y</span></div>
 
 
-<span class="k">def</span> <span class="nf">safe_first_element</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+<div class="viewcode-block" id="safe_first_element"><a class="viewcode-back" href="../../generated/matplotlib.cbook.safe_first_element.html#matplotlib.cbook.safe_first_element">[docs]</a><span class="k">def</span> <span class="nf">safe_first_element</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">collections</span><span class="o">.</span><span class="n">Iterator</span><span class="p">):</span>
         <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;matplotlib does not support generators &quot;</span>
                            <span class="s2">&quot;as input&quot;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="nb">next</span><span class="p">(</span><span class="nb">iter</span><span class="p">(</span><span class="n">obj</span><span class="p">))</span>
+    <span class="k">return</span> <span class="nb">next</span><span class="p">(</span><span class="nb">iter</span><span class="p">(</span><span class="n">obj</span><span class="p">))</span></div>
 
 
-<span class="k">def</span> <span class="nf">get_label</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">default_name</span><span class="p">):</span>
+<div class="viewcode-block" id="get_label"><a class="viewcode-back" href="../../generated/matplotlib.get_label.html#matplotlib.cbook.get_label">[docs]</a><span class="k">def</span> <span class="nf">get_label</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">default_name</span><span class="p">):</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">y</span><span class="o">.</span><span class="n">name</span>
     <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">default_name</span>
+        <span class="k">return</span> <span class="n">default_name</span></div>
 
 <span class="c1"># Numpy &gt; 1.6.x deprecates putmask in favor of the new copyto.</span>
 <span class="c1"># So long as we support versions 1.6.x and less, we need the</span>

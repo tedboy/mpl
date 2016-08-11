@@ -1,0 +1,321 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4.2.11. matplotlib.backend_bases.KeyEvent &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="4. matplotlib.backend_bases" href="../matplotlib.backend_bases.html"/>
+        <link rel="next" title="4.2.12. matplotlib.backend_bases.LocationEvent" href="matplotlib.backend_bases.LocationEvent.html"/>
+        <link rel="prev" title="4.2.10. matplotlib.backend_bases.IdleEvent" href="matplotlib.backend_bases.IdleEvent.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">3. matplotlib.cm</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.backend_bases.html">4. matplotlib.backend_bases</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.backend_bases.html#functions">4.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.backend_bases.html#classes">4.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.Affine2D.html">4.2.1. matplotlib.backend_bases.Affine2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.Bbox.html">4.2.2. matplotlib.backend_bases.Bbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.CloseEvent.html">4.2.3. matplotlib.backend_bases.CloseEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.DrawEvent.html">4.2.4. matplotlib.backend_bases.DrawEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.Event.html">4.2.5. matplotlib.backend_bases.Event</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.html">4.2.6. matplotlib.backend_bases.FigureCanvasBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.FigureManagerBase.html">4.2.7. matplotlib.backend_bases.FigureManagerBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.Gcf.html">4.2.8. matplotlib.backend_bases.Gcf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.html">4.2.9. matplotlib.backend_bases.GraphicsContextBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.IdleEvent.html">4.2.10. matplotlib.backend_bases.IdleEvent</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">4.2.11. matplotlib.backend_bases.KeyEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.LocationEvent.html">4.2.12. matplotlib.backend_bases.LocationEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.MouseEvent.html">4.2.13. matplotlib.backend_bases.MouseEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.NavigationToolbar2.html">4.2.14. matplotlib.backend_bases.NavigationToolbar2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.Path.html">4.2.15. matplotlib.backend_bases.Path</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.PickEvent.html">4.2.16. matplotlib.backend_bases.PickEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.RendererBase.html">4.2.17. matplotlib.backend_bases.RendererBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.ResizeEvent.html">4.2.18. matplotlib.backend_bases.ResizeEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.ShowBase.html">4.2.19. matplotlib.backend_bases.ShowBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.StatusbarBase.html">4.2.20. matplotlib.backend_bases.StatusbarBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.TimerBase.html">4.2.21. matplotlib.backend_bases.TimerBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.ToolContainerBase.html">4.2.22. matplotlib.backend_bases.ToolContainerBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.TransformedBbox.html">4.2.23. matplotlib.backend_bases.TransformedBbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.xrange.html">4.2.24. matplotlib.backend_bases.xrange</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.backend_bases.html#exceptions">4.3. Exceptions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">5. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">6. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">8. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">9. matplotlib.widgets</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../mpl.pyplot.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.backend_bases.html">4. matplotlib.backend_bases</a> &raquo;</li>
+        
+      <li>4.2.11. matplotlib.backend_bases.KeyEvent</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.backend_bases.KeyEvent.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-backend-bases-keyevent">
+<h1>4.2.11. matplotlib.backend_bases.KeyEvent<a class="headerlink" href="#matplotlib-backend-bases-keyevent" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="matplotlib.backend_bases.KeyEvent">
+<em class="property">class </em><code class="descclassname">matplotlib.backend_bases.</code><code class="descname">KeyEvent</code><span class="sig-paren">(</span><em>name</em>, <em>canvas</em>, <em>key</em>, <em>x=0</em>, <em>y=0</em>, <em>guiEvent=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/backend_bases.html#KeyEvent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.backend_bases.KeyEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>A key event (key press, key release).</p>
+<p>Attach additional attributes as defined in
+<a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.mpl_connect.html#matplotlib.backend_bases.FigureCanvasBase.mpl_connect" title="matplotlib.backend_bases.FigureCanvasBase.mpl_connect"><code class="xref py py-meth docutils literal"><span class="pre">FigureCanvasBase.mpl_connect()</span></code></a>.</p>
+<p>In addition to the <a class="reference internal" href="matplotlib.backend_bases.Event.html#matplotlib.backend_bases.Event" title="matplotlib.backend_bases.Event"><code class="xref py py-class docutils literal"><span class="pre">Event</span></code></a> and <a class="reference internal" href="matplotlib.backend_bases.LocationEvent.html#matplotlib.backend_bases.LocationEvent" title="matplotlib.backend_bases.LocationEvent"><code class="xref py py-class docutils literal"><span class="pre">LocationEvent</span></code></a>
+attributes, the following attributes are defined:</p>
+<dl class="docutils">
+<dt><em>key</em></dt>
+<dd>the key(s) pressed. Could be <strong>None</strong>, a single case sensitive ascii
+character (&#8220;g&#8221;, &#8220;G&#8221;, &#8220;#&#8221;, etc.), a special key
+(&#8220;control&#8221;, &#8220;shift&#8221;, &#8220;f1&#8221;, &#8220;up&#8221;, etc.) or a
+combination of the above (e.g., &#8220;ctrl+alt+g&#8221;, &#8220;ctrl+alt+G&#8221;).</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Modifier keys will be prefixed to the pressed key and will be in the
+order &#8220;ctrl&#8221;, &#8220;alt&#8221;, &#8220;super&#8221;. The exception to this rule is when the
+pressed key is itself a modifier key, therefore &#8220;ctrl+alt&#8221; and
+&#8220;alt+control&#8221; can both be valid key values.</p>
+</div>
+<p>Example usage:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">on_key</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;you pressed&#39;</span><span class="p">,</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span><span class="p">,</span> <span class="n">event</span><span class="o">.</span><span class="n">xdata</span><span class="p">,</span> <span class="n">event</span><span class="o">.</span><span class="n">ydata</span><span class="p">)</span>
+
+<span class="n">cid</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">mpl_connect</span><span class="p">(</span><span class="s1">&#39;key_press_event&#39;</span><span class="p">,</span> <span class="n">on_key</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="rubric">Attributes</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="47%" />
+<col width="53%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>inaxes</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>lastevent</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>x</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>xdata</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>y</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>ydata</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.backend_bases.LocationEvent.html" class="btn btn-neutral float-right" title="4.2.12. matplotlib.backend_bases.LocationEvent" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.backend_bases.IdleEvent.html" class="btn btn-neutral" title="4.2.10. matplotlib.backend_bases.IdleEvent" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

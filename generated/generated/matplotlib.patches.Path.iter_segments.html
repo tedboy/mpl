@@ -1,0 +1,367 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5.2.14.21. matplotlib.patches.Path.iter_segments &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="5.2.14. matplotlib.patches.Path" href="matplotlib.patches.Path.html"/>
+        <link rel="next" title="5.2.14.22. matplotlib.patches.Path.make_compound_path" href="matplotlib.patches.Path.make_compound_path.html"/>
+        <link rel="prev" title="5.2.14.20. matplotlib.patches.Path.intersects_path" href="matplotlib.patches.Path.intersects_path.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">3. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backend_bases.html">4. matplotlib.backend_bases</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.patches.html">5. matplotlib.patches</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.patches.html#functions">5.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.patches.html#classes">5.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Arc.html">5.2.1. matplotlib.patches.Arc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Arrow.html">5.2.2. matplotlib.patches.Arrow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.ArrowStyle.html">5.2.3. matplotlib.patches.ArrowStyle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.BoxStyle.html">5.2.4. matplotlib.patches.BoxStyle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Circle.html">5.2.5. matplotlib.patches.Circle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.CirclePolygon.html">5.2.6. matplotlib.patches.CirclePolygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.ConnectionPatch.html">5.2.7. matplotlib.patches.ConnectionPatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.ConnectionStyle.html">5.2.8. matplotlib.patches.ConnectionStyle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Ellipse.html">5.2.9. matplotlib.patches.Ellipse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.FancyArrow.html">5.2.10. matplotlib.patches.FancyArrow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.FancyArrowPatch.html">5.2.11. matplotlib.patches.FancyArrowPatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.FancyBboxPatch.html">5.2.12. matplotlib.patches.FancyBboxPatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Patch.html">5.2.13. matplotlib.patches.Patch</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="matplotlib.patches.Path.html">5.2.14. matplotlib.patches.Path</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Path.codes.html">5.2.14.1. matplotlib.patches.Path.codes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Path.has_nonfinite.html">5.2.14.2. matplotlib.patches.Path.has_nonfinite</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Path.readonly.html">5.2.14.3. matplotlib.patches.Path.readonly</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Path.should_simplify.html">5.2.14.4. matplotlib.patches.Path.should_simplify</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Path.simplify_threshold.html">5.2.14.5. matplotlib.patches.Path.simplify_threshold</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Path.vertices.html">5.2.14.6. matplotlib.patches.Path.vertices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Path.arc.html">5.2.14.7. matplotlib.patches.Path.arc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Path.circle.html">5.2.14.8. matplotlib.patches.Path.circle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Path.cleaned.html">5.2.14.9. matplotlib.patches.Path.cleaned</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Path.clip_to_bbox.html">5.2.14.10. matplotlib.patches.Path.clip_to_bbox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Path.contains_path.html">5.2.14.11. matplotlib.patches.Path.contains_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Path.contains_point.html">5.2.14.12. matplotlib.patches.Path.contains_point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Path.contains_points.html">5.2.14.13. matplotlib.patches.Path.contains_points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Path.copy.html">5.2.14.14. matplotlib.patches.Path.copy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Path.deepcopy.html">5.2.14.15. matplotlib.patches.Path.deepcopy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Path.get_extents.html">5.2.14.16. matplotlib.patches.Path.get_extents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Path.hatch.html">5.2.14.17. matplotlib.patches.Path.hatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Path.interpolated.html">5.2.14.18. matplotlib.patches.Path.interpolated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Path.intersects_bbox.html">5.2.14.19. matplotlib.patches.Path.intersects_bbox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Path.intersects_path.html">5.2.14.20. matplotlib.patches.Path.intersects_path</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">5.2.14.21. matplotlib.patches.Path.iter_segments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Path.make_compound_path.html">5.2.14.22. matplotlib.patches.Path.make_compound_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Path.make_compound_path_from_polys.html">5.2.14.23. matplotlib.patches.Path.make_compound_path_from_polys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Path.to_polygons.html">5.2.14.24. matplotlib.patches.Path.to_polygons</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Path.transformed.html">5.2.14.25. matplotlib.patches.Path.transformed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Path.unit_circle.html">5.2.14.26. matplotlib.patches.Path.unit_circle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Path.unit_circle_righthalf.html">5.2.14.27. matplotlib.patches.Path.unit_circle_righthalf</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Path.unit_rectangle.html">5.2.14.28. matplotlib.patches.Path.unit_rectangle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Path.unit_regular_asterisk.html">5.2.14.29. matplotlib.patches.Path.unit_regular_asterisk</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Path.unit_regular_polygon.html">5.2.14.30. matplotlib.patches.Path.unit_regular_polygon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Path.unit_regular_star.html">5.2.14.31. matplotlib.patches.Path.unit_regular_star</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Path.wedge.html">5.2.14.32. matplotlib.patches.Path.wedge</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.PathPatch.html">5.2.15. matplotlib.patches.PathPatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Polygon.html">5.2.16. matplotlib.patches.Polygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Rectangle.html">5.2.17. matplotlib.patches.Rectangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.RegularPolygon.html">5.2.18. matplotlib.patches.RegularPolygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Shadow.html">5.2.19. matplotlib.patches.Shadow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Wedge.html">5.2.20. matplotlib.patches.Wedge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.YAArrow.html">5.2.21. matplotlib.patches.YAArrow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.map.html">5.2.22. matplotlib.patches.map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.zip.html">5.2.23. matplotlib.patches.zip</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">6. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">8. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">9. matplotlib.widgets</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../mpl.pyplot.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.patches.html">5. matplotlib.patches</a> &raquo;</li>
+        
+          <li><a href="matplotlib.patches.Path.html">5.2.14. matplotlib.patches.Path</a> &raquo;</li>
+        
+      <li>5.2.14.21. matplotlib.patches.Path.iter_segments</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.patches.Path.iter_segments.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-patches-path-iter-segments">
+<h1>5.2.14.21. matplotlib.patches.Path.iter_segments<a class="headerlink" href="#matplotlib-patches-path-iter-segments" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="matplotlib.patches.Path.iter_segments">
+<code class="descclassname">Path.</code><code class="descname">iter_segments</code><span class="sig-paren">(</span><em>transform=None</em>, <em>remove_nans=True</em>, <em>clip=None</em>, <em>snap=False</em>, <em>stroke_width=1.0</em>, <em>simplify=None</em>, <em>curves=True</em>, <em>sketch=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/path.html#Path.iter_segments"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.patches.Path.iter_segments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterates over all of the curve segments in the path.  Each
+iteration returns a 2-tuple (<em>vertices</em>, <em>code</em>), where
+<em>vertices</em> is a sequence of 1 - 3 coordinate pairs, and <em>code</em> is
+one of the <a class="reference internal" href="matplotlib.patches.Path.html#matplotlib.patches.Path" title="matplotlib.patches.Path"><code class="xref py py-class docutils literal"><span class="pre">Path</span></code></a> codes.</p>
+<p>Additionally, this method can provide a number of standard
+cleanups and conversions to the path.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>transform</strong> : None or <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code> instance</p>
+<blockquote>
+<div><p>If not None, the given affine transformation will
+be applied to the path.</p>
+</div></blockquote>
+<p><strong>remove_nans</strong> : {False, True}, optional</p>
+<blockquote>
+<div><p>If True, will remove all NaNs from the path and
+insert MOVETO commands to skip over them.</p>
+</div></blockquote>
+<p><strong>clip</strong> : None or sequence, optional</p>
+<blockquote>
+<div><p>If not None, must be a four-tuple (x1, y1, x2, y2)
+defining a rectangle in which to clip the path.</p>
+</div></blockquote>
+<p><strong>snap</strong> : None or bool, optional</p>
+<blockquote>
+<div><p>If None, auto-snap to pixels, to reduce
+fuzziness of rectilinear lines.  If True, force snapping, and
+if False, don&#8217;t snap.</p>
+</div></blockquote>
+<p><strong>stroke_width</strong> : float, optional</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>The width of the stroke being drawn.  Needed</dt>
+<dd><p class="first last">as a hint for the snapping algorithm.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p><strong>simplify</strong> : None or bool, optional</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>If True, perform simplification, to remove</dt>
+<dd><p class="first last">vertices that do not affect the appearance of the path.  If
+False, perform no simplification.  If None, use the
+should_simplify member variable.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p><strong>curves</strong> : {True, False}, optional</p>
+<blockquote>
+<div><p>If True, curve segments will be returned as curve
+segments.  If False, all curves will be converted to line
+segments.</p>
+</div></blockquote>
+<p><strong>sketch</strong> : None or sequence, optional</p>
+<blockquote class="last">
+<div><p>If not None, must be a 3-tuple of the form
+(scale, length, randomness), representing the sketch
+parameters.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.patches.Path.make_compound_path.html" class="btn btn-neutral float-right" title="5.2.14.22. matplotlib.patches.Path.make_compound_path" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.patches.Path.intersects_path.html" class="btn btn-neutral" title="5.2.14.20. matplotlib.patches.Path.intersects_path" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

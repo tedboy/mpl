@@ -1,0 +1,403 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5. matplotlib.patches &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../index.html"/>
+        <link rel="up" title="&lt;no title&gt;" href="../mpl.pyplot.html"/>
+        <link rel="next" title="5.1.1. matplotlib.patches.allow_rasterization" href="matplotlib.patches.allow_rasterization.html"/>
+        <link rel="prev" title="4.3.2. matplotlib.backend_bases.mplDeprecation" href="matplotlib.backend_bases.mplDeprecation.html"/> 
+
+  
+  <script src="../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.cm.html">3. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.backend_bases.html">4. matplotlib.backend_bases</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. matplotlib.patches</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#functions">5.1. Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.allow_rasterization.html">5.1.1. matplotlib.patches.allow_rasterization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.bbox_artist.html">5.1.2. matplotlib.patches.bbox_artist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.concatenate_paths.html">5.1.3. matplotlib.patches.concatenate_paths</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.draw_bbox.html">5.1.4. matplotlib.patches.draw_bbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.get_cos_sin.html">5.1.5. matplotlib.patches.get_cos_sin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.get_intersection.html">5.1.6. matplotlib.patches.get_intersection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.get_parallels.html">5.1.7. matplotlib.patches.get_parallels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.inside_circle.html">5.1.8. matplotlib.patches.inside_circle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.make_path_regular.html">5.1.9. matplotlib.patches.make_path_regular</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.make_wedged_bezier2.html">5.1.10. matplotlib.patches.make_wedged_bezier2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.split_bezier_intersecting_with_closedpath.html">5.1.11. matplotlib.patches.split_bezier_intersecting_with_closedpath</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.split_path_inout.html">5.1.12. matplotlib.patches.split_path_inout</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#classes">5.2. Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.patches.Arc.html">5.2.1. matplotlib.patches.Arc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.patches.Arrow.html">5.2.2. matplotlib.patches.Arrow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.patches.ArrowStyle.html">5.2.3. matplotlib.patches.ArrowStyle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.patches.BoxStyle.html">5.2.4. matplotlib.patches.BoxStyle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.patches.Circle.html">5.2.5. matplotlib.patches.Circle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.patches.CirclePolygon.html">5.2.6. matplotlib.patches.CirclePolygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.patches.ConnectionPatch.html">5.2.7. matplotlib.patches.ConnectionPatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.patches.ConnectionStyle.html">5.2.8. matplotlib.patches.ConnectionStyle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.patches.Ellipse.html">5.2.9. matplotlib.patches.Ellipse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.patches.FancyArrow.html">5.2.10. matplotlib.patches.FancyArrow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.patches.FancyArrowPatch.html">5.2.11. matplotlib.patches.FancyArrowPatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.patches.FancyBboxPatch.html">5.2.12. matplotlib.patches.FancyBboxPatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.patches.Patch.html">5.2.13. matplotlib.patches.Patch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.patches.Path.html">5.2.14. matplotlib.patches.Path</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.patches.PathPatch.html">5.2.15. matplotlib.patches.PathPatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.patches.Polygon.html">5.2.16. matplotlib.patches.Polygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.patches.Rectangle.html">5.2.17. matplotlib.patches.Rectangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.patches.RegularPolygon.html">5.2.18. matplotlib.patches.RegularPolygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.patches.Shadow.html">5.2.19. matplotlib.patches.Shadow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.patches.Wedge.html">5.2.20. matplotlib.patches.Wedge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.patches.YAArrow.html">5.2.21. matplotlib.patches.YAArrow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.patches.map.html">5.2.22. matplotlib.patches.map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.patches.zip.html">5.2.23. matplotlib.patches.zip</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.cbook.html">6. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.image.html">8. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.widgets.html">9. matplotlib.widgets</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../mpl.pyplot.html">&lt;no title&gt;</a> &raquo;</li>
+        
+      <li>5. matplotlib.patches</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../sources/generated/matplotlib.patches.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-matplotlib.patches">
+<span id="matplotlib-patches"></span><h1>5. matplotlib.patches<a class="headerlink" href="#module-matplotlib.patches" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="functions">
+<h2>5.1. Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.allow_rasterization.html#matplotlib.patches.allow_rasterization" title="matplotlib.patches.allow_rasterization"><code class="xref py py-obj docutils literal"><span class="pre">allow_rasterization</span></code></a>(draw)</td>
+<td>Decorator for Artist.draw method.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.bbox_artist.html#matplotlib.patches.bbox_artist" title="matplotlib.patches.bbox_artist"><code class="xref py py-obj docutils literal"><span class="pre">bbox_artist</span></code></a>(artist,&nbsp;renderer[,&nbsp;props,&nbsp;fill])</td>
+<td>This is a debug function to draw a rectangle around the bounding box returned by <code class="xref py py-meth docutils literal"><span class="pre">get_window_extent()</span></code> of an artist, to test whether the artist is returning the correct bbox.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.concatenate_paths.html#matplotlib.patches.concatenate_paths" title="matplotlib.patches.concatenate_paths"><code class="xref py py-obj docutils literal"><span class="pre">concatenate_paths</span></code></a>(paths)</td>
+<td>concatenate list of paths into a single path.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.draw_bbox.html#matplotlib.patches.draw_bbox" title="matplotlib.patches.draw_bbox"><code class="xref py py-obj docutils literal"><span class="pre">draw_bbox</span></code></a>(bbox,&nbsp;renderer[,&nbsp;color,&nbsp;trans])</td>
+<td>This is a debug function to draw a rectangle around the bounding box returned by <code class="xref py py-meth docutils literal"><span class="pre">get_window_extent()</span></code> of an artist, to test whether the artist is returning the correct bbox.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.get_cos_sin.html#matplotlib.patches.get_cos_sin" title="matplotlib.patches.get_cos_sin"><code class="xref py py-obj docutils literal"><span class="pre">get_cos_sin</span></code></a>(x0,&nbsp;y0,&nbsp;x1,&nbsp;y1)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.get_intersection.html#matplotlib.patches.get_intersection" title="matplotlib.patches.get_intersection"><code class="xref py py-obj docutils literal"><span class="pre">get_intersection</span></code></a>(cx1,&nbsp;cy1,&nbsp;cos_t1,&nbsp;sin_t1,&nbsp;...)</td>
+<td>return a intersecting point between a line through (cx1, cy1)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.get_parallels.html#matplotlib.patches.get_parallels" title="matplotlib.patches.get_parallels"><code class="xref py py-obj docutils literal"><span class="pre">get_parallels</span></code></a>(bezier2,&nbsp;width)</td>
+<td>Given the quadratic bezier control points <em>bezier2</em>, returns control points of quadratic bezier lines roughly parallel to given one separated by <em>width</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.inside_circle.html#matplotlib.patches.inside_circle" title="matplotlib.patches.inside_circle"><code class="xref py py-obj docutils literal"><span class="pre">inside_circle</span></code></a>(cx,&nbsp;cy,&nbsp;r)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.make_path_regular.html#matplotlib.patches.make_path_regular" title="matplotlib.patches.make_path_regular"><code class="xref py py-obj docutils literal"><span class="pre">make_path_regular</span></code></a>(p)</td>
+<td>fill in the codes if None.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.make_wedged_bezier2.html#matplotlib.patches.make_wedged_bezier2" title="matplotlib.patches.make_wedged_bezier2"><code class="xref py py-obj docutils literal"><span class="pre">make_wedged_bezier2</span></code></a>(bezier2,&nbsp;width[,&nbsp;w1,&nbsp;wm,&nbsp;w2])</td>
+<td>Being similar to get_parallels, returns control points of two quadrativ bezier lines having a width roughly parralel to given one separated by <em>width</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.split_bezier_intersecting_with_closedpath.html#matplotlib.patches.split_bezier_intersecting_with_closedpath" title="matplotlib.patches.split_bezier_intersecting_with_closedpath"><code class="xref py py-obj docutils literal"><span class="pre">split_bezier_intersecting_with_closedpath</span></code></a>(...)</td>
+<td>bezier : control points of the bezier segment</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.split_path_inout.html#matplotlib.patches.split_path_inout" title="matplotlib.patches.split_path_inout"><code class="xref py py-obj docutils literal"><span class="pre">split_path_inout</span></code></a>(path,&nbsp;inside[,&nbsp;tolerence,&nbsp;...])</td>
+<td>divide a path into two segment at the point where inside(x, y)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="classes">
+<h2>5.2. Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.patches.Arc.html#matplotlib.patches.Arc" title="matplotlib.patches.Arc"><code class="xref py py-obj docutils literal"><span class="pre">Arc</span></code></a>(xy,&nbsp;width,&nbsp;height[,&nbsp;angle,&nbsp;theta1,&nbsp;theta2])</td>
+<td>An elliptical arc.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.patches.Arrow.html#matplotlib.patches.Arrow" title="matplotlib.patches.Arrow"><code class="xref py py-obj docutils literal"><span class="pre">Arrow</span></code></a>(x,&nbsp;y,&nbsp;dx,&nbsp;dy[,&nbsp;width])</td>
+<td>An arrow patch.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.patches.ArrowStyle.html#matplotlib.patches.ArrowStyle" title="matplotlib.patches.ArrowStyle"><code class="xref py py-obj docutils literal"><span class="pre">ArrowStyle</span></code></a></td>
+<td><a class="reference internal" href="generated/matplotlib.patches.ArrowStyle.html#matplotlib.patches.ArrowStyle" title="matplotlib.patches.ArrowStyle"><code class="xref py py-class docutils literal"><span class="pre">ArrowStyle</span></code></a> is a container class which defines several</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.patches.BoxStyle.html#matplotlib.patches.BoxStyle" title="matplotlib.patches.BoxStyle"><code class="xref py py-obj docutils literal"><span class="pre">BoxStyle</span></code></a></td>
+<td><a class="reference internal" href="generated/matplotlib.patches.BoxStyle.html#matplotlib.patches.BoxStyle" title="matplotlib.patches.BoxStyle"><code class="xref py py-class docutils literal"><span class="pre">BoxStyle</span></code></a> is a container class which defines several</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.patches.Circle.html#matplotlib.patches.Circle" title="matplotlib.patches.Circle"><code class="xref py py-obj docutils literal"><span class="pre">Circle</span></code></a>(xy[,&nbsp;radius])</td>
+<td>A circle patch.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.patches.CirclePolygon.html#matplotlib.patches.CirclePolygon" title="matplotlib.patches.CirclePolygon"><code class="xref py py-obj docutils literal"><span class="pre">CirclePolygon</span></code></a>(xy[,&nbsp;radius,&nbsp;resolution])</td>
+<td>A polygon-approximation of a circle patch.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.patches.ConnectionPatch.html#matplotlib.patches.ConnectionPatch" title="matplotlib.patches.ConnectionPatch"><code class="xref py py-obj docutils literal"><span class="pre">ConnectionPatch</span></code></a>(xyA,&nbsp;xyB,&nbsp;coordsA[,&nbsp;...])</td>
+<td>A <a class="reference internal" href="generated/matplotlib.patches.ConnectionPatch.html#matplotlib.patches.ConnectionPatch" title="matplotlib.patches.ConnectionPatch"><code class="xref py py-class docutils literal"><span class="pre">ConnectionPatch</span></code></a> class is to make connecting lines between two points (possibly in different axes).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.patches.ConnectionStyle.html#matplotlib.patches.ConnectionStyle" title="matplotlib.patches.ConnectionStyle"><code class="xref py py-obj docutils literal"><span class="pre">ConnectionStyle</span></code></a></td>
+<td><a class="reference internal" href="generated/matplotlib.patches.ConnectionStyle.html#matplotlib.patches.ConnectionStyle" title="matplotlib.patches.ConnectionStyle"><code class="xref py py-class docutils literal"><span class="pre">ConnectionStyle</span></code></a> is a container class which defines</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.patches.Ellipse.html#matplotlib.patches.Ellipse" title="matplotlib.patches.Ellipse"><code class="xref py py-obj docutils literal"><span class="pre">Ellipse</span></code></a>(xy,&nbsp;width,&nbsp;height[,&nbsp;angle])</td>
+<td>A scale-free ellipse.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.patches.FancyArrow.html#matplotlib.patches.FancyArrow" title="matplotlib.patches.FancyArrow"><code class="xref py py-obj docutils literal"><span class="pre">FancyArrow</span></code></a>(x,&nbsp;y,&nbsp;dx,&nbsp;dy[,&nbsp;width,&nbsp;...])</td>
+<td>Like Arrow, but lets you set head width and head height independently.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.patches.FancyArrowPatch.html#matplotlib.patches.FancyArrowPatch" title="matplotlib.patches.FancyArrowPatch"><code class="xref py py-obj docutils literal"><span class="pre">FancyArrowPatch</span></code></a>([posA,&nbsp;posB,&nbsp;path,&nbsp;...])</td>
+<td>A fancy arrow patch.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.patches.FancyBboxPatch.html#matplotlib.patches.FancyBboxPatch" title="matplotlib.patches.FancyBboxPatch"><code class="xref py py-obj docutils literal"><span class="pre">FancyBboxPatch</span></code></a>(xy,&nbsp;width,&nbsp;height[,&nbsp;...])</td>
+<td>Draw a fancy box around a rectangle with lower left at <em>xy*=(*x</em>, <em>y</em>) with specified width and height.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-obj docutils literal"><span class="pre">Patch</span></code></a>([edgecolor,&nbsp;facecolor,&nbsp;color,&nbsp;...])</td>
+<td>A patch is a 2D artist with a face color and an edge color.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.patches.Path.html#matplotlib.patches.Path" title="matplotlib.patches.Path"><code class="xref py py-obj docutils literal"><span class="pre">Path</span></code></a>(vertices[,&nbsp;codes,&nbsp;...])</td>
+<td><a class="reference internal" href="generated/matplotlib.patches.Path.html#matplotlib.patches.Path" title="matplotlib.patches.Path"><code class="xref py py-class docutils literal"><span class="pre">Path</span></code></a> represents a series of possibly disconnected,</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.patches.PathPatch.html#matplotlib.patches.PathPatch" title="matplotlib.patches.PathPatch"><code class="xref py py-obj docutils literal"><span class="pre">PathPatch</span></code></a>(path,&nbsp;**kwargs)</td>
+<td>A general polycurve path patch.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.patches.Polygon.html#matplotlib.patches.Polygon" title="matplotlib.patches.Polygon"><code class="xref py py-obj docutils literal"><span class="pre">Polygon</span></code></a>(xy[,&nbsp;closed])</td>
+<td>A general polygon patch.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.patches.Rectangle.html#matplotlib.patches.Rectangle" title="matplotlib.patches.Rectangle"><code class="xref py py-obj docutils literal"><span class="pre">Rectangle</span></code></a>(xy,&nbsp;width,&nbsp;height[,&nbsp;angle])</td>
+<td>Draw a rectangle with lower left at <em>xy</em> = (<em>x</em>, <em>y</em>) with specified <em>width</em> and <em>height</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.patches.RegularPolygon.html#matplotlib.patches.RegularPolygon" title="matplotlib.patches.RegularPolygon"><code class="xref py py-obj docutils literal"><span class="pre">RegularPolygon</span></code></a>(xy,&nbsp;numVertices[,&nbsp;radius,&nbsp;...])</td>
+<td>A regular polygon patch.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.patches.Shadow.html#matplotlib.patches.Shadow" title="matplotlib.patches.Shadow"><code class="xref py py-obj docutils literal"><span class="pre">Shadow</span></code></a>(patch,&nbsp;ox,&nbsp;oy[,&nbsp;props])</td>
+<td><p class="rubric">Attributes</p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.patches.Wedge.html#matplotlib.patches.Wedge" title="matplotlib.patches.Wedge"><code class="xref py py-obj docutils literal"><span class="pre">Wedge</span></code></a>(center,&nbsp;r,&nbsp;theta1,&nbsp;theta2[,&nbsp;width])</td>
+<td>Wedge shaped patch.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.patches.YAArrow.html#matplotlib.patches.YAArrow" title="matplotlib.patches.YAArrow"><code class="xref py py-obj docutils literal"><span class="pre">YAArrow</span></code></a>(figure,&nbsp;xytip,&nbsp;xybase[,&nbsp;width,&nbsp;...])</td>
+<td>Yet another arrow class.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.patches.map.html#matplotlib.patches.map" title="matplotlib.patches.map"><code class="xref py py-obj docutils literal"><span class="pre">map</span></code></a></td>
+<td>alias of <code class="xref py py-class docutils literal"><span class="pre">imap</span></code></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.patches.zip.html#matplotlib.patches.zip" title="matplotlib.patches.zip"><code class="xref py py-obj docutils literal"><span class="pre">zip</span></code></a></td>
+<td>alias of <code class="xref py py-class docutils literal"><span class="pre">izip</span></code></td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.patches.allow_rasterization.html" class="btn btn-neutral float-right" title="5.1.1. matplotlib.patches.allow_rasterization" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.backend_bases.mplDeprecation.html" class="btn btn-neutral" title="4.3.2. matplotlib.backend_bases.mplDeprecation" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../static/jquery.js"></script>
+      <script type="text/javascript" src="../static/underscore.js"></script>
+      <script type="text/javascript" src="../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,290 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>6.2.13.3. matplotlib.cbook.maxdict.fromkeys &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="6.2.13. matplotlib.cbook.maxdict" href="matplotlib.cbook.maxdict.html"/>
+        <link rel="next" title="6.2.13.4. matplotlib.cbook.maxdict.get" href="matplotlib.cbook.maxdict.get.html"/>
+        <link rel="prev" title="6.2.13.2. matplotlib.cbook.maxdict.copy" href="matplotlib.cbook.maxdict.copy.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">3. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backend_bases.html">4. matplotlib.backend_bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">5. matplotlib.patches</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.cbook.html">6. matplotlib.cbook</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.cbook.html#functions">6.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.cbook.html#classes">6.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.Bunch.html">6.2.1. matplotlib.cbook.Bunch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.CallbackRegistry.html">6.2.2. matplotlib.cbook.CallbackRegistry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.GetRealpathAndStat.html">6.2.3. matplotlib.cbook.GetRealpathAndStat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.Grouper.html">6.2.4. matplotlib.cbook.Grouper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.MemoryMonitor.html">6.2.5. matplotlib.cbook.MemoryMonitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.Null.html">6.2.6. matplotlib.cbook.Null</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.RingBuffer.html">6.2.7. matplotlib.cbook.RingBuffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.Sorter.html">6.2.8. matplotlib.cbook.Sorter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.Stack.html">6.2.9. matplotlib.cbook.Stack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.WeakKeyDictionary.html">6.2.10. matplotlib.cbook.WeakKeyDictionary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.Xlator.html">6.2.11. matplotlib.cbook.Xlator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.converter.html">6.2.12. matplotlib.cbook.converter</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="matplotlib.cbook.maxdict.html">6.2.13. matplotlib.cbook.maxdict</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.cbook.maxdict.clear.html">6.2.13.1. matplotlib.cbook.maxdict.clear</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.cbook.maxdict.copy.html">6.2.13.2. matplotlib.cbook.maxdict.copy</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">6.2.13.3. matplotlib.cbook.maxdict.fromkeys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.cbook.maxdict.get.html">6.2.13.4. matplotlib.cbook.maxdict.get</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.cbook.maxdict.has_key.html">6.2.13.5. matplotlib.cbook.maxdict.has_key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.cbook.maxdict.items.html">6.2.13.6. matplotlib.cbook.maxdict.items</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.cbook.maxdict.iteritems.html">6.2.13.7. matplotlib.cbook.maxdict.iteritems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.cbook.maxdict.iterkeys.html">6.2.13.8. matplotlib.cbook.maxdict.iterkeys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.cbook.maxdict.itervalues.html">6.2.13.9. matplotlib.cbook.maxdict.itervalues</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.cbook.maxdict.keys.html">6.2.13.10. matplotlib.cbook.maxdict.keys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.cbook.maxdict.pop.html">6.2.13.11. matplotlib.cbook.maxdict.pop</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.cbook.maxdict.popitem.html">6.2.13.12. matplotlib.cbook.maxdict.popitem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.cbook.maxdict.setdefault.html">6.2.13.13. matplotlib.cbook.maxdict.setdefault</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.cbook.maxdict.update.html">6.2.13.14. matplotlib.cbook.maxdict.update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.cbook.maxdict.values.html">6.2.13.15. matplotlib.cbook.maxdict.values</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.cbook.maxdict.viewitems.html">6.2.13.16. matplotlib.cbook.maxdict.viewitems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.cbook.maxdict.viewkeys.html">6.2.13.17. matplotlib.cbook.maxdict.viewkeys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.cbook.maxdict.viewvalues.html">6.2.13.18. matplotlib.cbook.maxdict.viewvalues</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.ref.html">6.2.14. matplotlib.cbook.ref</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.repeat.html">6.2.15. matplotlib.cbook.repeat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.silent_list.html">6.2.16. matplotlib.cbook.silent_list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.todate.html">6.2.17. matplotlib.cbook.todate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.todatetime.html">6.2.18. matplotlib.cbook.todatetime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.tofloat.html">6.2.19. matplotlib.cbook.tofloat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.toint.html">6.2.20. matplotlib.cbook.toint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.tostr.html">6.2.21. matplotlib.cbook.tostr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.xrange.html">6.2.22. matplotlib.cbook.xrange</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.zip.html">6.2.23. matplotlib.cbook.zip</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.cbook.html#exceptions">6.3. Exceptions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">8. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">9. matplotlib.widgets</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../mpl.pyplot.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.cbook.html">6. matplotlib.cbook</a> &raquo;</li>
+        
+          <li><a href="matplotlib.cbook.maxdict.html">6.2.13. matplotlib.cbook.maxdict</a> &raquo;</li>
+        
+      <li>6.2.13.3. matplotlib.cbook.maxdict.fromkeys</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.cbook.maxdict.fromkeys.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-cbook-maxdict-fromkeys">
+<h1>6.2.13.3. matplotlib.cbook.maxdict.fromkeys<a class="headerlink" href="#matplotlib-cbook-maxdict-fromkeys" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="matplotlib.cbook.maxdict.fromkeys">
+<code class="descclassname">maxdict.</code><code class="descname">fromkeys</code><span class="sig-paren">(</span><em>S</em><span class="optional">[</span>, <em>v</em><span class="optional">]</span><span class="sig-paren">)</span> &rarr; New dict with keys from S and values equal to v.<a class="headerlink" href="#matplotlib.cbook.maxdict.fromkeys" title="Permalink to this definition">¶</a></dt>
+<dd><p>v defaults to None.</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.cbook.maxdict.get.html" class="btn btn-neutral float-right" title="6.2.13.4. matplotlib.cbook.maxdict.get" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.cbook.maxdict.copy.html" class="btn btn-neutral" title="6.2.13.2. matplotlib.cbook.maxdict.copy" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

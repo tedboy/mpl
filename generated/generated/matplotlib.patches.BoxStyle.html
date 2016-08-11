@@ -1,0 +1,392 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5.2.4. matplotlib.patches.BoxStyle &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="5. matplotlib.patches" href="../matplotlib.patches.html"/>
+        <link rel="prev" title="5.2.3.3. matplotlib.patches.ArrowStyle.register" href="matplotlib.patches.ArrowStyle.register.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">3. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backend_bases.html">4. matplotlib.backend_bases</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.patches.html">5. matplotlib.patches</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.patches.html#functions">5.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.patches.html#classes">5.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Arc.html">5.2.1. matplotlib.patches.Arc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Arrow.html">5.2.2. matplotlib.patches.Arrow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.ArrowStyle.html">5.2.3. matplotlib.patches.ArrowStyle</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">5.2.4. matplotlib.patches.BoxStyle</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.BoxStyle.get_styles.html">5.2.4.1. matplotlib.patches.BoxStyle.get_styles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.BoxStyle.pprint_styles.html">5.2.4.2. matplotlib.patches.BoxStyle.pprint_styles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.BoxStyle.register.html">5.2.4.3. matplotlib.patches.BoxStyle.register</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Circle.html">5.2.5. matplotlib.patches.Circle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.CirclePolygon.html">5.2.6. matplotlib.patches.CirclePolygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.ConnectionPatch.html">5.2.7. matplotlib.patches.ConnectionPatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.ConnectionStyle.html">5.2.8. matplotlib.patches.ConnectionStyle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Ellipse.html">5.2.9. matplotlib.patches.Ellipse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.FancyArrow.html">5.2.10. matplotlib.patches.FancyArrow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.FancyArrowPatch.html">5.2.11. matplotlib.patches.FancyArrowPatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.FancyBboxPatch.html">5.2.12. matplotlib.patches.FancyBboxPatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Patch.html">5.2.13. matplotlib.patches.Patch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Path.html">5.2.14. matplotlib.patches.Path</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.PathPatch.html">5.2.15. matplotlib.patches.PathPatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Polygon.html">5.2.16. matplotlib.patches.Polygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Rectangle.html">5.2.17. matplotlib.patches.Rectangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.RegularPolygon.html">5.2.18. matplotlib.patches.RegularPolygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Shadow.html">5.2.19. matplotlib.patches.Shadow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Wedge.html">5.2.20. matplotlib.patches.Wedge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.YAArrow.html">5.2.21. matplotlib.patches.YAArrow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.map.html">5.2.22. matplotlib.patches.map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.zip.html">5.2.23. matplotlib.patches.zip</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">6. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">8. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">9. matplotlib.widgets</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../mpl.pyplot.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.patches.html">5. matplotlib.patches</a> &raquo;</li>
+        
+      <li>5.2.4. matplotlib.patches.BoxStyle</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.patches.BoxStyle.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-patches-boxstyle">
+<h1>5.2.4. matplotlib.patches.BoxStyle<a class="headerlink" href="#matplotlib-patches-boxstyle" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="matplotlib.patches.BoxStyle">
+<em class="property">class </em><code class="descclassname">matplotlib.patches.</code><code class="descname">BoxStyle</code><a class="reference internal" href="../../modules/matplotlib/patches.html#BoxStyle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.patches.BoxStyle" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference internal" href="#matplotlib.patches.BoxStyle" title="matplotlib.patches.BoxStyle"><code class="xref py py-class docutils literal"><span class="pre">BoxStyle</span></code></a> is a container class which defines several
+boxstyle classes, which are used for <code class="xref py py-class docutils literal"><span class="pre">FancyBoxPatch</span></code>.</p>
+<p>A style object can be created as:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">BoxStyle</span><span class="o">.</span><span class="n">Round</span><span class="p">(</span><span class="n">pad</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>or:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">BoxStyle</span><span class="p">(</span><span class="s2">&quot;Round&quot;</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>or:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">BoxStyle</span><span class="p">(</span><span class="s2">&quot;Round, pad=0.2&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Following boxstyle classes are defined.</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="28%" />
+<col width="52%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Class</th>
+<th class="head">Name</th>
+<th class="head">Attrs</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Circle</td>
+<td><code class="docutils literal"><span class="pre">circle</span></code></td>
+<td>pad=0.3</td>
+</tr>
+<tr class="row-odd"><td>DArrow</td>
+<td><code class="docutils literal"><span class="pre">darrow</span></code></td>
+<td>pad=0.3</td>
+</tr>
+<tr class="row-even"><td>LArrow</td>
+<td><code class="docutils literal"><span class="pre">larrow</span></code></td>
+<td>pad=0.3</td>
+</tr>
+<tr class="row-odd"><td>RArrow</td>
+<td><code class="docutils literal"><span class="pre">rarrow</span></code></td>
+<td>pad=0.3</td>
+</tr>
+<tr class="row-even"><td>Round</td>
+<td><code class="docutils literal"><span class="pre">round</span></code></td>
+<td>pad=0.3,rounding_size=None</td>
+</tr>
+<tr class="row-odd"><td>Round4</td>
+<td><code class="docutils literal"><span class="pre">round4</span></code></td>
+<td>pad=0.3,rounding_size=None</td>
+</tr>
+<tr class="row-even"><td>Roundtooth</td>
+<td><code class="docutils literal"><span class="pre">roundtooth</span></code></td>
+<td>pad=0.3,tooth_size=None</td>
+</tr>
+<tr class="row-odd"><td>Sawtooth</td>
+<td><code class="docutils literal"><span class="pre">sawtooth</span></code></td>
+<td>pad=0.3,tooth_size=None</td>
+</tr>
+<tr class="row-even"><td>Square</td>
+<td><code class="docutils literal"><span class="pre">square</span></code></td>
+<td>pad=0.3</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>An instance of any boxstyle class is an callable object,
+whose call signature is:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">mutation_size</span><span class="p">,</span> <span class="n">aspect_ratio</span><span class="o">=</span><span class="mf">1.</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>and returns a <a class="reference internal" href="matplotlib.patches.Path.html#matplotlib.patches.Path" title="matplotlib.patches.Path"><code class="xref py py-class docutils literal"><span class="pre">Path</span></code></a> instance. <em>x0</em>, <em>y0</em>, <em>width</em> and
+<em>height</em> specify the location and size of the box to be
+drawn. <em>mutation_scale</em> determines the overall size of the
+mutation (by which I mean the transformation of the rectangle to
+the fancy box).  <em>mutation_aspect</em> determines the aspect-ratio of
+the mutation.</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">Circle</span></code>([pad])</td>
+<td>A simple circle box.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">DArrow</span></code>([pad])</td>
+<td>(Double) Arrow Box</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">LArrow</span></code>([pad])</td>
+<td>(left) Arrow Box</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">RArrow</span></code>([pad])</td>
+<td>(right) Arrow Box</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">Round</span></code>([pad,&nbsp;rounding_size])</td>
+<td>A box with round corners.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">Round4</span></code>([pad,&nbsp;rounding_size])</td>
+<td>Another box with round edges.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">Roundtooth</span></code>([pad,&nbsp;tooth_size])</td>
+<td>A rounded tooth box.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">Sawtooth</span></code>([pad,&nbsp;tooth_size])</td>
+<td>A sawtooth box.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">Square</span></code>([pad])</td>
+<td>A simple square box.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.BoxStyle.get_styles.html#matplotlib.patches.BoxStyle.get_styles" title="matplotlib.patches.BoxStyle.get_styles"><code class="xref py py-obj docutils literal"><span class="pre">get_styles</span></code></a>(klass)</td>
+<td>A class method which returns a dictionary of available styles.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.BoxStyle.pprint_styles.html#matplotlib.patches.BoxStyle.pprint_styles" title="matplotlib.patches.BoxStyle.pprint_styles"><code class="xref py py-obj docutils literal"><span class="pre">pprint_styles</span></code></a>(klass)</td>
+<td>A class method which returns a string of the available styles.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.BoxStyle.register.html#matplotlib.patches.BoxStyle.register" title="matplotlib.patches.BoxStyle.register"><code class="xref py py-obj docutils literal"><span class="pre">register</span></code></a>(klass,&nbsp;name,&nbsp;style)</td>
+<td>Register a new style.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="matplotlib.patches.ArrowStyle.register.html" class="btn btn-neutral" title="5.2.3.3. matplotlib.patches.ArrowStyle.register" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -82,8 +82,15 @@
             
                 <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">1. matplotlib.pyplot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">2. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">3. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backend_bases.html">4. matplotlib.backend_bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">5. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">6. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">8. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">9. matplotlib.widgets</a></li>
 </ul>
 
             
@@ -164,14 +171,14 @@ parsing.  For example, to plot a polygon with vertices at <em>x</em>,
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Return value is a list of <code class="xref py py-class docutils literal"><span class="pre">Patch</span></code>
+<p>Return value is a list of <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a>
 instances that were added.</p>
 <p>The same color strings that <a class="reference internal" href="../matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" title="matplotlib.pyplot.plot"><code class="xref py py-func docutils literal"><span class="pre">plot()</span></code></a>
 supports are supported by the fill format string.</p>
 <p>If you would like to fill below a curve, e.g., shade a region
 between 0 and <em>y</em> along <em>x</em>, use <a class="reference internal" href="../matplotlib.pyplot.fill_between.html#matplotlib.pyplot.fill_between" title="matplotlib.pyplot.fill_between"><code class="xref py py-meth docutils literal"><span class="pre">fill_between()</span></code></a></p>
 <p>The <em>closed</em> kwarg will close the polygon when <em>True</em> (default).</p>
-<p>kwargs control the <code class="xref py py-class docutils literal"><span class="pre">Polygon</span></code> properties:</p>
+<p>kwargs control the <a class="reference internal" href="matplotlib.patches.Polygon.html#matplotlib.patches.Polygon" title="matplotlib.patches.Polygon"><code class="xref py py-class docutils literal"><span class="pre">Polygon</span></code></a> properties:</p>
 <blockquote>
 <div>agg_filter: unknown
 alpha: float or None 
@@ -181,7 +188,7 @@ axes: an <code class="xref py py-class docutils literal"><span class="pre">Axes<
 capstyle: [&#8216;butt&#8217; | &#8216;round&#8217; | &#8216;projecting&#8217;] 
 clip_box: a <code class="xref py py-class docutils literal"><span class="pre">matplotlib.transforms.Bbox</span></code> instance 
 clip_on: [True | False] 
-clip_path: [ (<code class="xref py py-class docutils literal"><span class="pre">Path</span></code>, <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code>) | <code class="xref py py-class docutils literal"><span class="pre">Patch</span></code> | None ] 
+clip_path: [ (<code class="xref py py-class docutils literal"><span class="pre">Path</span></code>, <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code>) | <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a> | None ] 
 color: matplotlib color spec
 contains: a callable function 
 edgecolor or ec: mpl color spec, or None for default, or &#8216;none&#8217; for no color 

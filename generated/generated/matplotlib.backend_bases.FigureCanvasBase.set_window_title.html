@@ -1,0 +1,315 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4.2.6.36. matplotlib.backend_bases.FigureCanvasBase.set_window_title &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="4.2.6. matplotlib.backend_bases.FigureCanvasBase" href="matplotlib.backend_bases.FigureCanvasBase.html"/>
+        <link rel="next" title="4.2.6.37. matplotlib.backend_bases.FigureCanvasBase.start_event_loop" href="matplotlib.backend_bases.FigureCanvasBase.start_event_loop.html"/>
+        <link rel="prev" title="4.2.6.35. matplotlib.backend_bases.FigureCanvasBase.scroll_event" href="matplotlib.backend_bases.FigureCanvasBase.scroll_event.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">3. matplotlib.cm</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.backend_bases.html">4. matplotlib.backend_bases</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.backend_bases.html#functions">4.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.backend_bases.html#classes">4.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.Affine2D.html">4.2.1. matplotlib.backend_bases.Affine2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.Bbox.html">4.2.2. matplotlib.backend_bases.Bbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.CloseEvent.html">4.2.3. matplotlib.backend_bases.CloseEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.DrawEvent.html">4.2.4. matplotlib.backend_bases.DrawEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.Event.html">4.2.5. matplotlib.backend_bases.Event</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.html">4.2.6. matplotlib.backend_bases.FigureCanvasBase</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.blit.html">4.2.6.1. matplotlib.backend_bases.FigureCanvasBase.blit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.button_press_event.html">4.2.6.2. matplotlib.backend_bases.FigureCanvasBase.button_press_event</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.button_release_event.html">4.2.6.3. matplotlib.backend_bases.FigureCanvasBase.button_release_event</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.close_event.html">4.2.6.4. matplotlib.backend_bases.FigureCanvasBase.close_event</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.draw.html">4.2.6.5. matplotlib.backend_bases.FigureCanvasBase.draw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.draw_cursor.html">4.2.6.6. matplotlib.backend_bases.FigureCanvasBase.draw_cursor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.draw_event.html">4.2.6.7. matplotlib.backend_bases.FigureCanvasBase.draw_event</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.draw_idle.html">4.2.6.8. matplotlib.backend_bases.FigureCanvasBase.draw_idle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.enter_notify_event.html">4.2.6.9. matplotlib.backend_bases.FigureCanvasBase.enter_notify_event</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.flush_events.html">4.2.6.10. matplotlib.backend_bases.FigureCanvasBase.flush_events</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.get_default_filename.html">4.2.6.11. matplotlib.backend_bases.FigureCanvasBase.get_default_filename</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.get_default_filetype.html">4.2.6.12. matplotlib.backend_bases.FigureCanvasBase.get_default_filetype</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.get_supported_filetypes.html">4.2.6.13. matplotlib.backend_bases.FigureCanvasBase.get_supported_filetypes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.get_supported_filetypes_grouped.html">4.2.6.14. matplotlib.backend_bases.FigureCanvasBase.get_supported_filetypes_grouped</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.get_width_height.html">4.2.6.15. matplotlib.backend_bases.FigureCanvasBase.get_width_height</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.get_window_title.html">4.2.6.16. matplotlib.backend_bases.FigureCanvasBase.get_window_title</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.grab_mouse.html">4.2.6.17. matplotlib.backend_bases.FigureCanvasBase.grab_mouse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.idle_event.html">4.2.6.18. matplotlib.backend_bases.FigureCanvasBase.idle_event</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.is_saving.html">4.2.6.19. matplotlib.backend_bases.FigureCanvasBase.is_saving</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.key_press_event.html">4.2.6.20. matplotlib.backend_bases.FigureCanvasBase.key_press_event</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.key_release_event.html">4.2.6.21. matplotlib.backend_bases.FigureCanvasBase.key_release_event</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.leave_notify_event.html">4.2.6.22. matplotlib.backend_bases.FigureCanvasBase.leave_notify_event</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.motion_notify_event.html">4.2.6.23. matplotlib.backend_bases.FigureCanvasBase.motion_notify_event</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.mpl_connect.html">4.2.6.24. matplotlib.backend_bases.FigureCanvasBase.mpl_connect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.mpl_disconnect.html">4.2.6.25. matplotlib.backend_bases.FigureCanvasBase.mpl_disconnect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.new_timer.html">4.2.6.26. matplotlib.backend_bases.FigureCanvasBase.new_timer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.onHilite.html">4.2.6.27. matplotlib.backend_bases.FigureCanvasBase.onHilite</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.onRemove.html">4.2.6.28. matplotlib.backend_bases.FigureCanvasBase.onRemove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.pick.html">4.2.6.29. matplotlib.backend_bases.FigureCanvasBase.pick</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.pick_event.html">4.2.6.30. matplotlib.backend_bases.FigureCanvasBase.pick_event</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.print_figure.html">4.2.6.31. matplotlib.backend_bases.FigureCanvasBase.print_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.release_mouse.html">4.2.6.32. matplotlib.backend_bases.FigureCanvasBase.release_mouse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.resize.html">4.2.6.33. matplotlib.backend_bases.FigureCanvasBase.resize</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.resize_event.html">4.2.6.34. matplotlib.backend_bases.FigureCanvasBase.resize_event</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.scroll_event.html">4.2.6.35. matplotlib.backend_bases.FigureCanvasBase.scroll_event</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">4.2.6.36. matplotlib.backend_bases.FigureCanvasBase.set_window_title</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.start_event_loop.html">4.2.6.37. matplotlib.backend_bases.FigureCanvasBase.start_event_loop</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.start_event_loop_default.html">4.2.6.38. matplotlib.backend_bases.FigureCanvasBase.start_event_loop_default</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.stop_event_loop.html">4.2.6.39. matplotlib.backend_bases.FigureCanvasBase.stop_event_loop</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.stop_event_loop_default.html">4.2.6.40. matplotlib.backend_bases.FigureCanvasBase.stop_event_loop_default</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.backend_bases.FigureCanvasBase.switch_backends.html">4.2.6.41. matplotlib.backend_bases.FigureCanvasBase.switch_backends</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.FigureManagerBase.html">4.2.7. matplotlib.backend_bases.FigureManagerBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.Gcf.html">4.2.8. matplotlib.backend_bases.Gcf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.GraphicsContextBase.html">4.2.9. matplotlib.backend_bases.GraphicsContextBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.IdleEvent.html">4.2.10. matplotlib.backend_bases.IdleEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.KeyEvent.html">4.2.11. matplotlib.backend_bases.KeyEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.LocationEvent.html">4.2.12. matplotlib.backend_bases.LocationEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.MouseEvent.html">4.2.13. matplotlib.backend_bases.MouseEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.NavigationToolbar2.html">4.2.14. matplotlib.backend_bases.NavigationToolbar2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.Path.html">4.2.15. matplotlib.backend_bases.Path</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.PickEvent.html">4.2.16. matplotlib.backend_bases.PickEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.RendererBase.html">4.2.17. matplotlib.backend_bases.RendererBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.ResizeEvent.html">4.2.18. matplotlib.backend_bases.ResizeEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.ShowBase.html">4.2.19. matplotlib.backend_bases.ShowBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.StatusbarBase.html">4.2.20. matplotlib.backend_bases.StatusbarBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.TimerBase.html">4.2.21. matplotlib.backend_bases.TimerBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.ToolContainerBase.html">4.2.22. matplotlib.backend_bases.ToolContainerBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.TransformedBbox.html">4.2.23. matplotlib.backend_bases.TransformedBbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.xrange.html">4.2.24. matplotlib.backend_bases.xrange</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.backend_bases.html#exceptions">4.3. Exceptions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">5. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">6. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">8. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">9. matplotlib.widgets</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../mpl.pyplot.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.backend_bases.html">4. matplotlib.backend_bases</a> &raquo;</li>
+        
+          <li><a href="matplotlib.backend_bases.FigureCanvasBase.html">4.2.6. matplotlib.backend_bases.FigureCanvasBase</a> &raquo;</li>
+        
+      <li>4.2.6.36. matplotlib.backend_bases.FigureCanvasBase.set_window_title</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.backend_bases.FigureCanvasBase.set_window_title.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-backend-bases-figurecanvasbase-set-window-title">
+<h1>4.2.6.36. matplotlib.backend_bases.FigureCanvasBase.set_window_title<a class="headerlink" href="#matplotlib-backend-bases-figurecanvasbase-set-window-title" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="matplotlib.backend_bases.FigureCanvasBase.set_window_title">
+<code class="descclassname">FigureCanvasBase.</code><code class="descname">set_window_title</code><span class="sig-paren">(</span><em>title</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/backend_bases.html#FigureCanvasBase.set_window_title"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.backend_bases.FigureCanvasBase.set_window_title" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the title text of the window containing the figure.  Note that
+this has no effect if there is no window (e.g., a PS backend).</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.backend_bases.FigureCanvasBase.start_event_loop.html" class="btn btn-neutral float-right" title="4.2.6.37. matplotlib.backend_bases.FigureCanvasBase.start_event_loop" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.backend_bases.FigureCanvasBase.scroll_event.html" class="btn btn-neutral" title="4.2.6.35. matplotlib.backend_bases.FigureCanvasBase.scroll_event" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

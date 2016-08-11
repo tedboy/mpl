@@ -1,0 +1,438 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4. matplotlib.backend_bases &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../index.html"/>
+        <link rel="up" title="&lt;no title&gt;" href="../mpl.pyplot.html"/>
+        <link rel="next" title="4.1.1. matplotlib.backend_bases.contextmanager" href="matplotlib.backend_bases.contextmanager.html"/>
+        <link rel="prev" title="3.2.1.13. matplotlib.cm.ScalarMappable.to_rgba" href="generated/matplotlib.cm.ScalarMappable.to_rgba.html"/> 
+
+  
+  <script src="../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.cm.html">3. matplotlib.cm</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. matplotlib.backend_bases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#functions">4.1. Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.contextmanager.html">4.1.1. matplotlib.backend_bases.contextmanager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.get_backend.html">4.1.2. matplotlib.backend_bases.get_backend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.get_registered_canvas_class.html">4.1.3. matplotlib.backend_bases.get_registered_canvas_class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.import_module.html">4.1.4. matplotlib.backend_bases.import_module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.is_interactive.html">4.1.5. matplotlib.backend_bases.is_interactive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.key_press_handler.html">4.1.6. matplotlib.backend_bases.key_press_handler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.register_backend.html">4.1.7. matplotlib.backend_bases.register_backend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.warn_deprecated.html">4.1.8. matplotlib.backend_bases.warn_deprecated</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#classes">4.2. Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.backend_bases.Affine2D.html">4.2.1. matplotlib.backend_bases.Affine2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.backend_bases.Bbox.html">4.2.2. matplotlib.backend_bases.Bbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.backend_bases.CloseEvent.html">4.2.3. matplotlib.backend_bases.CloseEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.backend_bases.DrawEvent.html">4.2.4. matplotlib.backend_bases.DrawEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.backend_bases.Event.html">4.2.5. matplotlib.backend_bases.Event</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.backend_bases.FigureCanvasBase.html">4.2.6. matplotlib.backend_bases.FigureCanvasBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.backend_bases.FigureManagerBase.html">4.2.7. matplotlib.backend_bases.FigureManagerBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.backend_bases.Gcf.html">4.2.8. matplotlib.backend_bases.Gcf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.backend_bases.GraphicsContextBase.html">4.2.9. matplotlib.backend_bases.GraphicsContextBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.backend_bases.IdleEvent.html">4.2.10. matplotlib.backend_bases.IdleEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.backend_bases.KeyEvent.html">4.2.11. matplotlib.backend_bases.KeyEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.backend_bases.LocationEvent.html">4.2.12. matplotlib.backend_bases.LocationEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.backend_bases.MouseEvent.html">4.2.13. matplotlib.backend_bases.MouseEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.backend_bases.NavigationToolbar2.html">4.2.14. matplotlib.backend_bases.NavigationToolbar2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.backend_bases.Path.html">4.2.15. matplotlib.backend_bases.Path</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.backend_bases.PickEvent.html">4.2.16. matplotlib.backend_bases.PickEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.backend_bases.RendererBase.html">4.2.17. matplotlib.backend_bases.RendererBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.backend_bases.ResizeEvent.html">4.2.18. matplotlib.backend_bases.ResizeEvent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.backend_bases.ShowBase.html">4.2.19. matplotlib.backend_bases.ShowBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.backend_bases.StatusbarBase.html">4.2.20. matplotlib.backend_bases.StatusbarBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.backend_bases.TimerBase.html">4.2.21. matplotlib.backend_bases.TimerBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.backend_bases.ToolContainerBase.html">4.2.22. matplotlib.backend_bases.ToolContainerBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.backend_bases.TransformedBbox.html">4.2.23. matplotlib.backend_bases.TransformedBbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.backend_bases.xrange.html">4.2.24. matplotlib.backend_bases.xrange</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#exceptions">4.3. Exceptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.NonGuiException.html">4.3.1. matplotlib.backend_bases.NonGuiException</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.backend_bases.mplDeprecation.html">4.3.2. matplotlib.backend_bases.mplDeprecation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.patches.html">5. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.cbook.html">6. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.image.html">8. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.widgets.html">9. matplotlib.widgets</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../mpl.pyplot.html">&lt;no title&gt;</a> &raquo;</li>
+        
+      <li>4. matplotlib.backend_bases</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../sources/generated/matplotlib.backend_bases.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-matplotlib.backend_bases">
+<span id="matplotlib-backend-bases"></span><h1>4. matplotlib.backend_bases<a class="headerlink" href="#module-matplotlib.backend_bases" title="Permalink to this headline">¶</a></h1>
+<p>Abstract base classes define the primitives that renderers and
+graphics contexts must implement to serve as a matplotlib backend</p>
+<dl class="docutils">
+<dt><a class="reference internal" href="generated/matplotlib.backend_bases.RendererBase.html#matplotlib.backend_bases.RendererBase" title="matplotlib.backend_bases.RendererBase"><code class="xref py py-class docutils literal"><span class="pre">RendererBase</span></code></a></dt>
+<dd>An abstract base class to handle drawing/rendering operations.</dd>
+<dt><a class="reference internal" href="generated/matplotlib.backend_bases.FigureCanvasBase.html#matplotlib.backend_bases.FigureCanvasBase" title="matplotlib.backend_bases.FigureCanvasBase"><code class="xref py py-class docutils literal"><span class="pre">FigureCanvasBase</span></code></a></dt>
+<dd>The abstraction layer that separates the
+<code class="xref py py-class docutils literal"><span class="pre">matplotlib.figure.Figure</span></code> from the backend specific
+details like a user interface drawing area</dd>
+<dt><a class="reference internal" href="generated/matplotlib.backend_bases.GraphicsContextBase.html#matplotlib.backend_bases.GraphicsContextBase" title="matplotlib.backend_bases.GraphicsContextBase"><code class="xref py py-class docutils literal"><span class="pre">GraphicsContextBase</span></code></a></dt>
+<dd>An abstract base class that provides color, line styles, etc...</dd>
+<dt><a class="reference internal" href="generated/matplotlib.backend_bases.Event.html#matplotlib.backend_bases.Event" title="matplotlib.backend_bases.Event"><code class="xref py py-class docutils literal"><span class="pre">Event</span></code></a></dt>
+<dd>The base class for all of the matplotlib event
+handling.  Derived classes such as <a class="reference internal" href="generated/matplotlib.backend_bases.KeyEvent.html#matplotlib.backend_bases.KeyEvent" title="matplotlib.backend_bases.KeyEvent"><code class="xref py py-class docutils literal"><span class="pre">KeyEvent</span></code></a> and
+<a class="reference internal" href="generated/matplotlib.backend_bases.MouseEvent.html#matplotlib.backend_bases.MouseEvent" title="matplotlib.backend_bases.MouseEvent"><code class="xref py py-class docutils literal"><span class="pre">MouseEvent</span></code></a> store the meta data like keys and buttons
+pressed, x and y locations in pixel and
+<code class="xref py py-class docutils literal"><span class="pre">Axes</span></code> coordinates.</dd>
+<dt><a class="reference internal" href="generated/matplotlib.backend_bases.ShowBase.html#matplotlib.backend_bases.ShowBase" title="matplotlib.backend_bases.ShowBase"><code class="xref py py-class docutils literal"><span class="pre">ShowBase</span></code></a></dt>
+<dd>The base class for the Show class of each interactive backend;
+the &#8216;show&#8217; callable is then set to Show.__call__, inherited from
+ShowBase.</dd>
+<dt><a class="reference internal" href="generated/matplotlib.backend_bases.ToolContainerBase.html#matplotlib.backend_bases.ToolContainerBase" title="matplotlib.backend_bases.ToolContainerBase"><code class="xref py py-class docutils literal"><span class="pre">ToolContainerBase</span></code></a></dt>
+<dd>The base class for the Toolbar class of each interactive backend.</dd>
+<dt><a class="reference internal" href="generated/matplotlib.backend_bases.StatusbarBase.html#matplotlib.backend_bases.StatusbarBase" title="matplotlib.backend_bases.StatusbarBase"><code class="xref py py-class docutils literal"><span class="pre">StatusbarBase</span></code></a></dt>
+<dd>The base class for the messaging area.</dd>
+</dl>
+<div class="section" id="functions">
+<h2>4.1. Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.backend_bases.contextmanager.html#matplotlib.backend_bases.contextmanager" title="matplotlib.backend_bases.contextmanager"><code class="xref py py-obj docutils literal"><span class="pre">contextmanager</span></code></a>(func)</td>
+<td>&#64;contextmanager decorator.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.backend_bases.get_backend.html#matplotlib.backend_bases.get_backend" title="matplotlib.backend_bases.get_backend"><code class="xref py py-obj docutils literal"><span class="pre">get_backend</span></code></a>()</td>
+<td>Return the name of the current backend.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.backend_bases.get_registered_canvas_class.html#matplotlib.backend_bases.get_registered_canvas_class" title="matplotlib.backend_bases.get_registered_canvas_class"><code class="xref py py-obj docutils literal"><span class="pre">get_registered_canvas_class</span></code></a>(format)</td>
+<td>Return the registered default canvas for given file format.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.backend_bases.import_module.html#matplotlib.backend_bases.import_module" title="matplotlib.backend_bases.import_module"><code class="xref py py-obj docutils literal"><span class="pre">import_module</span></code></a>(name[,&nbsp;package])</td>
+<td>Import a module.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.backend_bases.is_interactive.html#matplotlib.backend_bases.is_interactive" title="matplotlib.backend_bases.is_interactive"><code class="xref py py-obj docutils literal"><span class="pre">is_interactive</span></code></a>()</td>
+<td>Return true if plot mode is interactive</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.backend_bases.key_press_handler.html#matplotlib.backend_bases.key_press_handler" title="matplotlib.backend_bases.key_press_handler"><code class="xref py py-obj docutils literal"><span class="pre">key_press_handler</span></code></a>(event,&nbsp;canvas[,&nbsp;toolbar])</td>
+<td>Implement the default mpl key bindings for the canvas and toolbar</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.backend_bases.register_backend.html#matplotlib.backend_bases.register_backend" title="matplotlib.backend_bases.register_backend"><code class="xref py py-obj docutils literal"><span class="pre">register_backend</span></code></a>(format,&nbsp;backend[,&nbsp;description])</td>
+<td>Register a backend for saving to a given file format.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.backend_bases.warn_deprecated.html#matplotlib.backend_bases.warn_deprecated" title="matplotlib.backend_bases.warn_deprecated"><code class="xref py py-obj docutils literal"><span class="pre">warn_deprecated</span></code></a>(since[,&nbsp;message,&nbsp;name,&nbsp;...])</td>
+<td>Used to display deprecation warning in a standard way.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="classes">
+<h2>4.2. Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.backend_bases.Affine2D.html#matplotlib.backend_bases.Affine2D" title="matplotlib.backend_bases.Affine2D"><code class="xref py py-obj docutils literal"><span class="pre">Affine2D</span></code></a>([matrix])</td>
+<td>A mutable 2D affine transformation.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.backend_bases.Bbox.html#matplotlib.backend_bases.Bbox" title="matplotlib.backend_bases.Bbox"><code class="xref py py-obj docutils literal"><span class="pre">Bbox</span></code></a>(points,&nbsp;**kwargs)</td>
+<td>A mutable bounding box.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.backend_bases.CloseEvent.html#matplotlib.backend_bases.CloseEvent" title="matplotlib.backend_bases.CloseEvent"><code class="xref py py-obj docutils literal"><span class="pre">CloseEvent</span></code></a>(name,&nbsp;canvas[,&nbsp;guiEvent])</td>
+<td>An event triggered by a figure being closed</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.backend_bases.DrawEvent.html#matplotlib.backend_bases.DrawEvent" title="matplotlib.backend_bases.DrawEvent"><code class="xref py py-obj docutils literal"><span class="pre">DrawEvent</span></code></a>(name,&nbsp;canvas,&nbsp;renderer)</td>
+<td>An event triggered by a draw operation on the canvas</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.backend_bases.Event.html#matplotlib.backend_bases.Event" title="matplotlib.backend_bases.Event"><code class="xref py py-obj docutils literal"><span class="pre">Event</span></code></a>(name,&nbsp;canvas[,&nbsp;guiEvent])</td>
+<td>A matplotlib event.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.backend_bases.FigureCanvasBase.html#matplotlib.backend_bases.FigureCanvasBase" title="matplotlib.backend_bases.FigureCanvasBase"><code class="xref py py-obj docutils literal"><span class="pre">FigureCanvasBase</span></code></a>(figure)</td>
+<td>The canvas the figure renders into.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.backend_bases.FigureManagerBase.html#matplotlib.backend_bases.FigureManagerBase" title="matplotlib.backend_bases.FigureManagerBase"><code class="xref py py-obj docutils literal"><span class="pre">FigureManagerBase</span></code></a>(canvas,&nbsp;num)</td>
+<td>Helper class for pyplot mode, wraps everything up into a neat bundle</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.backend_bases.Gcf.html#matplotlib.backend_bases.Gcf" title="matplotlib.backend_bases.Gcf"><code class="xref py py-obj docutils literal"><span class="pre">Gcf</span></code></a></td>
+<td>Singleton to manage a set of integer-numbered figures.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.backend_bases.GraphicsContextBase.html#matplotlib.backend_bases.GraphicsContextBase" title="matplotlib.backend_bases.GraphicsContextBase"><code class="xref py py-obj docutils literal"><span class="pre">GraphicsContextBase</span></code></a>()</td>
+<td>An abstract base class that provides color, line styles, etc...</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.backend_bases.IdleEvent.html#matplotlib.backend_bases.IdleEvent" title="matplotlib.backend_bases.IdleEvent"><code class="xref py py-obj docutils literal"><span class="pre">IdleEvent</span></code></a>(name,&nbsp;canvas[,&nbsp;guiEvent])</td>
+<td>An event triggered by the GUI backend when it is idle &#8211; useful</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.backend_bases.KeyEvent.html#matplotlib.backend_bases.KeyEvent" title="matplotlib.backend_bases.KeyEvent"><code class="xref py py-obj docutils literal"><span class="pre">KeyEvent</span></code></a>(name,&nbsp;canvas,&nbsp;key[,&nbsp;x,&nbsp;y,&nbsp;guiEvent])</td>
+<td>A key event (key press, key release).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.backend_bases.LocationEvent.html#matplotlib.backend_bases.LocationEvent" title="matplotlib.backend_bases.LocationEvent"><code class="xref py py-obj docutils literal"><span class="pre">LocationEvent</span></code></a>(name,&nbsp;canvas,&nbsp;x,&nbsp;y[,&nbsp;guiEvent])</td>
+<td>An event that has a screen location</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.backend_bases.MouseEvent.html#matplotlib.backend_bases.MouseEvent" title="matplotlib.backend_bases.MouseEvent"><code class="xref py py-obj docutils literal"><span class="pre">MouseEvent</span></code></a>(name,&nbsp;canvas,&nbsp;x,&nbsp;y[,&nbsp;button,&nbsp;...])</td>
+<td>A mouse event (&#8216;button_press_event&#8217;,                &#8216;button_release_event&#8217;,                &#8216;scroll_event&#8217;,                &#8216;motion_notify_event&#8217;).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.backend_bases.NavigationToolbar2.html#matplotlib.backend_bases.NavigationToolbar2" title="matplotlib.backend_bases.NavigationToolbar2"><code class="xref py py-obj docutils literal"><span class="pre">NavigationToolbar2</span></code></a>(canvas)</td>
+<td>Base class for the navigation cursor, version 2</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.backend_bases.Path.html#matplotlib.backend_bases.Path" title="matplotlib.backend_bases.Path"><code class="xref py py-obj docutils literal"><span class="pre">Path</span></code></a>(vertices[,&nbsp;codes,&nbsp;...])</td>
+<td><a class="reference internal" href="generated/matplotlib.backend_bases.Path.html#matplotlib.backend_bases.Path" title="matplotlib.backend_bases.Path"><code class="xref py py-class docutils literal"><span class="pre">Path</span></code></a> represents a series of possibly disconnected,</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.backend_bases.PickEvent.html#matplotlib.backend_bases.PickEvent" title="matplotlib.backend_bases.PickEvent"><code class="xref py py-obj docutils literal"><span class="pre">PickEvent</span></code></a>(name,&nbsp;canvas,&nbsp;mouseevent,&nbsp;artist)</td>
+<td>a pick event, fired when the user picks a location on the canvas</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.backend_bases.RendererBase.html#matplotlib.backend_bases.RendererBase" title="matplotlib.backend_bases.RendererBase"><code class="xref py py-obj docutils literal"><span class="pre">RendererBase</span></code></a>()</td>
+<td>An abstract base class to handle drawing/rendering operations.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.backend_bases.ResizeEvent.html#matplotlib.backend_bases.ResizeEvent" title="matplotlib.backend_bases.ResizeEvent"><code class="xref py py-obj docutils literal"><span class="pre">ResizeEvent</span></code></a>(name,&nbsp;canvas)</td>
+<td>An event triggered by a canvas resize</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.backend_bases.ShowBase.html#matplotlib.backend_bases.ShowBase" title="matplotlib.backend_bases.ShowBase"><code class="xref py py-obj docutils literal"><span class="pre">ShowBase</span></code></a></td>
+<td>Simple base class to generate a show() callable in backends.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.backend_bases.StatusbarBase.html#matplotlib.backend_bases.StatusbarBase" title="matplotlib.backend_bases.StatusbarBase"><code class="xref py py-obj docutils literal"><span class="pre">StatusbarBase</span></code></a>(toolmanager)</td>
+<td>Base class for the statusbar</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.backend_bases.TimerBase.html#matplotlib.backend_bases.TimerBase" title="matplotlib.backend_bases.TimerBase"><code class="xref py py-obj docutils literal"><span class="pre">TimerBase</span></code></a>([interval,&nbsp;callbacks])</td>
+<td>A base class for providing timer events, useful for things animations.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.backend_bases.ToolContainerBase.html#matplotlib.backend_bases.ToolContainerBase" title="matplotlib.backend_bases.ToolContainerBase"><code class="xref py py-obj docutils literal"><span class="pre">ToolContainerBase</span></code></a>(toolmanager)</td>
+<td>Base class for all tool containers, e.g.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.backend_bases.TransformedBbox.html#matplotlib.backend_bases.TransformedBbox" title="matplotlib.backend_bases.TransformedBbox"><code class="xref py py-obj docutils literal"><span class="pre">TransformedBbox</span></code></a>(bbox,&nbsp;transform,&nbsp;**kwargs)</td>
+<td>A <a class="reference internal" href="generated/matplotlib.backend_bases.Bbox.html#matplotlib.backend_bases.Bbox" title="matplotlib.backend_bases.Bbox"><code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code></a> that is automatically transformed by a given transform.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.backend_bases.xrange.html#matplotlib.backend_bases.xrange" title="matplotlib.backend_bases.xrange"><code class="xref py py-obj docutils literal"><span class="pre">xrange</span></code></a></td>
+<td>xrange(start, stop[, step]) -&gt; xrange object</td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="exceptions">
+<h2>4.3. Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.backend_bases.NonGuiException.html#matplotlib.backend_bases.NonGuiException" title="matplotlib.backend_bases.NonGuiException"><code class="xref py py-obj docutils literal"><span class="pre">NonGuiException</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.backend_bases.mplDeprecation.html#matplotlib.backend_bases.mplDeprecation" title="matplotlib.backend_bases.mplDeprecation"><code class="xref py py-obj docutils literal"><span class="pre">mplDeprecation</span></code></a></td>
+<td>alias of <code class="xref py py-class docutils literal"><span class="pre">MatplotlibDeprecationWarning</span></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.backend_bases.contextmanager.html" class="btn btn-neutral float-right" title="4.1.1. matplotlib.backend_bases.contextmanager" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="generated/matplotlib.cm.ScalarMappable.to_rgba.html" class="btn btn-neutral" title="3.2.1.13. matplotlib.cm.ScalarMappable.to_rgba" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../static/jquery.js"></script>
+      <script type="text/javascript" src="../static/underscore.js"></script>
+      <script type="text/javascript" src="../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

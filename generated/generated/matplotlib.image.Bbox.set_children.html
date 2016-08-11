@@ -1,0 +1,325 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>8.2.2.52. matplotlib.image.Bbox.set_children &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="8.2.2. matplotlib.image.Bbox" href="matplotlib.image.Bbox.html"/>
+        <link rel="next" title="8.2.2.53. matplotlib.image.Bbox.set_points" href="matplotlib.image.Bbox.set_points.html"/>
+        <link rel="prev" title="8.2.2.51. matplotlib.image.Bbox.set" href="matplotlib.image.Bbox.set.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">3. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backend_bases.html">4. matplotlib.backend_bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">5. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">6. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.image.html">8. matplotlib.image</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.image.html#functions">8.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.image.html#classes">8.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.AxesImage.html">8.2.1. matplotlib.image.AxesImage</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="matplotlib.image.Bbox.html">8.2.2. matplotlib.image.Bbox</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.bounds.html">8.2.2.1. matplotlib.image.Bbox.bounds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.extents.html">8.2.2.2. matplotlib.image.Bbox.extents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.height.html">8.2.2.3. matplotlib.image.Bbox.height</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.intervalx.html">8.2.2.4. matplotlib.image.Bbox.intervalx</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.intervaly.html">8.2.2.5. matplotlib.image.Bbox.intervaly</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.max.html">8.2.2.6. matplotlib.image.Bbox.max</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.min.html">8.2.2.7. matplotlib.image.Bbox.min</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.minpos.html">8.2.2.8. matplotlib.image.Bbox.minpos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.minposx.html">8.2.2.9. matplotlib.image.Bbox.minposx</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.minposy.html">8.2.2.10. matplotlib.image.Bbox.minposy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.p0.html">8.2.2.11. matplotlib.image.Bbox.p0</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.p1.html">8.2.2.12. matplotlib.image.Bbox.p1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.size.html">8.2.2.13. matplotlib.image.Bbox.size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.width.html">8.2.2.14. matplotlib.image.Bbox.width</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.x0.html">8.2.2.15. matplotlib.image.Bbox.x0</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.x1.html">8.2.2.16. matplotlib.image.Bbox.x1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.xmax.html">8.2.2.17. matplotlib.image.Bbox.xmax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.xmin.html">8.2.2.18. matplotlib.image.Bbox.xmin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.y0.html">8.2.2.19. matplotlib.image.Bbox.y0</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.y1.html">8.2.2.20. matplotlib.image.Bbox.y1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.ymax.html">8.2.2.21. matplotlib.image.Bbox.ymax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.ymin.html">8.2.2.22. matplotlib.image.Bbox.ymin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.anchored.html">8.2.2.23. matplotlib.image.Bbox.anchored</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.contains.html">8.2.2.24. matplotlib.image.Bbox.contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.containsx.html">8.2.2.25. matplotlib.image.Bbox.containsx</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.containsy.html">8.2.2.26. matplotlib.image.Bbox.containsy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.corners.html">8.2.2.27. matplotlib.image.Bbox.corners</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.count_contains.html">8.2.2.28. matplotlib.image.Bbox.count_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.count_overlaps.html">8.2.2.29. matplotlib.image.Bbox.count_overlaps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.expanded.html">8.2.2.30. matplotlib.image.Bbox.expanded</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.from_bounds.html">8.2.2.31. matplotlib.image.Bbox.from_bounds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.from_extents.html">8.2.2.32. matplotlib.image.Bbox.from_extents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.frozen.html">8.2.2.33. matplotlib.image.Bbox.frozen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.fully_contains.html">8.2.2.34. matplotlib.image.Bbox.fully_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.fully_containsx.html">8.2.2.35. matplotlib.image.Bbox.fully_containsx</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.fully_containsy.html">8.2.2.36. matplotlib.image.Bbox.fully_containsy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.fully_overlaps.html">8.2.2.37. matplotlib.image.Bbox.fully_overlaps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.get_points.html">8.2.2.38. matplotlib.image.Bbox.get_points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.ignore.html">8.2.2.39. matplotlib.image.Bbox.ignore</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.intersection.html">8.2.2.40. matplotlib.image.Bbox.intersection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.invalidate.html">8.2.2.41. matplotlib.image.Bbox.invalidate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.inverse_transformed.html">8.2.2.42. matplotlib.image.Bbox.inverse_transformed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.is_unit.html">8.2.2.43. matplotlib.image.Bbox.is_unit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.mutated.html">8.2.2.44. matplotlib.image.Bbox.mutated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.mutatedx.html">8.2.2.45. matplotlib.image.Bbox.mutatedx</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.mutatedy.html">8.2.2.46. matplotlib.image.Bbox.mutatedy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.null.html">8.2.2.47. matplotlib.image.Bbox.null</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.overlaps.html">8.2.2.48. matplotlib.image.Bbox.overlaps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.padded.html">8.2.2.49. matplotlib.image.Bbox.padded</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.rotated.html">8.2.2.50. matplotlib.image.Bbox.rotated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.set.html">8.2.2.51. matplotlib.image.Bbox.set</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">8.2.2.52. matplotlib.image.Bbox.set_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.set_points.html">8.2.2.53. matplotlib.image.Bbox.set_points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.shrunk.html">8.2.2.54. matplotlib.image.Bbox.shrunk</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.shrunk_to_aspect.html">8.2.2.55. matplotlib.image.Bbox.shrunk_to_aspect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.splitx.html">8.2.2.56. matplotlib.image.Bbox.splitx</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.splity.html">8.2.2.57. matplotlib.image.Bbox.splity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.transformed.html">8.2.2.58. matplotlib.image.Bbox.transformed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.translated.html">8.2.2.59. matplotlib.image.Bbox.translated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.union.html">8.2.2.60. matplotlib.image.Bbox.union</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.unit.html">8.2.2.61. matplotlib.image.Bbox.unit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.update_from_data.html">8.2.2.62. matplotlib.image.Bbox.update_from_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.update_from_data_xy.html">8.2.2.63. matplotlib.image.Bbox.update_from_data_xy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.Bbox.update_from_path.html">8.2.2.64. matplotlib.image.Bbox.update_from_path</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.BboxBase.html">8.2.3. matplotlib.image.BboxBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.BboxImage.html">8.2.4. matplotlib.image.BboxImage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.BytesIO.html">8.2.5. matplotlib.image.BytesIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.FigureImage.html">8.2.6. matplotlib.image.FigureImage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.IdentityTransform.html">8.2.7. matplotlib.image.IdentityTransform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.Image.html">8.2.8. matplotlib.image.Image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.NonUniformImage.html">8.2.9. matplotlib.image.NonUniformImage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.PcolorImage.html">8.2.10. matplotlib.image.PcolorImage</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">9. matplotlib.widgets</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../mpl.pyplot.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.image.html">8. matplotlib.image</a> &raquo;</li>
+        
+          <li><a href="matplotlib.image.Bbox.html">8.2.2. matplotlib.image.Bbox</a> &raquo;</li>
+        
+      <li>8.2.2.52. matplotlib.image.Bbox.set_children</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.image.Bbox.set_children.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-image-bbox-set-children">
+<h1>8.2.2.52. matplotlib.image.Bbox.set_children<a class="headerlink" href="#matplotlib-image-bbox-set-children" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="matplotlib.image.Bbox.set_children">
+<code class="descclassname">Bbox.</code><code class="descname">set_children</code><span class="sig-paren">(</span><em>*children</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.image.Bbox.set_children" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the children of the transform, to let the invalidation
+system know which transforms can invalidate this transform.
+Should be called from the constructor of any transforms that
+depend on other transforms.</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.image.Bbox.set_points.html" class="btn btn-neutral float-right" title="8.2.2.53. matplotlib.image.Bbox.set_points" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.image.Bbox.set.html" class="btn btn-neutral" title="8.2.2.51. matplotlib.image.Bbox.set" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

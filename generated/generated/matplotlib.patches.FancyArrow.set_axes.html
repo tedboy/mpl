@@ -1,0 +1,383 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5.2.10.75. matplotlib.patches.FancyArrow.set_axes &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="5.2.10. matplotlib.patches.FancyArrow" href="matplotlib.patches.FancyArrow.html"/>
+        <link rel="next" title="5.2.10.76. matplotlib.patches.FancyArrow.set_capstyle" href="matplotlib.patches.FancyArrow.set_capstyle.html"/>
+        <link rel="prev" title="5.2.10.74. matplotlib.patches.FancyArrow.set_antialiased" href="matplotlib.patches.FancyArrow.set_antialiased.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">3. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backend_bases.html">4. matplotlib.backend_bases</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.patches.html">5. matplotlib.patches</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.patches.html#functions">5.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.patches.html#classes">5.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Arc.html">5.2.1. matplotlib.patches.Arc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Arrow.html">5.2.2. matplotlib.patches.Arrow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.ArrowStyle.html">5.2.3. matplotlib.patches.ArrowStyle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.BoxStyle.html">5.2.4. matplotlib.patches.BoxStyle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Circle.html">5.2.5. matplotlib.patches.Circle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.CirclePolygon.html">5.2.6. matplotlib.patches.CirclePolygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.ConnectionPatch.html">5.2.7. matplotlib.patches.ConnectionPatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.ConnectionStyle.html">5.2.8. matplotlib.patches.ConnectionStyle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Ellipse.html">5.2.9. matplotlib.patches.Ellipse</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="matplotlib.patches.FancyArrow.html">5.2.10. matplotlib.patches.FancyArrow</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.axes.html">5.2.10.1. matplotlib.patches.FancyArrow.axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.fill.html">5.2.10.2. matplotlib.patches.FancyArrow.fill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.mouseover.html">5.2.10.3. matplotlib.patches.FancyArrow.mouseover</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.stale.html">5.2.10.4. matplotlib.patches.FancyArrow.stale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.xy.html">5.2.10.5. matplotlib.patches.FancyArrow.xy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.add_callback.html">5.2.10.6. matplotlib.patches.FancyArrow.add_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.contains.html">5.2.10.7. matplotlib.patches.FancyArrow.contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.contains_point.html">5.2.10.8. matplotlib.patches.FancyArrow.contains_point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.convert_xunits.html">5.2.10.9. matplotlib.patches.FancyArrow.convert_xunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.convert_yunits.html">5.2.10.10. matplotlib.patches.FancyArrow.convert_yunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.draw.html">5.2.10.11. matplotlib.patches.FancyArrow.draw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.findobj.html">5.2.10.12. matplotlib.patches.FancyArrow.findobj</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.format_cursor_data.html">5.2.10.13. matplotlib.patches.FancyArrow.format_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_aa.html">5.2.10.14. matplotlib.patches.FancyArrow.get_aa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_agg_filter.html">5.2.10.15. matplotlib.patches.FancyArrow.get_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_alpha.html">5.2.10.16. matplotlib.patches.FancyArrow.get_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_animated.html">5.2.10.17. matplotlib.patches.FancyArrow.get_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_antialiased.html">5.2.10.18. matplotlib.patches.FancyArrow.get_antialiased</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_axes.html">5.2.10.19. matplotlib.patches.FancyArrow.get_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_capstyle.html">5.2.10.20. matplotlib.patches.FancyArrow.get_capstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_children.html">5.2.10.21. matplotlib.patches.FancyArrow.get_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_clip_box.html">5.2.10.22. matplotlib.patches.FancyArrow.get_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_clip_on.html">5.2.10.23. matplotlib.patches.FancyArrow.get_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_clip_path.html">5.2.10.24. matplotlib.patches.FancyArrow.get_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_closed.html">5.2.10.25. matplotlib.patches.FancyArrow.get_closed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_contains.html">5.2.10.26. matplotlib.patches.FancyArrow.get_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_cursor_data.html">5.2.10.27. matplotlib.patches.FancyArrow.get_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_data_transform.html">5.2.10.28. matplotlib.patches.FancyArrow.get_data_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_ec.html">5.2.10.29. matplotlib.patches.FancyArrow.get_ec</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_edgecolor.html">5.2.10.30. matplotlib.patches.FancyArrow.get_edgecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_extents.html">5.2.10.31. matplotlib.patches.FancyArrow.get_extents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_facecolor.html">5.2.10.32. matplotlib.patches.FancyArrow.get_facecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_fc.html">5.2.10.33. matplotlib.patches.FancyArrow.get_fc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_figure.html">5.2.10.34. matplotlib.patches.FancyArrow.get_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_fill.html">5.2.10.35. matplotlib.patches.FancyArrow.get_fill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_gid.html">5.2.10.36. matplotlib.patches.FancyArrow.get_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_hatch.html">5.2.10.37. matplotlib.patches.FancyArrow.get_hatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_joinstyle.html">5.2.10.38. matplotlib.patches.FancyArrow.get_joinstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_label.html">5.2.10.39. matplotlib.patches.FancyArrow.get_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_linestyle.html">5.2.10.40. matplotlib.patches.FancyArrow.get_linestyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_linewidth.html">5.2.10.41. matplotlib.patches.FancyArrow.get_linewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_ls.html">5.2.10.42. matplotlib.patches.FancyArrow.get_ls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_lw.html">5.2.10.43. matplotlib.patches.FancyArrow.get_lw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_patch_transform.html">5.2.10.44. matplotlib.patches.FancyArrow.get_patch_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_path.html">5.2.10.45. matplotlib.patches.FancyArrow.get_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_path_effects.html">5.2.10.46. matplotlib.patches.FancyArrow.get_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_picker.html">5.2.10.47. matplotlib.patches.FancyArrow.get_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_rasterized.html">5.2.10.48. matplotlib.patches.FancyArrow.get_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_sketch_params.html">5.2.10.49. matplotlib.patches.FancyArrow.get_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_snap.html">5.2.10.50. matplotlib.patches.FancyArrow.get_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_transform.html">5.2.10.51. matplotlib.patches.FancyArrow.get_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_transformed_clip_path_and_affine.html">5.2.10.52. matplotlib.patches.FancyArrow.get_transformed_clip_path_and_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_url.html">5.2.10.53. matplotlib.patches.FancyArrow.get_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_verts.html">5.2.10.54. matplotlib.patches.FancyArrow.get_verts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_visible.html">5.2.10.55. matplotlib.patches.FancyArrow.get_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_window_extent.html">5.2.10.56. matplotlib.patches.FancyArrow.get_window_extent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_xy.html">5.2.10.57. matplotlib.patches.FancyArrow.get_xy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.get_zorder.html">5.2.10.58. matplotlib.patches.FancyArrow.get_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.have_units.html">5.2.10.59. matplotlib.patches.FancyArrow.have_units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.hitlist.html">5.2.10.60. matplotlib.patches.FancyArrow.hitlist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.is_figure_set.html">5.2.10.61. matplotlib.patches.FancyArrow.is_figure_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.is_transform_set.html">5.2.10.62. matplotlib.patches.FancyArrow.is_transform_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.pchanged.html">5.2.10.63. matplotlib.patches.FancyArrow.pchanged</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.pick.html">5.2.10.64. matplotlib.patches.FancyArrow.pick</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.pickable.html">5.2.10.65. matplotlib.patches.FancyArrow.pickable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.properties.html">5.2.10.66. matplotlib.patches.FancyArrow.properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.remove.html">5.2.10.67. matplotlib.patches.FancyArrow.remove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.remove_callback.html">5.2.10.68. matplotlib.patches.FancyArrow.remove_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set.html">5.2.10.69. matplotlib.patches.FancyArrow.set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_aa.html">5.2.10.70. matplotlib.patches.FancyArrow.set_aa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_agg_filter.html">5.2.10.71. matplotlib.patches.FancyArrow.set_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_alpha.html">5.2.10.72. matplotlib.patches.FancyArrow.set_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_animated.html">5.2.10.73. matplotlib.patches.FancyArrow.set_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_antialiased.html">5.2.10.74. matplotlib.patches.FancyArrow.set_antialiased</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">5.2.10.75. matplotlib.patches.FancyArrow.set_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_capstyle.html">5.2.10.76. matplotlib.patches.FancyArrow.set_capstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_clip_box.html">5.2.10.77. matplotlib.patches.FancyArrow.set_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_clip_on.html">5.2.10.78. matplotlib.patches.FancyArrow.set_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_clip_path.html">5.2.10.79. matplotlib.patches.FancyArrow.set_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_closed.html">5.2.10.80. matplotlib.patches.FancyArrow.set_closed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_color.html">5.2.10.81. matplotlib.patches.FancyArrow.set_color</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_contains.html">5.2.10.82. matplotlib.patches.FancyArrow.set_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_ec.html">5.2.10.83. matplotlib.patches.FancyArrow.set_ec</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_edgecolor.html">5.2.10.84. matplotlib.patches.FancyArrow.set_edgecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_facecolor.html">5.2.10.85. matplotlib.patches.FancyArrow.set_facecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_fc.html">5.2.10.86. matplotlib.patches.FancyArrow.set_fc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_figure.html">5.2.10.87. matplotlib.patches.FancyArrow.set_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_fill.html">5.2.10.88. matplotlib.patches.FancyArrow.set_fill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_gid.html">5.2.10.89. matplotlib.patches.FancyArrow.set_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_hatch.html">5.2.10.90. matplotlib.patches.FancyArrow.set_hatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_joinstyle.html">5.2.10.91. matplotlib.patches.FancyArrow.set_joinstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_label.html">5.2.10.92. matplotlib.patches.FancyArrow.set_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_linestyle.html">5.2.10.93. matplotlib.patches.FancyArrow.set_linestyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_linewidth.html">5.2.10.94. matplotlib.patches.FancyArrow.set_linewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_ls.html">5.2.10.95. matplotlib.patches.FancyArrow.set_ls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_lw.html">5.2.10.96. matplotlib.patches.FancyArrow.set_lw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_path_effects.html">5.2.10.97. matplotlib.patches.FancyArrow.set_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_picker.html">5.2.10.98. matplotlib.patches.FancyArrow.set_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_rasterized.html">5.2.10.99. matplotlib.patches.FancyArrow.set_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_sketch_params.html">5.2.10.100. matplotlib.patches.FancyArrow.set_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_snap.html">5.2.10.101. matplotlib.patches.FancyArrow.set_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_transform.html">5.2.10.102. matplotlib.patches.FancyArrow.set_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_url.html">5.2.10.103. matplotlib.patches.FancyArrow.set_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_visible.html">5.2.10.104. matplotlib.patches.FancyArrow.set_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_xy.html">5.2.10.105. matplotlib.patches.FancyArrow.set_xy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.set_zorder.html">5.2.10.106. matplotlib.patches.FancyArrow.set_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.update.html">5.2.10.107. matplotlib.patches.FancyArrow.update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.FancyArrow.update_from.html">5.2.10.108. matplotlib.patches.FancyArrow.update_from</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.FancyArrowPatch.html">5.2.11. matplotlib.patches.FancyArrowPatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.FancyBboxPatch.html">5.2.12. matplotlib.patches.FancyBboxPatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Patch.html">5.2.13. matplotlib.patches.Patch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Path.html">5.2.14. matplotlib.patches.Path</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.PathPatch.html">5.2.15. matplotlib.patches.PathPatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Polygon.html">5.2.16. matplotlib.patches.Polygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Rectangle.html">5.2.17. matplotlib.patches.Rectangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.RegularPolygon.html">5.2.18. matplotlib.patches.RegularPolygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Shadow.html">5.2.19. matplotlib.patches.Shadow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Wedge.html">5.2.20. matplotlib.patches.Wedge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.YAArrow.html">5.2.21. matplotlib.patches.YAArrow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.map.html">5.2.22. matplotlib.patches.map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.zip.html">5.2.23. matplotlib.patches.zip</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">6. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">8. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">9. matplotlib.widgets</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../mpl.pyplot.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.patches.html">5. matplotlib.patches</a> &raquo;</li>
+        
+          <li><a href="matplotlib.patches.FancyArrow.html">5.2.10. matplotlib.patches.FancyArrow</a> &raquo;</li>
+        
+      <li>5.2.10.75. matplotlib.patches.FancyArrow.set_axes</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.patches.FancyArrow.set_axes.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-patches-fancyarrow-set-axes">
+<h1>5.2.10.75. matplotlib.patches.FancyArrow.set_axes<a class="headerlink" href="#matplotlib-patches-fancyarrow-set-axes" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="matplotlib.patches.FancyArrow.set_axes">
+<code class="descclassname">FancyArrow.</code><code class="descname">set_axes</code><span class="sig-paren">(</span><em>axes</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.patches.FancyArrow.set_axes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the <code class="xref py py-class docutils literal"><span class="pre">Axes</span></code> instance in which the
+artist resides, if any.</p>
+<p>This has been deprecated in mpl 1.5, please use the
+axes property.  Will be removed in 1.7 or 2.0.</p>
+<p>ACCEPTS: an <code class="xref py py-class docutils literal"><span class="pre">Axes</span></code> instance</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.patches.FancyArrow.set_capstyle.html" class="btn btn-neutral float-right" title="5.2.10.76. matplotlib.patches.FancyArrow.set_capstyle" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.patches.FancyArrow.set_antialiased.html" class="btn btn-neutral" title="5.2.10.74. matplotlib.patches.FancyArrow.set_antialiased" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

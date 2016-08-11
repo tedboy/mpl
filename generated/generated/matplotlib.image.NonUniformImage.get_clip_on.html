@@ -1,0 +1,352 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>8.2.9.24. matplotlib.image.NonUniformImage.get_clip_on &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="8.2.9. matplotlib.image.NonUniformImage" href="matplotlib.image.NonUniformImage.html"/>
+        <link rel="next" title="8.2.9.25. matplotlib.image.NonUniformImage.get_clip_path" href="matplotlib.image.NonUniformImage.get_clip_path.html"/>
+        <link rel="prev" title="8.2.9.23. matplotlib.image.NonUniformImage.get_clip_box" href="matplotlib.image.NonUniformImage.get_clip_box.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">3. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backend_bases.html">4. matplotlib.backend_bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">5. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">6. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.image.html">8. matplotlib.image</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.image.html#functions">8.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.image.html#classes">8.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.AxesImage.html">8.2.1. matplotlib.image.AxesImage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.Bbox.html">8.2.2. matplotlib.image.Bbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.BboxBase.html">8.2.3. matplotlib.image.BboxBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.BboxImage.html">8.2.4. matplotlib.image.BboxImage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.BytesIO.html">8.2.5. matplotlib.image.BytesIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.FigureImage.html">8.2.6. matplotlib.image.FigureImage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.IdentityTransform.html">8.2.7. matplotlib.image.IdentityTransform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.Image.html">8.2.8. matplotlib.image.Image</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="matplotlib.image.NonUniformImage.html">8.2.9. matplotlib.image.NonUniformImage</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.axes.html">8.2.9.1. matplotlib.image.NonUniformImage.axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.mouseover.html">8.2.9.2. matplotlib.image.NonUniformImage.mouseover</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.stale.html">8.2.9.3. matplotlib.image.NonUniformImage.stale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.add_callback.html">8.2.9.4. matplotlib.image.NonUniformImage.add_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.add_checker.html">8.2.9.5. matplotlib.image.NonUniformImage.add_checker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.autoscale.html">8.2.9.6. matplotlib.image.NonUniformImage.autoscale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.autoscale_None.html">8.2.9.7. matplotlib.image.NonUniformImage.autoscale_None</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.changed.html">8.2.9.8. matplotlib.image.NonUniformImage.changed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.check_update.html">8.2.9.9. matplotlib.image.NonUniformImage.check_update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.contains.html">8.2.9.10. matplotlib.image.NonUniformImage.contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.convert_xunits.html">8.2.9.11. matplotlib.image.NonUniformImage.convert_xunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.convert_yunits.html">8.2.9.12. matplotlib.image.NonUniformImage.convert_yunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.draw.html">8.2.9.13. matplotlib.image.NonUniformImage.draw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.findobj.html">8.2.9.14. matplotlib.image.NonUniformImage.findobj</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.format_cursor_data.html">8.2.9.15. matplotlib.image.NonUniformImage.format_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.get_agg_filter.html">8.2.9.16. matplotlib.image.NonUniformImage.get_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.get_alpha.html">8.2.9.17. matplotlib.image.NonUniformImage.get_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.get_animated.html">8.2.9.18. matplotlib.image.NonUniformImage.get_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.get_array.html">8.2.9.19. matplotlib.image.NonUniformImage.get_array</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.get_axes.html">8.2.9.20. matplotlib.image.NonUniformImage.get_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.get_children.html">8.2.9.21. matplotlib.image.NonUniformImage.get_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.get_clim.html">8.2.9.22. matplotlib.image.NonUniformImage.get_clim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.get_clip_box.html">8.2.9.23. matplotlib.image.NonUniformImage.get_clip_box</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">8.2.9.24. matplotlib.image.NonUniformImage.get_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.get_clip_path.html">8.2.9.25. matplotlib.image.NonUniformImage.get_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.get_cmap.html">8.2.9.26. matplotlib.image.NonUniformImage.get_cmap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.get_contains.html">8.2.9.27. matplotlib.image.NonUniformImage.get_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.get_cursor_data.html">8.2.9.28. matplotlib.image.NonUniformImage.get_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.get_extent.html">8.2.9.29. matplotlib.image.NonUniformImage.get_extent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.get_figure.html">8.2.9.30. matplotlib.image.NonUniformImage.get_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.get_filternorm.html">8.2.9.31. matplotlib.image.NonUniformImage.get_filternorm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.get_filterrad.html">8.2.9.32. matplotlib.image.NonUniformImage.get_filterrad</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.get_gid.html">8.2.9.33. matplotlib.image.NonUniformImage.get_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.get_interpolation.html">8.2.9.34. matplotlib.image.NonUniformImage.get_interpolation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.get_label.html">8.2.9.35. matplotlib.image.NonUniformImage.get_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.get_path_effects.html">8.2.9.36. matplotlib.image.NonUniformImage.get_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.get_picker.html">8.2.9.37. matplotlib.image.NonUniformImage.get_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.get_rasterized.html">8.2.9.38. matplotlib.image.NonUniformImage.get_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.get_resample.html">8.2.9.39. matplotlib.image.NonUniformImage.get_resample</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.get_size.html">8.2.9.40. matplotlib.image.NonUniformImage.get_size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.get_sketch_params.html">8.2.9.41. matplotlib.image.NonUniformImage.get_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.get_snap.html">8.2.9.42. matplotlib.image.NonUniformImage.get_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.get_transform.html">8.2.9.43. matplotlib.image.NonUniformImage.get_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.get_transformed_clip_path_and_affine.html">8.2.9.44. matplotlib.image.NonUniformImage.get_transformed_clip_path_and_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.get_url.html">8.2.9.45. matplotlib.image.NonUniformImage.get_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.get_visible.html">8.2.9.46. matplotlib.image.NonUniformImage.get_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.get_window_extent.html">8.2.9.47. matplotlib.image.NonUniformImage.get_window_extent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.get_zorder.html">8.2.9.48. matplotlib.image.NonUniformImage.get_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.have_units.html">8.2.9.49. matplotlib.image.NonUniformImage.have_units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.hitlist.html">8.2.9.50. matplotlib.image.NonUniformImage.hitlist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.is_figure_set.html">8.2.9.51. matplotlib.image.NonUniformImage.is_figure_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.is_transform_set.html">8.2.9.52. matplotlib.image.NonUniformImage.is_transform_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.make_image.html">8.2.9.53. matplotlib.image.NonUniformImage.make_image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.pchanged.html">8.2.9.54. matplotlib.image.NonUniformImage.pchanged</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.pick.html">8.2.9.55. matplotlib.image.NonUniformImage.pick</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.pickable.html">8.2.9.56. matplotlib.image.NonUniformImage.pickable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.properties.html">8.2.9.57. matplotlib.image.NonUniformImage.properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.remove.html">8.2.9.58. matplotlib.image.NonUniformImage.remove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.remove_callback.html">8.2.9.59. matplotlib.image.NonUniformImage.remove_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.set.html">8.2.9.60. matplotlib.image.NonUniformImage.set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.set_agg_filter.html">8.2.9.61. matplotlib.image.NonUniformImage.set_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.set_alpha.html">8.2.9.62. matplotlib.image.NonUniformImage.set_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.set_animated.html">8.2.9.63. matplotlib.image.NonUniformImage.set_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.set_array.html">8.2.9.64. matplotlib.image.NonUniformImage.set_array</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.set_axes.html">8.2.9.65. matplotlib.image.NonUniformImage.set_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.set_clim.html">8.2.9.66. matplotlib.image.NonUniformImage.set_clim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.set_clip_box.html">8.2.9.67. matplotlib.image.NonUniformImage.set_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.set_clip_on.html">8.2.9.68. matplotlib.image.NonUniformImage.set_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.set_clip_path.html">8.2.9.69. matplotlib.image.NonUniformImage.set_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.set_cmap.html">8.2.9.70. matplotlib.image.NonUniformImage.set_cmap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.set_contains.html">8.2.9.71. matplotlib.image.NonUniformImage.set_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.set_data.html">8.2.9.72. matplotlib.image.NonUniformImage.set_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.set_extent.html">8.2.9.73. matplotlib.image.NonUniformImage.set_extent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.set_figure.html">8.2.9.74. matplotlib.image.NonUniformImage.set_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.set_filternorm.html">8.2.9.75. matplotlib.image.NonUniformImage.set_filternorm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.set_filterrad.html">8.2.9.76. matplotlib.image.NonUniformImage.set_filterrad</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.set_gid.html">8.2.9.77. matplotlib.image.NonUniformImage.set_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.set_interpolation.html">8.2.9.78. matplotlib.image.NonUniformImage.set_interpolation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.set_label.html">8.2.9.79. matplotlib.image.NonUniformImage.set_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.set_norm.html">8.2.9.80. matplotlib.image.NonUniformImage.set_norm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.set_path_effects.html">8.2.9.81. matplotlib.image.NonUniformImage.set_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.set_picker.html">8.2.9.82. matplotlib.image.NonUniformImage.set_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.set_rasterized.html">8.2.9.83. matplotlib.image.NonUniformImage.set_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.set_resample.html">8.2.9.84. matplotlib.image.NonUniformImage.set_resample</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.set_sketch_params.html">8.2.9.85. matplotlib.image.NonUniformImage.set_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.set_snap.html">8.2.9.86. matplotlib.image.NonUniformImage.set_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.set_transform.html">8.2.9.87. matplotlib.image.NonUniformImage.set_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.set_url.html">8.2.9.88. matplotlib.image.NonUniformImage.set_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.set_visible.html">8.2.9.89. matplotlib.image.NonUniformImage.set_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.set_zorder.html">8.2.9.90. matplotlib.image.NonUniformImage.set_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.to_rgba.html">8.2.9.91. matplotlib.image.NonUniformImage.to_rgba</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.update.html">8.2.9.92. matplotlib.image.NonUniformImage.update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.update_from.html">8.2.9.93. matplotlib.image.NonUniformImage.update_from</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.image.NonUniformImage.write_png.html">8.2.9.94. matplotlib.image.NonUniformImage.write_png</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.image.PcolorImage.html">8.2.10. matplotlib.image.PcolorImage</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">9. matplotlib.widgets</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../mpl.pyplot.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.image.html">8. matplotlib.image</a> &raquo;</li>
+        
+          <li><a href="matplotlib.image.NonUniformImage.html">8.2.9. matplotlib.image.NonUniformImage</a> &raquo;</li>
+        
+      <li>8.2.9.24. matplotlib.image.NonUniformImage.get_clip_on</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.image.NonUniformImage.get_clip_on.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-image-nonuniformimage-get-clip-on">
+<h1>8.2.9.24. matplotlib.image.NonUniformImage.get_clip_on<a class="headerlink" href="#matplotlib-image-nonuniformimage-get-clip-on" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="matplotlib.image.NonUniformImage.get_clip_on">
+<code class="descclassname">NonUniformImage.</code><code class="descname">get_clip_on</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.image.NonUniformImage.get_clip_on" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether artist uses clipping</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.image.NonUniformImage.get_clip_path.html" class="btn btn-neutral float-right" title="8.2.9.25. matplotlib.image.NonUniformImage.get_clip_path" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.image.NonUniformImage.get_clip_box.html" class="btn btn-neutral" title="8.2.9.23. matplotlib.image.NonUniformImage.get_clip_box" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

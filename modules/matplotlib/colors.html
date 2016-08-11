@@ -83,8 +83,15 @@
             
                 <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.pyplot.html">1. matplotlib.pyplot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.cm.html">2. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.cm.html">3. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.backend_bases.html">4. matplotlib.backend_bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.patches.html">5. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.cbook.html">6. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.image.html">8. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.widgets.html">9. matplotlib.widgets</a></li>
 </ul>
 
             
@@ -359,24 +366,24 @@
         <span class="n">cnames</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
 
 
-<span class="k">def</span> <span class="nf">is_color_like</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+<div class="viewcode-block" id="is_color_like"><a class="viewcode-back" href="../../generated/matplotlib.colors.is_color_like.html#matplotlib.colors.is_color_like">[docs]</a><span class="k">def</span> <span class="nf">is_color_like</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
     <span class="s1">&#39;Return *True* if *c* can be converted to *RGB*&#39;</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">colorConverter</span><span class="o">.</span><span class="n">to_rgb</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
         <span class="k">return</span> <span class="kc">True</span>
     <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="kc">False</span></div>
 
 
-<span class="k">def</span> <span class="nf">rgb2hex</span><span class="p">(</span><span class="n">rgb</span><span class="p">):</span>
+<div class="viewcode-block" id="rgb2hex"><a class="viewcode-back" href="../../generated/matplotlib.colors.rgb2hex.html#matplotlib.colors.rgb2hex">[docs]</a><span class="k">def</span> <span class="nf">rgb2hex</span><span class="p">(</span><span class="n">rgb</span><span class="p">):</span>
     <span class="s1">&#39;Given an rgb or rgba sequence of 0-1 floats, return the hex string&#39;</span>
     <span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;#</span><span class="si">%02x%02x%02x</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="nb">tuple</span><span class="p">([</span><span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">val</span> <span class="o">*</span> <span class="mi">255</span><span class="p">))</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">rgb</span><span class="p">[:</span><span class="mi">3</span><span class="p">]])</span>
-    <span class="k">return</span> <span class="n">a</span>
+    <span class="k">return</span> <span class="n">a</span></div>
 
 <span class="n">hexColorPattern</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;\A#[a-fA-F0-9]</span><span class="si">{6}</span><span class="s2">\Z&quot;</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">hex2color</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<div class="viewcode-block" id="hex2color"><a class="viewcode-back" href="../../generated/matplotlib.colors.hex2color.html#matplotlib.colors.hex2color">[docs]</a><span class="k">def</span> <span class="nf">hex2color</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Take a hex string *s* and return the corresponding rgb 3-tuple</span>
 <span class="sd">    Example: #efefef -&gt; (0.93725, 0.93725, 0.93725)</span>
@@ -385,10 +392,10 @@
         <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;hex2color requires a string argument&#39;</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">hexColorPattern</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;invalid hex color string &quot;</span><span class="si">%s</span><span class="s1">&quot;&#39;</span> <span class="o">%</span> <span class="n">s</span><span class="p">)</span>
-    <span class="k">return</span> <span class="nb">tuple</span><span class="p">([</span><span class="nb">int</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span> <span class="o">/</span> <span class="mf">255.0</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">5</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">7</span><span class="p">])])</span>
+    <span class="k">return</span> <span class="nb">tuple</span><span class="p">([</span><span class="nb">int</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span> <span class="o">/</span> <span class="mf">255.0</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">5</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">7</span><span class="p">])])</span></div>
 
 
-<span class="k">class</span> <span class="nc">ColorConverter</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="ColorConverter"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.ColorConverter.html#matplotlib.colors.ColorConverter">[docs]</a><span class="k">class</span> <span class="nc">ColorConverter</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Provides methods for converting color specifications to *RGB* or *RGBA*</span>
 
@@ -410,7 +417,7 @@
 
     <span class="n">cache</span> <span class="o">=</span> <span class="p">{}</span>
 
-    <span class="k">def</span> <span class="nf">to_rgb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">):</span>
+<div class="viewcode-block" id="ColorConverter.to_rgb"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.ColorConverter.to_rgb.html#matplotlib.colors.ColorConverter.to_rgb">[docs]</a>    <span class="k">def</span> <span class="nf">to_rgb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns an *RGB* tuple of three floats from 0-1.</span>
 
@@ -477,9 +484,9 @@
             <span class="c1"># Error messages could be improved by handling TypeError</span>
             <span class="c1"># separately; but this should be rare and not too hard</span>
             <span class="c1"># for the user to figure out as-is.</span>
-        <span class="k">return</span> <span class="n">color</span>
+        <span class="k">return</span> <span class="n">color</span></div>
 
-    <span class="k">def</span> <span class="nf">to_rgba</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="ColorConverter.to_rgba"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.ColorConverter.to_rgba.html#matplotlib.colors.ColorConverter.to_rgba">[docs]</a>    <span class="k">def</span> <span class="nf">to_rgba</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns an *RGBA* tuple of four floats from 0-1.</span>
 
@@ -521,9 +528,9 @@
             <span class="k">return</span> <span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">alpha</span>
         <span class="k">except</span> <span class="p">(</span><span class="ne">TypeError</span><span class="p">,</span> <span class="ne">ValueError</span><span class="p">)</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-                <span class="s1">&#39;to_rgba: Invalid rgba arg &quot;</span><span class="si">%s</span><span class="s1">&quot;</span><span class="se">\n</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">arg</span><span class="p">),</span> <span class="n">exc</span><span class="p">))</span>
+                <span class="s1">&#39;to_rgba: Invalid rgba arg &quot;</span><span class="si">%s</span><span class="s1">&quot;</span><span class="se">\n</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">arg</span><span class="p">),</span> <span class="n">exc</span><span class="p">))</span></div>
 
-    <span class="k">def</span> <span class="nf">to_rgba_array</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="ColorConverter.to_rgba_array"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.ColorConverter.to_rgba_array.html#matplotlib.colors.ColorConverter.to_rgba_array">[docs]</a>    <span class="k">def</span> <span class="nf">to_rgba_array</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns a numpy array of *RGBA* tuples.</span>
 
@@ -568,13 +575,13 @@
             <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">nc</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float</span><span class="p">)</span>
             <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">cc</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
                 <span class="n">result</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_rgba</span><span class="p">(</span><span class="n">cc</span><span class="p">,</span> <span class="n">alpha</span><span class="p">)</span>
-            <span class="k">return</span> <span class="n">result</span>
+            <span class="k">return</span> <span class="n">result</span></div></div>
 
 
 <span class="n">colorConverter</span> <span class="o">=</span> <span class="n">ColorConverter</span><span class="p">()</span>
 
 
-<span class="k">def</span> <span class="nf">makeMappingArray</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
+<div class="viewcode-block" id="makeMappingArray"><a class="viewcode-back" href="../../generated/matplotlib.colors.makeMappingArray.html#matplotlib.colors.makeMappingArray">[docs]</a><span class="k">def</span> <span class="nf">makeMappingArray</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Create an *N* -element 1-d lookup table</span>
 
 <span class="sd">    *data* represented by a list of x,y0,y1 mapping correspondences.</span>
@@ -629,10 +636,10 @@
     <span class="n">lut</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">y1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">lut</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">y0</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
     <span class="c1"># ensure that the lut is confined to values between 0 and 1 by clipping it</span>
-    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">lut</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">lut</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span></div>
 
 
-<span class="k">class</span> <span class="nc">Colormap</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="Colormap"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.Colormap.html#matplotlib.colors.Colormap">[docs]</a><span class="k">class</span> <span class="nc">Colormap</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Baseclass for all scalar to RGBA mappings.</span>
 
@@ -644,7 +651,7 @@
 <span class="sd">    ``data-&gt;normalize-&gt;map-to-color`` processing chain.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="mi">256</span><span class="p">):</span>
+<div class="viewcode-block" id="Colormap.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.Colormap.__init__.html#matplotlib.colors.Colormap.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="mi">256</span><span class="p">):</span>
         <span class="sd">r&quot;&quot;&quot;</span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -668,7 +675,7 @@
         <span class="c1">#: is not False, colorbar creation will pick up ``colorbar_extend`` as</span>
         <span class="c1">#: the default value for the ``extend`` keyword in the</span>
         <span class="c1">#: :class:`matplotlib.colorbar.Colorbar` constructor.</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">colorbar_extend</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">colorbar_extend</span> <span class="o">=</span> <span class="kc">False</span></div>
 
     <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">bytes</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
@@ -763,28 +770,28 @@
             <span class="n">rgba</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">rgba</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:])</span>
         <span class="k">return</span> <span class="n">rgba</span>
 
-    <span class="k">def</span> <span class="nf">set_bad</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="Colormap.set_bad"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.Colormap.set_bad.html#matplotlib.colors.Colormap.set_bad">[docs]</a>    <span class="k">def</span> <span class="nf">set_bad</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Set color to be used for masked values.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_rgba_bad</span> <span class="o">=</span> <span class="n">colorConverter</span><span class="o">.</span><span class="n">to_rgba</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="n">alpha</span><span class="p">)</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_isinit</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_set_extremes</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_set_extremes</span><span class="p">()</span></div>
 
-    <span class="k">def</span> <span class="nf">set_under</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="Colormap.set_under"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.Colormap.set_under.html#matplotlib.colors.Colormap.set_under">[docs]</a>    <span class="k">def</span> <span class="nf">set_under</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Set color to be used for low out-of-range values.</span>
 <span class="sd">           Requires norm.clip = False</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_rgba_under</span> <span class="o">=</span> <span class="n">colorConverter</span><span class="o">.</span><span class="n">to_rgba</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="n">alpha</span><span class="p">)</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_isinit</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_set_extremes</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_set_extremes</span><span class="p">()</span></div>
 
-    <span class="k">def</span> <span class="nf">set_over</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="Colormap.set_over"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.Colormap.set_over.html#matplotlib.colors.Colormap.set_over">[docs]</a>    <span class="k">def</span> <span class="nf">set_over</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Set color to be used for high out-of-range values.</span>
 <span class="sd">           Requires norm.clip = False</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_rgba_over</span> <span class="o">=</span> <span class="n">colorConverter</span><span class="o">.</span><span class="n">to_rgba</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="n">alpha</span><span class="p">)</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_isinit</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_set_extremes</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_set_extremes</span><span class="p">()</span></div>
 
     <span class="k">def</span> <span class="nf">_set_extremes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rgba_under</span><span class="p">:</span>
@@ -801,27 +808,27 @@
         <span class="sd">&quot;&quot;&quot;Generate the lookup table, self._lut&quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;Abstract class only&quot;</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">is_gray</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Colormap.is_gray"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.Colormap.is_gray.html#matplotlib.colors.Colormap.is_gray">[docs]</a>    <span class="k">def</span> <span class="nf">is_gray</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_isinit</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_init</span><span class="p">()</span>
         <span class="k">return</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">alltrue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lut</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lut</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span> <span class="ow">and</span>
-                <span class="n">np</span><span class="o">.</span><span class="n">alltrue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lut</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lut</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]))</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">alltrue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_lut</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lut</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]))</span></div>
 
     <span class="k">def</span> <span class="nf">_resample</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lutsize</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return a new color map with *lutsize* entries.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span></div>
 
 
-<span class="k">class</span> <span class="nc">LinearSegmentedColormap</span><span class="p">(</span><span class="n">Colormap</span><span class="p">):</span>
+<div class="viewcode-block" id="LinearSegmentedColormap"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.LinearSegmentedColormap.html#matplotlib.colors.LinearSegmentedColormap">[docs]</a><span class="k">class</span> <span class="nc">LinearSegmentedColormap</span><span class="p">(</span><span class="n">Colormap</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Colormap objects based on lookup tables using linear segments.</span>
 
 <span class="sd">    The lookup table is generated using linear interpolation for each</span>
 <span class="sd">    primary color, with the 0-1 domain divided into any number of</span>
 <span class="sd">    segments.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">segmentdata</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
+<div class="viewcode-block" id="LinearSegmentedColormap.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.LinearSegmentedColormap.__init__.html#matplotlib.colors.LinearSegmentedColormap.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">segmentdata</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Create color map from linear mapping segments</span>
 
 <span class="sd">        segmentdata argument is a dictionary with a red, green and blue</span>
@@ -872,7 +879,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">monochrome</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="n">Colormap</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_segmentdata</span> <span class="o">=</span> <span class="n">segmentdata</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_gamma</span> <span class="o">=</span> <span class="n">gamma</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_gamma</span> <span class="o">=</span> <span class="n">gamma</span></div>
 
     <span class="k">def</span> <span class="nf">_init</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_lut</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">N</span> <span class="o">+</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">float</span><span class="p">)</span>
@@ -888,15 +895,15 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_isinit</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_set_extremes</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="nf">set_gamma</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gamma</span><span class="p">):</span>
+<div class="viewcode-block" id="LinearSegmentedColormap.set_gamma"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.LinearSegmentedColormap.set_gamma.html#matplotlib.colors.LinearSegmentedColormap.set_gamma">[docs]</a>    <span class="k">def</span> <span class="nf">set_gamma</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gamma</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set a new gamma value and regenerate color map.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_gamma</span> <span class="o">=</span> <span class="n">gamma</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_init</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_init</span><span class="p">()</span></div>
 
     <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">from_list</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">colors</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
+<div class="viewcode-block" id="LinearSegmentedColormap.from_list"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.LinearSegmentedColormap.from_list.html#matplotlib.colors.LinearSegmentedColormap.from_list">[docs]</a>    <span class="k">def</span> <span class="nf">from_list</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">colors</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Make a linear segmented colormap with *name* from a sequence</span>
 <span class="sd">        of *colors* which evenly transitions from colors[0] at val=0</span>
@@ -924,23 +931,23 @@
             <span class="n">cdict</span><span class="p">[</span><span class="s1">&#39;blue&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">val</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
             <span class="n">cdict</span><span class="p">[</span><span class="s1">&#39;alpha&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">val</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="p">))</span>
 
-        <span class="k">return</span> <span class="n">LinearSegmentedColormap</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">cdict</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">gamma</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">LinearSegmentedColormap</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">cdict</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">gamma</span><span class="p">)</span></div>
 
     <span class="k">def</span> <span class="nf">_resample</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lutsize</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return a new color map with *lutsize* entries.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="n">LinearSegmentedColormap</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_segmentdata</span><span class="p">,</span> <span class="n">lutsize</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">LinearSegmentedColormap</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_segmentdata</span><span class="p">,</span> <span class="n">lutsize</span><span class="p">)</span></div>
 
 
-<span class="k">class</span> <span class="nc">ListedColormap</span><span class="p">(</span><span class="n">Colormap</span><span class="p">):</span>
+<div class="viewcode-block" id="ListedColormap"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.ListedColormap.html#matplotlib.colors.ListedColormap">[docs]</a><span class="k">class</span> <span class="nc">ListedColormap</span><span class="p">(</span><span class="n">Colormap</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Colormap object generated from a list of colors.</span>
 
 <span class="sd">    This may be most useful when indexing directly into a colormap,</span>
 <span class="sd">    but it can also be used to generate special colormaps for ordinary</span>
 <span class="sd">    mapping.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">colors</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;from_list&#39;</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="ListedColormap.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.ListedColormap.__init__.html#matplotlib.colors.ListedColormap.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">colors</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;from_list&#39;</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Make a colormap from a list of colors.</span>
 
@@ -987,7 +994,7 @@
                 <span class="k">else</span><span class="p">:</span>
                     <span class="bp">self</span><span class="o">.</span><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="n">gray</span><span class="p">]</span> <span class="o">*</span> <span class="n">N</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">monochrome</span> <span class="o">=</span> <span class="kc">True</span>
-        <span class="n">Colormap</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+        <span class="n">Colormap</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span></div>
 
     <span class="k">def</span> <span class="nf">_init</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">rgba</span> <span class="o">=</span> <span class="n">colorConverter</span><span class="o">.</span><span class="n">to_rgba_array</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">colors</span><span class="p">)</span>
@@ -1000,16 +1007,16 @@
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return a new color map with *lutsize* entries.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="n">ListedColormap</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">colors</span><span class="p">,</span> <span class="n">lutsize</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">ListedColormap</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">colors</span><span class="p">,</span> <span class="n">lutsize</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="Normalize"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.Normalize.html#matplotlib.pyplot.Normalize">[docs]</a><span class="k">class</span> <span class="nc">Normalize</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="Normalize"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.Normalize.html#matplotlib.colors.Normalize">[docs]</a><span class="k">class</span> <span class="nc">Normalize</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A class which, when called, can normalize data into</span>
 <span class="sd">    the ``[0.0, 1.0]`` interval.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
-<div class="viewcode-block" id="Normalize.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.Normalize.__init__.html#matplotlib.pyplot.Normalize.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">clip</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="viewcode-block" id="Normalize.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.Normalize.__init__.html#matplotlib.colors.Normalize.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">clip</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        If *vmin* or *vmax* is not given, they are initialized from the</span>
 <span class="sd">        minimum and maximum value respectively of the first input</span>
@@ -1032,7 +1039,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">clip</span> <span class="o">=</span> <span class="n">clip</span></div>
 
     <span class="nd">@staticmethod</span>
-<div class="viewcode-block" id="Normalize.process_value"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.Normalize.process_value.html#matplotlib.pyplot.Normalize.process_value">[docs]</a>    <span class="k">def</span> <span class="nf">process_value</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+<div class="viewcode-block" id="Normalize.process_value"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.Normalize.process_value.html#matplotlib.colors.Normalize.process_value">[docs]</a>    <span class="k">def</span> <span class="nf">process_value</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Homogenize the input *value* for easy and efficient normalization.</span>
 
@@ -1101,7 +1108,7 @@
             <span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">result</span>
 
-<div class="viewcode-block" id="Normalize.inverse"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.Normalize.inverse.html#matplotlib.pyplot.Normalize.inverse">[docs]</a>    <span class="k">def</span> <span class="nf">inverse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<div class="viewcode-block" id="Normalize.inverse"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.Normalize.inverse.html#matplotlib.colors.Normalize.inverse">[docs]</a>    <span class="k">def</span> <span class="nf">inverse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">scaled</span><span class="p">():</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Not invertible until scaled&quot;</span><span class="p">)</span>
         <span class="n">vmin</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">vmin</span><span class="p">)</span>
@@ -1113,26 +1120,26 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">vmin</span> <span class="o">+</span> <span class="n">value</span> <span class="o">*</span> <span class="p">(</span><span class="n">vmax</span> <span class="o">-</span> <span class="n">vmin</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Normalize.autoscale"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.Normalize.autoscale.html#matplotlib.pyplot.Normalize.autoscale">[docs]</a>    <span class="k">def</span> <span class="nf">autoscale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">A</span><span class="p">):</span>
+<div class="viewcode-block" id="Normalize.autoscale"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.Normalize.autoscale.html#matplotlib.colors.Normalize.autoscale">[docs]</a>    <span class="k">def</span> <span class="nf">autoscale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">A</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set *vmin*, *vmax* to min, max of *A*.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vmin</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vmax</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">A</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Normalize.autoscale_None"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.Normalize.autoscale_None.html#matplotlib.pyplot.Normalize.autoscale_None">[docs]</a>    <span class="k">def</span> <span class="nf">autoscale_None</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">A</span><span class="p">):</span>
+<div class="viewcode-block" id="Normalize.autoscale_None"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.Normalize.autoscale_None.html#matplotlib.colors.Normalize.autoscale_None">[docs]</a>    <span class="k">def</span> <span class="nf">autoscale_None</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">A</span><span class="p">):</span>
         <span class="s1">&#39; autoscale only None-valued vmin or vmax&#39;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">vmin</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">vmin</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">vmax</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">vmax</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">A</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Normalize.scaled"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.Normalize.scaled.html#matplotlib.pyplot.Normalize.scaled">[docs]</a>    <span class="k">def</span> <span class="nf">scaled</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Normalize.scaled"><a class="viewcode-back" href="../../generated/generated/matplotlib.pyplot.Normalize.scaled.html#matplotlib.colors.Normalize.scaled">[docs]</a>    <span class="k">def</span> <span class="nf">scaled</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="s1">&#39;return true if vmin and vmax set&#39;</span>
         <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">vmin</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">vmax</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">)</span></div></div>
 
 
-<span class="k">class</span> <span class="nc">LogNorm</span><span class="p">(</span><span class="n">Normalize</span><span class="p">):</span>
+<div class="viewcode-block" id="LogNorm"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.LogNorm.html#matplotlib.colors.LogNorm">[docs]</a><span class="k">class</span> <span class="nc">LogNorm</span><span class="p">(</span><span class="n">Normalize</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Normalize a given value to the 0-1 range on a log scale</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -1173,7 +1180,7 @@
             <span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">result</span>
 
-    <span class="k">def</span> <span class="nf">inverse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<div class="viewcode-block" id="LogNorm.inverse"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.LogNorm.inverse.html#matplotlib.colors.LogNorm.inverse">[docs]</a>    <span class="k">def</span> <span class="nf">inverse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">scaled</span><span class="p">():</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Not invertible until scaled&quot;</span><span class="p">)</span>
         <span class="n">vmin</span><span class="p">,</span> <span class="n">vmax</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vmin</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">vmax</span>
@@ -1182,17 +1189,17 @@
             <span class="n">val</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">vmin</span> <span class="o">*</span> <span class="n">ma</span><span class="o">.</span><span class="n">power</span><span class="p">((</span><span class="n">vmax</span> <span class="o">/</span> <span class="n">vmin</span><span class="p">),</span> <span class="n">val</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">vmin</span> <span class="o">*</span> <span class="nb">pow</span><span class="p">((</span><span class="n">vmax</span> <span class="o">/</span> <span class="n">vmin</span><span class="p">),</span> <span class="n">value</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">vmin</span> <span class="o">*</span> <span class="nb">pow</span><span class="p">((</span><span class="n">vmax</span> <span class="o">/</span> <span class="n">vmin</span><span class="p">),</span> <span class="n">value</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">autoscale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">A</span><span class="p">):</span>
+<div class="viewcode-block" id="LogNorm.autoscale"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.LogNorm.autoscale.html#matplotlib.colors.LogNorm.autoscale">[docs]</a>    <span class="k">def</span> <span class="nf">autoscale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">A</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set *vmin*, *vmax* to min, max of *A*.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">A</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">masked_less_equal</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vmin</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">vmax</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vmax</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">A</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">autoscale_None</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">A</span><span class="p">):</span>
+<div class="viewcode-block" id="LogNorm.autoscale_None"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.LogNorm.autoscale_None.html#matplotlib.colors.LogNorm.autoscale_None">[docs]</a>    <span class="k">def</span> <span class="nf">autoscale_None</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">A</span><span class="p">):</span>
         <span class="s1">&#39; autoscale only None-valued vmin or vmax&#39;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">vmin</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">vmax</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">return</span>
@@ -1200,10 +1207,10 @@
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">vmin</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">vmin</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">vmax</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">vmax</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">vmax</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">A</span><span class="p">)</span></div></div>
 
 
-<span class="k">class</span> <span class="nc">SymLogNorm</span><span class="p">(</span><span class="n">Normalize</span><span class="p">):</span>
+<div class="viewcode-block" id="SymLogNorm"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.SymLogNorm.html#matplotlib.colors.SymLogNorm">[docs]</a><span class="k">class</span> <span class="nc">SymLogNorm</span><span class="p">(</span><span class="n">Normalize</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    The symmetrical logarithmic scale is logarithmic in both the</span>
 <span class="sd">    positive and negative directions from the origin.</span>
@@ -1213,7 +1220,7 @@
 <span class="sd">    *linthresh* allows the user to specify the size of this range</span>
 <span class="sd">    (-*linthresh*, *linthresh*).</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>  <span class="n">linthresh</span><span class="p">,</span> <span class="n">linscale</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
+<div class="viewcode-block" id="SymLogNorm.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.SymLogNorm.__init__.html#matplotlib.colors.SymLogNorm.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>  <span class="n">linthresh</span><span class="p">,</span> <span class="n">linscale</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
                  <span class="n">vmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">clip</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        *linthresh*:</span>
@@ -1231,7 +1238,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">Normalize</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vmin</span><span class="p">,</span> <span class="n">vmax</span><span class="p">,</span> <span class="n">clip</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">linthresh</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">linthresh</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_linscale_adj</span> <span class="o">=</span> <span class="p">(</span><span class="n">linscale</span> <span class="o">/</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">e</span> <span class="o">**</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_linscale_adj</span> <span class="o">=</span> <span class="p">(</span><span class="n">linscale</span> <span class="o">/</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">e</span> <span class="o">**</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span></div>
 
     <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">clip</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">clip</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -1291,22 +1298,22 @@
         <span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">vmax</span><span class="p">,</span> <span class="n">vmin</span><span class="p">])</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_upper</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lower</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">inverse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<div class="viewcode-block" id="SymLogNorm.inverse"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.SymLogNorm.inverse.html#matplotlib.colors.SymLogNorm.inverse">[docs]</a>    <span class="k">def</span> <span class="nf">inverse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">scaled</span><span class="p">():</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Not invertible until scaled&quot;</span><span class="p">)</span>
         <span class="n">val</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
         <span class="n">val</span> <span class="o">=</span> <span class="n">val</span> <span class="o">*</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_upper</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lower</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lower</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inv_transform</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inv_transform</span><span class="p">(</span><span class="n">val</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">autoscale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">A</span><span class="p">):</span>
+<div class="viewcode-block" id="SymLogNorm.autoscale"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.SymLogNorm.autoscale.html#matplotlib.colors.SymLogNorm.autoscale">[docs]</a>    <span class="k">def</span> <span class="nf">autoscale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">A</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set *vmin*, *vmax* to min, max of *A*.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vmin</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vmax</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_transform_vmin_vmax</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_transform_vmin_vmax</span><span class="p">()</span></div>
 
-    <span class="k">def</span> <span class="nf">autoscale_None</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">A</span><span class="p">):</span>
+<div class="viewcode-block" id="SymLogNorm.autoscale_None"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.SymLogNorm.autoscale_None.html#matplotlib.colors.SymLogNorm.autoscale_None">[docs]</a>    <span class="k">def</span> <span class="nf">autoscale_None</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">A</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot; autoscale only None-valued vmin or vmax &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">vmin</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">vmax</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">pass</span>
@@ -1314,17 +1321,17 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">vmin</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">vmax</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">vmax</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_transform_vmin_vmax</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_transform_vmin_vmax</span><span class="p">()</span></div></div>
 
 
-<span class="k">class</span> <span class="nc">PowerNorm</span><span class="p">(</span><span class="n">Normalize</span><span class="p">):</span>
+<div class="viewcode-block" id="PowerNorm"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.PowerNorm.html#matplotlib.colors.PowerNorm">[docs]</a><span class="k">class</span> <span class="nc">PowerNorm</span><span class="p">(</span><span class="n">Normalize</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Normalize a given value to the ``[0, 1]`` interval with a power-law</span>
 <span class="sd">    scaling. This will clip any negative data points to 0.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gamma</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">clip</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="viewcode-block" id="PowerNorm.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.PowerNorm.__init__.html#matplotlib.colors.PowerNorm.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gamma</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">clip</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="n">Normalize</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vmin</span><span class="p">,</span> <span class="n">vmax</span><span class="p">,</span> <span class="n">clip</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">gamma</span> <span class="o">=</span> <span class="n">gamma</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gamma</span> <span class="o">=</span> <span class="n">gamma</span></div>
 
     <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">clip</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">clip</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -1356,7 +1363,7 @@
             <span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">result</span>
 
-    <span class="k">def</span> <span class="nf">inverse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<div class="viewcode-block" id="PowerNorm.inverse"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.PowerNorm.inverse.html#matplotlib.colors.PowerNorm.inverse">[docs]</a>    <span class="k">def</span> <span class="nf">inverse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">scaled</span><span class="p">():</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Not invertible until scaled&quot;</span><span class="p">)</span>
         <span class="n">gamma</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gamma</span>
@@ -1366,9 +1373,9 @@
             <span class="n">val</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">ma</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="mf">1.</span> <span class="o">/</span> <span class="n">gamma</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">vmax</span> <span class="o">-</span> <span class="n">vmin</span><span class="p">)</span> <span class="o">+</span> <span class="n">vmin</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="nb">pow</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="mf">1.</span> <span class="o">/</span> <span class="n">gamma</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">vmax</span> <span class="o">-</span> <span class="n">vmin</span><span class="p">)</span> <span class="o">+</span> <span class="n">vmin</span>
+            <span class="k">return</span> <span class="nb">pow</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="mf">1.</span> <span class="o">/</span> <span class="n">gamma</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">vmax</span> <span class="o">-</span> <span class="n">vmin</span><span class="p">)</span> <span class="o">+</span> <span class="n">vmin</span></div>
 
-    <span class="k">def</span> <span class="nf">autoscale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">A</span><span class="p">):</span>
+<div class="viewcode-block" id="PowerNorm.autoscale"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.PowerNorm.autoscale.html#matplotlib.colors.PowerNorm.autoscale">[docs]</a>    <span class="k">def</span> <span class="nf">autoscale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">A</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set *vmin*, *vmax* to min, max of *A*.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -1378,9 +1385,9 @@
             <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;Power-law scaling on negative values is &quot;</span>
                           <span class="s2">&quot;ill-defined, clamping to 0.&quot;</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">vmax</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vmax</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">A</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">autoscale_None</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">A</span><span class="p">):</span>
+<div class="viewcode-block" id="PowerNorm.autoscale_None"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.PowerNorm.autoscale_None.html#matplotlib.colors.PowerNorm.autoscale_None">[docs]</a>    <span class="k">def</span> <span class="nf">autoscale_None</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">A</span><span class="p">):</span>
         <span class="s1">&#39; autoscale only None-valued vmin or vmax&#39;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">vmin</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">vmin</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
@@ -1390,10 +1397,10 @@
                               <span class="s2">&quot;ill-defined, clamping to 0.&quot;</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">vmax</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">vmax</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">vmax</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">A</span><span class="p">)</span></div></div>
 
 
-<span class="k">class</span> <span class="nc">BoundaryNorm</span><span class="p">(</span><span class="n">Normalize</span><span class="p">):</span>
+<div class="viewcode-block" id="BoundaryNorm"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.BoundaryNorm.html#matplotlib.colors.BoundaryNorm">[docs]</a><span class="k">class</span> <span class="nc">BoundaryNorm</span><span class="p">(</span><span class="n">Normalize</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Generate a colormap index based on discrete intervals.</span>
 
@@ -1406,7 +1413,7 @@
 <span class="sd">    simpler, and reduces the number of conversions back and forth</span>
 <span class="sd">    between integer and floating point.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">boundaries</span><span class="p">,</span> <span class="n">ncolors</span><span class="p">,</span> <span class="n">clip</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="viewcode-block" id="BoundaryNorm.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.BoundaryNorm.__init__.html#matplotlib.colors.BoundaryNorm.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">boundaries</span><span class="p">,</span> <span class="n">ncolors</span><span class="p">,</span> <span class="n">clip</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        *boundaries*</span>
 <span class="sd">            a monotonically increasing sequence</span>
@@ -1437,7 +1444,7 @@
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">Ncmap</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_interp</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_interp</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_interp</span> <span class="o">=</span> <span class="kc">True</span></div>
 
     <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">clip</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">clip</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -1464,11 +1471,11 @@
             <span class="n">ret</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">ret</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># assume python scalar</span>
         <span class="k">return</span> <span class="n">ret</span>
 
-    <span class="k">def</span> <span class="nf">inverse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-        <span class="k">return</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;BoundaryNorm is not invertible&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="BoundaryNorm.inverse"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.BoundaryNorm.inverse.html#matplotlib.colors.BoundaryNorm.inverse">[docs]</a>    <span class="k">def</span> <span class="nf">inverse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">return</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;BoundaryNorm is not invertible&quot;</span><span class="p">)</span></div></div>
 
 
-<span class="k">class</span> <span class="nc">NoNorm</span><span class="p">(</span><span class="n">Normalize</span><span class="p">):</span>
+<div class="viewcode-block" id="NoNorm"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.NoNorm.html#matplotlib.colors.NoNorm">[docs]</a><span class="k">class</span> <span class="nc">NoNorm</span><span class="p">(</span><span class="n">Normalize</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Dummy replacement for Normalize, for the case where we</span>
 <span class="sd">    want to use indices directly in a</span>
@@ -1477,11 +1484,11 @@
     <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">clip</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">value</span>
 
-    <span class="k">def</span> <span class="nf">inverse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">value</span>
+<div class="viewcode-block" id="NoNorm.inverse"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.NoNorm.inverse.html#matplotlib.colors.NoNorm.inverse">[docs]</a>    <span class="k">def</span> <span class="nf">inverse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">value</span></div></div>
 
 
-<span class="k">def</span> <span class="nf">rgb_to_hsv</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+<div class="viewcode-block" id="rgb_to_hsv"><a class="viewcode-back" href="../../generated/matplotlib.colors.rgb_to_hsv.html#matplotlib.colors.rgb_to_hsv">[docs]</a><span class="k">def</span> <span class="nf">rgb_to_hsv</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    convert float rgb values (in the range [0, 1]), in a numpy array to hsv</span>
 <span class="sd">    values.</span>
@@ -1536,10 +1543,10 @@
     <span class="k">if</span> <span class="n">in_ndim</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
         <span class="n">out</span><span class="o">.</span><span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,)</span>
 
-    <span class="k">return</span> <span class="n">out</span>
+    <span class="k">return</span> <span class="n">out</span></div>
 
 
-<span class="k">def</span> <span class="nf">hsv_to_rgb</span><span class="p">(</span><span class="n">hsv</span><span class="p">):</span>
+<div class="viewcode-block" id="hsv_to_rgb"><a class="viewcode-back" href="../../generated/matplotlib.colors.hsv_to_rgb.html#matplotlib.colors.hsv_to_rgb">[docs]</a><span class="k">def</span> <span class="nf">hsv_to_rgb</span><span class="p">(</span><span class="n">hsv</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    convert hsv values in a numpy array to rgb values</span>
 <span class="sd">    all values assumed to be in range [0, 1]</span>
@@ -1628,10 +1635,10 @@
     <span class="k">if</span> <span class="n">in_ndim</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
         <span class="n">rgb</span><span class="o">.</span><span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="p">)</span>
 
-    <span class="k">return</span> <span class="n">rgb</span>
+    <span class="k">return</span> <span class="n">rgb</span></div>
 
 
-<span class="k">class</span> <span class="nc">LightSource</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="LightSource"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.LightSource.html#matplotlib.colors.LightSource">[docs]</a><span class="k">class</span> <span class="nc">LightSource</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Create a light source coming from the specified azimuth and elevation.</span>
 <span class="sd">    Angles are in degrees, with the azimuth measured</span>
@@ -1642,7 +1649,7 @@
 <span class="sd">    The :meth:`shade_rgb`</span>
 <span class="sd">    The :meth:`hillshade` produces an illumination map of a surface.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">azdeg</span><span class="o">=</span><span class="mi">315</span><span class="p">,</span> <span class="n">altdeg</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span> <span class="n">hsv_min_val</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">hsv_max_val</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+<div class="viewcode-block" id="LightSource.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.LightSource.__init__.html#matplotlib.colors.LightSource.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">azdeg</span><span class="o">=</span><span class="mi">315</span><span class="p">,</span> <span class="n">altdeg</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span> <span class="n">hsv_min_val</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">hsv_max_val</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
                  <span class="n">hsv_min_sat</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">hsv_max_sat</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Specify the azimuth (measured clockwise from south) and altitude</span>
@@ -1671,9 +1678,9 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">hsv_min_val</span> <span class="o">=</span> <span class="n">hsv_min_val</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">hsv_max_val</span> <span class="o">=</span> <span class="n">hsv_max_val</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">hsv_min_sat</span> <span class="o">=</span> <span class="n">hsv_min_sat</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">hsv_max_sat</span> <span class="o">=</span> <span class="n">hsv_max_sat</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hsv_max_sat</span> <span class="o">=</span> <span class="n">hsv_max_sat</span></div>
 
-    <span class="k">def</span> <span class="nf">hillshade</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">elevation</span><span class="p">,</span> <span class="n">vert_exag</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dx</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dy</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">fraction</span><span class="o">=</span><span class="mf">1.</span><span class="p">):</span>
+<div class="viewcode-block" id="LightSource.hillshade"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.LightSource.hillshade.html#matplotlib.colors.LightSource.hillshade">[docs]</a>    <span class="k">def</span> <span class="nf">hillshade</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">elevation</span><span class="p">,</span> <span class="n">vert_exag</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dx</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dy</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">fraction</span><span class="o">=</span><span class="mf">1.</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Calculates the illumination intensity for a surface using the defined</span>
 <span class="sd">        azimuth and elevation for the light source.</span>
@@ -1744,9 +1751,9 @@
             <span class="n">intensity</span> <span class="o">/=</span> <span class="p">(</span><span class="n">imax</span> <span class="o">-</span> <span class="n">imin</span><span class="p">)</span>
         <span class="n">intensity</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">intensity</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">intensity</span><span class="p">)</span>
 
-        <span class="k">return</span> <span class="n">intensity</span>
+        <span class="k">return</span> <span class="n">intensity</span></div>
 
-    <span class="k">def</span> <span class="nf">shade</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">cmap</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">blend_mode</span><span class="o">=</span><span class="s1">&#39;hsv&#39;</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<div class="viewcode-block" id="LightSource.shade"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.LightSource.shade.html#matplotlib.colors.LightSource.shade">[docs]</a>    <span class="k">def</span> <span class="nf">shade</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">cmap</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">blend_mode</span><span class="o">=</span><span class="s1">&#39;hsv&#39;</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
               <span class="n">vmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">vert_exag</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dx</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dy</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">fraction</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Combine colormapped data values with an illumination intensity map</span>
@@ -1819,9 +1826,9 @@
                               <span class="n">fraction</span><span class="o">=</span><span class="n">fraction</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="c1"># Don&#39;t overwrite the alpha channel, if present.</span>
         <span class="n">rgb0</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">rgb1</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="p">:</span><span class="mi">3</span><span class="p">]</span>
-        <span class="k">return</span> <span class="n">rgb0</span>
+        <span class="k">return</span> <span class="n">rgb0</span></div>
 
-    <span class="k">def</span> <span class="nf">shade_rgb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rgb</span><span class="p">,</span> <span class="n">elevation</span><span class="p">,</span> <span class="n">fraction</span><span class="o">=</span><span class="mf">1.</span><span class="p">,</span> <span class="n">blend_mode</span><span class="o">=</span><span class="s1">&#39;hsv&#39;</span><span class="p">,</span>
+<div class="viewcode-block" id="LightSource.shade_rgb"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.LightSource.shade_rgb.html#matplotlib.colors.LightSource.shade_rgb">[docs]</a>    <span class="k">def</span> <span class="nf">shade_rgb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rgb</span><span class="p">,</span> <span class="n">elevation</span><span class="p">,</span> <span class="n">fraction</span><span class="o">=</span><span class="mf">1.</span><span class="p">,</span> <span class="n">blend_mode</span><span class="o">=</span><span class="s1">&#39;hsv&#39;</span><span class="p">,</span>
                   <span class="n">vert_exag</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dx</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dy</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Take the input RGB array (ny*nx*3) adjust their color values</span>
@@ -1894,9 +1901,9 @@
             <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
                 <span class="n">blend</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">i</span><span class="p">][</span><span class="n">mask</span><span class="p">]</span> <span class="o">=</span> <span class="n">rgb</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">i</span><span class="p">][</span><span class="n">mask</span><span class="p">]</span>
 
-        <span class="k">return</span> <span class="n">blend</span>
+        <span class="k">return</span> <span class="n">blend</span></div>
 
-    <span class="k">def</span> <span class="nf">blend_hsv</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rgb</span><span class="p">,</span> <span class="n">intensity</span><span class="p">,</span> <span class="n">hsv_max_sat</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">hsv_max_val</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<div class="viewcode-block" id="LightSource.blend_hsv"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.LightSource.blend_hsv.html#matplotlib.colors.LightSource.blend_hsv">[docs]</a>    <span class="k">def</span> <span class="nf">blend_hsv</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rgb</span><span class="p">,</span> <span class="n">intensity</span><span class="p">,</span> <span class="n">hsv_max_sat</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">hsv_max_val</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                   <span class="n">hsv_min_val</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">hsv_min_sat</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Take the input data array, convert to HSV values in the given colormap,</span>
@@ -1976,9 +1983,9 @@
         <span class="n">hsv</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">1</span><span class="p">:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">hsv</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">1</span><span class="p">:]</span> <span class="o">&lt;</span> <span class="mf">0.</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">hsv</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">1</span><span class="p">:])</span>
         <span class="n">hsv</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">1</span><span class="p">:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">hsv</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">1</span><span class="p">:]</span> <span class="o">&gt;</span> <span class="mf">1.</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">hsv</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">1</span><span class="p">:])</span>
         <span class="c1"># convert modified hsv back to rgb.</span>
-        <span class="k">return</span> <span class="n">hsv_to_rgb</span><span class="p">(</span><span class="n">hsv</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">hsv_to_rgb</span><span class="p">(</span><span class="n">hsv</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">blend_soft_light</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rgb</span><span class="p">,</span> <span class="n">intensity</span><span class="p">):</span>
+<div class="viewcode-block" id="LightSource.blend_soft_light"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.LightSource.blend_soft_light.html#matplotlib.colors.LightSource.blend_soft_light">[docs]</a>    <span class="k">def</span> <span class="nf">blend_soft_light</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rgb</span><span class="p">,</span> <span class="n">intensity</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Combines an rgb image with an intensity map using &quot;soft light&quot;</span>
 <span class="sd">        blending.  Uses the &quot;pegtop&quot; formula.</span>
@@ -1995,9 +2002,9 @@
 <span class="sd">        rgb : ndarray</span>
 <span class="sd">            An MxNx3 RGB array representing the combined images.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">intensity</span> <span class="o">*</span> <span class="n">rgb</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">intensity</span><span class="p">)</span> <span class="o">*</span> <span class="n">rgb</span><span class="o">**</span><span class="mi">2</span>
+        <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">intensity</span> <span class="o">*</span> <span class="n">rgb</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">intensity</span><span class="p">)</span> <span class="o">*</span> <span class="n">rgb</span><span class="o">**</span><span class="mi">2</span></div>
 
-    <span class="k">def</span> <span class="nf">blend_overlay</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rgb</span><span class="p">,</span> <span class="n">intensity</span><span class="p">):</span>
+<div class="viewcode-block" id="LightSource.blend_overlay"><a class="viewcode-back" href="../../generated/generated/matplotlib.colors.LightSource.blend_overlay.html#matplotlib.colors.LightSource.blend_overlay">[docs]</a>    <span class="k">def</span> <span class="nf">blend_overlay</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rgb</span><span class="p">,</span> <span class="n">intensity</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Combines an rgb image with an intensity map using &quot;overlay&quot; blending.</span>
 
@@ -2015,10 +2022,10 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">low</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">intensity</span> <span class="o">*</span> <span class="n">rgb</span>
         <span class="n">high</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">intensity</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">rgb</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">rgb</span> <span class="o">&lt;=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">rgb</span> <span class="o">&lt;=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">)</span></div></div>
 
 
-<span class="k">def</span> <span class="nf">from_levels_and_colors</span><span class="p">(</span><span class="n">levels</span><span class="p">,</span> <span class="n">colors</span><span class="p">,</span> <span class="n">extend</span><span class="o">=</span><span class="s1">&#39;neither&#39;</span><span class="p">):</span>
+<div class="viewcode-block" id="from_levels_and_colors"><a class="viewcode-back" href="../../generated/matplotlib.colors.from_levels_and_colors.html#matplotlib.colors.from_levels_and_colors">[docs]</a><span class="k">def</span> <span class="nf">from_levels_and_colors</span><span class="p">(</span><span class="n">levels</span><span class="p">,</span> <span class="n">colors</span><span class="p">,</span> <span class="n">extend</span><span class="o">=</span><span class="s1">&#39;neither&#39;</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A helper routine to generate a cmap and a norm instance which</span>
 <span class="sd">    behave similar to contourf&#39;s levels and colors arguments.</span>
@@ -2083,7 +2090,7 @@
     <span class="n">cmap</span><span class="o">.</span><span class="n">colorbar_extend</span> <span class="o">=</span> <span class="n">extend</span>
 
     <span class="n">norm</span> <span class="o">=</span> <span class="n">BoundaryNorm</span><span class="p">(</span><span class="n">levels</span><span class="p">,</span> <span class="n">ncolors</span><span class="o">=</span><span class="n">n_data_colors</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">cmap</span><span class="p">,</span> <span class="n">norm</span>
+    <span class="k">return</span> <span class="n">cmap</span><span class="p">,</span> <span class="n">norm</span></div>
 </pre></div>
 
            </div>

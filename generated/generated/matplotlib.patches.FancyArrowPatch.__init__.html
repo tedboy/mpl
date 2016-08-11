@@ -1,0 +1,387 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>matplotlib.patches.FancyArrowPatch.__init__ &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">3. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backend_bases.html">4. matplotlib.backend_bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">5. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">6. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">8. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">9. matplotlib.widgets</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>matplotlib.patches.FancyArrowPatch.__init__</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.patches.FancyArrowPatch.__init__.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-patches-fancyarrowpatch-init">
+<h1>matplotlib.patches.FancyArrowPatch.__init__<a class="headerlink" href="#matplotlib-patches-fancyarrowpatch-init" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="matplotlib.patches.FancyArrowPatch.__init__">
+<code class="descclassname">FancyArrowPatch.</code><code class="descname">__init__</code><span class="sig-paren">(</span><em>posA=None</em>, <em>posB=None</em>, <em>path=None</em>, <em>arrowstyle=u'simple'</em>, <em>arrow_transmuter=None</em>, <em>connectionstyle=u'arc3'</em>, <em>connector=None</em>, <em>patchA=None</em>, <em>patchB=None</em>, <em>shrinkA=2.0</em>, <em>shrinkB=2.0</em>, <em>mutation_scale=1.0</em>, <em>mutation_aspect=None</em>, <em>dpi_cor=1.0</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/patches.html#FancyArrowPatch.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.patches.FancyArrowPatch.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>If <em>posA</em> and <em>posB</em> is given, a path connecting two point are
+created according to the connectionstyle. The path will be
+clipped with <em>patchA</em> and <em>patchB</em> and further shrunken by
+<em>shrinkA</em> and <em>shrinkB</em>. An arrow is drawn along this
+resulting path using the <em>arrowstyle</em> parameter. If <em>path</em>
+provided, an arrow is drawn along this path and <em>patchA</em>,
+<em>patchB</em>, <em>shrinkA</em>, and <em>shrinkB</em> are ignored.</p>
+<p>The <em>connectionstyle</em> describes how <em>posA</em> and <em>posB</em> are
+connected. It can be an instance of the ConnectionStyle class
+(matplotlib.patches.ConnectionStlye) or a string of the
+connectionstyle name, with optional comma-separated
+attributes.  The following connection styles are available.</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="16%" />
+<col width="74%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Class</th>
+<th class="head">Name</th>
+<th class="head">Attrs</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Angle</td>
+<td><code class="docutils literal"><span class="pre">angle</span></code></td>
+<td>angleA=90,angleB=0,rad=0.0</td>
+</tr>
+<tr class="row-odd"><td>Angle3</td>
+<td><code class="docutils literal"><span class="pre">angle3</span></code></td>
+<td>angleA=90,angleB=0</td>
+</tr>
+<tr class="row-even"><td>Arc</td>
+<td><code class="docutils literal"><span class="pre">arc</span></code></td>
+<td>angleA=0,angleB=0,armA=None,armB=None,rad=0.0</td>
+</tr>
+<tr class="row-odd"><td>Arc3</td>
+<td><code class="docutils literal"><span class="pre">arc3</span></code></td>
+<td>rad=0.0</td>
+</tr>
+<tr class="row-even"><td>Bar</td>
+<td><code class="docutils literal"><span class="pre">bar</span></code></td>
+<td>armA=0.0,armB=0.0,fraction=0.3,angle=None</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>The <em>arrowstyle</em> describes how the fancy arrow will be
+drawn. It can be string of the available arrowstyle names,
+with optional comma-separated attributes, or one of the
+ArrowStyle instance. The optional attributes are meant to be
+scaled with the <em>mutation_scale</em>. The following arrow styles are
+available.</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="11%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Class</th>
+<th class="head">Name</th>
+<th class="head">Attrs</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Curve</td>
+<td><code class="docutils literal"><span class="pre">-</span></code></td>
+<td>None</td>
+</tr>
+<tr class="row-odd"><td>CurveB</td>
+<td><code class="docutils literal"><span class="pre">-&gt;</span></code></td>
+<td>head_length=0.4,head_width=0.2</td>
+</tr>
+<tr class="row-even"><td>BracketB</td>
+<td><code class="docutils literal"><span class="pre">-[</span></code></td>
+<td>widthB=1.0,lengthB=0.2,angleB=None</td>
+</tr>
+<tr class="row-odd"><td>CurveFilledB</td>
+<td><code class="docutils literal"><span class="pre">-|&gt;</span></code></td>
+<td>head_length=0.4,head_width=0.2</td>
+</tr>
+<tr class="row-even"><td>CurveA</td>
+<td><code class="docutils literal"><span class="pre">&lt;-</span></code></td>
+<td>head_length=0.4,head_width=0.2</td>
+</tr>
+<tr class="row-odd"><td>CurveAB</td>
+<td><code class="docutils literal"><span class="pre">&lt;-&gt;</span></code></td>
+<td>head_length=0.4,head_width=0.2</td>
+</tr>
+<tr class="row-even"><td>CurveFilledA</td>
+<td><code class="docutils literal"><span class="pre">&lt;|-</span></code></td>
+<td>head_length=0.4,head_width=0.2</td>
+</tr>
+<tr class="row-odd"><td>CurveFilledAB</td>
+<td><code class="docutils literal"><span class="pre">&lt;|-|&gt;</span></code></td>
+<td>head_length=0.4,head_width=0.2</td>
+</tr>
+<tr class="row-even"><td>BracketA</td>
+<td><code class="docutils literal"><span class="pre">]-</span></code></td>
+<td>widthA=1.0,lengthA=0.2,angleA=None</td>
+</tr>
+<tr class="row-odd"><td>BracketAB</td>
+<td><code class="docutils literal"><span class="pre">]-[</span></code></td>
+<td>widthA=1.0,lengthA=0.2,angleA=None,widthB=1.0,lengthB=0.2,angleB=None</td>
+</tr>
+<tr class="row-even"><td>Fancy</td>
+<td><code class="docutils literal"><span class="pre">fancy</span></code></td>
+<td>head_length=0.4,head_width=0.4,tail_width=0.4</td>
+</tr>
+<tr class="row-odd"><td>Simple</td>
+<td><code class="docutils literal"><span class="pre">simple</span></code></td>
+<td>head_length=0.5,head_width=0.5,tail_width=0.2</td>
+</tr>
+<tr class="row-even"><td>Wedge</td>
+<td><code class="docutils literal"><span class="pre">wedge</span></code></td>
+<td>tail_width=0.3,shrink_factor=0.5</td>
+</tr>
+<tr class="row-odd"><td>BarAB</td>
+<td><code class="docutils literal"><span class="pre">|-|</span></code></td>
+<td>widthA=1.0,angleA=None,widthB=1.0,angleB=None</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<dl class="docutils">
+<dt><em>mutation_scale</em></dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">a value with which attributes of arrowstyle</span><dd>(e.g., head_length) will be scaled. default=1.</dd>
+<dt><em>mutation_aspect</em></dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">The height of the rectangle will be</span><dd>squeezed by this value before the mutation and the mutated
+box will be stretched by the inverse of it. default=None.</dd>
+<dt>Valid kwargs are:</dt>
+<dd>agg_filter: unknown
+alpha: float or None 
+animated: [True | False] 
+antialiased or aa: [True | False]  or None for default 
+axes: an <code class="xref py py-class docutils literal"><span class="pre">Axes</span></code> instance 
+capstyle: [&#8216;butt&#8217; | &#8216;round&#8217; | &#8216;projecting&#8217;] 
+clip_box: a <code class="xref py py-class docutils literal"><span class="pre">matplotlib.transforms.Bbox</span></code> instance 
+clip_on: [True | False] 
+clip_path: [ (<code class="xref py py-class docutils literal"><span class="pre">Path</span></code>, <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code>) | <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a> | None ] 
+color: matplotlib color spec
+contains: a callable function 
+edgecolor or ec: mpl color spec, or None for default, or &#8216;none&#8217; for no color 
+facecolor or fc: mpl color spec, or None for default, or &#8216;none&#8217; for no color 
+figure: a <code class="xref py py-class docutils literal"><span class="pre">matplotlib.figure.Figure</span></code> instance 
+fill: [True | False] 
+gid: an id string 
+hatch: [&#8216;/&#8217; | &#8216;\&#8217; | &#8216;|&#8217; | &#8216;-&#8216; | &#8216;+&#8217; | &#8216;x&#8217; | &#8216;o&#8217; | &#8216;O&#8217; | &#8216;.&#8217; | &#8216;*&#8217;] 
+joinstyle: [&#8216;miter&#8217; | &#8216;round&#8217; | &#8216;bevel&#8217;] 
+label: string or anything printable with &#8216;%s&#8217; conversion. 
+linestyle or ls: [&#8216;solid&#8217; | &#8216;dashed&#8217;, &#8216;dashdot&#8217;, &#8216;dotted&#8217; | (offset, on-off-dash-seq) | <code class="docutils literal"><span class="pre">'-'</span></code> | <code class="docutils literal"><span class="pre">'--'</span></code> | <code class="docutils literal"><span class="pre">'-.'</span></code> | <code class="docutils literal"><span class="pre">':'</span></code> | <code class="docutils literal"><span class="pre">'None'</span></code> | <code class="docutils literal"><span class="pre">'</span> <span class="pre">'</span></code> | <code class="docutils literal"><span class="pre">''</span></code>]
+linewidth or lw: float or None for default 
+path_effects: unknown
+picker: [None|float|boolean|callable] 
+rasterized: [True | False | None] 
+sketch_params: unknown
+snap: unknown
+transform: <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code> instance 
+url: a url string 
+visible: [True | False] 
+zorder: any number</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

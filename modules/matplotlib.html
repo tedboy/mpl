@@ -83,8 +83,15 @@
             
                 <p class="caption"><span class="caption-text">Table of Contents</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../generated/matplotlib.pyplot.html">1. matplotlib.pyplot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../generated/matplotlib.cm.html">2. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/matplotlib.cm.html">3. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/matplotlib.backend_bases.html">4. matplotlib.backend_bases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/matplotlib.patches.html">5. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/matplotlib.cbook.html">6. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/matplotlib.image.html">8. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/matplotlib.widgets.html">9. matplotlib.widgets</a></li>
 </ul>
 
             
@@ -289,7 +296,7 @@
     <span class="k">raise</span> <span class="ne">ImportError</span><span class="p">(</span><span class="s2">&quot;matplotlib requires dateutil&quot;</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">compare_versions</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<div class="viewcode-block" id="compare_versions"><a class="viewcode-back" href="../generated/matplotlib.compare_versions.html#matplotlib.compare_versions">[docs]</a><span class="k">def</span> <span class="nf">compare_versions</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="s2">&quot;return True if a is greater than or equal to b&quot;</span>
     <span class="k">if</span> <span class="n">a</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">six</span><span class="o">.</span><span class="n">PY3</span><span class="p">:</span>
@@ -301,7 +308,7 @@
         <span class="n">b</span> <span class="o">=</span> <span class="n">distutils</span><span class="o">.</span><span class="n">version</span><span class="o">.</span><span class="n">LooseVersion</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">a</span> <span class="o">&gt;=</span> <span class="n">b</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="kc">False</span></div>
 
 <span class="k">if</span> <span class="ow">not</span> <span class="n">compare_versions</span><span class="p">(</span><span class="n">six</span><span class="o">.</span><span class="n">__version__</span><span class="p">,</span> <span class="s1">&#39;1.3&#39;</span><span class="p">):</span>
     <span class="k">raise</span> <span class="ne">ImportError</span><span class="p">(</span>
@@ -384,7 +391,7 @@
     <span class="k">return</span> <span class="kc">True</span>
 
 
-<span class="k">class</span> <span class="nc">Verbose</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="Verbose"><a class="viewcode-back" href="../generated/generated/matplotlib.Verbose.html#matplotlib.Verbose">[docs]</a><span class="k">class</span> <span class="nc">Verbose</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A class to handle reporting.  Set the fileo attribute to any file</span>
 <span class="sd">    instance to handle the output.  Default is sys.stdout</span>
@@ -408,11 +415,11 @@
         <span class="k">if</span> <span class="n">level_str</span> <span class="ow">in</span> <span class="n">levels</span><span class="p">:</span>
             <span class="n">_commandLineVerbose</span> <span class="o">=</span> <span class="n">level_str</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Verbose.__init__"><a class="viewcode-back" href="../generated/generated/matplotlib.Verbose.__init__.html#matplotlib.Verbose.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">set_level</span><span class="p">(</span><span class="s1">&#39;silent&#39;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">fileo</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fileo</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span></div>
 
-    <span class="k">def</span> <span class="nf">set_level</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level</span><span class="p">):</span>
+<div class="viewcode-block" id="Verbose.set_level"><a class="viewcode-back" href="../generated/generated/matplotlib.Verbose.set_level.html#matplotlib.Verbose.set_level">[docs]</a>    <span class="k">def</span> <span class="nf">set_level</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level</span><span class="p">):</span>
         <span class="s1">&#39;set the verbosity to one of the Verbose.levels strings&#39;</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_commandLineVerbose</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -421,9 +428,9 @@
             <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;matplotlib: unrecognized --verbose-* string &quot;</span><span class="si">%s</span><span class="s1">&quot;.&#39;</span>
                           <span class="s1">&#39; Legal values are </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">level</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">levels</span><span class="p">))</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">level</span> <span class="o">=</span> <span class="n">level</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">level</span> <span class="o">=</span> <span class="n">level</span></div>
 
-    <span class="k">def</span> <span class="nf">set_fileo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fname</span><span class="p">):</span>
+<div class="viewcode-block" id="Verbose.set_fileo"><a class="viewcode-back" href="../generated/generated/matplotlib.Verbose.set_fileo.html#matplotlib.Verbose.set_fileo">[docs]</a>    <span class="k">def</span> <span class="nf">set_fileo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fname</span><span class="p">):</span>
         <span class="n">std</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;sys.stdout&#39;</span><span class="p">:</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">,</span>
             <span class="s1">&#39;sys.stderr&#39;</span><span class="p">:</span> <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">,</span>
@@ -438,9 +445,9 @@
                                  <span class="s1">&#39; for writing.</span><span class="se">\n</span><span class="s1">Check your matplotlibrc &#39;</span>
                                  <span class="s1">&#39;verbose.fileo setting&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">fileo</span> <span class="o">=</span> <span class="n">fileo</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">fileo</span> <span class="o">=</span> <span class="n">fileo</span></div>
 
-    <span class="k">def</span> <span class="nf">report</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="s1">&#39;helpful&#39;</span><span class="p">):</span>
+<div class="viewcode-block" id="Verbose.report"><a class="viewcode-back" href="../generated/generated/matplotlib.Verbose.report.html#matplotlib.Verbose.report">[docs]</a>    <span class="k">def</span> <span class="nf">report</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="s1">&#39;helpful&#39;</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        print message s to self.fileo if self.level&gt;=level.  Return</span>
 <span class="sd">        value indicates whether a message was issued</span>
@@ -449,9 +456,9 @@
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ge</span><span class="p">(</span><span class="n">level</span><span class="p">):</span>
             <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">fileo</span><span class="p">)</span>
             <span class="k">return</span> <span class="kc">True</span>
-        <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="kc">False</span></div>
 
-    <span class="k">def</span> <span class="nf">wrap</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fmt</span><span class="p">,</span> <span class="n">func</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="s1">&#39;helpful&#39;</span><span class="p">,</span> <span class="n">always</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<div class="viewcode-block" id="Verbose.wrap"><a class="viewcode-back" href="../generated/generated/matplotlib.Verbose.wrap.html#matplotlib.Verbose.wrap">[docs]</a>    <span class="k">def</span> <span class="nf">wrap</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fmt</span><span class="p">,</span> <span class="n">func</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="s1">&#39;helpful&#39;</span><span class="p">,</span> <span class="n">always</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        return a callable function that wraps func and reports it</span>
 <span class="sd">        output through the verbose handler if current verbosity level</span>
@@ -472,17 +479,17 @@
             <span class="k">return</span> <span class="n">ret</span>
         <span class="n">wrapper</span><span class="o">.</span><span class="n">_spoke</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="n">wrapper</span><span class="o">.</span><span class="n">__doc__</span> <span class="o">=</span> <span class="n">func</span><span class="o">.</span><span class="n">__doc__</span>
-        <span class="k">return</span> <span class="n">wrapper</span>
+        <span class="k">return</span> <span class="n">wrapper</span></div>
 
-    <span class="k">def</span> <span class="nf">ge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level</span><span class="p">):</span>
+<div class="viewcode-block" id="Verbose.ge"><a class="viewcode-back" href="../generated/generated/matplotlib.Verbose.ge.html#matplotlib.Verbose.ge">[docs]</a>    <span class="k">def</span> <span class="nf">ge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level</span><span class="p">):</span>
         <span class="s1">&#39;return true if self.level is &gt;= level&#39;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">vald</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">level</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vald</span><span class="p">[</span><span class="n">level</span><span class="p">]</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">vald</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">level</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vald</span><span class="p">[</span><span class="n">level</span><span class="p">]</span></div></div>
 
 
 <span class="n">verbose</span> <span class="o">=</span> <span class="n">Verbose</span><span class="p">()</span>
 
 
-<span class="k">def</span> <span class="nf">checkdep_dvipng</span><span class="p">():</span>
+<div class="viewcode-block" id="checkdep_dvipng"><a class="viewcode-back" href="../generated/matplotlib.checkdep_dvipng.html#matplotlib.checkdep_dvipng">[docs]</a><span class="k">def</span> <span class="nf">checkdep_dvipng</span><span class="p">():</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">s</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">([</span><span class="s1">&#39;dvipng&#39;</span><span class="p">,</span> <span class="s1">&#39;-version&#39;</span><span class="p">],</span> <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span>
                              <span class="n">stderr</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">)</span>
@@ -491,10 +498,10 @@
         <span class="n">v</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">v</span>
     <span class="k">except</span> <span class="p">(</span><span class="ne">IndexError</span><span class="p">,</span> <span class="ne">ValueError</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">):</span>
-        <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">return</span> <span class="kc">None</span></div>
 
 
-<span class="k">def</span> <span class="nf">checkdep_ghostscript</span><span class="p">():</span>
+<div class="viewcode-block" id="checkdep_ghostscript"><a class="viewcode-back" href="../generated/matplotlib.checkdep_ghostscript.html#matplotlib.checkdep_ghostscript">[docs]</a><span class="k">def</span> <span class="nf">checkdep_ghostscript</span><span class="p">():</span>
     <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">platform</span> <span class="o">==</span> <span class="s1">&#39;win32&#39;</span><span class="p">:</span>
         <span class="n">gs_execs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;gswin32c&#39;</span><span class="p">,</span> <span class="s1">&#39;gswin64c&#39;</span><span class="p">,</span> <span class="s1">&#39;gs&#39;</span><span class="p">]</span>
     <span class="k">else</span><span class="p">:</span>
@@ -510,10 +517,10 @@
                 <span class="k">return</span> <span class="n">gs_exec</span><span class="p">,</span> <span class="n">v</span>
         <span class="k">except</span> <span class="p">(</span><span class="ne">IndexError</span><span class="p">,</span> <span class="ne">ValueError</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">):</span>
             <span class="k">pass</span>
-    <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span></div>
 
 
-<span class="k">def</span> <span class="nf">checkdep_tex</span><span class="p">():</span>
+<div class="viewcode-block" id="checkdep_tex"><a class="viewcode-back" href="../generated/matplotlib.checkdep_tex.html#matplotlib.checkdep_tex">[docs]</a><span class="k">def</span> <span class="nf">checkdep_tex</span><span class="p">():</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">s</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">([</span><span class="s1">&#39;tex&#39;</span><span class="p">,</span> <span class="s1">&#39;-version&#39;</span><span class="p">],</span> <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span>
                              <span class="n">stderr</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">)</span>
@@ -524,10 +531,10 @@
         <span class="n">v</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">v</span>
     <span class="k">except</span> <span class="p">(</span><span class="ne">IndexError</span><span class="p">,</span> <span class="ne">ValueError</span><span class="p">,</span> <span class="ne">AttributeError</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">):</span>
-        <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">return</span> <span class="kc">None</span></div>
 
 
-<span class="k">def</span> <span class="nf">checkdep_pdftops</span><span class="p">():</span>
+<div class="viewcode-block" id="checkdep_pdftops"><a class="viewcode-back" href="../generated/matplotlib.checkdep_pdftops.html#matplotlib.checkdep_pdftops">[docs]</a><span class="k">def</span> <span class="nf">checkdep_pdftops</span><span class="p">():</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">s</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">([</span><span class="s1">&#39;pdftops&#39;</span><span class="p">,</span> <span class="s1">&#39;-v&#39;</span><span class="p">],</span> <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span>
                              <span class="n">stderr</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">)</span>
@@ -538,10 +545,10 @@
                 <span class="n">v</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">v</span>
     <span class="k">except</span> <span class="p">(</span><span class="ne">IndexError</span><span class="p">,</span> <span class="ne">ValueError</span><span class="p">,</span> <span class="ne">UnboundLocalError</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">):</span>
-        <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">return</span> <span class="kc">None</span></div>
 
 
-<span class="k">def</span> <span class="nf">checkdep_inkscape</span><span class="p">():</span>
+<div class="viewcode-block" id="checkdep_inkscape"><a class="viewcode-back" href="../generated/matplotlib.checkdep_inkscape.html#matplotlib.checkdep_inkscape">[docs]</a><span class="k">def</span> <span class="nf">checkdep_inkscape</span><span class="p">():</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">s</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">([</span><span class="s1">&#39;inkscape&#39;</span><span class="p">,</span> <span class="s1">&#39;-V&#39;</span><span class="p">],</span> <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span>
                              <span class="n">stderr</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">)</span>
@@ -553,10 +560,10 @@
                 <span class="k">break</span>
         <span class="k">return</span> <span class="n">v</span>
     <span class="k">except</span> <span class="p">(</span><span class="ne">IndexError</span><span class="p">,</span> <span class="ne">ValueError</span><span class="p">,</span> <span class="ne">UnboundLocalError</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">):</span>
-        <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">return</span> <span class="kc">None</span></div>
 
 
-<span class="k">def</span> <span class="nf">checkdep_xmllint</span><span class="p">():</span>
+<div class="viewcode-block" id="checkdep_xmllint"><a class="viewcode-back" href="../generated/matplotlib.checkdep_xmllint.html#matplotlib.checkdep_xmllint">[docs]</a><span class="k">def</span> <span class="nf">checkdep_xmllint</span><span class="p">():</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">s</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">([</span><span class="s1">&#39;xmllint&#39;</span><span class="p">,</span> <span class="s1">&#39;--version&#39;</span><span class="p">],</span> <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span>
                              <span class="n">stderr</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">)</span>
@@ -568,10 +575,10 @@
                 <span class="k">break</span>
         <span class="k">return</span> <span class="n">v</span>
     <span class="k">except</span> <span class="p">(</span><span class="ne">IndexError</span><span class="p">,</span> <span class="ne">ValueError</span><span class="p">,</span> <span class="ne">UnboundLocalError</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">):</span>
-        <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">return</span> <span class="kc">None</span></div>
 
 
-<span class="k">def</span> <span class="nf">checkdep_ps_distiller</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<div class="viewcode-block" id="checkdep_ps_distiller"><a class="viewcode-back" href="../generated/matplotlib.checkdep_ps_distiller.html#matplotlib.checkdep_ps_distiller">[docs]</a><span class="k">def</span> <span class="nf">checkdep_ps_distiller</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">s</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">False</span>
 
@@ -609,10 +616,10 @@
     <span class="k">if</span> <span class="n">flag</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">s</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="kc">False</span></div>
 
 
-<span class="k">def</span> <span class="nf">checkdep_usetex</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<div class="viewcode-block" id="checkdep_usetex"><a class="viewcode-back" href="../generated/matplotlib.checkdep_usetex.html#matplotlib.checkdep_usetex">[docs]</a><span class="k">def</span> <span class="nf">checkdep_usetex</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">s</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">False</span>
 
@@ -653,7 +660,7 @@
                        <span class="s1">&#39;unless ghostscript-</span><span class="si">%s</span><span class="s1"> or later is &#39;</span>
                        <span class="s1">&#39;installed on your system&#39;</span><span class="p">)</span> <span class="o">%</span> <span class="n">gs_req</span><span class="p">)</span>
 
-    <span class="k">return</span> <span class="n">flag</span>
+    <span class="k">return</span> <span class="n">flag</span></div>
 
 
 <span class="k">def</span> <span class="nf">_get_home</span><span class="p">():</span>
@@ -868,16 +875,16 @@
                              <span class="n">always</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">get_example_data</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
+<div class="viewcode-block" id="get_example_data"><a class="viewcode-back" href="../generated/matplotlib.get_example_data.html#matplotlib.get_example_data">[docs]</a><span class="k">def</span> <span class="nf">get_example_data</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    get_example_data is deprecated -- use matplotlib.cbook.get_sample_data</span>
 <span class="sd">                                      instead</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;get_example_data is deprecated -- use &#39;</span>
-                              <span class="s1">&#39;matplotlib.cbook.get_sample_data instead&#39;</span><span class="p">)</span>
+                              <span class="s1">&#39;matplotlib.cbook.get_sample_data instead&#39;</span><span class="p">)</span></div>
 
 
-<span class="k">def</span> <span class="nf">get_py2exe_datafiles</span><span class="p">():</span>
+<div class="viewcode-block" id="get_py2exe_datafiles"><a class="viewcode-back" href="../generated/matplotlib.get_py2exe_datafiles.html#matplotlib.get_py2exe_datafiles">[docs]</a><span class="k">def</span> <span class="nf">get_py2exe_datafiles</span><span class="p">():</span>
     <span class="n">datapath</span> <span class="o">=</span> <span class="n">get_data_path</span><span class="p">()</span>
     <span class="n">_</span><span class="p">,</span> <span class="n">tail</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">datapath</span><span class="p">)</span>
     <span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
@@ -890,10 +897,10 @@
         <span class="n">root</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">tail</span><span class="p">,</span> <span class="s1">&#39;mpl-data&#39;</span><span class="p">)</span>
         <span class="n">root</span> <span class="o">=</span> <span class="n">root</span><span class="p">[</span><span class="n">root</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;mpl-data&#39;</span><span class="p">):]</span>
         <span class="n">d</span><span class="p">[</span><span class="n">root</span><span class="p">]</span> <span class="o">=</span> <span class="n">files</span>
-    <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+    <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">())</span></div>
 
 
-<span class="k">def</span> <span class="nf">matplotlib_fname</span><span class="p">():</span>
+<div class="viewcode-block" id="matplotlib_fname"><a class="viewcode-back" href="../generated/matplotlib.matplotlib_fname.html#matplotlib.matplotlib_fname">[docs]</a><span class="k">def</span> <span class="nf">matplotlib_fname</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Get the location of the config file.</span>
 
@@ -963,7 +970,7 @@
     <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
         <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;Could not find matplotlibrc; using defaults&#39;</span><span class="p">)</span>
 
-    <span class="k">return</span> <span class="n">fname</span>
+    <span class="k">return</span> <span class="n">fname</span></div>
 
 
 <span class="c1"># names of keys to deprecate</span>
@@ -991,7 +998,7 @@
                             <span class="n">_deprecated_map</span><span class="p">,</span> <span class="n">_obsolete_set</span><span class="p">))</span>
 
 
-<span class="k">class</span> <span class="nc">RcParams</span><span class="p">(</span><span class="nb">dict</span><span class="p">):</span>
+<div class="viewcode-block" id="RcParams"><a class="viewcode-back" href="../generated/generated/matplotlib.RcParams.html#matplotlib.RcParams">[docs]</a><span class="k">class</span> <span class="nc">RcParams</span><span class="p">(</span><span class="nb">dict</span><span class="p">):</span>
 
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A dictionary object including validation</span>
@@ -1007,9 +1014,9 @@
     <span class="n">msg_depr_ignore</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> is deprecated and ignored. Use </span><span class="si">%s</span><span class="s2">&quot;</span>
 
     <span class="c1"># validate values on the way in</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="RcParams.__init__"><a class="viewcode-back" href="../generated/generated/matplotlib.RcParams.__init__.html#matplotlib.RcParams.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)):</span>
-            <span class="bp">self</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+            <span class="bp">self</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span></div>
 
     <span class="k">def</span> <span class="nf">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
         <span class="k">try</span><span class="p">:</span>
@@ -1055,9 +1062,9 @@
     <span class="c1"># so rcParams.update(...) (such as in seaborn) side-steps</span>
     <span class="c1"># all of the validation over-ride update to force</span>
     <span class="c1"># through __setitem__</span>
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="RcParams.update"><a class="viewcode-back" href="../generated/generated/matplotlib.RcParams.update.html#matplotlib.RcParams.update">[docs]</a>    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)):</span>
-            <span class="bp">self</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+            <span class="bp">self</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span></div>
 
     <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="kn">import</span> <span class="nn">pprint</span>
@@ -1072,21 +1079,21 @@
         <span class="k">return</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{0}</span><span class="s1">: </span><span class="si">{1}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
                          <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">()))</span>
 
-    <span class="k">def</span> <span class="nf">keys</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="RcParams.keys"><a class="viewcode-back" href="../generated/generated/matplotlib.RcParams.keys.html#matplotlib.RcParams.keys">[docs]</a>    <span class="k">def</span> <span class="nf">keys</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return sorted list of keys.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">k</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">dict</span><span class="o">.</span><span class="n">keys</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span>
         <span class="n">k</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">k</span>
+        <span class="k">return</span> <span class="n">k</span></div>
 
-    <span class="k">def</span> <span class="nf">values</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="RcParams.values"><a class="viewcode-back" href="../generated/generated/matplotlib.RcParams.values.html#matplotlib.RcParams.values">[docs]</a>    <span class="k">def</span> <span class="nf">values</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return values in order of sorted keys.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">keys</span><span class="p">()]</span>
+        <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">keys</span><span class="p">()]</span></div>
 
-    <span class="k">def</span> <span class="nf">find_all</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pattern</span><span class="p">):</span>
+<div class="viewcode-block" id="RcParams.find_all"><a class="viewcode-back" href="../generated/generated/matplotlib.RcParams.find_all.html#matplotlib.RcParams.find_all">[docs]</a>    <span class="k">def</span> <span class="nf">find_all</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pattern</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return the subset of this RcParams dictionary whose keys match,</span>
 <span class="sd">        using :func:`re.search`, the given ``pattern``.</span>
@@ -1101,10 +1108,10 @@
         <span class="n">pattern_re</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">RcParams</span><span class="p">((</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
                         <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
-                        <span class="k">if</span> <span class="n">pattern_re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">key</span><span class="p">))</span>
+                        <span class="k">if</span> <span class="n">pattern_re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">key</span><span class="p">))</span></div></div>
 
 
-<span class="k">def</span> <span class="nf">rc_params</span><span class="p">(</span><span class="n">fail_on_error</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="viewcode-block" id="rc_params"><a class="viewcode-back" href="../generated/matplotlib.rc_params.html#matplotlib.rc_params">[docs]</a><span class="k">def</span> <span class="nf">rc_params</span><span class="p">(</span><span class="n">fail_on_error</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Return a :class:`matplotlib.RcParams` instance from the</span>
 <span class="sd">    default matplotlib rc file.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -1118,15 +1125,15 @@
         <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">ret</span>
 
-    <span class="k">return</span> <span class="n">rc_params_from_file</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">fail_on_error</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">rc_params_from_file</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">fail_on_error</span><span class="p">)</span></div>
 
 
 <span class="n">URL_REGEX</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">r&#39;http://|https://|ftp://|file://|file:</span><span class="se">\\</span><span class="s1">&#39;</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">is_url</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+<div class="viewcode-block" id="is_url"><a class="viewcode-back" href="../generated/matplotlib.is_url.html#matplotlib.is_url">[docs]</a><span class="k">def</span> <span class="nf">is_url</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Return True if string is an http, ftp, or file URL path.&quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">URL_REGEX</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="n">URL_REGEX</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span></div>
 
 
 <span class="k">def</span> <span class="nf">_url_lines</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
@@ -1229,7 +1236,7 @@
     <span class="k">return</span> <span class="n">config</span>
 
 
-<span class="k">def</span> <span class="nf">rc_params_from_file</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">fail_on_error</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">use_default_template</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<div class="viewcode-block" id="rc_params_from_file"><a class="viewcode-back" href="../generated/matplotlib.rc_params_from_file.html#matplotlib.rc_params_from_file">[docs]</a><span class="k">def</span> <span class="nf">rc_params_from_file</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">fail_on_error</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">use_default_template</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Return :class:`matplotlib.RcParams` from the contents of the given file.</span>
 
 <span class="sd">    Parameters</span>
@@ -1270,7 +1277,7 @@
 
     <span class="n">verbose</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="s1">&#39;loaded rc file </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">fname</span><span class="p">)</span>
 
-    <span class="k">return</span> <span class="n">config</span>
+    <span class="k">return</span> <span class="n">config</span></div>
 
 
 <span class="c1"># this is the instance used by the matplotlib classes</span>
@@ -1305,7 +1312,7 @@
     <span class="n">locale</span><span class="o">.</span><span class="n">setlocale</span><span class="p">(</span><span class="n">locale</span><span class="o">.</span><span class="n">LC_ALL</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">rc</span><span class="p">(</span><span class="n">group</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="rc"><a class="viewcode-back" href="../generated/matplotlib.rc.html#matplotlib.rc">[docs]</a><span class="k">def</span> <span class="nf">rc</span><span class="p">(</span><span class="n">group</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Set the current rc params.  Group is the grouping for the rc, e.g.,</span>
 <span class="sd">    for ``lines.linewidth`` the group is ``lines``, for</span>
@@ -1375,27 +1382,27 @@
                 <span class="n">rcParams</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
             <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
                 <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">((</span><span class="s1">&#39;Unrecognized key &quot;</span><span class="si">%s</span><span class="s1">&quot; for group &quot;</span><span class="si">%s</span><span class="s1">&quot; and &#39;</span>
-                                <span class="s1">&#39;name &quot;</span><span class="si">%s</span><span class="s1">&quot;&#39;</span><span class="p">)</span> <span class="o">%</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">name</span><span class="p">))</span>
+                                <span class="s1">&#39;name &quot;</span><span class="si">%s</span><span class="s1">&quot;&#39;</span><span class="p">)</span> <span class="o">%</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">name</span><span class="p">))</span></div>
 
 
-<span class="k">def</span> <span class="nf">rcdefaults</span><span class="p">():</span>
+<div class="viewcode-block" id="rcdefaults"><a class="viewcode-back" href="../generated/matplotlib.rcdefaults.html#matplotlib.rcdefaults">[docs]</a><span class="k">def</span> <span class="nf">rcdefaults</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Restore the default rc params.  These are not the params loaded by</span>
 <span class="sd">    the rc file, but mpl&#39;s internal params.  See rc_file_defaults for</span>
 <span class="sd">    reloading the default params from the rc file</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">rcParams</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-    <span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">rcParamsDefault</span><span class="p">)</span>
+    <span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">rcParamsDefault</span><span class="p">)</span></div>
 
 
-<span class="k">def</span> <span class="nf">rc_file</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
+<div class="viewcode-block" id="rc_file"><a class="viewcode-back" href="../generated/matplotlib.rc_file.html#matplotlib.rc_file">[docs]</a><span class="k">def</span> <span class="nf">rc_file</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Update rc params from file.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">rc_params_from_file</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span>
+    <span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">rc_params_from_file</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span></div>
 
 
-<span class="k">class</span> <span class="nc">rc_context</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="rc_context"><a class="viewcode-back" href="../generated/generated/matplotlib.rc_context.html#matplotlib.rc_context">[docs]</a><span class="k">class</span> <span class="nc">rc_context</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Return a context manager for managing rc settings.</span>
 
@@ -1420,7 +1427,7 @@
 <span class="sd">    &#39;fname&#39;.  Passing a dictionary only is also valid.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rc</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fname</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="rc_context.__init__"><a class="viewcode-back" href="../generated/generated/matplotlib.rc_context.__init__.html#matplotlib.rc_context.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rc</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fname</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">rcdict</span> <span class="o">=</span> <span class="n">rc</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">fname</span> <span class="o">=</span> <span class="n">fname</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_rcparams</span> <span class="o">=</span> <span class="n">rcParams</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -1433,21 +1440,21 @@
             <span class="c1"># if anything goes wrong, revert rc parameters and re-raise</span>
             <span class="n">rcParams</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
             <span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_rcparams</span><span class="p">)</span>
-            <span class="k">raise</span>
+            <span class="k">raise</span></div>
 
     <span class="k">def</span> <span class="nf">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span>
 
     <span class="k">def</span> <span class="nf">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">tb</span><span class="p">):</span>
-        <span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_rcparams</span><span class="p">)</span>
+        <span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_rcparams</span><span class="p">)</span></div>
 
 
-<span class="k">def</span> <span class="nf">rc_file_defaults</span><span class="p">():</span>
+<div class="viewcode-block" id="rc_file_defaults"><a class="viewcode-back" href="../generated/matplotlib.rc_file_defaults.html#matplotlib.rc_file_defaults">[docs]</a><span class="k">def</span> <span class="nf">rc_file_defaults</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Restore the default rc params from the original matplotlib rc that</span>
 <span class="sd">    was loaded</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">rcParamsOrig</span><span class="p">)</span>
+    <span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">rcParamsOrig</span><span class="p">)</span></div>
 
 <span class="n">_use_error_msg</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot; This call to matplotlib.use() has no effect</span>
 <span class="s2">because the backend has already been chosen;</span>
@@ -1456,7 +1463,7 @@
 <span class="s2">&quot;&quot;&quot;</span>
 
 
-<span class="k">def</span> <span class="nf">use</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">warn</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="viewcode-block" id="use"><a class="viewcode-back" href="../generated/matplotlib.use.html#matplotlib.use">[docs]</a><span class="k">def</span> <span class="nf">use</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">warn</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Set the matplotlib backend to one of the known backends.</span>
 
@@ -1508,15 +1515,15 @@
     <span class="c1"># If needed we reload here because a lot of setup code is triggered on</span>
     <span class="c1"># module import. See backends/__init__.py for more detail.</span>
     <span class="k">if</span> <span class="n">need_reload</span><span class="p">:</span>
-        <span class="n">reload</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">[</span><span class="s1">&#39;matplotlib.backends&#39;</span><span class="p">])</span>
+        <span class="n">reload</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">[</span><span class="s1">&#39;matplotlib.backends&#39;</span><span class="p">])</span></div>
 
 
-<div class="viewcode-block" id="get_backend"><a class="viewcode-back" href="../generated/matplotlib.pyplot.get_backend.html#matplotlib.pyplot.get_backend">[docs]</a><span class="k">def</span> <span class="nf">get_backend</span><span class="p">():</span>
+<div class="viewcode-block" id="get_backend"><a class="viewcode-back" href="../generated/matplotlib.pyplot.get_backend.html#matplotlib.get_backend">[docs]</a><span class="k">def</span> <span class="nf">get_backend</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;Return the name of the current backend.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;backend&#39;</span><span class="p">]</span></div>
 
 
-<div class="viewcode-block" id="interactive"><a class="viewcode-back" href="../generated/matplotlib.pyplot.interactive.html#matplotlib.pyplot.interactive">[docs]</a><span class="k">def</span> <span class="nf">interactive</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
+<div class="viewcode-block" id="interactive"><a class="viewcode-back" href="../generated/matplotlib.pyplot.interactive.html#matplotlib.interactive">[docs]</a><span class="k">def</span> <span class="nf">interactive</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Set interactive mode to boolean b.</span>
 
@@ -1525,18 +1532,18 @@
     <span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;interactive&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">b</span></div>
 
 
-<span class="k">def</span> <span class="nf">is_interactive</span><span class="p">():</span>
+<div class="viewcode-block" id="is_interactive"><a class="viewcode-back" href="../generated/matplotlib.is_interactive.html#matplotlib.is_interactive">[docs]</a><span class="k">def</span> <span class="nf">is_interactive</span><span class="p">():</span>
     <span class="s1">&#39;Return true if plot mode is interactive&#39;</span>
-    <span class="k">return</span> <span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;interactive&#39;</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;interactive&#39;</span><span class="p">]</span></div>
 
 
-<span class="k">def</span> <span class="nf">tk_window_focus</span><span class="p">():</span>
+<div class="viewcode-block" id="tk_window_focus"><a class="viewcode-back" href="../generated/matplotlib.tk_window_focus.html#matplotlib.tk_window_focus">[docs]</a><span class="k">def</span> <span class="nf">tk_window_focus</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;Return true if focus maintenance under TkAgg on win32 is on.</span>
 <span class="sd">     This currently works only for python.exe and IPython.exe.</span>
 <span class="sd">     Both IDLE and Pythonwin.exe fail badly when tk_window_focus is on.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;backend&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;TkAgg&#39;</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">False</span>
-    <span class="k">return</span> <span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;tk.window_focus&#39;</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;tk.window_focus&#39;</span><span class="p">]</span></div>
 
 <span class="c1"># Now allow command line to override</span>
 
@@ -1630,7 +1637,7 @@
     <span class="p">]</span>
 
 
-<span class="k">def</span> <span class="nf">verify_test_dependencies</span><span class="p">():</span>
+<div class="viewcode-block" id="verify_test_dependencies"><a class="viewcode-back" href="../generated/matplotlib.verify_test_dependencies.html#matplotlib.verify_test_dependencies">[docs]</a><span class="k">def</span> <span class="nf">verify_test_dependencies</span><span class="p">():</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">__file__</span><span class="p">),</span> <span class="s1">&#39;tests&#39;</span><span class="p">)):</span>
         <span class="k">raise</span> <span class="ne">ImportError</span><span class="p">(</span><span class="s2">&quot;matplotlib test data is not installed&quot;</span><span class="p">)</span>
 
@@ -1642,10 +1649,10 @@
             <span class="kn">import</span> <span class="nn">mock</span>
     <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;matplotlib.test requires nose and mock to run.&quot;</span><span class="p">)</span>
-        <span class="k">raise</span>
+        <span class="k">raise</span></div>
 
 
-<span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<div class="viewcode-block" id="test"><a class="viewcode-back" href="../generated/matplotlib.test.html#matplotlib.test">[docs]</a><span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;run the matplotlib test suite&quot;&quot;&quot;</span>
     <span class="n">verify_test_dependencies</span><span class="p">()</span>
     <span class="k">try</span><span class="p">:</span>
@@ -1685,7 +1692,7 @@
         <span class="k">if</span> <span class="n">old_backend</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">!=</span> <span class="s1">&#39;agg&#39;</span><span class="p">:</span>
             <span class="n">use</span><span class="p">(</span><span class="n">old_backend</span><span class="p">)</span>
 
-    <span class="k">return</span> <span class="n">success</span>
+    <span class="k">return</span> <span class="n">success</span></div>
 
 <span class="n">test</span><span class="o">.</span><span class="n">__test__</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># nose: this function is not a test</span>
 
@@ -1715,7 +1722,7 @@
 <span class="s2">&quot;&quot;&quot;</span>
 
 
-<span class="k">def</span> <span class="nf">unpack_labeled_data</span><span class="p">(</span><span class="n">replace_names</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">replace_all_args</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<div class="viewcode-block" id="unpack_labeled_data"><a class="viewcode-back" href="../generated/matplotlib.unpack_labeled_data.html#matplotlib.unpack_labeled_data">[docs]</a><span class="k">def</span> <span class="nf">unpack_labeled_data</span><span class="p">(</span><span class="n">replace_names</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">replace_all_args</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
                         <span class="n">label_namer</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">positional_parameter_names</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A decorator to add a &#39;data&#39; kwarg to any a function.  The signature</span>
@@ -1977,7 +1984,7 @@
         <span class="k">if</span> <span class="n">new_sig</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">inner</span><span class="o">.</span><span class="n">__signature__</span> <span class="o">=</span> <span class="n">new_sig</span>
         <span class="k">return</span> <span class="n">inner</span>
-    <span class="k">return</span> <span class="n">param</span>
+    <span class="k">return</span> <span class="n">param</span></div>
 
 
 <span class="n">verbose</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="s1">&#39;matplotlib version </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">__version__</span><span class="p">)</span>
