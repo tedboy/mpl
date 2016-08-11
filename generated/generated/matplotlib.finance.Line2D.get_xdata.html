@@ -1,0 +1,420 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>24.2.2.63. matplotlib.finance.Line2D.get_xdata &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="24.2.2. matplotlib.finance.Line2D" href="matplotlib.finance.Line2D.html"/>
+        <link rel="next" title="24.2.2.64. matplotlib.finance.Line2D.get_xydata" href="matplotlib.finance.Line2D.get_xydata.html"/>
+        <link rel="prev" title="24.2.2.62. matplotlib.finance.Line2D.get_window_extent" href="matplotlib.finance.Line2D.get_window_extent.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.finance.html">24. matplotlib.finance</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.finance.html#functions">24.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.finance.html#classes">24.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.finance.Affine2D.html">24.2.1. matplotlib.finance.Affine2D</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="matplotlib.finance.Line2D.html">24.2.2. matplotlib.finance.Line2D</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.axes.html">24.2.2.1. matplotlib.finance.Line2D.axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.mouseover.html">24.2.2.2. matplotlib.finance.Line2D.mouseover</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.stale.html">24.2.2.3. matplotlib.finance.Line2D.stale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.add_callback.html">24.2.2.4. matplotlib.finance.Line2D.add_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.contains.html">24.2.2.5. matplotlib.finance.Line2D.contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.convert_xunits.html">24.2.2.6. matplotlib.finance.Line2D.convert_xunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.convert_yunits.html">24.2.2.7. matplotlib.finance.Line2D.convert_yunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.draw.html">24.2.2.8. matplotlib.finance.Line2D.draw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.findobj.html">24.2.2.9. matplotlib.finance.Line2D.findobj</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.format_cursor_data.html">24.2.2.10. matplotlib.finance.Line2D.format_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_aa.html">24.2.2.11. matplotlib.finance.Line2D.get_aa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_agg_filter.html">24.2.2.12. matplotlib.finance.Line2D.get_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_alpha.html">24.2.2.13. matplotlib.finance.Line2D.get_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_animated.html">24.2.2.14. matplotlib.finance.Line2D.get_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_antialiased.html">24.2.2.15. matplotlib.finance.Line2D.get_antialiased</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_axes.html">24.2.2.16. matplotlib.finance.Line2D.get_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_c.html">24.2.2.17. matplotlib.finance.Line2D.get_c</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_children.html">24.2.2.18. matplotlib.finance.Line2D.get_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_clip_box.html">24.2.2.19. matplotlib.finance.Line2D.get_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_clip_on.html">24.2.2.20. matplotlib.finance.Line2D.get_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_clip_path.html">24.2.2.21. matplotlib.finance.Line2D.get_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_color.html">24.2.2.22. matplotlib.finance.Line2D.get_color</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_contains.html">24.2.2.23. matplotlib.finance.Line2D.get_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_cursor_data.html">24.2.2.24. matplotlib.finance.Line2D.get_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_dash_capstyle.html">24.2.2.25. matplotlib.finance.Line2D.get_dash_capstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_dash_joinstyle.html">24.2.2.26. matplotlib.finance.Line2D.get_dash_joinstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_data.html">24.2.2.27. matplotlib.finance.Line2D.get_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_drawstyle.html">24.2.2.28. matplotlib.finance.Line2D.get_drawstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_figure.html">24.2.2.29. matplotlib.finance.Line2D.get_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_fillstyle.html">24.2.2.30. matplotlib.finance.Line2D.get_fillstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_gid.html">24.2.2.31. matplotlib.finance.Line2D.get_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_label.html">24.2.2.32. matplotlib.finance.Line2D.get_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_linestyle.html">24.2.2.33. matplotlib.finance.Line2D.get_linestyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_linewidth.html">24.2.2.34. matplotlib.finance.Line2D.get_linewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_ls.html">24.2.2.35. matplotlib.finance.Line2D.get_ls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_lw.html">24.2.2.36. matplotlib.finance.Line2D.get_lw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_marker.html">24.2.2.37. matplotlib.finance.Line2D.get_marker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_markeredgecolor.html">24.2.2.38. matplotlib.finance.Line2D.get_markeredgecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_markeredgewidth.html">24.2.2.39. matplotlib.finance.Line2D.get_markeredgewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_markerfacecolor.html">24.2.2.40. matplotlib.finance.Line2D.get_markerfacecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_markerfacecoloralt.html">24.2.2.41. matplotlib.finance.Line2D.get_markerfacecoloralt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_markersize.html">24.2.2.42. matplotlib.finance.Line2D.get_markersize</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_markevery.html">24.2.2.43. matplotlib.finance.Line2D.get_markevery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_mec.html">24.2.2.44. matplotlib.finance.Line2D.get_mec</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_mew.html">24.2.2.45. matplotlib.finance.Line2D.get_mew</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_mfc.html">24.2.2.46. matplotlib.finance.Line2D.get_mfc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_mfcalt.html">24.2.2.47. matplotlib.finance.Line2D.get_mfcalt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_ms.html">24.2.2.48. matplotlib.finance.Line2D.get_ms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_path.html">24.2.2.49. matplotlib.finance.Line2D.get_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_path_effects.html">24.2.2.50. matplotlib.finance.Line2D.get_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_picker.html">24.2.2.51. matplotlib.finance.Line2D.get_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_pickradius.html">24.2.2.52. matplotlib.finance.Line2D.get_pickradius</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_rasterized.html">24.2.2.53. matplotlib.finance.Line2D.get_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_sketch_params.html">24.2.2.54. matplotlib.finance.Line2D.get_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_snap.html">24.2.2.55. matplotlib.finance.Line2D.get_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_solid_capstyle.html">24.2.2.56. matplotlib.finance.Line2D.get_solid_capstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_solid_joinstyle.html">24.2.2.57. matplotlib.finance.Line2D.get_solid_joinstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_transform.html">24.2.2.58. matplotlib.finance.Line2D.get_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_transformed_clip_path_and_affine.html">24.2.2.59. matplotlib.finance.Line2D.get_transformed_clip_path_and_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_url.html">24.2.2.60. matplotlib.finance.Line2D.get_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_visible.html">24.2.2.61. matplotlib.finance.Line2D.get_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_window_extent.html">24.2.2.62. matplotlib.finance.Line2D.get_window_extent</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">24.2.2.63. matplotlib.finance.Line2D.get_xdata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_xydata.html">24.2.2.64. matplotlib.finance.Line2D.get_xydata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_ydata.html">24.2.2.65. matplotlib.finance.Line2D.get_ydata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.get_zorder.html">24.2.2.66. matplotlib.finance.Line2D.get_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.have_units.html">24.2.2.67. matplotlib.finance.Line2D.have_units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.hitlist.html">24.2.2.68. matplotlib.finance.Line2D.hitlist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.is_dashed.html">24.2.2.69. matplotlib.finance.Line2D.is_dashed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.is_figure_set.html">24.2.2.70. matplotlib.finance.Line2D.is_figure_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.is_transform_set.html">24.2.2.71. matplotlib.finance.Line2D.is_transform_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.pchanged.html">24.2.2.72. matplotlib.finance.Line2D.pchanged</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.pick.html">24.2.2.73. matplotlib.finance.Line2D.pick</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.pickable.html">24.2.2.74. matplotlib.finance.Line2D.pickable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.properties.html">24.2.2.75. matplotlib.finance.Line2D.properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.recache.html">24.2.2.76. matplotlib.finance.Line2D.recache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.recache_always.html">24.2.2.77. matplotlib.finance.Line2D.recache_always</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.remove.html">24.2.2.78. matplotlib.finance.Line2D.remove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.remove_callback.html">24.2.2.79. matplotlib.finance.Line2D.remove_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set.html">24.2.2.80. matplotlib.finance.Line2D.set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_aa.html">24.2.2.81. matplotlib.finance.Line2D.set_aa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_agg_filter.html">24.2.2.82. matplotlib.finance.Line2D.set_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_alpha.html">24.2.2.83. matplotlib.finance.Line2D.set_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_animated.html">24.2.2.84. matplotlib.finance.Line2D.set_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_antialiased.html">24.2.2.85. matplotlib.finance.Line2D.set_antialiased</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_axes.html">24.2.2.86. matplotlib.finance.Line2D.set_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_c.html">24.2.2.87. matplotlib.finance.Line2D.set_c</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_clip_box.html">24.2.2.88. matplotlib.finance.Line2D.set_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_clip_on.html">24.2.2.89. matplotlib.finance.Line2D.set_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_clip_path.html">24.2.2.90. matplotlib.finance.Line2D.set_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_color.html">24.2.2.91. matplotlib.finance.Line2D.set_color</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_contains.html">24.2.2.92. matplotlib.finance.Line2D.set_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_dash_capstyle.html">24.2.2.93. matplotlib.finance.Line2D.set_dash_capstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_dash_joinstyle.html">24.2.2.94. matplotlib.finance.Line2D.set_dash_joinstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_dashes.html">24.2.2.95. matplotlib.finance.Line2D.set_dashes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_data.html">24.2.2.96. matplotlib.finance.Line2D.set_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_drawstyle.html">24.2.2.97. matplotlib.finance.Line2D.set_drawstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_figure.html">24.2.2.98. matplotlib.finance.Line2D.set_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_fillstyle.html">24.2.2.99. matplotlib.finance.Line2D.set_fillstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_gid.html">24.2.2.100. matplotlib.finance.Line2D.set_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_label.html">24.2.2.101. matplotlib.finance.Line2D.set_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_linestyle.html">24.2.2.102. matplotlib.finance.Line2D.set_linestyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_linewidth.html">24.2.2.103. matplotlib.finance.Line2D.set_linewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_ls.html">24.2.2.104. matplotlib.finance.Line2D.set_ls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_lw.html">24.2.2.105. matplotlib.finance.Line2D.set_lw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_marker.html">24.2.2.106. matplotlib.finance.Line2D.set_marker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_markeredgecolor.html">24.2.2.107. matplotlib.finance.Line2D.set_markeredgecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_markeredgewidth.html">24.2.2.108. matplotlib.finance.Line2D.set_markeredgewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_markerfacecolor.html">24.2.2.109. matplotlib.finance.Line2D.set_markerfacecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_markerfacecoloralt.html">24.2.2.110. matplotlib.finance.Line2D.set_markerfacecoloralt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_markersize.html">24.2.2.111. matplotlib.finance.Line2D.set_markersize</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_markevery.html">24.2.2.112. matplotlib.finance.Line2D.set_markevery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_mec.html">24.2.2.113. matplotlib.finance.Line2D.set_mec</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_mew.html">24.2.2.114. matplotlib.finance.Line2D.set_mew</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_mfc.html">24.2.2.115. matplotlib.finance.Line2D.set_mfc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_mfcalt.html">24.2.2.116. matplotlib.finance.Line2D.set_mfcalt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_ms.html">24.2.2.117. matplotlib.finance.Line2D.set_ms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_path_effects.html">24.2.2.118. matplotlib.finance.Line2D.set_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_picker.html">24.2.2.119. matplotlib.finance.Line2D.set_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_pickradius.html">24.2.2.120. matplotlib.finance.Line2D.set_pickradius</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_rasterized.html">24.2.2.121. matplotlib.finance.Line2D.set_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_sketch_params.html">24.2.2.122. matplotlib.finance.Line2D.set_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_snap.html">24.2.2.123. matplotlib.finance.Line2D.set_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_solid_capstyle.html">24.2.2.124. matplotlib.finance.Line2D.set_solid_capstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_solid_joinstyle.html">24.2.2.125. matplotlib.finance.Line2D.set_solid_joinstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_transform.html">24.2.2.126. matplotlib.finance.Line2D.set_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_url.html">24.2.2.127. matplotlib.finance.Line2D.set_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_visible.html">24.2.2.128. matplotlib.finance.Line2D.set_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_xdata.html">24.2.2.129. matplotlib.finance.Line2D.set_xdata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_ydata.html">24.2.2.130. matplotlib.finance.Line2D.set_ydata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.set_zorder.html">24.2.2.131. matplotlib.finance.Line2D.set_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.update.html">24.2.2.132. matplotlib.finance.Line2D.update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.Line2D.update_from.html">24.2.2.133. matplotlib.finance.Line2D.update_from</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.finance.LineCollection.html">24.2.3. matplotlib.finance.LineCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.finance.PolyCollection.html">24.2.4. matplotlib.finance.PolyCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.finance.Rectangle.html">24.2.5. matplotlib.finance.Rectangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.finance.xrange.html">24.2.6. matplotlib.finance.xrange</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.finance.zip.html">24.2.7. matplotlib.finance.zip</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../infreq.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.finance.html">24. matplotlib.finance</a> &raquo;</li>
+        
+          <li><a href="matplotlib.finance.Line2D.html">24.2.2. matplotlib.finance.Line2D</a> &raquo;</li>
+        
+      <li>24.2.2.63. matplotlib.finance.Line2D.get_xdata</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.finance.Line2D.get_xdata.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-finance-line2d-get-xdata">
+<h1>24.2.2.63. matplotlib.finance.Line2D.get_xdata<a class="headerlink" href="#matplotlib-finance-line2d-get-xdata" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="matplotlib.finance.Line2D.get_xdata">
+<code class="descclassname">Line2D.</code><code class="descname">get_xdata</code><span class="sig-paren">(</span><em>orig=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/lines.html#Line2D.get_xdata"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.finance.Line2D.get_xdata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the xdata.</p>
+<p>If <em>orig</em> is <em>True</em>, return the original data, else the
+processed data.</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.finance.Line2D.get_xydata.html" class="btn btn-neutral float-right" title="24.2.2.64. matplotlib.finance.Line2D.get_xydata" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.finance.Line2D.get_window_extent.html" class="btn btn-neutral" title="24.2.2.62. matplotlib.finance.Line2D.get_window_extent" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

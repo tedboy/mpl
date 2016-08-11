@@ -1,0 +1,420 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>10.2.4.94. matplotlib.lines.Line2D.set_dash_joinstyle &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="10.2.4. matplotlib.lines.Line2D" href="matplotlib.lines.Line2D.html"/>
+        <link rel="next" title="10.2.4.95. matplotlib.lines.Line2D.set_dashes" href="matplotlib.lines.Line2D.set_dashes.html"/>
+        <link rel="prev" title="10.2.4.93. matplotlib.lines.Line2D.set_dash_capstyle" href="matplotlib.lines.Line2D.set_dash_capstyle.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.lines.html">10. matplotlib.lines</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.lines.html#functions">10.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.lines.html#classes">10.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.lines.Artist.html">10.2.1. matplotlib.lines.Artist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.lines.Bbox.html">10.2.2. matplotlib.lines.Bbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.lines.IdentityTransform.html">10.2.3. matplotlib.lines.IdentityTransform</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="matplotlib.lines.Line2D.html">10.2.4. matplotlib.lines.Line2D</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.axes.html">10.2.4.1. matplotlib.lines.Line2D.axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.mouseover.html">10.2.4.2. matplotlib.lines.Line2D.mouseover</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.stale.html">10.2.4.3. matplotlib.lines.Line2D.stale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.add_callback.html">10.2.4.4. matplotlib.lines.Line2D.add_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.contains.html">10.2.4.5. matplotlib.lines.Line2D.contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.convert_xunits.html">10.2.4.6. matplotlib.lines.Line2D.convert_xunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.convert_yunits.html">10.2.4.7. matplotlib.lines.Line2D.convert_yunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.draw.html">10.2.4.8. matplotlib.lines.Line2D.draw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.findobj.html">10.2.4.9. matplotlib.lines.Line2D.findobj</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.format_cursor_data.html">10.2.4.10. matplotlib.lines.Line2D.format_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_aa.html">10.2.4.11. matplotlib.lines.Line2D.get_aa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_agg_filter.html">10.2.4.12. matplotlib.lines.Line2D.get_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_alpha.html">10.2.4.13. matplotlib.lines.Line2D.get_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_animated.html">10.2.4.14. matplotlib.lines.Line2D.get_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_antialiased.html">10.2.4.15. matplotlib.lines.Line2D.get_antialiased</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_axes.html">10.2.4.16. matplotlib.lines.Line2D.get_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_c.html">10.2.4.17. matplotlib.lines.Line2D.get_c</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_children.html">10.2.4.18. matplotlib.lines.Line2D.get_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_clip_box.html">10.2.4.19. matplotlib.lines.Line2D.get_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_clip_on.html">10.2.4.20. matplotlib.lines.Line2D.get_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_clip_path.html">10.2.4.21. matplotlib.lines.Line2D.get_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_color.html">10.2.4.22. matplotlib.lines.Line2D.get_color</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_contains.html">10.2.4.23. matplotlib.lines.Line2D.get_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_cursor_data.html">10.2.4.24. matplotlib.lines.Line2D.get_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_dash_capstyle.html">10.2.4.25. matplotlib.lines.Line2D.get_dash_capstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_dash_joinstyle.html">10.2.4.26. matplotlib.lines.Line2D.get_dash_joinstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_data.html">10.2.4.27. matplotlib.lines.Line2D.get_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_drawstyle.html">10.2.4.28. matplotlib.lines.Line2D.get_drawstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_figure.html">10.2.4.29. matplotlib.lines.Line2D.get_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_fillstyle.html">10.2.4.30. matplotlib.lines.Line2D.get_fillstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_gid.html">10.2.4.31. matplotlib.lines.Line2D.get_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_label.html">10.2.4.32. matplotlib.lines.Line2D.get_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_linestyle.html">10.2.4.33. matplotlib.lines.Line2D.get_linestyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_linewidth.html">10.2.4.34. matplotlib.lines.Line2D.get_linewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_ls.html">10.2.4.35. matplotlib.lines.Line2D.get_ls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_lw.html">10.2.4.36. matplotlib.lines.Line2D.get_lw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_marker.html">10.2.4.37. matplotlib.lines.Line2D.get_marker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_markeredgecolor.html">10.2.4.38. matplotlib.lines.Line2D.get_markeredgecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_markeredgewidth.html">10.2.4.39. matplotlib.lines.Line2D.get_markeredgewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_markerfacecolor.html">10.2.4.40. matplotlib.lines.Line2D.get_markerfacecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_markerfacecoloralt.html">10.2.4.41. matplotlib.lines.Line2D.get_markerfacecoloralt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_markersize.html">10.2.4.42. matplotlib.lines.Line2D.get_markersize</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_markevery.html">10.2.4.43. matplotlib.lines.Line2D.get_markevery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_mec.html">10.2.4.44. matplotlib.lines.Line2D.get_mec</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_mew.html">10.2.4.45. matplotlib.lines.Line2D.get_mew</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_mfc.html">10.2.4.46. matplotlib.lines.Line2D.get_mfc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_mfcalt.html">10.2.4.47. matplotlib.lines.Line2D.get_mfcalt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_ms.html">10.2.4.48. matplotlib.lines.Line2D.get_ms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_path.html">10.2.4.49. matplotlib.lines.Line2D.get_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_path_effects.html">10.2.4.50. matplotlib.lines.Line2D.get_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_picker.html">10.2.4.51. matplotlib.lines.Line2D.get_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_pickradius.html">10.2.4.52. matplotlib.lines.Line2D.get_pickradius</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_rasterized.html">10.2.4.53. matplotlib.lines.Line2D.get_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_sketch_params.html">10.2.4.54. matplotlib.lines.Line2D.get_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_snap.html">10.2.4.55. matplotlib.lines.Line2D.get_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_solid_capstyle.html">10.2.4.56. matplotlib.lines.Line2D.get_solid_capstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_solid_joinstyle.html">10.2.4.57. matplotlib.lines.Line2D.get_solid_joinstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_transform.html">10.2.4.58. matplotlib.lines.Line2D.get_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_transformed_clip_path_and_affine.html">10.2.4.59. matplotlib.lines.Line2D.get_transformed_clip_path_and_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_url.html">10.2.4.60. matplotlib.lines.Line2D.get_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_visible.html">10.2.4.61. matplotlib.lines.Line2D.get_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_window_extent.html">10.2.4.62. matplotlib.lines.Line2D.get_window_extent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_xdata.html">10.2.4.63. matplotlib.lines.Line2D.get_xdata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_xydata.html">10.2.4.64. matplotlib.lines.Line2D.get_xydata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_ydata.html">10.2.4.65. matplotlib.lines.Line2D.get_ydata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.get_zorder.html">10.2.4.66. matplotlib.lines.Line2D.get_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.have_units.html">10.2.4.67. matplotlib.lines.Line2D.have_units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.hitlist.html">10.2.4.68. matplotlib.lines.Line2D.hitlist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.is_dashed.html">10.2.4.69. matplotlib.lines.Line2D.is_dashed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.is_figure_set.html">10.2.4.70. matplotlib.lines.Line2D.is_figure_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.is_transform_set.html">10.2.4.71. matplotlib.lines.Line2D.is_transform_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.pchanged.html">10.2.4.72. matplotlib.lines.Line2D.pchanged</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.pick.html">10.2.4.73. matplotlib.lines.Line2D.pick</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.pickable.html">10.2.4.74. matplotlib.lines.Line2D.pickable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.properties.html">10.2.4.75. matplotlib.lines.Line2D.properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.recache.html">10.2.4.76. matplotlib.lines.Line2D.recache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.recache_always.html">10.2.4.77. matplotlib.lines.Line2D.recache_always</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.remove.html">10.2.4.78. matplotlib.lines.Line2D.remove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.remove_callback.html">10.2.4.79. matplotlib.lines.Line2D.remove_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set.html">10.2.4.80. matplotlib.lines.Line2D.set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_aa.html">10.2.4.81. matplotlib.lines.Line2D.set_aa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_agg_filter.html">10.2.4.82. matplotlib.lines.Line2D.set_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_alpha.html">10.2.4.83. matplotlib.lines.Line2D.set_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_animated.html">10.2.4.84. matplotlib.lines.Line2D.set_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_antialiased.html">10.2.4.85. matplotlib.lines.Line2D.set_antialiased</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_axes.html">10.2.4.86. matplotlib.lines.Line2D.set_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_c.html">10.2.4.87. matplotlib.lines.Line2D.set_c</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_clip_box.html">10.2.4.88. matplotlib.lines.Line2D.set_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_clip_on.html">10.2.4.89. matplotlib.lines.Line2D.set_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_clip_path.html">10.2.4.90. matplotlib.lines.Line2D.set_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_color.html">10.2.4.91. matplotlib.lines.Line2D.set_color</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_contains.html">10.2.4.92. matplotlib.lines.Line2D.set_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_dash_capstyle.html">10.2.4.93. matplotlib.lines.Line2D.set_dash_capstyle</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">10.2.4.94. matplotlib.lines.Line2D.set_dash_joinstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_dashes.html">10.2.4.95. matplotlib.lines.Line2D.set_dashes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_data.html">10.2.4.96. matplotlib.lines.Line2D.set_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_drawstyle.html">10.2.4.97. matplotlib.lines.Line2D.set_drawstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_figure.html">10.2.4.98. matplotlib.lines.Line2D.set_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_fillstyle.html">10.2.4.99. matplotlib.lines.Line2D.set_fillstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_gid.html">10.2.4.100. matplotlib.lines.Line2D.set_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_label.html">10.2.4.101. matplotlib.lines.Line2D.set_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_linestyle.html">10.2.4.102. matplotlib.lines.Line2D.set_linestyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_linewidth.html">10.2.4.103. matplotlib.lines.Line2D.set_linewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_ls.html">10.2.4.104. matplotlib.lines.Line2D.set_ls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_lw.html">10.2.4.105. matplotlib.lines.Line2D.set_lw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_marker.html">10.2.4.106. matplotlib.lines.Line2D.set_marker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_markeredgecolor.html">10.2.4.107. matplotlib.lines.Line2D.set_markeredgecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_markeredgewidth.html">10.2.4.108. matplotlib.lines.Line2D.set_markeredgewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_markerfacecolor.html">10.2.4.109. matplotlib.lines.Line2D.set_markerfacecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_markerfacecoloralt.html">10.2.4.110. matplotlib.lines.Line2D.set_markerfacecoloralt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_markersize.html">10.2.4.111. matplotlib.lines.Line2D.set_markersize</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_markevery.html">10.2.4.112. matplotlib.lines.Line2D.set_markevery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_mec.html">10.2.4.113. matplotlib.lines.Line2D.set_mec</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_mew.html">10.2.4.114. matplotlib.lines.Line2D.set_mew</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_mfc.html">10.2.4.115. matplotlib.lines.Line2D.set_mfc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_mfcalt.html">10.2.4.116. matplotlib.lines.Line2D.set_mfcalt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_ms.html">10.2.4.117. matplotlib.lines.Line2D.set_ms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_path_effects.html">10.2.4.118. matplotlib.lines.Line2D.set_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_picker.html">10.2.4.119. matplotlib.lines.Line2D.set_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_pickradius.html">10.2.4.120. matplotlib.lines.Line2D.set_pickradius</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_rasterized.html">10.2.4.121. matplotlib.lines.Line2D.set_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_sketch_params.html">10.2.4.122. matplotlib.lines.Line2D.set_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_snap.html">10.2.4.123. matplotlib.lines.Line2D.set_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_solid_capstyle.html">10.2.4.124. matplotlib.lines.Line2D.set_solid_capstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_solid_joinstyle.html">10.2.4.125. matplotlib.lines.Line2D.set_solid_joinstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_transform.html">10.2.4.126. matplotlib.lines.Line2D.set_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_url.html">10.2.4.127. matplotlib.lines.Line2D.set_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_visible.html">10.2.4.128. matplotlib.lines.Line2D.set_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_xdata.html">10.2.4.129. matplotlib.lines.Line2D.set_xdata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_ydata.html">10.2.4.130. matplotlib.lines.Line2D.set_ydata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.set_zorder.html">10.2.4.131. matplotlib.lines.Line2D.set_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.update.html">10.2.4.132. matplotlib.lines.Line2D.update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.Line2D.update_from.html">10.2.4.133. matplotlib.lines.Line2D.update_from</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.lines.MarkerStyle.html">10.2.5. matplotlib.lines.MarkerStyle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.lines.Path.html">10.2.6. matplotlib.lines.Path</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.lines.TransformedPath.html">10.2.7. matplotlib.lines.TransformedPath</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.lines.VertexSelector.html">10.2.8. matplotlib.lines.VertexSelector</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../freq.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.lines.html">10. matplotlib.lines</a> &raquo;</li>
+        
+          <li><a href="matplotlib.lines.Line2D.html">10.2.4. matplotlib.lines.Line2D</a> &raquo;</li>
+        
+      <li>10.2.4.94. matplotlib.lines.Line2D.set_dash_joinstyle</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.lines.Line2D.set_dash_joinstyle.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-lines-line2d-set-dash-joinstyle">
+<h1>10.2.4.94. matplotlib.lines.Line2D.set_dash_joinstyle<a class="headerlink" href="#matplotlib-lines-line2d-set-dash-joinstyle" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="matplotlib.lines.Line2D.set_dash_joinstyle">
+<code class="descclassname">Line2D.</code><code class="descname">set_dash_joinstyle</code><span class="sig-paren">(</span><em>s</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/lines.html#Line2D.set_dash_joinstyle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.lines.Line2D.set_dash_joinstyle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the join style for dashed linestyles
+ACCEPTS: [&#8216;miter&#8217; | &#8216;round&#8217; | &#8216;bevel&#8217;]</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.lines.Line2D.set_dashes.html" class="btn btn-neutral float-right" title="10.2.4.95. matplotlib.lines.Line2D.set_dashes" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.lines.Line2D.set_dash_capstyle.html" class="btn btn-neutral" title="10.2.4.93. matplotlib.lines.Line2D.set_dash_capstyle" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

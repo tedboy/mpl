@@ -1,0 +1,441 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>30.2.14. matplotlib.offsetbox.FontProperties &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="30. matplotlib.offsetbox" href="../matplotlib.offsetbox.html"/>
+        <link rel="next" title="30.2.14.1. matplotlib.offsetbox.FontProperties.copy" href="matplotlib.offsetbox.FontProperties.copy.html"/>
+        <link rel="prev" title="30.2.13.119. matplotlib.offsetbox.FancyBboxPatch.update_from" href="matplotlib.offsetbox.FancyBboxPatch.update_from.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.offsetbox.html">30. matplotlib.offsetbox</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.offsetbox.html#functions">30.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.offsetbox.html#classes">30.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.AnchoredOffsetbox.html">30.2.1. matplotlib.offsetbox.AnchoredOffsetbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.AnchoredText.html">30.2.2. matplotlib.offsetbox.AnchoredText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.AnnotationBbox.html">30.2.3. matplotlib.offsetbox.AnnotationBbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.AuxTransformBox.html">30.2.4. matplotlib.offsetbox.AuxTransformBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.Bbox.html">30.2.5. matplotlib.offsetbox.Bbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.BboxBase.html">30.2.6. matplotlib.offsetbox.BboxBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.html">30.2.7. matplotlib.offsetbox.BboxImage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.DraggableAnnotation.html">30.2.8. matplotlib.offsetbox.DraggableAnnotation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.DraggableBase.html">30.2.9. matplotlib.offsetbox.DraggableBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.DraggableOffsetBox.html">30.2.10. matplotlib.offsetbox.DraggableOffsetBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.DrawingArea.html">30.2.11. matplotlib.offsetbox.DrawingArea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.FancyArrowPatch.html">30.2.12. matplotlib.offsetbox.FancyArrowPatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.html">30.2.13. matplotlib.offsetbox.FancyBboxPatch</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">30.2.14. matplotlib.offsetbox.FontProperties</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FontProperties.copy.html">30.2.14.1. matplotlib.offsetbox.FontProperties.copy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FontProperties.get_family.html">30.2.14.2. matplotlib.offsetbox.FontProperties.get_family</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FontProperties.get_file.html">30.2.14.3. matplotlib.offsetbox.FontProperties.get_file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FontProperties.get_fontconfig_pattern.html">30.2.14.4. matplotlib.offsetbox.FontProperties.get_fontconfig_pattern</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FontProperties.get_name.html">30.2.14.5. matplotlib.offsetbox.FontProperties.get_name</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FontProperties.get_size.html">30.2.14.6. matplotlib.offsetbox.FontProperties.get_size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FontProperties.get_size_in_points.html">30.2.14.7. matplotlib.offsetbox.FontProperties.get_size_in_points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FontProperties.get_slant.html">30.2.14.8. matplotlib.offsetbox.FontProperties.get_slant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FontProperties.get_stretch.html">30.2.14.9. matplotlib.offsetbox.FontProperties.get_stretch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FontProperties.get_style.html">30.2.14.10. matplotlib.offsetbox.FontProperties.get_style</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FontProperties.get_variant.html">30.2.14.11. matplotlib.offsetbox.FontProperties.get_variant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FontProperties.get_weight.html">30.2.14.12. matplotlib.offsetbox.FontProperties.get_weight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FontProperties.set_family.html">30.2.14.13. matplotlib.offsetbox.FontProperties.set_family</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FontProperties.set_file.html">30.2.14.14. matplotlib.offsetbox.FontProperties.set_file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FontProperties.set_fontconfig_pattern.html">30.2.14.15. matplotlib.offsetbox.FontProperties.set_fontconfig_pattern</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FontProperties.set_name.html">30.2.14.16. matplotlib.offsetbox.FontProperties.set_name</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FontProperties.set_size.html">30.2.14.17. matplotlib.offsetbox.FontProperties.set_size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FontProperties.set_slant.html">30.2.14.18. matplotlib.offsetbox.FontProperties.set_slant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FontProperties.set_stretch.html">30.2.14.19. matplotlib.offsetbox.FontProperties.set_stretch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FontProperties.set_style.html">30.2.14.20. matplotlib.offsetbox.FontProperties.set_style</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FontProperties.set_variant.html">30.2.14.21. matplotlib.offsetbox.FontProperties.set_variant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FontProperties.set_weight.html">30.2.14.22. matplotlib.offsetbox.FontProperties.set_weight</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.HPacker.html">30.2.15. matplotlib.offsetbox.HPacker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.OffsetBox.html">30.2.16. matplotlib.offsetbox.OffsetBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.OffsetImage.html">30.2.17. matplotlib.offsetbox.OffsetImage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.html">30.2.18. matplotlib.offsetbox.PackerBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.PaddedBox.html">30.2.19. matplotlib.offsetbox.PaddedBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.TextArea.html">30.2.20. matplotlib.offsetbox.TextArea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.TransformedBbox.html">30.2.21. matplotlib.offsetbox.TransformedBbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.VPacker.html">30.2.22. matplotlib.offsetbox.VPacker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.xrange.html">30.2.23. matplotlib.offsetbox.xrange</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.zip.html">30.2.24. matplotlib.offsetbox.zip</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../infreq.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.offsetbox.html">30. matplotlib.offsetbox</a> &raquo;</li>
+        
+      <li>30.2.14. matplotlib.offsetbox.FontProperties</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.offsetbox.FontProperties.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-offsetbox-fontproperties">
+<h1>30.2.14. matplotlib.offsetbox.FontProperties<a class="headerlink" href="#matplotlib-offsetbox-fontproperties" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="matplotlib.offsetbox.FontProperties">
+<em class="property">class </em><code class="descclassname">matplotlib.offsetbox.</code><code class="descname">FontProperties</code><span class="sig-paren">(</span><em>family=None</em>, <em>style=None</em>, <em>variant=None</em>, <em>weight=None</em>, <em>stretch=None</em>, <em>size=None</em>, <em>fname=None</em>, <em>_init=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/font_manager.html#FontProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.offsetbox.FontProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class for storing and manipulating font properties.</p>
+<p>The font properties are those described in the <a class="reference external" href="http://www.w3.org/TR/1998/REC-CSS2-19980512/">W3C Cascading
+Style Sheet, Level 1</a> font
+specification.  The six properties are:</p>
+<blockquote>
+<div><ul class="simple">
+<li>family: A list of font names in decreasing order of priority.
+The items may include a generic font family name, either
+&#8216;serif&#8217;, &#8216;sans-serif&#8217;, &#8216;cursive&#8217;, &#8216;fantasy&#8217;, or &#8216;monospace&#8217;.
+In that case, the actual font to be used will be looked up
+from the associated rcParam in <code class="file docutils literal"><span class="pre">matplotlibrc</span></code>.</li>
+<li>style: Either &#8216;normal&#8217;, &#8216;italic&#8217; or &#8216;oblique&#8217;.</li>
+<li>variant: Either &#8216;normal&#8217; or &#8216;small-caps&#8217;.</li>
+<li>stretch: A numeric value in the range 0-1000 or one of
+&#8216;ultra-condensed&#8217;, &#8216;extra-condensed&#8217;, &#8216;condensed&#8217;,
+&#8216;semi-condensed&#8217;, &#8216;normal&#8217;, &#8216;semi-expanded&#8217;, &#8216;expanded&#8217;,
+&#8216;extra-expanded&#8217; or &#8216;ultra-expanded&#8217;</li>
+<li>weight: A numeric value in the range 0-1000 or one of
+&#8216;ultralight&#8217;, &#8216;light&#8217;, &#8216;normal&#8217;, &#8216;regular&#8217;, &#8216;book&#8217;, &#8216;medium&#8217;,
+&#8216;roman&#8217;, &#8216;semibold&#8217;, &#8216;demibold&#8217;, &#8216;demi&#8217;, &#8216;bold&#8217;, &#8216;heavy&#8217;,
+&#8216;extra bold&#8217;, &#8216;black&#8217;</li>
+<li>size: Either an relative value of &#8216;xx-small&#8217;, &#8216;x-small&#8217;,
+&#8216;small&#8217;, &#8216;medium&#8217;, &#8216;large&#8217;, &#8216;x-large&#8217;, &#8216;xx-large&#8217; or an
+absolute font size, e.g., 12</li>
+</ul>
+</div></blockquote>
+<p>The default font property for TrueType fonts (as specified in the
+default <code class="file docutils literal"><span class="pre">matplotlibrc</span></code> file) is:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sans</span><span class="o">-</span><span class="n">serif</span><span class="p">,</span> <span class="n">normal</span><span class="p">,</span> <span class="n">normal</span><span class="p">,</span> <span class="n">normal</span><span class="p">,</span> <span class="n">normal</span><span class="p">,</span> <span class="n">scalable</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Alternatively, a font may be specified using an absolute path to a
+.ttf file, by using the <em>fname</em> kwarg.</p>
+<p>The preferred usage of font sizes is to use the relative values,
+e.g.,  &#8216;large&#8217;, instead of absolute font sizes, e.g., 12.  This
+approach allows all text sizes to be made larger or smaller based
+on the font manager&#8217;s default font size.</p>
+<p>This class will also accept a <a class="reference external" href="http://www.fontconfig.org/">fontconfig</a> pattern, if it is the only argument
+provided.  See the documentation on <a class="reference external" href="http://www.fontconfig.org/fontconfig-user.html">fontconfig patterns</a>.  This support
+does not require fontconfig to be installed.  We are merely
+borrowing its pattern syntax for use here.</p>
+<p>Note that matplotlib&#8217;s internal font manager and fontconfig use a
+different algorithm to lookup fonts, so the results of the same pattern
+may be different in matplotlib than in other applications that use
+fontconfig.</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.FontProperties.copy.html#matplotlib.offsetbox.FontProperties.copy" title="matplotlib.offsetbox.FontProperties.copy"><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code></a>()</td>
+<td>Return a deep copy of self</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.FontProperties.get_family.html#matplotlib.offsetbox.FontProperties.get_family" title="matplotlib.offsetbox.FontProperties.get_family"><code class="xref py py-obj docutils literal"><span class="pre">get_family</span></code></a>()</td>
+<td>Return a list of font names that comprise the font family.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.FontProperties.get_file.html#matplotlib.offsetbox.FontProperties.get_file" title="matplotlib.offsetbox.FontProperties.get_file"><code class="xref py py-obj docutils literal"><span class="pre">get_file</span></code></a>()</td>
+<td>Return the filename of the associated font.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.FontProperties.get_fontconfig_pattern.html#matplotlib.offsetbox.FontProperties.get_fontconfig_pattern" title="matplotlib.offsetbox.FontProperties.get_fontconfig_pattern"><code class="xref py py-obj docutils literal"><span class="pre">get_fontconfig_pattern</span></code></a>()</td>
+<td>Get a fontconfig pattern suitable for looking up the font as specified with fontconfig&#8217;s <code class="docutils literal"><span class="pre">fc-match</span></code> utility.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.FontProperties.get_name.html#matplotlib.offsetbox.FontProperties.get_name" title="matplotlib.offsetbox.FontProperties.get_name"><code class="xref py py-obj docutils literal"><span class="pre">get_name</span></code></a>()</td>
+<td>Return the name of the font that best matches the font properties.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.FontProperties.get_size.html#matplotlib.offsetbox.FontProperties.get_size" title="matplotlib.offsetbox.FontProperties.get_size"><code class="xref py py-obj docutils literal"><span class="pre">get_size</span></code></a>()</td>
+<td>Return the font size.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.FontProperties.get_size_in_points.html#matplotlib.offsetbox.FontProperties.get_size_in_points" title="matplotlib.offsetbox.FontProperties.get_size_in_points"><code class="xref py py-obj docutils literal"><span class="pre">get_size_in_points</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.FontProperties.get_slant.html#matplotlib.offsetbox.FontProperties.get_slant" title="matplotlib.offsetbox.FontProperties.get_slant"><code class="xref py py-obj docutils literal"><span class="pre">get_slant</span></code></a>()</td>
+<td>Return the font style.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.FontProperties.get_stretch.html#matplotlib.offsetbox.FontProperties.get_stretch" title="matplotlib.offsetbox.FontProperties.get_stretch"><code class="xref py py-obj docutils literal"><span class="pre">get_stretch</span></code></a>()</td>
+<td>Return the font stretch or width.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.FontProperties.get_style.html#matplotlib.offsetbox.FontProperties.get_style" title="matplotlib.offsetbox.FontProperties.get_style"><code class="xref py py-obj docutils literal"><span class="pre">get_style</span></code></a>()</td>
+<td>Return the font style.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.FontProperties.get_variant.html#matplotlib.offsetbox.FontProperties.get_variant" title="matplotlib.offsetbox.FontProperties.get_variant"><code class="xref py py-obj docutils literal"><span class="pre">get_variant</span></code></a>()</td>
+<td>Return the font variant.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.FontProperties.get_weight.html#matplotlib.offsetbox.FontProperties.get_weight" title="matplotlib.offsetbox.FontProperties.get_weight"><code class="xref py py-obj docutils literal"><span class="pre">get_weight</span></code></a>()</td>
+<td>Set the font weight.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.FontProperties.set_family.html#matplotlib.offsetbox.FontProperties.set_family" title="matplotlib.offsetbox.FontProperties.set_family"><code class="xref py py-obj docutils literal"><span class="pre">set_family</span></code></a>(family)</td>
+<td>Change the font family.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.FontProperties.set_file.html#matplotlib.offsetbox.FontProperties.set_file" title="matplotlib.offsetbox.FontProperties.set_file"><code class="xref py py-obj docutils literal"><span class="pre">set_file</span></code></a>(file)</td>
+<td>Set the filename of the fontfile to use.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.FontProperties.set_fontconfig_pattern.html#matplotlib.offsetbox.FontProperties.set_fontconfig_pattern" title="matplotlib.offsetbox.FontProperties.set_fontconfig_pattern"><code class="xref py py-obj docutils literal"><span class="pre">set_fontconfig_pattern</span></code></a>(pattern)</td>
+<td>Set the properties by parsing a fontconfig <em>pattern</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.FontProperties.set_name.html#matplotlib.offsetbox.FontProperties.set_name" title="matplotlib.offsetbox.FontProperties.set_name"><code class="xref py py-obj docutils literal"><span class="pre">set_name</span></code></a>(family)</td>
+<td>Change the font family.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.FontProperties.set_size.html#matplotlib.offsetbox.FontProperties.set_size" title="matplotlib.offsetbox.FontProperties.set_size"><code class="xref py py-obj docutils literal"><span class="pre">set_size</span></code></a>(size)</td>
+<td>Set the font size.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.FontProperties.set_slant.html#matplotlib.offsetbox.FontProperties.set_slant" title="matplotlib.offsetbox.FontProperties.set_slant"><code class="xref py py-obj docutils literal"><span class="pre">set_slant</span></code></a>(style)</td>
+<td>Set the font style.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.FontProperties.set_stretch.html#matplotlib.offsetbox.FontProperties.set_stretch" title="matplotlib.offsetbox.FontProperties.set_stretch"><code class="xref py py-obj docutils literal"><span class="pre">set_stretch</span></code></a>(stretch)</td>
+<td>Set the font stretch or width.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.FontProperties.set_style.html#matplotlib.offsetbox.FontProperties.set_style" title="matplotlib.offsetbox.FontProperties.set_style"><code class="xref py py-obj docutils literal"><span class="pre">set_style</span></code></a>(style)</td>
+<td>Set the font style.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.FontProperties.set_variant.html#matplotlib.offsetbox.FontProperties.set_variant" title="matplotlib.offsetbox.FontProperties.set_variant"><code class="xref py py-obj docutils literal"><span class="pre">set_variant</span></code></a>(variant)</td>
+<td>Set the font variant.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.FontProperties.set_weight.html#matplotlib.offsetbox.FontProperties.set_weight" title="matplotlib.offsetbox.FontProperties.set_weight"><code class="xref py py-obj docutils literal"><span class="pre">set_weight</span></code></a>(weight)</td>
+<td>Set the font weight.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.offsetbox.FontProperties.copy.html" class="btn btn-neutral float-right" title="30.2.14.1. matplotlib.offsetbox.FontProperties.copy" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.offsetbox.FancyBboxPatch.update_from.html" class="btn btn-neutral" title="30.2.13.119. matplotlib.offsetbox.FancyBboxPatch.update_from" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

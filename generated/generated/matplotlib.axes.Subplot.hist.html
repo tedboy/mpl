@@ -1,0 +1,436 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>matplotlib.axes.Subplot.hist &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>matplotlib.axes.Subplot.hist</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.axes.Subplot.hist.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-axes-subplot-hist">
+<h1>matplotlib.axes.Subplot.hist<a class="headerlink" href="#matplotlib-axes-subplot-hist" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="matplotlib.axes.Subplot.hist">
+<code class="descclassname">Subplot.</code><code class="descname">hist</code><span class="sig-paren">(</span><em>ax</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.axes.Subplot.hist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot a histogram.</p>
+<p>Compute and draw the histogram of <em>x</em>. The return value is a
+tuple (<em>n</em>, <em>bins</em>, <em>patches</em>) or ([<em>n0</em>, <em>n1</em>, ...], <em>bins</em>,
+[<em>patches0</em>, <em>patches1</em>,...]) if the input contains multiple
+data.</p>
+<p>Multiple data can be provided via <em>x</em> as a list of datasets
+of potentially different length ([<em>x0</em>, <em>x1</em>, ...]), or as
+a 2-D ndarray in which each column is a dataset.  Note that
+the ndarray form is transposed relative to the list form.</p>
+<p>Masked arrays are not supported at present.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>x</strong> : (n,) array or sequence of (n,) arrays</p>
+<blockquote>
+<div><p>Input values, this takes either a single array or a sequency of
+arrays which are not required to be of the same length</p>
+</div></blockquote>
+<p><strong>bins</strong> : integer or array_like, optional</p>
+<blockquote>
+<div><p>If an integer is given, <cite>bins + 1</cite> bin edges are returned,
+consistently with <code class="xref py py-func docutils literal"><span class="pre">numpy.histogram()</span></code> for numpy version &gt;=
+1.3.</p>
+<p>Unequally spaced bins are supported if <cite>bins</cite> is a sequence.</p>
+<p>default is 10</p>
+</div></blockquote>
+<p><strong>range</strong> : tuple or None, optional</p>
+<blockquote>
+<div><p>The lower and upper range of the bins. Lower and upper outliers
+are ignored. If not provided, <cite>range</cite> is (x.min(), x.max()). Range
+has no effect if <cite>bins</cite> is a sequence.</p>
+<p>If <cite>bins</cite> is a sequence or <cite>range</cite> is specified, autoscaling
+is based on the specified bin range instead of the
+range of x.</p>
+<p>Default is <code class="docutils literal"><span class="pre">None</span></code></p>
+</div></blockquote>
+<p><strong>normed</strong> : boolean, optional</p>
+<blockquote>
+<div><p>If <cite>True</cite>, the first element of the return tuple will
+be the counts normalized to form a probability density, i.e.,
+<code class="docutils literal"><span class="pre">n/(len(x)`dbin)</span></code>, i.e., the integral of the histogram will sum
+to 1. If <em>stacked</em> is also <em>True</em>, the sum of the histograms is
+normalized to 1.</p>
+<p>Default is <code class="docutils literal"><span class="pre">False</span></code></p>
+</div></blockquote>
+<p><strong>weights</strong> : (n, ) array_like or None, optional</p>
+<blockquote>
+<div><p>An array of weights, of the same shape as <cite>x</cite>.  Each value in <cite>x</cite>
+only contributes its associated weight towards the bin count
+(instead of 1).  If <cite>normed</cite> is True, the weights are normalized,
+so that the integral of the density over the range remains 1.</p>
+<p>Default is <code class="docutils literal"><span class="pre">None</span></code></p>
+</div></blockquote>
+<p><strong>cumulative</strong> : boolean, optional</p>
+<blockquote>
+<div><p>If <cite>True</cite>, then a histogram is computed where each bin gives the
+counts in that bin plus all bins for smaller values. The last bin
+gives the total number of datapoints.  If <cite>normed</cite> is also <cite>True</cite>
+then the histogram is normalized such that the last bin equals 1.
+If <cite>cumulative</cite> evaluates to less than 0 (e.g., -1), the direction
+of accumulation is reversed.  In this case, if <cite>normed</cite> is also
+<cite>True</cite>, then the histogram is normalized such that the first bin
+equals 1.</p>
+<p>Default is <code class="docutils literal"><span class="pre">False</span></code></p>
+</div></blockquote>
+<p><strong>bottom</strong> : array_like, scalar, or None</p>
+<blockquote>
+<div><p>Location of the bottom baseline of each bin.  If a scalar,
+the base line for each bin is shifted by the same amount.
+If an array, each bin is shifted independently and the length
+of bottom must match the number of bins.  If None, defaults to 0.</p>
+<p>Default is <code class="docutils literal"><span class="pre">None</span></code></p>
+</div></blockquote>
+<p><strong>histtype</strong> : {&#8216;bar&#8217;, &#8216;barstacked&#8217;, &#8216;step&#8217;,  &#8216;stepfilled&#8217;}, optional</p>
+<blockquote>
+<div><p>The type of histogram to draw.</p>
+<ul class="simple">
+<li>&#8216;bar&#8217; is a traditional bar-type histogram.  If multiple data
+are given the bars are aranged side by side.</li>
+<li>&#8216;barstacked&#8217; is a bar-type histogram where multiple
+data are stacked on top of each other.</li>
+<li>&#8216;step&#8217; generates a lineplot that is by default
+unfilled.</li>
+<li>&#8216;stepfilled&#8217; generates a lineplot that is by default
+filled.</li>
+</ul>
+<p>Default is &#8216;bar&#8217;</p>
+</div></blockquote>
+<p><strong>align</strong> : {&#8216;left&#8217;, &#8216;mid&#8217;, &#8216;right&#8217;}, optional</p>
+<blockquote>
+<div><p>Controls how the histogram is plotted.</p>
+<blockquote>
+<div><ul class="simple">
+<li>&#8216;left&#8217;: bars are centered on the left bin edges.</li>
+<li>&#8216;mid&#8217;: bars are centered between the bin edges.</li>
+<li>&#8216;right&#8217;: bars are centered on the right bin edges.</li>
+</ul>
+</div></blockquote>
+<p>Default is &#8216;mid&#8217;</p>
+</div></blockquote>
+<p><strong>orientation</strong> : {&#8216;horizontal&#8217;, &#8216;vertical&#8217;}, optional</p>
+<blockquote>
+<div><p>If &#8216;horizontal&#8217;, <cite>~matplotlib.pyplot.barh</cite> will be used for
+bar-type histograms and the <em>bottom</em> kwarg will be the left edges.</p>
+</div></blockquote>
+<p><strong>rwidth</strong> : scalar or None, optional</p>
+<blockquote>
+<div><p>The relative width of the bars as a fraction of the bin width.  If
+<cite>None</cite>, automatically compute the width.</p>
+<p>Ignored if <cite>histtype</cite> is &#8216;step&#8217; or &#8216;stepfilled&#8217;.</p>
+<p>Default is <code class="docutils literal"><span class="pre">None</span></code></p>
+</div></blockquote>
+<p><strong>log</strong> : boolean, optional</p>
+<blockquote>
+<div><p>If <cite>True</cite>, the histogram axis will be set to a log scale. If <cite>log</cite>
+is <cite>True</cite> and <cite>x</cite> is a 1D array, empty bins will be filtered out
+and only the non-empty (<cite>n</cite>, <cite>bins</cite>, <cite>patches</cite>) will be returned.</p>
+<p>Default is <code class="docutils literal"><span class="pre">False</span></code></p>
+</div></blockquote>
+<p><strong>color</strong> : color or array_like of colors or None, optional</p>
+<blockquote>
+<div><p>Color spec or sequence of color specs, one per dataset.  Default
+(<cite>None</cite>) uses the standard line color sequence.</p>
+<p>Default is <code class="docutils literal"><span class="pre">None</span></code></p>
+</div></blockquote>
+<p><strong>label</strong> : string or None, optional</p>
+<blockquote>
+<div><p>String, or sequence of strings to match multiple datasets.  Bar
+charts yield multiple patches per dataset, but only the first gets
+the label, so that the legend command will work as expected.</p>
+<p>default is <code class="docutils literal"><span class="pre">None</span></code></p>
+</div></blockquote>
+<p><strong>stacked</strong> : boolean, optional</p>
+<blockquote>
+<div><p>If <cite>True</cite>, multiple data are stacked on top of each other If
+<cite>False</cite> multiple data are aranged side by side if histtype is
+&#8216;bar&#8217; or on top of each other if histtype is &#8216;step&#8217;</p>
+<p>Default is <code class="docutils literal"><span class="pre">False</span></code></p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>n</strong> : array or list of arrays</p>
+<blockquote>
+<div><p>The values of the histogram bins. See <strong>normed</strong> and <strong>weights</strong>
+for a description of the possible semantics. If input <strong>x</strong> is an
+array, then this is an array of length <strong>nbins</strong>. If input is a
+sequence arrays <code class="docutils literal"><span class="pre">[data1,</span> <span class="pre">data2,..]</span></code>, then this is a list of
+arrays with the values of the histograms for each of the arrays
+in the same order.</p>
+</div></blockquote>
+<p><strong>bins</strong> : array</p>
+<blockquote>
+<div><p>The edges of the bins. Length nbins + 1 (nbins left edges and right
+edge of last bin).  Always a single array even when multiple data
+sets are passed in.</p>
+</div></blockquote>
+<p><strong>patches</strong> : list or list of lists</p>
+<blockquote>
+<div><p>Silent list of individual patches used to create the histogram
+or list of such list if multiple input datasets.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Other Parameters:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><p class="first last"><strong>kwargs</strong> : <cite>~matplotlib.patches.Patch</cite> properties</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<dl class="last docutils">
+<dt><a class="reference internal" href="matplotlib.axes.Subplot.hist2d.html#matplotlib.axes.Subplot.hist2d" title="matplotlib.axes.Subplot.hist2d"><code class="xref py py-obj docutils literal"><span class="pre">hist2d</span></code></a></dt>
+<dd>2D histograms</dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<p>In addition to the above described arguments, this function can take a
+<strong>data</strong> keyword argument. If such a <strong>data</strong> argument is given, the
+following arguments are replaced by <strong>data[&lt;arg&gt;]</strong>:</p>
+<ul class="simple">
+<li>All arguments with the following names: &#8216;x&#8217;, &#8216;weights&#8217;.</li>
+</ul>
+<p class="rubric">Examples</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

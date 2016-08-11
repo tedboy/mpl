@@ -1,0 +1,366 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>37. matplotlib.tri &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../index.html"/>
+        <link rel="up" title="&lt;no title&gt;" href="../infreq.html"/>
+        <link rel="next" title="37.1.1. matplotlib.tri.tricontour" href="matplotlib.tri.tricontour.html"/>
+        <link rel="prev" title="36.2.3.48. matplotlib.tight_layout.TransformedBbox.union" href="generated/matplotlib.tight_layout.TransformedBbox.union.html"/> 
+
+  
+  <script src="../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">37. matplotlib.tri</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#functions">37.1. Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.tri.tricontour.html">37.1.1. matplotlib.tri.tricontour</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.tri.tricontourf.html">37.1.2. matplotlib.tri.tricontourf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.tri.tripcolor.html">37.1.3. matplotlib.tri.tripcolor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.tri.triplot.html">37.1.4. matplotlib.tri.triplot</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#classes">37.2. Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.tri.ContourSet.html">37.2.1. matplotlib.tri.ContourSet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.tri.CubicTriInterpolator.html">37.2.2. matplotlib.tri.CubicTriInterpolator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.tri.LinearTriInterpolator.html">37.2.3. matplotlib.tri.LinearTriInterpolator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.tri.Normalize.html">37.2.4. matplotlib.tri.Normalize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.tri.PolyCollection.html">37.2.5. matplotlib.tri.PolyCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.tri.TrapezoidMapTriFinder.html">37.2.6. matplotlib.tri.TrapezoidMapTriFinder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.tri.TriAnalyzer.html">37.2.7. matplotlib.tri.TriAnalyzer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.tri.TriContourSet.html">37.2.8. matplotlib.tri.TriContourSet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.tri.TriFinder.html">37.2.9. matplotlib.tri.TriFinder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.tri.TriInterpolator.html">37.2.10. matplotlib.tri.TriInterpolator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.tri.TriMesh.html">37.2.11. matplotlib.tri.TriMesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.tri.TriRefiner.html">37.2.12. matplotlib.tri.TriRefiner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.tri.Triangulation.html">37.2.13. matplotlib.tri.Triangulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.tri.UniformTriRefiner.html">37.2.14. matplotlib.tri.UniformTriRefiner</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../infreq.html">&lt;no title&gt;</a> &raquo;</li>
+        
+      <li>37. matplotlib.tri</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../sources/generated/matplotlib.tri.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-matplotlib.tri">
+<span id="matplotlib-tri"></span><h1>37. matplotlib.tri<a class="headerlink" href="#module-matplotlib.tri" title="Permalink to this headline">¶</a></h1>
+<p>Unstructured triangular grid functions.</p>
+<div class="section" id="functions">
+<h2>37.1. Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.tricontour.html#matplotlib.tri.tricontour" title="matplotlib.tri.tricontour"><code class="xref py py-obj docutils literal"><span class="pre">tricontour</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Draw contours on an unstructured triangular grid.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.tricontourf.html#matplotlib.tri.tricontourf" title="matplotlib.tri.tricontourf"><code class="xref py py-obj docutils literal"><span class="pre">tricontourf</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Draw contours on an unstructured triangular grid.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.tripcolor.html#matplotlib.tri.tripcolor" title="matplotlib.tri.tripcolor"><code class="xref py py-obj docutils literal"><span class="pre">tripcolor</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Create a pseudocolor plot of an unstructured triangular grid.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.triplot.html#matplotlib.tri.triplot" title="matplotlib.tri.triplot"><code class="xref py py-obj docutils literal"><span class="pre">triplot</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Draw a unstructured triangular grid as lines and/or markers.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="classes">
+<h2>37.2. Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.tri.ContourSet.html#matplotlib.tri.ContourSet" title="matplotlib.tri.ContourSet"><code class="xref py py-obj docutils literal"><span class="pre">ContourSet</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Store a set of contour lines or filled regions.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.tri.CubicTriInterpolator.html#matplotlib.tri.CubicTriInterpolator" title="matplotlib.tri.CubicTriInterpolator"><code class="xref py py-obj docutils literal"><span class="pre">CubicTriInterpolator</span></code></a>(triangulation,&nbsp;z[,&nbsp;...])</td>
+<td>A CubicTriInterpolator performs cubic interpolation on triangular grids.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.tri.LinearTriInterpolator.html#matplotlib.tri.LinearTriInterpolator" title="matplotlib.tri.LinearTriInterpolator"><code class="xref py py-obj docutils literal"><span class="pre">LinearTriInterpolator</span></code></a>(triangulation,&nbsp;z[,&nbsp;...])</td>
+<td>A LinearTriInterpolator performs linear interpolation on a triangular grid.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.tri.Normalize.html#matplotlib.tri.Normalize" title="matplotlib.tri.Normalize"><code class="xref py py-obj docutils literal"><span class="pre">Normalize</span></code></a>([vmin,&nbsp;vmax,&nbsp;clip])</td>
+<td>A class which, when called, can normalize data into the <code class="docutils literal"><span class="pre">[0.0,</span> <span class="pre">1.0]</span></code> interval.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.tri.PolyCollection.html#matplotlib.tri.PolyCollection" title="matplotlib.tri.PolyCollection"><code class="xref py py-obj docutils literal"><span class="pre">PolyCollection</span></code></a>(verts[,&nbsp;sizes,&nbsp;closed])</td>
+<td><p class="rubric">Attributes</p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.tri.TrapezoidMapTriFinder.html#matplotlib.tri.TrapezoidMapTriFinder" title="matplotlib.tri.TrapezoidMapTriFinder"><code class="xref py py-obj docutils literal"><span class="pre">TrapezoidMapTriFinder</span></code></a>(triangulation)</td>
+<td><a class="reference internal" href="generated/matplotlib.tri.TriFinder.html#matplotlib.tri.TriFinder" title="matplotlib.tri.TriFinder"><code class="xref py py-class docutils literal"><span class="pre">TriFinder</span></code></a> class implemented using the trapezoid</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.tri.TriAnalyzer.html#matplotlib.tri.TriAnalyzer" title="matplotlib.tri.TriAnalyzer"><code class="xref py py-obj docutils literal"><span class="pre">TriAnalyzer</span></code></a>(triangulation)</td>
+<td>Define basic tools for triangular mesh analysis and improvement.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.tri.TriContourSet.html#matplotlib.tri.TriContourSet" title="matplotlib.tri.TriContourSet"><code class="xref py py-obj docutils literal"><span class="pre">TriContourSet</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Create and store a set of contour lines or filled regions for a triangular grid.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.tri.TriFinder.html#matplotlib.tri.TriFinder" title="matplotlib.tri.TriFinder"><code class="xref py py-obj docutils literal"><span class="pre">TriFinder</span></code></a>(triangulation)</td>
+<td>Abstract base class for classes used to find the triangles of a Triangulation in which (x,y) points lie.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.tri.TriInterpolator.html#matplotlib.tri.TriInterpolator" title="matplotlib.tri.TriInterpolator"><code class="xref py py-obj docutils literal"><span class="pre">TriInterpolator</span></code></a>(triangulation,&nbsp;z[,&nbsp;trifinder])</td>
+<td>Abstract base class for classes used to perform interpolation on triangular grids.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.tri.TriMesh.html#matplotlib.tri.TriMesh" title="matplotlib.tri.TriMesh"><code class="xref py py-obj docutils literal"><span class="pre">TriMesh</span></code></a>(triangulation,&nbsp;**kwargs)</td>
+<td>Class for the efficient drawing of a triangular mesh using Gouraud shading.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.tri.TriRefiner.html#matplotlib.tri.TriRefiner" title="matplotlib.tri.TriRefiner"><code class="xref py py-obj docutils literal"><span class="pre">TriRefiner</span></code></a>(triangulation)</td>
+<td>Abstract base class for classes implementing mesh refinement.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.tri.Triangulation.html#matplotlib.tri.Triangulation" title="matplotlib.tri.Triangulation"><code class="xref py py-obj docutils literal"><span class="pre">Triangulation</span></code></a>(x,&nbsp;y[,&nbsp;triangles,&nbsp;mask])</td>
+<td>An unstructured triangular grid consisting of npoints points and ntri triangles.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.tri.UniformTriRefiner.html#matplotlib.tri.UniformTriRefiner" title="matplotlib.tri.UniformTriRefiner"><code class="xref py py-obj docutils literal"><span class="pre">UniformTriRefiner</span></code></a>(triangulation)</td>
+<td>Uniform mesh refinement by recursive subdivisions.</td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.tri.tricontour.html" class="btn btn-neutral float-right" title="37.1.1. matplotlib.tri.tricontour" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="generated/matplotlib.tight_layout.TransformedBbox.union.html" class="btn btn-neutral" title="36.2.3.48. matplotlib.tight_layout.TransformedBbox.union" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../static/jquery.js"></script>
+      <script type="text/javascript" src="../static/underscore.js"></script>
+      <script type="text/javascript" src="../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

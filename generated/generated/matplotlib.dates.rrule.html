@@ -1,0 +1,439 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>22.4.18. matplotlib.dates.rrule &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="22. matplotlib.dates" href="../matplotlib.dates.html"/>
+        <link rel="next" title="22.4.18.1. matplotlib.dates.rrule.after" href="matplotlib.dates.rrule.after.html"/>
+        <link rel="prev" title="22.4.17.2. matplotlib.dates.relativedelta.normalized" href="matplotlib.dates.relativedelta.normalized.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.dates.html">22. matplotlib.dates</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.dates.html#date-tickers">22.1. Date tickers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.dates.html#date-formatters">22.2. Date formatters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.dates.html#functions">22.3. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.dates.html#classes">22.4. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.AutoDateFormatter.html">22.4.1. matplotlib.dates.AutoDateFormatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.AutoDateLocator.html">22.4.2. matplotlib.dates.AutoDateLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.DateConverter.html">22.4.3. matplotlib.dates.DateConverter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.DateFormatter.html">22.4.4. matplotlib.dates.DateFormatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.DateLocator.html">22.4.5. matplotlib.dates.DateLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.DayLocator.html">22.4.6. matplotlib.dates.DayLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.HourLocator.html">22.4.7. matplotlib.dates.HourLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.IndexDateFormatter.html">22.4.8. matplotlib.dates.IndexDateFormatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.MicrosecondLocator.html">22.4.9. matplotlib.dates.MicrosecondLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.MinuteLocator.html">22.4.10. matplotlib.dates.MinuteLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.MonthLocator.html">22.4.11. matplotlib.dates.MonthLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.RRuleLocator.html">22.4.12. matplotlib.dates.RRuleLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.SecondLocator.html">22.4.13. matplotlib.dates.SecondLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.WeekdayLocator.html">22.4.14. matplotlib.dates.WeekdayLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.YearLocator.html">22.4.15. matplotlib.dates.YearLocator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.bytespdate2num.html">22.4.16. matplotlib.dates.bytespdate2num</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.relativedelta.html">22.4.17. matplotlib.dates.relativedelta</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">22.4.18. matplotlib.dates.rrule</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.rrule.after.html">22.4.18.1. matplotlib.dates.rrule.after</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.rrule.before.html">22.4.18.2. matplotlib.dates.rrule.before</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.rrule.between.html">22.4.18.3. matplotlib.dates.rrule.between</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.rrule.count.html">22.4.18.4. matplotlib.dates.rrule.count</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.rrule.xafter.html">22.4.18.5. matplotlib.dates.rrule.xafter</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.rrulewrapper.html">22.4.19. matplotlib.dates.rrulewrapper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.strpdate2num.html">22.4.20. matplotlib.dates.strpdate2num</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.xrange.html">22.4.21. matplotlib.dates.xrange</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.zip.html">22.4.22. matplotlib.dates.zip</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../infreq.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.dates.html">22. matplotlib.dates</a> &raquo;</li>
+        
+      <li>22.4.18. matplotlib.dates.rrule</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.dates.rrule.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-dates-rrule">
+<h1>22.4.18. matplotlib.dates.rrule<a class="headerlink" href="#matplotlib-dates-rrule" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="matplotlib.dates.rrule">
+<em class="property">class </em><code class="descclassname">matplotlib.dates.</code><code class="descname">rrule</code><span class="sig-paren">(</span><em>freq</em>, <em>dtstart=None</em>, <em>interval=1</em>, <em>wkst=None</em>, <em>count=None</em>, <em>until=None</em>, <em>bysetpos=None</em>, <em>bymonth=None</em>, <em>bymonthday=None</em>, <em>byyearday=None</em>, <em>byeaster=None</em>, <em>byweekno=None</em>, <em>byweekday=None</em>, <em>byhour=None</em>, <em>byminute=None</em>, <em>bysecond=None</em>, <em>cache=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/dateutil/rrule.html#rrule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.dates.rrule" title="Permalink to this definition">¶</a></dt>
+<dd><p>That&#8217;s the base of the rrule operation. It accepts all the keywords
+defined in the RFC as its constructor parameters (except byday,
+which was renamed to byweekday) and more. The constructor prototype is:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">rrule</span><span class="p">(</span><span class="n">freq</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Where freq must be one of YEARLY, MONTHLY, WEEKLY, DAILY, HOURLY, MINUTELY,
+or SECONDLY.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Per RFC section 3.3.10, recurrence instances falling on invalid dates
+and times are ignored rather than coerced:</p>
+<blockquote>
+<div>Recurrence rules may generate recurrence instances with an invalid
+date (e.g., February 30) or nonexistent local time (e.g., 1:30 AM
+on a day where the local time is moved forward by an hour at 1:00
+AM).  Such recurrence instances MUST be ignored and MUST NOT be
+counted as part of the recurrence set.</div></blockquote>
+<p>This can lead to possibly surprising behavior when, for example, the
+start date occurs at the end of the month:</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">dateutil.rrule</span> <span class="k">import</span> <span class="n">rrule</span><span class="p">,</span> <span class="n">MONTHLY</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="n">datetime</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">start_date</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2014</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">31</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">rrule</span><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="n">MONTHLY</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">dtstart</span><span class="o">=</span><span class="n">start_date</span><span class="p">))</span>
+<span class="gp">... </span>
+<span class="go">[datetime.datetime(2014, 12, 31, 0, 0),</span>
+<span class="go"> datetime.datetime(2015, 1, 31, 0, 0),</span>
+<span class="go"> datetime.datetime(2015, 3, 31, 0, 0),</span>
+<span class="go"> datetime.datetime(2015, 5, 31, 0, 0)]</span>
+</pre></div>
+</div>
+</div>
+<p>Additionally, it supports the following keyword arguments:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>cache</strong> &#8211; If given, it must be a boolean value specifying to enable or disable
+caching of results. If you will use the same rrule instance multiple
+times, enabling caching will improve the performance considerably.</li>
+<li><strong>dtstart</strong> &#8211; The recurrence start. Besides being the base for the recurrence,
+missing parameters in the final recurrence instances will also be
+extracted from this date. If not given, datetime.now() will be used
+instead.</li>
+<li><strong>interval</strong> &#8211; The interval between each freq iteration. For example, when using
+YEARLY, an interval of 2 means once every two years, but with HOURLY,
+it means once every two hours. The default interval is 1.</li>
+<li><strong>wkst</strong> &#8211; The week start day. Must be one of the MO, TU, WE constants, or an
+integer, specifying the first day of the week. This will affect
+recurrences based on weekly periods. The default week start is got
+from calendar.firstweekday(), and may be modified by
+calendar.setfirstweekday().</li>
+<li><strong>count</strong> &#8211; <p>How many occurrences will be generated.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">As of version 2.5.0, the use of the <code class="docutils literal"><span class="pre">until</span></code> keyword together
+with the <code class="docutils literal"><span class="pre">count</span></code> keyword is deprecated per RFC-2445 Sec. 4.3.10.</p>
+</div>
+</li>
+<li><strong>until</strong> &#8211; <p>If given, this must be a datetime instance, that will specify the
+limit of the recurrence. The last recurrence in the rule is the greatest
+datetime that is less than or equal to the value specified in the
+<code class="docutils literal"><span class="pre">until</span></code> parameter.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">As of version 2.5.0, the use of the <code class="docutils literal"><span class="pre">until</span></code> keyword together
+with the <code class="docutils literal"><span class="pre">count</span></code> keyword is deprecated per RFC-2445 Sec. 4.3.10.</p>
+</div>
+</li>
+<li><strong>bysetpos</strong> &#8211; If given, it must be either an integer, or a sequence of integers,
+positive or negative. Each given integer will specify an occurrence
+number, corresponding to the nth occurrence of the rule inside the
+frequency period. For example, a bysetpos of -1 if combined with a
+MONTHLY frequency, and a byweekday of (MO, TU, WE, TH, FR), will
+result in the last work day of every month.</li>
+<li><strong>bymonth</strong> &#8211; If given, it must be either an integer, or a sequence of integers,
+meaning the months to apply the recurrence to.</li>
+<li><strong>bymonthday</strong> &#8211; If given, it must be either an integer, or a sequence of integers,
+meaning the month days to apply the recurrence to.</li>
+<li><strong>byyearday</strong> &#8211; If given, it must be either an integer, or a sequence of integers,
+meaning the year days to apply the recurrence to.</li>
+<li><strong>byweekno</strong> &#8211; If given, it must be either an integer, or a sequence of integers,
+meaning the week numbers to apply the recurrence to. Week numbers
+have the meaning described in ISO8601, that is, the first week of
+the year is that containing at least four days of the new year.</li>
+<li><strong>byweekday</strong> &#8211; If given, it must be either an integer (0 == MO), a sequence of
+integers, one of the weekday constants (MO, TU, etc), or a sequence
+of these constants. When given, these variables will define the
+weekdays where the recurrence will be applied. It&#8217;s also possible to
+use an argument n for the weekday instances, which will mean the nth
+occurrence of this weekday in the period. For example, with MONTHLY,
+or with YEARLY and BYMONTH, using FR(+1) in byweekday will specify the
+first friday of the month where the recurrence happens. Notice that in
+the RFC documentation, this is specified as BYDAY, but was renamed to
+avoid the ambiguity of that keyword.</li>
+<li><strong>byhour</strong> &#8211; If given, it must be either an integer, or a sequence of integers,
+meaning the hours to apply the recurrence to.</li>
+<li><strong>byminute</strong> &#8211; If given, it must be either an integer, or a sequence of integers,
+meaning the minutes to apply the recurrence to.</li>
+<li><strong>bysecond</strong> &#8211; If given, it must be either an integer, or a sequence of integers,
+meaning the seconds to apply the recurrence to.</li>
+<li><strong>byeaster</strong> &#8211; If given, it must be either an integer, or a sequence of integers,
+positive or negative. Each integer will define an offset from the
+Easter Sunday. Passing the offset 0 to byeaster will yield the Easter
+Sunday itself. This is an extension to the RFC specification.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.dates.rrule.after.html#matplotlib.dates.rrule.after" title="matplotlib.dates.rrule.after"><code class="xref py py-obj docutils literal"><span class="pre">after</span></code></a>(dt[,&nbsp;inc])</td>
+<td>Returns the first recurrence after the given datetime instance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.dates.rrule.before.html#matplotlib.dates.rrule.before" title="matplotlib.dates.rrule.before"><code class="xref py py-obj docutils literal"><span class="pre">before</span></code></a>(dt[,&nbsp;inc])</td>
+<td>Returns the last recurrence before the given datetime instance.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.dates.rrule.between.html#matplotlib.dates.rrule.between" title="matplotlib.dates.rrule.between"><code class="xref py py-obj docutils literal"><span class="pre">between</span></code></a>(after,&nbsp;before[,&nbsp;inc,&nbsp;count])</td>
+<td>Returns all the occurrences of the rrule between after and before.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.dates.rrule.count.html#matplotlib.dates.rrule.count" title="matplotlib.dates.rrule.count"><code class="xref py py-obj docutils literal"><span class="pre">count</span></code></a>()</td>
+<td>Returns the number of recurrences in this set.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.dates.rrule.xafter.html#matplotlib.dates.rrule.xafter" title="matplotlib.dates.rrule.xafter"><code class="xref py py-obj docutils literal"><span class="pre">xafter</span></code></a>(dt[,&nbsp;count,&nbsp;inc])</td>
+<td>Generator which yields up to <cite>count</cite> recurrences after the given datetime instance, equivalent to <cite>after</cite>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.dates.rrule.after.html" class="btn btn-neutral float-right" title="22.4.18.1. matplotlib.dates.rrule.after" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.dates.relativedelta.normalized.html" class="btn btn-neutral" title="22.4.17.2. matplotlib.dates.relativedelta.normalized" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

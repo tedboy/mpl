@@ -1,0 +1,363 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>14.2.4.61. matplotlib.text.Bbox.unit &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="14.2.4. matplotlib.text.Bbox" href="matplotlib.text.Bbox.html"/>
+        <link rel="next" title="14.2.4.62. matplotlib.text.Bbox.update_from_data" href="matplotlib.text.Bbox.update_from_data.html"/>
+        <link rel="prev" title="14.2.4.60. matplotlib.text.Bbox.union" href="matplotlib.text.Bbox.union.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.text.html">14. matplotlib.text</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.text.html#functions">14.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.text.html#classes">14.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.Affine2D.html">14.2.1. matplotlib.text.Affine2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.Annotation.html">14.2.2. matplotlib.text.Annotation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.Artist.html">14.2.3. matplotlib.text.Artist</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="matplotlib.text.Bbox.html">14.2.4. matplotlib.text.Bbox</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.bounds.html">14.2.4.1. matplotlib.text.Bbox.bounds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.extents.html">14.2.4.2. matplotlib.text.Bbox.extents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.height.html">14.2.4.3. matplotlib.text.Bbox.height</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.intervalx.html">14.2.4.4. matplotlib.text.Bbox.intervalx</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.intervaly.html">14.2.4.5. matplotlib.text.Bbox.intervaly</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.max.html">14.2.4.6. matplotlib.text.Bbox.max</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.min.html">14.2.4.7. matplotlib.text.Bbox.min</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.minpos.html">14.2.4.8. matplotlib.text.Bbox.minpos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.minposx.html">14.2.4.9. matplotlib.text.Bbox.minposx</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.minposy.html">14.2.4.10. matplotlib.text.Bbox.minposy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.p0.html">14.2.4.11. matplotlib.text.Bbox.p0</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.p1.html">14.2.4.12. matplotlib.text.Bbox.p1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.size.html">14.2.4.13. matplotlib.text.Bbox.size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.width.html">14.2.4.14. matplotlib.text.Bbox.width</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.x0.html">14.2.4.15. matplotlib.text.Bbox.x0</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.x1.html">14.2.4.16. matplotlib.text.Bbox.x1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.xmax.html">14.2.4.17. matplotlib.text.Bbox.xmax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.xmin.html">14.2.4.18. matplotlib.text.Bbox.xmin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.y0.html">14.2.4.19. matplotlib.text.Bbox.y0</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.y1.html">14.2.4.20. matplotlib.text.Bbox.y1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.ymax.html">14.2.4.21. matplotlib.text.Bbox.ymax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.ymin.html">14.2.4.22. matplotlib.text.Bbox.ymin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.anchored.html">14.2.4.23. matplotlib.text.Bbox.anchored</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.contains.html">14.2.4.24. matplotlib.text.Bbox.contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.containsx.html">14.2.4.25. matplotlib.text.Bbox.containsx</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.containsy.html">14.2.4.26. matplotlib.text.Bbox.containsy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.corners.html">14.2.4.27. matplotlib.text.Bbox.corners</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.count_contains.html">14.2.4.28. matplotlib.text.Bbox.count_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.count_overlaps.html">14.2.4.29. matplotlib.text.Bbox.count_overlaps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.expanded.html">14.2.4.30. matplotlib.text.Bbox.expanded</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.from_bounds.html">14.2.4.31. matplotlib.text.Bbox.from_bounds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.from_extents.html">14.2.4.32. matplotlib.text.Bbox.from_extents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.frozen.html">14.2.4.33. matplotlib.text.Bbox.frozen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.fully_contains.html">14.2.4.34. matplotlib.text.Bbox.fully_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.fully_containsx.html">14.2.4.35. matplotlib.text.Bbox.fully_containsx</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.fully_containsy.html">14.2.4.36. matplotlib.text.Bbox.fully_containsy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.fully_overlaps.html">14.2.4.37. matplotlib.text.Bbox.fully_overlaps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.get_points.html">14.2.4.38. matplotlib.text.Bbox.get_points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.ignore.html">14.2.4.39. matplotlib.text.Bbox.ignore</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.intersection.html">14.2.4.40. matplotlib.text.Bbox.intersection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.invalidate.html">14.2.4.41. matplotlib.text.Bbox.invalidate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.inverse_transformed.html">14.2.4.42. matplotlib.text.Bbox.inverse_transformed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.is_unit.html">14.2.4.43. matplotlib.text.Bbox.is_unit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.mutated.html">14.2.4.44. matplotlib.text.Bbox.mutated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.mutatedx.html">14.2.4.45. matplotlib.text.Bbox.mutatedx</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.mutatedy.html">14.2.4.46. matplotlib.text.Bbox.mutatedy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.null.html">14.2.4.47. matplotlib.text.Bbox.null</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.overlaps.html">14.2.4.48. matplotlib.text.Bbox.overlaps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.padded.html">14.2.4.49. matplotlib.text.Bbox.padded</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.rotated.html">14.2.4.50. matplotlib.text.Bbox.rotated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.set.html">14.2.4.51. matplotlib.text.Bbox.set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.set_children.html">14.2.4.52. matplotlib.text.Bbox.set_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.set_points.html">14.2.4.53. matplotlib.text.Bbox.set_points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.shrunk.html">14.2.4.54. matplotlib.text.Bbox.shrunk</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.shrunk_to_aspect.html">14.2.4.55. matplotlib.text.Bbox.shrunk_to_aspect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.splitx.html">14.2.4.56. matplotlib.text.Bbox.splitx</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.splity.html">14.2.4.57. matplotlib.text.Bbox.splity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.transformed.html">14.2.4.58. matplotlib.text.Bbox.transformed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.translated.html">14.2.4.59. matplotlib.text.Bbox.translated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.union.html">14.2.4.60. matplotlib.text.Bbox.union</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">14.2.4.61. matplotlib.text.Bbox.unit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.update_from_data.html">14.2.4.62. matplotlib.text.Bbox.update_from_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.update_from_data_xy.html">14.2.4.63. matplotlib.text.Bbox.update_from_data_xy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Bbox.update_from_path.html">14.2.4.64. matplotlib.text.Bbox.update_from_path</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.BboxBase.html">14.2.5. matplotlib.text.BboxBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.BboxTransformTo.html">14.2.6. matplotlib.text.BboxTransformTo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.FancyArrowPatch.html">14.2.7. matplotlib.text.FancyArrowPatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.FancyBboxPatch.html">14.2.8. matplotlib.text.FancyBboxPatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.FontProperties.html">14.2.9. matplotlib.text.FontProperties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.Line2D.html">14.2.10. matplotlib.text.Line2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.OffsetFrom.html">14.2.11. matplotlib.text.OffsetFrom</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.Path.html">14.2.12. matplotlib.text.Path</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.Rectangle.html">14.2.13. matplotlib.text.Rectangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.RendererBase.html">14.2.14. matplotlib.text.RendererBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.Text.html">14.2.15. matplotlib.text.Text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.TextPath.html">14.2.16. matplotlib.text.TextPath</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.TextWithDash.html">14.2.17. matplotlib.text.TextWithDash</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.Transform.html">14.2.18. matplotlib.text.Transform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.maxdict.html">14.2.19. matplotlib.text.maxdict</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.zip.html">14.2.20. matplotlib.text.zip</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../freq.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.text.html">14. matplotlib.text</a> &raquo;</li>
+        
+          <li><a href="matplotlib.text.Bbox.html">14.2.4. matplotlib.text.Bbox</a> &raquo;</li>
+        
+      <li>14.2.4.61. matplotlib.text.Bbox.unit</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.text.Bbox.unit.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-text-bbox-unit">
+<h1>14.2.4.61. matplotlib.text.Bbox.unit<a class="headerlink" href="#matplotlib-text-bbox-unit" title="Permalink to this headline">¶</a></h1>
+<dl class="staticmethod">
+<dt id="matplotlib.text.Bbox.unit">
+<em class="property">static </em><code class="descclassname">Bbox.</code><code class="descname">unit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/transforms.html#Bbox.unit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.text.Bbox.unit" title="Permalink to this definition">¶</a></dt>
+<dd><p>(staticmethod) Create a new unit <a class="reference internal" href="matplotlib.text.Bbox.html#matplotlib.text.Bbox" title="matplotlib.text.Bbox"><code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code></a> from (0, 0) to
+(1, 1).</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.text.Bbox.update_from_data.html" class="btn btn-neutral float-right" title="14.2.4.62. matplotlib.text.Bbox.update_from_data" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.text.Bbox.union.html" class="btn btn-neutral" title="14.2.4.60. matplotlib.text.Bbox.union" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

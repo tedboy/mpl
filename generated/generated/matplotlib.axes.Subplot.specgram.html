@@ -1,0 +1,410 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>matplotlib.axes.Subplot.specgram &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>matplotlib.axes.Subplot.specgram</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.axes.Subplot.specgram.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-axes-subplot-specgram">
+<h1>matplotlib.axes.Subplot.specgram<a class="headerlink" href="#matplotlib-axes-subplot-specgram" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="matplotlib.axes.Subplot.specgram">
+<code class="descclassname">Subplot.</code><code class="descname">specgram</code><span class="sig-paren">(</span><em>ax</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.axes.Subplot.specgram" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot a spectrogram.</p>
+<p>Call signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">specgram</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">NFFT</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span> <span class="n">Fs</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">Fc</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">detrend</span><span class="o">=</span><span class="n">mlab</span><span class="o">.</span><span class="n">detrend_none</span><span class="p">,</span>
+         <span class="n">window</span><span class="o">=</span><span class="n">mlab</span><span class="o">.</span><span class="n">window_hanning</span><span class="p">,</span> <span class="n">noverlap</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span>
+         <span class="n">cmap</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">xextent</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">pad_to</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sides</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">,</span>
+         <span class="n">scale_by_freq</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">,</span>
+         <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Compute and plot a spectrogram of data in <em>x</em>.  Data are split into
+<em>NFFT</em> length segments and the spectrum of each section is
+computed.  The windowing function <em>window</em> is applied to each
+segment, and the amount of overlap of each segment is
+specified with <em>noverlap</em>. The spectrogram is plotted as a colormap
+(using imshow).</p>
+<dl class="docutils">
+<dt><em>x</em>: 1-D array or sequence</dt>
+<dd>Array or sequence containing the data</dd>
+</dl>
+<p>Keyword arguments:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt><em>Fs</em>: scalar</dt>
+<dd>The sampling frequency (samples per time unit).  It is used
+to calculate the Fourier frequencies, freqs, in cycles per time
+unit. The default value is 2.</dd>
+<dt><em>window</em>: callable or ndarray</dt>
+<dd>A function or a vector of length <em>NFFT</em>. To create window
+vectors see <code class="xref py py-func docutils literal"><span class="pre">window_hanning()</span></code>, <code class="xref py py-func docutils literal"><span class="pre">window_none()</span></code>,
+<code class="xref py py-func docutils literal"><span class="pre">numpy.blackman()</span></code>, <code class="xref py py-func docutils literal"><span class="pre">numpy.hamming()</span></code>,
+<code class="xref py py-func docutils literal"><span class="pre">numpy.bartlett()</span></code>, <code class="xref py py-func docutils literal"><span class="pre">scipy.signal()</span></code>,
+<code class="xref py py-func docutils literal"><span class="pre">scipy.signal.get_window()</span></code>, etc. The default is
+<code class="xref py py-func docutils literal"><span class="pre">window_hanning()</span></code>.  If a function is passed as the
+argument, it must take a data segment as an argument and
+return the windowed version of the segment.</dd>
+<dt><em>sides</em>: [ &#8216;default&#8217; | &#8216;onesided&#8217; | &#8216;twosided&#8217; ]</dt>
+<dd>Specifies which sides of the spectrum to return.  Default gives the
+default behavior, which returns one-sided for real data and both
+for complex data.  &#8216;onesided&#8217; forces the return of a one-sided
+spectrum, while &#8216;twosided&#8217; forces two-sided.</dd>
+</dl>
+</div></blockquote>
+<dl class="docutils">
+<dt><em>pad_to</em>: integer</dt>
+<dd>The number of points to which the data segment is padded when
+performing the FFT.  This can be different from <em>NFFT</em>, which
+specifies the number of data points used.  While not increasing
+the actual resolution of the spectrum (the minimum distance between
+resolvable peaks), this can give more points in the plot,
+allowing for more detail. This corresponds to the <em>n</em> parameter
+in the call to fft(). The default is None, which sets <em>pad_to</em>
+equal to <em>NFFT</em></dd>
+<dt><em>NFFT</em>: integer</dt>
+<dd>The number of data points used in each block for the FFT.
+A power 2 is most efficient.  The default value is 256.
+This should <em>NOT</em> be used to get zero padding, or the scaling of the
+result will be incorrect. Use <em>pad_to</em> for this instead.</dd>
+<dt><em>detrend</em>: [ &#8216;default&#8217; | &#8216;constant&#8217; | &#8216;mean&#8217; | &#8216;linear&#8217; | &#8216;none&#8217;] or</dt>
+<dd><blockquote class="first">
+<div>callable</div></blockquote>
+<p class="last">The function applied to each segment before fft-ing,
+designed to remove the mean or linear trend.  Unlike in
+MATLAB, where the <em>detrend</em> parameter is a vector, in
+matplotlib is it a function.  The <code class="xref py py-mod docutils literal"><span class="pre">pylab</span></code>
+module defines <code class="xref py py-func docutils literal"><span class="pre">detrend_none()</span></code>,
+<code class="xref py py-func docutils literal"><span class="pre">detrend_mean()</span></code>, and
+<code class="xref py py-func docutils literal"><span class="pre">detrend_linear()</span></code>, but you can use
+a custom function as well.  You can also use a string to choose
+one of the functions.  &#8216;default&#8217;, &#8216;constant&#8217;, and &#8216;mean&#8217; call
+<code class="xref py py-func docutils literal"><span class="pre">detrend_mean()</span></code>.  &#8216;linear&#8217; calls
+<code class="xref py py-func docutils literal"><span class="pre">detrend_linear()</span></code>.  &#8216;none&#8217; calls
+<code class="xref py py-func docutils literal"><span class="pre">detrend_none()</span></code>.</p>
+</dd>
+<dt><em>scale_by_freq</em>: boolean</dt>
+<dd><blockquote class="first">
+<div>Specifies whether the resulting density values should be scaled
+by the scaling frequency, which gives density in units of Hz^-1.
+This allows for integration over the returned frequency values.
+The default is True for MATLAB compatibility.</div></blockquote>
+<dl class="last docutils">
+<dt><em>mode</em>: [ &#8216;default&#8217; | &#8216;psd&#8217; | &#8216;magnitude&#8217; | &#8216;angle&#8217; | &#8216;phase&#8217; ]</dt>
+<dd>What sort of spectrum to use.  Default is &#8216;psd&#8217;. which takes
+the power spectral density.  &#8216;complex&#8217; returns the complex-valued
+frequency spectrum.  &#8216;magnitude&#8217; returns the magnitude spectrum.
+&#8216;angle&#8217; returns the phase spectrum without unwrapping.  &#8216;phase&#8217;
+returns the phase spectrum with unwrapping.</dd>
+<dt><em>noverlap</em>: integer</dt>
+<dd>The number of points of overlap between blocks.  The
+default value is 128.</dd>
+<dt><em>scale</em>: [ &#8216;default&#8217; | &#8216;linear&#8217; | &#8216;dB&#8217; ]</dt>
+<dd>The scaling of the values in the <em>spec</em>.  &#8216;linear&#8217; is no scaling.
+&#8216;dB&#8217; returns the values in dB scale.  When <em>mode</em> is &#8216;psd&#8217;,
+this is dB power (10 * log10).  Otherwise this is dB amplitude
+(20 * log10). &#8216;default&#8217; is &#8216;dB&#8217; if <em>mode</em> is &#8216;psd&#8217; or
+&#8216;magnitude&#8217; and &#8216;linear&#8217; otherwise.  This must be &#8216;linear&#8217;
+if <em>mode</em> is &#8216;angle&#8217; or &#8216;phase&#8217;.</dd>
+<dt><em>Fc</em>: integer</dt>
+<dd>The center frequency of <em>x</em> (defaults to 0), which offsets
+the x extents of the plot to reflect the frequency range used
+when a signal is acquired and then filtered and downsampled to
+baseband.</dd>
+<dt><em>cmap</em>:</dt>
+<dd>A <a class="reference internal" href="matplotlib.colors.Colormap.html#matplotlib.colors.Colormap" title="matplotlib.colors.Colormap"><code class="xref py py-class docutils literal"><span class="pre">matplotlib.colors.Colormap</span></code></a> instance; if <em>None</em>, use
+default determined by rc</dd>
+<dt><em>xextent</em>:</dt>
+<dd>The image extent along the x-axis. xextent = (xmin,xmax)
+The default is (0,max(bins)), where bins is the return
+value from <a class="reference internal" href="../matplotlib.mlab.specgram.html#matplotlib.mlab.specgram" title="matplotlib.mlab.specgram"><code class="xref py py-func docutils literal"><span class="pre">specgram()</span></code></a></dd>
+<dt><em>kwargs</em>:</dt>
+<dd>Additional kwargs are passed on to imshow which makes the
+specgram image</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><em>detrend</em> and <em>scale_by_freq</em> only apply when <em>mode</em> is set to
+&#8216;psd&#8217;</p>
+</div>
+<p>Returns the tuple (<em>spectrum</em>, <em>freqs</em>, <em>t</em>, <em>im</em>):</p>
+<blockquote>
+<div><dl class="docutils">
+<dt><em>spectrum</em>: 2-D array</dt>
+<dd>columns are the periodograms of successive segments</dd>
+<dt><em>freqs</em>: 1-D array</dt>
+<dd>The frequencies corresponding to the rows in <em>spectrum</em></dd>
+<dt><em>t</em>: 1-D array</dt>
+<dd>The times corresponding to midpoints of segments (i.e the columns
+in <em>spectrum</em>)</dd>
+<dt><em>im</em>: instance of class <a class="reference internal" href="matplotlib.image.AxesImage.html#matplotlib.image.AxesImage" title="matplotlib.image.AxesImage"><code class="xref py py-class docutils literal"><span class="pre">AxesImage</span></code></a></dt>
+<dd>The image created by imshow containing the spectrogram</dd>
+</dl>
+</div></blockquote>
+<p><strong>Example:</strong></p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<dl class="last docutils">
+<dt><a class="reference internal" href="matplotlib.axes.Subplot.psd.html#matplotlib.axes.Subplot.psd" title="matplotlib.axes.Subplot.psd"><code class="xref py py-func docutils literal"><span class="pre">psd()</span></code></a></dt>
+<dd><a class="reference internal" href="matplotlib.axes.Subplot.psd.html#matplotlib.axes.Subplot.psd" title="matplotlib.axes.Subplot.psd"><code class="xref py py-func docutils literal"><span class="pre">psd()</span></code></a> differs in the default overlap; in returning
+the mean of the segment periodograms; in not returning
+times; and in generating a line plot instead of colormap.</dd>
+<dt><a class="reference internal" href="matplotlib.axes.Subplot.magnitude_spectrum.html#matplotlib.axes.Subplot.magnitude_spectrum" title="matplotlib.axes.Subplot.magnitude_spectrum"><code class="xref py py-func docutils literal"><span class="pre">magnitude_spectrum()</span></code></a></dt>
+<dd>A single spectrum, similar to having a single segment when
+<em>mode</em> is &#8216;magnitude&#8217;.  Plots a line instead of a colormap.</dd>
+<dt><a class="reference internal" href="matplotlib.axes.Subplot.angle_spectrum.html#matplotlib.axes.Subplot.angle_spectrum" title="matplotlib.axes.Subplot.angle_spectrum"><code class="xref py py-func docutils literal"><span class="pre">angle_spectrum()</span></code></a></dt>
+<dd>A single spectrum, similar to having a single segment when
+<em>mode</em> is &#8216;angle&#8217;.  Plots a line instead of a colormap.</dd>
+<dt><a class="reference internal" href="matplotlib.axes.Subplot.phase_spectrum.html#matplotlib.axes.Subplot.phase_spectrum" title="matplotlib.axes.Subplot.phase_spectrum"><code class="xref py py-func docutils literal"><span class="pre">phase_spectrum()</span></code></a></dt>
+<dd>A single spectrum, similar to having a single segment when
+<em>mode</em> is &#8216;phase&#8217;.  Plots a line instead of a colormap.</dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<p>In addition to the above described arguments, this function can take a
+<strong>data</strong> keyword argument. If such a <strong>data</strong> argument is given, the
+following arguments are replaced by <strong>data[&lt;arg&gt;]</strong>:</p>
+<ul class="simple">
+<li>All arguments with the following names: &#8216;x&#8217;.</li>
+</ul>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

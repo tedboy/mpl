@@ -1,0 +1,416 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>37.2.5.82. matplotlib.tri.PolyCollection.set_clip_box &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="37.2.5. matplotlib.tri.PolyCollection" href="matplotlib.tri.PolyCollection.html"/>
+        <link rel="next" title="37.2.5.83. matplotlib.tri.PolyCollection.set_clip_on" href="matplotlib.tri.PolyCollection.set_clip_on.html"/>
+        <link rel="prev" title="37.2.5.81. matplotlib.tri.PolyCollection.set_clim" href="matplotlib.tri.PolyCollection.set_clim.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.tri.html">37. matplotlib.tri</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.tri.html#functions">37.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.tri.html#classes">37.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.tri.ContourSet.html">37.2.1. matplotlib.tri.ContourSet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.tri.CubicTriInterpolator.html">37.2.2. matplotlib.tri.CubicTriInterpolator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.tri.LinearTriInterpolator.html">37.2.3. matplotlib.tri.LinearTriInterpolator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.tri.Normalize.html">37.2.4. matplotlib.tri.Normalize</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="matplotlib.tri.PolyCollection.html">37.2.5. matplotlib.tri.PolyCollection</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.axes.html">37.2.5.1. matplotlib.tri.PolyCollection.axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.mouseover.html">37.2.5.2. matplotlib.tri.PolyCollection.mouseover</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.stale.html">37.2.5.3. matplotlib.tri.PolyCollection.stale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.add_callback.html">37.2.5.4. matplotlib.tri.PolyCollection.add_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.add_checker.html">37.2.5.5. matplotlib.tri.PolyCollection.add_checker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.autoscale.html">37.2.5.6. matplotlib.tri.PolyCollection.autoscale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.autoscale_None.html">37.2.5.7. matplotlib.tri.PolyCollection.autoscale_None</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.changed.html">37.2.5.8. matplotlib.tri.PolyCollection.changed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.check_update.html">37.2.5.9. matplotlib.tri.PolyCollection.check_update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.contains.html">37.2.5.10. matplotlib.tri.PolyCollection.contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.convert_xunits.html">37.2.5.11. matplotlib.tri.PolyCollection.convert_xunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.convert_yunits.html">37.2.5.12. matplotlib.tri.PolyCollection.convert_yunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.draw.html">37.2.5.13. matplotlib.tri.PolyCollection.draw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.findobj.html">37.2.5.14. matplotlib.tri.PolyCollection.findobj</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.format_cursor_data.html">37.2.5.15. matplotlib.tri.PolyCollection.format_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_agg_filter.html">37.2.5.16. matplotlib.tri.PolyCollection.get_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_alpha.html">37.2.5.17. matplotlib.tri.PolyCollection.get_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_animated.html">37.2.5.18. matplotlib.tri.PolyCollection.get_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_array.html">37.2.5.19. matplotlib.tri.PolyCollection.get_array</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_axes.html">37.2.5.20. matplotlib.tri.PolyCollection.get_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_children.html">37.2.5.21. matplotlib.tri.PolyCollection.get_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_clim.html">37.2.5.22. matplotlib.tri.PolyCollection.get_clim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_clip_box.html">37.2.5.23. matplotlib.tri.PolyCollection.get_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_clip_on.html">37.2.5.24. matplotlib.tri.PolyCollection.get_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_clip_path.html">37.2.5.25. matplotlib.tri.PolyCollection.get_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_cmap.html">37.2.5.26. matplotlib.tri.PolyCollection.get_cmap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_contains.html">37.2.5.27. matplotlib.tri.PolyCollection.get_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_cursor_data.html">37.2.5.28. matplotlib.tri.PolyCollection.get_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_dashes.html">37.2.5.29. matplotlib.tri.PolyCollection.get_dashes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_datalim.html">37.2.5.30. matplotlib.tri.PolyCollection.get_datalim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_edgecolor.html">37.2.5.31. matplotlib.tri.PolyCollection.get_edgecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_edgecolors.html">37.2.5.32. matplotlib.tri.PolyCollection.get_edgecolors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_facecolor.html">37.2.5.33. matplotlib.tri.PolyCollection.get_facecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_facecolors.html">37.2.5.34. matplotlib.tri.PolyCollection.get_facecolors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_figure.html">37.2.5.35. matplotlib.tri.PolyCollection.get_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_fill.html">37.2.5.36. matplotlib.tri.PolyCollection.get_fill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_gid.html">37.2.5.37. matplotlib.tri.PolyCollection.get_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_hatch.html">37.2.5.38. matplotlib.tri.PolyCollection.get_hatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_label.html">37.2.5.39. matplotlib.tri.PolyCollection.get_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_linestyle.html">37.2.5.40. matplotlib.tri.PolyCollection.get_linestyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_linestyles.html">37.2.5.41. matplotlib.tri.PolyCollection.get_linestyles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_linewidth.html">37.2.5.42. matplotlib.tri.PolyCollection.get_linewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_linewidths.html">37.2.5.43. matplotlib.tri.PolyCollection.get_linewidths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_offset_position.html">37.2.5.44. matplotlib.tri.PolyCollection.get_offset_position</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_offset_transform.html">37.2.5.45. matplotlib.tri.PolyCollection.get_offset_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_offsets.html">37.2.5.46. matplotlib.tri.PolyCollection.get_offsets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_path_effects.html">37.2.5.47. matplotlib.tri.PolyCollection.get_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_paths.html">37.2.5.48. matplotlib.tri.PolyCollection.get_paths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_picker.html">37.2.5.49. matplotlib.tri.PolyCollection.get_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_pickradius.html">37.2.5.50. matplotlib.tri.PolyCollection.get_pickradius</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_rasterized.html">37.2.5.51. matplotlib.tri.PolyCollection.get_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_sizes.html">37.2.5.52. matplotlib.tri.PolyCollection.get_sizes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_sketch_params.html">37.2.5.53. matplotlib.tri.PolyCollection.get_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_snap.html">37.2.5.54. matplotlib.tri.PolyCollection.get_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_transform.html">37.2.5.55. matplotlib.tri.PolyCollection.get_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_transformed_clip_path_and_affine.html">37.2.5.56. matplotlib.tri.PolyCollection.get_transformed_clip_path_and_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_transforms.html">37.2.5.57. matplotlib.tri.PolyCollection.get_transforms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_url.html">37.2.5.58. matplotlib.tri.PolyCollection.get_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_urls.html">37.2.5.59. matplotlib.tri.PolyCollection.get_urls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_visible.html">37.2.5.60. matplotlib.tri.PolyCollection.get_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_window_extent.html">37.2.5.61. matplotlib.tri.PolyCollection.get_window_extent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_zorder.html">37.2.5.62. matplotlib.tri.PolyCollection.get_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.have_units.html">37.2.5.63. matplotlib.tri.PolyCollection.have_units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.hitlist.html">37.2.5.64. matplotlib.tri.PolyCollection.hitlist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.is_figure_set.html">37.2.5.65. matplotlib.tri.PolyCollection.is_figure_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.is_transform_set.html">37.2.5.66. matplotlib.tri.PolyCollection.is_transform_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.pchanged.html">37.2.5.67. matplotlib.tri.PolyCollection.pchanged</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.pick.html">37.2.5.68. matplotlib.tri.PolyCollection.pick</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.pickable.html">37.2.5.69. matplotlib.tri.PolyCollection.pickable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.properties.html">37.2.5.70. matplotlib.tri.PolyCollection.properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.remove.html">37.2.5.71. matplotlib.tri.PolyCollection.remove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.remove_callback.html">37.2.5.72. matplotlib.tri.PolyCollection.remove_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set.html">37.2.5.73. matplotlib.tri.PolyCollection.set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_agg_filter.html">37.2.5.74. matplotlib.tri.PolyCollection.set_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_alpha.html">37.2.5.75. matplotlib.tri.PolyCollection.set_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_animated.html">37.2.5.76. matplotlib.tri.PolyCollection.set_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_antialiased.html">37.2.5.77. matplotlib.tri.PolyCollection.set_antialiased</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_antialiaseds.html">37.2.5.78. matplotlib.tri.PolyCollection.set_antialiaseds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_array.html">37.2.5.79. matplotlib.tri.PolyCollection.set_array</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_axes.html">37.2.5.80. matplotlib.tri.PolyCollection.set_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_clim.html">37.2.5.81. matplotlib.tri.PolyCollection.set_clim</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">37.2.5.82. matplotlib.tri.PolyCollection.set_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_clip_on.html">37.2.5.83. matplotlib.tri.PolyCollection.set_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_clip_path.html">37.2.5.84. matplotlib.tri.PolyCollection.set_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_cmap.html">37.2.5.85. matplotlib.tri.PolyCollection.set_cmap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_color.html">37.2.5.86. matplotlib.tri.PolyCollection.set_color</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_contains.html">37.2.5.87. matplotlib.tri.PolyCollection.set_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_dashes.html">37.2.5.88. matplotlib.tri.PolyCollection.set_dashes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_edgecolor.html">37.2.5.89. matplotlib.tri.PolyCollection.set_edgecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_edgecolors.html">37.2.5.90. matplotlib.tri.PolyCollection.set_edgecolors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_facecolor.html">37.2.5.91. matplotlib.tri.PolyCollection.set_facecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_facecolors.html">37.2.5.92. matplotlib.tri.PolyCollection.set_facecolors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_figure.html">37.2.5.93. matplotlib.tri.PolyCollection.set_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_gid.html">37.2.5.94. matplotlib.tri.PolyCollection.set_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_hatch.html">37.2.5.95. matplotlib.tri.PolyCollection.set_hatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_label.html">37.2.5.96. matplotlib.tri.PolyCollection.set_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_linestyle.html">37.2.5.97. matplotlib.tri.PolyCollection.set_linestyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_linestyles.html">37.2.5.98. matplotlib.tri.PolyCollection.set_linestyles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_linewidth.html">37.2.5.99. matplotlib.tri.PolyCollection.set_linewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_linewidths.html">37.2.5.100. matplotlib.tri.PolyCollection.set_linewidths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_lw.html">37.2.5.101. matplotlib.tri.PolyCollection.set_lw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_norm.html">37.2.5.102. matplotlib.tri.PolyCollection.set_norm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_offset_position.html">37.2.5.103. matplotlib.tri.PolyCollection.set_offset_position</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_offsets.html">37.2.5.104. matplotlib.tri.PolyCollection.set_offsets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_path_effects.html">37.2.5.105. matplotlib.tri.PolyCollection.set_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_paths.html">37.2.5.106. matplotlib.tri.PolyCollection.set_paths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_picker.html">37.2.5.107. matplotlib.tri.PolyCollection.set_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_pickradius.html">37.2.5.108. matplotlib.tri.PolyCollection.set_pickradius</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_rasterized.html">37.2.5.109. matplotlib.tri.PolyCollection.set_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_sizes.html">37.2.5.110. matplotlib.tri.PolyCollection.set_sizes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_sketch_params.html">37.2.5.111. matplotlib.tri.PolyCollection.set_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_snap.html">37.2.5.112. matplotlib.tri.PolyCollection.set_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_transform.html">37.2.5.113. matplotlib.tri.PolyCollection.set_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_url.html">37.2.5.114. matplotlib.tri.PolyCollection.set_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_urls.html">37.2.5.115. matplotlib.tri.PolyCollection.set_urls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_verts.html">37.2.5.116. matplotlib.tri.PolyCollection.set_verts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_verts_and_codes.html">37.2.5.117. matplotlib.tri.PolyCollection.set_verts_and_codes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_visible.html">37.2.5.118. matplotlib.tri.PolyCollection.set_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_zorder.html">37.2.5.119. matplotlib.tri.PolyCollection.set_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.to_rgba.html">37.2.5.120. matplotlib.tri.PolyCollection.to_rgba</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.update.html">37.2.5.121. matplotlib.tri.PolyCollection.update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.update_from.html">37.2.5.122. matplotlib.tri.PolyCollection.update_from</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.update_scalarmappable.html">37.2.5.123. matplotlib.tri.PolyCollection.update_scalarmappable</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.tri.TrapezoidMapTriFinder.html">37.2.6. matplotlib.tri.TrapezoidMapTriFinder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.tri.TriAnalyzer.html">37.2.7. matplotlib.tri.TriAnalyzer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.tri.TriContourSet.html">37.2.8. matplotlib.tri.TriContourSet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.tri.TriFinder.html">37.2.9. matplotlib.tri.TriFinder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.tri.TriInterpolator.html">37.2.10. matplotlib.tri.TriInterpolator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.tri.TriMesh.html">37.2.11. matplotlib.tri.TriMesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.tri.TriRefiner.html">37.2.12. matplotlib.tri.TriRefiner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.tri.Triangulation.html">37.2.13. matplotlib.tri.Triangulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.tri.UniformTriRefiner.html">37.2.14. matplotlib.tri.UniformTriRefiner</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../infreq.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.tri.html">37. matplotlib.tri</a> &raquo;</li>
+        
+          <li><a href="matplotlib.tri.PolyCollection.html">37.2.5. matplotlib.tri.PolyCollection</a> &raquo;</li>
+        
+      <li>37.2.5.82. matplotlib.tri.PolyCollection.set_clip_box</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.tri.PolyCollection.set_clip_box.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-tri-polycollection-set-clip-box">
+<h1>37.2.5.82. matplotlib.tri.PolyCollection.set_clip_box<a class="headerlink" href="#matplotlib-tri-polycollection-set-clip-box" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="matplotlib.tri.PolyCollection.set_clip_box">
+<code class="descclassname">PolyCollection.</code><code class="descname">set_clip_box</code><span class="sig-paren">(</span><em>clipbox</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.tri.PolyCollection.set_clip_box" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the artist&#8217;s clip <code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code>.</p>
+<p>ACCEPTS: a <code class="xref py py-class docutils literal"><span class="pre">matplotlib.transforms.Bbox</span></code> instance</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.tri.PolyCollection.set_clip_on.html" class="btn btn-neutral float-right" title="37.2.5.83. matplotlib.tri.PolyCollection.set_clip_on" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.tri.PolyCollection.set_clim.html" class="btn btn-neutral" title="37.2.5.81. matplotlib.tri.PolyCollection.set_clim" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

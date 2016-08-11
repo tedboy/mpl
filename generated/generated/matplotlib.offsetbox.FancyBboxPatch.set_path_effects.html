@@ -1,0 +1,422 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>30.2.13.106. matplotlib.offsetbox.FancyBboxPatch.set_path_effects &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="30.2.13. matplotlib.offsetbox.FancyBboxPatch" href="matplotlib.offsetbox.FancyBboxPatch.html"/>
+        <link rel="next" title="30.2.13.107. matplotlib.offsetbox.FancyBboxPatch.set_picker" href="matplotlib.offsetbox.FancyBboxPatch.set_picker.html"/>
+        <link rel="prev" title="30.2.13.105. matplotlib.offsetbox.FancyBboxPatch.set_mutation_scale" href="matplotlib.offsetbox.FancyBboxPatch.set_mutation_scale.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.offsetbox.html">30. matplotlib.offsetbox</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.offsetbox.html#functions">30.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.offsetbox.html#classes">30.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.AnchoredOffsetbox.html">30.2.1. matplotlib.offsetbox.AnchoredOffsetbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.AnchoredText.html">30.2.2. matplotlib.offsetbox.AnchoredText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.AnnotationBbox.html">30.2.3. matplotlib.offsetbox.AnnotationBbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.AuxTransformBox.html">30.2.4. matplotlib.offsetbox.AuxTransformBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.Bbox.html">30.2.5. matplotlib.offsetbox.Bbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.BboxBase.html">30.2.6. matplotlib.offsetbox.BboxBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.html">30.2.7. matplotlib.offsetbox.BboxImage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.DraggableAnnotation.html">30.2.8. matplotlib.offsetbox.DraggableAnnotation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.DraggableBase.html">30.2.9. matplotlib.offsetbox.DraggableBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.DraggableOffsetBox.html">30.2.10. matplotlib.offsetbox.DraggableOffsetBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.DrawingArea.html">30.2.11. matplotlib.offsetbox.DrawingArea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.FancyArrowPatch.html">30.2.12. matplotlib.offsetbox.FancyArrowPatch</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.html">30.2.13. matplotlib.offsetbox.FancyBboxPatch</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.axes.html">30.2.13.1. matplotlib.offsetbox.FancyBboxPatch.axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.fill.html">30.2.13.2. matplotlib.offsetbox.FancyBboxPatch.fill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.mouseover.html">30.2.13.3. matplotlib.offsetbox.FancyBboxPatch.mouseover</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.stale.html">30.2.13.4. matplotlib.offsetbox.FancyBboxPatch.stale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.add_callback.html">30.2.13.5. matplotlib.offsetbox.FancyBboxPatch.add_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.contains.html">30.2.13.6. matplotlib.offsetbox.FancyBboxPatch.contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.contains_point.html">30.2.13.7. matplotlib.offsetbox.FancyBboxPatch.contains_point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.convert_xunits.html">30.2.13.8. matplotlib.offsetbox.FancyBboxPatch.convert_xunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.convert_yunits.html">30.2.13.9. matplotlib.offsetbox.FancyBboxPatch.convert_yunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.draw.html">30.2.13.10. matplotlib.offsetbox.FancyBboxPatch.draw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.findobj.html">30.2.13.11. matplotlib.offsetbox.FancyBboxPatch.findobj</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.format_cursor_data.html">30.2.13.12. matplotlib.offsetbox.FancyBboxPatch.format_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_aa.html">30.2.13.13. matplotlib.offsetbox.FancyBboxPatch.get_aa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_agg_filter.html">30.2.13.14. matplotlib.offsetbox.FancyBboxPatch.get_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_alpha.html">30.2.13.15. matplotlib.offsetbox.FancyBboxPatch.get_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_animated.html">30.2.13.16. matplotlib.offsetbox.FancyBboxPatch.get_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_antialiased.html">30.2.13.17. matplotlib.offsetbox.FancyBboxPatch.get_antialiased</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_axes.html">30.2.13.18. matplotlib.offsetbox.FancyBboxPatch.get_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_bbox.html">30.2.13.19. matplotlib.offsetbox.FancyBboxPatch.get_bbox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_boxstyle.html">30.2.13.20. matplotlib.offsetbox.FancyBboxPatch.get_boxstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_capstyle.html">30.2.13.21. matplotlib.offsetbox.FancyBboxPatch.get_capstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_children.html">30.2.13.22. matplotlib.offsetbox.FancyBboxPatch.get_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_clip_box.html">30.2.13.23. matplotlib.offsetbox.FancyBboxPatch.get_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_clip_on.html">30.2.13.24. matplotlib.offsetbox.FancyBboxPatch.get_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_clip_path.html">30.2.13.25. matplotlib.offsetbox.FancyBboxPatch.get_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_contains.html">30.2.13.26. matplotlib.offsetbox.FancyBboxPatch.get_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_cursor_data.html">30.2.13.27. matplotlib.offsetbox.FancyBboxPatch.get_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_data_transform.html">30.2.13.28. matplotlib.offsetbox.FancyBboxPatch.get_data_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_ec.html">30.2.13.29. matplotlib.offsetbox.FancyBboxPatch.get_ec</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_edgecolor.html">30.2.13.30. matplotlib.offsetbox.FancyBboxPatch.get_edgecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_extents.html">30.2.13.31. matplotlib.offsetbox.FancyBboxPatch.get_extents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_facecolor.html">30.2.13.32. matplotlib.offsetbox.FancyBboxPatch.get_facecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_fc.html">30.2.13.33. matplotlib.offsetbox.FancyBboxPatch.get_fc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_figure.html">30.2.13.34. matplotlib.offsetbox.FancyBboxPatch.get_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_fill.html">30.2.13.35. matplotlib.offsetbox.FancyBboxPatch.get_fill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_gid.html">30.2.13.36. matplotlib.offsetbox.FancyBboxPatch.get_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_hatch.html">30.2.13.37. matplotlib.offsetbox.FancyBboxPatch.get_hatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_height.html">30.2.13.38. matplotlib.offsetbox.FancyBboxPatch.get_height</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_joinstyle.html">30.2.13.39. matplotlib.offsetbox.FancyBboxPatch.get_joinstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_label.html">30.2.13.40. matplotlib.offsetbox.FancyBboxPatch.get_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_linestyle.html">30.2.13.41. matplotlib.offsetbox.FancyBboxPatch.get_linestyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_linewidth.html">30.2.13.42. matplotlib.offsetbox.FancyBboxPatch.get_linewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_ls.html">30.2.13.43. matplotlib.offsetbox.FancyBboxPatch.get_ls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_lw.html">30.2.13.44. matplotlib.offsetbox.FancyBboxPatch.get_lw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_mutation_aspect.html">30.2.13.45. matplotlib.offsetbox.FancyBboxPatch.get_mutation_aspect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_mutation_scale.html">30.2.13.46. matplotlib.offsetbox.FancyBboxPatch.get_mutation_scale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_patch_transform.html">30.2.13.47. matplotlib.offsetbox.FancyBboxPatch.get_patch_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_path.html">30.2.13.48. matplotlib.offsetbox.FancyBboxPatch.get_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_path_effects.html">30.2.13.49. matplotlib.offsetbox.FancyBboxPatch.get_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_picker.html">30.2.13.50. matplotlib.offsetbox.FancyBboxPatch.get_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_rasterized.html">30.2.13.51. matplotlib.offsetbox.FancyBboxPatch.get_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_sketch_params.html">30.2.13.52. matplotlib.offsetbox.FancyBboxPatch.get_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_snap.html">30.2.13.53. matplotlib.offsetbox.FancyBboxPatch.get_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_transform.html">30.2.13.54. matplotlib.offsetbox.FancyBboxPatch.get_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_transformed_clip_path_and_affine.html">30.2.13.55. matplotlib.offsetbox.FancyBboxPatch.get_transformed_clip_path_and_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_url.html">30.2.13.56. matplotlib.offsetbox.FancyBboxPatch.get_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_verts.html">30.2.13.57. matplotlib.offsetbox.FancyBboxPatch.get_verts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_visible.html">30.2.13.58. matplotlib.offsetbox.FancyBboxPatch.get_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_width.html">30.2.13.59. matplotlib.offsetbox.FancyBboxPatch.get_width</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_window_extent.html">30.2.13.60. matplotlib.offsetbox.FancyBboxPatch.get_window_extent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_x.html">30.2.13.61. matplotlib.offsetbox.FancyBboxPatch.get_x</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_y.html">30.2.13.62. matplotlib.offsetbox.FancyBboxPatch.get_y</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.get_zorder.html">30.2.13.63. matplotlib.offsetbox.FancyBboxPatch.get_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.have_units.html">30.2.13.64. matplotlib.offsetbox.FancyBboxPatch.have_units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.hitlist.html">30.2.13.65. matplotlib.offsetbox.FancyBboxPatch.hitlist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.is_figure_set.html">30.2.13.66. matplotlib.offsetbox.FancyBboxPatch.is_figure_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.is_transform_set.html">30.2.13.67. matplotlib.offsetbox.FancyBboxPatch.is_transform_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.pchanged.html">30.2.13.68. matplotlib.offsetbox.FancyBboxPatch.pchanged</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.pick.html">30.2.13.69. matplotlib.offsetbox.FancyBboxPatch.pick</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.pickable.html">30.2.13.70. matplotlib.offsetbox.FancyBboxPatch.pickable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.properties.html">30.2.13.71. matplotlib.offsetbox.FancyBboxPatch.properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.remove.html">30.2.13.72. matplotlib.offsetbox.FancyBboxPatch.remove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.remove_callback.html">30.2.13.73. matplotlib.offsetbox.FancyBboxPatch.remove_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set.html">30.2.13.74. matplotlib.offsetbox.FancyBboxPatch.set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_aa.html">30.2.13.75. matplotlib.offsetbox.FancyBboxPatch.set_aa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_agg_filter.html">30.2.13.76. matplotlib.offsetbox.FancyBboxPatch.set_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_alpha.html">30.2.13.77. matplotlib.offsetbox.FancyBboxPatch.set_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_animated.html">30.2.13.78. matplotlib.offsetbox.FancyBboxPatch.set_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_antialiased.html">30.2.13.79. matplotlib.offsetbox.FancyBboxPatch.set_antialiased</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_axes.html">30.2.13.80. matplotlib.offsetbox.FancyBboxPatch.set_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_bounds.html">30.2.13.81. matplotlib.offsetbox.FancyBboxPatch.set_bounds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_boxstyle.html">30.2.13.82. matplotlib.offsetbox.FancyBboxPatch.set_boxstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_capstyle.html">30.2.13.83. matplotlib.offsetbox.FancyBboxPatch.set_capstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_clip_box.html">30.2.13.84. matplotlib.offsetbox.FancyBboxPatch.set_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_clip_on.html">30.2.13.85. matplotlib.offsetbox.FancyBboxPatch.set_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_clip_path.html">30.2.13.86. matplotlib.offsetbox.FancyBboxPatch.set_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_color.html">30.2.13.87. matplotlib.offsetbox.FancyBboxPatch.set_color</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_contains.html">30.2.13.88. matplotlib.offsetbox.FancyBboxPatch.set_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_ec.html">30.2.13.89. matplotlib.offsetbox.FancyBboxPatch.set_ec</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_edgecolor.html">30.2.13.90. matplotlib.offsetbox.FancyBboxPatch.set_edgecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_facecolor.html">30.2.13.91. matplotlib.offsetbox.FancyBboxPatch.set_facecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_fc.html">30.2.13.92. matplotlib.offsetbox.FancyBboxPatch.set_fc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_figure.html">30.2.13.93. matplotlib.offsetbox.FancyBboxPatch.set_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_fill.html">30.2.13.94. matplotlib.offsetbox.FancyBboxPatch.set_fill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_gid.html">30.2.13.95. matplotlib.offsetbox.FancyBboxPatch.set_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_hatch.html">30.2.13.96. matplotlib.offsetbox.FancyBboxPatch.set_hatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_height.html">30.2.13.97. matplotlib.offsetbox.FancyBboxPatch.set_height</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_joinstyle.html">30.2.13.98. matplotlib.offsetbox.FancyBboxPatch.set_joinstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_label.html">30.2.13.99. matplotlib.offsetbox.FancyBboxPatch.set_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_linestyle.html">30.2.13.100. matplotlib.offsetbox.FancyBboxPatch.set_linestyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_linewidth.html">30.2.13.101. matplotlib.offsetbox.FancyBboxPatch.set_linewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_ls.html">30.2.13.102. matplotlib.offsetbox.FancyBboxPatch.set_ls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_lw.html">30.2.13.103. matplotlib.offsetbox.FancyBboxPatch.set_lw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_mutation_aspect.html">30.2.13.104. matplotlib.offsetbox.FancyBboxPatch.set_mutation_aspect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_mutation_scale.html">30.2.13.105. matplotlib.offsetbox.FancyBboxPatch.set_mutation_scale</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">30.2.13.106. matplotlib.offsetbox.FancyBboxPatch.set_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_picker.html">30.2.13.107. matplotlib.offsetbox.FancyBboxPatch.set_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_rasterized.html">30.2.13.108. matplotlib.offsetbox.FancyBboxPatch.set_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_sketch_params.html">30.2.13.109. matplotlib.offsetbox.FancyBboxPatch.set_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_snap.html">30.2.13.110. matplotlib.offsetbox.FancyBboxPatch.set_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_transform.html">30.2.13.111. matplotlib.offsetbox.FancyBboxPatch.set_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_url.html">30.2.13.112. matplotlib.offsetbox.FancyBboxPatch.set_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_visible.html">30.2.13.113. matplotlib.offsetbox.FancyBboxPatch.set_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_width.html">30.2.13.114. matplotlib.offsetbox.FancyBboxPatch.set_width</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_x.html">30.2.13.115. matplotlib.offsetbox.FancyBboxPatch.set_x</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_y.html">30.2.13.116. matplotlib.offsetbox.FancyBboxPatch.set_y</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.set_zorder.html">30.2.13.117. matplotlib.offsetbox.FancyBboxPatch.set_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.update.html">30.2.13.118. matplotlib.offsetbox.FancyBboxPatch.update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.update_from.html">30.2.13.119. matplotlib.offsetbox.FancyBboxPatch.update_from</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.FontProperties.html">30.2.14. matplotlib.offsetbox.FontProperties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.HPacker.html">30.2.15. matplotlib.offsetbox.HPacker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.OffsetBox.html">30.2.16. matplotlib.offsetbox.OffsetBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.OffsetImage.html">30.2.17. matplotlib.offsetbox.OffsetImage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.html">30.2.18. matplotlib.offsetbox.PackerBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.PaddedBox.html">30.2.19. matplotlib.offsetbox.PaddedBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.TextArea.html">30.2.20. matplotlib.offsetbox.TextArea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.TransformedBbox.html">30.2.21. matplotlib.offsetbox.TransformedBbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.VPacker.html">30.2.22. matplotlib.offsetbox.VPacker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.xrange.html">30.2.23. matplotlib.offsetbox.xrange</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.zip.html">30.2.24. matplotlib.offsetbox.zip</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../infreq.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.offsetbox.html">30. matplotlib.offsetbox</a> &raquo;</li>
+        
+          <li><a href="matplotlib.offsetbox.FancyBboxPatch.html">30.2.13. matplotlib.offsetbox.FancyBboxPatch</a> &raquo;</li>
+        
+      <li>30.2.13.106. matplotlib.offsetbox.FancyBboxPatch.set_path_effects</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.offsetbox.FancyBboxPatch.set_path_effects.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-offsetbox-fancybboxpatch-set-path-effects">
+<h1>30.2.13.106. matplotlib.offsetbox.FancyBboxPatch.set_path_effects<a class="headerlink" href="#matplotlib-offsetbox-fancybboxpatch-set-path-effects" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="matplotlib.offsetbox.FancyBboxPatch.set_path_effects">
+<code class="descclassname">FancyBboxPatch.</code><code class="descname">set_path_effects</code><span class="sig-paren">(</span><em>path_effects</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.offsetbox.FancyBboxPatch.set_path_effects" title="Permalink to this definition">¶</a></dt>
+<dd><p>set path_effects, which should be a list of instances of
+matplotlib.patheffect._Base class or its derivatives.</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.offsetbox.FancyBboxPatch.set_picker.html" class="btn btn-neutral float-right" title="30.2.13.107. matplotlib.offsetbox.FancyBboxPatch.set_picker" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.offsetbox.FancyBboxPatch.set_mutation_scale.html" class="btn btn-neutral" title="30.2.13.105. matplotlib.offsetbox.FancyBboxPatch.set_mutation_scale" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

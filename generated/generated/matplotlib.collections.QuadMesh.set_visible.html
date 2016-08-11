@@ -1,0 +1,415 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>21.2.11.116. matplotlib.collections.QuadMesh.set_visible &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="21.2.11. matplotlib.collections.QuadMesh" href="matplotlib.collections.QuadMesh.html"/>
+        <link rel="next" title="21.2.11.117. matplotlib.collections.QuadMesh.set_zorder" href="matplotlib.collections.QuadMesh.set_zorder.html"/>
+        <link rel="prev" title="21.2.11.115. matplotlib.collections.QuadMesh.set_urls" href="matplotlib.collections.QuadMesh.set_urls.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.collections.html">21. matplotlib.collections</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.collections.html#functions">21.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.collections.html#classes">21.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.AsteriskPolygonCollection.html">21.2.1. matplotlib.collections.AsteriskPolygonCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.BrokenBarHCollection.html">21.2.2. matplotlib.collections.BrokenBarHCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.CircleCollection.html">21.2.3. matplotlib.collections.CircleCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.Collection.html">21.2.4. matplotlib.collections.Collection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.EllipseCollection.html">21.2.5. matplotlib.collections.EllipseCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.EventCollection.html">21.2.6. matplotlib.collections.EventCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.LineCollection.html">21.2.7. matplotlib.collections.LineCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.PatchCollection.html">21.2.8. matplotlib.collections.PatchCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.PathCollection.html">21.2.9. matplotlib.collections.PathCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.PolyCollection.html">21.2.10. matplotlib.collections.PolyCollection</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="matplotlib.collections.QuadMesh.html">21.2.11. matplotlib.collections.QuadMesh</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.axes.html">21.2.11.1. matplotlib.collections.QuadMesh.axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.mouseover.html">21.2.11.2. matplotlib.collections.QuadMesh.mouseover</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.stale.html">21.2.11.3. matplotlib.collections.QuadMesh.stale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.add_callback.html">21.2.11.4. matplotlib.collections.QuadMesh.add_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.add_checker.html">21.2.11.5. matplotlib.collections.QuadMesh.add_checker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.autoscale.html">21.2.11.6. matplotlib.collections.QuadMesh.autoscale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.autoscale_None.html">21.2.11.7. matplotlib.collections.QuadMesh.autoscale_None</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.changed.html">21.2.11.8. matplotlib.collections.QuadMesh.changed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.check_update.html">21.2.11.9. matplotlib.collections.QuadMesh.check_update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.contains.html">21.2.11.10. matplotlib.collections.QuadMesh.contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.convert_mesh_to_paths.html">21.2.11.11. matplotlib.collections.QuadMesh.convert_mesh_to_paths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.convert_mesh_to_triangles.html">21.2.11.12. matplotlib.collections.QuadMesh.convert_mesh_to_triangles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.convert_xunits.html">21.2.11.13. matplotlib.collections.QuadMesh.convert_xunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.convert_yunits.html">21.2.11.14. matplotlib.collections.QuadMesh.convert_yunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.draw.html">21.2.11.15. matplotlib.collections.QuadMesh.draw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.findobj.html">21.2.11.16. matplotlib.collections.QuadMesh.findobj</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.format_cursor_data.html">21.2.11.17. matplotlib.collections.QuadMesh.format_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_agg_filter.html">21.2.11.18. matplotlib.collections.QuadMesh.get_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_alpha.html">21.2.11.19. matplotlib.collections.QuadMesh.get_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_animated.html">21.2.11.20. matplotlib.collections.QuadMesh.get_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_array.html">21.2.11.21. matplotlib.collections.QuadMesh.get_array</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_axes.html">21.2.11.22. matplotlib.collections.QuadMesh.get_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_children.html">21.2.11.23. matplotlib.collections.QuadMesh.get_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_clim.html">21.2.11.24. matplotlib.collections.QuadMesh.get_clim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_clip_box.html">21.2.11.25. matplotlib.collections.QuadMesh.get_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_clip_on.html">21.2.11.26. matplotlib.collections.QuadMesh.get_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_clip_path.html">21.2.11.27. matplotlib.collections.QuadMesh.get_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_cmap.html">21.2.11.28. matplotlib.collections.QuadMesh.get_cmap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_contains.html">21.2.11.29. matplotlib.collections.QuadMesh.get_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_cursor_data.html">21.2.11.30. matplotlib.collections.QuadMesh.get_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_dashes.html">21.2.11.31. matplotlib.collections.QuadMesh.get_dashes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_datalim.html">21.2.11.32. matplotlib.collections.QuadMesh.get_datalim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_edgecolor.html">21.2.11.33. matplotlib.collections.QuadMesh.get_edgecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_edgecolors.html">21.2.11.34. matplotlib.collections.QuadMesh.get_edgecolors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_facecolor.html">21.2.11.35. matplotlib.collections.QuadMesh.get_facecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_facecolors.html">21.2.11.36. matplotlib.collections.QuadMesh.get_facecolors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_figure.html">21.2.11.37. matplotlib.collections.QuadMesh.get_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_fill.html">21.2.11.38. matplotlib.collections.QuadMesh.get_fill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_gid.html">21.2.11.39. matplotlib.collections.QuadMesh.get_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_hatch.html">21.2.11.40. matplotlib.collections.QuadMesh.get_hatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_label.html">21.2.11.41. matplotlib.collections.QuadMesh.get_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_linestyle.html">21.2.11.42. matplotlib.collections.QuadMesh.get_linestyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_linestyles.html">21.2.11.43. matplotlib.collections.QuadMesh.get_linestyles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_linewidth.html">21.2.11.44. matplotlib.collections.QuadMesh.get_linewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_linewidths.html">21.2.11.45. matplotlib.collections.QuadMesh.get_linewidths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_offset_position.html">21.2.11.46. matplotlib.collections.QuadMesh.get_offset_position</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_offset_transform.html">21.2.11.47. matplotlib.collections.QuadMesh.get_offset_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_offsets.html">21.2.11.48. matplotlib.collections.QuadMesh.get_offsets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_path_effects.html">21.2.11.49. matplotlib.collections.QuadMesh.get_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_paths.html">21.2.11.50. matplotlib.collections.QuadMesh.get_paths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_picker.html">21.2.11.51. matplotlib.collections.QuadMesh.get_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_pickradius.html">21.2.11.52. matplotlib.collections.QuadMesh.get_pickradius</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_rasterized.html">21.2.11.53. matplotlib.collections.QuadMesh.get_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_sketch_params.html">21.2.11.54. matplotlib.collections.QuadMesh.get_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_snap.html">21.2.11.55. matplotlib.collections.QuadMesh.get_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_transform.html">21.2.11.56. matplotlib.collections.QuadMesh.get_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_transformed_clip_path_and_affine.html">21.2.11.57. matplotlib.collections.QuadMesh.get_transformed_clip_path_and_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_transforms.html">21.2.11.58. matplotlib.collections.QuadMesh.get_transforms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_url.html">21.2.11.59. matplotlib.collections.QuadMesh.get_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_urls.html">21.2.11.60. matplotlib.collections.QuadMesh.get_urls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_visible.html">21.2.11.61. matplotlib.collections.QuadMesh.get_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_window_extent.html">21.2.11.62. matplotlib.collections.QuadMesh.get_window_extent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.get_zorder.html">21.2.11.63. matplotlib.collections.QuadMesh.get_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.have_units.html">21.2.11.64. matplotlib.collections.QuadMesh.have_units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.hitlist.html">21.2.11.65. matplotlib.collections.QuadMesh.hitlist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.is_figure_set.html">21.2.11.66. matplotlib.collections.QuadMesh.is_figure_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.is_transform_set.html">21.2.11.67. matplotlib.collections.QuadMesh.is_transform_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.pchanged.html">21.2.11.68. matplotlib.collections.QuadMesh.pchanged</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.pick.html">21.2.11.69. matplotlib.collections.QuadMesh.pick</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.pickable.html">21.2.11.70. matplotlib.collections.QuadMesh.pickable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.properties.html">21.2.11.71. matplotlib.collections.QuadMesh.properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.remove.html">21.2.11.72. matplotlib.collections.QuadMesh.remove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.remove_callback.html">21.2.11.73. matplotlib.collections.QuadMesh.remove_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set.html">21.2.11.74. matplotlib.collections.QuadMesh.set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_agg_filter.html">21.2.11.75. matplotlib.collections.QuadMesh.set_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_alpha.html">21.2.11.76. matplotlib.collections.QuadMesh.set_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_animated.html">21.2.11.77. matplotlib.collections.QuadMesh.set_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_antialiased.html">21.2.11.78. matplotlib.collections.QuadMesh.set_antialiased</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_antialiaseds.html">21.2.11.79. matplotlib.collections.QuadMesh.set_antialiaseds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_array.html">21.2.11.80. matplotlib.collections.QuadMesh.set_array</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_axes.html">21.2.11.81. matplotlib.collections.QuadMesh.set_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_clim.html">21.2.11.82. matplotlib.collections.QuadMesh.set_clim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_clip_box.html">21.2.11.83. matplotlib.collections.QuadMesh.set_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_clip_on.html">21.2.11.84. matplotlib.collections.QuadMesh.set_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_clip_path.html">21.2.11.85. matplotlib.collections.QuadMesh.set_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_cmap.html">21.2.11.86. matplotlib.collections.QuadMesh.set_cmap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_color.html">21.2.11.87. matplotlib.collections.QuadMesh.set_color</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_contains.html">21.2.11.88. matplotlib.collections.QuadMesh.set_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_dashes.html">21.2.11.89. matplotlib.collections.QuadMesh.set_dashes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_edgecolor.html">21.2.11.90. matplotlib.collections.QuadMesh.set_edgecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_edgecolors.html">21.2.11.91. matplotlib.collections.QuadMesh.set_edgecolors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_facecolor.html">21.2.11.92. matplotlib.collections.QuadMesh.set_facecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_facecolors.html">21.2.11.93. matplotlib.collections.QuadMesh.set_facecolors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_figure.html">21.2.11.94. matplotlib.collections.QuadMesh.set_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_gid.html">21.2.11.95. matplotlib.collections.QuadMesh.set_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_hatch.html">21.2.11.96. matplotlib.collections.QuadMesh.set_hatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_label.html">21.2.11.97. matplotlib.collections.QuadMesh.set_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_linestyle.html">21.2.11.98. matplotlib.collections.QuadMesh.set_linestyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_linestyles.html">21.2.11.99. matplotlib.collections.QuadMesh.set_linestyles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_linewidth.html">21.2.11.100. matplotlib.collections.QuadMesh.set_linewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_linewidths.html">21.2.11.101. matplotlib.collections.QuadMesh.set_linewidths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_lw.html">21.2.11.102. matplotlib.collections.QuadMesh.set_lw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_norm.html">21.2.11.103. matplotlib.collections.QuadMesh.set_norm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_offset_position.html">21.2.11.104. matplotlib.collections.QuadMesh.set_offset_position</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_offsets.html">21.2.11.105. matplotlib.collections.QuadMesh.set_offsets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_path_effects.html">21.2.11.106. matplotlib.collections.QuadMesh.set_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_paths.html">21.2.11.107. matplotlib.collections.QuadMesh.set_paths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_picker.html">21.2.11.108. matplotlib.collections.QuadMesh.set_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_pickradius.html">21.2.11.109. matplotlib.collections.QuadMesh.set_pickradius</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_rasterized.html">21.2.11.110. matplotlib.collections.QuadMesh.set_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_sketch_params.html">21.2.11.111. matplotlib.collections.QuadMesh.set_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_snap.html">21.2.11.112. matplotlib.collections.QuadMesh.set_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_transform.html">21.2.11.113. matplotlib.collections.QuadMesh.set_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_url.html">21.2.11.114. matplotlib.collections.QuadMesh.set_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_urls.html">21.2.11.115. matplotlib.collections.QuadMesh.set_urls</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">21.2.11.116. matplotlib.collections.QuadMesh.set_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.set_zorder.html">21.2.11.117. matplotlib.collections.QuadMesh.set_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.to_rgba.html">21.2.11.118. matplotlib.collections.QuadMesh.to_rgba</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.update.html">21.2.11.119. matplotlib.collections.QuadMesh.update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.update_from.html">21.2.11.120. matplotlib.collections.QuadMesh.update_from</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.QuadMesh.update_scalarmappable.html">21.2.11.121. matplotlib.collections.QuadMesh.update_scalarmappable</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.RegularPolyCollection.html">21.2.12. matplotlib.collections.RegularPolyCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.StarPolygonCollection.html">21.2.13. matplotlib.collections.StarPolygonCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.TriMesh.html">21.2.14. matplotlib.collections.TriMesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.zip.html">21.2.15. matplotlib.collections.zip</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../infreq.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.collections.html">21. matplotlib.collections</a> &raquo;</li>
+        
+          <li><a href="matplotlib.collections.QuadMesh.html">21.2.11. matplotlib.collections.QuadMesh</a> &raquo;</li>
+        
+      <li>21.2.11.116. matplotlib.collections.QuadMesh.set_visible</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.collections.QuadMesh.set_visible.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-collections-quadmesh-set-visible">
+<h1>21.2.11.116. matplotlib.collections.QuadMesh.set_visible<a class="headerlink" href="#matplotlib-collections-quadmesh-set-visible" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="matplotlib.collections.QuadMesh.set_visible">
+<code class="descclassname">QuadMesh.</code><code class="descname">set_visible</code><span class="sig-paren">(</span><em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.collections.QuadMesh.set_visible" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the artist&#8217;s visiblity.</p>
+<p>ACCEPTS: [True | False]</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.collections.QuadMesh.set_zorder.html" class="btn btn-neutral float-right" title="21.2.11.117. matplotlib.collections.QuadMesh.set_zorder" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.collections.QuadMesh.set_urls.html" class="btn btn-neutral" title="21.2.11.115. matplotlib.collections.QuadMesh.set_urls" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

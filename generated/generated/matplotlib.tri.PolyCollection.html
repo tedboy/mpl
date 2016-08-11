@@ -1,0 +1,799 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>37.2.5. matplotlib.tri.PolyCollection &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="37. matplotlib.tri" href="../matplotlib.tri.html"/>
+        <link rel="next" title="37.2.5.1. matplotlib.tri.PolyCollection.axes" href="matplotlib.tri.PolyCollection.axes.html"/>
+        <link rel="prev" title="37.2.4.5. matplotlib.tri.Normalize.scaled" href="matplotlib.tri.Normalize.scaled.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.tri.html">37. matplotlib.tri</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.tri.html#functions">37.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.tri.html#classes">37.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.tri.ContourSet.html">37.2.1. matplotlib.tri.ContourSet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.tri.CubicTriInterpolator.html">37.2.2. matplotlib.tri.CubicTriInterpolator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.tri.LinearTriInterpolator.html">37.2.3. matplotlib.tri.LinearTriInterpolator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.tri.Normalize.html">37.2.4. matplotlib.tri.Normalize</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">37.2.5. matplotlib.tri.PolyCollection</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.axes.html">37.2.5.1. matplotlib.tri.PolyCollection.axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.mouseover.html">37.2.5.2. matplotlib.tri.PolyCollection.mouseover</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.stale.html">37.2.5.3. matplotlib.tri.PolyCollection.stale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.add_callback.html">37.2.5.4. matplotlib.tri.PolyCollection.add_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.add_checker.html">37.2.5.5. matplotlib.tri.PolyCollection.add_checker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.autoscale.html">37.2.5.6. matplotlib.tri.PolyCollection.autoscale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.autoscale_None.html">37.2.5.7. matplotlib.tri.PolyCollection.autoscale_None</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.changed.html">37.2.5.8. matplotlib.tri.PolyCollection.changed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.check_update.html">37.2.5.9. matplotlib.tri.PolyCollection.check_update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.contains.html">37.2.5.10. matplotlib.tri.PolyCollection.contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.convert_xunits.html">37.2.5.11. matplotlib.tri.PolyCollection.convert_xunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.convert_yunits.html">37.2.5.12. matplotlib.tri.PolyCollection.convert_yunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.draw.html">37.2.5.13. matplotlib.tri.PolyCollection.draw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.findobj.html">37.2.5.14. matplotlib.tri.PolyCollection.findobj</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.format_cursor_data.html">37.2.5.15. matplotlib.tri.PolyCollection.format_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_agg_filter.html">37.2.5.16. matplotlib.tri.PolyCollection.get_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_alpha.html">37.2.5.17. matplotlib.tri.PolyCollection.get_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_animated.html">37.2.5.18. matplotlib.tri.PolyCollection.get_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_array.html">37.2.5.19. matplotlib.tri.PolyCollection.get_array</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_axes.html">37.2.5.20. matplotlib.tri.PolyCollection.get_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_children.html">37.2.5.21. matplotlib.tri.PolyCollection.get_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_clim.html">37.2.5.22. matplotlib.tri.PolyCollection.get_clim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_clip_box.html">37.2.5.23. matplotlib.tri.PolyCollection.get_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_clip_on.html">37.2.5.24. matplotlib.tri.PolyCollection.get_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_clip_path.html">37.2.5.25. matplotlib.tri.PolyCollection.get_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_cmap.html">37.2.5.26. matplotlib.tri.PolyCollection.get_cmap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_contains.html">37.2.5.27. matplotlib.tri.PolyCollection.get_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_cursor_data.html">37.2.5.28. matplotlib.tri.PolyCollection.get_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_dashes.html">37.2.5.29. matplotlib.tri.PolyCollection.get_dashes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_datalim.html">37.2.5.30. matplotlib.tri.PolyCollection.get_datalim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_edgecolor.html">37.2.5.31. matplotlib.tri.PolyCollection.get_edgecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_edgecolors.html">37.2.5.32. matplotlib.tri.PolyCollection.get_edgecolors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_facecolor.html">37.2.5.33. matplotlib.tri.PolyCollection.get_facecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_facecolors.html">37.2.5.34. matplotlib.tri.PolyCollection.get_facecolors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_figure.html">37.2.5.35. matplotlib.tri.PolyCollection.get_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_fill.html">37.2.5.36. matplotlib.tri.PolyCollection.get_fill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_gid.html">37.2.5.37. matplotlib.tri.PolyCollection.get_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_hatch.html">37.2.5.38. matplotlib.tri.PolyCollection.get_hatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_label.html">37.2.5.39. matplotlib.tri.PolyCollection.get_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_linestyle.html">37.2.5.40. matplotlib.tri.PolyCollection.get_linestyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_linestyles.html">37.2.5.41. matplotlib.tri.PolyCollection.get_linestyles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_linewidth.html">37.2.5.42. matplotlib.tri.PolyCollection.get_linewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_linewidths.html">37.2.5.43. matplotlib.tri.PolyCollection.get_linewidths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_offset_position.html">37.2.5.44. matplotlib.tri.PolyCollection.get_offset_position</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_offset_transform.html">37.2.5.45. matplotlib.tri.PolyCollection.get_offset_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_offsets.html">37.2.5.46. matplotlib.tri.PolyCollection.get_offsets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_path_effects.html">37.2.5.47. matplotlib.tri.PolyCollection.get_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_paths.html">37.2.5.48. matplotlib.tri.PolyCollection.get_paths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_picker.html">37.2.5.49. matplotlib.tri.PolyCollection.get_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_pickradius.html">37.2.5.50. matplotlib.tri.PolyCollection.get_pickradius</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_rasterized.html">37.2.5.51. matplotlib.tri.PolyCollection.get_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_sizes.html">37.2.5.52. matplotlib.tri.PolyCollection.get_sizes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_sketch_params.html">37.2.5.53. matplotlib.tri.PolyCollection.get_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_snap.html">37.2.5.54. matplotlib.tri.PolyCollection.get_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_transform.html">37.2.5.55. matplotlib.tri.PolyCollection.get_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_transformed_clip_path_and_affine.html">37.2.5.56. matplotlib.tri.PolyCollection.get_transformed_clip_path_and_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_transforms.html">37.2.5.57. matplotlib.tri.PolyCollection.get_transforms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_url.html">37.2.5.58. matplotlib.tri.PolyCollection.get_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_urls.html">37.2.5.59. matplotlib.tri.PolyCollection.get_urls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_visible.html">37.2.5.60. matplotlib.tri.PolyCollection.get_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_window_extent.html">37.2.5.61. matplotlib.tri.PolyCollection.get_window_extent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.get_zorder.html">37.2.5.62. matplotlib.tri.PolyCollection.get_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.have_units.html">37.2.5.63. matplotlib.tri.PolyCollection.have_units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.hitlist.html">37.2.5.64. matplotlib.tri.PolyCollection.hitlist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.is_figure_set.html">37.2.5.65. matplotlib.tri.PolyCollection.is_figure_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.is_transform_set.html">37.2.5.66. matplotlib.tri.PolyCollection.is_transform_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.pchanged.html">37.2.5.67. matplotlib.tri.PolyCollection.pchanged</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.pick.html">37.2.5.68. matplotlib.tri.PolyCollection.pick</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.pickable.html">37.2.5.69. matplotlib.tri.PolyCollection.pickable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.properties.html">37.2.5.70. matplotlib.tri.PolyCollection.properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.remove.html">37.2.5.71. matplotlib.tri.PolyCollection.remove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.remove_callback.html">37.2.5.72. matplotlib.tri.PolyCollection.remove_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set.html">37.2.5.73. matplotlib.tri.PolyCollection.set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_agg_filter.html">37.2.5.74. matplotlib.tri.PolyCollection.set_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_alpha.html">37.2.5.75. matplotlib.tri.PolyCollection.set_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_animated.html">37.2.5.76. matplotlib.tri.PolyCollection.set_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_antialiased.html">37.2.5.77. matplotlib.tri.PolyCollection.set_antialiased</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_antialiaseds.html">37.2.5.78. matplotlib.tri.PolyCollection.set_antialiaseds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_array.html">37.2.5.79. matplotlib.tri.PolyCollection.set_array</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_axes.html">37.2.5.80. matplotlib.tri.PolyCollection.set_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_clim.html">37.2.5.81. matplotlib.tri.PolyCollection.set_clim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_clip_box.html">37.2.5.82. matplotlib.tri.PolyCollection.set_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_clip_on.html">37.2.5.83. matplotlib.tri.PolyCollection.set_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_clip_path.html">37.2.5.84. matplotlib.tri.PolyCollection.set_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_cmap.html">37.2.5.85. matplotlib.tri.PolyCollection.set_cmap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_color.html">37.2.5.86. matplotlib.tri.PolyCollection.set_color</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_contains.html">37.2.5.87. matplotlib.tri.PolyCollection.set_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_dashes.html">37.2.5.88. matplotlib.tri.PolyCollection.set_dashes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_edgecolor.html">37.2.5.89. matplotlib.tri.PolyCollection.set_edgecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_edgecolors.html">37.2.5.90. matplotlib.tri.PolyCollection.set_edgecolors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_facecolor.html">37.2.5.91. matplotlib.tri.PolyCollection.set_facecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_facecolors.html">37.2.5.92. matplotlib.tri.PolyCollection.set_facecolors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_figure.html">37.2.5.93. matplotlib.tri.PolyCollection.set_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_gid.html">37.2.5.94. matplotlib.tri.PolyCollection.set_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_hatch.html">37.2.5.95. matplotlib.tri.PolyCollection.set_hatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_label.html">37.2.5.96. matplotlib.tri.PolyCollection.set_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_linestyle.html">37.2.5.97. matplotlib.tri.PolyCollection.set_linestyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_linestyles.html">37.2.5.98. matplotlib.tri.PolyCollection.set_linestyles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_linewidth.html">37.2.5.99. matplotlib.tri.PolyCollection.set_linewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_linewidths.html">37.2.5.100. matplotlib.tri.PolyCollection.set_linewidths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_lw.html">37.2.5.101. matplotlib.tri.PolyCollection.set_lw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_norm.html">37.2.5.102. matplotlib.tri.PolyCollection.set_norm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_offset_position.html">37.2.5.103. matplotlib.tri.PolyCollection.set_offset_position</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_offsets.html">37.2.5.104. matplotlib.tri.PolyCollection.set_offsets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_path_effects.html">37.2.5.105. matplotlib.tri.PolyCollection.set_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_paths.html">37.2.5.106. matplotlib.tri.PolyCollection.set_paths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_picker.html">37.2.5.107. matplotlib.tri.PolyCollection.set_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_pickradius.html">37.2.5.108. matplotlib.tri.PolyCollection.set_pickradius</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_rasterized.html">37.2.5.109. matplotlib.tri.PolyCollection.set_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_sizes.html">37.2.5.110. matplotlib.tri.PolyCollection.set_sizes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_sketch_params.html">37.2.5.111. matplotlib.tri.PolyCollection.set_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_snap.html">37.2.5.112. matplotlib.tri.PolyCollection.set_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_transform.html">37.2.5.113. matplotlib.tri.PolyCollection.set_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_url.html">37.2.5.114. matplotlib.tri.PolyCollection.set_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_urls.html">37.2.5.115. matplotlib.tri.PolyCollection.set_urls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_verts.html">37.2.5.116. matplotlib.tri.PolyCollection.set_verts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_verts_and_codes.html">37.2.5.117. matplotlib.tri.PolyCollection.set_verts_and_codes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_visible.html">37.2.5.118. matplotlib.tri.PolyCollection.set_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.set_zorder.html">37.2.5.119. matplotlib.tri.PolyCollection.set_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.to_rgba.html">37.2.5.120. matplotlib.tri.PolyCollection.to_rgba</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.update.html">37.2.5.121. matplotlib.tri.PolyCollection.update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.update_from.html">37.2.5.122. matplotlib.tri.PolyCollection.update_from</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.PolyCollection.update_scalarmappable.html">37.2.5.123. matplotlib.tri.PolyCollection.update_scalarmappable</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.tri.TrapezoidMapTriFinder.html">37.2.6. matplotlib.tri.TrapezoidMapTriFinder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.tri.TriAnalyzer.html">37.2.7. matplotlib.tri.TriAnalyzer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.tri.TriContourSet.html">37.2.8. matplotlib.tri.TriContourSet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.tri.TriFinder.html">37.2.9. matplotlib.tri.TriFinder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.tri.TriInterpolator.html">37.2.10. matplotlib.tri.TriInterpolator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.tri.TriMesh.html">37.2.11. matplotlib.tri.TriMesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.tri.TriRefiner.html">37.2.12. matplotlib.tri.TriRefiner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.tri.Triangulation.html">37.2.13. matplotlib.tri.Triangulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.tri.UniformTriRefiner.html">37.2.14. matplotlib.tri.UniformTriRefiner</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../infreq.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.tri.html">37. matplotlib.tri</a> &raquo;</li>
+        
+      <li>37.2.5. matplotlib.tri.PolyCollection</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.tri.PolyCollection.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-tri-polycollection">
+<h1>37.2.5. matplotlib.tri.PolyCollection<a class="headerlink" href="#matplotlib-tri-polycollection" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="matplotlib.tri.PolyCollection">
+<em class="property">class </em><code class="descclassname">matplotlib.tri.</code><code class="descname">PolyCollection</code><span class="sig-paren">(</span><em>verts</em>, <em>sizes=None</em>, <em>closed=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/collections.html#PolyCollection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.tri.PolyCollection" title="Permalink to this definition">¶</a></dt>
+<dd><p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.axes.html#matplotlib.tri.PolyCollection.axes" title="matplotlib.tri.PolyCollection.axes"><code class="xref py py-obj docutils literal"><span class="pre">axes</span></code></a></td>
+<td>The <a class="reference internal" href="matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instance the artist resides in, or <em>None</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.mouseover.html#matplotlib.tri.PolyCollection.mouseover" title="matplotlib.tri.PolyCollection.mouseover"><code class="xref py py-obj docutils literal"><span class="pre">mouseover</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.stale.html#matplotlib.tri.PolyCollection.stale" title="matplotlib.tri.PolyCollection.stale"><code class="xref py py-obj docutils literal"><span class="pre">stale</span></code></a></td>
+<td>If the artist is &#8216;stale&#8217; and needs to be re-drawn for the output to match the internal state of the artist.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.add_callback.html#matplotlib.tri.PolyCollection.add_callback" title="matplotlib.tri.PolyCollection.add_callback"><code class="xref py py-obj docutils literal"><span class="pre">add_callback</span></code></a>(func)</td>
+<td>Adds a callback function that will be called whenever one of the <code class="xref py py-class docutils literal"><span class="pre">Artist</span></code>&#8216;s properties changes.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.add_checker.html#matplotlib.tri.PolyCollection.add_checker" title="matplotlib.tri.PolyCollection.add_checker"><code class="xref py py-obj docutils literal"><span class="pre">add_checker</span></code></a>(checker)</td>
+<td>Add an entry to a dictionary of boolean flags that are set to True when the mappable is changed.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.autoscale.html#matplotlib.tri.PolyCollection.autoscale" title="matplotlib.tri.PolyCollection.autoscale"><code class="xref py py-obj docutils literal"><span class="pre">autoscale</span></code></a>()</td>
+<td>Autoscale the scalar limits on the norm instance using the</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.autoscale_None.html#matplotlib.tri.PolyCollection.autoscale_None" title="matplotlib.tri.PolyCollection.autoscale_None"><code class="xref py py-obj docutils literal"><span class="pre">autoscale_None</span></code></a>()</td>
+<td>Autoscale the scalar limits on the norm instance using the</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.changed.html#matplotlib.tri.PolyCollection.changed" title="matplotlib.tri.PolyCollection.changed"><code class="xref py py-obj docutils literal"><span class="pre">changed</span></code></a>()</td>
+<td>Call this whenever the mappable is changed to notify all the</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.check_update.html#matplotlib.tri.PolyCollection.check_update" title="matplotlib.tri.PolyCollection.check_update"><code class="xref py py-obj docutils literal"><span class="pre">check_update</span></code></a>(checker)</td>
+<td>If mappable has changed since the last check,</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.contains.html#matplotlib.tri.PolyCollection.contains" title="matplotlib.tri.PolyCollection.contains"><code class="xref py py-obj docutils literal"><span class="pre">contains</span></code></a>(mouseevent)</td>
+<td>Test whether the mouse event occurred in the collection.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.convert_xunits.html#matplotlib.tri.PolyCollection.convert_xunits" title="matplotlib.tri.PolyCollection.convert_xunits"><code class="xref py py-obj docutils literal"><span class="pre">convert_xunits</span></code></a>(x)</td>
+<td>For artists in an axes, if the xaxis has units support,</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.convert_yunits.html#matplotlib.tri.PolyCollection.convert_yunits" title="matplotlib.tri.PolyCollection.convert_yunits"><code class="xref py py-obj docutils literal"><span class="pre">convert_yunits</span></code></a>(y)</td>
+<td>For artists in an axes, if the yaxis has units support,</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.draw.html#matplotlib.tri.PolyCollection.draw" title="matplotlib.tri.PolyCollection.draw"><code class="xref py py-obj docutils literal"><span class="pre">draw</span></code></a>(artist,&nbsp;renderer,&nbsp;*args,&nbsp;**kwargs)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.findobj.html#matplotlib.tri.PolyCollection.findobj" title="matplotlib.tri.PolyCollection.findobj"><code class="xref py py-obj docutils literal"><span class="pre">findobj</span></code></a>([match,&nbsp;include_self])</td>
+<td>Find artist objects.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.format_cursor_data.html#matplotlib.tri.PolyCollection.format_cursor_data" title="matplotlib.tri.PolyCollection.format_cursor_data"><code class="xref py py-obj docutils literal"><span class="pre">format_cursor_data</span></code></a>(data)</td>
+<td>Return <em>cursor data</em> string formatted.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_agg_filter.html#matplotlib.tri.PolyCollection.get_agg_filter" title="matplotlib.tri.PolyCollection.get_agg_filter"><code class="xref py py-obj docutils literal"><span class="pre">get_agg_filter</span></code></a>()</td>
+<td>return filter function to be used for agg filter</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_alpha.html#matplotlib.tri.PolyCollection.get_alpha" title="matplotlib.tri.PolyCollection.get_alpha"><code class="xref py py-obj docutils literal"><span class="pre">get_alpha</span></code></a>()</td>
+<td>Return the alpha value used for blending - not supported on all</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_animated.html#matplotlib.tri.PolyCollection.get_animated" title="matplotlib.tri.PolyCollection.get_animated"><code class="xref py py-obj docutils literal"><span class="pre">get_animated</span></code></a>()</td>
+<td>Return the artist&#8217;s animated state</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_array.html#matplotlib.tri.PolyCollection.get_array" title="matplotlib.tri.PolyCollection.get_array"><code class="xref py py-obj docutils literal"><span class="pre">get_array</span></code></a>()</td>
+<td>Return the array</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_axes.html#matplotlib.tri.PolyCollection.get_axes" title="matplotlib.tri.PolyCollection.get_axes"><code class="xref py py-obj docutils literal"><span class="pre">get_axes</span></code></a>()</td>
+<td>Return the <a class="reference internal" href="matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instance the artist resides in, or <em>None</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_children.html#matplotlib.tri.PolyCollection.get_children" title="matplotlib.tri.PolyCollection.get_children"><code class="xref py py-obj docutils literal"><span class="pre">get_children</span></code></a>()</td>
+<td>Return a list of the child <code class="xref py py-class docutils literal"><span class="pre">Artist`s</span> <span class="pre">this</span> <span class="pre">:class:`Artist</span></code> contains.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_clim.html#matplotlib.tri.PolyCollection.get_clim" title="matplotlib.tri.PolyCollection.get_clim"><code class="xref py py-obj docutils literal"><span class="pre">get_clim</span></code></a>()</td>
+<td>return the min, max of the color limits for image scaling</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_clip_box.html#matplotlib.tri.PolyCollection.get_clip_box" title="matplotlib.tri.PolyCollection.get_clip_box"><code class="xref py py-obj docutils literal"><span class="pre">get_clip_box</span></code></a>()</td>
+<td>Return artist clipbox</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_clip_on.html#matplotlib.tri.PolyCollection.get_clip_on" title="matplotlib.tri.PolyCollection.get_clip_on"><code class="xref py py-obj docutils literal"><span class="pre">get_clip_on</span></code></a>()</td>
+<td>Return whether artist uses clipping</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_clip_path.html#matplotlib.tri.PolyCollection.get_clip_path" title="matplotlib.tri.PolyCollection.get_clip_path"><code class="xref py py-obj docutils literal"><span class="pre">get_clip_path</span></code></a>()</td>
+<td>Return artist clip path</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_cmap.html#matplotlib.tri.PolyCollection.get_cmap" title="matplotlib.tri.PolyCollection.get_cmap"><code class="xref py py-obj docutils literal"><span class="pre">get_cmap</span></code></a>()</td>
+<td>return the colormap</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_contains.html#matplotlib.tri.PolyCollection.get_contains" title="matplotlib.tri.PolyCollection.get_contains"><code class="xref py py-obj docutils literal"><span class="pre">get_contains</span></code></a>()</td>
+<td>Return the _contains test used by the artist, or <em>None</em> for default.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_cursor_data.html#matplotlib.tri.PolyCollection.get_cursor_data" title="matplotlib.tri.PolyCollection.get_cursor_data"><code class="xref py py-obj docutils literal"><span class="pre">get_cursor_data</span></code></a>(event)</td>
+<td>Get the cursor data for a given event.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_dashes.html#matplotlib.tri.PolyCollection.get_dashes" title="matplotlib.tri.PolyCollection.get_dashes"><code class="xref py py-obj docutils literal"><span class="pre">get_dashes</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_datalim.html#matplotlib.tri.PolyCollection.get_datalim" title="matplotlib.tri.PolyCollection.get_datalim"><code class="xref py py-obj docutils literal"><span class="pre">get_datalim</span></code></a>(transData)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_edgecolor.html#matplotlib.tri.PolyCollection.get_edgecolor" title="matplotlib.tri.PolyCollection.get_edgecolor"><code class="xref py py-obj docutils literal"><span class="pre">get_edgecolor</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_edgecolors.html#matplotlib.tri.PolyCollection.get_edgecolors" title="matplotlib.tri.PolyCollection.get_edgecolors"><code class="xref py py-obj docutils literal"><span class="pre">get_edgecolors</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_facecolor.html#matplotlib.tri.PolyCollection.get_facecolor" title="matplotlib.tri.PolyCollection.get_facecolor"><code class="xref py py-obj docutils literal"><span class="pre">get_facecolor</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_facecolors.html#matplotlib.tri.PolyCollection.get_facecolors" title="matplotlib.tri.PolyCollection.get_facecolors"><code class="xref py py-obj docutils literal"><span class="pre">get_facecolors</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_figure.html#matplotlib.tri.PolyCollection.get_figure" title="matplotlib.tri.PolyCollection.get_figure"><code class="xref py py-obj docutils literal"><span class="pre">get_figure</span></code></a>()</td>
+<td>Return the <a class="reference internal" href="matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure"><code class="xref py py-class docutils literal"><span class="pre">Figure</span></code></a> instance the artist belongs to.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_fill.html#matplotlib.tri.PolyCollection.get_fill" title="matplotlib.tri.PolyCollection.get_fill"><code class="xref py py-obj docutils literal"><span class="pre">get_fill</span></code></a>()</td>
+<td>return whether fill is set</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_gid.html#matplotlib.tri.PolyCollection.get_gid" title="matplotlib.tri.PolyCollection.get_gid"><code class="xref py py-obj docutils literal"><span class="pre">get_gid</span></code></a>()</td>
+<td>Returns the group id</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_hatch.html#matplotlib.tri.PolyCollection.get_hatch" title="matplotlib.tri.PolyCollection.get_hatch"><code class="xref py py-obj docutils literal"><span class="pre">get_hatch</span></code></a>()</td>
+<td>Return the current hatching pattern</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_label.html#matplotlib.tri.PolyCollection.get_label" title="matplotlib.tri.PolyCollection.get_label"><code class="xref py py-obj docutils literal"><span class="pre">get_label</span></code></a>()</td>
+<td>Get the label used for this artist in the legend.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_linestyle.html#matplotlib.tri.PolyCollection.get_linestyle" title="matplotlib.tri.PolyCollection.get_linestyle"><code class="xref py py-obj docutils literal"><span class="pre">get_linestyle</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_linestyles.html#matplotlib.tri.PolyCollection.get_linestyles" title="matplotlib.tri.PolyCollection.get_linestyles"><code class="xref py py-obj docutils literal"><span class="pre">get_linestyles</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_linewidth.html#matplotlib.tri.PolyCollection.get_linewidth" title="matplotlib.tri.PolyCollection.get_linewidth"><code class="xref py py-obj docutils literal"><span class="pre">get_linewidth</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_linewidths.html#matplotlib.tri.PolyCollection.get_linewidths" title="matplotlib.tri.PolyCollection.get_linewidths"><code class="xref py py-obj docutils literal"><span class="pre">get_linewidths</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_offset_position.html#matplotlib.tri.PolyCollection.get_offset_position" title="matplotlib.tri.PolyCollection.get_offset_position"><code class="xref py py-obj docutils literal"><span class="pre">get_offset_position</span></code></a>()</td>
+<td>Returns how offsets are applied for the collection.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_offset_transform.html#matplotlib.tri.PolyCollection.get_offset_transform" title="matplotlib.tri.PolyCollection.get_offset_transform"><code class="xref py py-obj docutils literal"><span class="pre">get_offset_transform</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_offsets.html#matplotlib.tri.PolyCollection.get_offsets" title="matplotlib.tri.PolyCollection.get_offsets"><code class="xref py py-obj docutils literal"><span class="pre">get_offsets</span></code></a>()</td>
+<td>Return the offsets for the collection.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_path_effects.html#matplotlib.tri.PolyCollection.get_path_effects" title="matplotlib.tri.PolyCollection.get_path_effects"><code class="xref py py-obj docutils literal"><span class="pre">get_path_effects</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_paths.html#matplotlib.tri.PolyCollection.get_paths" title="matplotlib.tri.PolyCollection.get_paths"><code class="xref py py-obj docutils literal"><span class="pre">get_paths</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_picker.html#matplotlib.tri.PolyCollection.get_picker" title="matplotlib.tri.PolyCollection.get_picker"><code class="xref py py-obj docutils literal"><span class="pre">get_picker</span></code></a>()</td>
+<td>Return the picker object used by this artist</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_pickradius.html#matplotlib.tri.PolyCollection.get_pickradius" title="matplotlib.tri.PolyCollection.get_pickradius"><code class="xref py py-obj docutils literal"><span class="pre">get_pickradius</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_rasterized.html#matplotlib.tri.PolyCollection.get_rasterized" title="matplotlib.tri.PolyCollection.get_rasterized"><code class="xref py py-obj docutils literal"><span class="pre">get_rasterized</span></code></a>()</td>
+<td>return True if the artist is to be rasterized</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_sizes.html#matplotlib.tri.PolyCollection.get_sizes" title="matplotlib.tri.PolyCollection.get_sizes"><code class="xref py py-obj docutils literal"><span class="pre">get_sizes</span></code></a>()</td>
+<td>Returns the sizes of the elements in the collection.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_sketch_params.html#matplotlib.tri.PolyCollection.get_sketch_params" title="matplotlib.tri.PolyCollection.get_sketch_params"><code class="xref py py-obj docutils literal"><span class="pre">get_sketch_params</span></code></a>()</td>
+<td>Returns the sketch parameters for the artist.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_snap.html#matplotlib.tri.PolyCollection.get_snap" title="matplotlib.tri.PolyCollection.get_snap"><code class="xref py py-obj docutils literal"><span class="pre">get_snap</span></code></a>()</td>
+<td>Returns the snap setting which may be:</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_transform.html#matplotlib.tri.PolyCollection.get_transform" title="matplotlib.tri.PolyCollection.get_transform"><code class="xref py py-obj docutils literal"><span class="pre">get_transform</span></code></a>()</td>
+<td>Return the <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code> instance used by this artist.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_transformed_clip_path_and_affine.html#matplotlib.tri.PolyCollection.get_transformed_clip_path_and_affine" title="matplotlib.tri.PolyCollection.get_transformed_clip_path_and_affine"><code class="xref py py-obj docutils literal"><span class="pre">get_transformed_clip_path_and_affine</span></code></a>()</td>
+<td>Return the clip path with the non-affine part of its transformation applied, and the remaining affine part of its transformation.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_transforms.html#matplotlib.tri.PolyCollection.get_transforms" title="matplotlib.tri.PolyCollection.get_transforms"><code class="xref py py-obj docutils literal"><span class="pre">get_transforms</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_url.html#matplotlib.tri.PolyCollection.get_url" title="matplotlib.tri.PolyCollection.get_url"><code class="xref py py-obj docutils literal"><span class="pre">get_url</span></code></a>()</td>
+<td>Returns the url</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_urls.html#matplotlib.tri.PolyCollection.get_urls" title="matplotlib.tri.PolyCollection.get_urls"><code class="xref py py-obj docutils literal"><span class="pre">get_urls</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_visible.html#matplotlib.tri.PolyCollection.get_visible" title="matplotlib.tri.PolyCollection.get_visible"><code class="xref py py-obj docutils literal"><span class="pre">get_visible</span></code></a>()</td>
+<td>Return the artist&#8217;s visiblity</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_window_extent.html#matplotlib.tri.PolyCollection.get_window_extent" title="matplotlib.tri.PolyCollection.get_window_extent"><code class="xref py py-obj docutils literal"><span class="pre">get_window_extent</span></code></a>(renderer)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.get_zorder.html#matplotlib.tri.PolyCollection.get_zorder" title="matplotlib.tri.PolyCollection.get_zorder"><code class="xref py py-obj docutils literal"><span class="pre">get_zorder</span></code></a>()</td>
+<td>Return the <code class="xref py py-class docutils literal"><span class="pre">Artist</span></code>&#8216;s zorder.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.have_units.html#matplotlib.tri.PolyCollection.have_units" title="matplotlib.tri.PolyCollection.have_units"><code class="xref py py-obj docutils literal"><span class="pre">have_units</span></code></a>()</td>
+<td>Return <em>True</em> if units are set on the <em>x</em> or <em>y</em> axes</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.hitlist.html#matplotlib.tri.PolyCollection.hitlist" title="matplotlib.tri.PolyCollection.hitlist"><code class="xref py py-obj docutils literal"><span class="pre">hitlist</span></code></a>(event)</td>
+<td>List the children of the artist which contain the mouse event <em>event</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.is_figure_set.html#matplotlib.tri.PolyCollection.is_figure_set" title="matplotlib.tri.PolyCollection.is_figure_set"><code class="xref py py-obj docutils literal"><span class="pre">is_figure_set</span></code></a>()</td>
+<td>Returns True if the artist is assigned to a <a class="reference internal" href="matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure"><code class="xref py py-class docutils literal"><span class="pre">Figure</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.is_transform_set.html#matplotlib.tri.PolyCollection.is_transform_set" title="matplotlib.tri.PolyCollection.is_transform_set"><code class="xref py py-obj docutils literal"><span class="pre">is_transform_set</span></code></a>()</td>
+<td>Returns <em>True</em> if <code class="xref py py-class docutils literal"><span class="pre">Artist</span></code> has a transform explicitly set.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.pchanged.html#matplotlib.tri.PolyCollection.pchanged" title="matplotlib.tri.PolyCollection.pchanged"><code class="xref py py-obj docutils literal"><span class="pre">pchanged</span></code></a>()</td>
+<td>Fire an event when property changed, calling all of the registered callbacks.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.pick.html#matplotlib.tri.PolyCollection.pick" title="matplotlib.tri.PolyCollection.pick"><code class="xref py py-obj docutils literal"><span class="pre">pick</span></code></a>(mouseevent)</td>
+<td>call signature:</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.pickable.html#matplotlib.tri.PolyCollection.pickable" title="matplotlib.tri.PolyCollection.pickable"><code class="xref py py-obj docutils literal"><span class="pre">pickable</span></code></a>()</td>
+<td>Return <em>True</em> if <code class="xref py py-class docutils literal"><span class="pre">Artist</span></code> is pickable.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.properties.html#matplotlib.tri.PolyCollection.properties" title="matplotlib.tri.PolyCollection.properties"><code class="xref py py-obj docutils literal"><span class="pre">properties</span></code></a>()</td>
+<td>return a dictionary mapping property name -&gt; value for all Artist props</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.remove.html#matplotlib.tri.PolyCollection.remove" title="matplotlib.tri.PolyCollection.remove"><code class="xref py py-obj docutils literal"><span class="pre">remove</span></code></a>()</td>
+<td>Remove the artist from the figure if possible.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.remove_callback.html#matplotlib.tri.PolyCollection.remove_callback" title="matplotlib.tri.PolyCollection.remove_callback"><code class="xref py py-obj docutils literal"><span class="pre">remove_callback</span></code></a>(oid)</td>
+<td>Remove a callback based on its <em>id</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set.html#matplotlib.tri.PolyCollection.set" title="matplotlib.tri.PolyCollection.set"><code class="xref py py-obj docutils literal"><span class="pre">set</span></code></a>(**kwargs)</td>
+<td>A property batch setter.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_agg_filter.html#matplotlib.tri.PolyCollection.set_agg_filter" title="matplotlib.tri.PolyCollection.set_agg_filter"><code class="xref py py-obj docutils literal"><span class="pre">set_agg_filter</span></code></a>(filter_func)</td>
+<td>set agg_filter fuction.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_alpha.html#matplotlib.tri.PolyCollection.set_alpha" title="matplotlib.tri.PolyCollection.set_alpha"><code class="xref py py-obj docutils literal"><span class="pre">set_alpha</span></code></a>(alpha)</td>
+<td>Set the alpha tranparencies of the collection.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_animated.html#matplotlib.tri.PolyCollection.set_animated" title="matplotlib.tri.PolyCollection.set_animated"><code class="xref py py-obj docutils literal"><span class="pre">set_animated</span></code></a>(b)</td>
+<td>Set the artist&#8217;s animation state.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_antialiased.html#matplotlib.tri.PolyCollection.set_antialiased" title="matplotlib.tri.PolyCollection.set_antialiased"><code class="xref py py-obj docutils literal"><span class="pre">set_antialiased</span></code></a>(aa)</td>
+<td>Set the antialiasing state for rendering.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_antialiaseds.html#matplotlib.tri.PolyCollection.set_antialiaseds" title="matplotlib.tri.PolyCollection.set_antialiaseds"><code class="xref py py-obj docutils literal"><span class="pre">set_antialiaseds</span></code></a>(aa)</td>
+<td>alias for set_antialiased</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_array.html#matplotlib.tri.PolyCollection.set_array" title="matplotlib.tri.PolyCollection.set_array"><code class="xref py py-obj docutils literal"><span class="pre">set_array</span></code></a>(A)</td>
+<td>Set the image array from numpy array <em>A</em></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_axes.html#matplotlib.tri.PolyCollection.set_axes" title="matplotlib.tri.PolyCollection.set_axes"><code class="xref py py-obj docutils literal"><span class="pre">set_axes</span></code></a>(axes)</td>
+<td>Set the <a class="reference internal" href="matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instance in which the artist resides, if any.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_clim.html#matplotlib.tri.PolyCollection.set_clim" title="matplotlib.tri.PolyCollection.set_clim"><code class="xref py py-obj docutils literal"><span class="pre">set_clim</span></code></a>([vmin,&nbsp;vmax])</td>
+<td>set the norm limits for image scaling; if <em>vmin</em> is a length2</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_clip_box.html#matplotlib.tri.PolyCollection.set_clip_box" title="matplotlib.tri.PolyCollection.set_clip_box"><code class="xref py py-obj docutils literal"><span class="pre">set_clip_box</span></code></a>(clipbox)</td>
+<td>Set the artist&#8217;s clip <code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_clip_on.html#matplotlib.tri.PolyCollection.set_clip_on" title="matplotlib.tri.PolyCollection.set_clip_on"><code class="xref py py-obj docutils literal"><span class="pre">set_clip_on</span></code></a>(b)</td>
+<td>Set whether artist uses clipping.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_clip_path.html#matplotlib.tri.PolyCollection.set_clip_path" title="matplotlib.tri.PolyCollection.set_clip_path"><code class="xref py py-obj docutils literal"><span class="pre">set_clip_path</span></code></a>(path[,&nbsp;transform])</td>
+<td>Set the artist&#8217;s clip path, which may be:</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_cmap.html#matplotlib.tri.PolyCollection.set_cmap" title="matplotlib.tri.PolyCollection.set_cmap"><code class="xref py py-obj docutils literal"><span class="pre">set_cmap</span></code></a>(cmap)</td>
+<td>set the colormap for luminance data</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_color.html#matplotlib.tri.PolyCollection.set_color" title="matplotlib.tri.PolyCollection.set_color"><code class="xref py py-obj docutils literal"><span class="pre">set_color</span></code></a>(c)</td>
+<td>Set both the edgecolor and the facecolor.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_contains.html#matplotlib.tri.PolyCollection.set_contains" title="matplotlib.tri.PolyCollection.set_contains"><code class="xref py py-obj docutils literal"><span class="pre">set_contains</span></code></a>(picker)</td>
+<td>Replace the contains test used by this artist.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_dashes.html#matplotlib.tri.PolyCollection.set_dashes" title="matplotlib.tri.PolyCollection.set_dashes"><code class="xref py py-obj docutils literal"><span class="pre">set_dashes</span></code></a>(ls)</td>
+<td>alias for set_linestyle</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_edgecolor.html#matplotlib.tri.PolyCollection.set_edgecolor" title="matplotlib.tri.PolyCollection.set_edgecolor"><code class="xref py py-obj docutils literal"><span class="pre">set_edgecolor</span></code></a>(c)</td>
+<td>Set the edgecolor(s) of the collection.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_edgecolors.html#matplotlib.tri.PolyCollection.set_edgecolors" title="matplotlib.tri.PolyCollection.set_edgecolors"><code class="xref py py-obj docutils literal"><span class="pre">set_edgecolors</span></code></a>(c)</td>
+<td>alias for set_edgecolor</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_facecolor.html#matplotlib.tri.PolyCollection.set_facecolor" title="matplotlib.tri.PolyCollection.set_facecolor"><code class="xref py py-obj docutils literal"><span class="pre">set_facecolor</span></code></a>(c)</td>
+<td>Set the facecolor(s) of the collection.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_facecolors.html#matplotlib.tri.PolyCollection.set_facecolors" title="matplotlib.tri.PolyCollection.set_facecolors"><code class="xref py py-obj docutils literal"><span class="pre">set_facecolors</span></code></a>(c)</td>
+<td>alias for set_facecolor</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_figure.html#matplotlib.tri.PolyCollection.set_figure" title="matplotlib.tri.PolyCollection.set_figure"><code class="xref py py-obj docutils literal"><span class="pre">set_figure</span></code></a>(fig)</td>
+<td>Set the <a class="reference internal" href="matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure"><code class="xref py py-class docutils literal"><span class="pre">Figure</span></code></a> instance the artist belongs to.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_gid.html#matplotlib.tri.PolyCollection.set_gid" title="matplotlib.tri.PolyCollection.set_gid"><code class="xref py py-obj docutils literal"><span class="pre">set_gid</span></code></a>(gid)</td>
+<td>Sets the (group) id for the artist</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_hatch.html#matplotlib.tri.PolyCollection.set_hatch" title="matplotlib.tri.PolyCollection.set_hatch"><code class="xref py py-obj docutils literal"><span class="pre">set_hatch</span></code></a>(hatch)</td>
+<td>Set the hatching pattern</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_label.html#matplotlib.tri.PolyCollection.set_label" title="matplotlib.tri.PolyCollection.set_label"><code class="xref py py-obj docutils literal"><span class="pre">set_label</span></code></a>(s)</td>
+<td>Set the label to <em>s</em> for auto legend.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_linestyle.html#matplotlib.tri.PolyCollection.set_linestyle" title="matplotlib.tri.PolyCollection.set_linestyle"><code class="xref py py-obj docutils literal"><span class="pre">set_linestyle</span></code></a>(ls)</td>
+<td>Set the linestyle(s) for the collection.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_linestyles.html#matplotlib.tri.PolyCollection.set_linestyles" title="matplotlib.tri.PolyCollection.set_linestyles"><code class="xref py py-obj docutils literal"><span class="pre">set_linestyles</span></code></a>(ls)</td>
+<td>alias for set_linestyle</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_linewidth.html#matplotlib.tri.PolyCollection.set_linewidth" title="matplotlib.tri.PolyCollection.set_linewidth"><code class="xref py py-obj docutils literal"><span class="pre">set_linewidth</span></code></a>(lw)</td>
+<td>Set the linewidth(s) for the collection.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_linewidths.html#matplotlib.tri.PolyCollection.set_linewidths" title="matplotlib.tri.PolyCollection.set_linewidths"><code class="xref py py-obj docutils literal"><span class="pre">set_linewidths</span></code></a>(lw)</td>
+<td>alias for set_linewidth</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_lw.html#matplotlib.tri.PolyCollection.set_lw" title="matplotlib.tri.PolyCollection.set_lw"><code class="xref py py-obj docutils literal"><span class="pre">set_lw</span></code></a>(lw)</td>
+<td>alias for set_linewidth</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_norm.html#matplotlib.tri.PolyCollection.set_norm" title="matplotlib.tri.PolyCollection.set_norm"><code class="xref py py-obj docutils literal"><span class="pre">set_norm</span></code></a>(norm)</td>
+<td>set the normalization instance</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_offset_position.html#matplotlib.tri.PolyCollection.set_offset_position" title="matplotlib.tri.PolyCollection.set_offset_position"><code class="xref py py-obj docutils literal"><span class="pre">set_offset_position</span></code></a>(offset_position)</td>
+<td>Set how offsets are applied.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_offsets.html#matplotlib.tri.PolyCollection.set_offsets" title="matplotlib.tri.PolyCollection.set_offsets"><code class="xref py py-obj docutils literal"><span class="pre">set_offsets</span></code></a>(offsets)</td>
+<td>Set the offsets for the collection.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_path_effects.html#matplotlib.tri.PolyCollection.set_path_effects" title="matplotlib.tri.PolyCollection.set_path_effects"><code class="xref py py-obj docutils literal"><span class="pre">set_path_effects</span></code></a>(path_effects)</td>
+<td>set path_effects, which should be a list of instances of</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_paths.html#matplotlib.tri.PolyCollection.set_paths" title="matplotlib.tri.PolyCollection.set_paths"><code class="xref py py-obj docutils literal"><span class="pre">set_paths</span></code></a>(verts[,&nbsp;closed])</td>
+<td>This allows one to delay initialization of the vertices.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_picker.html#matplotlib.tri.PolyCollection.set_picker" title="matplotlib.tri.PolyCollection.set_picker"><code class="xref py py-obj docutils literal"><span class="pre">set_picker</span></code></a>(picker)</td>
+<td>Set the epsilon for picking used by this artist</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_pickradius.html#matplotlib.tri.PolyCollection.set_pickradius" title="matplotlib.tri.PolyCollection.set_pickradius"><code class="xref py py-obj docutils literal"><span class="pre">set_pickradius</span></code></a>(pr)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_rasterized.html#matplotlib.tri.PolyCollection.set_rasterized" title="matplotlib.tri.PolyCollection.set_rasterized"><code class="xref py py-obj docutils literal"><span class="pre">set_rasterized</span></code></a>(rasterized)</td>
+<td>Force rasterized (bitmap) drawing in vector backend output.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_sizes.html#matplotlib.tri.PolyCollection.set_sizes" title="matplotlib.tri.PolyCollection.set_sizes"><code class="xref py py-obj docutils literal"><span class="pre">set_sizes</span></code></a>(sizes[,&nbsp;dpi])</td>
+<td>Set the sizes of each member of the collection.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_sketch_params.html#matplotlib.tri.PolyCollection.set_sketch_params" title="matplotlib.tri.PolyCollection.set_sketch_params"><code class="xref py py-obj docutils literal"><span class="pre">set_sketch_params</span></code></a>([scale,&nbsp;length,&nbsp;randomness])</td>
+<td>Sets the sketch parameters.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_snap.html#matplotlib.tri.PolyCollection.set_snap" title="matplotlib.tri.PolyCollection.set_snap"><code class="xref py py-obj docutils literal"><span class="pre">set_snap</span></code></a>(snap)</td>
+<td>Sets the snap setting which may be:</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_transform.html#matplotlib.tri.PolyCollection.set_transform" title="matplotlib.tri.PolyCollection.set_transform"><code class="xref py py-obj docutils literal"><span class="pre">set_transform</span></code></a>(t)</td>
+<td>Set the <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code> instance used by this artist.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_url.html#matplotlib.tri.PolyCollection.set_url" title="matplotlib.tri.PolyCollection.set_url"><code class="xref py py-obj docutils literal"><span class="pre">set_url</span></code></a>(url)</td>
+<td>Sets the url for the artist</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_urls.html#matplotlib.tri.PolyCollection.set_urls" title="matplotlib.tri.PolyCollection.set_urls"><code class="xref py py-obj docutils literal"><span class="pre">set_urls</span></code></a>(urls)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_verts.html#matplotlib.tri.PolyCollection.set_verts" title="matplotlib.tri.PolyCollection.set_verts"><code class="xref py py-obj docutils literal"><span class="pre">set_verts</span></code></a>(verts[,&nbsp;closed])</td>
+<td>This allows one to delay initialization of the vertices.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_verts_and_codes.html#matplotlib.tri.PolyCollection.set_verts_and_codes" title="matplotlib.tri.PolyCollection.set_verts_and_codes"><code class="xref py py-obj docutils literal"><span class="pre">set_verts_and_codes</span></code></a>(verts,&nbsp;codes)</td>
+<td>This allows one to initialize vertices with path codes.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_visible.html#matplotlib.tri.PolyCollection.set_visible" title="matplotlib.tri.PolyCollection.set_visible"><code class="xref py py-obj docutils literal"><span class="pre">set_visible</span></code></a>(b)</td>
+<td>Set the artist&#8217;s visiblity.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.set_zorder.html#matplotlib.tri.PolyCollection.set_zorder" title="matplotlib.tri.PolyCollection.set_zorder"><code class="xref py py-obj docutils literal"><span class="pre">set_zorder</span></code></a>(level)</td>
+<td>Set the zorder for the artist.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.to_rgba.html#matplotlib.tri.PolyCollection.to_rgba" title="matplotlib.tri.PolyCollection.to_rgba"><code class="xref py py-obj docutils literal"><span class="pre">to_rgba</span></code></a>(x[,&nbsp;alpha,&nbsp;bytes])</td>
+<td>Return a normalized rgba array corresponding to <em>x</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.update.html#matplotlib.tri.PolyCollection.update" title="matplotlib.tri.PolyCollection.update"><code class="xref py py-obj docutils literal"><span class="pre">update</span></code></a>(props)</td>
+<td>Update the properties of this <code class="xref py py-class docutils literal"><span class="pre">Artist</span></code> from the dictionary <em>prop</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.update_from.html#matplotlib.tri.PolyCollection.update_from" title="matplotlib.tri.PolyCollection.update_from"><code class="xref py py-obj docutils literal"><span class="pre">update_from</span></code></a>(other)</td>
+<td>copy properties from other to self</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.PolyCollection.update_scalarmappable.html#matplotlib.tri.PolyCollection.update_scalarmappable" title="matplotlib.tri.PolyCollection.update_scalarmappable"><code class="xref py py-obj docutils literal"><span class="pre">update_scalarmappable</span></code></a>()</td>
+<td>If the scalar mappable array is not none, update colors</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.tri.PolyCollection.axes.html" class="btn btn-neutral float-right" title="37.2.5.1. matplotlib.tri.PolyCollection.axes" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.tri.Normalize.scaled.html" class="btn btn-neutral" title="37.2.4.5. matplotlib.tri.Normalize.scaled" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

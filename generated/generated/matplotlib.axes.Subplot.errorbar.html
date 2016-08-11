@@ -1,0 +1,387 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>matplotlib.axes.Subplot.errorbar &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>matplotlib.axes.Subplot.errorbar</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.axes.Subplot.errorbar.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-axes-subplot-errorbar">
+<h1>matplotlib.axes.Subplot.errorbar<a class="headerlink" href="#matplotlib-axes-subplot-errorbar" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="matplotlib.axes.Subplot.errorbar">
+<code class="descclassname">Subplot.</code><code class="descname">errorbar</code><span class="sig-paren">(</span><em>ax</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.axes.Subplot.errorbar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot an errorbar graph.</p>
+<p>Call signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">errorbar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">xerr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+         <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ecolor</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">elinewidth</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">capsize</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+         <span class="n">barsabove</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">lolims</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">uplims</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+         <span class="n">xlolims</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">xuplims</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">errorevery</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+         <span class="n">capthick</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Plot <em>x</em> versus <em>y</em> with error deltas in <em>yerr</em> and <em>xerr</em>.
+Vertical errorbars are plotted if <em>yerr</em> is not <em>None</em>.
+Horizontal errorbars are plotted if <em>xerr</em> is not <em>None</em>.</p>
+<p><em>x</em>, <em>y</em>, <em>xerr</em>, and <em>yerr</em> can all be scalars, which plots a
+single error bar at <em>x</em>, <em>y</em>.</p>
+<p>Optional keyword arguments:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt><em>xerr</em>/<em>yerr</em>: [ scalar | N, Nx1, or 2xN array-like ]</dt>
+<dd><p class="first">If a scalar number, len(N) array-like object, or an Nx1
+array-like object, errorbars are drawn at +/-value relative
+to the data.</p>
+<p class="last">If a sequence of shape 2xN, errorbars are drawn at -row1
+and +row2 relative to the data.</p>
+</dd>
+<dt><em>fmt</em>: [ &#8216;&#8217; | &#8216;none&#8217; | plot format string ]</dt>
+<dd>The plot format symbol. If <em>fmt</em> is &#8216;none&#8217; (case-insensitive),
+only the errorbars are plotted.  This is used for adding
+errorbars to a bar plot, for example.  Default is &#8216;&#8217;,
+an empty plot format string; properties are
+then identical to the defaults for <a class="reference internal" href="matplotlib.axes.Subplot.plot.html#matplotlib.axes.Subplot.plot" title="matplotlib.axes.Subplot.plot"><code class="xref py py-meth docutils literal"><span class="pre">plot()</span></code></a>.</dd>
+<dt><em>ecolor</em>: [ <em>None</em> | mpl color ]</dt>
+<dd>A matplotlib color arg which gives the color the errorbar lines;
+if <em>None</em>, use the color of the line connecting the markers.</dd>
+<dt><em>elinewidth</em>: scalar</dt>
+<dd>The linewidth of the errorbar lines. If <em>None</em>, use the linewidth.</dd>
+<dt><em>capsize</em>: scalar</dt>
+<dd>The length of the error bar caps in points; if <em>None</em>, it will
+take the value from <code class="docutils literal"><span class="pre">errorbar.capsize</span></code>
+<code class="xref py py-data docutils literal"><span class="pre">rcParam</span></code>.</dd>
+<dt><em>capthick</em>: scalar</dt>
+<dd>An alias kwarg to <em>markeredgewidth</em> (a.k.a. - <em>mew</em>). This
+setting is a more sensible name for the property that
+controls the thickness of the error bar cap in points. For
+backwards compatibility, if <em>mew</em> or <em>markeredgewidth</em> are given,
+then they will over-ride <em>capthick</em>.  This may change in future
+releases.</dd>
+<dt><em>barsabove</em>: [ <em>True</em> | <em>False</em> ]</dt>
+<dd>if <em>True</em>, will plot the errorbars above the plot
+symbols. Default is below.</dd>
+<dt><em>lolims</em> / <em>uplims</em> / <em>xlolims</em> / <em>xuplims</em>: [ <em>False</em> | <em>True</em> ]</dt>
+<dd>These arguments can be used to indicate that a value gives
+only upper/lower limits. In that case a caret symbol is
+used to indicate this. lims-arguments may be of the same
+type as <em>xerr</em> and <em>yerr</em>.  To use limits with inverted
+axes, <a class="reference internal" href="matplotlib.axes.Subplot.set_xlim.html#matplotlib.axes.Subplot.set_xlim" title="matplotlib.axes.Subplot.set_xlim"><code class="xref py py-meth docutils literal"><span class="pre">set_xlim()</span></code></a> or <a class="reference internal" href="matplotlib.axes.Subplot.set_ylim.html#matplotlib.axes.Subplot.set_ylim" title="matplotlib.axes.Subplot.set_ylim"><code class="xref py py-meth docutils literal"><span class="pre">set_ylim()</span></code></a> must be called
+before <a class="reference internal" href="#matplotlib.axes.Subplot.errorbar" title="matplotlib.axes.Subplot.errorbar"><code class="xref py py-meth docutils literal"><span class="pre">errorbar()</span></code></a>.</dd>
+<dt><em>errorevery</em>: positive integer</dt>
+<dd>subsamples the errorbars. e.g., if errorevery=5, errorbars for
+every 5-th datapoint will be plotted. The data plot itself still
+shows all data points.</dd>
+</dl>
+</div></blockquote>
+<p>All other keyword arguments are passed on to the plot command for the
+markers. For example, this code makes big red squares with
+thick green edges:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">yerr</span> <span class="o">=</span> <span class="n">rand</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">errorbar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">yerr</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">,</span>
+         <span class="n">mfc</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">mec</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">mew</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>where <em>mfc</em>, <em>mec</em>, <em>ms</em> and <em>mew</em> are aliases for the longer
+property names, <em>markerfacecolor</em>, <em>markeredgecolor</em>, <em>markersize</em>
+and <em>markeredgewith</em>.</p>
+<p>valid kwargs for the marker properties are</p>
+<blockquote>
+<div>agg_filter: unknown
+alpha: float (0.0 transparent through 1.0 opaque) 
+animated: [True | False] 
+antialiased or aa: [True | False] 
+axes: an <a class="reference internal" href="matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instance 
+clip_box: a <code class="xref py py-class docutils literal"><span class="pre">matplotlib.transforms.Bbox</span></code> instance 
+clip_on: [True | False] 
+clip_path: [ (<a class="reference internal" href="matplotlib.path.Path.html#matplotlib.path.Path" title="matplotlib.path.Path"><code class="xref py py-class docutils literal"><span class="pre">Path</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code>) | <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a> | None ] 
+color or c: any matplotlib color 
+contains: a callable function 
+dash_capstyle: [&#8216;butt&#8217; | &#8216;round&#8217; | &#8216;projecting&#8217;] 
+dash_joinstyle: [&#8216;miter&#8217; | &#8216;round&#8217; | &#8216;bevel&#8217;] 
+dashes: sequence of on/off ink in points 
+drawstyle: [&#8216;default&#8217; | &#8216;steps&#8217; | &#8216;steps-pre&#8217; | &#8216;steps-mid&#8217; | &#8216;steps-post&#8217;] 
+figure: a <a class="reference internal" href="matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure"><code class="xref py py-class docutils literal"><span class="pre">matplotlib.figure.Figure</span></code></a> instance 
+fillstyle: [&#8216;full&#8217; | &#8216;left&#8217; | &#8216;right&#8217; | &#8216;bottom&#8217; | &#8216;top&#8217; | &#8216;none&#8217;] 
+gid: an id string 
+label: string or anything printable with &#8216;%s&#8217; conversion. 
+linestyle or ls: [&#8216;solid&#8217; | &#8216;dashed&#8217;, &#8216;dashdot&#8217;, &#8216;dotted&#8217; | (offset, on-off-dash-seq) | <code class="docutils literal"><span class="pre">'-'</span></code> | <code class="docutils literal"><span class="pre">'--'</span></code> | <code class="docutils literal"><span class="pre">'-.'</span></code> | <code class="docutils literal"><span class="pre">':'</span></code> | <code class="docutils literal"><span class="pre">'None'</span></code> | <code class="docutils literal"><span class="pre">'</span> <span class="pre">'</span></code> | <code class="docutils literal"><span class="pre">''</span></code>]
+linewidth or lw: float value in points 
+marker: <a class="reference internal" href="../matplotlib.markers.html#module-matplotlib.markers" title="matplotlib.markers"><code class="xref py py-mod docutils literal"><span class="pre">A</span> <span class="pre">valid</span> <span class="pre">marker</span> <span class="pre">style</span></code></a>
+markeredgecolor or mec: any matplotlib color 
+markeredgewidth or mew: float value in points 
+markerfacecolor or mfc: any matplotlib color 
+markerfacecoloralt or mfcalt: any matplotlib color 
+markersize or ms: float 
+markevery: [None | int | length-2 tuple of int | slice | list/array of int | float | length-2 tuple of float]
+path_effects: unknown
+picker: float distance in points or callable pick function <code class="docutils literal"><span class="pre">fn(artist,</span> <span class="pre">event)</span></code> 
+pickradius: float distance in points 
+rasterized: [True | False | None] 
+sketch_params: unknown
+snap: unknown
+solid_capstyle: [&#8216;butt&#8217; | &#8216;round&#8217; |  &#8216;projecting&#8217;] 
+solid_joinstyle: [&#8216;miter&#8217; | &#8216;round&#8217; | &#8216;bevel&#8217;] 
+transform: a <code class="xref py py-class docutils literal"><span class="pre">matplotlib.transforms.Transform</span></code> instance 
+url: a url string 
+visible: [True | False] 
+xdata: 1D array 
+ydata: 1D array 
+zorder: any number</div></blockquote>
+<p>Returns (<em>plotline</em>, <em>caplines</em>, <em>barlinecols</em>):</p>
+<blockquote>
+<div><dl class="docutils">
+<dt><em>plotline</em>: <a class="reference internal" href="matplotlib.lines.Line2D.html#matplotlib.lines.Line2D" title="matplotlib.lines.Line2D"><code class="xref py py-class docutils literal"><span class="pre">Line2D</span></code></a> instance</dt>
+<dd><em>x</em>, <em>y</em> plot markers and/or line</dd>
+<dt><em>caplines</em>: list of error bar cap</dt>
+<dd><a class="reference internal" href="matplotlib.lines.Line2D.html#matplotlib.lines.Line2D" title="matplotlib.lines.Line2D"><code class="xref py py-class docutils literal"><span class="pre">Line2D</span></code></a> instances</dd>
+<dt><em>barlinecols</em>: list of</dt>
+<dd><a class="reference internal" href="matplotlib.collections.LineCollection.html#matplotlib.collections.LineCollection" title="matplotlib.collections.LineCollection"><code class="xref py py-class docutils literal"><span class="pre">LineCollection</span></code></a> instances for
+the horizontal and vertical error ranges.</dd>
+</dl>
+</div></blockquote>
+<p><strong>Example:</strong></p>
+<p class="rubric">Notes</p>
+<p>In addition to the above described arguments, this function can take a
+<strong>data</strong> keyword argument. If such a <strong>data</strong> argument is given, the
+following arguments are replaced by <strong>data[&lt;arg&gt;]</strong>:</p>
+<ul class="simple">
+<li>All arguments with the following names: &#8216;y&#8217;, &#8216;x&#8217;, &#8216;yerr&#8217;, &#8216;xerr&#8217;.</li>
+</ul>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

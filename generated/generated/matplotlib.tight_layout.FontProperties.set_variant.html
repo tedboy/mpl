@@ -1,0 +1,303 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>36.2.2.21. matplotlib.tight_layout.FontProperties.set_variant &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="36.2.2. matplotlib.tight_layout.FontProperties" href="matplotlib.tight_layout.FontProperties.html"/>
+        <link rel="next" title="36.2.2.22. matplotlib.tight_layout.FontProperties.set_weight" href="matplotlib.tight_layout.FontProperties.set_weight.html"/>
+        <link rel="prev" title="36.2.2.20. matplotlib.tight_layout.FontProperties.set_style" href="matplotlib.tight_layout.FontProperties.set_style.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.tight_layout.html">36. matplotlib.tight_layout</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.tight_layout.html#functions">36.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.tight_layout.html#classes">36.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.tight_layout.Bbox.html">36.2.1. matplotlib.tight_layout.Bbox</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="matplotlib.tight_layout.FontProperties.html">36.2.2. matplotlib.tight_layout.FontProperties</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tight_layout.FontProperties.copy.html">36.2.2.1. matplotlib.tight_layout.FontProperties.copy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tight_layout.FontProperties.get_family.html">36.2.2.2. matplotlib.tight_layout.FontProperties.get_family</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tight_layout.FontProperties.get_file.html">36.2.2.3. matplotlib.tight_layout.FontProperties.get_file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tight_layout.FontProperties.get_fontconfig_pattern.html">36.2.2.4. matplotlib.tight_layout.FontProperties.get_fontconfig_pattern</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tight_layout.FontProperties.get_name.html">36.2.2.5. matplotlib.tight_layout.FontProperties.get_name</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tight_layout.FontProperties.get_size.html">36.2.2.6. matplotlib.tight_layout.FontProperties.get_size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tight_layout.FontProperties.get_size_in_points.html">36.2.2.7. matplotlib.tight_layout.FontProperties.get_size_in_points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tight_layout.FontProperties.get_slant.html">36.2.2.8. matplotlib.tight_layout.FontProperties.get_slant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tight_layout.FontProperties.get_stretch.html">36.2.2.9. matplotlib.tight_layout.FontProperties.get_stretch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tight_layout.FontProperties.get_style.html">36.2.2.10. matplotlib.tight_layout.FontProperties.get_style</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tight_layout.FontProperties.get_variant.html">36.2.2.11. matplotlib.tight_layout.FontProperties.get_variant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tight_layout.FontProperties.get_weight.html">36.2.2.12. matplotlib.tight_layout.FontProperties.get_weight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tight_layout.FontProperties.set_family.html">36.2.2.13. matplotlib.tight_layout.FontProperties.set_family</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tight_layout.FontProperties.set_file.html">36.2.2.14. matplotlib.tight_layout.FontProperties.set_file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tight_layout.FontProperties.set_fontconfig_pattern.html">36.2.2.15. matplotlib.tight_layout.FontProperties.set_fontconfig_pattern</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tight_layout.FontProperties.set_name.html">36.2.2.16. matplotlib.tight_layout.FontProperties.set_name</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tight_layout.FontProperties.set_size.html">36.2.2.17. matplotlib.tight_layout.FontProperties.set_size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tight_layout.FontProperties.set_slant.html">36.2.2.18. matplotlib.tight_layout.FontProperties.set_slant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tight_layout.FontProperties.set_stretch.html">36.2.2.19. matplotlib.tight_layout.FontProperties.set_stretch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tight_layout.FontProperties.set_style.html">36.2.2.20. matplotlib.tight_layout.FontProperties.set_style</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">36.2.2.21. matplotlib.tight_layout.FontProperties.set_variant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.tight_layout.FontProperties.set_weight.html">36.2.2.22. matplotlib.tight_layout.FontProperties.set_weight</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.tight_layout.TransformedBbox.html">36.2.3. matplotlib.tight_layout.TransformedBbox</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../infreq.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.tight_layout.html">36. matplotlib.tight_layout</a> &raquo;</li>
+        
+          <li><a href="matplotlib.tight_layout.FontProperties.html">36.2.2. matplotlib.tight_layout.FontProperties</a> &raquo;</li>
+        
+      <li>36.2.2.21. matplotlib.tight_layout.FontProperties.set_variant</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.tight_layout.FontProperties.set_variant.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-tight-layout-fontproperties-set-variant">
+<h1>36.2.2.21. matplotlib.tight_layout.FontProperties.set_variant<a class="headerlink" href="#matplotlib-tight-layout-fontproperties-set-variant" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="matplotlib.tight_layout.FontProperties.set_variant">
+<code class="descclassname">FontProperties.</code><code class="descname">set_variant</code><span class="sig-paren">(</span><em>variant</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/font_manager.html#FontProperties.set_variant"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.tight_layout.FontProperties.set_variant" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the font variant.  Values are: &#8216;normal&#8217; or &#8216;small-caps&#8217;.</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.tight_layout.FontProperties.set_weight.html" class="btn btn-neutral float-right" title="36.2.2.22. matplotlib.tight_layout.FontProperties.set_weight" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.tight_layout.FontProperties.set_style.html" class="btn btn-neutral" title="36.2.2.20. matplotlib.tight_layout.FontProperties.set_style" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

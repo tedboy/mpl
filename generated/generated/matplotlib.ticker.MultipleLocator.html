@@ -1,0 +1,370 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>35.1.5.21. matplotlib.ticker.MultipleLocator &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="35. matplotlib.ticker" href="../matplotlib.ticker.html"/>
+        <link rel="prev" title="35.1.5.20.14. matplotlib.ticker.MaxNLocator.zoom" href="matplotlib.ticker.MaxNLocator.zoom.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.ticker.html">35. matplotlib.ticker</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.ticker.html#tick-locating-and-formatting">35.1. Tick locating and formatting</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../matplotlib.ticker.html#default-formatter">35.1.1. Default Formatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../matplotlib.ticker.html#tick-locating">35.1.2. Tick locating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../matplotlib.ticker.html#tick-formatting">35.1.3. Tick formatting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../matplotlib.ticker.html#functions">35.1.4. Functions</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../matplotlib.ticker.html#classes">35.1.5. Classes</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.ticker.AutoLocator.html">35.1.5.1. matplotlib.ticker.AutoLocator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.ticker.AutoMinorLocator.html">35.1.5.2. matplotlib.ticker.AutoMinorLocator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.ticker.Base.html">35.1.5.3. matplotlib.ticker.Base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.ticker.EngFormatter.html">35.1.5.4. matplotlib.ticker.EngFormatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.ticker.FixedFormatter.html">35.1.5.5. matplotlib.ticker.FixedFormatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.ticker.FixedLocator.html">35.1.5.6. matplotlib.ticker.FixedLocator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.ticker.FormatStrFormatter.html">35.1.5.7. matplotlib.ticker.FormatStrFormatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.ticker.Formatter.html">35.1.5.8. matplotlib.ticker.Formatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.ticker.FuncFormatter.html">35.1.5.9. matplotlib.ticker.FuncFormatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.ticker.IndexFormatter.html">35.1.5.10. matplotlib.ticker.IndexFormatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.ticker.IndexLocator.html">35.1.5.11. matplotlib.ticker.IndexLocator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.ticker.LinearLocator.html">35.1.5.12. matplotlib.ticker.LinearLocator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.ticker.Locator.html">35.1.5.13. matplotlib.ticker.Locator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.ticker.LogFormatter.html">35.1.5.14. matplotlib.ticker.LogFormatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.ticker.LogFormatterExponent.html">35.1.5.15. matplotlib.ticker.LogFormatterExponent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.ticker.LogFormatterMathtext.html">35.1.5.16. matplotlib.ticker.LogFormatterMathtext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.ticker.LogLocator.html">35.1.5.17. matplotlib.ticker.LogLocator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.ticker.LogitFormatter.html">35.1.5.18. matplotlib.ticker.LogitFormatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.ticker.LogitLocator.html">35.1.5.19. matplotlib.ticker.LogitLocator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.ticker.MaxNLocator.html">35.1.5.20. matplotlib.ticker.MaxNLocator</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">35.1.5.21. matplotlib.ticker.MultipleLocator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.ticker.NullFormatter.html">35.1.5.22. matplotlib.ticker.NullFormatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.ticker.NullLocator.html">35.1.5.23. matplotlib.ticker.NullLocator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.ticker.OldAutoLocator.html">35.1.5.24. matplotlib.ticker.OldAutoLocator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.ticker.OldScalarFormatter.html">35.1.5.25. matplotlib.ticker.OldScalarFormatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.ticker.ScalarFormatter.html">35.1.5.26. matplotlib.ticker.ScalarFormatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.ticker.StrMethodFormatter.html">35.1.5.27. matplotlib.ticker.StrMethodFormatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.ticker.SymmetricalLogLocator.html">35.1.5.28. matplotlib.ticker.SymmetricalLogLocator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.ticker.TickHelper.html">35.1.5.29. matplotlib.ticker.TickHelper</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../infreq.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.ticker.html">35. matplotlib.ticker</a> &raquo;</li>
+        
+      <li>35.1.5.21. matplotlib.ticker.MultipleLocator</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.ticker.MultipleLocator.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-ticker-multiplelocator">
+<h1>35.1.5.21. matplotlib.ticker.MultipleLocator<a class="headerlink" href="#matplotlib-ticker-multiplelocator" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="matplotlib.ticker.MultipleLocator">
+<em class="property">class </em><code class="descclassname">matplotlib.ticker.</code><code class="descname">MultipleLocator</code><span class="sig-paren">(</span><em>base=1.0</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/ticker.html#MultipleLocator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.ticker.MultipleLocator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a tick on every integer that is multiple of base in the
+view interval</p>
+<p class="rubric">Attributes</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="29%" />
+<col width="71%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>axis</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">__call__</span></code>()</td>
+<td>Return the locations of the ticks</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.ticker.MultipleLocator.autoscale.html#matplotlib.ticker.MultipleLocator.autoscale" title="matplotlib.ticker.MultipleLocator.autoscale"><code class="xref py py-obj docutils literal"><span class="pre">autoscale</span></code></a>()</td>
+<td>autoscale the view limits</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.ticker.MultipleLocator.create_dummy_axis.html#matplotlib.ticker.MultipleLocator.create_dummy_axis" title="matplotlib.ticker.MultipleLocator.create_dummy_axis"><code class="xref py py-obj docutils literal"><span class="pre">create_dummy_axis</span></code></a>(**kwargs)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.ticker.MultipleLocator.pan.html#matplotlib.ticker.MultipleLocator.pan" title="matplotlib.ticker.MultipleLocator.pan"><code class="xref py py-obj docutils literal"><span class="pre">pan</span></code></a>(numsteps)</td>
+<td>Pan numticks (can be positive or negative)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.ticker.MultipleLocator.raise_if_exceeds.html#matplotlib.ticker.MultipleLocator.raise_if_exceeds" title="matplotlib.ticker.MultipleLocator.raise_if_exceeds"><code class="xref py py-obj docutils literal"><span class="pre">raise_if_exceeds</span></code></a>(locs)</td>
+<td>raise a RuntimeError if Locator attempts to create more than</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.ticker.MultipleLocator.refresh.html#matplotlib.ticker.MultipleLocator.refresh" title="matplotlib.ticker.MultipleLocator.refresh"><code class="xref py py-obj docutils literal"><span class="pre">refresh</span></code></a>()</td>
+<td>refresh internal information based on current lim</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.ticker.MultipleLocator.set_axis.html#matplotlib.ticker.MultipleLocator.set_axis" title="matplotlib.ticker.MultipleLocator.set_axis"><code class="xref py py-obj docutils literal"><span class="pre">set_axis</span></code></a>(axis)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.ticker.MultipleLocator.set_bounds.html#matplotlib.ticker.MultipleLocator.set_bounds" title="matplotlib.ticker.MultipleLocator.set_bounds"><code class="xref py py-obj docutils literal"><span class="pre">set_bounds</span></code></a>(vmin,&nbsp;vmax)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.ticker.MultipleLocator.set_data_interval.html#matplotlib.ticker.MultipleLocator.set_data_interval" title="matplotlib.ticker.MultipleLocator.set_data_interval"><code class="xref py py-obj docutils literal"><span class="pre">set_data_interval</span></code></a>(vmin,&nbsp;vmax)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.ticker.MultipleLocator.set_params.html#matplotlib.ticker.MultipleLocator.set_params" title="matplotlib.ticker.MultipleLocator.set_params"><code class="xref py py-obj docutils literal"><span class="pre">set_params</span></code></a>(base)</td>
+<td>Set parameters within this locator.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.ticker.MultipleLocator.set_view_interval.html#matplotlib.ticker.MultipleLocator.set_view_interval" title="matplotlib.ticker.MultipleLocator.set_view_interval"><code class="xref py py-obj docutils literal"><span class="pre">set_view_interval</span></code></a>(vmin,&nbsp;vmax)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.ticker.MultipleLocator.tick_values.html#matplotlib.ticker.MultipleLocator.tick_values" title="matplotlib.ticker.MultipleLocator.tick_values"><code class="xref py py-obj docutils literal"><span class="pre">tick_values</span></code></a>(vmin,&nbsp;vmax)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.ticker.MultipleLocator.view_limits.html#matplotlib.ticker.MultipleLocator.view_limits" title="matplotlib.ticker.MultipleLocator.view_limits"><code class="xref py py-obj docutils literal"><span class="pre">view_limits</span></code></a>(dmin,&nbsp;dmax)</td>
+<td>Set the view limits to the nearest multiples of base that</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.ticker.MultipleLocator.zoom.html#matplotlib.ticker.MultipleLocator.zoom" title="matplotlib.ticker.MultipleLocator.zoom"><code class="xref py py-obj docutils literal"><span class="pre">zoom</span></code></a>(direction)</td>
+<td>Zoom in/out on axis; if direction is &gt;0 zoom in, else zoom out</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="matplotlib.ticker.MaxNLocator.zoom.html" class="btn btn-neutral" title="35.1.5.20.14. matplotlib.ticker.MaxNLocator.zoom" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

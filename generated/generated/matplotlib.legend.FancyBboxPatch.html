@@ -1,0 +1,804 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>9.2.12. matplotlib.legend.FancyBboxPatch &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="9. matplotlib.legend" href="../matplotlib.legend.html"/>
+        <link rel="next" title="9.2.12.1. matplotlib.legend.FancyBboxPatch.axes" href="matplotlib.legend.FancyBboxPatch.axes.html"/>
+        <link rel="prev" title="9.2.11.10. matplotlib.legend.ErrorbarContainer.set_remove_method" href="matplotlib.legend.ErrorbarContainer.set_remove_method.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.legend.html">9. matplotlib.legend</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.legend.html#functions">9.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.legend.html#classes">9.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.Artist.html">9.2.1. matplotlib.legend.Artist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.BarContainer.html">9.2.2. matplotlib.legend.BarContainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.Bbox.html">9.2.3. matplotlib.legend.Bbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.BboxBase.html">9.2.4. matplotlib.legend.BboxBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.BboxTransformFrom.html">9.2.5. matplotlib.legend.BboxTransformFrom</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.BboxTransformTo.html">9.2.6. matplotlib.legend.BboxTransformTo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.CircleCollection.html">9.2.7. matplotlib.legend.CircleCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.DraggableLegend.html">9.2.8. matplotlib.legend.DraggableLegend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.DraggableOffsetBox.html">9.2.9. matplotlib.legend.DraggableOffsetBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.DrawingArea.html">9.2.10. matplotlib.legend.DrawingArea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.ErrorbarContainer.html">9.2.11. matplotlib.legend.ErrorbarContainer</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">9.2.12. matplotlib.legend.FancyBboxPatch</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.axes.html">9.2.12.1. matplotlib.legend.FancyBboxPatch.axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.fill.html">9.2.12.2. matplotlib.legend.FancyBboxPatch.fill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.mouseover.html">9.2.12.3. matplotlib.legend.FancyBboxPatch.mouseover</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.stale.html">9.2.12.4. matplotlib.legend.FancyBboxPatch.stale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.add_callback.html">9.2.12.5. matplotlib.legend.FancyBboxPatch.add_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.contains.html">9.2.12.6. matplotlib.legend.FancyBboxPatch.contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.contains_point.html">9.2.12.7. matplotlib.legend.FancyBboxPatch.contains_point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.convert_xunits.html">9.2.12.8. matplotlib.legend.FancyBboxPatch.convert_xunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.convert_yunits.html">9.2.12.9. matplotlib.legend.FancyBboxPatch.convert_yunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.draw.html">9.2.12.10. matplotlib.legend.FancyBboxPatch.draw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.findobj.html">9.2.12.11. matplotlib.legend.FancyBboxPatch.findobj</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.format_cursor_data.html">9.2.12.12. matplotlib.legend.FancyBboxPatch.format_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_aa.html">9.2.12.13. matplotlib.legend.FancyBboxPatch.get_aa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_agg_filter.html">9.2.12.14. matplotlib.legend.FancyBboxPatch.get_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_alpha.html">9.2.12.15. matplotlib.legend.FancyBboxPatch.get_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_animated.html">9.2.12.16. matplotlib.legend.FancyBboxPatch.get_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_antialiased.html">9.2.12.17. matplotlib.legend.FancyBboxPatch.get_antialiased</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_axes.html">9.2.12.18. matplotlib.legend.FancyBboxPatch.get_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_bbox.html">9.2.12.19. matplotlib.legend.FancyBboxPatch.get_bbox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_boxstyle.html">9.2.12.20. matplotlib.legend.FancyBboxPatch.get_boxstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_capstyle.html">9.2.12.21. matplotlib.legend.FancyBboxPatch.get_capstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_children.html">9.2.12.22. matplotlib.legend.FancyBboxPatch.get_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_clip_box.html">9.2.12.23. matplotlib.legend.FancyBboxPatch.get_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_clip_on.html">9.2.12.24. matplotlib.legend.FancyBboxPatch.get_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_clip_path.html">9.2.12.25. matplotlib.legend.FancyBboxPatch.get_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_contains.html">9.2.12.26. matplotlib.legend.FancyBboxPatch.get_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_cursor_data.html">9.2.12.27. matplotlib.legend.FancyBboxPatch.get_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_data_transform.html">9.2.12.28. matplotlib.legend.FancyBboxPatch.get_data_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_ec.html">9.2.12.29. matplotlib.legend.FancyBboxPatch.get_ec</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_edgecolor.html">9.2.12.30. matplotlib.legend.FancyBboxPatch.get_edgecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_extents.html">9.2.12.31. matplotlib.legend.FancyBboxPatch.get_extents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_facecolor.html">9.2.12.32. matplotlib.legend.FancyBboxPatch.get_facecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_fc.html">9.2.12.33. matplotlib.legend.FancyBboxPatch.get_fc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_figure.html">9.2.12.34. matplotlib.legend.FancyBboxPatch.get_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_fill.html">9.2.12.35. matplotlib.legend.FancyBboxPatch.get_fill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_gid.html">9.2.12.36. matplotlib.legend.FancyBboxPatch.get_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_hatch.html">9.2.12.37. matplotlib.legend.FancyBboxPatch.get_hatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_height.html">9.2.12.38. matplotlib.legend.FancyBboxPatch.get_height</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_joinstyle.html">9.2.12.39. matplotlib.legend.FancyBboxPatch.get_joinstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_label.html">9.2.12.40. matplotlib.legend.FancyBboxPatch.get_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_linestyle.html">9.2.12.41. matplotlib.legend.FancyBboxPatch.get_linestyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_linewidth.html">9.2.12.42. matplotlib.legend.FancyBboxPatch.get_linewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_ls.html">9.2.12.43. matplotlib.legend.FancyBboxPatch.get_ls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_lw.html">9.2.12.44. matplotlib.legend.FancyBboxPatch.get_lw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_mutation_aspect.html">9.2.12.45. matplotlib.legend.FancyBboxPatch.get_mutation_aspect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_mutation_scale.html">9.2.12.46. matplotlib.legend.FancyBboxPatch.get_mutation_scale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_patch_transform.html">9.2.12.47. matplotlib.legend.FancyBboxPatch.get_patch_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_path.html">9.2.12.48. matplotlib.legend.FancyBboxPatch.get_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_path_effects.html">9.2.12.49. matplotlib.legend.FancyBboxPatch.get_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_picker.html">9.2.12.50. matplotlib.legend.FancyBboxPatch.get_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_rasterized.html">9.2.12.51. matplotlib.legend.FancyBboxPatch.get_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_sketch_params.html">9.2.12.52. matplotlib.legend.FancyBboxPatch.get_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_snap.html">9.2.12.53. matplotlib.legend.FancyBboxPatch.get_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_transform.html">9.2.12.54. matplotlib.legend.FancyBboxPatch.get_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_transformed_clip_path_and_affine.html">9.2.12.55. matplotlib.legend.FancyBboxPatch.get_transformed_clip_path_and_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_url.html">9.2.12.56. matplotlib.legend.FancyBboxPatch.get_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_verts.html">9.2.12.57. matplotlib.legend.FancyBboxPatch.get_verts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_visible.html">9.2.12.58. matplotlib.legend.FancyBboxPatch.get_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_width.html">9.2.12.59. matplotlib.legend.FancyBboxPatch.get_width</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_window_extent.html">9.2.12.60. matplotlib.legend.FancyBboxPatch.get_window_extent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_x.html">9.2.12.61. matplotlib.legend.FancyBboxPatch.get_x</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_y.html">9.2.12.62. matplotlib.legend.FancyBboxPatch.get_y</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_zorder.html">9.2.12.63. matplotlib.legend.FancyBboxPatch.get_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.have_units.html">9.2.12.64. matplotlib.legend.FancyBboxPatch.have_units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.hitlist.html">9.2.12.65. matplotlib.legend.FancyBboxPatch.hitlist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.is_figure_set.html">9.2.12.66. matplotlib.legend.FancyBboxPatch.is_figure_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.is_transform_set.html">9.2.12.67. matplotlib.legend.FancyBboxPatch.is_transform_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.pchanged.html">9.2.12.68. matplotlib.legend.FancyBboxPatch.pchanged</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.pick.html">9.2.12.69. matplotlib.legend.FancyBboxPatch.pick</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.pickable.html">9.2.12.70. matplotlib.legend.FancyBboxPatch.pickable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.properties.html">9.2.12.71. matplotlib.legend.FancyBboxPatch.properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.remove.html">9.2.12.72. matplotlib.legend.FancyBboxPatch.remove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.remove_callback.html">9.2.12.73. matplotlib.legend.FancyBboxPatch.remove_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set.html">9.2.12.74. matplotlib.legend.FancyBboxPatch.set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_aa.html">9.2.12.75. matplotlib.legend.FancyBboxPatch.set_aa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_agg_filter.html">9.2.12.76. matplotlib.legend.FancyBboxPatch.set_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_alpha.html">9.2.12.77. matplotlib.legend.FancyBboxPatch.set_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_animated.html">9.2.12.78. matplotlib.legend.FancyBboxPatch.set_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_antialiased.html">9.2.12.79. matplotlib.legend.FancyBboxPatch.set_antialiased</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_axes.html">9.2.12.80. matplotlib.legend.FancyBboxPatch.set_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_bounds.html">9.2.12.81. matplotlib.legend.FancyBboxPatch.set_bounds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_boxstyle.html">9.2.12.82. matplotlib.legend.FancyBboxPatch.set_boxstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_capstyle.html">9.2.12.83. matplotlib.legend.FancyBboxPatch.set_capstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_clip_box.html">9.2.12.84. matplotlib.legend.FancyBboxPatch.set_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_clip_on.html">9.2.12.85. matplotlib.legend.FancyBboxPatch.set_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_clip_path.html">9.2.12.86. matplotlib.legend.FancyBboxPatch.set_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_color.html">9.2.12.87. matplotlib.legend.FancyBboxPatch.set_color</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_contains.html">9.2.12.88. matplotlib.legend.FancyBboxPatch.set_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_ec.html">9.2.12.89. matplotlib.legend.FancyBboxPatch.set_ec</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_edgecolor.html">9.2.12.90. matplotlib.legend.FancyBboxPatch.set_edgecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_facecolor.html">9.2.12.91. matplotlib.legend.FancyBboxPatch.set_facecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_fc.html">9.2.12.92. matplotlib.legend.FancyBboxPatch.set_fc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_figure.html">9.2.12.93. matplotlib.legend.FancyBboxPatch.set_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_fill.html">9.2.12.94. matplotlib.legend.FancyBboxPatch.set_fill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_gid.html">9.2.12.95. matplotlib.legend.FancyBboxPatch.set_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_hatch.html">9.2.12.96. matplotlib.legend.FancyBboxPatch.set_hatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_height.html">9.2.12.97. matplotlib.legend.FancyBboxPatch.set_height</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_joinstyle.html">9.2.12.98. matplotlib.legend.FancyBboxPatch.set_joinstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_label.html">9.2.12.99. matplotlib.legend.FancyBboxPatch.set_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_linestyle.html">9.2.12.100. matplotlib.legend.FancyBboxPatch.set_linestyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_linewidth.html">9.2.12.101. matplotlib.legend.FancyBboxPatch.set_linewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_ls.html">9.2.12.102. matplotlib.legend.FancyBboxPatch.set_ls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_lw.html">9.2.12.103. matplotlib.legend.FancyBboxPatch.set_lw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_mutation_aspect.html">9.2.12.104. matplotlib.legend.FancyBboxPatch.set_mutation_aspect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_mutation_scale.html">9.2.12.105. matplotlib.legend.FancyBboxPatch.set_mutation_scale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_path_effects.html">9.2.12.106. matplotlib.legend.FancyBboxPatch.set_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_picker.html">9.2.12.107. matplotlib.legend.FancyBboxPatch.set_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_rasterized.html">9.2.12.108. matplotlib.legend.FancyBboxPatch.set_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_sketch_params.html">9.2.12.109. matplotlib.legend.FancyBboxPatch.set_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_snap.html">9.2.12.110. matplotlib.legend.FancyBboxPatch.set_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_transform.html">9.2.12.111. matplotlib.legend.FancyBboxPatch.set_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_url.html">9.2.12.112. matplotlib.legend.FancyBboxPatch.set_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_visible.html">9.2.12.113. matplotlib.legend.FancyBboxPatch.set_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_width.html">9.2.12.114. matplotlib.legend.FancyBboxPatch.set_width</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_x.html">9.2.12.115. matplotlib.legend.FancyBboxPatch.set_x</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_y.html">9.2.12.116. matplotlib.legend.FancyBboxPatch.set_y</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_zorder.html">9.2.12.117. matplotlib.legend.FancyBboxPatch.set_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.update.html">9.2.12.118. matplotlib.legend.FancyBboxPatch.update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.update_from.html">9.2.12.119. matplotlib.legend.FancyBboxPatch.update_from</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.FontProperties.html">9.2.13. matplotlib.legend.FontProperties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.HPacker.html">9.2.14. matplotlib.legend.HPacker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.Legend.html">9.2.15. matplotlib.legend.Legend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.Line2D.html">9.2.16. matplotlib.legend.Line2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.LineCollection.html">9.2.17. matplotlib.legend.LineCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.Patch.html">9.2.18. matplotlib.legend.Patch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.PathCollection.html">9.2.19. matplotlib.legend.PathCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.PolyCollection.html">9.2.20. matplotlib.legend.PolyCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.Rectangle.html">9.2.21. matplotlib.legend.Rectangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.RegularPolyCollection.html">9.2.22. matplotlib.legend.RegularPolyCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.Shadow.html">9.2.23. matplotlib.legend.Shadow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.StemContainer.html">9.2.24. matplotlib.legend.StemContainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.TextArea.html">9.2.25. matplotlib.legend.TextArea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.TransformedBbox.html">9.2.26. matplotlib.legend.TransformedBbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.VPacker.html">9.2.27. matplotlib.legend.VPacker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.silent_list.html">9.2.28. matplotlib.legend.silent_list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.xrange.html">9.2.29. matplotlib.legend.xrange</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../freq.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.legend.html">9. matplotlib.legend</a> &raquo;</li>
+        
+      <li>9.2.12. matplotlib.legend.FancyBboxPatch</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.legend.FancyBboxPatch.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-legend-fancybboxpatch">
+<h1>9.2.12. matplotlib.legend.FancyBboxPatch<a class="headerlink" href="#matplotlib-legend-fancybboxpatch" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="matplotlib.legend.FancyBboxPatch">
+<em class="property">class </em><code class="descclassname">matplotlib.legend.</code><code class="descname">FancyBboxPatch</code><span class="sig-paren">(</span><em>xy</em>, <em>width</em>, <em>height</em>, <em>boxstyle=u'round'</em>, <em>bbox_transmuter=None</em>, <em>mutation_scale=1.0</em>, <em>mutation_aspect=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/patches.html#FancyBboxPatch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.legend.FancyBboxPatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw a fancy box around a rectangle with lower left at <em>xy*=(*x</em>,
+<em>y</em>) with specified width and height.</p>
+<p><a class="reference internal" href="#matplotlib.legend.FancyBboxPatch" title="matplotlib.legend.FancyBboxPatch"><code class="xref py py-class docutils literal"><span class="pre">FancyBboxPatch</span></code></a> class is similar to <a class="reference internal" href="matplotlib.legend.Rectangle.html#matplotlib.legend.Rectangle" title="matplotlib.legend.Rectangle"><code class="xref py py-class docutils literal"><span class="pre">Rectangle</span></code></a>
+class, but it draws a fancy box around the rectangle. The
+transformation of the rectangle box to the fancy box is delegated
+to the <code class="xref py py-class docutils literal"><span class="pre">BoxTransmuterBase</span></code> and its derived classes.</p>
+<p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.axes.html#matplotlib.legend.FancyBboxPatch.axes" title="matplotlib.legend.FancyBboxPatch.axes"><code class="xref py py-obj docutils literal"><span class="pre">axes</span></code></a></td>
+<td>The <a class="reference internal" href="matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instance the artist resides in, or <em>None</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.fill.html#matplotlib.legend.FancyBboxPatch.fill" title="matplotlib.legend.FancyBboxPatch.fill"><code class="xref py py-obj docutils literal"><span class="pre">fill</span></code></a></td>
+<td>return whether fill is set</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.mouseover.html#matplotlib.legend.FancyBboxPatch.mouseover" title="matplotlib.legend.FancyBboxPatch.mouseover"><code class="xref py py-obj docutils literal"><span class="pre">mouseover</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.stale.html#matplotlib.legend.FancyBboxPatch.stale" title="matplotlib.legend.FancyBboxPatch.stale"><code class="xref py py-obj docutils literal"><span class="pre">stale</span></code></a></td>
+<td>If the artist is &#8216;stale&#8217; and needs to be re-drawn for the output to match the internal state of the artist.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.add_callback.html#matplotlib.legend.FancyBboxPatch.add_callback" title="matplotlib.legend.FancyBboxPatch.add_callback"><code class="xref py py-obj docutils literal"><span class="pre">add_callback</span></code></a>(func)</td>
+<td>Adds a callback function that will be called whenever one of the <a class="reference internal" href="matplotlib.legend.Artist.html#matplotlib.legend.Artist" title="matplotlib.legend.Artist"><code class="xref py py-class docutils literal"><span class="pre">Artist</span></code></a>&#8216;s properties changes.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.contains.html#matplotlib.legend.FancyBboxPatch.contains" title="matplotlib.legend.FancyBboxPatch.contains"><code class="xref py py-obj docutils literal"><span class="pre">contains</span></code></a>(mouseevent[,&nbsp;radius])</td>
+<td>Test whether the mouse event occurred in the patch.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.contains_point.html#matplotlib.legend.FancyBboxPatch.contains_point" title="matplotlib.legend.FancyBboxPatch.contains_point"><code class="xref py py-obj docutils literal"><span class="pre">contains_point</span></code></a>(point[,&nbsp;radius])</td>
+<td>Returns <em>True</em> if the given point is inside the path (transformed with its transform attribute).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.convert_xunits.html#matplotlib.legend.FancyBboxPatch.convert_xunits" title="matplotlib.legend.FancyBboxPatch.convert_xunits"><code class="xref py py-obj docutils literal"><span class="pre">convert_xunits</span></code></a>(x)</td>
+<td>For artists in an axes, if the xaxis has units support,</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.convert_yunits.html#matplotlib.legend.FancyBboxPatch.convert_yunits" title="matplotlib.legend.FancyBboxPatch.convert_yunits"><code class="xref py py-obj docutils literal"><span class="pre">convert_yunits</span></code></a>(y)</td>
+<td>For artists in an axes, if the yaxis has units support,</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.draw.html#matplotlib.legend.FancyBboxPatch.draw" title="matplotlib.legend.FancyBboxPatch.draw"><code class="xref py py-obj docutils literal"><span class="pre">draw</span></code></a>(artist,&nbsp;renderer,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Draw the <a class="reference internal" href="matplotlib.legend.Patch.html#matplotlib.legend.Patch" title="matplotlib.legend.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a> to the given <em>renderer</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.findobj.html#matplotlib.legend.FancyBboxPatch.findobj" title="matplotlib.legend.FancyBboxPatch.findobj"><code class="xref py py-obj docutils literal"><span class="pre">findobj</span></code></a>([match,&nbsp;include_self])</td>
+<td>Find artist objects.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.format_cursor_data.html#matplotlib.legend.FancyBboxPatch.format_cursor_data" title="matplotlib.legend.FancyBboxPatch.format_cursor_data"><code class="xref py py-obj docutils literal"><span class="pre">format_cursor_data</span></code></a>(data)</td>
+<td>Return <em>cursor data</em> string formatted.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_aa.html#matplotlib.legend.FancyBboxPatch.get_aa" title="matplotlib.legend.FancyBboxPatch.get_aa"><code class="xref py py-obj docutils literal"><span class="pre">get_aa</span></code></a>()</td>
+<td>Returns True if the <a class="reference internal" href="matplotlib.legend.Patch.html#matplotlib.legend.Patch" title="matplotlib.legend.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a> is to be drawn with antialiasing.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_agg_filter.html#matplotlib.legend.FancyBboxPatch.get_agg_filter" title="matplotlib.legend.FancyBboxPatch.get_agg_filter"><code class="xref py py-obj docutils literal"><span class="pre">get_agg_filter</span></code></a>()</td>
+<td>return filter function to be used for agg filter</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_alpha.html#matplotlib.legend.FancyBboxPatch.get_alpha" title="matplotlib.legend.FancyBboxPatch.get_alpha"><code class="xref py py-obj docutils literal"><span class="pre">get_alpha</span></code></a>()</td>
+<td>Return the alpha value used for blending - not supported on all</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_animated.html#matplotlib.legend.FancyBboxPatch.get_animated" title="matplotlib.legend.FancyBboxPatch.get_animated"><code class="xref py py-obj docutils literal"><span class="pre">get_animated</span></code></a>()</td>
+<td>Return the artist&#8217;s animated state</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_antialiased.html#matplotlib.legend.FancyBboxPatch.get_antialiased" title="matplotlib.legend.FancyBboxPatch.get_antialiased"><code class="xref py py-obj docutils literal"><span class="pre">get_antialiased</span></code></a>()</td>
+<td>Returns True if the <a class="reference internal" href="matplotlib.legend.Patch.html#matplotlib.legend.Patch" title="matplotlib.legend.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a> is to be drawn with antialiasing.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_axes.html#matplotlib.legend.FancyBboxPatch.get_axes" title="matplotlib.legend.FancyBboxPatch.get_axes"><code class="xref py py-obj docutils literal"><span class="pre">get_axes</span></code></a>()</td>
+<td>Return the <a class="reference internal" href="matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instance the artist resides in, or <em>None</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_bbox.html#matplotlib.legend.FancyBboxPatch.get_bbox" title="matplotlib.legend.FancyBboxPatch.get_bbox"><code class="xref py py-obj docutils literal"><span class="pre">get_bbox</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_boxstyle.html#matplotlib.legend.FancyBboxPatch.get_boxstyle" title="matplotlib.legend.FancyBboxPatch.get_boxstyle"><code class="xref py py-obj docutils literal"><span class="pre">get_boxstyle</span></code></a>()</td>
+<td>Return the boxstyle object</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_capstyle.html#matplotlib.legend.FancyBboxPatch.get_capstyle" title="matplotlib.legend.FancyBboxPatch.get_capstyle"><code class="xref py py-obj docutils literal"><span class="pre">get_capstyle</span></code></a>()</td>
+<td>Return the current capstyle</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_children.html#matplotlib.legend.FancyBboxPatch.get_children" title="matplotlib.legend.FancyBboxPatch.get_children"><code class="xref py py-obj docutils literal"><span class="pre">get_children</span></code></a>()</td>
+<td>Return a list of the child <code class="xref py py-class docutils literal"><span class="pre">Artist`s</span> <span class="pre">this</span> <span class="pre">:class:`Artist</span></code> contains.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_clip_box.html#matplotlib.legend.FancyBboxPatch.get_clip_box" title="matplotlib.legend.FancyBboxPatch.get_clip_box"><code class="xref py py-obj docutils literal"><span class="pre">get_clip_box</span></code></a>()</td>
+<td>Return artist clipbox</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_clip_on.html#matplotlib.legend.FancyBboxPatch.get_clip_on" title="matplotlib.legend.FancyBboxPatch.get_clip_on"><code class="xref py py-obj docutils literal"><span class="pre">get_clip_on</span></code></a>()</td>
+<td>Return whether artist uses clipping</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_clip_path.html#matplotlib.legend.FancyBboxPatch.get_clip_path" title="matplotlib.legend.FancyBboxPatch.get_clip_path"><code class="xref py py-obj docutils literal"><span class="pre">get_clip_path</span></code></a>()</td>
+<td>Return artist clip path</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_contains.html#matplotlib.legend.FancyBboxPatch.get_contains" title="matplotlib.legend.FancyBboxPatch.get_contains"><code class="xref py py-obj docutils literal"><span class="pre">get_contains</span></code></a>()</td>
+<td>Return the _contains test used by the artist, or <em>None</em> for default.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_cursor_data.html#matplotlib.legend.FancyBboxPatch.get_cursor_data" title="matplotlib.legend.FancyBboxPatch.get_cursor_data"><code class="xref py py-obj docutils literal"><span class="pre">get_cursor_data</span></code></a>(event)</td>
+<td>Get the cursor data for a given event.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_data_transform.html#matplotlib.legend.FancyBboxPatch.get_data_transform" title="matplotlib.legend.FancyBboxPatch.get_data_transform"><code class="xref py py-obj docutils literal"><span class="pre">get_data_transform</span></code></a>()</td>
+<td>Return the <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code> instance which maps data coordinates to physical coordinates.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_ec.html#matplotlib.legend.FancyBboxPatch.get_ec" title="matplotlib.legend.FancyBboxPatch.get_ec"><code class="xref py py-obj docutils literal"><span class="pre">get_ec</span></code></a>()</td>
+<td>Return the edge color of the <a class="reference internal" href="matplotlib.legend.Patch.html#matplotlib.legend.Patch" title="matplotlib.legend.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_edgecolor.html#matplotlib.legend.FancyBboxPatch.get_edgecolor" title="matplotlib.legend.FancyBboxPatch.get_edgecolor"><code class="xref py py-obj docutils literal"><span class="pre">get_edgecolor</span></code></a>()</td>
+<td>Return the edge color of the <a class="reference internal" href="matplotlib.legend.Patch.html#matplotlib.legend.Patch" title="matplotlib.legend.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_extents.html#matplotlib.legend.FancyBboxPatch.get_extents" title="matplotlib.legend.FancyBboxPatch.get_extents"><code class="xref py py-obj docutils literal"><span class="pre">get_extents</span></code></a>()</td>
+<td>Return a <code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code> object defining the axis-aligned extents of the <a class="reference internal" href="matplotlib.legend.Patch.html#matplotlib.legend.Patch" title="matplotlib.legend.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_facecolor.html#matplotlib.legend.FancyBboxPatch.get_facecolor" title="matplotlib.legend.FancyBboxPatch.get_facecolor"><code class="xref py py-obj docutils literal"><span class="pre">get_facecolor</span></code></a>()</td>
+<td>Return the face color of the <a class="reference internal" href="matplotlib.legend.Patch.html#matplotlib.legend.Patch" title="matplotlib.legend.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_fc.html#matplotlib.legend.FancyBboxPatch.get_fc" title="matplotlib.legend.FancyBboxPatch.get_fc"><code class="xref py py-obj docutils literal"><span class="pre">get_fc</span></code></a>()</td>
+<td>Return the face color of the <a class="reference internal" href="matplotlib.legend.Patch.html#matplotlib.legend.Patch" title="matplotlib.legend.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_figure.html#matplotlib.legend.FancyBboxPatch.get_figure" title="matplotlib.legend.FancyBboxPatch.get_figure"><code class="xref py py-obj docutils literal"><span class="pre">get_figure</span></code></a>()</td>
+<td>Return the <a class="reference internal" href="matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure"><code class="xref py py-class docutils literal"><span class="pre">Figure</span></code></a> instance the artist belongs to.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_fill.html#matplotlib.legend.FancyBboxPatch.get_fill" title="matplotlib.legend.FancyBboxPatch.get_fill"><code class="xref py py-obj docutils literal"><span class="pre">get_fill</span></code></a>()</td>
+<td>return whether fill is set</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_gid.html#matplotlib.legend.FancyBboxPatch.get_gid" title="matplotlib.legend.FancyBboxPatch.get_gid"><code class="xref py py-obj docutils literal"><span class="pre">get_gid</span></code></a>()</td>
+<td>Returns the group id</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_hatch.html#matplotlib.legend.FancyBboxPatch.get_hatch" title="matplotlib.legend.FancyBboxPatch.get_hatch"><code class="xref py py-obj docutils literal"><span class="pre">get_hatch</span></code></a>()</td>
+<td>Return the current hatching pattern</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_height.html#matplotlib.legend.FancyBboxPatch.get_height" title="matplotlib.legend.FancyBboxPatch.get_height"><code class="xref py py-obj docutils literal"><span class="pre">get_height</span></code></a>()</td>
+<td>Return the height of the rectangle</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_joinstyle.html#matplotlib.legend.FancyBboxPatch.get_joinstyle" title="matplotlib.legend.FancyBboxPatch.get_joinstyle"><code class="xref py py-obj docutils literal"><span class="pre">get_joinstyle</span></code></a>()</td>
+<td>Return the current joinstyle</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_label.html#matplotlib.legend.FancyBboxPatch.get_label" title="matplotlib.legend.FancyBboxPatch.get_label"><code class="xref py py-obj docutils literal"><span class="pre">get_label</span></code></a>()</td>
+<td>Get the label used for this artist in the legend.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_linestyle.html#matplotlib.legend.FancyBboxPatch.get_linestyle" title="matplotlib.legend.FancyBboxPatch.get_linestyle"><code class="xref py py-obj docutils literal"><span class="pre">get_linestyle</span></code></a>()</td>
+<td>Return the linestyle.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_linewidth.html#matplotlib.legend.FancyBboxPatch.get_linewidth" title="matplotlib.legend.FancyBboxPatch.get_linewidth"><code class="xref py py-obj docutils literal"><span class="pre">get_linewidth</span></code></a>()</td>
+<td>Return the line width in points.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_ls.html#matplotlib.legend.FancyBboxPatch.get_ls" title="matplotlib.legend.FancyBboxPatch.get_ls"><code class="xref py py-obj docutils literal"><span class="pre">get_ls</span></code></a>()</td>
+<td>Return the linestyle.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_lw.html#matplotlib.legend.FancyBboxPatch.get_lw" title="matplotlib.legend.FancyBboxPatch.get_lw"><code class="xref py py-obj docutils literal"><span class="pre">get_lw</span></code></a>()</td>
+<td>Return the line width in points.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_mutation_aspect.html#matplotlib.legend.FancyBboxPatch.get_mutation_aspect" title="matplotlib.legend.FancyBboxPatch.get_mutation_aspect"><code class="xref py py-obj docutils literal"><span class="pre">get_mutation_aspect</span></code></a>()</td>
+<td>Return the aspect ratio of the bbox mutation.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_mutation_scale.html#matplotlib.legend.FancyBboxPatch.get_mutation_scale" title="matplotlib.legend.FancyBboxPatch.get_mutation_scale"><code class="xref py py-obj docutils literal"><span class="pre">get_mutation_scale</span></code></a>()</td>
+<td>Return the mutation scale.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_patch_transform.html#matplotlib.legend.FancyBboxPatch.get_patch_transform" title="matplotlib.legend.FancyBboxPatch.get_patch_transform"><code class="xref py py-obj docutils literal"><span class="pre">get_patch_transform</span></code></a>()</td>
+<td>Return the <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code> instance which takes patch coordinates to data coordinates.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_path.html#matplotlib.legend.FancyBboxPatch.get_path" title="matplotlib.legend.FancyBboxPatch.get_path"><code class="xref py py-obj docutils literal"><span class="pre">get_path</span></code></a>()</td>
+<td>Return the mutated path of the rectangle</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_path_effects.html#matplotlib.legend.FancyBboxPatch.get_path_effects" title="matplotlib.legend.FancyBboxPatch.get_path_effects"><code class="xref py py-obj docutils literal"><span class="pre">get_path_effects</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_picker.html#matplotlib.legend.FancyBboxPatch.get_picker" title="matplotlib.legend.FancyBboxPatch.get_picker"><code class="xref py py-obj docutils literal"><span class="pre">get_picker</span></code></a>()</td>
+<td>Return the picker object used by this artist</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_rasterized.html#matplotlib.legend.FancyBboxPatch.get_rasterized" title="matplotlib.legend.FancyBboxPatch.get_rasterized"><code class="xref py py-obj docutils literal"><span class="pre">get_rasterized</span></code></a>()</td>
+<td>return True if the artist is to be rasterized</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_sketch_params.html#matplotlib.legend.FancyBboxPatch.get_sketch_params" title="matplotlib.legend.FancyBboxPatch.get_sketch_params"><code class="xref py py-obj docutils literal"><span class="pre">get_sketch_params</span></code></a>()</td>
+<td>Returns the sketch parameters for the artist.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_snap.html#matplotlib.legend.FancyBboxPatch.get_snap" title="matplotlib.legend.FancyBboxPatch.get_snap"><code class="xref py py-obj docutils literal"><span class="pre">get_snap</span></code></a>()</td>
+<td>Returns the snap setting which may be:</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_transform.html#matplotlib.legend.FancyBboxPatch.get_transform" title="matplotlib.legend.FancyBboxPatch.get_transform"><code class="xref py py-obj docutils literal"><span class="pre">get_transform</span></code></a>()</td>
+<td>Return the <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code> applied to the <a class="reference internal" href="matplotlib.legend.Patch.html#matplotlib.legend.Patch" title="matplotlib.legend.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_transformed_clip_path_and_affine.html#matplotlib.legend.FancyBboxPatch.get_transformed_clip_path_and_affine" title="matplotlib.legend.FancyBboxPatch.get_transformed_clip_path_and_affine"><code class="xref py py-obj docutils literal"><span class="pre">get_transformed_clip_path_and_affine</span></code></a>()</td>
+<td>Return the clip path with the non-affine part of its transformation applied, and the remaining affine part of its transformation.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_url.html#matplotlib.legend.FancyBboxPatch.get_url" title="matplotlib.legend.FancyBboxPatch.get_url"><code class="xref py py-obj docutils literal"><span class="pre">get_url</span></code></a>()</td>
+<td>Returns the url</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_verts.html#matplotlib.legend.FancyBboxPatch.get_verts" title="matplotlib.legend.FancyBboxPatch.get_verts"><code class="xref py py-obj docutils literal"><span class="pre">get_verts</span></code></a>()</td>
+<td>Return a copy of the vertices used in this patch</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_visible.html#matplotlib.legend.FancyBboxPatch.get_visible" title="matplotlib.legend.FancyBboxPatch.get_visible"><code class="xref py py-obj docutils literal"><span class="pre">get_visible</span></code></a>()</td>
+<td>Return the artist&#8217;s visiblity</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_width.html#matplotlib.legend.FancyBboxPatch.get_width" title="matplotlib.legend.FancyBboxPatch.get_width"><code class="xref py py-obj docutils literal"><span class="pre">get_width</span></code></a>()</td>
+<td>Return the width of the  rectangle</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_window_extent.html#matplotlib.legend.FancyBboxPatch.get_window_extent" title="matplotlib.legend.FancyBboxPatch.get_window_extent"><code class="xref py py-obj docutils literal"><span class="pre">get_window_extent</span></code></a>([renderer])</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_x.html#matplotlib.legend.FancyBboxPatch.get_x" title="matplotlib.legend.FancyBboxPatch.get_x"><code class="xref py py-obj docutils literal"><span class="pre">get_x</span></code></a>()</td>
+<td>Return the left coord of the rectangle</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_y.html#matplotlib.legend.FancyBboxPatch.get_y" title="matplotlib.legend.FancyBboxPatch.get_y"><code class="xref py py-obj docutils literal"><span class="pre">get_y</span></code></a>()</td>
+<td>Return the bottom coord of the rectangle</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.get_zorder.html#matplotlib.legend.FancyBboxPatch.get_zorder" title="matplotlib.legend.FancyBboxPatch.get_zorder"><code class="xref py py-obj docutils literal"><span class="pre">get_zorder</span></code></a>()</td>
+<td>Return the <a class="reference internal" href="matplotlib.legend.Artist.html#matplotlib.legend.Artist" title="matplotlib.legend.Artist"><code class="xref py py-class docutils literal"><span class="pre">Artist</span></code></a>&#8216;s zorder.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.have_units.html#matplotlib.legend.FancyBboxPatch.have_units" title="matplotlib.legend.FancyBboxPatch.have_units"><code class="xref py py-obj docutils literal"><span class="pre">have_units</span></code></a>()</td>
+<td>Return <em>True</em> if units are set on the <em>x</em> or <em>y</em> axes</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.hitlist.html#matplotlib.legend.FancyBboxPatch.hitlist" title="matplotlib.legend.FancyBboxPatch.hitlist"><code class="xref py py-obj docutils literal"><span class="pre">hitlist</span></code></a>(event)</td>
+<td>List the children of the artist which contain the mouse event <em>event</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.is_figure_set.html#matplotlib.legend.FancyBboxPatch.is_figure_set" title="matplotlib.legend.FancyBboxPatch.is_figure_set"><code class="xref py py-obj docutils literal"><span class="pre">is_figure_set</span></code></a>()</td>
+<td>Returns True if the artist is assigned to a <a class="reference internal" href="matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure"><code class="xref py py-class docutils literal"><span class="pre">Figure</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.is_transform_set.html#matplotlib.legend.FancyBboxPatch.is_transform_set" title="matplotlib.legend.FancyBboxPatch.is_transform_set"><code class="xref py py-obj docutils literal"><span class="pre">is_transform_set</span></code></a>()</td>
+<td>Returns <em>True</em> if <a class="reference internal" href="matplotlib.legend.Artist.html#matplotlib.legend.Artist" title="matplotlib.legend.Artist"><code class="xref py py-class docutils literal"><span class="pre">Artist</span></code></a> has a transform explicitly set.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.pchanged.html#matplotlib.legend.FancyBboxPatch.pchanged" title="matplotlib.legend.FancyBboxPatch.pchanged"><code class="xref py py-obj docutils literal"><span class="pre">pchanged</span></code></a>()</td>
+<td>Fire an event when property changed, calling all of the registered callbacks.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.pick.html#matplotlib.legend.FancyBboxPatch.pick" title="matplotlib.legend.FancyBboxPatch.pick"><code class="xref py py-obj docutils literal"><span class="pre">pick</span></code></a>(mouseevent)</td>
+<td>call signature:</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.pickable.html#matplotlib.legend.FancyBboxPatch.pickable" title="matplotlib.legend.FancyBboxPatch.pickable"><code class="xref py py-obj docutils literal"><span class="pre">pickable</span></code></a>()</td>
+<td>Return <em>True</em> if <a class="reference internal" href="matplotlib.legend.Artist.html#matplotlib.legend.Artist" title="matplotlib.legend.Artist"><code class="xref py py-class docutils literal"><span class="pre">Artist</span></code></a> is pickable.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.properties.html#matplotlib.legend.FancyBboxPatch.properties" title="matplotlib.legend.FancyBboxPatch.properties"><code class="xref py py-obj docutils literal"><span class="pre">properties</span></code></a>()</td>
+<td>return a dictionary mapping property name -&gt; value for all Artist props</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.remove.html#matplotlib.legend.FancyBboxPatch.remove" title="matplotlib.legend.FancyBboxPatch.remove"><code class="xref py py-obj docutils literal"><span class="pre">remove</span></code></a>()</td>
+<td>Remove the artist from the figure if possible.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.remove_callback.html#matplotlib.legend.FancyBboxPatch.remove_callback" title="matplotlib.legend.FancyBboxPatch.remove_callback"><code class="xref py py-obj docutils literal"><span class="pre">remove_callback</span></code></a>(oid)</td>
+<td>Remove a callback based on its <em>id</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set.html#matplotlib.legend.FancyBboxPatch.set" title="matplotlib.legend.FancyBboxPatch.set"><code class="xref py py-obj docutils literal"><span class="pre">set</span></code></a>(**kwargs)</td>
+<td>A property batch setter.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_aa.html#matplotlib.legend.FancyBboxPatch.set_aa" title="matplotlib.legend.FancyBboxPatch.set_aa"><code class="xref py py-obj docutils literal"><span class="pre">set_aa</span></code></a>(aa)</td>
+<td>alias for set_antialiased</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_agg_filter.html#matplotlib.legend.FancyBboxPatch.set_agg_filter" title="matplotlib.legend.FancyBboxPatch.set_agg_filter"><code class="xref py py-obj docutils literal"><span class="pre">set_agg_filter</span></code></a>(filter_func)</td>
+<td>set agg_filter fuction.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_alpha.html#matplotlib.legend.FancyBboxPatch.set_alpha" title="matplotlib.legend.FancyBboxPatch.set_alpha"><code class="xref py py-obj docutils literal"><span class="pre">set_alpha</span></code></a>(alpha)</td>
+<td>Set the alpha tranparency of the patch.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_animated.html#matplotlib.legend.FancyBboxPatch.set_animated" title="matplotlib.legend.FancyBboxPatch.set_animated"><code class="xref py py-obj docutils literal"><span class="pre">set_animated</span></code></a>(b)</td>
+<td>Set the artist&#8217;s animation state.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_antialiased.html#matplotlib.legend.FancyBboxPatch.set_antialiased" title="matplotlib.legend.FancyBboxPatch.set_antialiased"><code class="xref py py-obj docutils literal"><span class="pre">set_antialiased</span></code></a>(aa)</td>
+<td>Set whether to use antialiased rendering</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_axes.html#matplotlib.legend.FancyBboxPatch.set_axes" title="matplotlib.legend.FancyBboxPatch.set_axes"><code class="xref py py-obj docutils literal"><span class="pre">set_axes</span></code></a>(axes)</td>
+<td>Set the <a class="reference internal" href="matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instance in which the artist resides, if any.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_bounds.html#matplotlib.legend.FancyBboxPatch.set_bounds" title="matplotlib.legend.FancyBboxPatch.set_bounds"><code class="xref py py-obj docutils literal"><span class="pre">set_bounds</span></code></a>(*args)</td>
+<td>Set the bounds of the rectangle: l,b,w,h</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_boxstyle.html#matplotlib.legend.FancyBboxPatch.set_boxstyle" title="matplotlib.legend.FancyBboxPatch.set_boxstyle"><code class="xref py py-obj docutils literal"><span class="pre">set_boxstyle</span></code></a>([boxstyle])</td>
+<td>Set the box style.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_capstyle.html#matplotlib.legend.FancyBboxPatch.set_capstyle" title="matplotlib.legend.FancyBboxPatch.set_capstyle"><code class="xref py py-obj docutils literal"><span class="pre">set_capstyle</span></code></a>(s)</td>
+<td>Set the patch capstyle</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_clip_box.html#matplotlib.legend.FancyBboxPatch.set_clip_box" title="matplotlib.legend.FancyBboxPatch.set_clip_box"><code class="xref py py-obj docutils literal"><span class="pre">set_clip_box</span></code></a>(clipbox)</td>
+<td>Set the artist&#8217;s clip <code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_clip_on.html#matplotlib.legend.FancyBboxPatch.set_clip_on" title="matplotlib.legend.FancyBboxPatch.set_clip_on"><code class="xref py py-obj docutils literal"><span class="pre">set_clip_on</span></code></a>(b)</td>
+<td>Set whether artist uses clipping.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_clip_path.html#matplotlib.legend.FancyBboxPatch.set_clip_path" title="matplotlib.legend.FancyBboxPatch.set_clip_path"><code class="xref py py-obj docutils literal"><span class="pre">set_clip_path</span></code></a>(path[,&nbsp;transform])</td>
+<td>Set the artist&#8217;s clip path, which may be:</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_color.html#matplotlib.legend.FancyBboxPatch.set_color" title="matplotlib.legend.FancyBboxPatch.set_color"><code class="xref py py-obj docutils literal"><span class="pre">set_color</span></code></a>(c)</td>
+<td>Set both the edgecolor and the facecolor.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_contains.html#matplotlib.legend.FancyBboxPatch.set_contains" title="matplotlib.legend.FancyBboxPatch.set_contains"><code class="xref py py-obj docutils literal"><span class="pre">set_contains</span></code></a>(picker)</td>
+<td>Replace the contains test used by this artist.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_ec.html#matplotlib.legend.FancyBboxPatch.set_ec" title="matplotlib.legend.FancyBboxPatch.set_ec"><code class="xref py py-obj docutils literal"><span class="pre">set_ec</span></code></a>(color)</td>
+<td>alias for set_edgecolor</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_edgecolor.html#matplotlib.legend.FancyBboxPatch.set_edgecolor" title="matplotlib.legend.FancyBboxPatch.set_edgecolor"><code class="xref py py-obj docutils literal"><span class="pre">set_edgecolor</span></code></a>(color)</td>
+<td>Set the patch edge color</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_facecolor.html#matplotlib.legend.FancyBboxPatch.set_facecolor" title="matplotlib.legend.FancyBboxPatch.set_facecolor"><code class="xref py py-obj docutils literal"><span class="pre">set_facecolor</span></code></a>(color)</td>
+<td>Set the patch face color</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_fc.html#matplotlib.legend.FancyBboxPatch.set_fc" title="matplotlib.legend.FancyBboxPatch.set_fc"><code class="xref py py-obj docutils literal"><span class="pre">set_fc</span></code></a>(color)</td>
+<td>alias for set_facecolor</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_figure.html#matplotlib.legend.FancyBboxPatch.set_figure" title="matplotlib.legend.FancyBboxPatch.set_figure"><code class="xref py py-obj docutils literal"><span class="pre">set_figure</span></code></a>(fig)</td>
+<td>Set the <a class="reference internal" href="matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure"><code class="xref py py-class docutils literal"><span class="pre">Figure</span></code></a> instance the artist belongs to.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_fill.html#matplotlib.legend.FancyBboxPatch.set_fill" title="matplotlib.legend.FancyBboxPatch.set_fill"><code class="xref py py-obj docutils literal"><span class="pre">set_fill</span></code></a>(b)</td>
+<td>Set whether to fill the patch</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_gid.html#matplotlib.legend.FancyBboxPatch.set_gid" title="matplotlib.legend.FancyBboxPatch.set_gid"><code class="xref py py-obj docutils literal"><span class="pre">set_gid</span></code></a>(gid)</td>
+<td>Sets the (group) id for the artist</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_hatch.html#matplotlib.legend.FancyBboxPatch.set_hatch" title="matplotlib.legend.FancyBboxPatch.set_hatch"><code class="xref py py-obj docutils literal"><span class="pre">set_hatch</span></code></a>(hatch)</td>
+<td>Set the hatching pattern</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_height.html#matplotlib.legend.FancyBboxPatch.set_height" title="matplotlib.legend.FancyBboxPatch.set_height"><code class="xref py py-obj docutils literal"><span class="pre">set_height</span></code></a>(h)</td>
+<td>Set the width rectangle</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_joinstyle.html#matplotlib.legend.FancyBboxPatch.set_joinstyle" title="matplotlib.legend.FancyBboxPatch.set_joinstyle"><code class="xref py py-obj docutils literal"><span class="pre">set_joinstyle</span></code></a>(s)</td>
+<td>Set the patch joinstyle</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_label.html#matplotlib.legend.FancyBboxPatch.set_label" title="matplotlib.legend.FancyBboxPatch.set_label"><code class="xref py py-obj docutils literal"><span class="pre">set_label</span></code></a>(s)</td>
+<td>Set the label to <em>s</em> for auto legend.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_linestyle.html#matplotlib.legend.FancyBboxPatch.set_linestyle" title="matplotlib.legend.FancyBboxPatch.set_linestyle"><code class="xref py py-obj docutils literal"><span class="pre">set_linestyle</span></code></a>(ls)</td>
+<td>Set the patch linestyle</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_linewidth.html#matplotlib.legend.FancyBboxPatch.set_linewidth" title="matplotlib.legend.FancyBboxPatch.set_linewidth"><code class="xref py py-obj docutils literal"><span class="pre">set_linewidth</span></code></a>(w)</td>
+<td>Set the patch linewidth in points</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_ls.html#matplotlib.legend.FancyBboxPatch.set_ls" title="matplotlib.legend.FancyBboxPatch.set_ls"><code class="xref py py-obj docutils literal"><span class="pre">set_ls</span></code></a>(ls)</td>
+<td>alias for set_linestyle</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_lw.html#matplotlib.legend.FancyBboxPatch.set_lw" title="matplotlib.legend.FancyBboxPatch.set_lw"><code class="xref py py-obj docutils literal"><span class="pre">set_lw</span></code></a>(lw)</td>
+<td>alias for set_linewidth</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_mutation_aspect.html#matplotlib.legend.FancyBboxPatch.set_mutation_aspect" title="matplotlib.legend.FancyBboxPatch.set_mutation_aspect"><code class="xref py py-obj docutils literal"><span class="pre">set_mutation_aspect</span></code></a>(aspect)</td>
+<td>Set the aspect ratio of the bbox mutation.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_mutation_scale.html#matplotlib.legend.FancyBboxPatch.set_mutation_scale" title="matplotlib.legend.FancyBboxPatch.set_mutation_scale"><code class="xref py py-obj docutils literal"><span class="pre">set_mutation_scale</span></code></a>(scale)</td>
+<td>Set the mutation scale.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_path_effects.html#matplotlib.legend.FancyBboxPatch.set_path_effects" title="matplotlib.legend.FancyBboxPatch.set_path_effects"><code class="xref py py-obj docutils literal"><span class="pre">set_path_effects</span></code></a>(path_effects)</td>
+<td>set path_effects, which should be a list of instances of</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_picker.html#matplotlib.legend.FancyBboxPatch.set_picker" title="matplotlib.legend.FancyBboxPatch.set_picker"><code class="xref py py-obj docutils literal"><span class="pre">set_picker</span></code></a>(picker)</td>
+<td>Set the epsilon for picking used by this artist</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_rasterized.html#matplotlib.legend.FancyBboxPatch.set_rasterized" title="matplotlib.legend.FancyBboxPatch.set_rasterized"><code class="xref py py-obj docutils literal"><span class="pre">set_rasterized</span></code></a>(rasterized)</td>
+<td>Force rasterized (bitmap) drawing in vector backend output.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_sketch_params.html#matplotlib.legend.FancyBboxPatch.set_sketch_params" title="matplotlib.legend.FancyBboxPatch.set_sketch_params"><code class="xref py py-obj docutils literal"><span class="pre">set_sketch_params</span></code></a>([scale,&nbsp;length,&nbsp;randomness])</td>
+<td>Sets the sketch parameters.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_snap.html#matplotlib.legend.FancyBboxPatch.set_snap" title="matplotlib.legend.FancyBboxPatch.set_snap"><code class="xref py py-obj docutils literal"><span class="pre">set_snap</span></code></a>(snap)</td>
+<td>Sets the snap setting which may be:</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_transform.html#matplotlib.legend.FancyBboxPatch.set_transform" title="matplotlib.legend.FancyBboxPatch.set_transform"><code class="xref py py-obj docutils literal"><span class="pre">set_transform</span></code></a>(t)</td>
+<td>Set the <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code> instance used by this artist.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_url.html#matplotlib.legend.FancyBboxPatch.set_url" title="matplotlib.legend.FancyBboxPatch.set_url"><code class="xref py py-obj docutils literal"><span class="pre">set_url</span></code></a>(url)</td>
+<td>Sets the url for the artist</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_visible.html#matplotlib.legend.FancyBboxPatch.set_visible" title="matplotlib.legend.FancyBboxPatch.set_visible"><code class="xref py py-obj docutils literal"><span class="pre">set_visible</span></code></a>(b)</td>
+<td>Set the artist&#8217;s visiblity.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_width.html#matplotlib.legend.FancyBboxPatch.set_width" title="matplotlib.legend.FancyBboxPatch.set_width"><code class="xref py py-obj docutils literal"><span class="pre">set_width</span></code></a>(w)</td>
+<td>Set the width rectangle</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_x.html#matplotlib.legend.FancyBboxPatch.set_x" title="matplotlib.legend.FancyBboxPatch.set_x"><code class="xref py py-obj docutils literal"><span class="pre">set_x</span></code></a>(x)</td>
+<td>Set the left coord of the rectangle</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_y.html#matplotlib.legend.FancyBboxPatch.set_y" title="matplotlib.legend.FancyBboxPatch.set_y"><code class="xref py py-obj docutils literal"><span class="pre">set_y</span></code></a>(y)</td>
+<td>Set the bottom coord of the rectangle</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.set_zorder.html#matplotlib.legend.FancyBboxPatch.set_zorder" title="matplotlib.legend.FancyBboxPatch.set_zorder"><code class="xref py py-obj docutils literal"><span class="pre">set_zorder</span></code></a>(level)</td>
+<td>Set the zorder for the artist.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.update.html#matplotlib.legend.FancyBboxPatch.update" title="matplotlib.legend.FancyBboxPatch.update"><code class="xref py py-obj docutils literal"><span class="pre">update</span></code></a>(props)</td>
+<td>Update the properties of this <a class="reference internal" href="matplotlib.legend.Artist.html#matplotlib.legend.Artist" title="matplotlib.legend.Artist"><code class="xref py py-class docutils literal"><span class="pre">Artist</span></code></a> from the dictionary <em>prop</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.update_from.html#matplotlib.legend.FancyBboxPatch.update_from" title="matplotlib.legend.FancyBboxPatch.update_from"><code class="xref py py-obj docutils literal"><span class="pre">update_from</span></code></a>(other)</td>
+<td>Updates this <a class="reference internal" href="matplotlib.legend.Patch.html#matplotlib.legend.Patch" title="matplotlib.legend.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a> from the properties of <em>other</em>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.legend.FancyBboxPatch.axes.html" class="btn btn-neutral float-right" title="9.2.12.1. matplotlib.legend.FancyBboxPatch.axes" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.legend.ErrorbarContainer.set_remove_method.html" class="btn btn-neutral" title="9.2.11.10. matplotlib.legend.ErrorbarContainer.set_remove_method" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

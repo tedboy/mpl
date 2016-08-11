@@ -1,0 +1,449 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>8.2.1. matplotlib.figure.Affine2D &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="8. matplotlib.figure" href="../matplotlib.figure.html"/>
+        <link rel="next" title="8.2.1.1. matplotlib.figure.Affine2D.depth" href="matplotlib.figure.Affine2D.depth.html"/>
+        <link rel="prev" title="8.1.6. matplotlib.figure.subplot_class_factory" href="../matplotlib.figure.subplot_class_factory.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.figure.html">8. matplotlib.figure</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.figure.html#functions">8.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.figure.html#classes">8.2. Classes</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">8.2.1. matplotlib.figure.Affine2D</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Affine2D.depth.html">8.2.1.1. matplotlib.figure.Affine2D.depth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Affine2D.is_separable.html">8.2.1.2. matplotlib.figure.Affine2D.is_separable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Affine2D.clear.html">8.2.1.3. matplotlib.figure.Affine2D.clear</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Affine2D.contains_branch.html">8.2.1.4. matplotlib.figure.Affine2D.contains_branch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Affine2D.contains_branch_seperately.html">8.2.1.5. matplotlib.figure.Affine2D.contains_branch_seperately</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Affine2D.from_values.html">8.2.1.6. matplotlib.figure.Affine2D.from_values</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Affine2D.frozen.html">8.2.1.7. matplotlib.figure.Affine2D.frozen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Affine2D.get_affine.html">8.2.1.8. matplotlib.figure.Affine2D.get_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Affine2D.get_matrix.html">8.2.1.9. matplotlib.figure.Affine2D.get_matrix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Affine2D.identity.html">8.2.1.10. matplotlib.figure.Affine2D.identity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Affine2D.invalidate.html">8.2.1.11. matplotlib.figure.Affine2D.invalidate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Affine2D.inverted.html">8.2.1.12. matplotlib.figure.Affine2D.inverted</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Affine2D.matrix_from_values.html">8.2.1.13. matplotlib.figure.Affine2D.matrix_from_values</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Affine2D.rotate.html">8.2.1.14. matplotlib.figure.Affine2D.rotate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Affine2D.rotate_around.html">8.2.1.15. matplotlib.figure.Affine2D.rotate_around</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Affine2D.rotate_deg.html">8.2.1.16. matplotlib.figure.Affine2D.rotate_deg</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Affine2D.rotate_deg_around.html">8.2.1.17. matplotlib.figure.Affine2D.rotate_deg_around</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Affine2D.scale.html">8.2.1.18. matplotlib.figure.Affine2D.scale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Affine2D.set.html">8.2.1.19. matplotlib.figure.Affine2D.set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Affine2D.set_children.html">8.2.1.20. matplotlib.figure.Affine2D.set_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Affine2D.set_matrix.html">8.2.1.21. matplotlib.figure.Affine2D.set_matrix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Affine2D.skew.html">8.2.1.22. matplotlib.figure.Affine2D.skew</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Affine2D.skew_deg.html">8.2.1.23. matplotlib.figure.Affine2D.skew_deg</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Affine2D.to_values.html">8.2.1.24. matplotlib.figure.Affine2D.to_values</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Affine2D.transform.html">8.2.1.25. matplotlib.figure.Affine2D.transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Affine2D.transform_affine.html">8.2.1.26. matplotlib.figure.Affine2D.transform_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Affine2D.transform_angles.html">8.2.1.27. matplotlib.figure.Affine2D.transform_angles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Affine2D.transform_bbox.html">8.2.1.28. matplotlib.figure.Affine2D.transform_bbox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Affine2D.transform_non_affine.html">8.2.1.29. matplotlib.figure.Affine2D.transform_non_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Affine2D.transform_path.html">8.2.1.30. matplotlib.figure.Affine2D.transform_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Affine2D.transform_path_affine.html">8.2.1.31. matplotlib.figure.Affine2D.transform_path_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Affine2D.transform_path_non_affine.html">8.2.1.32. matplotlib.figure.Affine2D.transform_path_non_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Affine2D.transform_point.html">8.2.1.33. matplotlib.figure.Affine2D.transform_point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Affine2D.translate.html">8.2.1.34. matplotlib.figure.Affine2D.translate</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.Artist.html">8.2.2. matplotlib.figure.Artist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.Axes.html">8.2.3. matplotlib.figure.Axes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.AxesStack.html">8.2.4. matplotlib.figure.AxesStack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.Bbox.html">8.2.5. matplotlib.figure.Bbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.BboxTransformTo.html">8.2.6. matplotlib.figure.BboxTransformTo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.BlockingKeyMouseInput.html">8.2.7. matplotlib.figure.BlockingKeyMouseInput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.BlockingMouseInput.html">8.2.8. matplotlib.figure.BlockingMouseInput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.Figure.html">8.2.9. matplotlib.figure.Figure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.FigureImage.html">8.2.10. matplotlib.figure.FigureImage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.Legend.html">8.2.11. matplotlib.figure.Legend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.Rectangle.html">8.2.12. matplotlib.figure.Rectangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.Stack.html">8.2.13. matplotlib.figure.Stack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.SubplotBase.html">8.2.14. matplotlib.figure.SubplotBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.SubplotParams.html">8.2.15. matplotlib.figure.SubplotParams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.Text.html">8.2.16. matplotlib.figure.Text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.TransformedBbox.html">8.2.17. matplotlib.figure.TransformedBbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.itemgetter.html">8.2.18. matplotlib.figure.itemgetter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.figure.html#exceptions">8.3. Exceptions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../freq.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.figure.html">8. matplotlib.figure</a> &raquo;</li>
+        
+      <li>8.2.1. matplotlib.figure.Affine2D</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.figure.Affine2D.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-figure-affine2d">
+<h1>8.2.1. matplotlib.figure.Affine2D<a class="headerlink" href="#matplotlib-figure-affine2d" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="matplotlib.figure.Affine2D">
+<em class="property">class </em><code class="descclassname">matplotlib.figure.</code><code class="descname">Affine2D</code><span class="sig-paren">(</span><em>matrix=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/transforms.html#Affine2D"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.figure.Affine2D" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mutable 2D affine transformation.</p>
+<p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.figure.Affine2D.depth.html#matplotlib.figure.Affine2D.depth" title="matplotlib.figure.Affine2D.depth"><code class="xref py py-obj docutils literal"><span class="pre">depth</span></code></a></td>
+<td>Returns the number of transforms which have been chained together to form this Transform instance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.figure.Affine2D.is_separable.html#matplotlib.figure.Affine2D.is_separable" title="matplotlib.figure.Affine2D.is_separable"><code class="xref py py-obj docutils literal"><span class="pre">is_separable</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.figure.Affine2D.clear.html#matplotlib.figure.Affine2D.clear" title="matplotlib.figure.Affine2D.clear"><code class="xref py py-obj docutils literal"><span class="pre">clear</span></code></a>()</td>
+<td>Reset the underlying matrix to the identity transform.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.figure.Affine2D.contains_branch.html#matplotlib.figure.Affine2D.contains_branch" title="matplotlib.figure.Affine2D.contains_branch"><code class="xref py py-obj docutils literal"><span class="pre">contains_branch</span></code></a>(other)</td>
+<td>Return whether the given transform is a sub-tree of this transform.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.figure.Affine2D.contains_branch_seperately.html#matplotlib.figure.Affine2D.contains_branch_seperately" title="matplotlib.figure.Affine2D.contains_branch_seperately"><code class="xref py py-obj docutils literal"><span class="pre">contains_branch_seperately</span></code></a>(other_transform)</td>
+<td>Returns whether the given branch is a sub-tree of this transform on each seperate dimension.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.figure.Affine2D.from_values.html#matplotlib.figure.Affine2D.from_values" title="matplotlib.figure.Affine2D.from_values"><code class="xref py py-obj docutils literal"><span class="pre">from_values</span></code></a>(a,&nbsp;b,&nbsp;c,&nbsp;d,&nbsp;e,&nbsp;f)</td>
+<td>(staticmethod) Create a new Affine2D instance from the given</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.figure.Affine2D.frozen.html#matplotlib.figure.Affine2D.frozen" title="matplotlib.figure.Affine2D.frozen"><code class="xref py py-obj docutils literal"><span class="pre">frozen</span></code></a>()</td>
+<td>Returns a frozen copy of this transform node.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.figure.Affine2D.get_affine.html#matplotlib.figure.Affine2D.get_affine" title="matplotlib.figure.Affine2D.get_affine"><code class="xref py py-obj docutils literal"><span class="pre">get_affine</span></code></a>()</td>
+<td>Get the affine part of this transform.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.figure.Affine2D.get_matrix.html#matplotlib.figure.Affine2D.get_matrix" title="matplotlib.figure.Affine2D.get_matrix"><code class="xref py py-obj docutils literal"><span class="pre">get_matrix</span></code></a>()</td>
+<td>Get the underlying transformation matrix as a 3x3 numpy array:</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.figure.Affine2D.identity.html#matplotlib.figure.Affine2D.identity" title="matplotlib.figure.Affine2D.identity"><code class="xref py py-obj docutils literal"><span class="pre">identity</span></code></a>()</td>
+<td>(staticmethod) Return a new <a class="reference internal" href="#matplotlib.figure.Affine2D" title="matplotlib.figure.Affine2D"><code class="xref py py-class docutils literal"><span class="pre">Affine2D</span></code></a> object that is</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.figure.Affine2D.invalidate.html#matplotlib.figure.Affine2D.invalidate" title="matplotlib.figure.Affine2D.invalidate"><code class="xref py py-obj docutils literal"><span class="pre">invalidate</span></code></a>()</td>
+<td>Invalidate this <code class="xref py py-class docutils literal"><span class="pre">TransformNode</span></code> and triggers an invalidation of its ancestors.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.figure.Affine2D.inverted.html#matplotlib.figure.Affine2D.inverted" title="matplotlib.figure.Affine2D.inverted"><code class="xref py py-obj docutils literal"><span class="pre">inverted</span></code></a>()</td>
+<td>Return the corresponding inverse transformation.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.figure.Affine2D.matrix_from_values.html#matplotlib.figure.Affine2D.matrix_from_values" title="matplotlib.figure.Affine2D.matrix_from_values"><code class="xref py py-obj docutils literal"><span class="pre">matrix_from_values</span></code></a>(a,&nbsp;b,&nbsp;c,&nbsp;d,&nbsp;e,&nbsp;f)</td>
+<td>(staticmethod) Create a new transformation matrix as a 3x3</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.figure.Affine2D.rotate.html#matplotlib.figure.Affine2D.rotate" title="matplotlib.figure.Affine2D.rotate"><code class="xref py py-obj docutils literal"><span class="pre">rotate</span></code></a>(theta)</td>
+<td>Add a rotation (in radians) to this transform in place.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.figure.Affine2D.rotate_around.html#matplotlib.figure.Affine2D.rotate_around" title="matplotlib.figure.Affine2D.rotate_around"><code class="xref py py-obj docutils literal"><span class="pre">rotate_around</span></code></a>(x,&nbsp;y,&nbsp;theta)</td>
+<td>Add a rotation (in radians) around the point (x, y) in place.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.figure.Affine2D.rotate_deg.html#matplotlib.figure.Affine2D.rotate_deg" title="matplotlib.figure.Affine2D.rotate_deg"><code class="xref py py-obj docutils literal"><span class="pre">rotate_deg</span></code></a>(degrees)</td>
+<td>Add a rotation (in degrees) to this transform in place.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.figure.Affine2D.rotate_deg_around.html#matplotlib.figure.Affine2D.rotate_deg_around" title="matplotlib.figure.Affine2D.rotate_deg_around"><code class="xref py py-obj docutils literal"><span class="pre">rotate_deg_around</span></code></a>(x,&nbsp;y,&nbsp;degrees)</td>
+<td>Add a rotation (in degrees) around the point (x, y) in place.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.figure.Affine2D.scale.html#matplotlib.figure.Affine2D.scale" title="matplotlib.figure.Affine2D.scale"><code class="xref py py-obj docutils literal"><span class="pre">scale</span></code></a>(sx[,&nbsp;sy])</td>
+<td>Adds a scale in place.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.figure.Affine2D.set.html#matplotlib.figure.Affine2D.set" title="matplotlib.figure.Affine2D.set"><code class="xref py py-obj docutils literal"><span class="pre">set</span></code></a>(other)</td>
+<td>Set this transformation from the frozen copy of another <code class="xref py py-class docutils literal"><span class="pre">Affine2DBase</span></code> object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.figure.Affine2D.set_children.html#matplotlib.figure.Affine2D.set_children" title="matplotlib.figure.Affine2D.set_children"><code class="xref py py-obj docutils literal"><span class="pre">set_children</span></code></a>(*children)</td>
+<td>Set the children of the transform, to let the invalidation system know which transforms can invalidate this transform.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.figure.Affine2D.set_matrix.html#matplotlib.figure.Affine2D.set_matrix" title="matplotlib.figure.Affine2D.set_matrix"><code class="xref py py-obj docutils literal"><span class="pre">set_matrix</span></code></a>(mtx)</td>
+<td>Set the underlying transformation matrix from a 3x3 numpy array:</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.figure.Affine2D.skew.html#matplotlib.figure.Affine2D.skew" title="matplotlib.figure.Affine2D.skew"><code class="xref py py-obj docutils literal"><span class="pre">skew</span></code></a>(xShear,&nbsp;yShear)</td>
+<td>Adds a skew in place.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.figure.Affine2D.skew_deg.html#matplotlib.figure.Affine2D.skew_deg" title="matplotlib.figure.Affine2D.skew_deg"><code class="xref py py-obj docutils literal"><span class="pre">skew_deg</span></code></a>(xShear,&nbsp;yShear)</td>
+<td>Adds a skew in place.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.figure.Affine2D.to_values.html#matplotlib.figure.Affine2D.to_values" title="matplotlib.figure.Affine2D.to_values"><code class="xref py py-obj docutils literal"><span class="pre">to_values</span></code></a>()</td>
+<td>Return the values of the matrix as a sequence (a,b,c,d,e,f)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.figure.Affine2D.transform.html#matplotlib.figure.Affine2D.transform" title="matplotlib.figure.Affine2D.transform"><code class="xref py py-obj docutils literal"><span class="pre">transform</span></code></a>(values)</td>
+<td>Performs the transformation on the given array of values.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.figure.Affine2D.transform_affine.html#matplotlib.figure.Affine2D.transform_affine" title="matplotlib.figure.Affine2D.transform_affine"><code class="xref py py-obj docutils literal"><span class="pre">transform_affine</span></code></a>(points)</td>
+<td>Performs only the affine part of this transformation on the given array of values.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.figure.Affine2D.transform_angles.html#matplotlib.figure.Affine2D.transform_angles" title="matplotlib.figure.Affine2D.transform_angles"><code class="xref py py-obj docutils literal"><span class="pre">transform_angles</span></code></a>(angles,&nbsp;pts[,&nbsp;radians,&nbsp;pushoff])</td>
+<td>Performs transformation on a set of angles anchored at specific locations.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.figure.Affine2D.transform_bbox.html#matplotlib.figure.Affine2D.transform_bbox" title="matplotlib.figure.Affine2D.transform_bbox"><code class="xref py py-obj docutils literal"><span class="pre">transform_bbox</span></code></a>(bbox)</td>
+<td>Transform the given bounding box.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.figure.Affine2D.transform_non_affine.html#matplotlib.figure.Affine2D.transform_non_affine" title="matplotlib.figure.Affine2D.transform_non_affine"><code class="xref py py-obj docutils literal"><span class="pre">transform_non_affine</span></code></a>(points)</td>
+<td>Performs only the non-affine part of the transformation.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.figure.Affine2D.transform_path.html#matplotlib.figure.Affine2D.transform_path" title="matplotlib.figure.Affine2D.transform_path"><code class="xref py py-obj docutils literal"><span class="pre">transform_path</span></code></a>(path)</td>
+<td>Returns a transformed path.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.figure.Affine2D.transform_path_affine.html#matplotlib.figure.Affine2D.transform_path_affine" title="matplotlib.figure.Affine2D.transform_path_affine"><code class="xref py py-obj docutils literal"><span class="pre">transform_path_affine</span></code></a>(path)</td>
+<td>Returns a path, transformed only by the affine part of this transform.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.figure.Affine2D.transform_path_non_affine.html#matplotlib.figure.Affine2D.transform_path_non_affine" title="matplotlib.figure.Affine2D.transform_path_non_affine"><code class="xref py py-obj docutils literal"><span class="pre">transform_path_non_affine</span></code></a>(path)</td>
+<td>Returns a path, transformed only by the non-affine part of this transform.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.figure.Affine2D.transform_point.html#matplotlib.figure.Affine2D.transform_point" title="matplotlib.figure.Affine2D.transform_point"><code class="xref py py-obj docutils literal"><span class="pre">transform_point</span></code></a>(point)</td>
+<td>A convenience function that returns the transformed copy of a single point.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.figure.Affine2D.translate.html#matplotlib.figure.Affine2D.translate" title="matplotlib.figure.Affine2D.translate"><code class="xref py py-obj docutils literal"><span class="pre">translate</span></code></a>(tx,&nbsp;ty)</td>
+<td>Adds a translation in place.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.figure.Affine2D.depth.html" class="btn btn-neutral float-right" title="8.2.1.1. matplotlib.figure.Affine2D.depth" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../matplotlib.figure.subplot_class_factory.html" class="btn btn-neutral" title="8.1.6. matplotlib.figure.subplot_class_factory" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

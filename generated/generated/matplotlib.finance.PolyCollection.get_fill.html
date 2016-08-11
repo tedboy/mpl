@@ -1,0 +1,408 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>24.2.4.36. matplotlib.finance.PolyCollection.get_fill &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="24.2.4. matplotlib.finance.PolyCollection" href="matplotlib.finance.PolyCollection.html"/>
+        <link rel="next" title="24.2.4.37. matplotlib.finance.PolyCollection.get_gid" href="matplotlib.finance.PolyCollection.get_gid.html"/>
+        <link rel="prev" title="24.2.4.35. matplotlib.finance.PolyCollection.get_figure" href="matplotlib.finance.PolyCollection.get_figure.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.finance.html">24. matplotlib.finance</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.finance.html#functions">24.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.finance.html#classes">24.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.finance.Affine2D.html">24.2.1. matplotlib.finance.Affine2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.finance.Line2D.html">24.2.2. matplotlib.finance.Line2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.finance.LineCollection.html">24.2.3. matplotlib.finance.LineCollection</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="matplotlib.finance.PolyCollection.html">24.2.4. matplotlib.finance.PolyCollection</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.axes.html">24.2.4.1. matplotlib.finance.PolyCollection.axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.mouseover.html">24.2.4.2. matplotlib.finance.PolyCollection.mouseover</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.stale.html">24.2.4.3. matplotlib.finance.PolyCollection.stale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.add_callback.html">24.2.4.4. matplotlib.finance.PolyCollection.add_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.add_checker.html">24.2.4.5. matplotlib.finance.PolyCollection.add_checker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.autoscale.html">24.2.4.6. matplotlib.finance.PolyCollection.autoscale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.autoscale_None.html">24.2.4.7. matplotlib.finance.PolyCollection.autoscale_None</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.changed.html">24.2.4.8. matplotlib.finance.PolyCollection.changed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.check_update.html">24.2.4.9. matplotlib.finance.PolyCollection.check_update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.contains.html">24.2.4.10. matplotlib.finance.PolyCollection.contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.convert_xunits.html">24.2.4.11. matplotlib.finance.PolyCollection.convert_xunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.convert_yunits.html">24.2.4.12. matplotlib.finance.PolyCollection.convert_yunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.draw.html">24.2.4.13. matplotlib.finance.PolyCollection.draw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.findobj.html">24.2.4.14. matplotlib.finance.PolyCollection.findobj</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.format_cursor_data.html">24.2.4.15. matplotlib.finance.PolyCollection.format_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_agg_filter.html">24.2.4.16. matplotlib.finance.PolyCollection.get_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_alpha.html">24.2.4.17. matplotlib.finance.PolyCollection.get_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_animated.html">24.2.4.18. matplotlib.finance.PolyCollection.get_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_array.html">24.2.4.19. matplotlib.finance.PolyCollection.get_array</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_axes.html">24.2.4.20. matplotlib.finance.PolyCollection.get_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_children.html">24.2.4.21. matplotlib.finance.PolyCollection.get_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_clim.html">24.2.4.22. matplotlib.finance.PolyCollection.get_clim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_clip_box.html">24.2.4.23. matplotlib.finance.PolyCollection.get_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_clip_on.html">24.2.4.24. matplotlib.finance.PolyCollection.get_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_clip_path.html">24.2.4.25. matplotlib.finance.PolyCollection.get_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_cmap.html">24.2.4.26. matplotlib.finance.PolyCollection.get_cmap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_contains.html">24.2.4.27. matplotlib.finance.PolyCollection.get_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_cursor_data.html">24.2.4.28. matplotlib.finance.PolyCollection.get_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_dashes.html">24.2.4.29. matplotlib.finance.PolyCollection.get_dashes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_datalim.html">24.2.4.30. matplotlib.finance.PolyCollection.get_datalim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_edgecolor.html">24.2.4.31. matplotlib.finance.PolyCollection.get_edgecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_edgecolors.html">24.2.4.32. matplotlib.finance.PolyCollection.get_edgecolors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_facecolor.html">24.2.4.33. matplotlib.finance.PolyCollection.get_facecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_facecolors.html">24.2.4.34. matplotlib.finance.PolyCollection.get_facecolors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_figure.html">24.2.4.35. matplotlib.finance.PolyCollection.get_figure</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">24.2.4.36. matplotlib.finance.PolyCollection.get_fill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_gid.html">24.2.4.37. matplotlib.finance.PolyCollection.get_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_hatch.html">24.2.4.38. matplotlib.finance.PolyCollection.get_hatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_label.html">24.2.4.39. matplotlib.finance.PolyCollection.get_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_linestyle.html">24.2.4.40. matplotlib.finance.PolyCollection.get_linestyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_linestyles.html">24.2.4.41. matplotlib.finance.PolyCollection.get_linestyles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_linewidth.html">24.2.4.42. matplotlib.finance.PolyCollection.get_linewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_linewidths.html">24.2.4.43. matplotlib.finance.PolyCollection.get_linewidths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_offset_position.html">24.2.4.44. matplotlib.finance.PolyCollection.get_offset_position</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_offset_transform.html">24.2.4.45. matplotlib.finance.PolyCollection.get_offset_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_offsets.html">24.2.4.46. matplotlib.finance.PolyCollection.get_offsets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_path_effects.html">24.2.4.47. matplotlib.finance.PolyCollection.get_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_paths.html">24.2.4.48. matplotlib.finance.PolyCollection.get_paths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_picker.html">24.2.4.49. matplotlib.finance.PolyCollection.get_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_pickradius.html">24.2.4.50. matplotlib.finance.PolyCollection.get_pickradius</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_rasterized.html">24.2.4.51. matplotlib.finance.PolyCollection.get_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_sizes.html">24.2.4.52. matplotlib.finance.PolyCollection.get_sizes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_sketch_params.html">24.2.4.53. matplotlib.finance.PolyCollection.get_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_snap.html">24.2.4.54. matplotlib.finance.PolyCollection.get_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_transform.html">24.2.4.55. matplotlib.finance.PolyCollection.get_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_transformed_clip_path_and_affine.html">24.2.4.56. matplotlib.finance.PolyCollection.get_transformed_clip_path_and_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_transforms.html">24.2.4.57. matplotlib.finance.PolyCollection.get_transforms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_url.html">24.2.4.58. matplotlib.finance.PolyCollection.get_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_urls.html">24.2.4.59. matplotlib.finance.PolyCollection.get_urls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_visible.html">24.2.4.60. matplotlib.finance.PolyCollection.get_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_window_extent.html">24.2.4.61. matplotlib.finance.PolyCollection.get_window_extent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.get_zorder.html">24.2.4.62. matplotlib.finance.PolyCollection.get_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.have_units.html">24.2.4.63. matplotlib.finance.PolyCollection.have_units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.hitlist.html">24.2.4.64. matplotlib.finance.PolyCollection.hitlist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.is_figure_set.html">24.2.4.65. matplotlib.finance.PolyCollection.is_figure_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.is_transform_set.html">24.2.4.66. matplotlib.finance.PolyCollection.is_transform_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.pchanged.html">24.2.4.67. matplotlib.finance.PolyCollection.pchanged</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.pick.html">24.2.4.68. matplotlib.finance.PolyCollection.pick</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.pickable.html">24.2.4.69. matplotlib.finance.PolyCollection.pickable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.properties.html">24.2.4.70. matplotlib.finance.PolyCollection.properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.remove.html">24.2.4.71. matplotlib.finance.PolyCollection.remove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.remove_callback.html">24.2.4.72. matplotlib.finance.PolyCollection.remove_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set.html">24.2.4.73. matplotlib.finance.PolyCollection.set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_agg_filter.html">24.2.4.74. matplotlib.finance.PolyCollection.set_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_alpha.html">24.2.4.75. matplotlib.finance.PolyCollection.set_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_animated.html">24.2.4.76. matplotlib.finance.PolyCollection.set_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_antialiased.html">24.2.4.77. matplotlib.finance.PolyCollection.set_antialiased</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_antialiaseds.html">24.2.4.78. matplotlib.finance.PolyCollection.set_antialiaseds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_array.html">24.2.4.79. matplotlib.finance.PolyCollection.set_array</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_axes.html">24.2.4.80. matplotlib.finance.PolyCollection.set_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_clim.html">24.2.4.81. matplotlib.finance.PolyCollection.set_clim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_clip_box.html">24.2.4.82. matplotlib.finance.PolyCollection.set_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_clip_on.html">24.2.4.83. matplotlib.finance.PolyCollection.set_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_clip_path.html">24.2.4.84. matplotlib.finance.PolyCollection.set_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_cmap.html">24.2.4.85. matplotlib.finance.PolyCollection.set_cmap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_color.html">24.2.4.86. matplotlib.finance.PolyCollection.set_color</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_contains.html">24.2.4.87. matplotlib.finance.PolyCollection.set_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_dashes.html">24.2.4.88. matplotlib.finance.PolyCollection.set_dashes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_edgecolor.html">24.2.4.89. matplotlib.finance.PolyCollection.set_edgecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_edgecolors.html">24.2.4.90. matplotlib.finance.PolyCollection.set_edgecolors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_facecolor.html">24.2.4.91. matplotlib.finance.PolyCollection.set_facecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_facecolors.html">24.2.4.92. matplotlib.finance.PolyCollection.set_facecolors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_figure.html">24.2.4.93. matplotlib.finance.PolyCollection.set_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_gid.html">24.2.4.94. matplotlib.finance.PolyCollection.set_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_hatch.html">24.2.4.95. matplotlib.finance.PolyCollection.set_hatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_label.html">24.2.4.96. matplotlib.finance.PolyCollection.set_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_linestyle.html">24.2.4.97. matplotlib.finance.PolyCollection.set_linestyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_linestyles.html">24.2.4.98. matplotlib.finance.PolyCollection.set_linestyles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_linewidth.html">24.2.4.99. matplotlib.finance.PolyCollection.set_linewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_linewidths.html">24.2.4.100. matplotlib.finance.PolyCollection.set_linewidths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_lw.html">24.2.4.101. matplotlib.finance.PolyCollection.set_lw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_norm.html">24.2.4.102. matplotlib.finance.PolyCollection.set_norm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_offset_position.html">24.2.4.103. matplotlib.finance.PolyCollection.set_offset_position</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_offsets.html">24.2.4.104. matplotlib.finance.PolyCollection.set_offsets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_path_effects.html">24.2.4.105. matplotlib.finance.PolyCollection.set_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_paths.html">24.2.4.106. matplotlib.finance.PolyCollection.set_paths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_picker.html">24.2.4.107. matplotlib.finance.PolyCollection.set_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_pickradius.html">24.2.4.108. matplotlib.finance.PolyCollection.set_pickradius</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_rasterized.html">24.2.4.109. matplotlib.finance.PolyCollection.set_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_sizes.html">24.2.4.110. matplotlib.finance.PolyCollection.set_sizes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_sketch_params.html">24.2.4.111. matplotlib.finance.PolyCollection.set_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_snap.html">24.2.4.112. matplotlib.finance.PolyCollection.set_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_transform.html">24.2.4.113. matplotlib.finance.PolyCollection.set_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_url.html">24.2.4.114. matplotlib.finance.PolyCollection.set_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_urls.html">24.2.4.115. matplotlib.finance.PolyCollection.set_urls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_verts.html">24.2.4.116. matplotlib.finance.PolyCollection.set_verts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_verts_and_codes.html">24.2.4.117. matplotlib.finance.PolyCollection.set_verts_and_codes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_visible.html">24.2.4.118. matplotlib.finance.PolyCollection.set_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.set_zorder.html">24.2.4.119. matplotlib.finance.PolyCollection.set_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.to_rgba.html">24.2.4.120. matplotlib.finance.PolyCollection.to_rgba</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.update.html">24.2.4.121. matplotlib.finance.PolyCollection.update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.update_from.html">24.2.4.122. matplotlib.finance.PolyCollection.update_from</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.finance.PolyCollection.update_scalarmappable.html">24.2.4.123. matplotlib.finance.PolyCollection.update_scalarmappable</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.finance.Rectangle.html">24.2.5. matplotlib.finance.Rectangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.finance.xrange.html">24.2.6. matplotlib.finance.xrange</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.finance.zip.html">24.2.7. matplotlib.finance.zip</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../infreq.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.finance.html">24. matplotlib.finance</a> &raquo;</li>
+        
+          <li><a href="matplotlib.finance.PolyCollection.html">24.2.4. matplotlib.finance.PolyCollection</a> &raquo;</li>
+        
+      <li>24.2.4.36. matplotlib.finance.PolyCollection.get_fill</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.finance.PolyCollection.get_fill.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-finance-polycollection-get-fill">
+<h1>24.2.4.36. matplotlib.finance.PolyCollection.get_fill<a class="headerlink" href="#matplotlib-finance-polycollection-get-fill" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="matplotlib.finance.PolyCollection.get_fill">
+<code class="descclassname">PolyCollection.</code><code class="descname">get_fill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.finance.PolyCollection.get_fill" title="Permalink to this definition">¶</a></dt>
+<dd><p>return whether fill is set</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.finance.PolyCollection.get_gid.html" class="btn btn-neutral float-right" title="24.2.4.37. matplotlib.finance.PolyCollection.get_gid" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.finance.PolyCollection.get_figure.html" class="btn btn-neutral" title="24.2.4.35. matplotlib.finance.PolyCollection.get_figure" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

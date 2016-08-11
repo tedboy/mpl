@@ -1,0 +1,396 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>30.2.7.81. matplotlib.offsetbox.BboxImage.set_rasterized &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="30.2.7. matplotlib.offsetbox.BboxImage" href="matplotlib.offsetbox.BboxImage.html"/>
+        <link rel="next" title="30.2.7.82. matplotlib.offsetbox.BboxImage.set_resample" href="matplotlib.offsetbox.BboxImage.set_resample.html"/>
+        <link rel="prev" title="30.2.7.80. matplotlib.offsetbox.BboxImage.set_picker" href="matplotlib.offsetbox.BboxImage.set_picker.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.offsetbox.html">30. matplotlib.offsetbox</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.offsetbox.html#functions">30.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.offsetbox.html#classes">30.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.AnchoredOffsetbox.html">30.2.1. matplotlib.offsetbox.AnchoredOffsetbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.AnchoredText.html">30.2.2. matplotlib.offsetbox.AnchoredText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.AnnotationBbox.html">30.2.3. matplotlib.offsetbox.AnnotationBbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.AuxTransformBox.html">30.2.4. matplotlib.offsetbox.AuxTransformBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.Bbox.html">30.2.5. matplotlib.offsetbox.Bbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.BboxBase.html">30.2.6. matplotlib.offsetbox.BboxBase</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.html">30.2.7. matplotlib.offsetbox.BboxImage</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.axes.html">30.2.7.1. matplotlib.offsetbox.BboxImage.axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.mouseover.html">30.2.7.2. matplotlib.offsetbox.BboxImage.mouseover</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.stale.html">30.2.7.3. matplotlib.offsetbox.BboxImage.stale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.add_callback.html">30.2.7.4. matplotlib.offsetbox.BboxImage.add_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.add_checker.html">30.2.7.5. matplotlib.offsetbox.BboxImage.add_checker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.autoscale.html">30.2.7.6. matplotlib.offsetbox.BboxImage.autoscale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.autoscale_None.html">30.2.7.7. matplotlib.offsetbox.BboxImage.autoscale_None</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.changed.html">30.2.7.8. matplotlib.offsetbox.BboxImage.changed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.check_update.html">30.2.7.9. matplotlib.offsetbox.BboxImage.check_update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.contains.html">30.2.7.10. matplotlib.offsetbox.BboxImage.contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.convert_xunits.html">30.2.7.11. matplotlib.offsetbox.BboxImage.convert_xunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.convert_yunits.html">30.2.7.12. matplotlib.offsetbox.BboxImage.convert_yunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.draw.html">30.2.7.13. matplotlib.offsetbox.BboxImage.draw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.findobj.html">30.2.7.14. matplotlib.offsetbox.BboxImage.findobj</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.format_cursor_data.html">30.2.7.15. matplotlib.offsetbox.BboxImage.format_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.get_agg_filter.html">30.2.7.16. matplotlib.offsetbox.BboxImage.get_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.get_alpha.html">30.2.7.17. matplotlib.offsetbox.BboxImage.get_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.get_animated.html">30.2.7.18. matplotlib.offsetbox.BboxImage.get_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.get_array.html">30.2.7.19. matplotlib.offsetbox.BboxImage.get_array</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.get_axes.html">30.2.7.20. matplotlib.offsetbox.BboxImage.get_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.get_children.html">30.2.7.21. matplotlib.offsetbox.BboxImage.get_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.get_clim.html">30.2.7.22. matplotlib.offsetbox.BboxImage.get_clim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.get_clip_box.html">30.2.7.23. matplotlib.offsetbox.BboxImage.get_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.get_clip_on.html">30.2.7.24. matplotlib.offsetbox.BboxImage.get_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.get_clip_path.html">30.2.7.25. matplotlib.offsetbox.BboxImage.get_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.get_cmap.html">30.2.7.26. matplotlib.offsetbox.BboxImage.get_cmap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.get_contains.html">30.2.7.27. matplotlib.offsetbox.BboxImage.get_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.get_cursor_data.html">30.2.7.28. matplotlib.offsetbox.BboxImage.get_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.get_figure.html">30.2.7.29. matplotlib.offsetbox.BboxImage.get_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.get_filternorm.html">30.2.7.30. matplotlib.offsetbox.BboxImage.get_filternorm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.get_filterrad.html">30.2.7.31. matplotlib.offsetbox.BboxImage.get_filterrad</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.get_gid.html">30.2.7.32. matplotlib.offsetbox.BboxImage.get_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.get_interpolation.html">30.2.7.33. matplotlib.offsetbox.BboxImage.get_interpolation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.get_label.html">30.2.7.34. matplotlib.offsetbox.BboxImage.get_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.get_path_effects.html">30.2.7.35. matplotlib.offsetbox.BboxImage.get_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.get_picker.html">30.2.7.36. matplotlib.offsetbox.BboxImage.get_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.get_rasterized.html">30.2.7.37. matplotlib.offsetbox.BboxImage.get_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.get_resample.html">30.2.7.38. matplotlib.offsetbox.BboxImage.get_resample</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.get_size.html">30.2.7.39. matplotlib.offsetbox.BboxImage.get_size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.get_sketch_params.html">30.2.7.40. matplotlib.offsetbox.BboxImage.get_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.get_snap.html">30.2.7.41. matplotlib.offsetbox.BboxImage.get_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.get_transform.html">30.2.7.42. matplotlib.offsetbox.BboxImage.get_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.get_transformed_clip_path_and_affine.html">30.2.7.43. matplotlib.offsetbox.BboxImage.get_transformed_clip_path_and_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.get_url.html">30.2.7.44. matplotlib.offsetbox.BboxImage.get_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.get_visible.html">30.2.7.45. matplotlib.offsetbox.BboxImage.get_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.get_window_extent.html">30.2.7.46. matplotlib.offsetbox.BboxImage.get_window_extent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.get_zorder.html">30.2.7.47. matplotlib.offsetbox.BboxImage.get_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.have_units.html">30.2.7.48. matplotlib.offsetbox.BboxImage.have_units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.hitlist.html">30.2.7.49. matplotlib.offsetbox.BboxImage.hitlist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.is_figure_set.html">30.2.7.50. matplotlib.offsetbox.BboxImage.is_figure_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.is_transform_set.html">30.2.7.51. matplotlib.offsetbox.BboxImage.is_transform_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.make_image.html">30.2.7.52. matplotlib.offsetbox.BboxImage.make_image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.pchanged.html">30.2.7.53. matplotlib.offsetbox.BboxImage.pchanged</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.pick.html">30.2.7.54. matplotlib.offsetbox.BboxImage.pick</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.pickable.html">30.2.7.55. matplotlib.offsetbox.BboxImage.pickable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.properties.html">30.2.7.56. matplotlib.offsetbox.BboxImage.properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.remove.html">30.2.7.57. matplotlib.offsetbox.BboxImage.remove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.remove_callback.html">30.2.7.58. matplotlib.offsetbox.BboxImage.remove_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.set.html">30.2.7.59. matplotlib.offsetbox.BboxImage.set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.set_agg_filter.html">30.2.7.60. matplotlib.offsetbox.BboxImage.set_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.set_alpha.html">30.2.7.61. matplotlib.offsetbox.BboxImage.set_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.set_animated.html">30.2.7.62. matplotlib.offsetbox.BboxImage.set_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.set_array.html">30.2.7.63. matplotlib.offsetbox.BboxImage.set_array</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.set_axes.html">30.2.7.64. matplotlib.offsetbox.BboxImage.set_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.set_clim.html">30.2.7.65. matplotlib.offsetbox.BboxImage.set_clim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.set_clip_box.html">30.2.7.66. matplotlib.offsetbox.BboxImage.set_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.set_clip_on.html">30.2.7.67. matplotlib.offsetbox.BboxImage.set_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.set_clip_path.html">30.2.7.68. matplotlib.offsetbox.BboxImage.set_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.set_cmap.html">30.2.7.69. matplotlib.offsetbox.BboxImage.set_cmap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.set_contains.html">30.2.7.70. matplotlib.offsetbox.BboxImage.set_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.set_data.html">30.2.7.71. matplotlib.offsetbox.BboxImage.set_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.set_figure.html">30.2.7.72. matplotlib.offsetbox.BboxImage.set_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.set_filternorm.html">30.2.7.73. matplotlib.offsetbox.BboxImage.set_filternorm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.set_filterrad.html">30.2.7.74. matplotlib.offsetbox.BboxImage.set_filterrad</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.set_gid.html">30.2.7.75. matplotlib.offsetbox.BboxImage.set_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.set_interpolation.html">30.2.7.76. matplotlib.offsetbox.BboxImage.set_interpolation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.set_label.html">30.2.7.77. matplotlib.offsetbox.BboxImage.set_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.set_norm.html">30.2.7.78. matplotlib.offsetbox.BboxImage.set_norm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.set_path_effects.html">30.2.7.79. matplotlib.offsetbox.BboxImage.set_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.set_picker.html">30.2.7.80. matplotlib.offsetbox.BboxImage.set_picker</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">30.2.7.81. matplotlib.offsetbox.BboxImage.set_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.set_resample.html">30.2.7.82. matplotlib.offsetbox.BboxImage.set_resample</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.set_sketch_params.html">30.2.7.83. matplotlib.offsetbox.BboxImage.set_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.set_snap.html">30.2.7.84. matplotlib.offsetbox.BboxImage.set_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.set_transform.html">30.2.7.85. matplotlib.offsetbox.BboxImage.set_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.set_url.html">30.2.7.86. matplotlib.offsetbox.BboxImage.set_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.set_visible.html">30.2.7.87. matplotlib.offsetbox.BboxImage.set_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.set_zorder.html">30.2.7.88. matplotlib.offsetbox.BboxImage.set_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.to_rgba.html">30.2.7.89. matplotlib.offsetbox.BboxImage.to_rgba</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.update.html">30.2.7.90. matplotlib.offsetbox.BboxImage.update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.update_from.html">30.2.7.91. matplotlib.offsetbox.BboxImage.update_from</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.write_png.html">30.2.7.92. matplotlib.offsetbox.BboxImage.write_png</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.DraggableAnnotation.html">30.2.8. matplotlib.offsetbox.DraggableAnnotation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.DraggableBase.html">30.2.9. matplotlib.offsetbox.DraggableBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.DraggableOffsetBox.html">30.2.10. matplotlib.offsetbox.DraggableOffsetBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.DrawingArea.html">30.2.11. matplotlib.offsetbox.DrawingArea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.FancyArrowPatch.html">30.2.12. matplotlib.offsetbox.FancyArrowPatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.html">30.2.13. matplotlib.offsetbox.FancyBboxPatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.FontProperties.html">30.2.14. matplotlib.offsetbox.FontProperties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.HPacker.html">30.2.15. matplotlib.offsetbox.HPacker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.OffsetBox.html">30.2.16. matplotlib.offsetbox.OffsetBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.OffsetImage.html">30.2.17. matplotlib.offsetbox.OffsetImage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.html">30.2.18. matplotlib.offsetbox.PackerBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.PaddedBox.html">30.2.19. matplotlib.offsetbox.PaddedBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.TextArea.html">30.2.20. matplotlib.offsetbox.TextArea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.TransformedBbox.html">30.2.21. matplotlib.offsetbox.TransformedBbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.VPacker.html">30.2.22. matplotlib.offsetbox.VPacker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.xrange.html">30.2.23. matplotlib.offsetbox.xrange</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.zip.html">30.2.24. matplotlib.offsetbox.zip</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../infreq.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.offsetbox.html">30. matplotlib.offsetbox</a> &raquo;</li>
+        
+          <li><a href="matplotlib.offsetbox.BboxImage.html">30.2.7. matplotlib.offsetbox.BboxImage</a> &raquo;</li>
+        
+      <li>30.2.7.81. matplotlib.offsetbox.BboxImage.set_rasterized</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.offsetbox.BboxImage.set_rasterized.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-offsetbox-bboximage-set-rasterized">
+<h1>30.2.7.81. matplotlib.offsetbox.BboxImage.set_rasterized<a class="headerlink" href="#matplotlib-offsetbox-bboximage-set-rasterized" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="matplotlib.offsetbox.BboxImage.set_rasterized">
+<code class="descclassname">BboxImage.</code><code class="descname">set_rasterized</code><span class="sig-paren">(</span><em>rasterized</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.offsetbox.BboxImage.set_rasterized" title="Permalink to this definition">¶</a></dt>
+<dd><p>Force rasterized (bitmap) drawing in vector backend output.</p>
+<p>Defaults to None, which implies the backend&#8217;s default behavior</p>
+<p>ACCEPTS: [True | False | None]</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.offsetbox.BboxImage.set_resample.html" class="btn btn-neutral float-right" title="30.2.7.82. matplotlib.offsetbox.BboxImage.set_resample" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.offsetbox.BboxImage.set_picker.html" class="btn btn-neutral" title="30.2.7.80. matplotlib.offsetbox.BboxImage.set_picker" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

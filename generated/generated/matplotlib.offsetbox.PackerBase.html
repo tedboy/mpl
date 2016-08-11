@@ -1,0 +1,613 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>30.2.18. matplotlib.offsetbox.PackerBase &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="30. matplotlib.offsetbox" href="../matplotlib.offsetbox.html"/>
+        <link rel="next" title="30.2.18.1. matplotlib.offsetbox.PackerBase.axes" href="matplotlib.offsetbox.PackerBase.axes.html"/>
+        <link rel="prev" title="30.2.17.78. matplotlib.offsetbox.OffsetImage.update_from" href="matplotlib.offsetbox.OffsetImage.update_from.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.offsetbox.html">30. matplotlib.offsetbox</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.offsetbox.html#functions">30.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.offsetbox.html#classes">30.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.AnchoredOffsetbox.html">30.2.1. matplotlib.offsetbox.AnchoredOffsetbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.AnchoredText.html">30.2.2. matplotlib.offsetbox.AnchoredText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.AnnotationBbox.html">30.2.3. matplotlib.offsetbox.AnnotationBbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.AuxTransformBox.html">30.2.4. matplotlib.offsetbox.AuxTransformBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.Bbox.html">30.2.5. matplotlib.offsetbox.Bbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.BboxBase.html">30.2.6. matplotlib.offsetbox.BboxBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.html">30.2.7. matplotlib.offsetbox.BboxImage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.DraggableAnnotation.html">30.2.8. matplotlib.offsetbox.DraggableAnnotation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.DraggableBase.html">30.2.9. matplotlib.offsetbox.DraggableBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.DraggableOffsetBox.html">30.2.10. matplotlib.offsetbox.DraggableOffsetBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.DrawingArea.html">30.2.11. matplotlib.offsetbox.DrawingArea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.FancyArrowPatch.html">30.2.12. matplotlib.offsetbox.FancyArrowPatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.FancyBboxPatch.html">30.2.13. matplotlib.offsetbox.FancyBboxPatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.FontProperties.html">30.2.14. matplotlib.offsetbox.FontProperties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.HPacker.html">30.2.15. matplotlib.offsetbox.HPacker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.OffsetBox.html">30.2.16. matplotlib.offsetbox.OffsetBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.OffsetImage.html">30.2.17. matplotlib.offsetbox.OffsetImage</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">30.2.18. matplotlib.offsetbox.PackerBase</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.axes.html">30.2.18.1. matplotlib.offsetbox.PackerBase.axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.mouseover.html">30.2.18.2. matplotlib.offsetbox.PackerBase.mouseover</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.stale.html">30.2.18.3. matplotlib.offsetbox.PackerBase.stale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.add_callback.html">30.2.18.4. matplotlib.offsetbox.PackerBase.add_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.contains.html">30.2.18.5. matplotlib.offsetbox.PackerBase.contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.convert_xunits.html">30.2.18.6. matplotlib.offsetbox.PackerBase.convert_xunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.convert_yunits.html">30.2.18.7. matplotlib.offsetbox.PackerBase.convert_yunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.draw.html">30.2.18.8. matplotlib.offsetbox.PackerBase.draw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.findobj.html">30.2.18.9. matplotlib.offsetbox.PackerBase.findobj</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.format_cursor_data.html">30.2.18.10. matplotlib.offsetbox.PackerBase.format_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_agg_filter.html">30.2.18.11. matplotlib.offsetbox.PackerBase.get_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_alpha.html">30.2.18.12. matplotlib.offsetbox.PackerBase.get_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_animated.html">30.2.18.13. matplotlib.offsetbox.PackerBase.get_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_axes.html">30.2.18.14. matplotlib.offsetbox.PackerBase.get_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_children.html">30.2.18.15. matplotlib.offsetbox.PackerBase.get_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_clip_box.html">30.2.18.16. matplotlib.offsetbox.PackerBase.get_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_clip_on.html">30.2.18.17. matplotlib.offsetbox.PackerBase.get_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_clip_path.html">30.2.18.18. matplotlib.offsetbox.PackerBase.get_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_contains.html">30.2.18.19. matplotlib.offsetbox.PackerBase.get_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_cursor_data.html">30.2.18.20. matplotlib.offsetbox.PackerBase.get_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_extent.html">30.2.18.21. matplotlib.offsetbox.PackerBase.get_extent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_extent_offsets.html">30.2.18.22. matplotlib.offsetbox.PackerBase.get_extent_offsets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_figure.html">30.2.18.23. matplotlib.offsetbox.PackerBase.get_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_gid.html">30.2.18.24. matplotlib.offsetbox.PackerBase.get_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_label.html">30.2.18.25. matplotlib.offsetbox.PackerBase.get_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_offset.html">30.2.18.26. matplotlib.offsetbox.PackerBase.get_offset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_path_effects.html">30.2.18.27. matplotlib.offsetbox.PackerBase.get_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_picker.html">30.2.18.28. matplotlib.offsetbox.PackerBase.get_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_rasterized.html">30.2.18.29. matplotlib.offsetbox.PackerBase.get_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_sketch_params.html">30.2.18.30. matplotlib.offsetbox.PackerBase.get_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_snap.html">30.2.18.31. matplotlib.offsetbox.PackerBase.get_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_transform.html">30.2.18.32. matplotlib.offsetbox.PackerBase.get_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_transformed_clip_path_and_affine.html">30.2.18.33. matplotlib.offsetbox.PackerBase.get_transformed_clip_path_and_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_url.html">30.2.18.34. matplotlib.offsetbox.PackerBase.get_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_visible.html">30.2.18.35. matplotlib.offsetbox.PackerBase.get_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_visible_children.html">30.2.18.36. matplotlib.offsetbox.PackerBase.get_visible_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_window_extent.html">30.2.18.37. matplotlib.offsetbox.PackerBase.get_window_extent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_zorder.html">30.2.18.38. matplotlib.offsetbox.PackerBase.get_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.have_units.html">30.2.18.39. matplotlib.offsetbox.PackerBase.have_units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.hitlist.html">30.2.18.40. matplotlib.offsetbox.PackerBase.hitlist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.is_figure_set.html">30.2.18.41. matplotlib.offsetbox.PackerBase.is_figure_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.is_transform_set.html">30.2.18.42. matplotlib.offsetbox.PackerBase.is_transform_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.pchanged.html">30.2.18.43. matplotlib.offsetbox.PackerBase.pchanged</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.pick.html">30.2.18.44. matplotlib.offsetbox.PackerBase.pick</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.pickable.html">30.2.18.45. matplotlib.offsetbox.PackerBase.pickable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.properties.html">30.2.18.46. matplotlib.offsetbox.PackerBase.properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.remove.html">30.2.18.47. matplotlib.offsetbox.PackerBase.remove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.remove_callback.html">30.2.18.48. matplotlib.offsetbox.PackerBase.remove_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set.html">30.2.18.49. matplotlib.offsetbox.PackerBase.set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_agg_filter.html">30.2.18.50. matplotlib.offsetbox.PackerBase.set_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_alpha.html">30.2.18.51. matplotlib.offsetbox.PackerBase.set_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_animated.html">30.2.18.52. matplotlib.offsetbox.PackerBase.set_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_axes.html">30.2.18.53. matplotlib.offsetbox.PackerBase.set_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_clip_box.html">30.2.18.54. matplotlib.offsetbox.PackerBase.set_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_clip_on.html">30.2.18.55. matplotlib.offsetbox.PackerBase.set_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_clip_path.html">30.2.18.56. matplotlib.offsetbox.PackerBase.set_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_contains.html">30.2.18.57. matplotlib.offsetbox.PackerBase.set_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_figure.html">30.2.18.58. matplotlib.offsetbox.PackerBase.set_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_gid.html">30.2.18.59. matplotlib.offsetbox.PackerBase.set_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_height.html">30.2.18.60. matplotlib.offsetbox.PackerBase.set_height</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_label.html">30.2.18.61. matplotlib.offsetbox.PackerBase.set_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_offset.html">30.2.18.62. matplotlib.offsetbox.PackerBase.set_offset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_path_effects.html">30.2.18.63. matplotlib.offsetbox.PackerBase.set_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_picker.html">30.2.18.64. matplotlib.offsetbox.PackerBase.set_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_rasterized.html">30.2.18.65. matplotlib.offsetbox.PackerBase.set_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_sketch_params.html">30.2.18.66. matplotlib.offsetbox.PackerBase.set_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_snap.html">30.2.18.67. matplotlib.offsetbox.PackerBase.set_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_transform.html">30.2.18.68. matplotlib.offsetbox.PackerBase.set_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_url.html">30.2.18.69. matplotlib.offsetbox.PackerBase.set_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_visible.html">30.2.18.70. matplotlib.offsetbox.PackerBase.set_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_width.html">30.2.18.71. matplotlib.offsetbox.PackerBase.set_width</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_zorder.html">30.2.18.72. matplotlib.offsetbox.PackerBase.set_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.update.html">30.2.18.73. matplotlib.offsetbox.PackerBase.update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.PackerBase.update_from.html">30.2.18.74. matplotlib.offsetbox.PackerBase.update_from</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.PaddedBox.html">30.2.19. matplotlib.offsetbox.PaddedBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.TextArea.html">30.2.20. matplotlib.offsetbox.TextArea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.TransformedBbox.html">30.2.21. matplotlib.offsetbox.TransformedBbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.VPacker.html">30.2.22. matplotlib.offsetbox.VPacker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.xrange.html">30.2.23. matplotlib.offsetbox.xrange</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.zip.html">30.2.24. matplotlib.offsetbox.zip</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../infreq.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.offsetbox.html">30. matplotlib.offsetbox</a> &raquo;</li>
+        
+      <li>30.2.18. matplotlib.offsetbox.PackerBase</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.offsetbox.PackerBase.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-offsetbox-packerbase">
+<h1>30.2.18. matplotlib.offsetbox.PackerBase<a class="headerlink" href="#matplotlib-offsetbox-packerbase" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="matplotlib.offsetbox.PackerBase">
+<em class="property">class </em><code class="descclassname">matplotlib.offsetbox.</code><code class="descname">PackerBase</code><span class="sig-paren">(</span><em>pad=None</em>, <em>sep=None</em>, <em>width=None</em>, <em>height=None</em>, <em>align=None</em>, <em>mode=None</em>, <em>children=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/offsetbox.html#PackerBase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.offsetbox.PackerBase" title="Permalink to this definition">¶</a></dt>
+<dd><p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.axes.html#matplotlib.offsetbox.PackerBase.axes" title="matplotlib.offsetbox.PackerBase.axes"><code class="xref py py-obj docutils literal"><span class="pre">axes</span></code></a></td>
+<td>The <a class="reference internal" href="matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instance the artist resides in, or <em>None</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.mouseover.html#matplotlib.offsetbox.PackerBase.mouseover" title="matplotlib.offsetbox.PackerBase.mouseover"><code class="xref py py-obj docutils literal"><span class="pre">mouseover</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.stale.html#matplotlib.offsetbox.PackerBase.stale" title="matplotlib.offsetbox.PackerBase.stale"><code class="xref py py-obj docutils literal"><span class="pre">stale</span></code></a></td>
+<td>If the artist is &#8216;stale&#8217; and needs to be re-drawn for the output to match the internal state of the artist.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.add_callback.html#matplotlib.offsetbox.PackerBase.add_callback" title="matplotlib.offsetbox.PackerBase.add_callback"><code class="xref py py-obj docutils literal"><span class="pre">add_callback</span></code></a>(func)</td>
+<td>Adds a callback function that will be called whenever one of the <code class="xref py py-class docutils literal"><span class="pre">Artist</span></code>&#8216;s properties changes.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.contains.html#matplotlib.offsetbox.PackerBase.contains" title="matplotlib.offsetbox.PackerBase.contains"><code class="xref py py-obj docutils literal"><span class="pre">contains</span></code></a>(mouseevent)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.convert_xunits.html#matplotlib.offsetbox.PackerBase.convert_xunits" title="matplotlib.offsetbox.PackerBase.convert_xunits"><code class="xref py py-obj docutils literal"><span class="pre">convert_xunits</span></code></a>(x)</td>
+<td>For artists in an axes, if the xaxis has units support,</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.convert_yunits.html#matplotlib.offsetbox.PackerBase.convert_yunits" title="matplotlib.offsetbox.PackerBase.convert_yunits"><code class="xref py py-obj docutils literal"><span class="pre">convert_yunits</span></code></a>(y)</td>
+<td>For artists in an axes, if the yaxis has units support,</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.draw.html#matplotlib.offsetbox.PackerBase.draw" title="matplotlib.offsetbox.PackerBase.draw"><code class="xref py py-obj docutils literal"><span class="pre">draw</span></code></a>(renderer)</td>
+<td>Update the location of children if necessary and draw them to the given <em>renderer</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.findobj.html#matplotlib.offsetbox.PackerBase.findobj" title="matplotlib.offsetbox.PackerBase.findobj"><code class="xref py py-obj docutils literal"><span class="pre">findobj</span></code></a>([match,&nbsp;include_self])</td>
+<td>Find artist objects.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.format_cursor_data.html#matplotlib.offsetbox.PackerBase.format_cursor_data" title="matplotlib.offsetbox.PackerBase.format_cursor_data"><code class="xref py py-obj docutils literal"><span class="pre">format_cursor_data</span></code></a>(data)</td>
+<td>Return <em>cursor data</em> string formatted.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_agg_filter.html#matplotlib.offsetbox.PackerBase.get_agg_filter" title="matplotlib.offsetbox.PackerBase.get_agg_filter"><code class="xref py py-obj docutils literal"><span class="pre">get_agg_filter</span></code></a>()</td>
+<td>return filter function to be used for agg filter</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_alpha.html#matplotlib.offsetbox.PackerBase.get_alpha" title="matplotlib.offsetbox.PackerBase.get_alpha"><code class="xref py py-obj docutils literal"><span class="pre">get_alpha</span></code></a>()</td>
+<td>Return the alpha value used for blending - not supported on all</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_animated.html#matplotlib.offsetbox.PackerBase.get_animated" title="matplotlib.offsetbox.PackerBase.get_animated"><code class="xref py py-obj docutils literal"><span class="pre">get_animated</span></code></a>()</td>
+<td>Return the artist&#8217;s animated state</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_axes.html#matplotlib.offsetbox.PackerBase.get_axes" title="matplotlib.offsetbox.PackerBase.get_axes"><code class="xref py py-obj docutils literal"><span class="pre">get_axes</span></code></a>()</td>
+<td>Return the <a class="reference internal" href="matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instance the artist resides in, or <em>None</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_children.html#matplotlib.offsetbox.PackerBase.get_children" title="matplotlib.offsetbox.PackerBase.get_children"><code class="xref py py-obj docutils literal"><span class="pre">get_children</span></code></a>()</td>
+<td>Return a list of artists it contains.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_clip_box.html#matplotlib.offsetbox.PackerBase.get_clip_box" title="matplotlib.offsetbox.PackerBase.get_clip_box"><code class="xref py py-obj docutils literal"><span class="pre">get_clip_box</span></code></a>()</td>
+<td>Return artist clipbox</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_clip_on.html#matplotlib.offsetbox.PackerBase.get_clip_on" title="matplotlib.offsetbox.PackerBase.get_clip_on"><code class="xref py py-obj docutils literal"><span class="pre">get_clip_on</span></code></a>()</td>
+<td>Return whether artist uses clipping</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_clip_path.html#matplotlib.offsetbox.PackerBase.get_clip_path" title="matplotlib.offsetbox.PackerBase.get_clip_path"><code class="xref py py-obj docutils literal"><span class="pre">get_clip_path</span></code></a>()</td>
+<td>Return artist clip path</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_contains.html#matplotlib.offsetbox.PackerBase.get_contains" title="matplotlib.offsetbox.PackerBase.get_contains"><code class="xref py py-obj docutils literal"><span class="pre">get_contains</span></code></a>()</td>
+<td>Return the _contains test used by the artist, or <em>None</em> for default.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_cursor_data.html#matplotlib.offsetbox.PackerBase.get_cursor_data" title="matplotlib.offsetbox.PackerBase.get_cursor_data"><code class="xref py py-obj docutils literal"><span class="pre">get_cursor_data</span></code></a>(event)</td>
+<td>Get the cursor data for a given event.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_extent.html#matplotlib.offsetbox.PackerBase.get_extent" title="matplotlib.offsetbox.PackerBase.get_extent"><code class="xref py py-obj docutils literal"><span class="pre">get_extent</span></code></a>(renderer)</td>
+<td>Return with, height, xdescent, ydescent of box</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_extent_offsets.html#matplotlib.offsetbox.PackerBase.get_extent_offsets" title="matplotlib.offsetbox.PackerBase.get_extent_offsets"><code class="xref py py-obj docutils literal"><span class="pre">get_extent_offsets</span></code></a>(renderer)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_figure.html#matplotlib.offsetbox.PackerBase.get_figure" title="matplotlib.offsetbox.PackerBase.get_figure"><code class="xref py py-obj docutils literal"><span class="pre">get_figure</span></code></a>()</td>
+<td>Return the <a class="reference internal" href="matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure"><code class="xref py py-class docutils literal"><span class="pre">Figure</span></code></a> instance the artist belongs to.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_gid.html#matplotlib.offsetbox.PackerBase.get_gid" title="matplotlib.offsetbox.PackerBase.get_gid"><code class="xref py py-obj docutils literal"><span class="pre">get_gid</span></code></a>()</td>
+<td>Returns the group id</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_label.html#matplotlib.offsetbox.PackerBase.get_label" title="matplotlib.offsetbox.PackerBase.get_label"><code class="xref py py-obj docutils literal"><span class="pre">get_label</span></code></a>()</td>
+<td>Get the label used for this artist in the legend.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_offset.html#matplotlib.offsetbox.PackerBase.get_offset" title="matplotlib.offsetbox.PackerBase.get_offset"><code class="xref py py-obj docutils literal"><span class="pre">get_offset</span></code></a>(width,&nbsp;height,&nbsp;xdescent,&nbsp;...)</td>
+<td>Get the offset</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_path_effects.html#matplotlib.offsetbox.PackerBase.get_path_effects" title="matplotlib.offsetbox.PackerBase.get_path_effects"><code class="xref py py-obj docutils literal"><span class="pre">get_path_effects</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_picker.html#matplotlib.offsetbox.PackerBase.get_picker" title="matplotlib.offsetbox.PackerBase.get_picker"><code class="xref py py-obj docutils literal"><span class="pre">get_picker</span></code></a>()</td>
+<td>Return the picker object used by this artist</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_rasterized.html#matplotlib.offsetbox.PackerBase.get_rasterized" title="matplotlib.offsetbox.PackerBase.get_rasterized"><code class="xref py py-obj docutils literal"><span class="pre">get_rasterized</span></code></a>()</td>
+<td>return True if the artist is to be rasterized</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_sketch_params.html#matplotlib.offsetbox.PackerBase.get_sketch_params" title="matplotlib.offsetbox.PackerBase.get_sketch_params"><code class="xref py py-obj docutils literal"><span class="pre">get_sketch_params</span></code></a>()</td>
+<td>Returns the sketch parameters for the artist.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_snap.html#matplotlib.offsetbox.PackerBase.get_snap" title="matplotlib.offsetbox.PackerBase.get_snap"><code class="xref py py-obj docutils literal"><span class="pre">get_snap</span></code></a>()</td>
+<td>Returns the snap setting which may be:</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_transform.html#matplotlib.offsetbox.PackerBase.get_transform" title="matplotlib.offsetbox.PackerBase.get_transform"><code class="xref py py-obj docutils literal"><span class="pre">get_transform</span></code></a>()</td>
+<td>Return the <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code> instance used by this artist.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_transformed_clip_path_and_affine.html#matplotlib.offsetbox.PackerBase.get_transformed_clip_path_and_affine" title="matplotlib.offsetbox.PackerBase.get_transformed_clip_path_and_affine"><code class="xref py py-obj docutils literal"><span class="pre">get_transformed_clip_path_and_affine</span></code></a>()</td>
+<td>Return the clip path with the non-affine part of its transformation applied, and the remaining affine part of its transformation.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_url.html#matplotlib.offsetbox.PackerBase.get_url" title="matplotlib.offsetbox.PackerBase.get_url"><code class="xref py py-obj docutils literal"><span class="pre">get_url</span></code></a>()</td>
+<td>Returns the url</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_visible.html#matplotlib.offsetbox.PackerBase.get_visible" title="matplotlib.offsetbox.PackerBase.get_visible"><code class="xref py py-obj docutils literal"><span class="pre">get_visible</span></code></a>()</td>
+<td>Return the artist&#8217;s visiblity</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_visible_children.html#matplotlib.offsetbox.PackerBase.get_visible_children" title="matplotlib.offsetbox.PackerBase.get_visible_children"><code class="xref py py-obj docutils literal"><span class="pre">get_visible_children</span></code></a>()</td>
+<td>Return a list of visible artists it contains.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_window_extent.html#matplotlib.offsetbox.PackerBase.get_window_extent" title="matplotlib.offsetbox.PackerBase.get_window_extent"><code class="xref py py-obj docutils literal"><span class="pre">get_window_extent</span></code></a>(renderer)</td>
+<td>get the bounding box in display space.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.get_zorder.html#matplotlib.offsetbox.PackerBase.get_zorder" title="matplotlib.offsetbox.PackerBase.get_zorder"><code class="xref py py-obj docutils literal"><span class="pre">get_zorder</span></code></a>()</td>
+<td>Return the <code class="xref py py-class docutils literal"><span class="pre">Artist</span></code>&#8216;s zorder.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.have_units.html#matplotlib.offsetbox.PackerBase.have_units" title="matplotlib.offsetbox.PackerBase.have_units"><code class="xref py py-obj docutils literal"><span class="pre">have_units</span></code></a>()</td>
+<td>Return <em>True</em> if units are set on the <em>x</em> or <em>y</em> axes</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.hitlist.html#matplotlib.offsetbox.PackerBase.hitlist" title="matplotlib.offsetbox.PackerBase.hitlist"><code class="xref py py-obj docutils literal"><span class="pre">hitlist</span></code></a>(event)</td>
+<td>List the children of the artist which contain the mouse event <em>event</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.is_figure_set.html#matplotlib.offsetbox.PackerBase.is_figure_set" title="matplotlib.offsetbox.PackerBase.is_figure_set"><code class="xref py py-obj docutils literal"><span class="pre">is_figure_set</span></code></a>()</td>
+<td>Returns True if the artist is assigned to a <a class="reference internal" href="matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure"><code class="xref py py-class docutils literal"><span class="pre">Figure</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.is_transform_set.html#matplotlib.offsetbox.PackerBase.is_transform_set" title="matplotlib.offsetbox.PackerBase.is_transform_set"><code class="xref py py-obj docutils literal"><span class="pre">is_transform_set</span></code></a>()</td>
+<td>Returns <em>True</em> if <code class="xref py py-class docutils literal"><span class="pre">Artist</span></code> has a transform explicitly set.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.pchanged.html#matplotlib.offsetbox.PackerBase.pchanged" title="matplotlib.offsetbox.PackerBase.pchanged"><code class="xref py py-obj docutils literal"><span class="pre">pchanged</span></code></a>()</td>
+<td>Fire an event when property changed, calling all of the registered callbacks.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.pick.html#matplotlib.offsetbox.PackerBase.pick" title="matplotlib.offsetbox.PackerBase.pick"><code class="xref py py-obj docutils literal"><span class="pre">pick</span></code></a>(mouseevent)</td>
+<td>call signature:</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.pickable.html#matplotlib.offsetbox.PackerBase.pickable" title="matplotlib.offsetbox.PackerBase.pickable"><code class="xref py py-obj docutils literal"><span class="pre">pickable</span></code></a>()</td>
+<td>Return <em>True</em> if <code class="xref py py-class docutils literal"><span class="pre">Artist</span></code> is pickable.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.properties.html#matplotlib.offsetbox.PackerBase.properties" title="matplotlib.offsetbox.PackerBase.properties"><code class="xref py py-obj docutils literal"><span class="pre">properties</span></code></a>()</td>
+<td>return a dictionary mapping property name -&gt; value for all Artist props</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.remove.html#matplotlib.offsetbox.PackerBase.remove" title="matplotlib.offsetbox.PackerBase.remove"><code class="xref py py-obj docutils literal"><span class="pre">remove</span></code></a>()</td>
+<td>Remove the artist from the figure if possible.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.remove_callback.html#matplotlib.offsetbox.PackerBase.remove_callback" title="matplotlib.offsetbox.PackerBase.remove_callback"><code class="xref py py-obj docutils literal"><span class="pre">remove_callback</span></code></a>(oid)</td>
+<td>Remove a callback based on its <em>id</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set.html#matplotlib.offsetbox.PackerBase.set" title="matplotlib.offsetbox.PackerBase.set"><code class="xref py py-obj docutils literal"><span class="pre">set</span></code></a>(**kwargs)</td>
+<td>A property batch setter.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_agg_filter.html#matplotlib.offsetbox.PackerBase.set_agg_filter" title="matplotlib.offsetbox.PackerBase.set_agg_filter"><code class="xref py py-obj docutils literal"><span class="pre">set_agg_filter</span></code></a>(filter_func)</td>
+<td>set agg_filter fuction.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_alpha.html#matplotlib.offsetbox.PackerBase.set_alpha" title="matplotlib.offsetbox.PackerBase.set_alpha"><code class="xref py py-obj docutils literal"><span class="pre">set_alpha</span></code></a>(alpha)</td>
+<td>Set the alpha value used for blending - not supported on all backends.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_animated.html#matplotlib.offsetbox.PackerBase.set_animated" title="matplotlib.offsetbox.PackerBase.set_animated"><code class="xref py py-obj docutils literal"><span class="pre">set_animated</span></code></a>(b)</td>
+<td>Set the artist&#8217;s animation state.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_axes.html#matplotlib.offsetbox.PackerBase.set_axes" title="matplotlib.offsetbox.PackerBase.set_axes"><code class="xref py py-obj docutils literal"><span class="pre">set_axes</span></code></a>(axes)</td>
+<td>Set the <a class="reference internal" href="matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instance in which the artist resides, if any.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_clip_box.html#matplotlib.offsetbox.PackerBase.set_clip_box" title="matplotlib.offsetbox.PackerBase.set_clip_box"><code class="xref py py-obj docutils literal"><span class="pre">set_clip_box</span></code></a>(clipbox)</td>
+<td>Set the artist&#8217;s clip <code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_clip_on.html#matplotlib.offsetbox.PackerBase.set_clip_on" title="matplotlib.offsetbox.PackerBase.set_clip_on"><code class="xref py py-obj docutils literal"><span class="pre">set_clip_on</span></code></a>(b)</td>
+<td>Set whether artist uses clipping.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_clip_path.html#matplotlib.offsetbox.PackerBase.set_clip_path" title="matplotlib.offsetbox.PackerBase.set_clip_path"><code class="xref py py-obj docutils literal"><span class="pre">set_clip_path</span></code></a>(path[,&nbsp;transform])</td>
+<td>Set the artist&#8217;s clip path, which may be:</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_contains.html#matplotlib.offsetbox.PackerBase.set_contains" title="matplotlib.offsetbox.PackerBase.set_contains"><code class="xref py py-obj docutils literal"><span class="pre">set_contains</span></code></a>(picker)</td>
+<td>Replace the contains test used by this artist.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_figure.html#matplotlib.offsetbox.PackerBase.set_figure" title="matplotlib.offsetbox.PackerBase.set_figure"><code class="xref py py-obj docutils literal"><span class="pre">set_figure</span></code></a>(fig)</td>
+<td>Set the figure</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_gid.html#matplotlib.offsetbox.PackerBase.set_gid" title="matplotlib.offsetbox.PackerBase.set_gid"><code class="xref py py-obj docutils literal"><span class="pre">set_gid</span></code></a>(gid)</td>
+<td>Sets the (group) id for the artist</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_height.html#matplotlib.offsetbox.PackerBase.set_height" title="matplotlib.offsetbox.PackerBase.set_height"><code class="xref py py-obj docutils literal"><span class="pre">set_height</span></code></a>(height)</td>
+<td>Set the height</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_label.html#matplotlib.offsetbox.PackerBase.set_label" title="matplotlib.offsetbox.PackerBase.set_label"><code class="xref py py-obj docutils literal"><span class="pre">set_label</span></code></a>(s)</td>
+<td>Set the label to <em>s</em> for auto legend.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_offset.html#matplotlib.offsetbox.PackerBase.set_offset" title="matplotlib.offsetbox.PackerBase.set_offset"><code class="xref py py-obj docutils literal"><span class="pre">set_offset</span></code></a>(xy)</td>
+<td>Set the offset</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_path_effects.html#matplotlib.offsetbox.PackerBase.set_path_effects" title="matplotlib.offsetbox.PackerBase.set_path_effects"><code class="xref py py-obj docutils literal"><span class="pre">set_path_effects</span></code></a>(path_effects)</td>
+<td>set path_effects, which should be a list of instances of</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_picker.html#matplotlib.offsetbox.PackerBase.set_picker" title="matplotlib.offsetbox.PackerBase.set_picker"><code class="xref py py-obj docutils literal"><span class="pre">set_picker</span></code></a>(picker)</td>
+<td>Set the epsilon for picking used by this artist</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_rasterized.html#matplotlib.offsetbox.PackerBase.set_rasterized" title="matplotlib.offsetbox.PackerBase.set_rasterized"><code class="xref py py-obj docutils literal"><span class="pre">set_rasterized</span></code></a>(rasterized)</td>
+<td>Force rasterized (bitmap) drawing in vector backend output.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_sketch_params.html#matplotlib.offsetbox.PackerBase.set_sketch_params" title="matplotlib.offsetbox.PackerBase.set_sketch_params"><code class="xref py py-obj docutils literal"><span class="pre">set_sketch_params</span></code></a>([scale,&nbsp;length,&nbsp;randomness])</td>
+<td>Sets the sketch parameters.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_snap.html#matplotlib.offsetbox.PackerBase.set_snap" title="matplotlib.offsetbox.PackerBase.set_snap"><code class="xref py py-obj docutils literal"><span class="pre">set_snap</span></code></a>(snap)</td>
+<td>Sets the snap setting which may be:</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_transform.html#matplotlib.offsetbox.PackerBase.set_transform" title="matplotlib.offsetbox.PackerBase.set_transform"><code class="xref py py-obj docutils literal"><span class="pre">set_transform</span></code></a>(t)</td>
+<td>Set the <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code> instance used by this artist.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_url.html#matplotlib.offsetbox.PackerBase.set_url" title="matplotlib.offsetbox.PackerBase.set_url"><code class="xref py py-obj docutils literal"><span class="pre">set_url</span></code></a>(url)</td>
+<td>Sets the url for the artist</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_visible.html#matplotlib.offsetbox.PackerBase.set_visible" title="matplotlib.offsetbox.PackerBase.set_visible"><code class="xref py py-obj docutils literal"><span class="pre">set_visible</span></code></a>(b)</td>
+<td>Set the artist&#8217;s visiblity.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_width.html#matplotlib.offsetbox.PackerBase.set_width" title="matplotlib.offsetbox.PackerBase.set_width"><code class="xref py py-obj docutils literal"><span class="pre">set_width</span></code></a>(width)</td>
+<td>Set the width</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.set_zorder.html#matplotlib.offsetbox.PackerBase.set_zorder" title="matplotlib.offsetbox.PackerBase.set_zorder"><code class="xref py py-obj docutils literal"><span class="pre">set_zorder</span></code></a>(level)</td>
+<td>Set the zorder for the artist.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.update.html#matplotlib.offsetbox.PackerBase.update" title="matplotlib.offsetbox.PackerBase.update"><code class="xref py py-obj docutils literal"><span class="pre">update</span></code></a>(props)</td>
+<td>Update the properties of this <code class="xref py py-class docutils literal"><span class="pre">Artist</span></code> from the dictionary <em>prop</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.PackerBase.update_from.html#matplotlib.offsetbox.PackerBase.update_from" title="matplotlib.offsetbox.PackerBase.update_from"><code class="xref py py-obj docutils literal"><span class="pre">update_from</span></code></a>(other)</td>
+<td>Copy properties from <em>other</em> to <em>self</em>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.offsetbox.PackerBase.axes.html" class="btn btn-neutral float-right" title="30.2.18.1. matplotlib.offsetbox.PackerBase.axes" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.offsetbox.OffsetImage.update_from.html" class="btn btn-neutral" title="30.2.17.78. matplotlib.offsetbox.OffsetImage.update_from" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

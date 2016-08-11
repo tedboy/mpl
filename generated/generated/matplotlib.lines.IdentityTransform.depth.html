@@ -1,0 +1,313 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>10.2.3.1. matplotlib.lines.IdentityTransform.depth &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="10.2.3. matplotlib.lines.IdentityTransform" href="matplotlib.lines.IdentityTransform.html"/>
+        <link rel="next" title="10.2.3.2. matplotlib.lines.IdentityTransform.is_separable" href="matplotlib.lines.IdentityTransform.is_separable.html"/>
+        <link rel="prev" title="10.2.3. matplotlib.lines.IdentityTransform" href="matplotlib.lines.IdentityTransform.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.lines.html">10. matplotlib.lines</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.lines.html#functions">10.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.lines.html#classes">10.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.lines.Artist.html">10.2.1. matplotlib.lines.Artist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.lines.Bbox.html">10.2.2. matplotlib.lines.Bbox</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="matplotlib.lines.IdentityTransform.html">10.2.3. matplotlib.lines.IdentityTransform</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">10.2.3.1. matplotlib.lines.IdentityTransform.depth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.IdentityTransform.is_separable.html">10.2.3.2. matplotlib.lines.IdentityTransform.is_separable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.IdentityTransform.contains_branch.html">10.2.3.3. matplotlib.lines.IdentityTransform.contains_branch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.IdentityTransform.contains_branch_seperately.html">10.2.3.4. matplotlib.lines.IdentityTransform.contains_branch_seperately</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.IdentityTransform.frozen.html">10.2.3.5. matplotlib.lines.IdentityTransform.frozen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.IdentityTransform.get_affine.html">10.2.3.6. matplotlib.lines.IdentityTransform.get_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.IdentityTransform.get_matrix.html">10.2.3.7. matplotlib.lines.IdentityTransform.get_matrix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.IdentityTransform.invalidate.html">10.2.3.8. matplotlib.lines.IdentityTransform.invalidate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.IdentityTransform.inverted.html">10.2.3.9. matplotlib.lines.IdentityTransform.inverted</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.IdentityTransform.matrix_from_values.html">10.2.3.10. matplotlib.lines.IdentityTransform.matrix_from_values</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.IdentityTransform.set_children.html">10.2.3.11. matplotlib.lines.IdentityTransform.set_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.IdentityTransform.to_values.html">10.2.3.12. matplotlib.lines.IdentityTransform.to_values</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.IdentityTransform.transform.html">10.2.3.13. matplotlib.lines.IdentityTransform.transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.IdentityTransform.transform_affine.html">10.2.3.14. matplotlib.lines.IdentityTransform.transform_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.IdentityTransform.transform_angles.html">10.2.3.15. matplotlib.lines.IdentityTransform.transform_angles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.IdentityTransform.transform_bbox.html">10.2.3.16. matplotlib.lines.IdentityTransform.transform_bbox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.IdentityTransform.transform_non_affine.html">10.2.3.17. matplotlib.lines.IdentityTransform.transform_non_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.IdentityTransform.transform_path.html">10.2.3.18. matplotlib.lines.IdentityTransform.transform_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.IdentityTransform.transform_path_affine.html">10.2.3.19. matplotlib.lines.IdentityTransform.transform_path_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.IdentityTransform.transform_path_non_affine.html">10.2.3.20. matplotlib.lines.IdentityTransform.transform_path_non_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.IdentityTransform.transform_point.html">10.2.3.21. matplotlib.lines.IdentityTransform.transform_point</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.lines.Line2D.html">10.2.4. matplotlib.lines.Line2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.lines.MarkerStyle.html">10.2.5. matplotlib.lines.MarkerStyle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.lines.Path.html">10.2.6. matplotlib.lines.Path</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.lines.TransformedPath.html">10.2.7. matplotlib.lines.TransformedPath</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.lines.VertexSelector.html">10.2.8. matplotlib.lines.VertexSelector</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../freq.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.lines.html">10. matplotlib.lines</a> &raquo;</li>
+        
+          <li><a href="matplotlib.lines.IdentityTransform.html">10.2.3. matplotlib.lines.IdentityTransform</a> &raquo;</li>
+        
+      <li>10.2.3.1. matplotlib.lines.IdentityTransform.depth</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.lines.IdentityTransform.depth.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-lines-identitytransform-depth">
+<h1>10.2.3.1. matplotlib.lines.IdentityTransform.depth<a class="headerlink" href="#matplotlib-lines-identitytransform-depth" title="Permalink to this headline">¶</a></h1>
+<dl class="attribute">
+<dt id="matplotlib.lines.IdentityTransform.depth">
+<code class="descclassname">IdentityTransform.</code><code class="descname">depth</code><a class="headerlink" href="#matplotlib.lines.IdentityTransform.depth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of transforms which have been chained
+together to form this Transform instance.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For the special case of a Composite transform, the maximum depth
+of the two is returned.</p>
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.lines.IdentityTransform.is_separable.html" class="btn btn-neutral float-right" title="10.2.3.2. matplotlib.lines.IdentityTransform.is_separable" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.lines.IdentityTransform.html" class="btn btn-neutral" title="10.2.3. matplotlib.lines.IdentityTransform" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

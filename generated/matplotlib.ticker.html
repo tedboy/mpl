@@ -1,0 +1,568 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>35. matplotlib.ticker &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../index.html"/>
+        <link rel="up" title="&lt;no title&gt;" href="../infreq.html"/>
+        <link rel="next" title="35.1.4.1. matplotlib.ticker.closeto" href="matplotlib.ticker.closeto.html"/>
+        <link rel="prev" title="34.2.1.117. matplotlib.spines.Spine.update_from" href="generated/matplotlib.spines.Spine.update_from.html"/> 
+
+  
+  <script src="../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">35. matplotlib.ticker</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tick-locating-and-formatting">35.1. Tick locating and formatting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#default-formatter">35.1.1. Default Formatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tick-locating">35.1.2. Tick locating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tick-formatting">35.1.3. Tick formatting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#functions">35.1.4. Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.ticker.closeto.html">35.1.4.1. matplotlib.ticker.closeto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.ticker.decade_down.html">35.1.4.2. matplotlib.ticker.decade_down</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.ticker.decade_up.html">35.1.4.3. matplotlib.ticker.decade_up</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.ticker.is_close_to_int.html">35.1.4.4. matplotlib.ticker.is_close_to_int</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.ticker.is_decade.html">35.1.4.5. matplotlib.ticker.is_decade</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.ticker.nearest_long.html">35.1.4.6. matplotlib.ticker.nearest_long</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.ticker.scale_range.html">35.1.4.7. matplotlib.ticker.scale_range</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#classes">35.1.5. Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.ticker.AutoLocator.html">35.1.5.1. matplotlib.ticker.AutoLocator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.ticker.AutoMinorLocator.html">35.1.5.2. matplotlib.ticker.AutoMinorLocator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.ticker.Base.html">35.1.5.3. matplotlib.ticker.Base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.ticker.EngFormatter.html">35.1.5.4. matplotlib.ticker.EngFormatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.ticker.FixedFormatter.html">35.1.5.5. matplotlib.ticker.FixedFormatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.ticker.FixedLocator.html">35.1.5.6. matplotlib.ticker.FixedLocator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.ticker.FormatStrFormatter.html">35.1.5.7. matplotlib.ticker.FormatStrFormatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.ticker.Formatter.html">35.1.5.8. matplotlib.ticker.Formatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.ticker.FuncFormatter.html">35.1.5.9. matplotlib.ticker.FuncFormatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.ticker.IndexFormatter.html">35.1.5.10. matplotlib.ticker.IndexFormatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.ticker.IndexLocator.html">35.1.5.11. matplotlib.ticker.IndexLocator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.ticker.LinearLocator.html">35.1.5.12. matplotlib.ticker.LinearLocator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.ticker.Locator.html">35.1.5.13. matplotlib.ticker.Locator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.ticker.LogFormatter.html">35.1.5.14. matplotlib.ticker.LogFormatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.ticker.LogFormatterExponent.html">35.1.5.15. matplotlib.ticker.LogFormatterExponent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.ticker.LogFormatterMathtext.html">35.1.5.16. matplotlib.ticker.LogFormatterMathtext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.ticker.LogLocator.html">35.1.5.17. matplotlib.ticker.LogLocator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.ticker.LogitFormatter.html">35.1.5.18. matplotlib.ticker.LogitFormatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.ticker.LogitLocator.html">35.1.5.19. matplotlib.ticker.LogitLocator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.ticker.MaxNLocator.html">35.1.5.20. matplotlib.ticker.MaxNLocator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.ticker.MultipleLocator.html">35.1.5.21. matplotlib.ticker.MultipleLocator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.ticker.NullFormatter.html">35.1.5.22. matplotlib.ticker.NullFormatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.ticker.NullLocator.html">35.1.5.23. matplotlib.ticker.NullLocator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.ticker.OldAutoLocator.html">35.1.5.24. matplotlib.ticker.OldAutoLocator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.ticker.OldScalarFormatter.html">35.1.5.25. matplotlib.ticker.OldScalarFormatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.ticker.ScalarFormatter.html">35.1.5.26. matplotlib.ticker.ScalarFormatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.ticker.StrMethodFormatter.html">35.1.5.27. matplotlib.ticker.StrMethodFormatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.ticker.SymmetricalLogLocator.html">35.1.5.28. matplotlib.ticker.SymmetricalLogLocator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/matplotlib.ticker.TickHelper.html">35.1.5.29. matplotlib.ticker.TickHelper</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../infreq.html">&lt;no title&gt;</a> &raquo;</li>
+        
+      <li>35. matplotlib.ticker</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../sources/generated/matplotlib.ticker.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-matplotlib.ticker">
+<span id="matplotlib-ticker"></span><h1>35. matplotlib.ticker<a class="headerlink" href="#module-matplotlib.ticker" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="tick-locating-and-formatting">
+<h2>35.1. Tick locating and formatting<a class="headerlink" href="#tick-locating-and-formatting" title="Permalink to this headline">¶</a></h2>
+<p>This module contains classes to support completely configurable tick locating
+and formatting.  Although the locators know nothing about major or minor
+ticks, they are used by the Axis class to support major and minor tick
+locating and formatting.  Generic tick locators and formatters are provided,
+as well as domain specific custom ones..</p>
+<div class="section" id="default-formatter">
+<h3>35.1.1. Default Formatter<a class="headerlink" href="#default-formatter" title="Permalink to this headline">¶</a></h3>
+<p>The default formatter identifies when the x-data being
+plotted is a small range on top of a large off set.  To
+reduce the chances that the ticklabels overlap the ticks
+are labeled as deltas from a fixed offset.  For example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">2010</span><span class="p">),</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>will have tick of 0-9 with an offset of +2e3.  If this
+is not desired turn off the use of the offset on the default
+formatter:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">get_xaxis</span><span class="p">()</span><span class="o">.</span><span class="n">get_major_formatter</span><span class="p">()</span><span class="o">.</span><span class="n">set_useOffset</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>set the rcParam <code class="docutils literal"><span class="pre">axes.formatter.useoffset=False</span></code> to turn it off
+globally, or set a different formatter.</p>
+</div>
+<div class="section" id="tick-locating">
+<h3>35.1.2. Tick locating<a class="headerlink" href="#tick-locating" title="Permalink to this headline">¶</a></h3>
+<p>The Locator class is the base class for all tick locators.  The locators
+handle autoscaling of the view limits based on the data limits, and the
+choosing of tick locations.  A useful semi-automatic tick locator is
+MultipleLocator.  You initialize this with a base, e.g., 10, and it picks axis
+limits and ticks that are multiples of your base.</p>
+<p>The Locator subclasses defined here are</p>
+<dl class="docutils">
+<dt><a class="reference internal" href="generated/matplotlib.ticker.NullLocator.html#matplotlib.ticker.NullLocator" title="matplotlib.ticker.NullLocator"><code class="xref py py-class docutils literal"><span class="pre">NullLocator</span></code></a></dt>
+<dd>No ticks</dd>
+<dt><a class="reference internal" href="generated/matplotlib.ticker.FixedLocator.html#matplotlib.ticker.FixedLocator" title="matplotlib.ticker.FixedLocator"><code class="xref py py-class docutils literal"><span class="pre">FixedLocator</span></code></a></dt>
+<dd>Tick locations are fixed</dd>
+<dt><a class="reference internal" href="generated/matplotlib.ticker.IndexLocator.html#matplotlib.ticker.IndexLocator" title="matplotlib.ticker.IndexLocator"><code class="xref py py-class docutils literal"><span class="pre">IndexLocator</span></code></a></dt>
+<dd>locator for index plots (e.g., where x = range(len(y)))</dd>
+<dt><a class="reference internal" href="generated/matplotlib.ticker.LinearLocator.html#matplotlib.ticker.LinearLocator" title="matplotlib.ticker.LinearLocator"><code class="xref py py-class docutils literal"><span class="pre">LinearLocator</span></code></a></dt>
+<dd>evenly spaced ticks from min to max</dd>
+<dt><a class="reference internal" href="generated/matplotlib.ticker.LogLocator.html#matplotlib.ticker.LogLocator" title="matplotlib.ticker.LogLocator"><code class="xref py py-class docutils literal"><span class="pre">LogLocator</span></code></a></dt>
+<dd>logarithmically ticks from min to max</dd>
+<dt><a class="reference internal" href="generated/matplotlib.ticker.SymmetricalLogLocator.html#matplotlib.ticker.SymmetricalLogLocator" title="matplotlib.ticker.SymmetricalLogLocator"><code class="xref py py-class docutils literal"><span class="pre">SymmetricalLogLocator</span></code></a></dt>
+<dd>locator for use with with the symlog norm, works like the <cite>LogLocator</cite> for
+the part outside of the threshold and add 0 if inside the limits</dd>
+<dt><a class="reference internal" href="generated/matplotlib.ticker.MultipleLocator.html#matplotlib.ticker.MultipleLocator" title="matplotlib.ticker.MultipleLocator"><code class="xref py py-class docutils literal"><span class="pre">MultipleLocator</span></code></a></dt>
+<dd><dl class="first last docutils">
+<dt>ticks and range are a multiple of base;</dt>
+<dd>either integer or float</dd>
+</dl>
+</dd>
+<dt><a class="reference internal" href="generated/matplotlib.ticker.OldAutoLocator.html#matplotlib.ticker.OldAutoLocator" title="matplotlib.ticker.OldAutoLocator"><code class="xref py py-class docutils literal"><span class="pre">OldAutoLocator</span></code></a></dt>
+<dd>choose a MultipleLocator and dyamically reassign it for
+intelligent ticking during navigation</dd>
+<dt><a class="reference internal" href="generated/matplotlib.ticker.MaxNLocator.html#matplotlib.ticker.MaxNLocator" title="matplotlib.ticker.MaxNLocator"><code class="xref py py-class docutils literal"><span class="pre">MaxNLocator</span></code></a></dt>
+<dd>finds up to a max number of ticks at nice locations</dd>
+<dt><a class="reference internal" href="generated/matplotlib.ticker.AutoLocator.html#matplotlib.ticker.AutoLocator" title="matplotlib.ticker.AutoLocator"><code class="xref py py-class docutils literal"><span class="pre">AutoLocator</span></code></a></dt>
+<dd><a class="reference internal" href="generated/matplotlib.ticker.MaxNLocator.html#matplotlib.ticker.MaxNLocator" title="matplotlib.ticker.MaxNLocator"><code class="xref py py-class docutils literal"><span class="pre">MaxNLocator</span></code></a> with simple defaults. This is the default
+tick locator for most plotting.</dd>
+<dt><a class="reference internal" href="generated/matplotlib.ticker.AutoMinorLocator.html#matplotlib.ticker.AutoMinorLocator" title="matplotlib.ticker.AutoMinorLocator"><code class="xref py py-class docutils literal"><span class="pre">AutoMinorLocator</span></code></a></dt>
+<dd>locator for minor ticks when the axis is linear and the
+major ticks are uniformly spaced.  It subdivides the major
+tick interval into a specified number of minor intervals,
+defaulting to 4 or 5 depending on the major interval.</dd>
+</dl>
+<p>There are a number of locators specialized for date locations - see
+the dates module</p>
+<p>You can define your own locator by deriving from Locator.  You must
+override the __call__ method, which returns a sequence of locations,
+and you will probably want to override the autoscale method to set the
+view limits from the data limits.</p>
+<p>If you want to override the default locator, use one of the above or a
+custom locator and pass it to the x or y axis instance.  The relevant
+methods are:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span> <span class="n">xmajorLocator</span> <span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_minor_locator</span><span class="p">(</span> <span class="n">xminorLocator</span> <span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span> <span class="n">ymajorLocator</span> <span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_minor_locator</span><span class="p">(</span> <span class="n">yminorLocator</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p>The default minor locator is the NullLocator, e.g., no minor ticks on by
+default.</p>
+</div>
+<div class="section" id="tick-formatting">
+<h3>35.1.3. Tick formatting<a class="headerlink" href="#tick-formatting" title="Permalink to this headline">¶</a></h3>
+<p>Tick formatting is controlled by classes derived from Formatter.  The
+formatter operates on a single tick value and returns a string to the
+axis.</p>
+<dl class="docutils">
+<dt><a class="reference internal" href="generated/matplotlib.ticker.NullFormatter.html#matplotlib.ticker.NullFormatter" title="matplotlib.ticker.NullFormatter"><code class="xref py py-class docutils literal"><span class="pre">NullFormatter</span></code></a></dt>
+<dd>no labels on the ticks</dd>
+<dt><a class="reference internal" href="generated/matplotlib.ticker.IndexFormatter.html#matplotlib.ticker.IndexFormatter" title="matplotlib.ticker.IndexFormatter"><code class="xref py py-class docutils literal"><span class="pre">IndexFormatter</span></code></a></dt>
+<dd>set the strings from a list of labels</dd>
+<dt><a class="reference internal" href="generated/matplotlib.ticker.FixedFormatter.html#matplotlib.ticker.FixedFormatter" title="matplotlib.ticker.FixedFormatter"><code class="xref py py-class docutils literal"><span class="pre">FixedFormatter</span></code></a></dt>
+<dd>set the strings manually for the labels</dd>
+<dt><a class="reference internal" href="generated/matplotlib.ticker.FuncFormatter.html#matplotlib.ticker.FuncFormatter" title="matplotlib.ticker.FuncFormatter"><code class="xref py py-class docutils literal"><span class="pre">FuncFormatter</span></code></a></dt>
+<dd>user defined function sets the labels</dd>
+<dt><a class="reference internal" href="generated/matplotlib.ticker.StrMethodFormatter.html#matplotlib.ticker.StrMethodFormatter" title="matplotlib.ticker.StrMethodFormatter"><code class="xref py py-class docutils literal"><span class="pre">StrMethodFormatter</span></code></a></dt>
+<dd>Use string <cite>format</cite> method</dd>
+<dt><a class="reference internal" href="generated/matplotlib.ticker.FormatStrFormatter.html#matplotlib.ticker.FormatStrFormatter" title="matplotlib.ticker.FormatStrFormatter"><code class="xref py py-class docutils literal"><span class="pre">FormatStrFormatter</span></code></a></dt>
+<dd>use a sprintf format string</dd>
+<dt><a class="reference internal" href="generated/matplotlib.ticker.ScalarFormatter.html#matplotlib.ticker.ScalarFormatter" title="matplotlib.ticker.ScalarFormatter"><code class="xref py py-class docutils literal"><span class="pre">ScalarFormatter</span></code></a></dt>
+<dd>default formatter for scalars; autopick the fmt string</dd>
+<dt><a class="reference internal" href="generated/matplotlib.ticker.LogFormatter.html#matplotlib.ticker.LogFormatter" title="matplotlib.ticker.LogFormatter"><code class="xref py py-class docutils literal"><span class="pre">LogFormatter</span></code></a></dt>
+<dd>formatter for log axes</dd>
+</dl>
+<p>You can derive your own formatter from the Formatter base class by
+simply overriding the <code class="docutils literal"><span class="pre">__call__</span></code> method.  The formatter class has access
+to the axis view and data limits.</p>
+<p>To control the major and minor tick label formats, use one of the
+following methods:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span> <span class="n">xmajorFormatter</span> <span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_minor_formatter</span><span class="p">(</span> <span class="n">xminorFormatter</span> <span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span> <span class="n">ymajorFormatter</span> <span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_minor_formatter</span><span class="p">(</span> <span class="n">yminorFormatter</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p>See <span class="xref std std-ref">pylab_examples-major_minor_demo1</span> for an example of setting
+major and minor ticks.  See the <a class="reference internal" href="matplotlib.dates.html#module-matplotlib.dates" title="matplotlib.dates"><code class="xref py py-mod docutils literal"><span class="pre">matplotlib.dates</span></code></a> module for
+more information and examples of using date locators and formatters.</p>
+</div>
+<div class="section" id="functions">
+<h3>35.1.4. Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.ticker.closeto.html#matplotlib.ticker.closeto" title="matplotlib.ticker.closeto"><code class="xref py py-obj docutils literal"><span class="pre">closeto</span></code></a>(x,&nbsp;y)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.ticker.decade_down.html#matplotlib.ticker.decade_down" title="matplotlib.ticker.decade_down"><code class="xref py py-obj docutils literal"><span class="pre">decade_down</span></code></a>(x[,&nbsp;base])</td>
+<td>floor x to the nearest lower decade</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.ticker.decade_up.html#matplotlib.ticker.decade_up" title="matplotlib.ticker.decade_up"><code class="xref py py-obj docutils literal"><span class="pre">decade_up</span></code></a>(x[,&nbsp;base])</td>
+<td>ceil x to the nearest higher decade</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.ticker.is_close_to_int.html#matplotlib.ticker.is_close_to_int" title="matplotlib.ticker.is_close_to_int"><code class="xref py py-obj docutils literal"><span class="pre">is_close_to_int</span></code></a>(x)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.ticker.is_decade.html#matplotlib.ticker.is_decade" title="matplotlib.ticker.is_decade"><code class="xref py py-obj docutils literal"><span class="pre">is_decade</span></code></a>(x[,&nbsp;base])</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.ticker.nearest_long.html#matplotlib.ticker.nearest_long" title="matplotlib.ticker.nearest_long"><code class="xref py py-obj docutils literal"><span class="pre">nearest_long</span></code></a>(x)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.ticker.scale_range.html#matplotlib.ticker.scale_range" title="matplotlib.ticker.scale_range"><code class="xref py py-obj docutils literal"><span class="pre">scale_range</span></code></a>(vmin,&nbsp;vmax[,&nbsp;n,&nbsp;threshold])</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="classes">
+<h3>35.1.5. Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.ticker.AutoLocator.html#matplotlib.ticker.AutoLocator" title="matplotlib.ticker.AutoLocator"><code class="xref py py-obj docutils literal"><span class="pre">AutoLocator</span></code></a>()</td>
+<td><p class="rubric">Attributes</p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.ticker.AutoMinorLocator.html#matplotlib.ticker.AutoMinorLocator" title="matplotlib.ticker.AutoMinorLocator"><code class="xref py py-obj docutils literal"><span class="pre">AutoMinorLocator</span></code></a>([n])</td>
+<td>Dynamically find minor tick positions based on the positions of major ticks.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.ticker.Base.html#matplotlib.ticker.Base" title="matplotlib.ticker.Base"><code class="xref py py-obj docutils literal"><span class="pre">Base</span></code></a>(base)</td>
+<td>this solution has some hacks to deal with floating point inaccuracies</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.ticker.EngFormatter.html#matplotlib.ticker.EngFormatter" title="matplotlib.ticker.EngFormatter"><code class="xref py py-obj docutils literal"><span class="pre">EngFormatter</span></code></a>([unit,&nbsp;places])</td>
+<td>Formats axis values using engineering prefixes to represent powers of 1000, plus a specified unit, e.g., 10 MHz instead of 1e7.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.ticker.FixedFormatter.html#matplotlib.ticker.FixedFormatter" title="matplotlib.ticker.FixedFormatter"><code class="xref py py-obj docutils literal"><span class="pre">FixedFormatter</span></code></a>(seq)</td>
+<td>Return fixed strings for tick labels</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.ticker.FixedLocator.html#matplotlib.ticker.FixedLocator" title="matplotlib.ticker.FixedLocator"><code class="xref py py-obj docutils literal"><span class="pre">FixedLocator</span></code></a>(locs[,&nbsp;nbins])</td>
+<td>Tick locations are fixed.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.ticker.FormatStrFormatter.html#matplotlib.ticker.FormatStrFormatter" title="matplotlib.ticker.FormatStrFormatter"><code class="xref py py-obj docutils literal"><span class="pre">FormatStrFormatter</span></code></a>(fmt)</td>
+<td>Use an old-style (&#8216;%&#8217; operator) format string to format the tick</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.ticker.Formatter.html#matplotlib.ticker.Formatter" title="matplotlib.ticker.Formatter"><code class="xref py py-obj docutils literal"><span class="pre">Formatter</span></code></a></td>
+<td>Convert the tick location to a string</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.ticker.FuncFormatter.html#matplotlib.ticker.FuncFormatter" title="matplotlib.ticker.FuncFormatter"><code class="xref py py-obj docutils literal"><span class="pre">FuncFormatter</span></code></a>(func)</td>
+<td>User defined function for formatting</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.ticker.IndexFormatter.html#matplotlib.ticker.IndexFormatter" title="matplotlib.ticker.IndexFormatter"><code class="xref py py-obj docutils literal"><span class="pre">IndexFormatter</span></code></a>(labels)</td>
+<td>format the position x to the nearest i-th label where i=int(x+0.5)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.ticker.IndexLocator.html#matplotlib.ticker.IndexLocator" title="matplotlib.ticker.IndexLocator"><code class="xref py py-obj docutils literal"><span class="pre">IndexLocator</span></code></a>(base,&nbsp;offset)</td>
+<td>Place a tick on every multiple of some base number of points plotted, e.g., on every 5th point.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.ticker.LinearLocator.html#matplotlib.ticker.LinearLocator" title="matplotlib.ticker.LinearLocator"><code class="xref py py-obj docutils literal"><span class="pre">LinearLocator</span></code></a>([numticks,&nbsp;presets])</td>
+<td>Determine the tick locations</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.ticker.Locator.html#matplotlib.ticker.Locator" title="matplotlib.ticker.Locator"><code class="xref py py-obj docutils literal"><span class="pre">Locator</span></code></a></td>
+<td>Determine the tick locations;</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.ticker.LogFormatter.html#matplotlib.ticker.LogFormatter" title="matplotlib.ticker.LogFormatter"><code class="xref py py-obj docutils literal"><span class="pre">LogFormatter</span></code></a>([base,&nbsp;labelOnlyBase])</td>
+<td>Format values for log axis;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.ticker.LogFormatterExponent.html#matplotlib.ticker.LogFormatterExponent" title="matplotlib.ticker.LogFormatterExponent"><code class="xref py py-obj docutils literal"><span class="pre">LogFormatterExponent</span></code></a>([base,&nbsp;labelOnlyBase])</td>
+<td>Format values for log axis; using <code class="docutils literal"><span class="pre">exponent</span> <span class="pre">=</span> <span class="pre">log_base(value)</span></code></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.ticker.LogFormatterMathtext.html#matplotlib.ticker.LogFormatterMathtext" title="matplotlib.ticker.LogFormatterMathtext"><code class="xref py py-obj docutils literal"><span class="pre">LogFormatterMathtext</span></code></a>([base,&nbsp;labelOnlyBase])</td>
+<td>Format values for log axis; using <code class="docutils literal"><span class="pre">exponent</span> <span class="pre">=</span> <span class="pre">log_base(value)</span></code></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.ticker.LogLocator.html#matplotlib.ticker.LogLocator" title="matplotlib.ticker.LogLocator"><code class="xref py py-obj docutils literal"><span class="pre">LogLocator</span></code></a>([base,&nbsp;subs,&nbsp;numdecs,&nbsp;numticks])</td>
+<td>Determine the tick locations for log axes</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.ticker.LogitFormatter.html#matplotlib.ticker.LogitFormatter" title="matplotlib.ticker.LogitFormatter"><code class="xref py py-obj docutils literal"><span class="pre">LogitFormatter</span></code></a></td>
+<td>Probability formatter (using Math text)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.ticker.LogitLocator.html#matplotlib.ticker.LogitLocator" title="matplotlib.ticker.LogitLocator"><code class="xref py py-obj docutils literal"><span class="pre">LogitLocator</span></code></a>([minor])</td>
+<td>Determine the tick locations for logit axes</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.ticker.MaxNLocator.html#matplotlib.ticker.MaxNLocator" title="matplotlib.ticker.MaxNLocator"><code class="xref py py-obj docutils literal"><span class="pre">MaxNLocator</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>Select no more than N intervals at nice locations.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.ticker.MultipleLocator.html#matplotlib.ticker.MultipleLocator" title="matplotlib.ticker.MultipleLocator"><code class="xref py py-obj docutils literal"><span class="pre">MultipleLocator</span></code></a>([base])</td>
+<td>Set a tick on every integer that is multiple of base in the</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.ticker.NullFormatter.html#matplotlib.ticker.NullFormatter" title="matplotlib.ticker.NullFormatter"><code class="xref py py-obj docutils literal"><span class="pre">NullFormatter</span></code></a></td>
+<td>Always return the empty string</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.ticker.NullLocator.html#matplotlib.ticker.NullLocator" title="matplotlib.ticker.NullLocator"><code class="xref py py-obj docutils literal"><span class="pre">NullLocator</span></code></a></td>
+<td>No ticks</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.ticker.OldAutoLocator.html#matplotlib.ticker.OldAutoLocator" title="matplotlib.ticker.OldAutoLocator"><code class="xref py py-obj docutils literal"><span class="pre">OldAutoLocator</span></code></a>()</td>
+<td>On autoscale this class picks the best MultipleLocator to set the view limits and the tick locs.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.ticker.OldScalarFormatter.html#matplotlib.ticker.OldScalarFormatter" title="matplotlib.ticker.OldScalarFormatter"><code class="xref py py-obj docutils literal"><span class="pre">OldScalarFormatter</span></code></a></td>
+<td>Tick location is a plain old number.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.ticker.ScalarFormatter.html#matplotlib.ticker.ScalarFormatter" title="matplotlib.ticker.ScalarFormatter"><code class="xref py py-obj docutils literal"><span class="pre">ScalarFormatter</span></code></a>([useOffset,&nbsp;useMathText,&nbsp;...])</td>
+<td>Tick location is a plain old number.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.ticker.StrMethodFormatter.html#matplotlib.ticker.StrMethodFormatter" title="matplotlib.ticker.StrMethodFormatter"><code class="xref py py-obj docutils literal"><span class="pre">StrMethodFormatter</span></code></a>(fmt)</td>
+<td>Use a new-style format string (as used by <cite>str.format()</cite>) to format the tick.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.ticker.SymmetricalLogLocator.html#matplotlib.ticker.SymmetricalLogLocator" title="matplotlib.ticker.SymmetricalLogLocator"><code class="xref py py-obj docutils literal"><span class="pre">SymmetricalLogLocator</span></code></a>(transform[,&nbsp;subs])</td>
+<td>Determine the tick locations for log axes</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.ticker.TickHelper.html#matplotlib.ticker.TickHelper" title="matplotlib.ticker.TickHelper"><code class="xref py py-obj docutils literal"><span class="pre">TickHelper</span></code></a></td>
+<td><p class="rubric">Attributes</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.ticker.closeto.html" class="btn btn-neutral float-right" title="35.1.4.1. matplotlib.ticker.closeto" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="generated/matplotlib.spines.Spine.update_from.html" class="btn btn-neutral" title="34.2.1.117. matplotlib.spines.Spine.update_from" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../static/jquery.js"></script>
+      <script type="text/javascript" src="../static/underscore.js"></script>
+      <script type="text/javascript" src="../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

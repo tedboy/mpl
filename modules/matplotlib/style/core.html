@@ -1,0 +1,448 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>matplotlib.style.core &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../../index.html"/>
+        <link rel="up" title="matplotlib" href="../../matplotlib.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../generated/matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../../matplotlib.html">matplotlib</a> &raquo;</li>
+        
+      <li>matplotlib.style.core</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for matplotlib.style.core</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="p">(</span><span class="n">absolute_import</span><span class="p">,</span> <span class="n">division</span><span class="p">,</span> <span class="n">print_function</span><span class="p">,</span>
+                        <span class="n">unicode_literals</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">matplotlib.externals</span> <span class="k">import</span> <span class="n">six</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Core functions and attributes for the matplotlib style library:</span>
+
+<span class="sd">``use``</span>
+<span class="sd">    Select style sheet to override the current matplotlib settings.</span>
+<span class="sd">``context``</span>
+<span class="sd">    Context manager to use a style sheet temporarily.</span>
+<span class="sd">``available``</span>
+<span class="sd">    List available style sheets.</span>
+<span class="sd">``library``</span>
+<span class="sd">    A dictionary of style names and matplotlib settings.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">contextlib</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="k">import</span> <span class="n">cbook</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="k">import</span> <span class="n">rc_params_from_file</span>
+
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;use&#39;</span><span class="p">,</span> <span class="s1">&#39;context&#39;</span><span class="p">,</span> <span class="s1">&#39;available&#39;</span><span class="p">,</span> <span class="s1">&#39;library&#39;</span><span class="p">,</span> <span class="s1">&#39;reload_library&#39;</span><span class="p">]</span>
+
+
+<span class="n">BASE_LIBRARY_PATH</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">mpl</span><span class="o">.</span><span class="n">get_data_path</span><span class="p">(),</span> <span class="s1">&#39;stylelib&#39;</span><span class="p">)</span>
+<span class="c1"># Users may want multiple library paths, so store a list of paths.</span>
+<span class="n">USER_LIBRARY_PATHS</span> <span class="o">=</span> <span class="p">[</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">mpl</span><span class="o">.</span><span class="n">_get_configdir</span><span class="p">(),</span> <span class="s1">&#39;stylelib&#39;</span><span class="p">)]</span>
+<span class="n">STYLE_EXTENSION</span> <span class="o">=</span> <span class="s1">&#39;mplstyle&#39;</span>
+<span class="n">STYLE_FILE_PATTERN</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;([\S]+).</span><span class="si">%s</span><span class="s1">$&#39;</span> <span class="o">%</span> <span class="n">STYLE_EXTENSION</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">is_style_file</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return True if the filename looks like a style file.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">STYLE_FILE_PATTERN</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+
+
+<div class="viewcode-block" id="use"><a class="viewcode-back" href="../../../generated/matplotlib.style.use.html#matplotlib.style.use">[docs]</a><span class="k">def</span> <span class="nf">use</span><span class="p">(</span><span class="n">style</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Use matplotlib style settings from a style specification.</span>
+
+<span class="sd">    The style name of &#39;default&#39; is reserved for reverting back to</span>
+<span class="sd">    the default style settings.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    style : str, dict, or list</span>
+<span class="sd">        A style specification. Valid options are:</span>
+
+<span class="sd">        +------+-------------------------------------------------------------+</span>
+<span class="sd">        | str  | The name of a style or a path/URL to a style file. For a    |</span>
+<span class="sd">        |      | list of available style names, see `style.available`.       |</span>
+<span class="sd">        +------+-------------------------------------------------------------+</span>
+<span class="sd">        | dict | Dictionary with valid key/value pairs for                   |</span>
+<span class="sd">        |      | `matplotlib.rcParams`.                                      |</span>
+<span class="sd">        +------+-------------------------------------------------------------+</span>
+<span class="sd">        | list | A list of style specifiers (str or dict) applied from first |</span>
+<span class="sd">        |      | to last in the list.                                        |</span>
+<span class="sd">        +------+-------------------------------------------------------------+</span>
+
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">cbook</span><span class="o">.</span><span class="n">is_string_like</span><span class="p">(</span><span class="n">style</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">style</span><span class="p">,</span> <span class="s1">&#39;keys&#39;</span><span class="p">):</span>
+        <span class="c1"># If name is a single str or dict, make it a single element list.</span>
+        <span class="n">styles</span> <span class="o">=</span> <span class="p">[</span><span class="n">style</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">styles</span> <span class="o">=</span> <span class="n">style</span>
+
+    <span class="k">for</span> <span class="n">style</span> <span class="ow">in</span> <span class="n">styles</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">cbook</span><span class="o">.</span><span class="n">is_string_like</span><span class="p">(</span><span class="n">style</span><span class="p">):</span>
+            <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">style</span><span class="p">)</span>
+            <span class="k">continue</span>
+        <span class="k">elif</span> <span class="n">style</span> <span class="o">==</span> <span class="s1">&#39;default&#39;</span><span class="p">:</span>
+            <span class="n">mpl</span><span class="o">.</span><span class="n">rcdefaults</span><span class="p">()</span>
+            <span class="k">continue</span>
+
+        <span class="k">if</span> <span class="n">style</span> <span class="ow">in</span> <span class="n">library</span><span class="p">:</span>
+            <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">library</span><span class="p">[</span><span class="n">style</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">rc</span> <span class="o">=</span> <span class="n">rc_params_from_file</span><span class="p">(</span><span class="n">style</span><span class="p">,</span> <span class="n">use_default_template</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+                <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">rc</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">IOError</span><span class="p">:</span>
+                <span class="n">msg</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;&#39;</span><span class="si">%s</span><span class="s2">&#39; not found in the style library and input is &quot;</span>
+                       <span class="s2">&quot;not a valid URL or path. See `style.available` for &quot;</span>
+                       <span class="s2">&quot;list of available styles.&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="n">msg</span> <span class="o">%</span> <span class="n">style</span><span class="p">)</span></div>
+
+
+<span class="nd">@contextlib</span><span class="o">.</span><span class="n">contextmanager</span>
+<div class="viewcode-block" id="context"><a class="viewcode-back" href="../../../generated/matplotlib.style.context.html#matplotlib.style.context">[docs]</a><span class="k">def</span> <span class="nf">context</span><span class="p">(</span><span class="n">style</span><span class="p">,</span> <span class="n">after_reset</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Context manager for using style settings temporarily.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    style : str, dict, or list</span>
+<span class="sd">        A style specification. Valid options are:</span>
+
+<span class="sd">        +------+-------------------------------------------------------------+</span>
+<span class="sd">        | str  | The name of a style or a path/URL to a style file. For a    |</span>
+<span class="sd">        |      | list of available style names, see `style.available`.       |</span>
+<span class="sd">        +------+-------------------------------------------------------------+</span>
+<span class="sd">        | dict | Dictionary with valid key/value pairs for                   |</span>
+<span class="sd">        |      | `matplotlib.rcParams`.                                      |</span>
+<span class="sd">        +------+-------------------------------------------------------------+</span>
+<span class="sd">        | list | A list of style specifiers (str or dict) applied from first |</span>
+<span class="sd">        |      | to last in the list.                                        |</span>
+<span class="sd">        +------+-------------------------------------------------------------+</span>
+
+<span class="sd">    after_reset : bool</span>
+<span class="sd">        If True, apply style after resetting settings to their defaults;</span>
+<span class="sd">        otherwise, apply style on top of the current settings.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">initial_settings</span> <span class="o">=</span> <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">after_reset</span><span class="p">:</span>
+        <span class="n">mpl</span><span class="o">.</span><span class="n">rcdefaults</span><span class="p">()</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">use</span><span class="p">(</span><span class="n">style</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="c1"># Restore original settings before raising errors during the update.</span>
+        <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">initial_settings</span><span class="p">)</span>
+        <span class="k">raise</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">yield</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">initial_settings</span><span class="p">)</span></div>
+
+
+<span class="k">def</span> <span class="nf">load_base_library</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Load style library defined in this package.&quot;&quot;&quot;</span>
+    <span class="n">library</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+    <span class="n">library</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">read_style_directory</span><span class="p">(</span><span class="n">BASE_LIBRARY_PATH</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">library</span>
+
+
+<span class="k">def</span> <span class="nf">iter_user_libraries</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">stylelib_path</span> <span class="ow">in</span> <span class="n">USER_LIBRARY_PATHS</span><span class="p">:</span>
+        <span class="n">stylelib_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">stylelib_path</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">stylelib_path</span><span class="p">)</span> <span class="ow">and</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">stylelib_path</span><span class="p">):</span>
+            <span class="k">yield</span> <span class="n">stylelib_path</span>
+
+
+<span class="k">def</span> <span class="nf">update_user_library</span><span class="p">(</span><span class="n">library</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Update style library with user-defined rc files&quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">stylelib_path</span> <span class="ow">in</span> <span class="n">iter_user_libraries</span><span class="p">():</span>
+        <span class="n">styles</span> <span class="o">=</span> <span class="n">read_style_directory</span><span class="p">(</span><span class="n">stylelib_path</span><span class="p">)</span>
+        <span class="n">update_nested_dict</span><span class="p">(</span><span class="n">library</span><span class="p">,</span> <span class="n">styles</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">library</span>
+
+
+<span class="k">def</span> <span class="nf">iter_style_files</span><span class="p">(</span><span class="n">style_dir</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Yield file path and name of styles in the given directory.&quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">style_dir</span><span class="p">):</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">is_style_file</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+            <span class="n">match</span> <span class="o">=</span> <span class="n">STYLE_FILE_PATTERN</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+            <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">style_dir</span><span class="p">,</span> <span class="n">path</span><span class="p">))</span>
+            <span class="k">yield</span> <span class="n">path</span><span class="p">,</span> <span class="n">match</span><span class="o">.</span><span class="n">groups</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">read_style_directory</span><span class="p">(</span><span class="n">style_dir</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return dictionary of styles defined in `style_dir`.&quot;&quot;&quot;</span>
+    <span class="n">styles</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">path</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">iter_style_files</span><span class="p">(</span><span class="n">style_dir</span><span class="p">):</span>
+        <span class="n">styles</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">rc_params_from_file</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">use_default_template</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">styles</span>
+
+
+<span class="k">def</span> <span class="nf">update_nested_dict</span><span class="p">(</span><span class="n">main_dict</span><span class="p">,</span> <span class="n">new_dict</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Update nested dict (only level of nesting) with new values.</span>
+
+<span class="sd">    Unlike dict.update, this assumes that the values of the parent dict are</span>
+<span class="sd">    dicts (or dict-like), so you shouldn&#39;t replace the nested dict if it</span>
+<span class="sd">    already exists. Instead you should update the sub-dict.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># update named styles specified by user</span>
+    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">rc_dict</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="n">new_dict</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">main_dict</span><span class="p">:</span>
+            <span class="n">main_dict</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">rc_dict</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">main_dict</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">rc_dict</span>
+    <span class="k">return</span> <span class="n">main_dict</span>
+
+
+<span class="c1"># Load style library</span>
+<span class="c1"># ==================</span>
+<span class="n">_base_library</span> <span class="o">=</span> <span class="n">load_base_library</span><span class="p">()</span>
+
+<span class="n">library</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">available</span> <span class="o">=</span> <span class="p">[]</span>
+
+
+<div class="viewcode-block" id="reload_library"><a class="viewcode-back" href="../../../generated/matplotlib.style.reload_library.html#matplotlib.style.reload_library">[docs]</a><span class="k">def</span> <span class="nf">reload_library</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Reload style library.&quot;&quot;&quot;</span>
+    <span class="k">global</span> <span class="n">library</span><span class="p">,</span> <span class="n">available</span>
+    <span class="n">library</span> <span class="o">=</span> <span class="n">update_user_library</span><span class="p">(</span><span class="n">_base_library</span><span class="p">)</span>
+    <span class="n">available</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">library</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span></div>
+<span class="n">reload_library</span><span class="p">()</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,412 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>30. matplotlib.offsetbox &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../index.html"/>
+        <link rel="up" title="&lt;no title&gt;" href="../infreq.html"/>
+        <link rel="next" title="30.1.1. matplotlib.offsetbox.bbox_artist" href="matplotlib.offsetbox.bbox_artist.html"/>
+        <link rel="prev" title="29.5.17. matplotlib.mlab.zip" href="generated/matplotlib.mlab.zip.html"/> 
+
+  
+  <script src="../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">30. matplotlib.offsetbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#functions">30.1. Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.bbox_artist.html">30.1.1. matplotlib.offsetbox.bbox_artist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.mbbox_artist.html">30.1.2. matplotlib.offsetbox.mbbox_artist</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#classes">30.2. Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.offsetbox.AnchoredOffsetbox.html">30.2.1. matplotlib.offsetbox.AnchoredOffsetbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.offsetbox.AnchoredText.html">30.2.2. matplotlib.offsetbox.AnchoredText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.offsetbox.AnnotationBbox.html">30.2.3. matplotlib.offsetbox.AnnotationBbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.offsetbox.AuxTransformBox.html">30.2.4. matplotlib.offsetbox.AuxTransformBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.offsetbox.Bbox.html">30.2.5. matplotlib.offsetbox.Bbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.offsetbox.BboxBase.html">30.2.6. matplotlib.offsetbox.BboxBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.offsetbox.BboxImage.html">30.2.7. matplotlib.offsetbox.BboxImage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.offsetbox.DraggableAnnotation.html">30.2.8. matplotlib.offsetbox.DraggableAnnotation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.offsetbox.DraggableBase.html">30.2.9. matplotlib.offsetbox.DraggableBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.offsetbox.DraggableOffsetBox.html">30.2.10. matplotlib.offsetbox.DraggableOffsetBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.offsetbox.DrawingArea.html">30.2.11. matplotlib.offsetbox.DrawingArea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.offsetbox.FancyArrowPatch.html">30.2.12. matplotlib.offsetbox.FancyArrowPatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.offsetbox.FancyBboxPatch.html">30.2.13. matplotlib.offsetbox.FancyBboxPatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.offsetbox.FontProperties.html">30.2.14. matplotlib.offsetbox.FontProperties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.offsetbox.HPacker.html">30.2.15. matplotlib.offsetbox.HPacker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.offsetbox.OffsetBox.html">30.2.16. matplotlib.offsetbox.OffsetBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.offsetbox.OffsetImage.html">30.2.17. matplotlib.offsetbox.OffsetImage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.offsetbox.PackerBase.html">30.2.18. matplotlib.offsetbox.PackerBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.offsetbox.PaddedBox.html">30.2.19. matplotlib.offsetbox.PaddedBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.offsetbox.TextArea.html">30.2.20. matplotlib.offsetbox.TextArea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.offsetbox.TransformedBbox.html">30.2.21. matplotlib.offsetbox.TransformedBbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.offsetbox.VPacker.html">30.2.22. matplotlib.offsetbox.VPacker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.offsetbox.xrange.html">30.2.23. matplotlib.offsetbox.xrange</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.offsetbox.zip.html">30.2.24. matplotlib.offsetbox.zip</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../infreq.html">&lt;no title&gt;</a> &raquo;</li>
+        
+      <li>30. matplotlib.offsetbox</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../sources/generated/matplotlib.offsetbox.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-matplotlib.offsetbox">
+<span id="matplotlib-offsetbox"></span><h1>30. matplotlib.offsetbox<a class="headerlink" href="#module-matplotlib.offsetbox" title="Permalink to this headline">¶</a></h1>
+<p>The OffsetBox is a simple container artist. The child artist are meant
+to be drawn at a relative position to its parent.  The [VH]Packer,
+DrawingArea and TextArea are derived from the OffsetBox.</p>
+<p>The [VH]Packer automatically adjust the relative postisions of their
+children, which should be instances of the OffsetBox. This is used to
+align similar artists together, e.g., in legend.</p>
+<p>The DrawingArea can contain any Artist as a child. The
+DrawingArea has a fixed width and height. The position of children
+relative to the parent is fixed.  The TextArea is contains a single
+Text instance. The width and height of the TextArea instance is the
+width and height of the its child text.</p>
+<div class="section" id="functions">
+<h2>30.1. Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.bbox_artist.html#matplotlib.offsetbox.bbox_artist" title="matplotlib.offsetbox.bbox_artist"><code class="xref py py-obj docutils literal"><span class="pre">bbox_artist</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.mbbox_artist.html#matplotlib.offsetbox.mbbox_artist" title="matplotlib.offsetbox.mbbox_artist"><code class="xref py py-obj docutils literal"><span class="pre">mbbox_artist</span></code></a>(artist,&nbsp;renderer[,&nbsp;props,&nbsp;fill])</td>
+<td>This is a debug function to draw a rectangle around the bounding box returned by <a class="reference internal" href="generated/matplotlib.artist.Artist.get_window_extent.html#matplotlib.artist.Artist.get_window_extent" title="matplotlib.artist.Artist.get_window_extent"><code class="xref py py-meth docutils literal"><span class="pre">get_window_extent()</span></code></a> of an artist, to test whether the artist is returning the correct bbox.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="classes">
+<h2>30.2. Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.offsetbox.AnchoredOffsetbox.html#matplotlib.offsetbox.AnchoredOffsetbox" title="matplotlib.offsetbox.AnchoredOffsetbox"><code class="xref py py-obj docutils literal"><span class="pre">AnchoredOffsetbox</span></code></a>(loc[,&nbsp;pad,&nbsp;borderpad,&nbsp;...])</td>
+<td>An offset box placed according to the legend location loc.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.offsetbox.AnchoredText.html#matplotlib.offsetbox.AnchoredText" title="matplotlib.offsetbox.AnchoredText"><code class="xref py py-obj docutils literal"><span class="pre">AnchoredText</span></code></a>(s,&nbsp;loc[,&nbsp;pad,&nbsp;borderpad,&nbsp;prop])</td>
+<td>AnchoredOffsetbox with Text.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.offsetbox.AnnotationBbox.html#matplotlib.offsetbox.AnnotationBbox" title="matplotlib.offsetbox.AnnotationBbox"><code class="xref py py-obj docutils literal"><span class="pre">AnnotationBbox</span></code></a>(offsetbox,&nbsp;xy[,&nbsp;xybox,&nbsp;...])</td>
+<td>Annotation-like class, but with offsetbox instead of Text.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.offsetbox.AuxTransformBox.html#matplotlib.offsetbox.AuxTransformBox" title="matplotlib.offsetbox.AuxTransformBox"><code class="xref py py-obj docutils literal"><span class="pre">AuxTransformBox</span></code></a>(aux_transform)</td>
+<td>Offset Box with the aux_transform .</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.offsetbox.Bbox.html#matplotlib.offsetbox.Bbox" title="matplotlib.offsetbox.Bbox"><code class="xref py py-obj docutils literal"><span class="pre">Bbox</span></code></a>(points,&nbsp;**kwargs)</td>
+<td>A mutable bounding box.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.offsetbox.BboxBase.html#matplotlib.offsetbox.BboxBase" title="matplotlib.offsetbox.BboxBase"><code class="xref py py-obj docutils literal"><span class="pre">BboxBase</span></code></a>([shorthand_name])</td>
+<td>This is the base class of all bounding boxes, and provides read-only access to its data.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.offsetbox.BboxImage.html#matplotlib.offsetbox.BboxImage" title="matplotlib.offsetbox.BboxImage"><code class="xref py py-obj docutils literal"><span class="pre">BboxImage</span></code></a>(bbox[,&nbsp;cmap,&nbsp;norm,&nbsp;interpolation,&nbsp;...])</td>
+<td>The Image class whose size is determined by the given bbox.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.offsetbox.DraggableAnnotation.html#matplotlib.offsetbox.DraggableAnnotation" title="matplotlib.offsetbox.DraggableAnnotation"><code class="xref py py-obj docutils literal"><span class="pre">DraggableAnnotation</span></code></a>(annotation[,&nbsp;use_blit])</td>
+<td><p class="rubric">Methods</p>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.offsetbox.DraggableBase.html#matplotlib.offsetbox.DraggableBase" title="matplotlib.offsetbox.DraggableBase"><code class="xref py py-obj docutils literal"><span class="pre">DraggableBase</span></code></a>(ref_artist[,&nbsp;use_blit])</td>
+<td>helper code for a draggable artist (legend, offsetbox)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.offsetbox.DraggableOffsetBox.html#matplotlib.offsetbox.DraggableOffsetBox" title="matplotlib.offsetbox.DraggableOffsetBox"><code class="xref py py-obj docutils literal"><span class="pre">DraggableOffsetBox</span></code></a>(ref_artist,&nbsp;offsetbox[,&nbsp;...])</td>
+<td><p class="rubric">Methods</p>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.offsetbox.DrawingArea.html#matplotlib.offsetbox.DrawingArea" title="matplotlib.offsetbox.DrawingArea"><code class="xref py py-obj docutils literal"><span class="pre">DrawingArea</span></code></a>(width,&nbsp;height[,&nbsp;xdescent,&nbsp;...])</td>
+<td>The DrawingArea can contain any Artist as a child.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.offsetbox.FancyArrowPatch.html#matplotlib.offsetbox.FancyArrowPatch" title="matplotlib.offsetbox.FancyArrowPatch"><code class="xref py py-obj docutils literal"><span class="pre">FancyArrowPatch</span></code></a>([posA,&nbsp;posB,&nbsp;path,&nbsp;...])</td>
+<td>A fancy arrow patch.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.offsetbox.FancyBboxPatch.html#matplotlib.offsetbox.FancyBboxPatch" title="matplotlib.offsetbox.FancyBboxPatch"><code class="xref py py-obj docutils literal"><span class="pre">FancyBboxPatch</span></code></a>(xy,&nbsp;width,&nbsp;height[,&nbsp;...])</td>
+<td>Draw a fancy box around a rectangle with lower left at <em>xy*=(*x</em>, <em>y</em>) with specified width and height.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.offsetbox.FontProperties.html#matplotlib.offsetbox.FontProperties" title="matplotlib.offsetbox.FontProperties"><code class="xref py py-obj docutils literal"><span class="pre">FontProperties</span></code></a>([family,&nbsp;style,&nbsp;variant,&nbsp;...])</td>
+<td>A class for storing and manipulating font properties.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.offsetbox.HPacker.html#matplotlib.offsetbox.HPacker" title="matplotlib.offsetbox.HPacker"><code class="xref py py-obj docutils literal"><span class="pre">HPacker</span></code></a>([pad,&nbsp;sep,&nbsp;width,&nbsp;height,&nbsp;align,&nbsp;...])</td>
+<td>The HPacker has its children packed horizontally.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.offsetbox.OffsetBox.html#matplotlib.offsetbox.OffsetBox" title="matplotlib.offsetbox.OffsetBox"><code class="xref py py-obj docutils literal"><span class="pre">OffsetBox</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>The OffsetBox is a simple container artist.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.offsetbox.OffsetImage.html#matplotlib.offsetbox.OffsetImage" title="matplotlib.offsetbox.OffsetImage"><code class="xref py py-obj docutils literal"><span class="pre">OffsetImage</span></code></a>(arr[,&nbsp;zoom,&nbsp;cmap,&nbsp;norm,&nbsp;...])</td>
+<td><p class="rubric">Attributes</p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.offsetbox.PackerBase.html#matplotlib.offsetbox.PackerBase" title="matplotlib.offsetbox.PackerBase"><code class="xref py py-obj docutils literal"><span class="pre">PackerBase</span></code></a>([pad,&nbsp;sep,&nbsp;width,&nbsp;height,&nbsp;align,&nbsp;...])</td>
+<td><p class="rubric">Attributes</p>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.offsetbox.PaddedBox.html#matplotlib.offsetbox.PaddedBox" title="matplotlib.offsetbox.PaddedBox"><code class="xref py py-obj docutils literal"><span class="pre">PaddedBox</span></code></a>(child[,&nbsp;pad,&nbsp;draw_frame,&nbsp;patch_attrs])</td>
+<td><p class="rubric">Attributes</p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.offsetbox.TextArea.html#matplotlib.offsetbox.TextArea" title="matplotlib.offsetbox.TextArea"><code class="xref py py-obj docutils literal"><span class="pre">TextArea</span></code></a>(s[,&nbsp;textprops,&nbsp;multilinebaseline,&nbsp;...])</td>
+<td>The TextArea is contains a single Text instance.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.offsetbox.TransformedBbox.html#matplotlib.offsetbox.TransformedBbox" title="matplotlib.offsetbox.TransformedBbox"><code class="xref py py-obj docutils literal"><span class="pre">TransformedBbox</span></code></a>(bbox,&nbsp;transform,&nbsp;**kwargs)</td>
+<td>A <a class="reference internal" href="generated/matplotlib.offsetbox.Bbox.html#matplotlib.offsetbox.Bbox" title="matplotlib.offsetbox.Bbox"><code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code></a> that is automatically transformed by a given transform.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.offsetbox.VPacker.html#matplotlib.offsetbox.VPacker" title="matplotlib.offsetbox.VPacker"><code class="xref py py-obj docutils literal"><span class="pre">VPacker</span></code></a>([pad,&nbsp;sep,&nbsp;width,&nbsp;height,&nbsp;align,&nbsp;...])</td>
+<td>The VPacker has its children packed vertically.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.offsetbox.xrange.html#matplotlib.offsetbox.xrange" title="matplotlib.offsetbox.xrange"><code class="xref py py-obj docutils literal"><span class="pre">xrange</span></code></a></td>
+<td>xrange(start, stop[, step]) -&gt; xrange object</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.offsetbox.zip.html#matplotlib.offsetbox.zip" title="matplotlib.offsetbox.zip"><code class="xref py py-obj docutils literal"><span class="pre">zip</span></code></a></td>
+<td>alias of <code class="xref py py-class docutils literal"><span class="pre">izip</span></code></td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.offsetbox.bbox_artist.html" class="btn btn-neutral float-right" title="30.1.1. matplotlib.offsetbox.bbox_artist" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="generated/matplotlib.mlab.zip.html" class="btn btn-neutral" title="29.5.17. matplotlib.mlab.zip" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../static/jquery.js"></script>
+      <script type="text/javascript" src="../static/underscore.js"></script>
+      <script type="text/javascript" src="../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

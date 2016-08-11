@@ -1,0 +1,421 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>matplotlib.units &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="matplotlib" href="../matplotlib.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.html">matplotlib</a> &raquo;</li>
+        
+      <li>matplotlib.units</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for matplotlib.units</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">The classes here provide support for using custom classes with</span>
+<span class="sd">matplotlib, e.g., those that do not expose the array interface but know</span>
+<span class="sd">how to converter themselves to arrays.  It also supoprts classes with</span>
+<span class="sd">units and units conversion.  Use cases include converters for custom</span>
+<span class="sd">objects, e.g., a list of datetime objects, as well as for objects that</span>
+<span class="sd">are unit aware.  We don&#39;t assume any particular units implementation,</span>
+<span class="sd">rather a units implementation must provide a ConversionInterface, and</span>
+<span class="sd">the register with the Registry converter dictionary.  For example,</span>
+<span class="sd">here is a complete implementation which supports plotting with native</span>
+<span class="sd">datetime objects::</span>
+
+
+<span class="sd">    import matplotlib.units as units</span>
+<span class="sd">    import matplotlib.dates as dates</span>
+<span class="sd">    import matplotlib.ticker as ticker</span>
+<span class="sd">    import datetime</span>
+
+<span class="sd">    class DateConverter(units.ConversionInterface):</span>
+
+<span class="sd">        @staticmethod</span>
+<span class="sd">        def convert(value, unit, axis):</span>
+<span class="sd">            &#39;convert value to a scalar or array&#39;</span>
+<span class="sd">            return dates.date2num(value)</span>
+
+<span class="sd">        @staticmethod</span>
+<span class="sd">        def axisinfo(unit, axis):</span>
+<span class="sd">            &#39;return major and minor tick locators and formatters&#39;</span>
+<span class="sd">            if unit!=&#39;date&#39;: return None</span>
+<span class="sd">            majloc = dates.AutoDateLocator()</span>
+<span class="sd">            majfmt = dates.AutoDateFormatter(majloc)</span>
+<span class="sd">            return AxisInfo(majloc=majloc,</span>
+<span class="sd">                            majfmt=majfmt,</span>
+<span class="sd">                            label=&#39;date&#39;)</span>
+
+<span class="sd">        @staticmethod</span>
+<span class="sd">        def default_units(x, axis):</span>
+<span class="sd">            &#39;return the default unit for x or None&#39;</span>
+<span class="sd">            return &#39;date&#39;</span>
+
+<span class="sd">    # finally we register our object type with a converter</span>
+<span class="sd">    units.registry[datetime.date] = DateConverter()</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="p">(</span><span class="n">absolute_import</span><span class="p">,</span> <span class="n">division</span><span class="p">,</span> <span class="n">print_function</span><span class="p">,</span>
+                        <span class="n">unicode_literals</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">matplotlib.externals</span> <span class="k">import</span> <span class="n">six</span>
+
+<span class="kn">from</span> <span class="nn">matplotlib.cbook</span> <span class="k">import</span> <span class="n">iterable</span><span class="p">,</span> <span class="n">is_numlike</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+
+<div class="viewcode-block" id="AxisInfo"><a class="viewcode-back" href="../../generated/generated/matplotlib.units.AxisInfo.html#matplotlib.dates.AxisInfo">[docs]</a><span class="k">class</span> <span class="nc">AxisInfo</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;information to support default axis labeling and tick labeling, and</span>
+<span class="sd">       default limits&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="AxisInfo.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.units.AxisInfo.__init__.html#matplotlib.dates.AxisInfo.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">majloc</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">minloc</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">majfmt</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">minfmt</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">default_limits</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        majloc and minloc: TickLocators for the major and minor ticks</span>
+<span class="sd">        majfmt and minfmt: TickFormatters for the major and minor ticks</span>
+<span class="sd">        label: the default axis label</span>
+<span class="sd">        default_limits: the default min, max of the axis if no data is present</span>
+<span class="sd">        If any of the above are None, the axis will simply use the default</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">majloc</span> <span class="o">=</span> <span class="n">majloc</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">minloc</span> <span class="o">=</span> <span class="n">minloc</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">majfmt</span> <span class="o">=</span> <span class="n">majfmt</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">minfmt</span> <span class="o">=</span> <span class="n">minfmt</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">label</span> <span class="o">=</span> <span class="n">label</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">default_limits</span> <span class="o">=</span> <span class="n">default_limits</span></div></div>
+
+
+<div class="viewcode-block" id="ConversionInterface"><a class="viewcode-back" href="../../generated/generated/matplotlib.units.ConversionInterface.html#matplotlib.dates.ConversionInterface">[docs]</a><span class="k">class</span> <span class="nc">ConversionInterface</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The minimal interface for a converter to take custom instances (or</span>
+<span class="sd">    sequences) and convert them to values mpl can use</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="ConversionInterface.axisinfo"><a class="viewcode-back" href="../../generated/generated/matplotlib.units.ConversionInterface.axisinfo.html#matplotlib.dates.ConversionInterface.axisinfo">[docs]</a>    <span class="k">def</span> <span class="nf">axisinfo</span><span class="p">(</span><span class="n">unit</span><span class="p">,</span> <span class="n">axis</span><span class="p">):</span>
+        <span class="s1">&#39;return an units.AxisInfo instance for axis with the specified units&#39;</span>
+        <span class="k">return</span> <span class="kc">None</span></div>
+
+    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="ConversionInterface.default_units"><a class="viewcode-back" href="../../generated/generated/matplotlib.units.ConversionInterface.default_units.html#matplotlib.dates.ConversionInterface.default_units">[docs]</a>    <span class="k">def</span> <span class="nf">default_units</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">axis</span><span class="p">):</span>
+        <span class="s1">&#39;return the default unit for x or None for the given axis&#39;</span>
+        <span class="k">return</span> <span class="kc">None</span></div>
+
+    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="ConversionInterface.convert"><a class="viewcode-back" href="../../generated/generated/matplotlib.units.ConversionInterface.convert.html#matplotlib.dates.ConversionInterface.convert">[docs]</a>    <span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">unit</span><span class="p">,</span> <span class="n">axis</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        convert obj using unit for the specified axis.  If obj is a sequence,</span>
+<span class="sd">        return the converted sequence.  The ouput must be a sequence of scalars</span>
+<span class="sd">        that can be used by the numpy array layer</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">obj</span></div>
+
+    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="ConversionInterface.is_numlike"><a class="viewcode-back" href="../../generated/generated/matplotlib.units.ConversionInterface.is_numlike.html#matplotlib.dates.ConversionInterface.is_numlike">[docs]</a>    <span class="k">def</span> <span class="nf">is_numlike</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The matplotlib datalim, autoscaling, locators etc work with</span>
+<span class="sd">        scalars which are the units converted to floats given the</span>
+<span class="sd">        current unit.  The converter may be passed these floats, or</span>
+<span class="sd">        arrays of them, even when units are set.  Derived conversion</span>
+<span class="sd">        interfaces may opt to pass plain-ol unitless numbers through</span>
+<span class="sd">        the conversion interface and this is a helper function for</span>
+<span class="sd">        them.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">iterable</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">thisx</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">is_numlike</span><span class="p">(</span><span class="n">thisx</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">is_numlike</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="Registry"><a class="viewcode-back" href="../../generated/generated/matplotlib.units.Registry.html#matplotlib.dates.Registry">[docs]</a><span class="k">class</span> <span class="nc">Registry</span><span class="p">(</span><span class="nb">dict</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    register types with conversion interface</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="Registry.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.units.Registry.__init__.html#matplotlib.dates.Registry.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">dict</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cached</span> <span class="o">=</span> <span class="p">{}</span></div>
+
+<div class="viewcode-block" id="Registry.get_converter"><a class="viewcode-back" href="../../generated/generated/matplotlib.units.Registry.get_converter.html#matplotlib.dates.Registry.get_converter">[docs]</a>    <span class="k">def</span> <span class="nf">get_converter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="s1">&#39;get the converter interface instance for x, or None&#39;</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">None</span>  <span class="c1"># nothing registered</span>
+        <span class="c1">#DISABLED idx = id(x)</span>
+        <span class="c1">#DISABLED cached = self._cached.get(idx)</span>
+        <span class="c1">#DISABLED if cached is not None: return cached</span>
+
+        <span class="n">converter</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">classx</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;__class__&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">classx</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">converter</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">classx</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="ow">and</span> <span class="n">x</span><span class="o">.</span><span class="n">size</span><span class="p">:</span>
+            <span class="n">xravel</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="c1"># pass the first value of x that is not masked back to</span>
+                <span class="c1"># get_converter</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">xravel</span><span class="o">.</span><span class="n">mask</span><span class="p">):</span>
+                    <span class="c1"># some elements are not masked</span>
+                    <span class="n">converter</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_converter</span><span class="p">(</span>
+                        <span class="n">xravel</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">xravel</span><span class="o">.</span><span class="n">mask</span><span class="p">)])</span>
+                    <span class="k">return</span> <span class="n">converter</span>
+            <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+                <span class="c1"># not a masked_array</span>
+                <span class="c1"># Make sure we don&#39;t recurse forever -- it&#39;s possible for</span>
+                <span class="c1"># ndarray subclasses to continue to return subclasses and</span>
+                <span class="c1"># not ever return a non-subclass for a single element.</span>
+                <span class="n">next_item</span> <span class="o">=</span> <span class="n">xravel</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="k">if</span> <span class="p">(</span><span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">next_item</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="ow">or</span>
+                    <span class="n">next_item</span><span class="o">.</span><span class="n">shape</span> <span class="o">!=</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">):</span>
+                    <span class="n">converter</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_converter</span><span class="p">(</span><span class="n">next_item</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">converter</span>
+
+        <span class="k">if</span> <span class="n">converter</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">iterable</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">thisx</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+                <span class="c1"># Make sure that recursing might actually lead to a solution,</span>
+                <span class="c1"># if we are just going to re-examine another item of the same</span>
+                <span class="c1"># kind, then do not look at it.</span>
+                <span class="k">if</span> <span class="n">classx</span> <span class="ow">and</span> <span class="n">classx</span> <span class="o">!=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">thisx</span><span class="p">,</span> <span class="s1">&#39;__class__&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">):</span>
+                    <span class="n">converter</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_converter</span><span class="p">(</span><span class="n">thisx</span><span class="p">)</span>
+                    <span class="k">return</span> <span class="n">converter</span>
+
+        <span class="c1">#DISABLED self._cached[idx] = converter</span>
+        <span class="k">return</span> <span class="n">converter</span></div></div>
+
+
+<span class="n">registry</span> <span class="o">=</span> <span class="n">Registry</span><span class="p">()</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

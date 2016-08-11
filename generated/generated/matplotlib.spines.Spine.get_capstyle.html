@@ -1,0 +1,396 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>34.2.1.22. matplotlib.spines.Spine.get_capstyle &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="34.2.1. matplotlib.spines.Spine" href="matplotlib.spines.Spine.html"/>
+        <link rel="next" title="34.2.1.23. matplotlib.spines.Spine.get_children" href="matplotlib.spines.Spine.get_children.html"/>
+        <link rel="prev" title="34.2.1.21. matplotlib.spines.Spine.get_bounds" href="matplotlib.spines.Spine.get_bounds.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.spines.html">34. matplotlib.spines</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.spines.html#functions">34.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.spines.html#classes">34.2. Classes</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="matplotlib.spines.Spine.html">34.2.1. matplotlib.spines.Spine</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.axes.html">34.2.1.1. matplotlib.spines.Spine.axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.fill.html">34.2.1.2. matplotlib.spines.Spine.fill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.mouseover.html">34.2.1.3. matplotlib.spines.Spine.mouseover</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.stale.html">34.2.1.4. matplotlib.spines.Spine.stale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.add_callback.html">34.2.1.5. matplotlib.spines.Spine.add_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.circular_spine.html">34.2.1.6. matplotlib.spines.Spine.circular_spine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.cla.html">34.2.1.7. matplotlib.spines.Spine.cla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.contains.html">34.2.1.8. matplotlib.spines.Spine.contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.contains_point.html">34.2.1.9. matplotlib.spines.Spine.contains_point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.convert_xunits.html">34.2.1.10. matplotlib.spines.Spine.convert_xunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.convert_yunits.html">34.2.1.11. matplotlib.spines.Spine.convert_yunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.draw.html">34.2.1.12. matplotlib.spines.Spine.draw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.findobj.html">34.2.1.13. matplotlib.spines.Spine.findobj</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.format_cursor_data.html">34.2.1.14. matplotlib.spines.Spine.format_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_aa.html">34.2.1.15. matplotlib.spines.Spine.get_aa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_agg_filter.html">34.2.1.16. matplotlib.spines.Spine.get_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_alpha.html">34.2.1.17. matplotlib.spines.Spine.get_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_animated.html">34.2.1.18. matplotlib.spines.Spine.get_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_antialiased.html">34.2.1.19. matplotlib.spines.Spine.get_antialiased</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_axes.html">34.2.1.20. matplotlib.spines.Spine.get_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_bounds.html">34.2.1.21. matplotlib.spines.Spine.get_bounds</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">34.2.1.22. matplotlib.spines.Spine.get_capstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_children.html">34.2.1.23. matplotlib.spines.Spine.get_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_clip_box.html">34.2.1.24. matplotlib.spines.Spine.get_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_clip_on.html">34.2.1.25. matplotlib.spines.Spine.get_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_clip_path.html">34.2.1.26. matplotlib.spines.Spine.get_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_contains.html">34.2.1.27. matplotlib.spines.Spine.get_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_cursor_data.html">34.2.1.28. matplotlib.spines.Spine.get_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_data_transform.html">34.2.1.29. matplotlib.spines.Spine.get_data_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_ec.html">34.2.1.30. matplotlib.spines.Spine.get_ec</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_edgecolor.html">34.2.1.31. matplotlib.spines.Spine.get_edgecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_extents.html">34.2.1.32. matplotlib.spines.Spine.get_extents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_facecolor.html">34.2.1.33. matplotlib.spines.Spine.get_facecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_fc.html">34.2.1.34. matplotlib.spines.Spine.get_fc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_figure.html">34.2.1.35. matplotlib.spines.Spine.get_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_fill.html">34.2.1.36. matplotlib.spines.Spine.get_fill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_gid.html">34.2.1.37. matplotlib.spines.Spine.get_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_hatch.html">34.2.1.38. matplotlib.spines.Spine.get_hatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_joinstyle.html">34.2.1.39. matplotlib.spines.Spine.get_joinstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_label.html">34.2.1.40. matplotlib.spines.Spine.get_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_linestyle.html">34.2.1.41. matplotlib.spines.Spine.get_linestyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_linewidth.html">34.2.1.42. matplotlib.spines.Spine.get_linewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_ls.html">34.2.1.43. matplotlib.spines.Spine.get_ls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_lw.html">34.2.1.44. matplotlib.spines.Spine.get_lw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_patch_transform.html">34.2.1.45. matplotlib.spines.Spine.get_patch_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_path.html">34.2.1.46. matplotlib.spines.Spine.get_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_path_effects.html">34.2.1.47. matplotlib.spines.Spine.get_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_picker.html">34.2.1.48. matplotlib.spines.Spine.get_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_position.html">34.2.1.49. matplotlib.spines.Spine.get_position</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_rasterized.html">34.2.1.50. matplotlib.spines.Spine.get_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_sketch_params.html">34.2.1.51. matplotlib.spines.Spine.get_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_smart_bounds.html">34.2.1.52. matplotlib.spines.Spine.get_smart_bounds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_snap.html">34.2.1.53. matplotlib.spines.Spine.get_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_spine_transform.html">34.2.1.54. matplotlib.spines.Spine.get_spine_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_transform.html">34.2.1.55. matplotlib.spines.Spine.get_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_transformed_clip_path_and_affine.html">34.2.1.56. matplotlib.spines.Spine.get_transformed_clip_path_and_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_url.html">34.2.1.57. matplotlib.spines.Spine.get_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_verts.html">34.2.1.58. matplotlib.spines.Spine.get_verts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_visible.html">34.2.1.59. matplotlib.spines.Spine.get_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_window_extent.html">34.2.1.60. matplotlib.spines.Spine.get_window_extent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.get_zorder.html">34.2.1.61. matplotlib.spines.Spine.get_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.have_units.html">34.2.1.62. matplotlib.spines.Spine.have_units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.hitlist.html">34.2.1.63. matplotlib.spines.Spine.hitlist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.is_figure_set.html">34.2.1.64. matplotlib.spines.Spine.is_figure_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.is_frame_like.html">34.2.1.65. matplotlib.spines.Spine.is_frame_like</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.is_transform_set.html">34.2.1.66. matplotlib.spines.Spine.is_transform_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.linear_spine.html">34.2.1.67. matplotlib.spines.Spine.linear_spine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.pchanged.html">34.2.1.68. matplotlib.spines.Spine.pchanged</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.pick.html">34.2.1.69. matplotlib.spines.Spine.pick</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.pickable.html">34.2.1.70. matplotlib.spines.Spine.pickable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.properties.html">34.2.1.71. matplotlib.spines.Spine.properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.register_axis.html">34.2.1.72. matplotlib.spines.Spine.register_axis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.remove.html">34.2.1.73. matplotlib.spines.Spine.remove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.remove_callback.html">34.2.1.74. matplotlib.spines.Spine.remove_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set.html">34.2.1.75. matplotlib.spines.Spine.set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_aa.html">34.2.1.76. matplotlib.spines.Spine.set_aa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_agg_filter.html">34.2.1.77. matplotlib.spines.Spine.set_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_alpha.html">34.2.1.78. matplotlib.spines.Spine.set_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_animated.html">34.2.1.79. matplotlib.spines.Spine.set_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_antialiased.html">34.2.1.80. matplotlib.spines.Spine.set_antialiased</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_axes.html">34.2.1.81. matplotlib.spines.Spine.set_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_bounds.html">34.2.1.82. matplotlib.spines.Spine.set_bounds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_capstyle.html">34.2.1.83. matplotlib.spines.Spine.set_capstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_clip_box.html">34.2.1.84. matplotlib.spines.Spine.set_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_clip_on.html">34.2.1.85. matplotlib.spines.Spine.set_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_clip_path.html">34.2.1.86. matplotlib.spines.Spine.set_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_color.html">34.2.1.87. matplotlib.spines.Spine.set_color</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_contains.html">34.2.1.88. matplotlib.spines.Spine.set_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_ec.html">34.2.1.89. matplotlib.spines.Spine.set_ec</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_edgecolor.html">34.2.1.90. matplotlib.spines.Spine.set_edgecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_facecolor.html">34.2.1.91. matplotlib.spines.Spine.set_facecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_fc.html">34.2.1.92. matplotlib.spines.Spine.set_fc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_figure.html">34.2.1.93. matplotlib.spines.Spine.set_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_fill.html">34.2.1.94. matplotlib.spines.Spine.set_fill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_gid.html">34.2.1.95. matplotlib.spines.Spine.set_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_hatch.html">34.2.1.96. matplotlib.spines.Spine.set_hatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_joinstyle.html">34.2.1.97. matplotlib.spines.Spine.set_joinstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_label.html">34.2.1.98. matplotlib.spines.Spine.set_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_linestyle.html">34.2.1.99. matplotlib.spines.Spine.set_linestyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_linewidth.html">34.2.1.100. matplotlib.spines.Spine.set_linewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_ls.html">34.2.1.101. matplotlib.spines.Spine.set_ls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_lw.html">34.2.1.102. matplotlib.spines.Spine.set_lw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_patch_circle.html">34.2.1.103. matplotlib.spines.Spine.set_patch_circle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_patch_line.html">34.2.1.104. matplotlib.spines.Spine.set_patch_line</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_path_effects.html">34.2.1.105. matplotlib.spines.Spine.set_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_picker.html">34.2.1.106. matplotlib.spines.Spine.set_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_position.html">34.2.1.107. matplotlib.spines.Spine.set_position</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_rasterized.html">34.2.1.108. matplotlib.spines.Spine.set_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_sketch_params.html">34.2.1.109. matplotlib.spines.Spine.set_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_smart_bounds.html">34.2.1.110. matplotlib.spines.Spine.set_smart_bounds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_snap.html">34.2.1.111. matplotlib.spines.Spine.set_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_transform.html">34.2.1.112. matplotlib.spines.Spine.set_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_url.html">34.2.1.113. matplotlib.spines.Spine.set_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_visible.html">34.2.1.114. matplotlib.spines.Spine.set_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.set_zorder.html">34.2.1.115. matplotlib.spines.Spine.set_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.update.html">34.2.1.116. matplotlib.spines.Spine.update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.spines.Spine.update_from.html">34.2.1.117. matplotlib.spines.Spine.update_from</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../infreq.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.spines.html">34. matplotlib.spines</a> &raquo;</li>
+        
+          <li><a href="matplotlib.spines.Spine.html">34.2.1. matplotlib.spines.Spine</a> &raquo;</li>
+        
+      <li>34.2.1.22. matplotlib.spines.Spine.get_capstyle</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.spines.Spine.get_capstyle.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-spines-spine-get-capstyle">
+<h1>34.2.1.22. matplotlib.spines.Spine.get_capstyle<a class="headerlink" href="#matplotlib-spines-spine-get-capstyle" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="matplotlib.spines.Spine.get_capstyle">
+<code class="descclassname">Spine.</code><code class="descname">get_capstyle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.spines.Spine.get_capstyle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the current capstyle</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.spines.Spine.get_children.html" class="btn btn-neutral float-right" title="34.2.1.23. matplotlib.spines.Spine.get_children" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.spines.Spine.get_bounds.html" class="btn btn-neutral" title="34.2.1.21. matplotlib.spines.Spine.get_bounds" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

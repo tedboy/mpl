@@ -1,0 +1,412 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4.2.6.92. matplotlib.axis.YAxis.set_data_interval &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="4.2.6. matplotlib.axis.YAxis" href="matplotlib.axis.YAxis.html"/>
+        <link rel="next" title="4.2.6.93. matplotlib.axis.YAxis.set_default_intervals" href="matplotlib.axis.YAxis.set_default_intervals.html"/>
+        <link rel="prev" title="4.2.6.91. matplotlib.axis.YAxis.set_contains" href="matplotlib.axis.YAxis.set_contains.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.axis.html">4. matplotlib.axis</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.axis.html#functions">4.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.axis.html#classes">4.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.axis.Axis.html">4.2.1. matplotlib.axis.Axis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.axis.Tick.html">4.2.2. matplotlib.axis.Tick</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.axis.Ticker.html">4.2.3. matplotlib.axis.Ticker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.axis.XAxis.html">4.2.4. matplotlib.axis.XAxis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.axis.XTick.html">4.2.5. matplotlib.axis.XTick</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="matplotlib.axis.YAxis.html">4.2.6. matplotlib.axis.YAxis</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.axes.html">4.2.6.1. matplotlib.axis.YAxis.axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.mouseover.html">4.2.6.2. matplotlib.axis.YAxis.mouseover</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.stale.html">4.2.6.3. matplotlib.axis.YAxis.stale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.add_callback.html">4.2.6.4. matplotlib.axis.YAxis.add_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.axis_date.html">4.2.6.5. matplotlib.axis.YAxis.axis_date</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.cla.html">4.2.6.6. matplotlib.axis.YAxis.cla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.contains.html">4.2.6.7. matplotlib.axis.YAxis.contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.convert_units.html">4.2.6.8. matplotlib.axis.YAxis.convert_units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.convert_xunits.html">4.2.6.9. matplotlib.axis.YAxis.convert_xunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.convert_yunits.html">4.2.6.10. matplotlib.axis.YAxis.convert_yunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.draw.html">4.2.6.11. matplotlib.axis.YAxis.draw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.findobj.html">4.2.6.12. matplotlib.axis.YAxis.findobj</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.format_cursor_data.html">4.2.6.13. matplotlib.axis.YAxis.format_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_agg_filter.html">4.2.6.14. matplotlib.axis.YAxis.get_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_alpha.html">4.2.6.15. matplotlib.axis.YAxis.get_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_animated.html">4.2.6.16. matplotlib.axis.YAxis.get_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_axes.html">4.2.6.17. matplotlib.axis.YAxis.get_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_children.html">4.2.6.18. matplotlib.axis.YAxis.get_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_clip_box.html">4.2.6.19. matplotlib.axis.YAxis.get_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_clip_on.html">4.2.6.20. matplotlib.axis.YAxis.get_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_clip_path.html">4.2.6.21. matplotlib.axis.YAxis.get_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_contains.html">4.2.6.22. matplotlib.axis.YAxis.get_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_cursor_data.html">4.2.6.23. matplotlib.axis.YAxis.get_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_data_interval.html">4.2.6.24. matplotlib.axis.YAxis.get_data_interval</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_figure.html">4.2.6.25. matplotlib.axis.YAxis.get_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_gid.html">4.2.6.26. matplotlib.axis.YAxis.get_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_gridlines.html">4.2.6.27. matplotlib.axis.YAxis.get_gridlines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_label.html">4.2.6.28. matplotlib.axis.YAxis.get_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_label_position.html">4.2.6.29. matplotlib.axis.YAxis.get_label_position</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_label_text.html">4.2.6.30. matplotlib.axis.YAxis.get_label_text</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_major_formatter.html">4.2.6.31. matplotlib.axis.YAxis.get_major_formatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_major_locator.html">4.2.6.32. matplotlib.axis.YAxis.get_major_locator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_major_ticks.html">4.2.6.33. matplotlib.axis.YAxis.get_major_ticks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_majorticklabels.html">4.2.6.34. matplotlib.axis.YAxis.get_majorticklabels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_majorticklines.html">4.2.6.35. matplotlib.axis.YAxis.get_majorticklines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_majorticklocs.html">4.2.6.36. matplotlib.axis.YAxis.get_majorticklocs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_minor_formatter.html">4.2.6.37. matplotlib.axis.YAxis.get_minor_formatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_minor_locator.html">4.2.6.38. matplotlib.axis.YAxis.get_minor_locator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_minor_ticks.html">4.2.6.39. matplotlib.axis.YAxis.get_minor_ticks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_minorticklabels.html">4.2.6.40. matplotlib.axis.YAxis.get_minorticklabels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_minorticklines.html">4.2.6.41. matplotlib.axis.YAxis.get_minorticklines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_minorticklocs.html">4.2.6.42. matplotlib.axis.YAxis.get_minorticklocs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_minpos.html">4.2.6.43. matplotlib.axis.YAxis.get_minpos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_offset_text.html">4.2.6.44. matplotlib.axis.YAxis.get_offset_text</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_path_effects.html">4.2.6.45. matplotlib.axis.YAxis.get_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_picker.html">4.2.6.46. matplotlib.axis.YAxis.get_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_pickradius.html">4.2.6.47. matplotlib.axis.YAxis.get_pickradius</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_rasterized.html">4.2.6.48. matplotlib.axis.YAxis.get_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_scale.html">4.2.6.49. matplotlib.axis.YAxis.get_scale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_sketch_params.html">4.2.6.50. matplotlib.axis.YAxis.get_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_smart_bounds.html">4.2.6.51. matplotlib.axis.YAxis.get_smart_bounds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_snap.html">4.2.6.52. matplotlib.axis.YAxis.get_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_text_widths.html">4.2.6.53. matplotlib.axis.YAxis.get_text_widths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_ticklabel_extents.html">4.2.6.54. matplotlib.axis.YAxis.get_ticklabel_extents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_ticklabels.html">4.2.6.55. matplotlib.axis.YAxis.get_ticklabels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_ticklines.html">4.2.6.56. matplotlib.axis.YAxis.get_ticklines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_ticklocs.html">4.2.6.57. matplotlib.axis.YAxis.get_ticklocs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_ticks_position.html">4.2.6.58. matplotlib.axis.YAxis.get_ticks_position</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_tightbbox.html">4.2.6.59. matplotlib.axis.YAxis.get_tightbbox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_transform.html">4.2.6.60. matplotlib.axis.YAxis.get_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_transformed_clip_path_and_affine.html">4.2.6.61. matplotlib.axis.YAxis.get_transformed_clip_path_and_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_units.html">4.2.6.62. matplotlib.axis.YAxis.get_units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_url.html">4.2.6.63. matplotlib.axis.YAxis.get_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_view_interval.html">4.2.6.64. matplotlib.axis.YAxis.get_view_interval</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_visible.html">4.2.6.65. matplotlib.axis.YAxis.get_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_window_extent.html">4.2.6.66. matplotlib.axis.YAxis.get_window_extent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.get_zorder.html">4.2.6.67. matplotlib.axis.YAxis.get_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.grid.html">4.2.6.68. matplotlib.axis.YAxis.grid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.have_units.html">4.2.6.69. matplotlib.axis.YAxis.have_units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.hitlist.html">4.2.6.70. matplotlib.axis.YAxis.hitlist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.is_figure_set.html">4.2.6.71. matplotlib.axis.YAxis.is_figure_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.is_transform_set.html">4.2.6.72. matplotlib.axis.YAxis.is_transform_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.iter_ticks.html">4.2.6.73. matplotlib.axis.YAxis.iter_ticks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.limit_range_for_scale.html">4.2.6.74. matplotlib.axis.YAxis.limit_range_for_scale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.pan.html">4.2.6.75. matplotlib.axis.YAxis.pan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.pchanged.html">4.2.6.76. matplotlib.axis.YAxis.pchanged</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.pick.html">4.2.6.77. matplotlib.axis.YAxis.pick</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.pickable.html">4.2.6.78. matplotlib.axis.YAxis.pickable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.properties.html">4.2.6.79. matplotlib.axis.YAxis.properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.remove.html">4.2.6.80. matplotlib.axis.YAxis.remove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.remove_callback.html">4.2.6.81. matplotlib.axis.YAxis.remove_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.reset_ticks.html">4.2.6.82. matplotlib.axis.YAxis.reset_ticks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set.html">4.2.6.83. matplotlib.axis.YAxis.set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set_agg_filter.html">4.2.6.84. matplotlib.axis.YAxis.set_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set_alpha.html">4.2.6.85. matplotlib.axis.YAxis.set_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set_animated.html">4.2.6.86. matplotlib.axis.YAxis.set_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set_axes.html">4.2.6.87. matplotlib.axis.YAxis.set_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set_clip_box.html">4.2.6.88. matplotlib.axis.YAxis.set_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set_clip_on.html">4.2.6.89. matplotlib.axis.YAxis.set_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set_clip_path.html">4.2.6.90. matplotlib.axis.YAxis.set_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set_contains.html">4.2.6.91. matplotlib.axis.YAxis.set_contains</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">4.2.6.92. matplotlib.axis.YAxis.set_data_interval</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set_default_intervals.html">4.2.6.93. matplotlib.axis.YAxis.set_default_intervals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set_figure.html">4.2.6.94. matplotlib.axis.YAxis.set_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set_gid.html">4.2.6.95. matplotlib.axis.YAxis.set_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set_label.html">4.2.6.96. matplotlib.axis.YAxis.set_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set_label_coords.html">4.2.6.97. matplotlib.axis.YAxis.set_label_coords</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set_label_position.html">4.2.6.98. matplotlib.axis.YAxis.set_label_position</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set_label_text.html">4.2.6.99. matplotlib.axis.YAxis.set_label_text</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set_major_formatter.html">4.2.6.100. matplotlib.axis.YAxis.set_major_formatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set_major_locator.html">4.2.6.101. matplotlib.axis.YAxis.set_major_locator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set_minor_formatter.html">4.2.6.102. matplotlib.axis.YAxis.set_minor_formatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set_minor_locator.html">4.2.6.103. matplotlib.axis.YAxis.set_minor_locator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set_offset_position.html">4.2.6.104. matplotlib.axis.YAxis.set_offset_position</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set_path_effects.html">4.2.6.105. matplotlib.axis.YAxis.set_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set_picker.html">4.2.6.106. matplotlib.axis.YAxis.set_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set_pickradius.html">4.2.6.107. matplotlib.axis.YAxis.set_pickradius</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set_rasterized.html">4.2.6.108. matplotlib.axis.YAxis.set_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set_sketch_params.html">4.2.6.109. matplotlib.axis.YAxis.set_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set_smart_bounds.html">4.2.6.110. matplotlib.axis.YAxis.set_smart_bounds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set_snap.html">4.2.6.111. matplotlib.axis.YAxis.set_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set_tick_params.html">4.2.6.112. matplotlib.axis.YAxis.set_tick_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set_ticklabels.html">4.2.6.113. matplotlib.axis.YAxis.set_ticklabels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set_ticks.html">4.2.6.114. matplotlib.axis.YAxis.set_ticks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set_ticks_position.html">4.2.6.115. matplotlib.axis.YAxis.set_ticks_position</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set_transform.html">4.2.6.116. matplotlib.axis.YAxis.set_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set_units.html">4.2.6.117. matplotlib.axis.YAxis.set_units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set_url.html">4.2.6.118. matplotlib.axis.YAxis.set_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set_view_interval.html">4.2.6.119. matplotlib.axis.YAxis.set_view_interval</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set_visible.html">4.2.6.120. matplotlib.axis.YAxis.set_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.set_zorder.html">4.2.6.121. matplotlib.axis.YAxis.set_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.tick_left.html">4.2.6.122. matplotlib.axis.YAxis.tick_left</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.tick_right.html">4.2.6.123. matplotlib.axis.YAxis.tick_right</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.update.html">4.2.6.124. matplotlib.axis.YAxis.update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.update_from.html">4.2.6.125. matplotlib.axis.YAxis.update_from</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.update_units.html">4.2.6.126. matplotlib.axis.YAxis.update_units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.YAxis.zoom.html">4.2.6.127. matplotlib.axis.YAxis.zoom</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.axis.YTick.html">4.2.7. matplotlib.axis.YTick</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../freq.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.axis.html">4. matplotlib.axis</a> &raquo;</li>
+        
+          <li><a href="matplotlib.axis.YAxis.html">4.2.6. matplotlib.axis.YAxis</a> &raquo;</li>
+        
+      <li>4.2.6.92. matplotlib.axis.YAxis.set_data_interval</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.axis.YAxis.set_data_interval.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-axis-yaxis-set-data-interval">
+<h1>4.2.6.92. matplotlib.axis.YAxis.set_data_interval<a class="headerlink" href="#matplotlib-axis-yaxis-set-data-interval" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="matplotlib.axis.YAxis.set_data_interval">
+<code class="descclassname">YAxis.</code><code class="descname">set_data_interval</code><span class="sig-paren">(</span><em>vmin</em>, <em>vmax</em>, <em>ignore=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/axis.html#YAxis.set_data_interval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.axis.YAxis.set_data_interval" title="Permalink to this definition">¶</a></dt>
+<dd><p>set the axis data limits</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.axis.YAxis.set_default_intervals.html" class="btn btn-neutral float-right" title="4.2.6.93. matplotlib.axis.YAxis.set_default_intervals" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.axis.YAxis.set_contains.html" class="btn btn-neutral" title="4.2.6.91. matplotlib.axis.YAxis.set_contains" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

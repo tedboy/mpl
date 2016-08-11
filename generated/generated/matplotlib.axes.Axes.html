@@ -1,0 +1,1380 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3.2.1. matplotlib.axes.Axes &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="3. matplotlib.axes" href="../matplotlib.axes.html"/>
+        <link rel="next" title="3.2.1.1. matplotlib.axes.Axes.axes" href="matplotlib.axes.Axes.axes.html"/>
+        <link rel="prev" title="3.1.5. matplotlib.axes.unpack_labeled_data" href="../matplotlib.axes.unpack_labeled_data.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.axes.html">3. matplotlib.axes</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.axes.html#functions">3.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.axes.html#classes">3.2. Classes</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">3.2.1. matplotlib.axes.Axes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.axes.html">3.2.1.1. matplotlib.axes.Axes.axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.mouseover.html">3.2.1.2. matplotlib.axes.Axes.mouseover</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.stale.html">3.2.1.3. matplotlib.axes.Axes.stale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.acorr.html">3.2.1.4. matplotlib.axes.Axes.acorr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.add_artist.html">3.2.1.5. matplotlib.axes.Axes.add_artist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.add_callback.html">3.2.1.6. matplotlib.axes.Axes.add_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.add_collection.html">3.2.1.7. matplotlib.axes.Axes.add_collection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.add_container.html">3.2.1.8. matplotlib.axes.Axes.add_container</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.add_image.html">3.2.1.9. matplotlib.axes.Axes.add_image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.add_line.html">3.2.1.10. matplotlib.axes.Axes.add_line</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.add_patch.html">3.2.1.11. matplotlib.axes.Axes.add_patch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.add_table.html">3.2.1.12. matplotlib.axes.Axes.add_table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.angle_spectrum.html">3.2.1.13. matplotlib.axes.Axes.angle_spectrum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.annotate.html">3.2.1.14. matplotlib.axes.Axes.annotate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.apply_aspect.html">3.2.1.15. matplotlib.axes.Axes.apply_aspect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.arrow.html">3.2.1.16. matplotlib.axes.Axes.arrow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.autoscale.html">3.2.1.17. matplotlib.axes.Axes.autoscale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.autoscale_view.html">3.2.1.18. matplotlib.axes.Axes.autoscale_view</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.axhline.html">3.2.1.19. matplotlib.axes.Axes.axhline</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.axhspan.html">3.2.1.20. matplotlib.axes.Axes.axhspan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.axis.html">3.2.1.21. matplotlib.axes.Axes.axis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.axvline.html">3.2.1.22. matplotlib.axes.Axes.axvline</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.axvspan.html">3.2.1.23. matplotlib.axes.Axes.axvspan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.bar.html">3.2.1.24. matplotlib.axes.Axes.bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.barbs.html">3.2.1.25. matplotlib.axes.Axes.barbs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.barh.html">3.2.1.26. matplotlib.axes.Axes.barh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.boxplot.html">3.2.1.27. matplotlib.axes.Axes.boxplot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.broken_barh.html">3.2.1.28. matplotlib.axes.Axes.broken_barh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.bxp.html">3.2.1.29. matplotlib.axes.Axes.bxp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.can_pan.html">3.2.1.30. matplotlib.axes.Axes.can_pan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.can_zoom.html">3.2.1.31. matplotlib.axes.Axes.can_zoom</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.cla.html">3.2.1.32. matplotlib.axes.Axes.cla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.clabel.html">3.2.1.33. matplotlib.axes.Axes.clabel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.clear.html">3.2.1.34. matplotlib.axes.Axes.clear</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.cohere.html">3.2.1.35. matplotlib.axes.Axes.cohere</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.contains.html">3.2.1.36. matplotlib.axes.Axes.contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.contains_point.html">3.2.1.37. matplotlib.axes.Axes.contains_point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.contour.html">3.2.1.38. matplotlib.axes.Axes.contour</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.contourf.html">3.2.1.39. matplotlib.axes.Axes.contourf</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.convert_xunits.html">3.2.1.40. matplotlib.axes.Axes.convert_xunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.convert_yunits.html">3.2.1.41. matplotlib.axes.Axes.convert_yunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.csd.html">3.2.1.42. matplotlib.axes.Axes.csd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.drag_pan.html">3.2.1.43. matplotlib.axes.Axes.drag_pan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.draw.html">3.2.1.44. matplotlib.axes.Axes.draw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.draw_artist.html">3.2.1.45. matplotlib.axes.Axes.draw_artist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.end_pan.html">3.2.1.46. matplotlib.axes.Axes.end_pan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.errorbar.html">3.2.1.47. matplotlib.axes.Axes.errorbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.eventplot.html">3.2.1.48. matplotlib.axes.Axes.eventplot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.fill.html">3.2.1.49. matplotlib.axes.Axes.fill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.fill_between.html">3.2.1.50. matplotlib.axes.Axes.fill_between</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.fill_betweenx.html">3.2.1.51. matplotlib.axes.Axes.fill_betweenx</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.findobj.html">3.2.1.52. matplotlib.axes.Axes.findobj</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.format_coord.html">3.2.1.53. matplotlib.axes.Axes.format_coord</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.format_cursor_data.html">3.2.1.54. matplotlib.axes.Axes.format_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.format_xdata.html">3.2.1.55. matplotlib.axes.Axes.format_xdata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.format_ydata.html">3.2.1.56. matplotlib.axes.Axes.format_ydata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_adjustable.html">3.2.1.57. matplotlib.axes.Axes.get_adjustable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_agg_filter.html">3.2.1.58. matplotlib.axes.Axes.get_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_alpha.html">3.2.1.59. matplotlib.axes.Axes.get_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_anchor.html">3.2.1.60. matplotlib.axes.Axes.get_anchor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_animated.html">3.2.1.61. matplotlib.axes.Axes.get_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_aspect.html">3.2.1.62. matplotlib.axes.Axes.get_aspect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_autoscale_on.html">3.2.1.63. matplotlib.axes.Axes.get_autoscale_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_autoscalex_on.html">3.2.1.64. matplotlib.axes.Axes.get_autoscalex_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_autoscaley_on.html">3.2.1.65. matplotlib.axes.Axes.get_autoscaley_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_axes.html">3.2.1.66. matplotlib.axes.Axes.get_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_axes_locator.html">3.2.1.67. matplotlib.axes.Axes.get_axes_locator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_axis_bgcolor.html">3.2.1.68. matplotlib.axes.Axes.get_axis_bgcolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_axisbelow.html">3.2.1.69. matplotlib.axes.Axes.get_axisbelow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_children.html">3.2.1.70. matplotlib.axes.Axes.get_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_clip_box.html">3.2.1.71. matplotlib.axes.Axes.get_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_clip_on.html">3.2.1.72. matplotlib.axes.Axes.get_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_clip_path.html">3.2.1.73. matplotlib.axes.Axes.get_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_contains.html">3.2.1.74. matplotlib.axes.Axes.get_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_cursor_data.html">3.2.1.75. matplotlib.axes.Axes.get_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_cursor_props.html">3.2.1.76. matplotlib.axes.Axes.get_cursor_props</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_data_ratio.html">3.2.1.77. matplotlib.axes.Axes.get_data_ratio</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_data_ratio_log.html">3.2.1.78. matplotlib.axes.Axes.get_data_ratio_log</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_default_bbox_extra_artists.html">3.2.1.79. matplotlib.axes.Axes.get_default_bbox_extra_artists</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_figure.html">3.2.1.80. matplotlib.axes.Axes.get_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_frame_on.html">3.2.1.81. matplotlib.axes.Axes.get_frame_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_gid.html">3.2.1.82. matplotlib.axes.Axes.get_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_images.html">3.2.1.83. matplotlib.axes.Axes.get_images</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_label.html">3.2.1.84. matplotlib.axes.Axes.get_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_legend.html">3.2.1.85. matplotlib.axes.Axes.get_legend</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_legend_handles_labels.html">3.2.1.86. matplotlib.axes.Axes.get_legend_handles_labels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_lines.html">3.2.1.87. matplotlib.axes.Axes.get_lines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_navigate.html">3.2.1.88. matplotlib.axes.Axes.get_navigate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_navigate_mode.html">3.2.1.89. matplotlib.axes.Axes.get_navigate_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_path_effects.html">3.2.1.90. matplotlib.axes.Axes.get_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_picker.html">3.2.1.91. matplotlib.axes.Axes.get_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_position.html">3.2.1.92. matplotlib.axes.Axes.get_position</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_rasterization_zorder.html">3.2.1.93. matplotlib.axes.Axes.get_rasterization_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_rasterized.html">3.2.1.94. matplotlib.axes.Axes.get_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_renderer_cache.html">3.2.1.95. matplotlib.axes.Axes.get_renderer_cache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_shared_x_axes.html">3.2.1.96. matplotlib.axes.Axes.get_shared_x_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_shared_y_axes.html">3.2.1.97. matplotlib.axes.Axes.get_shared_y_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_sketch_params.html">3.2.1.98. matplotlib.axes.Axes.get_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_snap.html">3.2.1.99. matplotlib.axes.Axes.get_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_tightbbox.html">3.2.1.100. matplotlib.axes.Axes.get_tightbbox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_title.html">3.2.1.101. matplotlib.axes.Axes.get_title</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_transform.html">3.2.1.102. matplotlib.axes.Axes.get_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_transformed_clip_path_and_affine.html">3.2.1.103. matplotlib.axes.Axes.get_transformed_clip_path_and_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_url.html">3.2.1.104. matplotlib.axes.Axes.get_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_visible.html">3.2.1.105. matplotlib.axes.Axes.get_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_window_extent.html">3.2.1.106. matplotlib.axes.Axes.get_window_extent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_xaxis.html">3.2.1.107. matplotlib.axes.Axes.get_xaxis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_xaxis_text1_transform.html">3.2.1.108. matplotlib.axes.Axes.get_xaxis_text1_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_xaxis_text2_transform.html">3.2.1.109. matplotlib.axes.Axes.get_xaxis_text2_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_xaxis_transform.html">3.2.1.110. matplotlib.axes.Axes.get_xaxis_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_xbound.html">3.2.1.111. matplotlib.axes.Axes.get_xbound</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_xgridlines.html">3.2.1.112. matplotlib.axes.Axes.get_xgridlines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_xlabel.html">3.2.1.113. matplotlib.axes.Axes.get_xlabel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_xlim.html">3.2.1.114. matplotlib.axes.Axes.get_xlim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_xmajorticklabels.html">3.2.1.115. matplotlib.axes.Axes.get_xmajorticklabels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_xminorticklabels.html">3.2.1.116. matplotlib.axes.Axes.get_xminorticklabels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_xscale.html">3.2.1.117. matplotlib.axes.Axes.get_xscale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_xticklabels.html">3.2.1.118. matplotlib.axes.Axes.get_xticklabels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_xticklines.html">3.2.1.119. matplotlib.axes.Axes.get_xticklines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_xticks.html">3.2.1.120. matplotlib.axes.Axes.get_xticks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_yaxis.html">3.2.1.121. matplotlib.axes.Axes.get_yaxis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_yaxis_text1_transform.html">3.2.1.122. matplotlib.axes.Axes.get_yaxis_text1_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_yaxis_text2_transform.html">3.2.1.123. matplotlib.axes.Axes.get_yaxis_text2_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_yaxis_transform.html">3.2.1.124. matplotlib.axes.Axes.get_yaxis_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_ybound.html">3.2.1.125. matplotlib.axes.Axes.get_ybound</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_ygridlines.html">3.2.1.126. matplotlib.axes.Axes.get_ygridlines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_ylabel.html">3.2.1.127. matplotlib.axes.Axes.get_ylabel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_ylim.html">3.2.1.128. matplotlib.axes.Axes.get_ylim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_ymajorticklabels.html">3.2.1.129. matplotlib.axes.Axes.get_ymajorticklabels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_yminorticklabels.html">3.2.1.130. matplotlib.axes.Axes.get_yminorticklabels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_yscale.html">3.2.1.131. matplotlib.axes.Axes.get_yscale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_yticklabels.html">3.2.1.132. matplotlib.axes.Axes.get_yticklabels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_yticklines.html">3.2.1.133. matplotlib.axes.Axes.get_yticklines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_yticks.html">3.2.1.134. matplotlib.axes.Axes.get_yticks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.get_zorder.html">3.2.1.135. matplotlib.axes.Axes.get_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.grid.html">3.2.1.136. matplotlib.axes.Axes.grid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.has_data.html">3.2.1.137. matplotlib.axes.Axes.has_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.have_units.html">3.2.1.138. matplotlib.axes.Axes.have_units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.hexbin.html">3.2.1.139. matplotlib.axes.Axes.hexbin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.hist.html">3.2.1.140. matplotlib.axes.Axes.hist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.hist2d.html">3.2.1.141. matplotlib.axes.Axes.hist2d</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.hitlist.html">3.2.1.142. matplotlib.axes.Axes.hitlist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.hlines.html">3.2.1.143. matplotlib.axes.Axes.hlines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.hold.html">3.2.1.144. matplotlib.axes.Axes.hold</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.imshow.html">3.2.1.145. matplotlib.axes.Axes.imshow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.in_axes.html">3.2.1.146. matplotlib.axes.Axes.in_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.invert_xaxis.html">3.2.1.147. matplotlib.axes.Axes.invert_xaxis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.invert_yaxis.html">3.2.1.148. matplotlib.axes.Axes.invert_yaxis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.is_figure_set.html">3.2.1.149. matplotlib.axes.Axes.is_figure_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.is_transform_set.html">3.2.1.150. matplotlib.axes.Axes.is_transform_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.ishold.html">3.2.1.151. matplotlib.axes.Axes.ishold</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.legend.html">3.2.1.152. matplotlib.axes.Axes.legend</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.locator_params.html">3.2.1.153. matplotlib.axes.Axes.locator_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.loglog.html">3.2.1.154. matplotlib.axes.Axes.loglog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.magnitude_spectrum.html">3.2.1.155. matplotlib.axes.Axes.magnitude_spectrum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.margins.html">3.2.1.156. matplotlib.axes.Axes.margins</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.matshow.html">3.2.1.157. matplotlib.axes.Axes.matshow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.minorticks_off.html">3.2.1.158. matplotlib.axes.Axes.minorticks_off</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.minorticks_on.html">3.2.1.159. matplotlib.axes.Axes.minorticks_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.pchanged.html">3.2.1.160. matplotlib.axes.Axes.pchanged</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.pcolor.html">3.2.1.161. matplotlib.axes.Axes.pcolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.pcolorfast.html">3.2.1.162. matplotlib.axes.Axes.pcolorfast</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.pcolormesh.html">3.2.1.163. matplotlib.axes.Axes.pcolormesh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.phase_spectrum.html">3.2.1.164. matplotlib.axes.Axes.phase_spectrum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.pick.html">3.2.1.165. matplotlib.axes.Axes.pick</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.pickable.html">3.2.1.166. matplotlib.axes.Axes.pickable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.pie.html">3.2.1.167. matplotlib.axes.Axes.pie</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.plot.html">3.2.1.168. matplotlib.axes.Axes.plot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.plot_date.html">3.2.1.169. matplotlib.axes.Axes.plot_date</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.properties.html">3.2.1.170. matplotlib.axes.Axes.properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.psd.html">3.2.1.171. matplotlib.axes.Axes.psd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.quiver.html">3.2.1.172. matplotlib.axes.Axes.quiver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.quiverkey.html">3.2.1.173. matplotlib.axes.Axes.quiverkey</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.redraw_in_frame.html">3.2.1.174. matplotlib.axes.Axes.redraw_in_frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.relim.html">3.2.1.175. matplotlib.axes.Axes.relim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.remove.html">3.2.1.176. matplotlib.axes.Axes.remove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.remove_callback.html">3.2.1.177. matplotlib.axes.Axes.remove_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.reset_position.html">3.2.1.178. matplotlib.axes.Axes.reset_position</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.scatter.html">3.2.1.179. matplotlib.axes.Axes.scatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.semilogx.html">3.2.1.180. matplotlib.axes.Axes.semilogx</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.semilogy.html">3.2.1.181. matplotlib.axes.Axes.semilogy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set.html">3.2.1.182. matplotlib.axes.Axes.set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_adjustable.html">3.2.1.183. matplotlib.axes.Axes.set_adjustable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_agg_filter.html">3.2.1.184. matplotlib.axes.Axes.set_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_alpha.html">3.2.1.185. matplotlib.axes.Axes.set_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_anchor.html">3.2.1.186. matplotlib.axes.Axes.set_anchor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_animated.html">3.2.1.187. matplotlib.axes.Axes.set_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_aspect.html">3.2.1.188. matplotlib.axes.Axes.set_aspect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_autoscale_on.html">3.2.1.189. matplotlib.axes.Axes.set_autoscale_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_autoscalex_on.html">3.2.1.190. matplotlib.axes.Axes.set_autoscalex_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_autoscaley_on.html">3.2.1.191. matplotlib.axes.Axes.set_autoscaley_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_axes.html">3.2.1.192. matplotlib.axes.Axes.set_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_axes_locator.html">3.2.1.193. matplotlib.axes.Axes.set_axes_locator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_axis_bgcolor.html">3.2.1.194. matplotlib.axes.Axes.set_axis_bgcolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_axis_off.html">3.2.1.195. matplotlib.axes.Axes.set_axis_off</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_axis_on.html">3.2.1.196. matplotlib.axes.Axes.set_axis_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_axisbelow.html">3.2.1.197. matplotlib.axes.Axes.set_axisbelow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_clip_box.html">3.2.1.198. matplotlib.axes.Axes.set_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_clip_on.html">3.2.1.199. matplotlib.axes.Axes.set_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_clip_path.html">3.2.1.200. matplotlib.axes.Axes.set_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_color_cycle.html">3.2.1.201. matplotlib.axes.Axes.set_color_cycle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_contains.html">3.2.1.202. matplotlib.axes.Axes.set_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_cursor_props.html">3.2.1.203. matplotlib.axes.Axes.set_cursor_props</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_figure.html">3.2.1.204. matplotlib.axes.Axes.set_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_frame_on.html">3.2.1.205. matplotlib.axes.Axes.set_frame_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_gid.html">3.2.1.206. matplotlib.axes.Axes.set_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_label.html">3.2.1.207. matplotlib.axes.Axes.set_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_navigate.html">3.2.1.208. matplotlib.axes.Axes.set_navigate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_navigate_mode.html">3.2.1.209. matplotlib.axes.Axes.set_navigate_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_path_effects.html">3.2.1.210. matplotlib.axes.Axes.set_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_picker.html">3.2.1.211. matplotlib.axes.Axes.set_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_position.html">3.2.1.212. matplotlib.axes.Axes.set_position</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_prop_cycle.html">3.2.1.213. matplotlib.axes.Axes.set_prop_cycle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_rasterization_zorder.html">3.2.1.214. matplotlib.axes.Axes.set_rasterization_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_rasterized.html">3.2.1.215. matplotlib.axes.Axes.set_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_sketch_params.html">3.2.1.216. matplotlib.axes.Axes.set_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_snap.html">3.2.1.217. matplotlib.axes.Axes.set_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_title.html">3.2.1.218. matplotlib.axes.Axes.set_title</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_transform.html">3.2.1.219. matplotlib.axes.Axes.set_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_url.html">3.2.1.220. matplotlib.axes.Axes.set_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_visible.html">3.2.1.221. matplotlib.axes.Axes.set_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_xbound.html">3.2.1.222. matplotlib.axes.Axes.set_xbound</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_xlabel.html">3.2.1.223. matplotlib.axes.Axes.set_xlabel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_xlim.html">3.2.1.224. matplotlib.axes.Axes.set_xlim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_xmargin.html">3.2.1.225. matplotlib.axes.Axes.set_xmargin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_xscale.html">3.2.1.226. matplotlib.axes.Axes.set_xscale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_xticklabels.html">3.2.1.227. matplotlib.axes.Axes.set_xticklabels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_xticks.html">3.2.1.228. matplotlib.axes.Axes.set_xticks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_ybound.html">3.2.1.229. matplotlib.axes.Axes.set_ybound</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_ylabel.html">3.2.1.230. matplotlib.axes.Axes.set_ylabel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_ylim.html">3.2.1.231. matplotlib.axes.Axes.set_ylim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_ymargin.html">3.2.1.232. matplotlib.axes.Axes.set_ymargin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_yscale.html">3.2.1.233. matplotlib.axes.Axes.set_yscale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_yticklabels.html">3.2.1.234. matplotlib.axes.Axes.set_yticklabels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_yticks.html">3.2.1.235. matplotlib.axes.Axes.set_yticks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.set_zorder.html">3.2.1.236. matplotlib.axes.Axes.set_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.specgram.html">3.2.1.237. matplotlib.axes.Axes.specgram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.spy.html">3.2.1.238. matplotlib.axes.Axes.spy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.stackplot.html">3.2.1.239. matplotlib.axes.Axes.stackplot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.start_pan.html">3.2.1.240. matplotlib.axes.Axes.start_pan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.stem.html">3.2.1.241. matplotlib.axes.Axes.stem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.step.html">3.2.1.242. matplotlib.axes.Axes.step</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.streamplot.html">3.2.1.243. matplotlib.axes.Axes.streamplot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.table.html">3.2.1.244. matplotlib.axes.Axes.table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.text.html">3.2.1.245. matplotlib.axes.Axes.text</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.tick_params.html">3.2.1.246. matplotlib.axes.Axes.tick_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.ticklabel_format.html">3.2.1.247. matplotlib.axes.Axes.ticklabel_format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.tricontour.html">3.2.1.248. matplotlib.axes.Axes.tricontour</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.tricontourf.html">3.2.1.249. matplotlib.axes.Axes.tricontourf</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.tripcolor.html">3.2.1.250. matplotlib.axes.Axes.tripcolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.triplot.html">3.2.1.251. matplotlib.axes.Axes.triplot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.twinx.html">3.2.1.252. matplotlib.axes.Axes.twinx</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.twiny.html">3.2.1.253. matplotlib.axes.Axes.twiny</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.update.html">3.2.1.254. matplotlib.axes.Axes.update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.update_datalim.html">3.2.1.255. matplotlib.axes.Axes.update_datalim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.update_datalim_bounds.html">3.2.1.256. matplotlib.axes.Axes.update_datalim_bounds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.update_datalim_numerix.html">3.2.1.257. matplotlib.axes.Axes.update_datalim_numerix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.update_from.html">3.2.1.258. matplotlib.axes.Axes.update_from</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.violin.html">3.2.1.259. matplotlib.axes.Axes.violin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.violinplot.html">3.2.1.260. matplotlib.axes.Axes.violinplot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.vlines.html">3.2.1.261. matplotlib.axes.Axes.vlines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.xaxis_date.html">3.2.1.262. matplotlib.axes.Axes.xaxis_date</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.xaxis_inverted.html">3.2.1.263. matplotlib.axes.Axes.xaxis_inverted</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.xcorr.html">3.2.1.264. matplotlib.axes.Axes.xcorr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.yaxis_date.html">3.2.1.265. matplotlib.axes.Axes.yaxis_date</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.Axes.yaxis_inverted.html">3.2.1.266. matplotlib.axes.Axes.yaxis_inverted</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.axes.BarContainer.html">3.2.2. matplotlib.axes.BarContainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.axes.ErrorbarContainer.html">3.2.3. matplotlib.axes.ErrorbarContainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.axes.GridSpec.html">3.2.4. matplotlib.axes.GridSpec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.axes.StemContainer.html">3.2.5. matplotlib.axes.StemContainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.axes.Subplot.html">3.2.6. matplotlib.axes.Subplot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.axes.SubplotBase.html">3.2.7. matplotlib.axes.SubplotBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.axes.SubplotSpec.html">3.2.8. matplotlib.axes.SubplotSpec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.axes.map.html">3.2.9. matplotlib.axes.map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.axes.xrange.html">3.2.10. matplotlib.axes.xrange</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.axes.zip.html">3.2.11. matplotlib.axes.zip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.axes.zip_longest.html">3.2.12. matplotlib.axes.zip_longest</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.axes.html#exceptions">3.3. Exceptions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../freq.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.axes.html">3. matplotlib.axes</a> &raquo;</li>
+        
+      <li>3.2.1. matplotlib.axes.Axes</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.axes.Axes.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-axes-axes">
+<h1>3.2.1. matplotlib.axes.Axes<a class="headerlink" href="#matplotlib-axes-axes" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="matplotlib.axes.Axes">
+<em class="property">class </em><code class="descclassname">matplotlib.axes.</code><code class="descname">Axes</code><span class="sig-paren">(</span><em>fig</em>, <em>rect</em>, <em>axisbg=None</em>, <em>frameon=True</em>, <em>sharex=None</em>, <em>sharey=None</em>, <em>label=u''</em>, <em>xscale=None</em>, <em>yscale=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/axes/_axes.html#Axes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.axes.Axes" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference internal" href="#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> contains most of the figure elements:
+<a class="reference internal" href="matplotlib.axis.Axis.html#matplotlib.axis.Axis" title="matplotlib.axis.Axis"><code class="xref py py-class docutils literal"><span class="pre">Axis</span></code></a>, <a class="reference internal" href="matplotlib.axis.Tick.html#matplotlib.axis.Tick" title="matplotlib.axis.Tick"><code class="xref py py-class docutils literal"><span class="pre">Tick</span></code></a>,
+<a class="reference internal" href="matplotlib.lines.Line2D.html#matplotlib.lines.Line2D" title="matplotlib.lines.Line2D"><code class="xref py py-class docutils literal"><span class="pre">Line2D</span></code></a>, <a class="reference internal" href="matplotlib.text.Text.html#matplotlib.text.Text" title="matplotlib.text.Text"><code class="xref py py-class docutils literal"><span class="pre">Text</span></code></a>,
+<a class="reference internal" href="matplotlib.patches.Polygon.html#matplotlib.patches.Polygon" title="matplotlib.patches.Polygon"><code class="xref py py-class docutils literal"><span class="pre">Polygon</span></code></a>, etc., and sets the
+coordinate system.</p>
+<p>The <a class="reference internal" href="#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instance supports callbacks through a callbacks
+attribute which is a <a class="reference internal" href="matplotlib.cbook.CallbackRegistry.html#matplotlib.cbook.CallbackRegistry" title="matplotlib.cbook.CallbackRegistry"><code class="xref py py-class docutils literal"><span class="pre">CallbackRegistry</span></code></a>
+instance.  The events you can connect to are &#8216;xlim_changed&#8217; and
+&#8216;ylim_changed&#8217; and the callback will be called with func(<em>ax</em>)
+where <em>ax</em> is the <a class="reference internal" href="#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instance.</p>
+<p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.axes.html#matplotlib.axes.Axes.axes" title="matplotlib.axes.Axes.axes"><code class="xref py py-obj docutils literal"><span class="pre">axes</span></code></a></td>
+<td>The <a class="reference internal" href="#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instance the artist resides in, or <em>None</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.mouseover.html#matplotlib.axes.Axes.mouseover" title="matplotlib.axes.Axes.mouseover"><code class="xref py py-obj docutils literal"><span class="pre">mouseover</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.stale.html#matplotlib.axes.Axes.stale" title="matplotlib.axes.Axes.stale"><code class="xref py py-obj docutils literal"><span class="pre">stale</span></code></a></td>
+<td>If the artist is &#8216;stale&#8217; and needs to be re-drawn for the output to match the internal state of the artist.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.acorr.html#matplotlib.axes.Axes.acorr" title="matplotlib.axes.Axes.acorr"><code class="xref py py-obj docutils literal"><span class="pre">acorr</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Plot the autocorrelation of <cite>x</cite>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.add_artist.html#matplotlib.axes.Axes.add_artist" title="matplotlib.axes.Axes.add_artist"><code class="xref py py-obj docutils literal"><span class="pre">add_artist</span></code></a>(a)</td>
+<td>Add any <a class="reference internal" href="matplotlib.artist.Artist.html#matplotlib.artist.Artist" title="matplotlib.artist.Artist"><code class="xref py py-class docutils literal"><span class="pre">Artist</span></code></a> to the axes.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.add_callback.html#matplotlib.axes.Axes.add_callback" title="matplotlib.axes.Axes.add_callback"><code class="xref py py-obj docutils literal"><span class="pre">add_callback</span></code></a>(func)</td>
+<td>Adds a callback function that will be called whenever one of the <code class="xref py py-class docutils literal"><span class="pre">Artist</span></code>&#8216;s properties changes.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.add_collection.html#matplotlib.axes.Axes.add_collection" title="matplotlib.axes.Axes.add_collection"><code class="xref py py-obj docutils literal"><span class="pre">add_collection</span></code></a>(collection[,&nbsp;autolim])</td>
+<td>Add a <a class="reference internal" href="matplotlib.collections.Collection.html#matplotlib.collections.Collection" title="matplotlib.collections.Collection"><code class="xref py py-class docutils literal"><span class="pre">Collection</span></code></a> instance to the axes.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.add_container.html#matplotlib.axes.Axes.add_container" title="matplotlib.axes.Axes.add_container"><code class="xref py py-obj docutils literal"><span class="pre">add_container</span></code></a>(container)</td>
+<td>Add a <code class="xref py py-class docutils literal"><span class="pre">Container</span></code> instance to the axes.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.add_image.html#matplotlib.axes.Axes.add_image" title="matplotlib.axes.Axes.add_image"><code class="xref py py-obj docutils literal"><span class="pre">add_image</span></code></a>(image)</td>
+<td>Add a <a class="reference internal" href="matplotlib.image.AxesImage.html#matplotlib.image.AxesImage" title="matplotlib.image.AxesImage"><code class="xref py py-class docutils literal"><span class="pre">AxesImage</span></code></a> to the axes.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.add_line.html#matplotlib.axes.Axes.add_line" title="matplotlib.axes.Axes.add_line"><code class="xref py py-obj docutils literal"><span class="pre">add_line</span></code></a>(line)</td>
+<td>Add a <a class="reference internal" href="matplotlib.lines.Line2D.html#matplotlib.lines.Line2D" title="matplotlib.lines.Line2D"><code class="xref py py-class docutils literal"><span class="pre">Line2D</span></code></a> to the list of plot</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.add_patch.html#matplotlib.axes.Axes.add_patch" title="matplotlib.axes.Axes.add_patch"><code class="xref py py-obj docutils literal"><span class="pre">add_patch</span></code></a>(p)</td>
+<td>Add a <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a> <em>p</em> to the list of axes patches; the clipbox will be set to the Axes clipping box.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.add_table.html#matplotlib.axes.Axes.add_table" title="matplotlib.axes.Axes.add_table"><code class="xref py py-obj docutils literal"><span class="pre">add_table</span></code></a>(tab)</td>
+<td>Add a <code class="xref py py-class docutils literal"><span class="pre">Table</span></code> instance to the</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.angle_spectrum.html#matplotlib.axes.Axes.angle_spectrum" title="matplotlib.axes.Axes.angle_spectrum"><code class="xref py py-obj docutils literal"><span class="pre">angle_spectrum</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Plot the angle spectrum.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.annotate.html#matplotlib.axes.Axes.annotate" title="matplotlib.axes.Axes.annotate"><code class="xref py py-obj docutils literal"><span class="pre">annotate</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>Create an annotation: a piece of text referring to a data point.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.apply_aspect.html#matplotlib.axes.Axes.apply_aspect" title="matplotlib.axes.Axes.apply_aspect"><code class="xref py py-obj docutils literal"><span class="pre">apply_aspect</span></code></a>([position])</td>
+<td>Use <code class="xref py py-meth docutils literal"><span class="pre">_aspect()</span></code> and <code class="xref py py-meth docutils literal"><span class="pre">_adjustable()</span></code> to modify the axes box or the view limits.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.arrow.html#matplotlib.axes.Axes.arrow" title="matplotlib.axes.Axes.arrow"><code class="xref py py-obj docutils literal"><span class="pre">arrow</span></code></a>(x,&nbsp;y,&nbsp;dx,&nbsp;dy,&nbsp;**kwargs)</td>
+<td>Add an arrow to the axes.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.autoscale.html#matplotlib.axes.Axes.autoscale" title="matplotlib.axes.Axes.autoscale"><code class="xref py py-obj docutils literal"><span class="pre">autoscale</span></code></a>([enable,&nbsp;axis,&nbsp;tight])</td>
+<td>Autoscale the axis view to the data (toggle).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.autoscale_view.html#matplotlib.axes.Axes.autoscale_view" title="matplotlib.axes.Axes.autoscale_view"><code class="xref py py-obj docutils literal"><span class="pre">autoscale_view</span></code></a>([tight,&nbsp;scalex,&nbsp;scaley])</td>
+<td>Autoscale the view limits using the data limits.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.axhline.html#matplotlib.axes.Axes.axhline" title="matplotlib.axes.Axes.axhline"><code class="xref py py-obj docutils literal"><span class="pre">axhline</span></code></a>([y,&nbsp;xmin,&nbsp;xmax])</td>
+<td>Add a horizontal line across the axis.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.axhspan.html#matplotlib.axes.Axes.axhspan" title="matplotlib.axes.Axes.axhspan"><code class="xref py py-obj docutils literal"><span class="pre">axhspan</span></code></a>(ymin,&nbsp;ymax[,&nbsp;xmin,&nbsp;xmax])</td>
+<td>Add a horizontal span (rectangle) across the axis.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.axis.html#matplotlib.axes.Axes.axis" title="matplotlib.axes.Axes.axis"><code class="xref py py-obj docutils literal"><span class="pre">axis</span></code></a>(*v,&nbsp;**kwargs)</td>
+<td>Set axis properties.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.axvline.html#matplotlib.axes.Axes.axvline" title="matplotlib.axes.Axes.axvline"><code class="xref py py-obj docutils literal"><span class="pre">axvline</span></code></a>([x,&nbsp;ymin,&nbsp;ymax])</td>
+<td>Add a vertical line across the axes.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.axvspan.html#matplotlib.axes.Axes.axvspan" title="matplotlib.axes.Axes.axvspan"><code class="xref py py-obj docutils literal"><span class="pre">axvspan</span></code></a>(xmin,&nbsp;xmax[,&nbsp;ymin,&nbsp;ymax])</td>
+<td>Add a vertical span (rectangle) across the axes.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.bar.html#matplotlib.axes.Axes.bar" title="matplotlib.axes.Axes.bar"><code class="xref py py-obj docutils literal"><span class="pre">bar</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Make a bar plot.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.barbs.html#matplotlib.axes.Axes.barbs" title="matplotlib.axes.Axes.barbs"><code class="xref py py-obj docutils literal"><span class="pre">barbs</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Plot a 2-D field of barbs.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.barh.html#matplotlib.axes.Axes.barh" title="matplotlib.axes.Axes.barh"><code class="xref py py-obj docutils literal"><span class="pre">barh</span></code></a>(bottom,&nbsp;width[,&nbsp;height,&nbsp;left])</td>
+<td>Make a horizontal bar plot.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.boxplot.html#matplotlib.axes.Axes.boxplot" title="matplotlib.axes.Axes.boxplot"><code class="xref py py-obj docutils literal"><span class="pre">boxplot</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Make a box and whisker plot.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.broken_barh.html#matplotlib.axes.Axes.broken_barh" title="matplotlib.axes.Axes.broken_barh"><code class="xref py py-obj docutils literal"><span class="pre">broken_barh</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Plot horizontal bars.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.bxp.html#matplotlib.axes.Axes.bxp" title="matplotlib.axes.Axes.bxp"><code class="xref py py-obj docutils literal"><span class="pre">bxp</span></code></a>(bxpstats[,&nbsp;positions,&nbsp;widths,&nbsp;vert,&nbsp;...])</td>
+<td>Drawing function for box and whisker plots.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.can_pan.html#matplotlib.axes.Axes.can_pan" title="matplotlib.axes.Axes.can_pan"><code class="xref py py-obj docutils literal"><span class="pre">can_pan</span></code></a>()</td>
+<td>Return <em>True</em> if this axes supports any pan/zoom button functionality.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.can_zoom.html#matplotlib.axes.Axes.can_zoom" title="matplotlib.axes.Axes.can_zoom"><code class="xref py py-obj docutils literal"><span class="pre">can_zoom</span></code></a>()</td>
+<td>Return <em>True</em> if this axes supports the zoom box button functionality.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.cla.html#matplotlib.axes.Axes.cla" title="matplotlib.axes.Axes.cla"><code class="xref py py-obj docutils literal"><span class="pre">cla</span></code></a>()</td>
+<td>Clear the current axes.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.clabel.html#matplotlib.axes.Axes.clabel" title="matplotlib.axes.Axes.clabel"><code class="xref py py-obj docutils literal"><span class="pre">clabel</span></code></a>(CS,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Label a contour plot.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.clear.html#matplotlib.axes.Axes.clear" title="matplotlib.axes.Axes.clear"><code class="xref py py-obj docutils literal"><span class="pre">clear</span></code></a>()</td>
+<td>clear the axes</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.cohere.html#matplotlib.axes.Axes.cohere" title="matplotlib.axes.Axes.cohere"><code class="xref py py-obj docutils literal"><span class="pre">cohere</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Plot the coherence between <em>x</em> and <em>y</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.contains.html#matplotlib.axes.Axes.contains" title="matplotlib.axes.Axes.contains"><code class="xref py py-obj docutils literal"><span class="pre">contains</span></code></a>(mouseevent)</td>
+<td>Test whether the mouse event occured in the axes.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.contains_point.html#matplotlib.axes.Axes.contains_point" title="matplotlib.axes.Axes.contains_point"><code class="xref py py-obj docutils literal"><span class="pre">contains_point</span></code></a>(point)</td>
+<td>Returns <em>True</em> if the point (tuple of x,y) is inside the axes (the area defined by the its patch).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.contour.html#matplotlib.axes.Axes.contour" title="matplotlib.axes.Axes.contour"><code class="xref py py-obj docutils literal"><span class="pre">contour</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Plot contours.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.contourf.html#matplotlib.axes.Axes.contourf" title="matplotlib.axes.Axes.contourf"><code class="xref py py-obj docutils literal"><span class="pre">contourf</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Plot contours.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.convert_xunits.html#matplotlib.axes.Axes.convert_xunits" title="matplotlib.axes.Axes.convert_xunits"><code class="xref py py-obj docutils literal"><span class="pre">convert_xunits</span></code></a>(x)</td>
+<td>For artists in an axes, if the xaxis has units support,</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.convert_yunits.html#matplotlib.axes.Axes.convert_yunits" title="matplotlib.axes.Axes.convert_yunits"><code class="xref py py-obj docutils literal"><span class="pre">convert_yunits</span></code></a>(y)</td>
+<td>For artists in an axes, if the yaxis has units support,</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.csd.html#matplotlib.axes.Axes.csd" title="matplotlib.axes.Axes.csd"><code class="xref py py-obj docutils literal"><span class="pre">csd</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Plot the cross-spectral density.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.drag_pan.html#matplotlib.axes.Axes.drag_pan" title="matplotlib.axes.Axes.drag_pan"><code class="xref py py-obj docutils literal"><span class="pre">drag_pan</span></code></a>(button,&nbsp;key,&nbsp;x,&nbsp;y)</td>
+<td>Called when the mouse moves during a pan operation.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.draw.html#matplotlib.axes.Axes.draw" title="matplotlib.axes.Axes.draw"><code class="xref py py-obj docutils literal"><span class="pre">draw</span></code></a>(artist,&nbsp;renderer,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Draw everything (plot lines, axes, labels)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.draw_artist.html#matplotlib.axes.Axes.draw_artist" title="matplotlib.axes.Axes.draw_artist"><code class="xref py py-obj docutils literal"><span class="pre">draw_artist</span></code></a>(a)</td>
+<td>This method can only be used after an initial draw which caches the renderer.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.end_pan.html#matplotlib.axes.Axes.end_pan" title="matplotlib.axes.Axes.end_pan"><code class="xref py py-obj docutils literal"><span class="pre">end_pan</span></code></a>()</td>
+<td>Called when a pan operation completes (when the mouse button</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.errorbar.html#matplotlib.axes.Axes.errorbar" title="matplotlib.axes.Axes.errorbar"><code class="xref py py-obj docutils literal"><span class="pre">errorbar</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Plot an errorbar graph.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.eventplot.html#matplotlib.axes.Axes.eventplot" title="matplotlib.axes.Axes.eventplot"><code class="xref py py-obj docutils literal"><span class="pre">eventplot</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Plot identical parallel lines at specific positions.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.fill.html#matplotlib.axes.Axes.fill" title="matplotlib.axes.Axes.fill"><code class="xref py py-obj docutils literal"><span class="pre">fill</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Plot filled polygons.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.fill_between.html#matplotlib.axes.Axes.fill_between" title="matplotlib.axes.Axes.fill_between"><code class="xref py py-obj docutils literal"><span class="pre">fill_between</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Make filled polygons between two curves.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.fill_betweenx.html#matplotlib.axes.Axes.fill_betweenx" title="matplotlib.axes.Axes.fill_betweenx"><code class="xref py py-obj docutils literal"><span class="pre">fill_betweenx</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Make filled polygons between two horizontal curves.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.findobj.html#matplotlib.axes.Axes.findobj" title="matplotlib.axes.Axes.findobj"><code class="xref py py-obj docutils literal"><span class="pre">findobj</span></code></a>([match,&nbsp;include_self])</td>
+<td>Find artist objects.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.format_coord.html#matplotlib.axes.Axes.format_coord" title="matplotlib.axes.Axes.format_coord"><code class="xref py py-obj docutils literal"><span class="pre">format_coord</span></code></a>(x,&nbsp;y)</td>
+<td>Return a format string formatting the <em>x</em>, <em>y</em> coord</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.format_cursor_data.html#matplotlib.axes.Axes.format_cursor_data" title="matplotlib.axes.Axes.format_cursor_data"><code class="xref py py-obj docutils literal"><span class="pre">format_cursor_data</span></code></a>(data)</td>
+<td>Return <em>cursor data</em> string formatted.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.format_xdata.html#matplotlib.axes.Axes.format_xdata" title="matplotlib.axes.Axes.format_xdata"><code class="xref py py-obj docutils literal"><span class="pre">format_xdata</span></code></a>(x)</td>
+<td>Return <em>x</em> string formatted.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.format_ydata.html#matplotlib.axes.Axes.format_ydata" title="matplotlib.axes.Axes.format_ydata"><code class="xref py py-obj docutils literal"><span class="pre">format_ydata</span></code></a>(y)</td>
+<td>Return y string formatted.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_adjustable.html#matplotlib.axes.Axes.get_adjustable" title="matplotlib.axes.Axes.get_adjustable"><code class="xref py py-obj docutils literal"><span class="pre">get_adjustable</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_agg_filter.html#matplotlib.axes.Axes.get_agg_filter" title="matplotlib.axes.Axes.get_agg_filter"><code class="xref py py-obj docutils literal"><span class="pre">get_agg_filter</span></code></a>()</td>
+<td>return filter function to be used for agg filter</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_alpha.html#matplotlib.axes.Axes.get_alpha" title="matplotlib.axes.Axes.get_alpha"><code class="xref py py-obj docutils literal"><span class="pre">get_alpha</span></code></a>()</td>
+<td>Return the alpha value used for blending - not supported on all</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_anchor.html#matplotlib.axes.Axes.get_anchor" title="matplotlib.axes.Axes.get_anchor"><code class="xref py py-obj docutils literal"><span class="pre">get_anchor</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_animated.html#matplotlib.axes.Axes.get_animated" title="matplotlib.axes.Axes.get_animated"><code class="xref py py-obj docutils literal"><span class="pre">get_animated</span></code></a>()</td>
+<td>Return the artist&#8217;s animated state</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_aspect.html#matplotlib.axes.Axes.get_aspect" title="matplotlib.axes.Axes.get_aspect"><code class="xref py py-obj docutils literal"><span class="pre">get_aspect</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_autoscale_on.html#matplotlib.axes.Axes.get_autoscale_on" title="matplotlib.axes.Axes.get_autoscale_on"><code class="xref py py-obj docutils literal"><span class="pre">get_autoscale_on</span></code></a>()</td>
+<td>Get whether autoscaling is applied for both axes on plot commands</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_autoscalex_on.html#matplotlib.axes.Axes.get_autoscalex_on" title="matplotlib.axes.Axes.get_autoscalex_on"><code class="xref py py-obj docutils literal"><span class="pre">get_autoscalex_on</span></code></a>()</td>
+<td>Get whether autoscaling for the x-axis is applied on plot commands</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_autoscaley_on.html#matplotlib.axes.Axes.get_autoscaley_on" title="matplotlib.axes.Axes.get_autoscaley_on"><code class="xref py py-obj docutils literal"><span class="pre">get_autoscaley_on</span></code></a>()</td>
+<td>Get whether autoscaling for the y-axis is applied on plot commands</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_axes.html#matplotlib.axes.Axes.get_axes" title="matplotlib.axes.Axes.get_axes"><code class="xref py py-obj docutils literal"><span class="pre">get_axes</span></code></a>()</td>
+<td>Return the <a class="reference internal" href="#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instance the artist resides in, or <em>None</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_axes_locator.html#matplotlib.axes.Axes.get_axes_locator" title="matplotlib.axes.Axes.get_axes_locator"><code class="xref py py-obj docutils literal"><span class="pre">get_axes_locator</span></code></a>()</td>
+<td>return axes_locator</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_axis_bgcolor.html#matplotlib.axes.Axes.get_axis_bgcolor" title="matplotlib.axes.Axes.get_axis_bgcolor"><code class="xref py py-obj docutils literal"><span class="pre">get_axis_bgcolor</span></code></a>()</td>
+<td>Return the axis background color</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_axisbelow.html#matplotlib.axes.Axes.get_axisbelow" title="matplotlib.axes.Axes.get_axisbelow"><code class="xref py py-obj docutils literal"><span class="pre">get_axisbelow</span></code></a>()</td>
+<td>Get whether axis below is true or not</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_children.html#matplotlib.axes.Axes.get_children" title="matplotlib.axes.Axes.get_children"><code class="xref py py-obj docutils literal"><span class="pre">get_children</span></code></a>()</td>
+<td>return a list of child artists</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_clip_box.html#matplotlib.axes.Axes.get_clip_box" title="matplotlib.axes.Axes.get_clip_box"><code class="xref py py-obj docutils literal"><span class="pre">get_clip_box</span></code></a>()</td>
+<td>Return artist clipbox</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_clip_on.html#matplotlib.axes.Axes.get_clip_on" title="matplotlib.axes.Axes.get_clip_on"><code class="xref py py-obj docutils literal"><span class="pre">get_clip_on</span></code></a>()</td>
+<td>Return whether artist uses clipping</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_clip_path.html#matplotlib.axes.Axes.get_clip_path" title="matplotlib.axes.Axes.get_clip_path"><code class="xref py py-obj docutils literal"><span class="pre">get_clip_path</span></code></a>()</td>
+<td>Return artist clip path</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_contains.html#matplotlib.axes.Axes.get_contains" title="matplotlib.axes.Axes.get_contains"><code class="xref py py-obj docutils literal"><span class="pre">get_contains</span></code></a>()</td>
+<td>Return the _contains test used by the artist, or <em>None</em> for default.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_cursor_data.html#matplotlib.axes.Axes.get_cursor_data" title="matplotlib.axes.Axes.get_cursor_data"><code class="xref py py-obj docutils literal"><span class="pre">get_cursor_data</span></code></a>(event)</td>
+<td>Get the cursor data for a given event.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_cursor_props.html#matplotlib.axes.Axes.get_cursor_props" title="matplotlib.axes.Axes.get_cursor_props"><code class="xref py py-obj docutils literal"><span class="pre">get_cursor_props</span></code></a>()</td>
+<td>Return the cursor propertiess as a (<em>linewidth</em>, <em>color</em>)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_data_ratio.html#matplotlib.axes.Axes.get_data_ratio" title="matplotlib.axes.Axes.get_data_ratio"><code class="xref py py-obj docutils literal"><span class="pre">get_data_ratio</span></code></a>()</td>
+<td>Returns the aspect ratio of the raw data.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_data_ratio_log.html#matplotlib.axes.Axes.get_data_ratio_log" title="matplotlib.axes.Axes.get_data_ratio_log"><code class="xref py py-obj docutils literal"><span class="pre">get_data_ratio_log</span></code></a>()</td>
+<td>Returns the aspect ratio of the raw data in log scale.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_default_bbox_extra_artists.html#matplotlib.axes.Axes.get_default_bbox_extra_artists" title="matplotlib.axes.Axes.get_default_bbox_extra_artists"><code class="xref py py-obj docutils literal"><span class="pre">get_default_bbox_extra_artists</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_figure.html#matplotlib.axes.Axes.get_figure" title="matplotlib.axes.Axes.get_figure"><code class="xref py py-obj docutils literal"><span class="pre">get_figure</span></code></a>()</td>
+<td>Return the <a class="reference internal" href="matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure"><code class="xref py py-class docutils literal"><span class="pre">Figure</span></code></a> instance the artist belongs to.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_frame_on.html#matplotlib.axes.Axes.get_frame_on" title="matplotlib.axes.Axes.get_frame_on"><code class="xref py py-obj docutils literal"><span class="pre">get_frame_on</span></code></a>()</td>
+<td>Get whether the axes rectangle patch is drawn</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_gid.html#matplotlib.axes.Axes.get_gid" title="matplotlib.axes.Axes.get_gid"><code class="xref py py-obj docutils literal"><span class="pre">get_gid</span></code></a>()</td>
+<td>Returns the group id</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_images.html#matplotlib.axes.Axes.get_images" title="matplotlib.axes.Axes.get_images"><code class="xref py py-obj docutils literal"><span class="pre">get_images</span></code></a>()</td>
+<td>return a list of Axes images contained by the Axes</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_label.html#matplotlib.axes.Axes.get_label" title="matplotlib.axes.Axes.get_label"><code class="xref py py-obj docutils literal"><span class="pre">get_label</span></code></a>()</td>
+<td>Get the label used for this artist in the legend.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_legend.html#matplotlib.axes.Axes.get_legend" title="matplotlib.axes.Axes.get_legend"><code class="xref py py-obj docutils literal"><span class="pre">get_legend</span></code></a>()</td>
+<td>Return the legend.Legend instance, or None if no legend is defined</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_legend_handles_labels.html#matplotlib.axes.Axes.get_legend_handles_labels" title="matplotlib.axes.Axes.get_legend_handles_labels"><code class="xref py py-obj docutils literal"><span class="pre">get_legend_handles_labels</span></code></a>([legend_handler_map])</td>
+<td>Return handles and labels for legend</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_lines.html#matplotlib.axes.Axes.get_lines" title="matplotlib.axes.Axes.get_lines"><code class="xref py py-obj docutils literal"><span class="pre">get_lines</span></code></a>()</td>
+<td>Return a list of lines contained by the Axes</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_navigate.html#matplotlib.axes.Axes.get_navigate" title="matplotlib.axes.Axes.get_navigate"><code class="xref py py-obj docutils literal"><span class="pre">get_navigate</span></code></a>()</td>
+<td>Get whether the axes responds to navigation commands</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_navigate_mode.html#matplotlib.axes.Axes.get_navigate_mode" title="matplotlib.axes.Axes.get_navigate_mode"><code class="xref py py-obj docutils literal"><span class="pre">get_navigate_mode</span></code></a>()</td>
+<td>Get the navigation toolbar button status: &#8216;PAN&#8217;, &#8216;ZOOM&#8217;, or None</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_path_effects.html#matplotlib.axes.Axes.get_path_effects" title="matplotlib.axes.Axes.get_path_effects"><code class="xref py py-obj docutils literal"><span class="pre">get_path_effects</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_picker.html#matplotlib.axes.Axes.get_picker" title="matplotlib.axes.Axes.get_picker"><code class="xref py py-obj docutils literal"><span class="pre">get_picker</span></code></a>()</td>
+<td>Return the picker object used by this artist</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_position.html#matplotlib.axes.Axes.get_position" title="matplotlib.axes.Axes.get_position"><code class="xref py py-obj docutils literal"><span class="pre">get_position</span></code></a>([original])</td>
+<td>Return the a copy of the axes rectangle as a Bbox</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_rasterization_zorder.html#matplotlib.axes.Axes.get_rasterization_zorder" title="matplotlib.axes.Axes.get_rasterization_zorder"><code class="xref py py-obj docutils literal"><span class="pre">get_rasterization_zorder</span></code></a>()</td>
+<td>Get zorder value below which artists will be rasterized</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_rasterized.html#matplotlib.axes.Axes.get_rasterized" title="matplotlib.axes.Axes.get_rasterized"><code class="xref py py-obj docutils literal"><span class="pre">get_rasterized</span></code></a>()</td>
+<td>return True if the artist is to be rasterized</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_renderer_cache.html#matplotlib.axes.Axes.get_renderer_cache" title="matplotlib.axes.Axes.get_renderer_cache"><code class="xref py py-obj docutils literal"><span class="pre">get_renderer_cache</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_shared_x_axes.html#matplotlib.axes.Axes.get_shared_x_axes" title="matplotlib.axes.Axes.get_shared_x_axes"><code class="xref py py-obj docutils literal"><span class="pre">get_shared_x_axes</span></code></a>()</td>
+<td>Return a copy of the shared axes Grouper object for x axes</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_shared_y_axes.html#matplotlib.axes.Axes.get_shared_y_axes" title="matplotlib.axes.Axes.get_shared_y_axes"><code class="xref py py-obj docutils literal"><span class="pre">get_shared_y_axes</span></code></a>()</td>
+<td>Return a copy of the shared axes Grouper object for y axes</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_sketch_params.html#matplotlib.axes.Axes.get_sketch_params" title="matplotlib.axes.Axes.get_sketch_params"><code class="xref py py-obj docutils literal"><span class="pre">get_sketch_params</span></code></a>()</td>
+<td>Returns the sketch parameters for the artist.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_snap.html#matplotlib.axes.Axes.get_snap" title="matplotlib.axes.Axes.get_snap"><code class="xref py py-obj docutils literal"><span class="pre">get_snap</span></code></a>()</td>
+<td>Returns the snap setting which may be:</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_tightbbox.html#matplotlib.axes.Axes.get_tightbbox" title="matplotlib.axes.Axes.get_tightbbox"><code class="xref py py-obj docutils literal"><span class="pre">get_tightbbox</span></code></a>(renderer[,&nbsp;call_axes_locator])</td>
+<td>Return the tight bounding box of the axes.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_title.html#matplotlib.axes.Axes.get_title" title="matplotlib.axes.Axes.get_title"><code class="xref py py-obj docutils literal"><span class="pre">get_title</span></code></a>([loc])</td>
+<td>Get an axes title.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_transform.html#matplotlib.axes.Axes.get_transform" title="matplotlib.axes.Axes.get_transform"><code class="xref py py-obj docutils literal"><span class="pre">get_transform</span></code></a>()</td>
+<td>Return the <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code> instance used by this artist.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_transformed_clip_path_and_affine.html#matplotlib.axes.Axes.get_transformed_clip_path_and_affine" title="matplotlib.axes.Axes.get_transformed_clip_path_and_affine"><code class="xref py py-obj docutils literal"><span class="pre">get_transformed_clip_path_and_affine</span></code></a>()</td>
+<td>Return the clip path with the non-affine part of its transformation applied, and the remaining affine part of its transformation.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_url.html#matplotlib.axes.Axes.get_url" title="matplotlib.axes.Axes.get_url"><code class="xref py py-obj docutils literal"><span class="pre">get_url</span></code></a>()</td>
+<td>Returns the url</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_visible.html#matplotlib.axes.Axes.get_visible" title="matplotlib.axes.Axes.get_visible"><code class="xref py py-obj docutils literal"><span class="pre">get_visible</span></code></a>()</td>
+<td>Return the artist&#8217;s visiblity</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_window_extent.html#matplotlib.axes.Axes.get_window_extent" title="matplotlib.axes.Axes.get_window_extent"><code class="xref py py-obj docutils literal"><span class="pre">get_window_extent</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>get the axes bounding box in display space; <em>args</em> and</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_xaxis.html#matplotlib.axes.Axes.get_xaxis" title="matplotlib.axes.Axes.get_xaxis"><code class="xref py py-obj docutils literal"><span class="pre">get_xaxis</span></code></a>()</td>
+<td>Return the XAxis instance</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_xaxis_text1_transform.html#matplotlib.axes.Axes.get_xaxis_text1_transform" title="matplotlib.axes.Axes.get_xaxis_text1_transform"><code class="xref py py-obj docutils literal"><span class="pre">get_xaxis_text1_transform</span></code></a>(pad_points)</td>
+<td>Get the transformation used for drawing x-axis labels, which will add the given amount of padding (in points) between the axes and the label.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_xaxis_text2_transform.html#matplotlib.axes.Axes.get_xaxis_text2_transform" title="matplotlib.axes.Axes.get_xaxis_text2_transform"><code class="xref py py-obj docutils literal"><span class="pre">get_xaxis_text2_transform</span></code></a>(pad_points)</td>
+<td>Get the transformation used for drawing the secondary x-axis labels, which will add the given amount of padding (in points) between the axes and the label.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_xaxis_transform.html#matplotlib.axes.Axes.get_xaxis_transform" title="matplotlib.axes.Axes.get_xaxis_transform"><code class="xref py py-obj docutils literal"><span class="pre">get_xaxis_transform</span></code></a>([which])</td>
+<td>Get the transformation used for drawing x-axis labels, ticks and gridlines.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_xbound.html#matplotlib.axes.Axes.get_xbound" title="matplotlib.axes.Axes.get_xbound"><code class="xref py py-obj docutils literal"><span class="pre">get_xbound</span></code></a>()</td>
+<td>Returns the x-axis numerical bounds where:</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_xgridlines.html#matplotlib.axes.Axes.get_xgridlines" title="matplotlib.axes.Axes.get_xgridlines"><code class="xref py py-obj docutils literal"><span class="pre">get_xgridlines</span></code></a>()</td>
+<td>Get the x grid lines as a list of Line2D instances</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_xlabel.html#matplotlib.axes.Axes.get_xlabel" title="matplotlib.axes.Axes.get_xlabel"><code class="xref py py-obj docutils literal"><span class="pre">get_xlabel</span></code></a>()</td>
+<td>Get the xlabel text string.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_xlim.html#matplotlib.axes.Axes.get_xlim" title="matplotlib.axes.Axes.get_xlim"><code class="xref py py-obj docutils literal"><span class="pre">get_xlim</span></code></a>()</td>
+<td>Get the x-axis range [<em>left</em>, <em>right</em>]</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_xmajorticklabels.html#matplotlib.axes.Axes.get_xmajorticklabels" title="matplotlib.axes.Axes.get_xmajorticklabels"><code class="xref py py-obj docutils literal"><span class="pre">get_xmajorticklabels</span></code></a>()</td>
+<td>Get the xtick labels as a list of <a class="reference internal" href="matplotlib.text.Text.html#matplotlib.text.Text" title="matplotlib.text.Text"><code class="xref py py-class docutils literal"><span class="pre">Text</span></code></a> instances.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_xminorticklabels.html#matplotlib.axes.Axes.get_xminorticklabels" title="matplotlib.axes.Axes.get_xminorticklabels"><code class="xref py py-obj docutils literal"><span class="pre">get_xminorticklabels</span></code></a>()</td>
+<td>Get the x minor tick labels as a list of <a class="reference internal" href="matplotlib.text.Text.html#matplotlib.text.Text" title="matplotlib.text.Text"><code class="xref py py-class docutils literal"><span class="pre">matplotlib.text.Text</span></code></a> instances.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_xscale.html#matplotlib.axes.Axes.get_xscale" title="matplotlib.axes.Axes.get_xscale"><code class="xref py py-obj docutils literal"><span class="pre">get_xscale</span></code></a>()</td>
+<td>Return the xaxis scale string: linear, log, logit, symlog</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_xticklabels.html#matplotlib.axes.Axes.get_xticklabels" title="matplotlib.axes.Axes.get_xticklabels"><code class="xref py py-obj docutils literal"><span class="pre">get_xticklabels</span></code></a>([minor,&nbsp;which])</td>
+<td>Get the x tick labels as a list of <a class="reference internal" href="matplotlib.text.Text.html#matplotlib.text.Text" title="matplotlib.text.Text"><code class="xref py py-class docutils literal"><span class="pre">Text</span></code></a> instances.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_xticklines.html#matplotlib.axes.Axes.get_xticklines" title="matplotlib.axes.Axes.get_xticklines"><code class="xref py py-obj docutils literal"><span class="pre">get_xticklines</span></code></a>()</td>
+<td>Get the xtick lines as a list of Line2D instances</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_xticks.html#matplotlib.axes.Axes.get_xticks" title="matplotlib.axes.Axes.get_xticks"><code class="xref py py-obj docutils literal"><span class="pre">get_xticks</span></code></a>([minor])</td>
+<td>Return the x ticks as a list of locations</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_yaxis.html#matplotlib.axes.Axes.get_yaxis" title="matplotlib.axes.Axes.get_yaxis"><code class="xref py py-obj docutils literal"><span class="pre">get_yaxis</span></code></a>()</td>
+<td>Return the YAxis instance</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_yaxis_text1_transform.html#matplotlib.axes.Axes.get_yaxis_text1_transform" title="matplotlib.axes.Axes.get_yaxis_text1_transform"><code class="xref py py-obj docutils literal"><span class="pre">get_yaxis_text1_transform</span></code></a>(pad_points)</td>
+<td>Get the transformation used for drawing y-axis labels, which will add the given amount of padding (in points) between the axes and the label.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_yaxis_text2_transform.html#matplotlib.axes.Axes.get_yaxis_text2_transform" title="matplotlib.axes.Axes.get_yaxis_text2_transform"><code class="xref py py-obj docutils literal"><span class="pre">get_yaxis_text2_transform</span></code></a>(pad_points)</td>
+<td>Get the transformation used for drawing the secondary y-axis labels, which will add the given amount of padding (in points) between the axes and the label.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_yaxis_transform.html#matplotlib.axes.Axes.get_yaxis_transform" title="matplotlib.axes.Axes.get_yaxis_transform"><code class="xref py py-obj docutils literal"><span class="pre">get_yaxis_transform</span></code></a>([which])</td>
+<td>Get the transformation used for drawing y-axis labels, ticks and gridlines.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_ybound.html#matplotlib.axes.Axes.get_ybound" title="matplotlib.axes.Axes.get_ybound"><code class="xref py py-obj docutils literal"><span class="pre">get_ybound</span></code></a>()</td>
+<td>Return y-axis numerical bounds in the form of</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_ygridlines.html#matplotlib.axes.Axes.get_ygridlines" title="matplotlib.axes.Axes.get_ygridlines"><code class="xref py py-obj docutils literal"><span class="pre">get_ygridlines</span></code></a>()</td>
+<td>Get the y grid lines as a list of Line2D instances</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_ylabel.html#matplotlib.axes.Axes.get_ylabel" title="matplotlib.axes.Axes.get_ylabel"><code class="xref py py-obj docutils literal"><span class="pre">get_ylabel</span></code></a>()</td>
+<td>Get the ylabel text string.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_ylim.html#matplotlib.axes.Axes.get_ylim" title="matplotlib.axes.Axes.get_ylim"><code class="xref py py-obj docutils literal"><span class="pre">get_ylim</span></code></a>()</td>
+<td>Get the y-axis range [<em>bottom</em>, <em>top</em>]</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_ymajorticklabels.html#matplotlib.axes.Axes.get_ymajorticklabels" title="matplotlib.axes.Axes.get_ymajorticklabels"><code class="xref py py-obj docutils literal"><span class="pre">get_ymajorticklabels</span></code></a>()</td>
+<td>Get the major y tick labels as a list of <a class="reference internal" href="matplotlib.text.Text.html#matplotlib.text.Text" title="matplotlib.text.Text"><code class="xref py py-class docutils literal"><span class="pre">Text</span></code></a> instances.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_yminorticklabels.html#matplotlib.axes.Axes.get_yminorticklabels" title="matplotlib.axes.Axes.get_yminorticklabels"><code class="xref py py-obj docutils literal"><span class="pre">get_yminorticklabels</span></code></a>()</td>
+<td>Get the minor y tick labels as a list of <a class="reference internal" href="matplotlib.text.Text.html#matplotlib.text.Text" title="matplotlib.text.Text"><code class="xref py py-class docutils literal"><span class="pre">Text</span></code></a> instances.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_yscale.html#matplotlib.axes.Axes.get_yscale" title="matplotlib.axes.Axes.get_yscale"><code class="xref py py-obj docutils literal"><span class="pre">get_yscale</span></code></a>()</td>
+<td>Return the yaxis scale string: linear, log, logit, symlog</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_yticklabels.html#matplotlib.axes.Axes.get_yticklabels" title="matplotlib.axes.Axes.get_yticklabels"><code class="xref py py-obj docutils literal"><span class="pre">get_yticklabels</span></code></a>([minor,&nbsp;which])</td>
+<td>Get the x tick labels as a list of <a class="reference internal" href="matplotlib.text.Text.html#matplotlib.text.Text" title="matplotlib.text.Text"><code class="xref py py-class docutils literal"><span class="pre">Text</span></code></a> instances.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_yticklines.html#matplotlib.axes.Axes.get_yticklines" title="matplotlib.axes.Axes.get_yticklines"><code class="xref py py-obj docutils literal"><span class="pre">get_yticklines</span></code></a>()</td>
+<td>Get the ytick lines as a list of Line2D instances</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.get_yticks.html#matplotlib.axes.Axes.get_yticks" title="matplotlib.axes.Axes.get_yticks"><code class="xref py py-obj docutils literal"><span class="pre">get_yticks</span></code></a>([minor])</td>
+<td>Return the y ticks as a list of locations</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.get_zorder.html#matplotlib.axes.Axes.get_zorder" title="matplotlib.axes.Axes.get_zorder"><code class="xref py py-obj docutils literal"><span class="pre">get_zorder</span></code></a>()</td>
+<td>Return the <code class="xref py py-class docutils literal"><span class="pre">Artist</span></code>&#8216;s zorder.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.grid.html#matplotlib.axes.Axes.grid" title="matplotlib.axes.Axes.grid"><code class="xref py py-obj docutils literal"><span class="pre">grid</span></code></a>([b,&nbsp;which,&nbsp;axis])</td>
+<td>Turn the axes grids on or off.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.has_data.html#matplotlib.axes.Axes.has_data" title="matplotlib.axes.Axes.has_data"><code class="xref py py-obj docutils literal"><span class="pre">has_data</span></code></a>()</td>
+<td>Return <em>True</em> if any artists have been added to axes.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.have_units.html#matplotlib.axes.Axes.have_units" title="matplotlib.axes.Axes.have_units"><code class="xref py py-obj docutils literal"><span class="pre">have_units</span></code></a>()</td>
+<td>Return <em>True</em> if units are set on the <em>x</em> or <em>y</em> axes</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.hexbin.html#matplotlib.axes.Axes.hexbin" title="matplotlib.axes.Axes.hexbin"><code class="xref py py-obj docutils literal"><span class="pre">hexbin</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Make a hexagonal binning plot.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.hist.html#matplotlib.axes.Axes.hist" title="matplotlib.axes.Axes.hist"><code class="xref py py-obj docutils literal"><span class="pre">hist</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Plot a histogram.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.hist2d.html#matplotlib.axes.Axes.hist2d" title="matplotlib.axes.Axes.hist2d"><code class="xref py py-obj docutils literal"><span class="pre">hist2d</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Make a 2D histogram plot.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.hitlist.html#matplotlib.axes.Axes.hitlist" title="matplotlib.axes.Axes.hitlist"><code class="xref py py-obj docutils literal"><span class="pre">hitlist</span></code></a>(event)</td>
+<td>List the children of the artist which contain the mouse event <em>event</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.hlines.html#matplotlib.axes.Axes.hlines" title="matplotlib.axes.Axes.hlines"><code class="xref py py-obj docutils literal"><span class="pre">hlines</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Plot horizontal lines at each <cite>y</cite> from <cite>xmin</cite> to <cite>xmax</cite>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.hold.html#matplotlib.axes.Axes.hold" title="matplotlib.axes.Axes.hold"><code class="xref py py-obj docutils literal"><span class="pre">hold</span></code></a>([b])</td>
+<td>Call signature:</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.imshow.html#matplotlib.axes.Axes.imshow" title="matplotlib.axes.Axes.imshow"><code class="xref py py-obj docutils literal"><span class="pre">imshow</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Display an image on the axes.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.in_axes.html#matplotlib.axes.Axes.in_axes" title="matplotlib.axes.Axes.in_axes"><code class="xref py py-obj docutils literal"><span class="pre">in_axes</span></code></a>(mouseevent)</td>
+<td>Return <em>True</em> if the given <em>mouseevent</em> (in display coords)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.invert_xaxis.html#matplotlib.axes.Axes.invert_xaxis" title="matplotlib.axes.Axes.invert_xaxis"><code class="xref py py-obj docutils literal"><span class="pre">invert_xaxis</span></code></a>()</td>
+<td>Invert the x-axis.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.invert_yaxis.html#matplotlib.axes.Axes.invert_yaxis" title="matplotlib.axes.Axes.invert_yaxis"><code class="xref py py-obj docutils literal"><span class="pre">invert_yaxis</span></code></a>()</td>
+<td>Invert the y-axis.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.is_figure_set.html#matplotlib.axes.Axes.is_figure_set" title="matplotlib.axes.Axes.is_figure_set"><code class="xref py py-obj docutils literal"><span class="pre">is_figure_set</span></code></a>()</td>
+<td>Returns True if the artist is assigned to a <a class="reference internal" href="matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure"><code class="xref py py-class docutils literal"><span class="pre">Figure</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.is_transform_set.html#matplotlib.axes.Axes.is_transform_set" title="matplotlib.axes.Axes.is_transform_set"><code class="xref py py-obj docutils literal"><span class="pre">is_transform_set</span></code></a>()</td>
+<td>Returns <em>True</em> if <code class="xref py py-class docutils literal"><span class="pre">Artist</span></code> has a transform explicitly set.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.ishold.html#matplotlib.axes.Axes.ishold" title="matplotlib.axes.Axes.ishold"><code class="xref py py-obj docutils literal"><span class="pre">ishold</span></code></a>()</td>
+<td>return the HOLD status of the axes</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.legend.html#matplotlib.axes.Axes.legend" title="matplotlib.axes.Axes.legend"><code class="xref py py-obj docutils literal"><span class="pre">legend</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>Places a legend on the axes.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.locator_params.html#matplotlib.axes.Axes.locator_params" title="matplotlib.axes.Axes.locator_params"><code class="xref py py-obj docutils literal"><span class="pre">locator_params</span></code></a>([axis,&nbsp;tight])</td>
+<td>Control behavior of tick locators.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.loglog.html#matplotlib.axes.Axes.loglog" title="matplotlib.axes.Axes.loglog"><code class="xref py py-obj docutils literal"><span class="pre">loglog</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>Make a plot with log scaling on both the <em>x</em> and <em>y</em> axis.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.magnitude_spectrum.html#matplotlib.axes.Axes.magnitude_spectrum" title="matplotlib.axes.Axes.magnitude_spectrum"><code class="xref py py-obj docutils literal"><span class="pre">magnitude_spectrum</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Plot the magnitude spectrum.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.margins.html#matplotlib.axes.Axes.margins" title="matplotlib.axes.Axes.margins"><code class="xref py py-obj docutils literal"><span class="pre">margins</span></code></a>(*args,&nbsp;**kw)</td>
+<td>Set or retrieve autoscaling margins.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.matshow.html#matplotlib.axes.Axes.matshow" title="matplotlib.axes.Axes.matshow"><code class="xref py py-obj docutils literal"><span class="pre">matshow</span></code></a>(Z,&nbsp;**kwargs)</td>
+<td>Plot a matrix or array as an image.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.minorticks_off.html#matplotlib.axes.Axes.minorticks_off" title="matplotlib.axes.Axes.minorticks_off"><code class="xref py py-obj docutils literal"><span class="pre">minorticks_off</span></code></a>()</td>
+<td>Remove minor ticks from the axes.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.minorticks_on.html#matplotlib.axes.Axes.minorticks_on" title="matplotlib.axes.Axes.minorticks_on"><code class="xref py py-obj docutils literal"><span class="pre">minorticks_on</span></code></a>()</td>
+<td>Add autoscaling minor ticks to the axes.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.pchanged.html#matplotlib.axes.Axes.pchanged" title="matplotlib.axes.Axes.pchanged"><code class="xref py py-obj docutils literal"><span class="pre">pchanged</span></code></a>()</td>
+<td>Fire an event when property changed, calling all of the registered callbacks.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.pcolor.html#matplotlib.axes.Axes.pcolor" title="matplotlib.axes.Axes.pcolor"><code class="xref py py-obj docutils literal"><span class="pre">pcolor</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Create a pseudocolor plot of a 2-D array.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.pcolorfast.html#matplotlib.axes.Axes.pcolorfast" title="matplotlib.axes.Axes.pcolorfast"><code class="xref py py-obj docutils literal"><span class="pre">pcolorfast</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>pseudocolor plot of a 2-D array</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.pcolormesh.html#matplotlib.axes.Axes.pcolormesh" title="matplotlib.axes.Axes.pcolormesh"><code class="xref py py-obj docutils literal"><span class="pre">pcolormesh</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Plot a quadrilateral mesh.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.phase_spectrum.html#matplotlib.axes.Axes.phase_spectrum" title="matplotlib.axes.Axes.phase_spectrum"><code class="xref py py-obj docutils literal"><span class="pre">phase_spectrum</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Plot the phase spectrum.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.pick.html#matplotlib.axes.Axes.pick" title="matplotlib.axes.Axes.pick"><code class="xref py py-obj docutils literal"><span class="pre">pick</span></code></a>(*args)</td>
+<td>Call signature:</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.pickable.html#matplotlib.axes.Axes.pickable" title="matplotlib.axes.Axes.pickable"><code class="xref py py-obj docutils literal"><span class="pre">pickable</span></code></a>()</td>
+<td>Return <em>True</em> if <code class="xref py py-class docutils literal"><span class="pre">Artist</span></code> is pickable.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.pie.html#matplotlib.axes.Axes.pie" title="matplotlib.axes.Axes.pie"><code class="xref py py-obj docutils literal"><span class="pre">pie</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Plot a pie chart.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.plot.html#matplotlib.axes.Axes.plot" title="matplotlib.axes.Axes.plot"><code class="xref py py-obj docutils literal"><span class="pre">plot</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Plot lines and/or markers to the <a class="reference internal" href="#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.plot_date.html#matplotlib.axes.Axes.plot_date" title="matplotlib.axes.Axes.plot_date"><code class="xref py py-obj docutils literal"><span class="pre">plot_date</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Plot with data with dates.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.properties.html#matplotlib.axes.Axes.properties" title="matplotlib.axes.Axes.properties"><code class="xref py py-obj docutils literal"><span class="pre">properties</span></code></a>()</td>
+<td>return a dictionary mapping property name -&gt; value for all Artist props</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.psd.html#matplotlib.axes.Axes.psd" title="matplotlib.axes.Axes.psd"><code class="xref py py-obj docutils literal"><span class="pre">psd</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Plot the power spectral density.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.quiver.html#matplotlib.axes.Axes.quiver" title="matplotlib.axes.Axes.quiver"><code class="xref py py-obj docutils literal"><span class="pre">quiver</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Plot a 2-D field of arrows.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.quiverkey.html#matplotlib.axes.Axes.quiverkey" title="matplotlib.axes.Axes.quiverkey"><code class="xref py py-obj docutils literal"><span class="pre">quiverkey</span></code></a>(*args,&nbsp;**kw)</td>
+<td>Add a key to a quiver plot.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.redraw_in_frame.html#matplotlib.axes.Axes.redraw_in_frame" title="matplotlib.axes.Axes.redraw_in_frame"><code class="xref py py-obj docutils literal"><span class="pre">redraw_in_frame</span></code></a>()</td>
+<td>This method can only be used after an initial draw which caches the renderer.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.relim.html#matplotlib.axes.Axes.relim" title="matplotlib.axes.Axes.relim"><code class="xref py py-obj docutils literal"><span class="pre">relim</span></code></a>([visible_only])</td>
+<td>Recompute the data limits based on current artists.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.remove.html#matplotlib.axes.Axes.remove" title="matplotlib.axes.Axes.remove"><code class="xref py py-obj docutils literal"><span class="pre">remove</span></code></a>()</td>
+<td>Remove the artist from the figure if possible.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.remove_callback.html#matplotlib.axes.Axes.remove_callback" title="matplotlib.axes.Axes.remove_callback"><code class="xref py py-obj docutils literal"><span class="pre">remove_callback</span></code></a>(oid)</td>
+<td>Remove a callback based on its <em>id</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.reset_position.html#matplotlib.axes.Axes.reset_position" title="matplotlib.axes.Axes.reset_position"><code class="xref py py-obj docutils literal"><span class="pre">reset_position</span></code></a>()</td>
+<td>Make the original position the active position</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.scatter.html#matplotlib.axes.Axes.scatter" title="matplotlib.axes.Axes.scatter"><code class="xref py py-obj docutils literal"><span class="pre">scatter</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Make a scatter plot of x vs y, where x and y are sequence like objects of the same lengths.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.semilogx.html#matplotlib.axes.Axes.semilogx" title="matplotlib.axes.Axes.semilogx"><code class="xref py py-obj docutils literal"><span class="pre">semilogx</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>Make a plot with log scaling on the <em>x</em> axis.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.semilogy.html#matplotlib.axes.Axes.semilogy" title="matplotlib.axes.Axes.semilogy"><code class="xref py py-obj docutils literal"><span class="pre">semilogy</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>Make a plot with log scaling on the <em>y</em> axis.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.set.html#matplotlib.axes.Axes.set" title="matplotlib.axes.Axes.set"><code class="xref py py-obj docutils literal"><span class="pre">set</span></code></a>(**kwargs)</td>
+<td>A property batch setter.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.set_adjustable.html#matplotlib.axes.Axes.set_adjustable" title="matplotlib.axes.Axes.set_adjustable"><code class="xref py py-obj docutils literal"><span class="pre">set_adjustable</span></code></a>(adjustable)</td>
+<td>ACCEPTS: [ &#8216;box&#8217; | &#8216;datalim&#8217; | &#8216;box-forced&#8217;]</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.set_agg_filter.html#matplotlib.axes.Axes.set_agg_filter" title="matplotlib.axes.Axes.set_agg_filter"><code class="xref py py-obj docutils literal"><span class="pre">set_agg_filter</span></code></a>(filter_func)</td>
+<td>set agg_filter fuction.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.set_alpha.html#matplotlib.axes.Axes.set_alpha" title="matplotlib.axes.Axes.set_alpha"><code class="xref py py-obj docutils literal"><span class="pre">set_alpha</span></code></a>(alpha)</td>
+<td>Set the alpha value used for blending - not supported on all backends.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.set_anchor.html#matplotlib.axes.Axes.set_anchor" title="matplotlib.axes.Axes.set_anchor"><code class="xref py py-obj docutils literal"><span class="pre">set_anchor</span></code></a>(anchor)</td>
+<td><em>anchor</em></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.set_animated.html#matplotlib.axes.Axes.set_animated" title="matplotlib.axes.Axes.set_animated"><code class="xref py py-obj docutils literal"><span class="pre">set_animated</span></code></a>(b)</td>
+<td>Set the artist&#8217;s animation state.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.set_aspect.html#matplotlib.axes.Axes.set_aspect" title="matplotlib.axes.Axes.set_aspect"><code class="xref py py-obj docutils literal"><span class="pre">set_aspect</span></code></a>(aspect[,&nbsp;adjustable,&nbsp;anchor])</td>
+<td><em>aspect</em></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.set_autoscale_on.html#matplotlib.axes.Axes.set_autoscale_on" title="matplotlib.axes.Axes.set_autoscale_on"><code class="xref py py-obj docutils literal"><span class="pre">set_autoscale_on</span></code></a>(b)</td>
+<td>Set whether autoscaling is applied on plot commands</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.set_autoscalex_on.html#matplotlib.axes.Axes.set_autoscalex_on" title="matplotlib.axes.Axes.set_autoscalex_on"><code class="xref py py-obj docutils literal"><span class="pre">set_autoscalex_on</span></code></a>(b)</td>
+<td>Set whether autoscaling for the x-axis is applied on plot commands</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.set_autoscaley_on.html#matplotlib.axes.Axes.set_autoscaley_on" title="matplotlib.axes.Axes.set_autoscaley_on"><code class="xref py py-obj docutils literal"><span class="pre">set_autoscaley_on</span></code></a>(b)</td>
+<td>Set whether autoscaling for the y-axis is applied on plot commands</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.set_axes.html#matplotlib.axes.Axes.set_axes" title="matplotlib.axes.Axes.set_axes"><code class="xref py py-obj docutils literal"><span class="pre">set_axes</span></code></a>(axes)</td>
+<td>Set the <a class="reference internal" href="#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instance in which the artist resides, if any.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.set_axes_locator.html#matplotlib.axes.Axes.set_axes_locator" title="matplotlib.axes.Axes.set_axes_locator"><code class="xref py py-obj docutils literal"><span class="pre">set_axes_locator</span></code></a>(locator)</td>
+<td>set axes_locator</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.set_axis_bgcolor.html#matplotlib.axes.Axes.set_axis_bgcolor" title="matplotlib.axes.Axes.set_axis_bgcolor"><code class="xref py py-obj docutils literal"><span class="pre">set_axis_bgcolor</span></code></a>(color)</td>
+<td>set the axes background color</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.set_axis_off.html#matplotlib.axes.Axes.set_axis_off" title="matplotlib.axes.Axes.set_axis_off"><code class="xref py py-obj docutils literal"><span class="pre">set_axis_off</span></code></a>()</td>
+<td>turn off the axis</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.set_axis_on.html#matplotlib.axes.Axes.set_axis_on" title="matplotlib.axes.Axes.set_axis_on"><code class="xref py py-obj docutils literal"><span class="pre">set_axis_on</span></code></a>()</td>
+<td>turn on the axis</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.set_axisbelow.html#matplotlib.axes.Axes.set_axisbelow" title="matplotlib.axes.Axes.set_axisbelow"><code class="xref py py-obj docutils literal"><span class="pre">set_axisbelow</span></code></a>(b)</td>
+<td>Set whether the axis ticks and gridlines are above or below most</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.set_clip_box.html#matplotlib.axes.Axes.set_clip_box" title="matplotlib.axes.Axes.set_clip_box"><code class="xref py py-obj docutils literal"><span class="pre">set_clip_box</span></code></a>(clipbox)</td>
+<td>Set the artist&#8217;s clip <code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.set_clip_on.html#matplotlib.axes.Axes.set_clip_on" title="matplotlib.axes.Axes.set_clip_on"><code class="xref py py-obj docutils literal"><span class="pre">set_clip_on</span></code></a>(b)</td>
+<td>Set whether artist uses clipping.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.set_clip_path.html#matplotlib.axes.Axes.set_clip_path" title="matplotlib.axes.Axes.set_clip_path"><code class="xref py py-obj docutils literal"><span class="pre">set_clip_path</span></code></a>(path[,&nbsp;transform])</td>
+<td>Set the artist&#8217;s clip path, which may be:</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.set_color_cycle.html#matplotlib.axes.Axes.set_color_cycle" title="matplotlib.axes.Axes.set_color_cycle"><code class="xref py py-obj docutils literal"><span class="pre">set_color_cycle</span></code></a>(clist)</td>
+<td>Set the color cycle for any future plot commands on this Axes.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.set_contains.html#matplotlib.axes.Axes.set_contains" title="matplotlib.axes.Axes.set_contains"><code class="xref py py-obj docutils literal"><span class="pre">set_contains</span></code></a>(picker)</td>
+<td>Replace the contains test used by this artist.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.set_cursor_props.html#matplotlib.axes.Axes.set_cursor_props" title="matplotlib.axes.Axes.set_cursor_props"><code class="xref py py-obj docutils literal"><span class="pre">set_cursor_props</span></code></a>(*args)</td>
+<td>Set the cursor property as:</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.set_figure.html#matplotlib.axes.Axes.set_figure" title="matplotlib.axes.Axes.set_figure"><code class="xref py py-obj docutils literal"><span class="pre">set_figure</span></code></a>(fig)</td>
+<td>Set the class:<cite>~matplotlib.axes.Axes</cite> figure</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.set_frame_on.html#matplotlib.axes.Axes.set_frame_on" title="matplotlib.axes.Axes.set_frame_on"><code class="xref py py-obj docutils literal"><span class="pre">set_frame_on</span></code></a>(b)</td>
+<td>Set whether the axes rectangle patch is drawn</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.set_gid.html#matplotlib.axes.Axes.set_gid" title="matplotlib.axes.Axes.set_gid"><code class="xref py py-obj docutils literal"><span class="pre">set_gid</span></code></a>(gid)</td>
+<td>Sets the (group) id for the artist</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.set_label.html#matplotlib.axes.Axes.set_label" title="matplotlib.axes.Axes.set_label"><code class="xref py py-obj docutils literal"><span class="pre">set_label</span></code></a>(s)</td>
+<td>Set the label to <em>s</em> for auto legend.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.set_navigate.html#matplotlib.axes.Axes.set_navigate" title="matplotlib.axes.Axes.set_navigate"><code class="xref py py-obj docutils literal"><span class="pre">set_navigate</span></code></a>(b)</td>
+<td>Set whether the axes responds to navigation toolbar commands</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.set_navigate_mode.html#matplotlib.axes.Axes.set_navigate_mode" title="matplotlib.axes.Axes.set_navigate_mode"><code class="xref py py-obj docutils literal"><span class="pre">set_navigate_mode</span></code></a>(b)</td>
+<td>Set the navigation toolbar button status;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.set_path_effects.html#matplotlib.axes.Axes.set_path_effects" title="matplotlib.axes.Axes.set_path_effects"><code class="xref py py-obj docutils literal"><span class="pre">set_path_effects</span></code></a>(path_effects)</td>
+<td>set path_effects, which should be a list of instances of</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.set_picker.html#matplotlib.axes.Axes.set_picker" title="matplotlib.axes.Axes.set_picker"><code class="xref py py-obj docutils literal"><span class="pre">set_picker</span></code></a>(picker)</td>
+<td>Set the epsilon for picking used by this artist</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.set_position.html#matplotlib.axes.Axes.set_position" title="matplotlib.axes.Axes.set_position"><code class="xref py py-obj docutils literal"><span class="pre">set_position</span></code></a>(pos[,&nbsp;which])</td>
+<td>Set the axes position with:</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.set_prop_cycle.html#matplotlib.axes.Axes.set_prop_cycle" title="matplotlib.axes.Axes.set_prop_cycle"><code class="xref py py-obj docutils literal"><span class="pre">set_prop_cycle</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>Set the property cycle for any future plot commands on this Axes.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.set_rasterization_zorder.html#matplotlib.axes.Axes.set_rasterization_zorder" title="matplotlib.axes.Axes.set_rasterization_zorder"><code class="xref py py-obj docutils literal"><span class="pre">set_rasterization_zorder</span></code></a>(z)</td>
+<td>Set zorder value below which artists will be rasterized.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.set_rasterized.html#matplotlib.axes.Axes.set_rasterized" title="matplotlib.axes.Axes.set_rasterized"><code class="xref py py-obj docutils literal"><span class="pre">set_rasterized</span></code></a>(rasterized)</td>
+<td>Force rasterized (bitmap) drawing in vector backend output.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.set_sketch_params.html#matplotlib.axes.Axes.set_sketch_params" title="matplotlib.axes.Axes.set_sketch_params"><code class="xref py py-obj docutils literal"><span class="pre">set_sketch_params</span></code></a>([scale,&nbsp;length,&nbsp;randomness])</td>
+<td>Sets the sketch parameters.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.set_snap.html#matplotlib.axes.Axes.set_snap" title="matplotlib.axes.Axes.set_snap"><code class="xref py py-obj docutils literal"><span class="pre">set_snap</span></code></a>(snap)</td>
+<td>Sets the snap setting which may be:</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.set_title.html#matplotlib.axes.Axes.set_title" title="matplotlib.axes.Axes.set_title"><code class="xref py py-obj docutils literal"><span class="pre">set_title</span></code></a>(label[,&nbsp;fontdict,&nbsp;loc])</td>
+<td>Set a title for the axes.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.set_transform.html#matplotlib.axes.Axes.set_transform" title="matplotlib.axes.Axes.set_transform"><code class="xref py py-obj docutils literal"><span class="pre">set_transform</span></code></a>(t)</td>
+<td>Set the <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code> instance used by this artist.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.set_url.html#matplotlib.axes.Axes.set_url" title="matplotlib.axes.Axes.set_url"><code class="xref py py-obj docutils literal"><span class="pre">set_url</span></code></a>(url)</td>
+<td>Sets the url for the artist</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.set_visible.html#matplotlib.axes.Axes.set_visible" title="matplotlib.axes.Axes.set_visible"><code class="xref py py-obj docutils literal"><span class="pre">set_visible</span></code></a>(b)</td>
+<td>Set the artist&#8217;s visiblity.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.set_xbound.html#matplotlib.axes.Axes.set_xbound" title="matplotlib.axes.Axes.set_xbound"><code class="xref py py-obj docutils literal"><span class="pre">set_xbound</span></code></a>([lower,&nbsp;upper])</td>
+<td>Set the lower and upper numerical bounds of the x-axis.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.set_xlabel.html#matplotlib.axes.Axes.set_xlabel" title="matplotlib.axes.Axes.set_xlabel"><code class="xref py py-obj docutils literal"><span class="pre">set_xlabel</span></code></a>(xlabel[,&nbsp;fontdict,&nbsp;labelpad])</td>
+<td>Set the label for the xaxis.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.set_xlim.html#matplotlib.axes.Axes.set_xlim" title="matplotlib.axes.Axes.set_xlim"><code class="xref py py-obj docutils literal"><span class="pre">set_xlim</span></code></a>([left,&nbsp;right,&nbsp;emit,&nbsp;auto])</td>
+<td>Call signature:</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.set_xmargin.html#matplotlib.axes.Axes.set_xmargin" title="matplotlib.axes.Axes.set_xmargin"><code class="xref py py-obj docutils literal"><span class="pre">set_xmargin</span></code></a>(m)</td>
+<td>Set padding of X data limits prior to autoscaling.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.set_xscale.html#matplotlib.axes.Axes.set_xscale" title="matplotlib.axes.Axes.set_xscale"><code class="xref py py-obj docutils literal"><span class="pre">set_xscale</span></code></a>(value,&nbsp;**kwargs)</td>
+<td>Call signature:</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.set_xticklabels.html#matplotlib.axes.Axes.set_xticklabels" title="matplotlib.axes.Axes.set_xticklabels"><code class="xref py py-obj docutils literal"><span class="pre">set_xticklabels</span></code></a>(labels[,&nbsp;fontdict,&nbsp;minor])</td>
+<td>Call signature:</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.set_xticks.html#matplotlib.axes.Axes.set_xticks" title="matplotlib.axes.Axes.set_xticks"><code class="xref py py-obj docutils literal"><span class="pre">set_xticks</span></code></a>(ticks[,&nbsp;minor])</td>
+<td>Set the x ticks with list of <em>ticks</em></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.set_ybound.html#matplotlib.axes.Axes.set_ybound" title="matplotlib.axes.Axes.set_ybound"><code class="xref py py-obj docutils literal"><span class="pre">set_ybound</span></code></a>([lower,&nbsp;upper])</td>
+<td>Set the lower and upper numerical bounds of the y-axis.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.set_ylabel.html#matplotlib.axes.Axes.set_ylabel" title="matplotlib.axes.Axes.set_ylabel"><code class="xref py py-obj docutils literal"><span class="pre">set_ylabel</span></code></a>(ylabel[,&nbsp;fontdict,&nbsp;labelpad])</td>
+<td>Set the label for the yaxis</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.set_ylim.html#matplotlib.axes.Axes.set_ylim" title="matplotlib.axes.Axes.set_ylim"><code class="xref py py-obj docutils literal"><span class="pre">set_ylim</span></code></a>([bottom,&nbsp;top,&nbsp;emit,&nbsp;auto])</td>
+<td>Call signature:</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.set_ymargin.html#matplotlib.axes.Axes.set_ymargin" title="matplotlib.axes.Axes.set_ymargin"><code class="xref py py-obj docutils literal"><span class="pre">set_ymargin</span></code></a>(m)</td>
+<td>Set padding of Y data limits prior to autoscaling.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.set_yscale.html#matplotlib.axes.Axes.set_yscale" title="matplotlib.axes.Axes.set_yscale"><code class="xref py py-obj docutils literal"><span class="pre">set_yscale</span></code></a>(value,&nbsp;**kwargs)</td>
+<td>Call signature:</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.set_yticklabels.html#matplotlib.axes.Axes.set_yticklabels" title="matplotlib.axes.Axes.set_yticklabels"><code class="xref py py-obj docutils literal"><span class="pre">set_yticklabels</span></code></a>(labels[,&nbsp;fontdict,&nbsp;minor])</td>
+<td>Call signature:</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.set_yticks.html#matplotlib.axes.Axes.set_yticks" title="matplotlib.axes.Axes.set_yticks"><code class="xref py py-obj docutils literal"><span class="pre">set_yticks</span></code></a>(ticks[,&nbsp;minor])</td>
+<td>Set the y ticks with list of <em>ticks</em></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.set_zorder.html#matplotlib.axes.Axes.set_zorder" title="matplotlib.axes.Axes.set_zorder"><code class="xref py py-obj docutils literal"><span class="pre">set_zorder</span></code></a>(level)</td>
+<td>Set the zorder for the artist.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.specgram.html#matplotlib.axes.Axes.specgram" title="matplotlib.axes.Axes.specgram"><code class="xref py py-obj docutils literal"><span class="pre">specgram</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Plot a spectrogram.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.spy.html#matplotlib.axes.Axes.spy" title="matplotlib.axes.Axes.spy"><code class="xref py py-obj docutils literal"><span class="pre">spy</span></code></a>(Z[,&nbsp;precision,&nbsp;marker,&nbsp;markersize,&nbsp;...])</td>
+<td>Plot the sparsity pattern on a 2-D array.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.stackplot.html#matplotlib.axes.Axes.stackplot" title="matplotlib.axes.Axes.stackplot"><code class="xref py py-obj docutils literal"><span class="pre">stackplot</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Draws a stacked area plot.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.start_pan.html#matplotlib.axes.Axes.start_pan" title="matplotlib.axes.Axes.start_pan"><code class="xref py py-obj docutils literal"><span class="pre">start_pan</span></code></a>(x,&nbsp;y,&nbsp;button)</td>
+<td>Called when a pan operation has started.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.stem.html#matplotlib.axes.Axes.stem" title="matplotlib.axes.Axes.stem"><code class="xref py py-obj docutils literal"><span class="pre">stem</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Create a stem plot.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.step.html#matplotlib.axes.Axes.step" title="matplotlib.axes.Axes.step"><code class="xref py py-obj docutils literal"><span class="pre">step</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Make a step plot.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.streamplot.html#matplotlib.axes.Axes.streamplot" title="matplotlib.axes.Axes.streamplot"><code class="xref py py-obj docutils literal"><span class="pre">streamplot</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Draws streamlines of a vector flow.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.table.html#matplotlib.axes.Axes.table" title="matplotlib.axes.Axes.table"><code class="xref py py-obj docutils literal"><span class="pre">table</span></code></a>(**kwargs)</td>
+<td>Add a table to the current axes.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.text.html#matplotlib.axes.Axes.text" title="matplotlib.axes.Axes.text"><code class="xref py py-obj docutils literal"><span class="pre">text</span></code></a>(x,&nbsp;y,&nbsp;s[,&nbsp;fontdict,&nbsp;withdash])</td>
+<td>Add text to the axes.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.tick_params.html#matplotlib.axes.Axes.tick_params" title="matplotlib.axes.Axes.tick_params"><code class="xref py py-obj docutils literal"><span class="pre">tick_params</span></code></a>([axis])</td>
+<td>Change the appearance of ticks and tick labels.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.ticklabel_format.html#matplotlib.axes.Axes.ticklabel_format" title="matplotlib.axes.Axes.ticklabel_format"><code class="xref py py-obj docutils literal"><span class="pre">ticklabel_format</span></code></a>(**kwargs)</td>
+<td>Change the <cite>~matplotlib.ticker.ScalarFormatter</cite> used by default for linear axes.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.tricontour.html#matplotlib.axes.Axes.tricontour" title="matplotlib.axes.Axes.tricontour"><code class="xref py py-obj docutils literal"><span class="pre">tricontour</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>Draw contours on an unstructured triangular grid.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.tricontourf.html#matplotlib.axes.Axes.tricontourf" title="matplotlib.axes.Axes.tricontourf"><code class="xref py py-obj docutils literal"><span class="pre">tricontourf</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>Draw contours on an unstructured triangular grid.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.tripcolor.html#matplotlib.axes.Axes.tripcolor" title="matplotlib.axes.Axes.tripcolor"><code class="xref py py-obj docutils literal"><span class="pre">tripcolor</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>Create a pseudocolor plot of an unstructured triangular grid.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.triplot.html#matplotlib.axes.Axes.triplot" title="matplotlib.axes.Axes.triplot"><code class="xref py py-obj docutils literal"><span class="pre">triplot</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>Draw a unstructured triangular grid as lines and/or markers.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.twinx.html#matplotlib.axes.Axes.twinx" title="matplotlib.axes.Axes.twinx"><code class="xref py py-obj docutils literal"><span class="pre">twinx</span></code></a>()</td>
+<td>Call signature:</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.twiny.html#matplotlib.axes.Axes.twiny" title="matplotlib.axes.Axes.twiny"><code class="xref py py-obj docutils literal"><span class="pre">twiny</span></code></a>()</td>
+<td>Call signature:</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.update.html#matplotlib.axes.Axes.update" title="matplotlib.axes.Axes.update"><code class="xref py py-obj docutils literal"><span class="pre">update</span></code></a>(props)</td>
+<td>Update the properties of this <code class="xref py py-class docutils literal"><span class="pre">Artist</span></code> from the dictionary <em>prop</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.update_datalim.html#matplotlib.axes.Axes.update_datalim" title="matplotlib.axes.Axes.update_datalim"><code class="xref py py-obj docutils literal"><span class="pre">update_datalim</span></code></a>(xys[,&nbsp;updatex,&nbsp;updatey])</td>
+<td>Update the data lim bbox with seq of xy tups or equiv.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.update_datalim_bounds.html#matplotlib.axes.Axes.update_datalim_bounds" title="matplotlib.axes.Axes.update_datalim_bounds"><code class="xref py py-obj docutils literal"><span class="pre">update_datalim_bounds</span></code></a>(bounds)</td>
+<td>Update the datalim to include the given</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.update_datalim_numerix.html#matplotlib.axes.Axes.update_datalim_numerix" title="matplotlib.axes.Axes.update_datalim_numerix"><code class="xref py py-obj docutils literal"><span class="pre">update_datalim_numerix</span></code></a>(x,&nbsp;y)</td>
+<td>Update the data lim bbox with seq of xy tups</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.update_from.html#matplotlib.axes.Axes.update_from" title="matplotlib.axes.Axes.update_from"><code class="xref py py-obj docutils literal"><span class="pre">update_from</span></code></a>(other)</td>
+<td>Copy properties from <em>other</em> to <em>self</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.violin.html#matplotlib.axes.Axes.violin" title="matplotlib.axes.Axes.violin"><code class="xref py py-obj docutils literal"><span class="pre">violin</span></code></a>(vpstats[,&nbsp;positions,&nbsp;vert,&nbsp;widths,&nbsp;...])</td>
+<td>Drawing function for violin plots.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.violinplot.html#matplotlib.axes.Axes.violinplot" title="matplotlib.axes.Axes.violinplot"><code class="xref py py-obj docutils literal"><span class="pre">violinplot</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Make a violin plot.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.vlines.html#matplotlib.axes.Axes.vlines" title="matplotlib.axes.Axes.vlines"><code class="xref py py-obj docutils literal"><span class="pre">vlines</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Plot vertical lines.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.xaxis_date.html#matplotlib.axes.Axes.xaxis_date" title="matplotlib.axes.Axes.xaxis_date"><code class="xref py py-obj docutils literal"><span class="pre">xaxis_date</span></code></a>([tz])</td>
+<td>Sets up x-axis ticks and labels that treat the x data as dates.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.xaxis_inverted.html#matplotlib.axes.Axes.xaxis_inverted" title="matplotlib.axes.Axes.xaxis_inverted"><code class="xref py py-obj docutils literal"><span class="pre">xaxis_inverted</span></code></a>()</td>
+<td>Returns <em>True</em> if the x-axis is inverted.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.xcorr.html#matplotlib.axes.Axes.xcorr" title="matplotlib.axes.Axes.xcorr"><code class="xref py py-obj docutils literal"><span class="pre">xcorr</span></code></a>(ax,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Plot the cross correlation between <em>x</em> and <em>y</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.Axes.yaxis_date.html#matplotlib.axes.Axes.yaxis_date" title="matplotlib.axes.Axes.yaxis_date"><code class="xref py py-obj docutils literal"><span class="pre">yaxis_date</span></code></a>([tz])</td>
+<td>Sets up y-axis ticks and labels that treat the y data as dates.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.Axes.yaxis_inverted.html#matplotlib.axes.Axes.yaxis_inverted" title="matplotlib.axes.Axes.yaxis_inverted"><code class="xref py py-obj docutils literal"><span class="pre">yaxis_inverted</span></code></a>()</td>
+<td>Returns <em>True</em> if the y-axis is inverted.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.axes.Axes.axes.html" class="btn btn-neutral float-right" title="3.2.1.1. matplotlib.axes.Axes.axes" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../matplotlib.axes.unpack_labeled_data.html" class="btn btn-neutral" title="3.1.5. matplotlib.axes.unpack_labeled_data" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

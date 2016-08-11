@@ -1,0 +1,822 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>29. matplotlib.mlab &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../index.html"/>
+        <link rel="up" title="&lt;no title&gt;" href="../infreq.html"/>
+        <link rel="next" title="29.4.1. matplotlib.mlab.amap" href="matplotlib.mlab.amap.html"/>
+        <link rel="prev" title="28.3.4. matplotlib.mathtext.ParseFatalException" href="matplotlib.mathtext.ParseFatalException.html"/> 
+
+  
+  <script src="../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">29. matplotlib.mlab</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#matlab-compatible-functions">29.1. MATLAB compatible functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#miscellaneous-functions">29.2. Miscellaneous functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#record-array-helper-functions">29.3. record array helper functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#functions">29.4. Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.amap.html">29.4.1. matplotlib.mlab.amap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.angle_spectrum.html">29.4.2. matplotlib.mlab.angle_spectrum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.apply_window.html">29.4.3. matplotlib.mlab.apply_window</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.base_repr.html">29.4.4. matplotlib.mlab.base_repr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.binary_repr.html">29.4.5. matplotlib.mlab.binary_repr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.bivariate_normal.html">29.4.6. matplotlib.mlab.bivariate_normal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.center_matrix.html">29.4.7. matplotlib.mlab.center_matrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.cohere.html">29.4.8. matplotlib.mlab.cohere</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.cohere_pairs.html">29.4.9. matplotlib.mlab.cohere_pairs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.complex_spectrum.html">29.4.10. matplotlib.mlab.complex_spectrum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.contiguous_regions.html">29.4.11. matplotlib.mlab.contiguous_regions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.cross_from_above.html">29.4.12. matplotlib.mlab.cross_from_above</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.cross_from_below.html">29.4.13. matplotlib.mlab.cross_from_below</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.csd.html">29.4.14. matplotlib.mlab.csd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.csv2rec.html">29.4.15. matplotlib.mlab.csv2rec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.csvformat_factory.html">29.4.16. matplotlib.mlab.csvformat_factory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.demean.html">29.4.17. matplotlib.mlab.demean</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.detrend.html">29.4.18. matplotlib.mlab.detrend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.detrend_linear.html">29.4.19. matplotlib.mlab.detrend_linear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.detrend_mean.html">29.4.20. matplotlib.mlab.detrend_mean</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.detrend_none.html">29.4.21. matplotlib.mlab.detrend_none</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.dist.html">29.4.22. matplotlib.mlab.dist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.dist_point_to_segment.html">29.4.23. matplotlib.mlab.dist_point_to_segment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.distances_along_curve.html">29.4.24. matplotlib.mlab.distances_along_curve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.donothing_callback.html">29.4.25. matplotlib.mlab.donothing_callback</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.entropy.html">29.4.26. matplotlib.mlab.entropy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.exp_safe.html">29.4.27. matplotlib.mlab.exp_safe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.fftsurr.html">29.4.28. matplotlib.mlab.fftsurr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.find.html">29.4.29. matplotlib.mlab.find</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.frange.html">29.4.30. matplotlib.mlab.frange</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.get_formatd.html">29.4.31. matplotlib.mlab.get_formatd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.get_sparse_matrix.html">29.4.32. matplotlib.mlab.get_sparse_matrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.get_xyz_where.html">29.4.33. matplotlib.mlab.get_xyz_where</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.griddata.html">29.4.34. matplotlib.mlab.griddata</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.identity.html">29.4.35. matplotlib.mlab.identity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.inside_poly.html">29.4.36. matplotlib.mlab.inside_poly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.is_closed_polygon.html">29.4.37. matplotlib.mlab.is_closed_polygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.ispower2.html">29.4.38. matplotlib.mlab.ispower2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.isvector.html">29.4.39. matplotlib.mlab.isvector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.l1norm.html">29.4.40. matplotlib.mlab.l1norm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.l2norm.html">29.4.41. matplotlib.mlab.l2norm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.less_simple_linear_interpolation.html">29.4.42. matplotlib.mlab.less_simple_linear_interpolation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.log2.html">29.4.43. matplotlib.mlab.log2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.logspace.html">29.4.44. matplotlib.mlab.logspace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.longest_contiguous_ones.html">29.4.45. matplotlib.mlab.longest_contiguous_ones</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.longest_ones.html">29.4.46. matplotlib.mlab.longest_ones</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.magnitude_spectrum.html">29.4.47. matplotlib.mlab.magnitude_spectrum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.movavg.html">29.4.48. matplotlib.mlab.movavg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.norm_flat.html">29.4.49. matplotlib.mlab.norm_flat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.normpdf.html">29.4.50. matplotlib.mlab.normpdf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.offset_line.html">29.4.51. matplotlib.mlab.offset_line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.path_length.html">29.4.52. matplotlib.mlab.path_length</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.phase_spectrum.html">29.4.53. matplotlib.mlab.phase_spectrum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.poly_below.html">29.4.54. matplotlib.mlab.poly_below</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.poly_between.html">29.4.55. matplotlib.mlab.poly_between</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.prctile.html">29.4.56. matplotlib.mlab.prctile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.prctile_rank.html">29.4.57. matplotlib.mlab.prctile_rank</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.psd.html">29.4.58. matplotlib.mlab.psd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.quad2cubic.html">29.4.59. matplotlib.mlab.quad2cubic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.rec2csv.html">29.4.60. matplotlib.mlab.rec2csv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.rec2txt.html">29.4.61. matplotlib.mlab.rec2txt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.rec_append_fields.html">29.4.62. matplotlib.mlab.rec_append_fields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.rec_drop_fields.html">29.4.63. matplotlib.mlab.rec_drop_fields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.rec_groupby.html">29.4.64. matplotlib.mlab.rec_groupby</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.rec_join.html">29.4.65. matplotlib.mlab.rec_join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.rec_keep_fields.html">29.4.66. matplotlib.mlab.rec_keep_fields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.rec_summarize.html">29.4.67. matplotlib.mlab.rec_summarize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.recs_join.html">29.4.68. matplotlib.mlab.recs_join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.rk4.html">29.4.69. matplotlib.mlab.rk4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.rms_flat.html">29.4.70. matplotlib.mlab.rms_flat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.safe_isinf.html">29.4.71. matplotlib.mlab.safe_isinf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.safe_isnan.html">29.4.72. matplotlib.mlab.safe_isnan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.segments_intersect.html">29.4.73. matplotlib.mlab.segments_intersect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.slopes.html">29.4.74. matplotlib.mlab.slopes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.specgram.html">29.4.75. matplotlib.mlab.specgram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.stineman_interp.html">29.4.76. matplotlib.mlab.stineman_interp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.stride_repeat.html">29.4.77. matplotlib.mlab.stride_repeat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.stride_windows.html">29.4.78. matplotlib.mlab.stride_windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.vector_lengths.html">29.4.79. matplotlib.mlab.vector_lengths</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.window_hanning.html">29.4.80. matplotlib.mlab.window_hanning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.window_none.html">29.4.81. matplotlib.mlab.window_none</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#classes">29.5. Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.mlab.FormatBool.html">29.5.1. matplotlib.mlab.FormatBool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.mlab.FormatDate.html">29.5.2. matplotlib.mlab.FormatDate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.mlab.FormatDatetime.html">29.5.3. matplotlib.mlab.FormatDatetime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.mlab.FormatFloat.html">29.5.4. matplotlib.mlab.FormatFloat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.mlab.FormatFormatStr.html">29.5.5. matplotlib.mlab.FormatFormatStr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.mlab.FormatInt.html">29.5.6. matplotlib.mlab.FormatInt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.mlab.FormatMillions.html">29.5.7. matplotlib.mlab.FormatMillions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.mlab.FormatObj.html">29.5.8. matplotlib.mlab.FormatObj</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.mlab.FormatPercent.html">29.5.9. matplotlib.mlab.FormatPercent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.mlab.FormatString.html">29.5.10. matplotlib.mlab.FormatString</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.mlab.FormatThousands.html">29.5.11. matplotlib.mlab.FormatThousands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.mlab.GaussianKDE.html">29.5.12. matplotlib.mlab.GaussianKDE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.mlab.PCA.html">29.5.13. matplotlib.mlab.PCA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.mlab.Path.html">29.5.14. matplotlib.mlab.Path</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.mlab.map.html">29.5.15. matplotlib.mlab.map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.mlab.xrange.html">29.5.16. matplotlib.mlab.xrange</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.mlab.zip.html">29.5.17. matplotlib.mlab.zip</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../infreq.html">&lt;no title&gt;</a> &raquo;</li>
+        
+      <li>29. matplotlib.mlab</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../sources/generated/matplotlib.mlab.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-matplotlib.mlab">
+<span id="matplotlib-mlab"></span><h1>29. matplotlib.mlab<a class="headerlink" href="#module-matplotlib.mlab" title="Permalink to this headline">¶</a></h1>
+<p>Numerical python functions written for compatability with MATLAB
+commands with the same names.</p>
+<div class="section" id="matlab-compatible-functions">
+<h2>29.1. MATLAB compatible functions<a class="headerlink" href="#matlab-compatible-functions" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><a class="reference internal" href="matplotlib.mlab.cohere.html#matplotlib.mlab.cohere" title="matplotlib.mlab.cohere"><code class="xref py py-func docutils literal"><span class="pre">cohere()</span></code></a></dt>
+<dd>Coherence (normalized cross spectral density)</dd>
+<dt><a class="reference internal" href="matplotlib.mlab.csd.html#matplotlib.mlab.csd" title="matplotlib.mlab.csd"><code class="xref py py-func docutils literal"><span class="pre">csd()</span></code></a></dt>
+<dd>Cross spectral density uing Welch&#8217;s average periodogram</dd>
+<dt><a class="reference internal" href="matplotlib.mlab.detrend.html#matplotlib.mlab.detrend" title="matplotlib.mlab.detrend"><code class="xref py py-func docutils literal"><span class="pre">detrend()</span></code></a></dt>
+<dd>Remove the mean or best fit line from an array</dd>
+<dt><a class="reference internal" href="matplotlib.mlab.find.html#matplotlib.mlab.find" title="matplotlib.mlab.find"><code class="xref py py-func docutils literal"><span class="pre">find()</span></code></a></dt>
+<dd>Return the indices where some condition is true;
+numpy.nonzero is similar but more general.</dd>
+<dt><a class="reference internal" href="matplotlib.mlab.griddata.html#matplotlib.mlab.griddata" title="matplotlib.mlab.griddata"><code class="xref py py-func docutils literal"><span class="pre">griddata()</span></code></a></dt>
+<dd>Interpolate irregularly distributed data to a
+regular grid.</dd>
+<dt><a class="reference internal" href="matplotlib.mlab.prctile.html#matplotlib.mlab.prctile" title="matplotlib.mlab.prctile"><code class="xref py py-func docutils literal"><span class="pre">prctile()</span></code></a></dt>
+<dd>Find the percentiles of a sequence</dd>
+<dt><code class="xref py py-func docutils literal"><span class="pre">prepca()</span></code></dt>
+<dd>Principal Component Analysis</dd>
+<dt><a class="reference internal" href="matplotlib.mlab.psd.html#matplotlib.mlab.psd" title="matplotlib.mlab.psd"><code class="xref py py-func docutils literal"><span class="pre">psd()</span></code></a></dt>
+<dd>Power spectral density uing Welch&#8217;s average periodogram</dd>
+<dt><a class="reference internal" href="matplotlib.mlab.rk4.html#matplotlib.mlab.rk4" title="matplotlib.mlab.rk4"><code class="xref py py-func docutils literal"><span class="pre">rk4()</span></code></a></dt>
+<dd>A 4th order runge kutta integrator for 1D or ND systems</dd>
+<dt><a class="reference internal" href="matplotlib.mlab.specgram.html#matplotlib.mlab.specgram" title="matplotlib.mlab.specgram"><code class="xref py py-func docutils literal"><span class="pre">specgram()</span></code></a></dt>
+<dd>Spectrogram (spectrum over segments of time)</dd>
+</dl>
+</div>
+<div class="section" id="miscellaneous-functions">
+<h2>29.2. Miscellaneous functions<a class="headerlink" href="#miscellaneous-functions" title="Permalink to this headline">¶</a></h2>
+<p>Functions that don&#8217;t exist in MATLAB, but are useful anyway:</p>
+<dl class="docutils">
+<dt><a class="reference internal" href="matplotlib.mlab.cohere_pairs.html#matplotlib.mlab.cohere_pairs" title="matplotlib.mlab.cohere_pairs"><code class="xref py py-func docutils literal"><span class="pre">cohere_pairs()</span></code></a></dt>
+<dd>Coherence over all pairs.  This is not a MATLAB function, but we
+compute coherence a lot in my lab, and we compute it for a lot of
+pairs.  This function is optimized to do this efficiently by
+caching the direct FFTs.</dd>
+<dt><a class="reference internal" href="matplotlib.mlab.rk4.html#matplotlib.mlab.rk4" title="matplotlib.mlab.rk4"><code class="xref py py-func docutils literal"><span class="pre">rk4()</span></code></a></dt>
+<dd>A 4th order Runge-Kutta ODE integrator in case you ever find
+yourself stranded without scipy (and the far superior
+scipy.integrate tools)</dd>
+<dt><a class="reference internal" href="matplotlib.mlab.contiguous_regions.html#matplotlib.mlab.contiguous_regions" title="matplotlib.mlab.contiguous_regions"><code class="xref py py-func docutils literal"><span class="pre">contiguous_regions()</span></code></a></dt>
+<dd>Return the indices of the regions spanned by some logical mask</dd>
+<dt><a class="reference internal" href="matplotlib.mlab.cross_from_below.html#matplotlib.mlab.cross_from_below" title="matplotlib.mlab.cross_from_below"><code class="xref py py-func docutils literal"><span class="pre">cross_from_below()</span></code></a></dt>
+<dd>Return the indices where a 1D array crosses a threshold from below</dd>
+<dt><a class="reference internal" href="matplotlib.mlab.cross_from_above.html#matplotlib.mlab.cross_from_above" title="matplotlib.mlab.cross_from_above"><code class="xref py py-func docutils literal"><span class="pre">cross_from_above()</span></code></a></dt>
+<dd>Return the indices where a 1D array crosses a threshold from above</dd>
+<dt><a class="reference internal" href="matplotlib.mlab.complex_spectrum.html#matplotlib.mlab.complex_spectrum" title="matplotlib.mlab.complex_spectrum"><code class="xref py py-func docutils literal"><span class="pre">complex_spectrum()</span></code></a></dt>
+<dd>Return the complex-valued frequency spectrum of a signal</dd>
+<dt><a class="reference internal" href="matplotlib.mlab.magnitude_spectrum.html#matplotlib.mlab.magnitude_spectrum" title="matplotlib.mlab.magnitude_spectrum"><code class="xref py py-func docutils literal"><span class="pre">magnitude_spectrum()</span></code></a></dt>
+<dd>Return the magnitude of the frequency spectrum of a signal</dd>
+<dt><a class="reference internal" href="matplotlib.mlab.angle_spectrum.html#matplotlib.mlab.angle_spectrum" title="matplotlib.mlab.angle_spectrum"><code class="xref py py-func docutils literal"><span class="pre">angle_spectrum()</span></code></a></dt>
+<dd>Return the angle (wrapped phase) of the frequency spectrum of a signal</dd>
+<dt><a class="reference internal" href="matplotlib.mlab.phase_spectrum.html#matplotlib.mlab.phase_spectrum" title="matplotlib.mlab.phase_spectrum"><code class="xref py py-func docutils literal"><span class="pre">phase_spectrum()</span></code></a></dt>
+<dd>Return the phase (unwrapped angle) of the frequency spectrum of a signal</dd>
+<dt><a class="reference internal" href="matplotlib.mlab.detrend_mean.html#matplotlib.mlab.detrend_mean" title="matplotlib.mlab.detrend_mean"><code class="xref py py-func docutils literal"><span class="pre">detrend_mean()</span></code></a></dt>
+<dd>Remove the mean from a line.</dd>
+<dt><a class="reference internal" href="matplotlib.mlab.demean.html#matplotlib.mlab.demean" title="matplotlib.mlab.demean"><code class="xref py py-func docutils literal"><span class="pre">demean()</span></code></a></dt>
+<dd>Remove the mean from a line. This function is the same as as
+<a class="reference internal" href="matplotlib.mlab.detrend_mean.html#matplotlib.mlab.detrend_mean" title="matplotlib.mlab.detrend_mean"><code class="xref py py-func docutils literal"><span class="pre">detrend_mean()</span></code></a> except for the default <em>axis</em>.</dd>
+<dt><a class="reference internal" href="matplotlib.mlab.detrend_linear.html#matplotlib.mlab.detrend_linear" title="matplotlib.mlab.detrend_linear"><code class="xref py py-func docutils literal"><span class="pre">detrend_linear()</span></code></a></dt>
+<dd>Remove the best fit line from a line.</dd>
+<dt><a class="reference internal" href="matplotlib.mlab.detrend_none.html#matplotlib.mlab.detrend_none" title="matplotlib.mlab.detrend_none"><code class="xref py py-func docutils literal"><span class="pre">detrend_none()</span></code></a></dt>
+<dd>Return the original line.</dd>
+<dt><a class="reference internal" href="matplotlib.mlab.stride_windows.html#matplotlib.mlab.stride_windows" title="matplotlib.mlab.stride_windows"><code class="xref py py-func docutils literal"><span class="pre">stride_windows()</span></code></a></dt>
+<dd>Get all windows in an array in a memory-efficient manner</dd>
+<dt><a class="reference internal" href="matplotlib.mlab.stride_repeat.html#matplotlib.mlab.stride_repeat" title="matplotlib.mlab.stride_repeat"><code class="xref py py-func docutils literal"><span class="pre">stride_repeat()</span></code></a></dt>
+<dd>Repeat an array in a memory-efficient manner</dd>
+<dt><a class="reference internal" href="matplotlib.mlab.apply_window.html#matplotlib.mlab.apply_window" title="matplotlib.mlab.apply_window"><code class="xref py py-func docutils literal"><span class="pre">apply_window()</span></code></a></dt>
+<dd>Apply a window along a given axis</dd>
+</dl>
+</div>
+<div class="section" id="record-array-helper-functions">
+<h2>29.3. record array helper functions<a class="headerlink" href="#record-array-helper-functions" title="Permalink to this headline">¶</a></h2>
+<p>A collection of helper methods for numpyrecord arrays</p>
+<blockquote id="htmlonly">
+<div>See <span class="xref std std-ref">misc-examples-index</span></div></blockquote>
+<dl class="docutils">
+<dt><a class="reference internal" href="matplotlib.mlab.rec2txt.html#matplotlib.mlab.rec2txt" title="matplotlib.mlab.rec2txt"><code class="xref py py-func docutils literal"><span class="pre">rec2txt()</span></code></a></dt>
+<dd>Pretty print a record array</dd>
+<dt><a class="reference internal" href="matplotlib.mlab.rec2csv.html#matplotlib.mlab.rec2csv" title="matplotlib.mlab.rec2csv"><code class="xref py py-func docutils literal"><span class="pre">rec2csv()</span></code></a></dt>
+<dd>Store record array in CSV file</dd>
+<dt><a class="reference internal" href="matplotlib.mlab.csv2rec.html#matplotlib.mlab.csv2rec" title="matplotlib.mlab.csv2rec"><code class="xref py py-func docutils literal"><span class="pre">csv2rec()</span></code></a></dt>
+<dd>Import record array from CSV file with type inspection</dd>
+<dt><a class="reference internal" href="matplotlib.mlab.rec_append_fields.html#matplotlib.mlab.rec_append_fields" title="matplotlib.mlab.rec_append_fields"><code class="xref py py-func docutils literal"><span class="pre">rec_append_fields()</span></code></a></dt>
+<dd>Adds  field(s)/array(s) to record array</dd>
+<dt><a class="reference internal" href="matplotlib.mlab.rec_drop_fields.html#matplotlib.mlab.rec_drop_fields" title="matplotlib.mlab.rec_drop_fields"><code class="xref py py-func docutils literal"><span class="pre">rec_drop_fields()</span></code></a></dt>
+<dd>Drop fields from record array</dd>
+<dt><a class="reference internal" href="matplotlib.mlab.rec_join.html#matplotlib.mlab.rec_join" title="matplotlib.mlab.rec_join"><code class="xref py py-func docutils literal"><span class="pre">rec_join()</span></code></a></dt>
+<dd>Join two record arrays on sequence of fields</dd>
+<dt><a class="reference internal" href="matplotlib.mlab.recs_join.html#matplotlib.mlab.recs_join" title="matplotlib.mlab.recs_join"><code class="xref py py-func docutils literal"><span class="pre">recs_join()</span></code></a></dt>
+<dd>A simple join of multiple recarrays using a single column as a key</dd>
+<dt><a class="reference internal" href="matplotlib.mlab.rec_groupby.html#matplotlib.mlab.rec_groupby" title="matplotlib.mlab.rec_groupby"><code class="xref py py-func docutils literal"><span class="pre">rec_groupby()</span></code></a></dt>
+<dd>Summarize data by groups (similar to SQL GROUP BY)</dd>
+<dt><a class="reference internal" href="matplotlib.mlab.rec_summarize.html#matplotlib.mlab.rec_summarize" title="matplotlib.mlab.rec_summarize"><code class="xref py py-func docutils literal"><span class="pre">rec_summarize()</span></code></a></dt>
+<dd>Helper code to filter rec array fields into new fields</dd>
+</dl>
+<p>For the rec viewer functions(e rec2csv), there are a bunch of Format
+objects you can pass into the functions that will do things like color
+negative values red, set percent formatting and scaling, etc.</p>
+<p>Example usage:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="n">csv2rec</span><span class="p">(</span><span class="s1">&#39;somefile.csv&#39;</span><span class="p">,</span> <span class="n">checkrows</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">formatd</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+    <span class="n">weight</span> <span class="o">=</span> <span class="n">FormatFloat</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+    <span class="n">change</span> <span class="o">=</span> <span class="n">FormatPercent</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+    <span class="n">cost</span>   <span class="o">=</span> <span class="n">FormatThousands</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+    <span class="p">)</span>
+
+
+<span class="n">rec2excel</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="s1">&#39;test.xls&#39;</span><span class="p">,</span> <span class="n">formatd</span><span class="o">=</span><span class="n">formatd</span><span class="p">)</span>
+<span class="n">rec2csv</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="s1">&#39;test.csv&#39;</span><span class="p">,</span> <span class="n">formatd</span><span class="o">=</span><span class="n">formatd</span><span class="p">)</span>
+<span class="n">scroll</span> <span class="o">=</span> <span class="n">rec2gtk</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">formatd</span><span class="o">=</span><span class="n">formatd</span><span class="p">)</span>
+
+<span class="n">win</span> <span class="o">=</span> <span class="n">gtk</span><span class="o">.</span><span class="n">Window</span><span class="p">()</span>
+<span class="n">win</span><span class="o">.</span><span class="n">set_size_request</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="mi">800</span><span class="p">)</span>
+<span class="n">win</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">scroll</span><span class="p">)</span>
+<span class="n">win</span><span class="o">.</span><span class="n">show_all</span><span class="p">()</span>
+<span class="n">gtk</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="functions">
+<h2>29.4. Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.amap.html#matplotlib.mlab.amap" title="matplotlib.mlab.amap"><code class="xref py py-obj docutils literal"><span class="pre">amap</span></code></a>((function,&nbsp;sequence[,&nbsp;sequence,&nbsp;...)</td>
+<td>Works like <a class="reference internal" href="generated/matplotlib.mlab.map.html#matplotlib.mlab.map" title="matplotlib.mlab.map"><code class="xref py py-func docutils literal"><span class="pre">map()</span></code></a>, but it returns an array.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.angle_spectrum.html#matplotlib.mlab.angle_spectrum" title="matplotlib.mlab.angle_spectrum"><code class="xref py py-obj docutils literal"><span class="pre">angle_spectrum</span></code></a>(x[,&nbsp;Fs,&nbsp;window,&nbsp;pad_to,&nbsp;sides])</td>
+<td>Compute the angle of the frequency spectrum (wrapped phase spectrum) of <em>x</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.apply_window.html#matplotlib.mlab.apply_window" title="matplotlib.mlab.apply_window"><code class="xref py py-obj docutils literal"><span class="pre">apply_window</span></code></a>(x,&nbsp;window[,&nbsp;axis,&nbsp;return_window])</td>
+<td>Apply the given window to the given 1D or 2D array along the given axis.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.base_repr.html#matplotlib.mlab.base_repr" title="matplotlib.mlab.base_repr"><code class="xref py py-obj docutils literal"><span class="pre">base_repr</span></code></a>(number[,&nbsp;base,&nbsp;padding])</td>
+<td>Return the representation of a <em>number</em> in any given <em>base</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.binary_repr.html#matplotlib.mlab.binary_repr" title="matplotlib.mlab.binary_repr"><code class="xref py py-obj docutils literal"><span class="pre">binary_repr</span></code></a>(number[,&nbsp;max_length])</td>
+<td>Return the binary representation of the input <em>number</em> as a string.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.bivariate_normal.html#matplotlib.mlab.bivariate_normal" title="matplotlib.mlab.bivariate_normal"><code class="xref py py-obj docutils literal"><span class="pre">bivariate_normal</span></code></a>(X,&nbsp;Y[,&nbsp;sigmax,&nbsp;sigmay,&nbsp;...])</td>
+<td>Bivariate Gaussian distribution for equal shape <em>X</em>, <em>Y</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.center_matrix.html#matplotlib.mlab.center_matrix" title="matplotlib.mlab.center_matrix"><code class="xref py py-obj docutils literal"><span class="pre">center_matrix</span></code></a>(M[,&nbsp;dim])</td>
+<td>Return the matrix <em>M</em> with each row having zero mean and unit std.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.cohere.html#matplotlib.mlab.cohere" title="matplotlib.mlab.cohere"><code class="xref py py-obj docutils literal"><span class="pre">cohere</span></code></a>(x,&nbsp;y[,&nbsp;NFFT,&nbsp;Fs,&nbsp;detrend,&nbsp;window,&nbsp;...])</td>
+<td>The coherence between <em>x</em> and <em>y</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.cohere_pairs.html#matplotlib.mlab.cohere_pairs" title="matplotlib.mlab.cohere_pairs"><code class="xref py py-obj docutils literal"><span class="pre">cohere_pairs</span></code></a>(X,&nbsp;ij[,&nbsp;NFFT,&nbsp;Fs,&nbsp;detrend,&nbsp;...])</td>
+<td>Call signature:</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.complex_spectrum.html#matplotlib.mlab.complex_spectrum" title="matplotlib.mlab.complex_spectrum"><code class="xref py py-obj docutils literal"><span class="pre">complex_spectrum</span></code></a>(x[,&nbsp;Fs,&nbsp;window,&nbsp;pad_to,&nbsp;sides])</td>
+<td>Compute the complex-valued frequency spectrum of <em>x</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.contiguous_regions.html#matplotlib.mlab.contiguous_regions" title="matplotlib.mlab.contiguous_regions"><code class="xref py py-obj docutils literal"><span class="pre">contiguous_regions</span></code></a>(mask)</td>
+<td>return a list of (ind0, ind1) such that mask[ind0:ind1].all() is</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.cross_from_above.html#matplotlib.mlab.cross_from_above" title="matplotlib.mlab.cross_from_above"><code class="xref py py-obj docutils literal"><span class="pre">cross_from_above</span></code></a>(x,&nbsp;threshold)</td>
+<td>return the indices into <em>x</em> where <em>x</em> crosses some threshold from</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.cross_from_below.html#matplotlib.mlab.cross_from_below" title="matplotlib.mlab.cross_from_below"><code class="xref py py-obj docutils literal"><span class="pre">cross_from_below</span></code></a>(x,&nbsp;threshold)</td>
+<td>return the indices into <em>x</em> where <em>x</em> crosses some threshold from</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.csd.html#matplotlib.mlab.csd" title="matplotlib.mlab.csd"><code class="xref py py-obj docutils literal"><span class="pre">csd</span></code></a>(x,&nbsp;y[,&nbsp;NFFT,&nbsp;Fs,&nbsp;detrend,&nbsp;window,&nbsp;...])</td>
+<td>Compute the cross-spectral density.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.csv2rec.html#matplotlib.mlab.csv2rec" title="matplotlib.mlab.csv2rec"><code class="xref py py-obj docutils literal"><span class="pre">csv2rec</span></code></a>(fname[,&nbsp;comments,&nbsp;skiprows,&nbsp;...])</td>
+<td>Load data from comma/space/tab delimited file in <em>fname</em> into a numpy record array and return the record array.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.csvformat_factory.html#matplotlib.mlab.csvformat_factory" title="matplotlib.mlab.csvformat_factory"><code class="xref py py-obj docutils literal"><span class="pre">csvformat_factory</span></code></a>(format)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.demean.html#matplotlib.mlab.demean" title="matplotlib.mlab.demean"><code class="xref py py-obj docutils literal"><span class="pre">demean</span></code></a>(x[,&nbsp;axis])</td>
+<td>Return x minus its mean along the specified axis.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.detrend.html#matplotlib.mlab.detrend" title="matplotlib.mlab.detrend"><code class="xref py py-obj docutils literal"><span class="pre">detrend</span></code></a>(x[,&nbsp;key,&nbsp;axis])</td>
+<td>Return x with its trend removed.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.detrend_linear.html#matplotlib.mlab.detrend_linear" title="matplotlib.mlab.detrend_linear"><code class="xref py py-obj docutils literal"><span class="pre">detrend_linear</span></code></a>(y)</td>
+<td>Return x minus best fit line; &#8216;linear&#8217; detrending.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.detrend_mean.html#matplotlib.mlab.detrend_mean" title="matplotlib.mlab.detrend_mean"><code class="xref py py-obj docutils literal"><span class="pre">detrend_mean</span></code></a>(x[,&nbsp;axis])</td>
+<td>Return x minus the mean(x).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.detrend_none.html#matplotlib.mlab.detrend_none" title="matplotlib.mlab.detrend_none"><code class="xref py py-obj docutils literal"><span class="pre">detrend_none</span></code></a>(x[,&nbsp;axis])</td>
+<td>Return x: no detrending.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.dist.html#matplotlib.mlab.dist" title="matplotlib.mlab.dist"><code class="xref py py-obj docutils literal"><span class="pre">dist</span></code></a>(x,&nbsp;y)</td>
+<td>Return the distance between two points.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.dist_point_to_segment.html#matplotlib.mlab.dist_point_to_segment" title="matplotlib.mlab.dist_point_to_segment"><code class="xref py py-obj docutils literal"><span class="pre">dist_point_to_segment</span></code></a>(p,&nbsp;s0,&nbsp;s1)</td>
+<td>Get the distance of a point to a segment.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.distances_along_curve.html#matplotlib.mlab.distances_along_curve" title="matplotlib.mlab.distances_along_curve"><code class="xref py py-obj docutils literal"><span class="pre">distances_along_curve</span></code></a>(X)</td>
+<td>Computes the distance between a set of successive points in <em>N</em> dimensions.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.donothing_callback.html#matplotlib.mlab.donothing_callback" title="matplotlib.mlab.donothing_callback"><code class="xref py py-obj docutils literal"><span class="pre">donothing_callback</span></code></a>(*args)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.entropy.html#matplotlib.mlab.entropy" title="matplotlib.mlab.entropy"><code class="xref py py-obj docutils literal"><span class="pre">entropy</span></code></a>(y,&nbsp;bins)</td>
+<td>Return the entropy of the data in <em>y</em> in units of nat.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.exp_safe.html#matplotlib.mlab.exp_safe" title="matplotlib.mlab.exp_safe"><code class="xref py py-obj docutils literal"><span class="pre">exp_safe</span></code></a>(x)</td>
+<td>Compute exponentials which safely underflow to zero.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.fftsurr.html#matplotlib.mlab.fftsurr" title="matplotlib.mlab.fftsurr"><code class="xref py py-obj docutils literal"><span class="pre">fftsurr</span></code></a>(x[,&nbsp;detrend,&nbsp;window])</td>
+<td>Compute an FFT phase randomized surrogate of <em>x</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.find.html#matplotlib.mlab.find" title="matplotlib.mlab.find"><code class="xref py py-obj docutils literal"><span class="pre">find</span></code></a>(condition)</td>
+<td>Return the indices where ravel(condition) is true</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.frange.html#matplotlib.mlab.frange" title="matplotlib.mlab.frange"><code class="xref py py-obj docutils literal"><span class="pre">frange</span></code></a>(([start,]&nbsp;stop[,&nbsp;step,&nbsp;...)</td>
+<td>Return a numpy ndarray containing a progression of floats.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.get_formatd.html#matplotlib.mlab.get_formatd" title="matplotlib.mlab.get_formatd"><code class="xref py py-obj docutils literal"><span class="pre">get_formatd</span></code></a>(r[,&nbsp;formatd])</td>
+<td>build a formatd guaranteed to have a key for every dtype name</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.get_sparse_matrix.html#matplotlib.mlab.get_sparse_matrix" title="matplotlib.mlab.get_sparse_matrix"><code class="xref py py-obj docutils literal"><span class="pre">get_sparse_matrix</span></code></a>(M,&nbsp;N[,&nbsp;frac])</td>
+<td>Return a <em>M</em> x <em>N</em> sparse matrix with <em>frac</em> elements randomly filled.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.get_xyz_where.html#matplotlib.mlab.get_xyz_where" title="matplotlib.mlab.get_xyz_where"><code class="xref py py-obj docutils literal"><span class="pre">get_xyz_where</span></code></a>(Z,&nbsp;Cond)</td>
+<td><em>Z</em> and <em>Cond</em> are <em>M</em> x <em>N</em> matrices.  <em>Z</em> are data and <em>Cond</em> is</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.griddata.html#matplotlib.mlab.griddata" title="matplotlib.mlab.griddata"><code class="xref py py-obj docutils literal"><span class="pre">griddata</span></code></a>(x,&nbsp;y,&nbsp;z,&nbsp;xi,&nbsp;yi[,&nbsp;interp])</td>
+<td>Interpolates from a nonuniformly spaced grid to some other grid.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.identity.html#matplotlib.mlab.identity" title="matplotlib.mlab.identity"><code class="xref py py-obj docutils literal"><span class="pre">identity</span></code></a>(n[,&nbsp;rank,&nbsp;dtype,&nbsp;typecode])</td>
+<td>Returns the identity matrix of shape (<em>n</em>, <em>n</em>, ..., <em>n</em>) (rank <em>r</em>).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.inside_poly.html#matplotlib.mlab.inside_poly" title="matplotlib.mlab.inside_poly"><code class="xref py py-obj docutils literal"><span class="pre">inside_poly</span></code></a>(points,&nbsp;verts)</td>
+<td><em>points</em> is a sequence of <em>x</em>, <em>y</em> points.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.is_closed_polygon.html#matplotlib.mlab.is_closed_polygon" title="matplotlib.mlab.is_closed_polygon"><code class="xref py py-obj docutils literal"><span class="pre">is_closed_polygon</span></code></a>(X)</td>
+<td>Tests whether first and last object in a sequence are the same.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.ispower2.html#matplotlib.mlab.ispower2" title="matplotlib.mlab.ispower2"><code class="xref py py-obj docutils literal"><span class="pre">ispower2</span></code></a>(n)</td>
+<td>Returns the log base 2 of <em>n</em> if <em>n</em> is a power of 2, zero otherwise.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.isvector.html#matplotlib.mlab.isvector" title="matplotlib.mlab.isvector"><code class="xref py py-obj docutils literal"><span class="pre">isvector</span></code></a>(X)</td>
+<td>Like the MATLAB function with the same name, returns <em>True</em> if the supplied numpy array or matrix <em>X</em> looks like a vector, meaning it has a one non-singleton axis (i.e., it can have multiple axes, but all must have length 1, except for one of them).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.l1norm.html#matplotlib.mlab.l1norm" title="matplotlib.mlab.l1norm"><code class="xref py py-obj docutils literal"><span class="pre">l1norm</span></code></a>(a)</td>
+<td>Return the <em>l1</em> norm of <em>a</em>, flattened out.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.l2norm.html#matplotlib.mlab.l2norm" title="matplotlib.mlab.l2norm"><code class="xref py py-obj docutils literal"><span class="pre">l2norm</span></code></a>(a)</td>
+<td>Return the <em>l2</em> norm of <em>a</em>, flattened out.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.less_simple_linear_interpolation.html#matplotlib.mlab.less_simple_linear_interpolation" title="matplotlib.mlab.less_simple_linear_interpolation"><code class="xref py py-obj docutils literal"><span class="pre">less_simple_linear_interpolation</span></code></a>(x,&nbsp;y,&nbsp;xi[,&nbsp;...])</td>
+<td>This function provides simple (but somewhat less so than <code class="xref py py-func docutils literal"><span class="pre">cbook.simple_linear_interpolation()</span></code>) linear interpolation.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.log2.html#matplotlib.mlab.log2" title="matplotlib.mlab.log2"><code class="xref py py-obj docutils literal"><span class="pre">log2</span></code></a>(x[,&nbsp;ln2])</td>
+<td>Return the log(<em>x</em>) in base 2.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.logspace.html#matplotlib.mlab.logspace" title="matplotlib.mlab.logspace"><code class="xref py py-obj docutils literal"><span class="pre">logspace</span></code></a>(xmin,&nbsp;xmax,&nbsp;N)</td>
+<td>Return N values logarithmically spaced between xmin and xmax.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.longest_contiguous_ones.html#matplotlib.mlab.longest_contiguous_ones" title="matplotlib.mlab.longest_contiguous_ones"><code class="xref py py-obj docutils literal"><span class="pre">longest_contiguous_ones</span></code></a>(x)</td>
+<td>Return the indices of the longest stretch of contiguous ones in <em>x</em>, assuming <em>x</em> is a vector of zeros and ones.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.longest_ones.html#matplotlib.mlab.longest_ones" title="matplotlib.mlab.longest_ones"><code class="xref py py-obj docutils literal"><span class="pre">longest_ones</span></code></a>(x)</td>
+<td>alias for longest_contiguous_ones</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.magnitude_spectrum.html#matplotlib.mlab.magnitude_spectrum" title="matplotlib.mlab.magnitude_spectrum"><code class="xref py py-obj docutils literal"><span class="pre">magnitude_spectrum</span></code></a>(x[,&nbsp;Fs,&nbsp;window,&nbsp;pad_to,&nbsp;...])</td>
+<td>Compute the magnitude (absolute value) of the frequency spectrum of <em>x</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.movavg.html#matplotlib.mlab.movavg" title="matplotlib.mlab.movavg"><code class="xref py py-obj docutils literal"><span class="pre">movavg</span></code></a>(x,&nbsp;n)</td>
+<td>Compute the len(<em>n</em>) moving average of <em>x</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.norm_flat.html#matplotlib.mlab.norm_flat" title="matplotlib.mlab.norm_flat"><code class="xref py py-obj docutils literal"><span class="pre">norm_flat</span></code></a>(a[,&nbsp;p])</td>
+<td>norm(a,p=2) -&gt; l-p norm of a.flat</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.normpdf.html#matplotlib.mlab.normpdf" title="matplotlib.mlab.normpdf"><code class="xref py py-obj docutils literal"><span class="pre">normpdf</span></code></a>(x,&nbsp;*args)</td>
+<td>Return the normal pdf evaluated at <em>x</em>; args provides <em>mu</em>, <em>sigma</em></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.offset_line.html#matplotlib.mlab.offset_line" title="matplotlib.mlab.offset_line"><code class="xref py py-obj docutils literal"><span class="pre">offset_line</span></code></a>(y,&nbsp;yerr)</td>
+<td>Offsets an array <em>y</em> by +/- an error and returns a tuple (y - err, y + err).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.path_length.html#matplotlib.mlab.path_length" title="matplotlib.mlab.path_length"><code class="xref py py-obj docutils literal"><span class="pre">path_length</span></code></a>(X)</td>
+<td>Computes the distance travelled along a polygonal curve in <em>N</em> dimensions.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.phase_spectrum.html#matplotlib.mlab.phase_spectrum" title="matplotlib.mlab.phase_spectrum"><code class="xref py py-obj docutils literal"><span class="pre">phase_spectrum</span></code></a>(x[,&nbsp;Fs,&nbsp;window,&nbsp;pad_to,&nbsp;sides])</td>
+<td>Compute the phase of the frequency spectrum (unwrapped angle spectrum) of <em>x</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.poly_below.html#matplotlib.mlab.poly_below" title="matplotlib.mlab.poly_below"><code class="xref py py-obj docutils literal"><span class="pre">poly_below</span></code></a>(xmin,&nbsp;xs,&nbsp;ys)</td>
+<td>Given a sequence of <em>xs</em> and <em>ys</em>, return the vertices of a polygon that has a horizontal base at <em>xmin</em> and an upper bound at the <em>ys</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.poly_between.html#matplotlib.mlab.poly_between" title="matplotlib.mlab.poly_between"><code class="xref py py-obj docutils literal"><span class="pre">poly_between</span></code></a>(x,&nbsp;ylower,&nbsp;yupper)</td>
+<td>Given a sequence of <em>x</em>, <em>ylower</em> and <em>yupper</em>, return the polygon that fills the regions between them.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.prctile.html#matplotlib.mlab.prctile" title="matplotlib.mlab.prctile"><code class="xref py py-obj docutils literal"><span class="pre">prctile</span></code></a>(x[,&nbsp;p])</td>
+<td>Return the percentiles of <em>x</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.prctile_rank.html#matplotlib.mlab.prctile_rank" title="matplotlib.mlab.prctile_rank"><code class="xref py py-obj docutils literal"><span class="pre">prctile_rank</span></code></a>(x,&nbsp;p)</td>
+<td>Return the rank for each element in <em>x</em>, return the rank 0..len(<em>p</em>).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.psd.html#matplotlib.mlab.psd" title="matplotlib.mlab.psd"><code class="xref py py-obj docutils literal"><span class="pre">psd</span></code></a>(x[,&nbsp;NFFT,&nbsp;Fs,&nbsp;detrend,&nbsp;window,&nbsp;...])</td>
+<td>Compute the power spectral density.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.quad2cubic.html#matplotlib.mlab.quad2cubic" title="matplotlib.mlab.quad2cubic"><code class="xref py py-obj docutils literal"><span class="pre">quad2cubic</span></code></a>(q0x,&nbsp;q0y,&nbsp;q1x,&nbsp;q1y,&nbsp;q2x,&nbsp;q2y)</td>
+<td>Converts a quadratic Bezier curve to a cubic approximation.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.rec2csv.html#matplotlib.mlab.rec2csv" title="matplotlib.mlab.rec2csv"><code class="xref py py-obj docutils literal"><span class="pre">rec2csv</span></code></a>(r,&nbsp;fname[,&nbsp;delimiter,&nbsp;formatd,&nbsp;...])</td>
+<td>Save the data from numpy recarray <em>r</em> into a comma-/space-/tab-delimited file.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.rec2txt.html#matplotlib.mlab.rec2txt" title="matplotlib.mlab.rec2txt"><code class="xref py py-obj docutils literal"><span class="pre">rec2txt</span></code></a>(r[,&nbsp;header,&nbsp;padding,&nbsp;precision,&nbsp;fields])</td>
+<td>Returns a textual representation of a record array.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.rec_append_fields.html#matplotlib.mlab.rec_append_fields" title="matplotlib.mlab.rec_append_fields"><code class="xref py py-obj docutils literal"><span class="pre">rec_append_fields</span></code></a>(rec,&nbsp;names,&nbsp;arrs[,&nbsp;dtypes])</td>
+<td>Return a new record array with field names populated with data from arrays in <em>arrs</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.rec_drop_fields.html#matplotlib.mlab.rec_drop_fields" title="matplotlib.mlab.rec_drop_fields"><code class="xref py py-obj docutils literal"><span class="pre">rec_drop_fields</span></code></a>(rec,&nbsp;names)</td>
+<td>Return a new numpy record array with fields in <em>names</em> dropped.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.rec_groupby.html#matplotlib.mlab.rec_groupby" title="matplotlib.mlab.rec_groupby"><code class="xref py py-obj docutils literal"><span class="pre">rec_groupby</span></code></a>(r,&nbsp;groupby,&nbsp;stats)</td>
+<td><em>r</em> is a numpy record array</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.rec_join.html#matplotlib.mlab.rec_join" title="matplotlib.mlab.rec_join"><code class="xref py py-obj docutils literal"><span class="pre">rec_join</span></code></a>(key,&nbsp;r1,&nbsp;r2[,&nbsp;jointype,&nbsp;defaults,&nbsp;...])</td>
+<td>Join record arrays <em>r1</em> and <em>r2</em> on <em>key</em>; <em>key</em> is a tuple of field names &#8211; if <em>key</em> is a string it is assumed to be a single attribute name.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.rec_keep_fields.html#matplotlib.mlab.rec_keep_fields" title="matplotlib.mlab.rec_keep_fields"><code class="xref py py-obj docutils literal"><span class="pre">rec_keep_fields</span></code></a>(rec,&nbsp;names)</td>
+<td>Return a new numpy record array with only fields listed in names</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.rec_summarize.html#matplotlib.mlab.rec_summarize" title="matplotlib.mlab.rec_summarize"><code class="xref py py-obj docutils literal"><span class="pre">rec_summarize</span></code></a>(r,&nbsp;summaryfuncs)</td>
+<td><em>r</em> is a numpy record array</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.recs_join.html#matplotlib.mlab.recs_join" title="matplotlib.mlab.recs_join"><code class="xref py py-obj docutils literal"><span class="pre">recs_join</span></code></a>(key,&nbsp;name,&nbsp;recs[,&nbsp;jointype,&nbsp;...])</td>
+<td>Join a sequence of record arrays on single column key.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.rk4.html#matplotlib.mlab.rk4" title="matplotlib.mlab.rk4"><code class="xref py py-obj docutils literal"><span class="pre">rk4</span></code></a>(derivs,&nbsp;y0,&nbsp;t)</td>
+<td>Integrate 1D or ND system of ODEs using 4-th order Runge-Kutta.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.rms_flat.html#matplotlib.mlab.rms_flat" title="matplotlib.mlab.rms_flat"><code class="xref py py-obj docutils literal"><span class="pre">rms_flat</span></code></a>(a)</td>
+<td>Return the root mean square of all the elements of <em>a</em>, flattened out.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.safe_isinf.html#matplotlib.mlab.safe_isinf" title="matplotlib.mlab.safe_isinf"><code class="xref py py-obj docutils literal"><span class="pre">safe_isinf</span></code></a>(x)</td>
+<td><code class="xref py py-func docutils literal"><span class="pre">numpy.isinf()</span></code> for arbitrary types</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.safe_isnan.html#matplotlib.mlab.safe_isnan" title="matplotlib.mlab.safe_isnan"><code class="xref py py-obj docutils literal"><span class="pre">safe_isnan</span></code></a>(x)</td>
+<td><code class="xref py py-func docutils literal"><span class="pre">numpy.isnan()</span></code> for arbitrary types</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.segments_intersect.html#matplotlib.mlab.segments_intersect" title="matplotlib.mlab.segments_intersect"><code class="xref py py-obj docutils literal"><span class="pre">segments_intersect</span></code></a>(s1,&nbsp;s2)</td>
+<td>Return <em>True</em> if <em>s1</em> and <em>s2</em> intersect.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.slopes.html#matplotlib.mlab.slopes" title="matplotlib.mlab.slopes"><code class="xref py py-obj docutils literal"><span class="pre">slopes</span></code></a>(x,&nbsp;y)</td>
+<td><a class="reference internal" href="matplotlib.mlab.slopes.html#matplotlib.mlab.slopes" title="matplotlib.mlab.slopes"><code class="xref py py-func docutils literal"><span class="pre">slopes()</span></code></a> calculates the slope <em>y</em>&#8216;(<em>x</em>)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.specgram.html#matplotlib.mlab.specgram" title="matplotlib.mlab.specgram"><code class="xref py py-obj docutils literal"><span class="pre">specgram</span></code></a>(x[,&nbsp;NFFT,&nbsp;Fs,&nbsp;detrend,&nbsp;window,&nbsp;...])</td>
+<td>Compute a spectrogram.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.stineman_interp.html#matplotlib.mlab.stineman_interp" title="matplotlib.mlab.stineman_interp"><code class="xref py py-obj docutils literal"><span class="pre">stineman_interp</span></code></a>(xi,&nbsp;x,&nbsp;y[,&nbsp;yp])</td>
+<td>Given data vectors <em>x</em> and <em>y</em>, the slope vector <em>yp</em> and a new abscissa vector <em>xi</em>, the function <a class="reference internal" href="matplotlib.mlab.stineman_interp.html#matplotlib.mlab.stineman_interp" title="matplotlib.mlab.stineman_interp"><code class="xref py py-func docutils literal"><span class="pre">stineman_interp()</span></code></a> uses Stineman interpolation to calculate a vector <em>yi</em> corresponding to <em>xi</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.stride_repeat.html#matplotlib.mlab.stride_repeat" title="matplotlib.mlab.stride_repeat"><code class="xref py py-obj docutils literal"><span class="pre">stride_repeat</span></code></a>(x,&nbsp;n[,&nbsp;axis])</td>
+<td>Repeat the values in an array in a memory-efficient manner.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.stride_windows.html#matplotlib.mlab.stride_windows" title="matplotlib.mlab.stride_windows"><code class="xref py py-obj docutils literal"><span class="pre">stride_windows</span></code></a>(x,&nbsp;n[,&nbsp;noverlap,&nbsp;axis])</td>
+<td>Get all windows of x with length n as a single array, using strides to avoid data duplication.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.vector_lengths.html#matplotlib.mlab.vector_lengths" title="matplotlib.mlab.vector_lengths"><code class="xref py py-obj docutils literal"><span class="pre">vector_lengths</span></code></a>(X[,&nbsp;P,&nbsp;axis])</td>
+<td>Finds the length of a set of vectors in <em>n</em> dimensions.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.window_hanning.html#matplotlib.mlab.window_hanning" title="matplotlib.mlab.window_hanning"><code class="xref py py-obj docutils literal"><span class="pre">window_hanning</span></code></a>(x)</td>
+<td>Return x times the hanning window of len(x).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.window_none.html#matplotlib.mlab.window_none" title="matplotlib.mlab.window_none"><code class="xref py py-obj docutils literal"><span class="pre">window_none</span></code></a>(x)</td>
+<td>No window function; simply return x.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="classes">
+<h2>29.5. Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.mlab.FormatBool.html#matplotlib.mlab.FormatBool" title="matplotlib.mlab.FormatBool"><code class="xref py py-obj docutils literal"><span class="pre">FormatBool</span></code></a></td>
+<td><p class="rubric">Methods</p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.mlab.FormatDate.html#matplotlib.mlab.FormatDate" title="matplotlib.mlab.FormatDate"><code class="xref py py-obj docutils literal"><span class="pre">FormatDate</span></code></a>(fmt)</td>
+<td><p class="rubric">Methods</p>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.mlab.FormatDatetime.html#matplotlib.mlab.FormatDatetime" title="matplotlib.mlab.FormatDatetime"><code class="xref py py-obj docutils literal"><span class="pre">FormatDatetime</span></code></a>([fmt])</td>
+<td><p class="rubric">Methods</p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.mlab.FormatFloat.html#matplotlib.mlab.FormatFloat" title="matplotlib.mlab.FormatFloat"><code class="xref py py-obj docutils literal"><span class="pre">FormatFloat</span></code></a>([precision,&nbsp;scale])</td>
+<td><p class="rubric">Methods</p>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.mlab.FormatFormatStr.html#matplotlib.mlab.FormatFormatStr" title="matplotlib.mlab.FormatFormatStr"><code class="xref py py-obj docutils literal"><span class="pre">FormatFormatStr</span></code></a>(fmt)</td>
+<td><p class="rubric">Methods</p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.mlab.FormatInt.html#matplotlib.mlab.FormatInt" title="matplotlib.mlab.FormatInt"><code class="xref py py-obj docutils literal"><span class="pre">FormatInt</span></code></a></td>
+<td><p class="rubric">Methods</p>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.mlab.FormatMillions.html#matplotlib.mlab.FormatMillions" title="matplotlib.mlab.FormatMillions"><code class="xref py py-obj docutils literal"><span class="pre">FormatMillions</span></code></a>([precision])</td>
+<td><p class="rubric">Methods</p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.mlab.FormatObj.html#matplotlib.mlab.FormatObj" title="matplotlib.mlab.FormatObj"><code class="xref py py-obj docutils literal"><span class="pre">FormatObj</span></code></a></td>
+<td><p class="rubric">Methods</p>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.mlab.FormatPercent.html#matplotlib.mlab.FormatPercent" title="matplotlib.mlab.FormatPercent"><code class="xref py py-obj docutils literal"><span class="pre">FormatPercent</span></code></a>([precision])</td>
+<td><p class="rubric">Methods</p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.mlab.FormatString.html#matplotlib.mlab.FormatString" title="matplotlib.mlab.FormatString"><code class="xref py py-obj docutils literal"><span class="pre">FormatString</span></code></a></td>
+<td><p class="rubric">Methods</p>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.mlab.FormatThousands.html#matplotlib.mlab.FormatThousands" title="matplotlib.mlab.FormatThousands"><code class="xref py py-obj docutils literal"><span class="pre">FormatThousands</span></code></a>([precision])</td>
+<td><p class="rubric">Methods</p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.mlab.GaussianKDE.html#matplotlib.mlab.GaussianKDE" title="matplotlib.mlab.GaussianKDE"><code class="xref py py-obj docutils literal"><span class="pre">GaussianKDE</span></code></a>(dataset[,&nbsp;bw_method])</td>
+<td>Representation of a kernel-density estimate using Gaussian kernels.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.mlab.PCA.html#matplotlib.mlab.PCA" title="matplotlib.mlab.PCA"><code class="xref py py-obj docutils literal"><span class="pre">PCA</span></code></a>(a[,&nbsp;standardize])</td>
+<td><p class="rubric">Methods</p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.mlab.Path.html#matplotlib.mlab.Path" title="matplotlib.mlab.Path"><code class="xref py py-obj docutils literal"><span class="pre">Path</span></code></a>(vertices[,&nbsp;codes,&nbsp;...])</td>
+<td><a class="reference internal" href="generated/matplotlib.mlab.Path.html#matplotlib.mlab.Path" title="matplotlib.mlab.Path"><code class="xref py py-class docutils literal"><span class="pre">Path</span></code></a> represents a series of possibly disconnected,</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.mlab.map.html#matplotlib.mlab.map" title="matplotlib.mlab.map"><code class="xref py py-obj docutils literal"><span class="pre">map</span></code></a></td>
+<td>alias of <code class="xref py py-class docutils literal"><span class="pre">imap</span></code></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.mlab.xrange.html#matplotlib.mlab.xrange" title="matplotlib.mlab.xrange"><code class="xref py py-obj docutils literal"><span class="pre">xrange</span></code></a></td>
+<td>xrange(start, stop[, step]) -&gt; xrange object</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.mlab.zip.html#matplotlib.mlab.zip" title="matplotlib.mlab.zip"><code class="xref py py-obj docutils literal"><span class="pre">zip</span></code></a></td>
+<td>alias of <code class="xref py py-class docutils literal"><span class="pre">izip</span></code></td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.mlab.amap.html" class="btn btn-neutral float-right" title="29.4.1. matplotlib.mlab.amap" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.mathtext.ParseFatalException.html" class="btn btn-neutral" title="28.3.4. matplotlib.mathtext.ParseFatalException" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../static/jquery.js"></script>
+      <script type="text/javascript" src="../static/underscore.js"></script>
+      <script type="text/javascript" src="../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

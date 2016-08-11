@@ -1,0 +1,431 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>9.2.17.94. matplotlib.legend.LineCollection.set_facecolors &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="9.2.17. matplotlib.legend.LineCollection" href="matplotlib.legend.LineCollection.html"/>
+        <link rel="next" title="9.2.17.95. matplotlib.legend.LineCollection.set_figure" href="matplotlib.legend.LineCollection.set_figure.html"/>
+        <link rel="prev" title="9.2.17.93. matplotlib.legend.LineCollection.set_facecolor" href="matplotlib.legend.LineCollection.set_facecolor.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.legend.html">9. matplotlib.legend</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.legend.html#functions">9.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.legend.html#classes">9.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.Artist.html">9.2.1. matplotlib.legend.Artist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.BarContainer.html">9.2.2. matplotlib.legend.BarContainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.Bbox.html">9.2.3. matplotlib.legend.Bbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.BboxBase.html">9.2.4. matplotlib.legend.BboxBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.BboxTransformFrom.html">9.2.5. matplotlib.legend.BboxTransformFrom</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.BboxTransformTo.html">9.2.6. matplotlib.legend.BboxTransformTo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.CircleCollection.html">9.2.7. matplotlib.legend.CircleCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.DraggableLegend.html">9.2.8. matplotlib.legend.DraggableLegend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.DraggableOffsetBox.html">9.2.9. matplotlib.legend.DraggableOffsetBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.DrawingArea.html">9.2.10. matplotlib.legend.DrawingArea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.ErrorbarContainer.html">9.2.11. matplotlib.legend.ErrorbarContainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.html">9.2.12. matplotlib.legend.FancyBboxPatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.FontProperties.html">9.2.13. matplotlib.legend.FontProperties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.HPacker.html">9.2.14. matplotlib.legend.HPacker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.Legend.html">9.2.15. matplotlib.legend.Legend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.Line2D.html">9.2.16. matplotlib.legend.Line2D</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="matplotlib.legend.LineCollection.html">9.2.17. matplotlib.legend.LineCollection</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.axes.html">9.2.17.1. matplotlib.legend.LineCollection.axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.mouseover.html">9.2.17.2. matplotlib.legend.LineCollection.mouseover</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.stale.html">9.2.17.3. matplotlib.legend.LineCollection.stale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.add_callback.html">9.2.17.4. matplotlib.legend.LineCollection.add_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.add_checker.html">9.2.17.5. matplotlib.legend.LineCollection.add_checker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.autoscale.html">9.2.17.6. matplotlib.legend.LineCollection.autoscale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.autoscale_None.html">9.2.17.7. matplotlib.legend.LineCollection.autoscale_None</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.changed.html">9.2.17.8. matplotlib.legend.LineCollection.changed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.check_update.html">9.2.17.9. matplotlib.legend.LineCollection.check_update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.contains.html">9.2.17.10. matplotlib.legend.LineCollection.contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.convert_xunits.html">9.2.17.11. matplotlib.legend.LineCollection.convert_xunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.convert_yunits.html">9.2.17.12. matplotlib.legend.LineCollection.convert_yunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.draw.html">9.2.17.13. matplotlib.legend.LineCollection.draw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.findobj.html">9.2.17.14. matplotlib.legend.LineCollection.findobj</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.format_cursor_data.html">9.2.17.15. matplotlib.legend.LineCollection.format_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_agg_filter.html">9.2.17.16. matplotlib.legend.LineCollection.get_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_alpha.html">9.2.17.17. matplotlib.legend.LineCollection.get_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_animated.html">9.2.17.18. matplotlib.legend.LineCollection.get_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_array.html">9.2.17.19. matplotlib.legend.LineCollection.get_array</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_axes.html">9.2.17.20. matplotlib.legend.LineCollection.get_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_children.html">9.2.17.21. matplotlib.legend.LineCollection.get_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_clim.html">9.2.17.22. matplotlib.legend.LineCollection.get_clim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_clip_box.html">9.2.17.23. matplotlib.legend.LineCollection.get_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_clip_on.html">9.2.17.24. matplotlib.legend.LineCollection.get_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_clip_path.html">9.2.17.25. matplotlib.legend.LineCollection.get_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_cmap.html">9.2.17.26. matplotlib.legend.LineCollection.get_cmap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_color.html">9.2.17.27. matplotlib.legend.LineCollection.get_color</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_colors.html">9.2.17.28. matplotlib.legend.LineCollection.get_colors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_contains.html">9.2.17.29. matplotlib.legend.LineCollection.get_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_cursor_data.html">9.2.17.30. matplotlib.legend.LineCollection.get_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_dashes.html">9.2.17.31. matplotlib.legend.LineCollection.get_dashes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_datalim.html">9.2.17.32. matplotlib.legend.LineCollection.get_datalim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_edgecolor.html">9.2.17.33. matplotlib.legend.LineCollection.get_edgecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_edgecolors.html">9.2.17.34. matplotlib.legend.LineCollection.get_edgecolors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_facecolor.html">9.2.17.35. matplotlib.legend.LineCollection.get_facecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_facecolors.html">9.2.17.36. matplotlib.legend.LineCollection.get_facecolors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_figure.html">9.2.17.37. matplotlib.legend.LineCollection.get_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_fill.html">9.2.17.38. matplotlib.legend.LineCollection.get_fill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_gid.html">9.2.17.39. matplotlib.legend.LineCollection.get_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_hatch.html">9.2.17.40. matplotlib.legend.LineCollection.get_hatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_label.html">9.2.17.41. matplotlib.legend.LineCollection.get_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_linestyle.html">9.2.17.42. matplotlib.legend.LineCollection.get_linestyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_linestyles.html">9.2.17.43. matplotlib.legend.LineCollection.get_linestyles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_linewidth.html">9.2.17.44. matplotlib.legend.LineCollection.get_linewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_linewidths.html">9.2.17.45. matplotlib.legend.LineCollection.get_linewidths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_offset_position.html">9.2.17.46. matplotlib.legend.LineCollection.get_offset_position</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_offset_transform.html">9.2.17.47. matplotlib.legend.LineCollection.get_offset_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_offsets.html">9.2.17.48. matplotlib.legend.LineCollection.get_offsets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_path_effects.html">9.2.17.49. matplotlib.legend.LineCollection.get_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_paths.html">9.2.17.50. matplotlib.legend.LineCollection.get_paths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_picker.html">9.2.17.51. matplotlib.legend.LineCollection.get_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_pickradius.html">9.2.17.52. matplotlib.legend.LineCollection.get_pickradius</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_rasterized.html">9.2.17.53. matplotlib.legend.LineCollection.get_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_segments.html">9.2.17.54. matplotlib.legend.LineCollection.get_segments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_sketch_params.html">9.2.17.55. matplotlib.legend.LineCollection.get_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_snap.html">9.2.17.56. matplotlib.legend.LineCollection.get_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_transform.html">9.2.17.57. matplotlib.legend.LineCollection.get_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_transformed_clip_path_and_affine.html">9.2.17.58. matplotlib.legend.LineCollection.get_transformed_clip_path_and_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_transforms.html">9.2.17.59. matplotlib.legend.LineCollection.get_transforms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_url.html">9.2.17.60. matplotlib.legend.LineCollection.get_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_urls.html">9.2.17.61. matplotlib.legend.LineCollection.get_urls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_visible.html">9.2.17.62. matplotlib.legend.LineCollection.get_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_window_extent.html">9.2.17.63. matplotlib.legend.LineCollection.get_window_extent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.get_zorder.html">9.2.17.64. matplotlib.legend.LineCollection.get_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.have_units.html">9.2.17.65. matplotlib.legend.LineCollection.have_units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.hitlist.html">9.2.17.66. matplotlib.legend.LineCollection.hitlist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.is_figure_set.html">9.2.17.67. matplotlib.legend.LineCollection.is_figure_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.is_transform_set.html">9.2.17.68. matplotlib.legend.LineCollection.is_transform_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.pchanged.html">9.2.17.69. matplotlib.legend.LineCollection.pchanged</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.pick.html">9.2.17.70. matplotlib.legend.LineCollection.pick</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.pickable.html">9.2.17.71. matplotlib.legend.LineCollection.pickable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.properties.html">9.2.17.72. matplotlib.legend.LineCollection.properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.remove.html">9.2.17.73. matplotlib.legend.LineCollection.remove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.remove_callback.html">9.2.17.74. matplotlib.legend.LineCollection.remove_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set.html">9.2.17.75. matplotlib.legend.LineCollection.set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_agg_filter.html">9.2.17.76. matplotlib.legend.LineCollection.set_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_alpha.html">9.2.17.77. matplotlib.legend.LineCollection.set_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_animated.html">9.2.17.78. matplotlib.legend.LineCollection.set_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_antialiased.html">9.2.17.79. matplotlib.legend.LineCollection.set_antialiased</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_antialiaseds.html">9.2.17.80. matplotlib.legend.LineCollection.set_antialiaseds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_array.html">9.2.17.81. matplotlib.legend.LineCollection.set_array</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_axes.html">9.2.17.82. matplotlib.legend.LineCollection.set_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_clim.html">9.2.17.83. matplotlib.legend.LineCollection.set_clim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_clip_box.html">9.2.17.84. matplotlib.legend.LineCollection.set_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_clip_on.html">9.2.17.85. matplotlib.legend.LineCollection.set_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_clip_path.html">9.2.17.86. matplotlib.legend.LineCollection.set_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_cmap.html">9.2.17.87. matplotlib.legend.LineCollection.set_cmap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_color.html">9.2.17.88. matplotlib.legend.LineCollection.set_color</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_contains.html">9.2.17.89. matplotlib.legend.LineCollection.set_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_dashes.html">9.2.17.90. matplotlib.legend.LineCollection.set_dashes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_edgecolor.html">9.2.17.91. matplotlib.legend.LineCollection.set_edgecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_edgecolors.html">9.2.17.92. matplotlib.legend.LineCollection.set_edgecolors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_facecolor.html">9.2.17.93. matplotlib.legend.LineCollection.set_facecolor</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">9.2.17.94. matplotlib.legend.LineCollection.set_facecolors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_figure.html">9.2.17.95. matplotlib.legend.LineCollection.set_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_gid.html">9.2.17.96. matplotlib.legend.LineCollection.set_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_hatch.html">9.2.17.97. matplotlib.legend.LineCollection.set_hatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_label.html">9.2.17.98. matplotlib.legend.LineCollection.set_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_linestyle.html">9.2.17.99. matplotlib.legend.LineCollection.set_linestyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_linestyles.html">9.2.17.100. matplotlib.legend.LineCollection.set_linestyles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_linewidth.html">9.2.17.101. matplotlib.legend.LineCollection.set_linewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_linewidths.html">9.2.17.102. matplotlib.legend.LineCollection.set_linewidths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_lw.html">9.2.17.103. matplotlib.legend.LineCollection.set_lw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_norm.html">9.2.17.104. matplotlib.legend.LineCollection.set_norm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_offset_position.html">9.2.17.105. matplotlib.legend.LineCollection.set_offset_position</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_offsets.html">9.2.17.106. matplotlib.legend.LineCollection.set_offsets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_path_effects.html">9.2.17.107. matplotlib.legend.LineCollection.set_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_paths.html">9.2.17.108. matplotlib.legend.LineCollection.set_paths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_picker.html">9.2.17.109. matplotlib.legend.LineCollection.set_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_pickradius.html">9.2.17.110. matplotlib.legend.LineCollection.set_pickradius</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_rasterized.html">9.2.17.111. matplotlib.legend.LineCollection.set_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_segments.html">9.2.17.112. matplotlib.legend.LineCollection.set_segments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_sketch_params.html">9.2.17.113. matplotlib.legend.LineCollection.set_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_snap.html">9.2.17.114. matplotlib.legend.LineCollection.set_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_transform.html">9.2.17.115. matplotlib.legend.LineCollection.set_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_url.html">9.2.17.116. matplotlib.legend.LineCollection.set_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_urls.html">9.2.17.117. matplotlib.legend.LineCollection.set_urls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_verts.html">9.2.17.118. matplotlib.legend.LineCollection.set_verts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_visible.html">9.2.17.119. matplotlib.legend.LineCollection.set_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.set_zorder.html">9.2.17.120. matplotlib.legend.LineCollection.set_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.to_rgba.html">9.2.17.121. matplotlib.legend.LineCollection.to_rgba</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.update.html">9.2.17.122. matplotlib.legend.LineCollection.update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.update_from.html">9.2.17.123. matplotlib.legend.LineCollection.update_from</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.LineCollection.update_scalarmappable.html">9.2.17.124. matplotlib.legend.LineCollection.update_scalarmappable</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.Patch.html">9.2.18. matplotlib.legend.Patch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.PathCollection.html">9.2.19. matplotlib.legend.PathCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.PolyCollection.html">9.2.20. matplotlib.legend.PolyCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.Rectangle.html">9.2.21. matplotlib.legend.Rectangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.RegularPolyCollection.html">9.2.22. matplotlib.legend.RegularPolyCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.Shadow.html">9.2.23. matplotlib.legend.Shadow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.StemContainer.html">9.2.24. matplotlib.legend.StemContainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.TextArea.html">9.2.25. matplotlib.legend.TextArea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.TransformedBbox.html">9.2.26. matplotlib.legend.TransformedBbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.VPacker.html">9.2.27. matplotlib.legend.VPacker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.silent_list.html">9.2.28. matplotlib.legend.silent_list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.xrange.html">9.2.29. matplotlib.legend.xrange</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../freq.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.legend.html">9. matplotlib.legend</a> &raquo;</li>
+        
+          <li><a href="matplotlib.legend.LineCollection.html">9.2.17. matplotlib.legend.LineCollection</a> &raquo;</li>
+        
+      <li>9.2.17.94. matplotlib.legend.LineCollection.set_facecolors</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.legend.LineCollection.set_facecolors.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-legend-linecollection-set-facecolors">
+<h1>9.2.17.94. matplotlib.legend.LineCollection.set_facecolors<a class="headerlink" href="#matplotlib-legend-linecollection-set-facecolors" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="matplotlib.legend.LineCollection.set_facecolors">
+<code class="descclassname">LineCollection.</code><code class="descname">set_facecolors</code><span class="sig-paren">(</span><em>c</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.legend.LineCollection.set_facecolors" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias for set_facecolor</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.legend.LineCollection.set_figure.html" class="btn btn-neutral float-right" title="9.2.17.95. matplotlib.legend.LineCollection.set_figure" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.legend.LineCollection.set_facecolor.html" class="btn btn-neutral" title="9.2.17.93. matplotlib.legend.LineCollection.set_facecolor" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

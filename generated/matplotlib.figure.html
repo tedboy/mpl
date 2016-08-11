@@ -1,0 +1,416 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>8. matplotlib.figure &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../index.html"/>
+        <link rel="up" title="&lt;no title&gt;" href="../freq.html"/>
+        <link rel="next" title="8.1.1. matplotlib.figure.allow_rasterization" href="matplotlib.figure.allow_rasterization.html"/>
+        <link rel="prev" title="7.2.12. matplotlib.colors.zip" href="generated/matplotlib.colors.zip.html"/> 
+
+  
+  <script src="../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">8. matplotlib.figure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#functions">8.1. Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.allow_rasterization.html">8.1.1. matplotlib.figure.allow_rasterization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.figaspect.html">8.1.2. matplotlib.figure.figaspect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.get_projection_names.html">8.1.3. matplotlib.figure.get_projection_names</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.iterable.html">8.1.4. matplotlib.figure.iterable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.process_projection_requirements.html">8.1.5. matplotlib.figure.process_projection_requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.subplot_class_factory.html">8.1.6. matplotlib.figure.subplot_class_factory</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#classes">8.2. Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.figure.Affine2D.html">8.2.1. matplotlib.figure.Affine2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.figure.Artist.html">8.2.2. matplotlib.figure.Artist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.figure.Axes.html">8.2.3. matplotlib.figure.Axes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.figure.AxesStack.html">8.2.4. matplotlib.figure.AxesStack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.figure.Bbox.html">8.2.5. matplotlib.figure.Bbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.figure.BboxTransformTo.html">8.2.6. matplotlib.figure.BboxTransformTo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.figure.BlockingKeyMouseInput.html">8.2.7. matplotlib.figure.BlockingKeyMouseInput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.figure.BlockingMouseInput.html">8.2.8. matplotlib.figure.BlockingMouseInput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.figure.Figure.html">8.2.9. matplotlib.figure.Figure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.figure.FigureImage.html">8.2.10. matplotlib.figure.FigureImage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.figure.Legend.html">8.2.11. matplotlib.figure.Legend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.figure.Rectangle.html">8.2.12. matplotlib.figure.Rectangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.figure.Stack.html">8.2.13. matplotlib.figure.Stack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.figure.SubplotBase.html">8.2.14. matplotlib.figure.SubplotBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.figure.SubplotParams.html">8.2.15. matplotlib.figure.SubplotParams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.figure.Text.html">8.2.16. matplotlib.figure.Text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.figure.TransformedBbox.html">8.2.17. matplotlib.figure.TransformedBbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.figure.itemgetter.html">8.2.18. matplotlib.figure.itemgetter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#exceptions">8.3. Exceptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.NonGuiException.html">8.3.1. matplotlib.figure.NonGuiException</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../freq.html">&lt;no title&gt;</a> &raquo;</li>
+        
+      <li>8. matplotlib.figure</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../sources/generated/matplotlib.figure.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-matplotlib.figure">
+<span id="matplotlib-figure"></span><h1>8. matplotlib.figure<a class="headerlink" href="#module-matplotlib.figure" title="Permalink to this headline">¶</a></h1>
+<p>The figure module provides the top-level
+<a class="reference internal" href="generated/matplotlib.artist.Artist.html#matplotlib.artist.Artist" title="matplotlib.artist.Artist"><code class="xref py py-class docutils literal"><span class="pre">Artist</span></code></a>, the <a class="reference internal" href="generated/matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure"><code class="xref py py-class docutils literal"><span class="pre">Figure</span></code></a>, which
+contains all the plot elements.  The following classes are defined</p>
+<dl class="docutils">
+<dt><a class="reference internal" href="generated/matplotlib.figure.SubplotParams.html#matplotlib.figure.SubplotParams" title="matplotlib.figure.SubplotParams"><code class="xref py py-class docutils literal"><span class="pre">SubplotParams</span></code></a></dt>
+<dd>control the default spacing of the subplots</dd>
+<dt><a class="reference internal" href="generated/matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure"><code class="xref py py-class docutils literal"><span class="pre">Figure</span></code></a></dt>
+<dd>top level container for all plot elements</dd>
+</dl>
+<div class="section" id="functions">
+<h2>8.1. Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.figure.allow_rasterization.html#matplotlib.figure.allow_rasterization" title="matplotlib.figure.allow_rasterization"><code class="xref py py-obj docutils literal"><span class="pre">allow_rasterization</span></code></a>(draw)</td>
+<td>Decorator for Artist.draw method.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.figure.figaspect.html#matplotlib.figure.figaspect" title="matplotlib.figure.figaspect"><code class="xref py py-obj docutils literal"><span class="pre">figaspect</span></code></a>(arg)</td>
+<td>Create a figure with specified aspect ratio.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.figure.get_projection_names.html#matplotlib.figure.get_projection_names" title="matplotlib.figure.get_projection_names"><code class="xref py py-obj docutils literal"><span class="pre">get_projection_names</span></code></a>()</td>
+<td>Get a list of acceptable projection names.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.figure.iterable.html#matplotlib.figure.iterable" title="matplotlib.figure.iterable"><code class="xref py py-obj docutils literal"><span class="pre">iterable</span></code></a>(obj)</td>
+<td>return true if <em>obj</em> is iterable</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.figure.process_projection_requirements.html#matplotlib.figure.process_projection_requirements" title="matplotlib.figure.process_projection_requirements"><code class="xref py py-obj docutils literal"><span class="pre">process_projection_requirements</span></code></a>(figure,&nbsp;...)</td>
+<td>Handle the args/kwargs to for add_axes/add_subplot/gca,</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.figure.subplot_class_factory.html#matplotlib.figure.subplot_class_factory" title="matplotlib.figure.subplot_class_factory"><code class="xref py py-obj docutils literal"><span class="pre">subplot_class_factory</span></code></a>([axes_class])</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="classes">
+<h2>8.2. Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.figure.Affine2D.html#matplotlib.figure.Affine2D" title="matplotlib.figure.Affine2D"><code class="xref py py-obj docutils literal"><span class="pre">Affine2D</span></code></a>([matrix])</td>
+<td>A mutable 2D affine transformation.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.figure.Artist.html#matplotlib.figure.Artist" title="matplotlib.figure.Artist"><code class="xref py py-obj docutils literal"><span class="pre">Artist</span></code></a>()</td>
+<td>Abstract base class for someone who renders into a <code class="xref py py-class docutils literal"><span class="pre">FigureCanvas</span></code>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.figure.Axes.html#matplotlib.figure.Axes" title="matplotlib.figure.Axes"><code class="xref py py-obj docutils literal"><span class="pre">Axes</span></code></a>(fig,&nbsp;rect[,&nbsp;axisbg,&nbsp;frameon,&nbsp;sharex,&nbsp;...])</td>
+<td>The <a class="reference internal" href="generated/matplotlib.figure.Axes.html#matplotlib.figure.Axes" title="matplotlib.figure.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> contains most of the figure elements: <a class="reference internal" href="generated/matplotlib.axis.Axis.html#matplotlib.axis.Axis" title="matplotlib.axis.Axis"><code class="xref py py-class docutils literal"><span class="pre">Axis</span></code></a>, <a class="reference internal" href="generated/matplotlib.axis.Tick.html#matplotlib.axis.Tick" title="matplotlib.axis.Tick"><code class="xref py py-class docutils literal"><span class="pre">Tick</span></code></a>, <a class="reference internal" href="generated/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D" title="matplotlib.lines.Line2D"><code class="xref py py-class docutils literal"><span class="pre">Line2D</span></code></a>, <a class="reference internal" href="generated/matplotlib.text.Text.html#matplotlib.text.Text" title="matplotlib.text.Text"><code class="xref py py-class docutils literal"><span class="pre">Text</span></code></a>, <a class="reference internal" href="generated/matplotlib.patches.Polygon.html#matplotlib.patches.Polygon" title="matplotlib.patches.Polygon"><code class="xref py py-class docutils literal"><span class="pre">Polygon</span></code></a>, etc., and sets the coordinate system.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.figure.AxesStack.html#matplotlib.figure.AxesStack" title="matplotlib.figure.AxesStack"><code class="xref py py-obj docutils literal"><span class="pre">AxesStack</span></code></a>()</td>
+<td>Specialization of the Stack to handle all tracking of Axes in a Figure.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.figure.Bbox.html#matplotlib.figure.Bbox" title="matplotlib.figure.Bbox"><code class="xref py py-obj docutils literal"><span class="pre">Bbox</span></code></a>(points,&nbsp;**kwargs)</td>
+<td>A mutable bounding box.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.figure.BboxTransformTo.html#matplotlib.figure.BboxTransformTo" title="matplotlib.figure.BboxTransformTo"><code class="xref py py-obj docutils literal"><span class="pre">BboxTransformTo</span></code></a>(boxout,&nbsp;**kwargs)</td>
+<td><a class="reference internal" href="generated/matplotlib.figure.BboxTransformTo.html#matplotlib.figure.BboxTransformTo" title="matplotlib.figure.BboxTransformTo"><code class="xref py py-class docutils literal"><span class="pre">BboxTransformTo</span></code></a> is a transformation that linearly</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.figure.BlockingKeyMouseInput.html#matplotlib.figure.BlockingKeyMouseInput" title="matplotlib.figure.BlockingKeyMouseInput"><code class="xref py py-obj docutils literal"><span class="pre">BlockingKeyMouseInput</span></code></a>(fig)</td>
+<td>Class that creates a callable object to retrieve a single mouse or</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.figure.BlockingMouseInput.html#matplotlib.figure.BlockingMouseInput" title="matplotlib.figure.BlockingMouseInput"><code class="xref py py-obj docutils literal"><span class="pre">BlockingMouseInput</span></code></a>(fig[,&nbsp;mouse_add,&nbsp;...])</td>
+<td>Class that creates a callable object to retrieve mouse clicks in a blocking way.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure"><code class="xref py py-obj docutils literal"><span class="pre">Figure</span></code></a>([figsize,&nbsp;dpi,&nbsp;facecolor,&nbsp;edgecolor,&nbsp;...])</td>
+<td>The Figure instance supports callbacks through a <em>callbacks</em> attribute which is a <a class="reference internal" href="generated/matplotlib.cbook.CallbackRegistry.html#matplotlib.cbook.CallbackRegistry" title="matplotlib.cbook.CallbackRegistry"><code class="xref py py-class docutils literal"><span class="pre">matplotlib.cbook.CallbackRegistry</span></code></a> instance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.figure.FigureImage.html#matplotlib.figure.FigureImage" title="matplotlib.figure.FigureImage"><code class="xref py py-obj docutils literal"><span class="pre">FigureImage</span></code></a>(fig[,&nbsp;cmap,&nbsp;norm,&nbsp;offsetx,&nbsp;...])</td>
+<td><p class="rubric">Attributes</p>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.figure.Legend.html#matplotlib.figure.Legend" title="matplotlib.figure.Legend"><code class="xref py py-obj docutils literal"><span class="pre">Legend</span></code></a>(parent,&nbsp;handles,&nbsp;labels[,&nbsp;loc,&nbsp;...])</td>
+<td>Place a legend on the axes at location loc.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.figure.Rectangle.html#matplotlib.figure.Rectangle" title="matplotlib.figure.Rectangle"><code class="xref py py-obj docutils literal"><span class="pre">Rectangle</span></code></a>(xy,&nbsp;width,&nbsp;height[,&nbsp;angle])</td>
+<td>Draw a rectangle with lower left at <em>xy</em> = (<em>x</em>, <em>y</em>) with specified <em>width</em> and <em>height</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.figure.Stack.html#matplotlib.figure.Stack" title="matplotlib.figure.Stack"><code class="xref py py-obj docutils literal"><span class="pre">Stack</span></code></a>([default])</td>
+<td>Implement a stack where elements can be pushed on and you can move back and forth.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.figure.SubplotBase.html#matplotlib.figure.SubplotBase" title="matplotlib.figure.SubplotBase"><code class="xref py py-obj docutils literal"><span class="pre">SubplotBase</span></code></a>(fig,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Base class for subplots, which are <a class="reference internal" href="generated/matplotlib.figure.Axes.html#matplotlib.figure.Axes" title="matplotlib.figure.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instances with additional methods to facilitate generating and manipulating a set of <a class="reference internal" href="generated/matplotlib.figure.Axes.html#matplotlib.figure.Axes" title="matplotlib.figure.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> within a figure.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.figure.SubplotParams.html#matplotlib.figure.SubplotParams" title="matplotlib.figure.SubplotParams"><code class="xref py py-obj docutils literal"><span class="pre">SubplotParams</span></code></a>([left,&nbsp;bottom,&nbsp;right,&nbsp;top,&nbsp;...])</td>
+<td>A class to hold the parameters for a subplot</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.figure.Text.html#matplotlib.figure.Text" title="matplotlib.figure.Text"><code class="xref py py-obj docutils literal"><span class="pre">Text</span></code></a>([x,&nbsp;y,&nbsp;text,&nbsp;color,&nbsp;verticalalignment,&nbsp;...])</td>
+<td>Handle storing and drawing of text in window or data coordinates.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.figure.TransformedBbox.html#matplotlib.figure.TransformedBbox" title="matplotlib.figure.TransformedBbox"><code class="xref py py-obj docutils literal"><span class="pre">TransformedBbox</span></code></a>(bbox,&nbsp;transform,&nbsp;**kwargs)</td>
+<td>A <a class="reference internal" href="generated/matplotlib.figure.Bbox.html#matplotlib.figure.Bbox" title="matplotlib.figure.Bbox"><code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code></a> that is automatically transformed by a given transform.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.figure.itemgetter.html#matplotlib.figure.itemgetter" title="matplotlib.figure.itemgetter"><code class="xref py py-obj docutils literal"><span class="pre">itemgetter</span></code></a></td>
+<td>itemgetter(item, ...) &#8211;&gt; itemgetter object</td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="exceptions">
+<h2>8.3. Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.figure.NonGuiException.html#matplotlib.figure.NonGuiException" title="matplotlib.figure.NonGuiException"><code class="xref py py-obj docutils literal"><span class="pre">NonGuiException</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.figure.allow_rasterization.html" class="btn btn-neutral float-right" title="8.1.1. matplotlib.figure.allow_rasterization" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="generated/matplotlib.colors.zip.html" class="btn btn-neutral" title="7.2.12. matplotlib.colors.zip" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../static/jquery.js"></script>
+      <script type="text/javascript" src="../static/underscore.js"></script>
+      <script type="text/javascript" src="../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,422 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>21.2.14.111. matplotlib.collections.TriMesh.set_snap &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="21.2.14. matplotlib.collections.TriMesh" href="matplotlib.collections.TriMesh.html"/>
+        <link rel="next" title="21.2.14.112. matplotlib.collections.TriMesh.set_transform" href="matplotlib.collections.TriMesh.set_transform.html"/>
+        <link rel="prev" title="21.2.14.110. matplotlib.collections.TriMesh.set_sketch_params" href="matplotlib.collections.TriMesh.set_sketch_params.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.collections.html">21. matplotlib.collections</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.collections.html#functions">21.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.collections.html#classes">21.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.AsteriskPolygonCollection.html">21.2.1. matplotlib.collections.AsteriskPolygonCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.BrokenBarHCollection.html">21.2.2. matplotlib.collections.BrokenBarHCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.CircleCollection.html">21.2.3. matplotlib.collections.CircleCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.Collection.html">21.2.4. matplotlib.collections.Collection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.EllipseCollection.html">21.2.5. matplotlib.collections.EllipseCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.EventCollection.html">21.2.6. matplotlib.collections.EventCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.LineCollection.html">21.2.7. matplotlib.collections.LineCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.PatchCollection.html">21.2.8. matplotlib.collections.PatchCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.PathCollection.html">21.2.9. matplotlib.collections.PathCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.PolyCollection.html">21.2.10. matplotlib.collections.PolyCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.QuadMesh.html">21.2.11. matplotlib.collections.QuadMesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.RegularPolyCollection.html">21.2.12. matplotlib.collections.RegularPolyCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.StarPolygonCollection.html">21.2.13. matplotlib.collections.StarPolygonCollection</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="matplotlib.collections.TriMesh.html">21.2.14. matplotlib.collections.TriMesh</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.axes.html">21.2.14.1. matplotlib.collections.TriMesh.axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.mouseover.html">21.2.14.2. matplotlib.collections.TriMesh.mouseover</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.stale.html">21.2.14.3. matplotlib.collections.TriMesh.stale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.add_callback.html">21.2.14.4. matplotlib.collections.TriMesh.add_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.add_checker.html">21.2.14.5. matplotlib.collections.TriMesh.add_checker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.autoscale.html">21.2.14.6. matplotlib.collections.TriMesh.autoscale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.autoscale_None.html">21.2.14.7. matplotlib.collections.TriMesh.autoscale_None</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.changed.html">21.2.14.8. matplotlib.collections.TriMesh.changed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.check_update.html">21.2.14.9. matplotlib.collections.TriMesh.check_update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.contains.html">21.2.14.10. matplotlib.collections.TriMesh.contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.convert_mesh_to_paths.html">21.2.14.11. matplotlib.collections.TriMesh.convert_mesh_to_paths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.convert_xunits.html">21.2.14.12. matplotlib.collections.TriMesh.convert_xunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.convert_yunits.html">21.2.14.13. matplotlib.collections.TriMesh.convert_yunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.draw.html">21.2.14.14. matplotlib.collections.TriMesh.draw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.findobj.html">21.2.14.15. matplotlib.collections.TriMesh.findobj</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.format_cursor_data.html">21.2.14.16. matplotlib.collections.TriMesh.format_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_agg_filter.html">21.2.14.17. matplotlib.collections.TriMesh.get_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_alpha.html">21.2.14.18. matplotlib.collections.TriMesh.get_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_animated.html">21.2.14.19. matplotlib.collections.TriMesh.get_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_array.html">21.2.14.20. matplotlib.collections.TriMesh.get_array</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_axes.html">21.2.14.21. matplotlib.collections.TriMesh.get_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_children.html">21.2.14.22. matplotlib.collections.TriMesh.get_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_clim.html">21.2.14.23. matplotlib.collections.TriMesh.get_clim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_clip_box.html">21.2.14.24. matplotlib.collections.TriMesh.get_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_clip_on.html">21.2.14.25. matplotlib.collections.TriMesh.get_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_clip_path.html">21.2.14.26. matplotlib.collections.TriMesh.get_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_cmap.html">21.2.14.27. matplotlib.collections.TriMesh.get_cmap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_contains.html">21.2.14.28. matplotlib.collections.TriMesh.get_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_cursor_data.html">21.2.14.29. matplotlib.collections.TriMesh.get_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_dashes.html">21.2.14.30. matplotlib.collections.TriMesh.get_dashes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_datalim.html">21.2.14.31. matplotlib.collections.TriMesh.get_datalim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_edgecolor.html">21.2.14.32. matplotlib.collections.TriMesh.get_edgecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_edgecolors.html">21.2.14.33. matplotlib.collections.TriMesh.get_edgecolors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_facecolor.html">21.2.14.34. matplotlib.collections.TriMesh.get_facecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_facecolors.html">21.2.14.35. matplotlib.collections.TriMesh.get_facecolors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_figure.html">21.2.14.36. matplotlib.collections.TriMesh.get_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_fill.html">21.2.14.37. matplotlib.collections.TriMesh.get_fill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_gid.html">21.2.14.38. matplotlib.collections.TriMesh.get_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_hatch.html">21.2.14.39. matplotlib.collections.TriMesh.get_hatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_label.html">21.2.14.40. matplotlib.collections.TriMesh.get_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_linestyle.html">21.2.14.41. matplotlib.collections.TriMesh.get_linestyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_linestyles.html">21.2.14.42. matplotlib.collections.TriMesh.get_linestyles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_linewidth.html">21.2.14.43. matplotlib.collections.TriMesh.get_linewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_linewidths.html">21.2.14.44. matplotlib.collections.TriMesh.get_linewidths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_offset_position.html">21.2.14.45. matplotlib.collections.TriMesh.get_offset_position</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_offset_transform.html">21.2.14.46. matplotlib.collections.TriMesh.get_offset_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_offsets.html">21.2.14.47. matplotlib.collections.TriMesh.get_offsets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_path_effects.html">21.2.14.48. matplotlib.collections.TriMesh.get_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_paths.html">21.2.14.49. matplotlib.collections.TriMesh.get_paths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_picker.html">21.2.14.50. matplotlib.collections.TriMesh.get_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_pickradius.html">21.2.14.51. matplotlib.collections.TriMesh.get_pickradius</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_rasterized.html">21.2.14.52. matplotlib.collections.TriMesh.get_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_sketch_params.html">21.2.14.53. matplotlib.collections.TriMesh.get_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_snap.html">21.2.14.54. matplotlib.collections.TriMesh.get_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_transform.html">21.2.14.55. matplotlib.collections.TriMesh.get_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_transformed_clip_path_and_affine.html">21.2.14.56. matplotlib.collections.TriMesh.get_transformed_clip_path_and_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_transforms.html">21.2.14.57. matplotlib.collections.TriMesh.get_transforms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_url.html">21.2.14.58. matplotlib.collections.TriMesh.get_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_urls.html">21.2.14.59. matplotlib.collections.TriMesh.get_urls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_visible.html">21.2.14.60. matplotlib.collections.TriMesh.get_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_window_extent.html">21.2.14.61. matplotlib.collections.TriMesh.get_window_extent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.get_zorder.html">21.2.14.62. matplotlib.collections.TriMesh.get_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.have_units.html">21.2.14.63. matplotlib.collections.TriMesh.have_units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.hitlist.html">21.2.14.64. matplotlib.collections.TriMesh.hitlist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.is_figure_set.html">21.2.14.65. matplotlib.collections.TriMesh.is_figure_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.is_transform_set.html">21.2.14.66. matplotlib.collections.TriMesh.is_transform_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.pchanged.html">21.2.14.67. matplotlib.collections.TriMesh.pchanged</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.pick.html">21.2.14.68. matplotlib.collections.TriMesh.pick</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.pickable.html">21.2.14.69. matplotlib.collections.TriMesh.pickable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.properties.html">21.2.14.70. matplotlib.collections.TriMesh.properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.remove.html">21.2.14.71. matplotlib.collections.TriMesh.remove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.remove_callback.html">21.2.14.72. matplotlib.collections.TriMesh.remove_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set.html">21.2.14.73. matplotlib.collections.TriMesh.set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_agg_filter.html">21.2.14.74. matplotlib.collections.TriMesh.set_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_alpha.html">21.2.14.75. matplotlib.collections.TriMesh.set_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_animated.html">21.2.14.76. matplotlib.collections.TriMesh.set_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_antialiased.html">21.2.14.77. matplotlib.collections.TriMesh.set_antialiased</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_antialiaseds.html">21.2.14.78. matplotlib.collections.TriMesh.set_antialiaseds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_array.html">21.2.14.79. matplotlib.collections.TriMesh.set_array</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_axes.html">21.2.14.80. matplotlib.collections.TriMesh.set_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_clim.html">21.2.14.81. matplotlib.collections.TriMesh.set_clim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_clip_box.html">21.2.14.82. matplotlib.collections.TriMesh.set_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_clip_on.html">21.2.14.83. matplotlib.collections.TriMesh.set_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_clip_path.html">21.2.14.84. matplotlib.collections.TriMesh.set_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_cmap.html">21.2.14.85. matplotlib.collections.TriMesh.set_cmap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_color.html">21.2.14.86. matplotlib.collections.TriMesh.set_color</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_contains.html">21.2.14.87. matplotlib.collections.TriMesh.set_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_dashes.html">21.2.14.88. matplotlib.collections.TriMesh.set_dashes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_edgecolor.html">21.2.14.89. matplotlib.collections.TriMesh.set_edgecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_edgecolors.html">21.2.14.90. matplotlib.collections.TriMesh.set_edgecolors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_facecolor.html">21.2.14.91. matplotlib.collections.TriMesh.set_facecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_facecolors.html">21.2.14.92. matplotlib.collections.TriMesh.set_facecolors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_figure.html">21.2.14.93. matplotlib.collections.TriMesh.set_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_gid.html">21.2.14.94. matplotlib.collections.TriMesh.set_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_hatch.html">21.2.14.95. matplotlib.collections.TriMesh.set_hatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_label.html">21.2.14.96. matplotlib.collections.TriMesh.set_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_linestyle.html">21.2.14.97. matplotlib.collections.TriMesh.set_linestyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_linestyles.html">21.2.14.98. matplotlib.collections.TriMesh.set_linestyles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_linewidth.html">21.2.14.99. matplotlib.collections.TriMesh.set_linewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_linewidths.html">21.2.14.100. matplotlib.collections.TriMesh.set_linewidths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_lw.html">21.2.14.101. matplotlib.collections.TriMesh.set_lw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_norm.html">21.2.14.102. matplotlib.collections.TriMesh.set_norm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_offset_position.html">21.2.14.103. matplotlib.collections.TriMesh.set_offset_position</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_offsets.html">21.2.14.104. matplotlib.collections.TriMesh.set_offsets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_path_effects.html">21.2.14.105. matplotlib.collections.TriMesh.set_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_paths.html">21.2.14.106. matplotlib.collections.TriMesh.set_paths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_picker.html">21.2.14.107. matplotlib.collections.TriMesh.set_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_pickradius.html">21.2.14.108. matplotlib.collections.TriMesh.set_pickradius</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_rasterized.html">21.2.14.109. matplotlib.collections.TriMesh.set_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_sketch_params.html">21.2.14.110. matplotlib.collections.TriMesh.set_sketch_params</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">21.2.14.111. matplotlib.collections.TriMesh.set_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_transform.html">21.2.14.112. matplotlib.collections.TriMesh.set_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_url.html">21.2.14.113. matplotlib.collections.TriMesh.set_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_urls.html">21.2.14.114. matplotlib.collections.TriMesh.set_urls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_visible.html">21.2.14.115. matplotlib.collections.TriMesh.set_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.set_zorder.html">21.2.14.116. matplotlib.collections.TriMesh.set_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.to_rgba.html">21.2.14.117. matplotlib.collections.TriMesh.to_rgba</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.update.html">21.2.14.118. matplotlib.collections.TriMesh.update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.update_from.html">21.2.14.119. matplotlib.collections.TriMesh.update_from</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.TriMesh.update_scalarmappable.html">21.2.14.120. matplotlib.collections.TriMesh.update_scalarmappable</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.zip.html">21.2.15. matplotlib.collections.zip</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../infreq.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.collections.html">21. matplotlib.collections</a> &raquo;</li>
+        
+          <li><a href="matplotlib.collections.TriMesh.html">21.2.14. matplotlib.collections.TriMesh</a> &raquo;</li>
+        
+      <li>21.2.14.111. matplotlib.collections.TriMesh.set_snap</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.collections.TriMesh.set_snap.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-collections-trimesh-set-snap">
+<h1>21.2.14.111. matplotlib.collections.TriMesh.set_snap<a class="headerlink" href="#matplotlib-collections-trimesh-set-snap" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="matplotlib.collections.TriMesh.set_snap">
+<code class="descclassname">TriMesh.</code><code class="descname">set_snap</code><span class="sig-paren">(</span><em>snap</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.collections.TriMesh.set_snap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the snap setting which may be:</p>
+<blockquote>
+<div><ul class="simple">
+<li>True: snap vertices to the nearest pixel center</li>
+<li>False: leave vertices as-is</li>
+<li>None: (auto) If the path contains only rectilinear line
+segments, round to the nearest pixel center</li>
+</ul>
+</div></blockquote>
+<p>Only supported by the Agg and MacOSX backends.</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.collections.TriMesh.set_transform.html" class="btn btn-neutral float-right" title="21.2.14.112. matplotlib.collections.TriMesh.set_transform" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.collections.TriMesh.set_sketch_params.html" class="btn btn-neutral" title="21.2.14.110. matplotlib.collections.TriMesh.set_sketch_params" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

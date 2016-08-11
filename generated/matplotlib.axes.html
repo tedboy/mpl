@@ -1,0 +1,381 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3. matplotlib.axes &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../index.html"/>
+        <link rel="up" title="&lt;no title&gt;" href="../freq.html"/>
+        <link rel="next" title="3.1.1. matplotlib.axes.is_string_like" href="matplotlib.axes.is_string_like.html"/>
+        <link rel="prev" title="2.2.39.9. matplotlib.pyplot.silent_list.sort" href="generated/matplotlib.pyplot.silent_list.sort.html"/> 
+
+  
+  <script src="../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. matplotlib.axes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#functions">3.1. Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.axes.is_string_like.html">3.1.1. matplotlib.axes.is_string_like</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.axes.iterable.html">3.1.2. matplotlib.axes.iterable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.axes.reduce.html">3.1.3. matplotlib.axes.reduce</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.axes.subplot_class_factory.html">3.1.4. matplotlib.axes.subplot_class_factory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.axes.unpack_labeled_data.html">3.1.5. matplotlib.axes.unpack_labeled_data</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#classes">3.2. Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.axes.Axes.html">3.2.1. matplotlib.axes.Axes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.axes.BarContainer.html">3.2.2. matplotlib.axes.BarContainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.axes.ErrorbarContainer.html">3.2.3. matplotlib.axes.ErrorbarContainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.axes.GridSpec.html">3.2.4. matplotlib.axes.GridSpec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.axes.StemContainer.html">3.2.5. matplotlib.axes.StemContainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.axes.Subplot.html">3.2.6. matplotlib.axes.Subplot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.axes.SubplotBase.html">3.2.7. matplotlib.axes.SubplotBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.axes.SubplotSpec.html">3.2.8. matplotlib.axes.SubplotSpec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.axes.map.html">3.2.9. matplotlib.axes.map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.axes.xrange.html">3.2.10. matplotlib.axes.xrange</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.axes.zip.html">3.2.11. matplotlib.axes.zip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.axes.zip_longest.html">3.2.12. matplotlib.axes.zip_longest</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#exceptions">3.3. Exceptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.axes.mplDeprecation.html">3.3.1. matplotlib.axes.mplDeprecation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../freq.html">&lt;no title&gt;</a> &raquo;</li>
+        
+      <li>3. matplotlib.axes</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../sources/generated/matplotlib.axes.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-matplotlib.axes">
+<span id="matplotlib-axes"></span><h1>3. matplotlib.axes<a class="headerlink" href="#module-matplotlib.axes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="functions">
+<h2>3.1. Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.is_string_like.html#matplotlib.axes.is_string_like" title="matplotlib.axes.is_string_like"><code class="xref py py-obj docutils literal"><span class="pre">is_string_like</span></code></a>(obj)</td>
+<td>Return True if <em>obj</em> looks like a string</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.iterable.html#matplotlib.axes.iterable" title="matplotlib.axes.iterable"><code class="xref py py-obj docutils literal"><span class="pre">iterable</span></code></a>(obj)</td>
+<td>return true if <em>obj</em> is iterable</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.reduce.html#matplotlib.axes.reduce" title="matplotlib.axes.reduce"><code class="xref py py-obj docutils literal"><span class="pre">reduce</span></code></a>((function,&nbsp;sequence[,&nbsp;initial])&nbsp;-&gt;&nbsp;value)</td>
+<td>Apply a function of two arguments cumulatively to the items of a sequence, from left to right, so as to reduce the sequence to a single value.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.subplot_class_factory.html#matplotlib.axes.subplot_class_factory" title="matplotlib.axes.subplot_class_factory"><code class="xref py py-obj docutils literal"><span class="pre">subplot_class_factory</span></code></a>([axes_class])</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.unpack_labeled_data.html#matplotlib.axes.unpack_labeled_data" title="matplotlib.axes.unpack_labeled_data"><code class="xref py py-obj docutils literal"><span class="pre">unpack_labeled_data</span></code></a>([replace_names,&nbsp;...])</td>
+<td>A decorator to add a &#8216;data&#8217; kwarg to any a function.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="classes">
+<h2>3.2. Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-obj docutils literal"><span class="pre">Axes</span></code></a>(fig,&nbsp;rect[,&nbsp;axisbg,&nbsp;frameon,&nbsp;sharex,&nbsp;...])</td>
+<td>The <a class="reference internal" href="generated/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> contains most of the figure elements: <a class="reference internal" href="generated/matplotlib.axis.Axis.html#matplotlib.axis.Axis" title="matplotlib.axis.Axis"><code class="xref py py-class docutils literal"><span class="pre">Axis</span></code></a>, <a class="reference internal" href="generated/matplotlib.axis.Tick.html#matplotlib.axis.Tick" title="matplotlib.axis.Tick"><code class="xref py py-class docutils literal"><span class="pre">Tick</span></code></a>, <a class="reference internal" href="generated/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D" title="matplotlib.lines.Line2D"><code class="xref py py-class docutils literal"><span class="pre">Line2D</span></code></a>, <a class="reference internal" href="generated/matplotlib.text.Text.html#matplotlib.text.Text" title="matplotlib.text.Text"><code class="xref py py-class docutils literal"><span class="pre">Text</span></code></a>, <a class="reference internal" href="generated/matplotlib.patches.Polygon.html#matplotlib.patches.Polygon" title="matplotlib.patches.Polygon"><code class="xref py py-class docutils literal"><span class="pre">Polygon</span></code></a>, etc., and sets the coordinate system.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.axes.BarContainer.html#matplotlib.axes.BarContainer" title="matplotlib.axes.BarContainer"><code class="xref py py-obj docutils literal"><span class="pre">BarContainer</span></code></a>(patches[,&nbsp;errorbar])</td>
+<td><p class="rubric">Methods</p>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.axes.ErrorbarContainer.html#matplotlib.axes.ErrorbarContainer" title="matplotlib.axes.ErrorbarContainer"><code class="xref py py-obj docutils literal"><span class="pre">ErrorbarContainer</span></code></a>(lines[,&nbsp;has_xerr,&nbsp;has_yerr])</td>
+<td><p class="rubric">Methods</p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.axes.GridSpec.html#matplotlib.axes.GridSpec" title="matplotlib.axes.GridSpec"><code class="xref py py-obj docutils literal"><span class="pre">GridSpec</span></code></a>(nrows,&nbsp;ncols[,&nbsp;left,&nbsp;bottom,&nbsp;...])</td>
+<td>A class that specifies the geometry of the grid that a subplot will be placed.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.axes.StemContainer.html#matplotlib.axes.StemContainer" title="matplotlib.axes.StemContainer"><code class="xref py py-obj docutils literal"><span class="pre">StemContainer</span></code></a>(markerline_stemlines_baseline,&nbsp;...)</td>
+<td><p class="rubric">Methods</p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.axes.Subplot.html#matplotlib.axes.Subplot" title="matplotlib.axes.Subplot"><code class="xref py py-obj docutils literal"><span class="pre">Subplot</span></code></a></td>
+<td>alias of <code class="xref py py-class docutils literal"><span class="pre">AxesSubplot</span></code></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.axes.SubplotBase.html#matplotlib.axes.SubplotBase" title="matplotlib.axes.SubplotBase"><code class="xref py py-obj docutils literal"><span class="pre">SubplotBase</span></code></a>(fig,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Base class for subplots, which are <a class="reference internal" href="generated/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instances with additional methods to facilitate generating and manipulating a set of <a class="reference internal" href="generated/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> within a figure.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.axes.SubplotSpec.html#matplotlib.axes.SubplotSpec" title="matplotlib.axes.SubplotSpec"><code class="xref py py-obj docutils literal"><span class="pre">SubplotSpec</span></code></a>(gridspec,&nbsp;num1[,&nbsp;num2])</td>
+<td>specifies the location of the subplot in the given <em>GridSpec</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.axes.map.html#matplotlib.axes.map" title="matplotlib.axes.map"><code class="xref py py-obj docutils literal"><span class="pre">map</span></code></a></td>
+<td>alias of <code class="xref py py-class docutils literal"><span class="pre">imap</span></code></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.axes.xrange.html#matplotlib.axes.xrange" title="matplotlib.axes.xrange"><code class="xref py py-obj docutils literal"><span class="pre">xrange</span></code></a></td>
+<td>xrange(start, stop[, step]) -&gt; xrange object</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.axes.zip.html#matplotlib.axes.zip" title="matplotlib.axes.zip"><code class="xref py py-obj docutils literal"><span class="pre">zip</span></code></a></td>
+<td>alias of <code class="xref py py-class docutils literal"><span class="pre">izip</span></code></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.axes.zip_longest.html#matplotlib.axes.zip_longest" title="matplotlib.axes.zip_longest"><code class="xref py py-obj docutils literal"><span class="pre">zip_longest</span></code></a></td>
+<td>alias of <code class="xref py py-class docutils literal"><span class="pre">izip_longest</span></code></td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="exceptions">
+<h2>3.3. Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.mplDeprecation.html#matplotlib.axes.mplDeprecation" title="matplotlib.axes.mplDeprecation"><code class="xref py py-obj docutils literal"><span class="pre">mplDeprecation</span></code></a></td>
+<td>alias of <code class="xref py py-class docutils literal"><span class="pre">MatplotlibDeprecationWarning</span></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.axes.is_string_like.html" class="btn btn-neutral float-right" title="3.1.1. matplotlib.axes.is_string_like" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="generated/matplotlib.pyplot.silent_list.sort.html" class="btn btn-neutral" title="2.2.39.9. matplotlib.pyplot.silent_list.sort" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../static/jquery.js"></script>
+      <script type="text/javascript" src="../static/underscore.js"></script>
+      <script type="text/javascript" src="../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

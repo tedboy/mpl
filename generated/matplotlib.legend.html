@@ -1,0 +1,450 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>9. matplotlib.legend &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../index.html"/>
+        <link rel="up" title="&lt;no title&gt;" href="../freq.html"/>
+        <link rel="next" title="9.1.1. matplotlib.legend.allow_rasterization" href="matplotlib.legend.allow_rasterization.html"/>
+        <link rel="prev" title="8.3.1. matplotlib.figure.NonGuiException" href="matplotlib.figure.NonGuiException.html"/> 
+
+  
+  <script src="../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">9. matplotlib.legend</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#functions">9.1. Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.allow_rasterization.html">9.1.1. matplotlib.legend.allow_rasterization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.is_string_like.html">9.1.2. matplotlib.legend.is_string_like</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.iterable.html">9.1.3. matplotlib.legend.iterable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.safezip.html">9.1.4. matplotlib.legend.safezip</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#classes">9.2. Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.legend.Artist.html">9.2.1. matplotlib.legend.Artist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.legend.BarContainer.html">9.2.2. matplotlib.legend.BarContainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.legend.Bbox.html">9.2.3. matplotlib.legend.Bbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.legend.BboxBase.html">9.2.4. matplotlib.legend.BboxBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.legend.BboxTransformFrom.html">9.2.5. matplotlib.legend.BboxTransformFrom</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.legend.BboxTransformTo.html">9.2.6. matplotlib.legend.BboxTransformTo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.legend.CircleCollection.html">9.2.7. matplotlib.legend.CircleCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.legend.DraggableLegend.html">9.2.8. matplotlib.legend.DraggableLegend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.legend.DraggableOffsetBox.html">9.2.9. matplotlib.legend.DraggableOffsetBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.legend.DrawingArea.html">9.2.10. matplotlib.legend.DrawingArea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.legend.ErrorbarContainer.html">9.2.11. matplotlib.legend.ErrorbarContainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.legend.FancyBboxPatch.html">9.2.12. matplotlib.legend.FancyBboxPatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.legend.FontProperties.html">9.2.13. matplotlib.legend.FontProperties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.legend.HPacker.html">9.2.14. matplotlib.legend.HPacker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.legend.Legend.html">9.2.15. matplotlib.legend.Legend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.legend.Line2D.html">9.2.16. matplotlib.legend.Line2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.legend.LineCollection.html">9.2.17. matplotlib.legend.LineCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.legend.Patch.html">9.2.18. matplotlib.legend.Patch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.legend.PathCollection.html">9.2.19. matplotlib.legend.PathCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.legend.PolyCollection.html">9.2.20. matplotlib.legend.PolyCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.legend.Rectangle.html">9.2.21. matplotlib.legend.Rectangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.legend.RegularPolyCollection.html">9.2.22. matplotlib.legend.RegularPolyCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.legend.Shadow.html">9.2.23. matplotlib.legend.Shadow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.legend.StemContainer.html">9.2.24. matplotlib.legend.StemContainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.legend.TextArea.html">9.2.25. matplotlib.legend.TextArea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.legend.TransformedBbox.html">9.2.26. matplotlib.legend.TransformedBbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.legend.VPacker.html">9.2.27. matplotlib.legend.VPacker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.legend.silent_list.html">9.2.28. matplotlib.legend.silent_list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.legend.xrange.html">9.2.29. matplotlib.legend.xrange</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../freq.html">&lt;no title&gt;</a> &raquo;</li>
+        
+      <li>9. matplotlib.legend</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../sources/generated/matplotlib.legend.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-matplotlib.legend">
+<span id="matplotlib-legend"></span><h1>9. matplotlib.legend<a class="headerlink" href="#module-matplotlib.legend" title="Permalink to this headline">¶</a></h1>
+<p>The legend module defines the Legend class, which is responsible for
+drawing legends associated with axes and/or figures.</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">It is unlikely that you would ever create a Legend instance manually.
+Most users would normally create a legend via the
+<a class="reference internal" href="generated/matplotlib.axes.Axes.legend.html#matplotlib.axes.Axes.legend" title="matplotlib.axes.Axes.legend"><code class="xref py py-meth docutils literal"><span class="pre">legend()</span></code></a> function. For more details on legends
+there is also a <span class="xref std std-ref">legend guide</span>.</p>
+</div>
+<p>The Legend class can be considered as a container of legend handles
+and legend texts. Creation of corresponding legend handles from the
+plot elements in the axes or figures (e.g., lines, patches, etc.) are
+specified by the handler map, which defines the mapping between the
+plot elements and the legend handlers to be used (the default legend
+handlers are defined in the <code class="xref py py-mod docutils literal"><span class="pre">legend_handler</span></code> module).
+Note that not all kinds of artist are supported by the legend yet by default
+but it is possible to extend the legend handler&#8217;s capabilities to
+support arbitrary objects. See the <span class="xref std std-ref">legend guide</span>
+for more information.</p>
+<div class="section" id="functions">
+<h2>9.1. Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.allow_rasterization.html#matplotlib.legend.allow_rasterization" title="matplotlib.legend.allow_rasterization"><code class="xref py py-obj docutils literal"><span class="pre">allow_rasterization</span></code></a>(draw)</td>
+<td>Decorator for Artist.draw method.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.is_string_like.html#matplotlib.legend.is_string_like" title="matplotlib.legend.is_string_like"><code class="xref py py-obj docutils literal"><span class="pre">is_string_like</span></code></a>(obj)</td>
+<td>Return True if <em>obj</em> looks like a string</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.iterable.html#matplotlib.legend.iterable" title="matplotlib.legend.iterable"><code class="xref py py-obj docutils literal"><span class="pre">iterable</span></code></a>(obj)</td>
+<td>return true if <em>obj</em> is iterable</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.safezip.html#matplotlib.legend.safezip" title="matplotlib.legend.safezip"><code class="xref py py-obj docutils literal"><span class="pre">safezip</span></code></a>(*args)</td>
+<td>make sure <em>args</em> are equal len before zipping</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="classes">
+<h2>9.2. Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.legend.Artist.html#matplotlib.legend.Artist" title="matplotlib.legend.Artist"><code class="xref py py-obj docutils literal"><span class="pre">Artist</span></code></a>()</td>
+<td>Abstract base class for someone who renders into a <code class="xref py py-class docutils literal"><span class="pre">FigureCanvas</span></code>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.legend.BarContainer.html#matplotlib.legend.BarContainer" title="matplotlib.legend.BarContainer"><code class="xref py py-obj docutils literal"><span class="pre">BarContainer</span></code></a>(patches[,&nbsp;errorbar])</td>
+<td><p class="rubric">Methods</p>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.legend.Bbox.html#matplotlib.legend.Bbox" title="matplotlib.legend.Bbox"><code class="xref py py-obj docutils literal"><span class="pre">Bbox</span></code></a>(points,&nbsp;**kwargs)</td>
+<td>A mutable bounding box.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.legend.BboxBase.html#matplotlib.legend.BboxBase" title="matplotlib.legend.BboxBase"><code class="xref py py-obj docutils literal"><span class="pre">BboxBase</span></code></a>([shorthand_name])</td>
+<td>This is the base class of all bounding boxes, and provides read-only access to its data.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.legend.BboxTransformFrom.html#matplotlib.legend.BboxTransformFrom" title="matplotlib.legend.BboxTransformFrom"><code class="xref py py-obj docutils literal"><span class="pre">BboxTransformFrom</span></code></a>(boxin,&nbsp;**kwargs)</td>
+<td><a class="reference internal" href="generated/matplotlib.legend.BboxTransformFrom.html#matplotlib.legend.BboxTransformFrom" title="matplotlib.legend.BboxTransformFrom"><code class="xref py py-class docutils literal"><span class="pre">BboxTransformFrom</span></code></a> linearly transforms points from a given</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.legend.BboxTransformTo.html#matplotlib.legend.BboxTransformTo" title="matplotlib.legend.BboxTransformTo"><code class="xref py py-obj docutils literal"><span class="pre">BboxTransformTo</span></code></a>(boxout,&nbsp;**kwargs)</td>
+<td><a class="reference internal" href="generated/matplotlib.legend.BboxTransformTo.html#matplotlib.legend.BboxTransformTo" title="matplotlib.legend.BboxTransformTo"><code class="xref py py-class docutils literal"><span class="pre">BboxTransformTo</span></code></a> is a transformation that linearly</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.legend.CircleCollection.html#matplotlib.legend.CircleCollection" title="matplotlib.legend.CircleCollection"><code class="xref py py-obj docutils literal"><span class="pre">CircleCollection</span></code></a>(sizes,&nbsp;**kwargs)</td>
+<td>A collection of circles, drawn using splines.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.legend.DraggableLegend.html#matplotlib.legend.DraggableLegend" title="matplotlib.legend.DraggableLegend"><code class="xref py py-obj docutils literal"><span class="pre">DraggableLegend</span></code></a>(legend[,&nbsp;use_blit,&nbsp;update])</td>
+<td><p class="rubric">Methods</p>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.legend.DraggableOffsetBox.html#matplotlib.legend.DraggableOffsetBox" title="matplotlib.legend.DraggableOffsetBox"><code class="xref py py-obj docutils literal"><span class="pre">DraggableOffsetBox</span></code></a>(ref_artist,&nbsp;offsetbox[,&nbsp;...])</td>
+<td><p class="rubric">Methods</p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.legend.DrawingArea.html#matplotlib.legend.DrawingArea" title="matplotlib.legend.DrawingArea"><code class="xref py py-obj docutils literal"><span class="pre">DrawingArea</span></code></a>(width,&nbsp;height[,&nbsp;xdescent,&nbsp;...])</td>
+<td>The DrawingArea can contain any Artist as a child.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.legend.ErrorbarContainer.html#matplotlib.legend.ErrorbarContainer" title="matplotlib.legend.ErrorbarContainer"><code class="xref py py-obj docutils literal"><span class="pre">ErrorbarContainer</span></code></a>(lines[,&nbsp;has_xerr,&nbsp;has_yerr])</td>
+<td><p class="rubric">Methods</p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.legend.FancyBboxPatch.html#matplotlib.legend.FancyBboxPatch" title="matplotlib.legend.FancyBboxPatch"><code class="xref py py-obj docutils literal"><span class="pre">FancyBboxPatch</span></code></a>(xy,&nbsp;width,&nbsp;height[,&nbsp;...])</td>
+<td>Draw a fancy box around a rectangle with lower left at <em>xy*=(*x</em>, <em>y</em>) with specified width and height.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.legend.FontProperties.html#matplotlib.legend.FontProperties" title="matplotlib.legend.FontProperties"><code class="xref py py-obj docutils literal"><span class="pre">FontProperties</span></code></a>([family,&nbsp;style,&nbsp;variant,&nbsp;...])</td>
+<td>A class for storing and manipulating font properties.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.legend.HPacker.html#matplotlib.legend.HPacker" title="matplotlib.legend.HPacker"><code class="xref py py-obj docutils literal"><span class="pre">HPacker</span></code></a>([pad,&nbsp;sep,&nbsp;width,&nbsp;height,&nbsp;align,&nbsp;...])</td>
+<td>The HPacker has its children packed horizontally.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.legend.Legend.html#matplotlib.legend.Legend" title="matplotlib.legend.Legend"><code class="xref py py-obj docutils literal"><span class="pre">Legend</span></code></a>(parent,&nbsp;handles,&nbsp;labels[,&nbsp;loc,&nbsp;...])</td>
+<td>Place a legend on the axes at location loc.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.legend.Line2D.html#matplotlib.legend.Line2D" title="matplotlib.legend.Line2D"><code class="xref py py-obj docutils literal"><span class="pre">Line2D</span></code></a>(xdata,&nbsp;ydata[,&nbsp;linewidth,&nbsp;linestyle,&nbsp;...])</td>
+<td>A line - the line can have both a solid linestyle connecting all the vertices, and a marker at each vertex.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.legend.LineCollection.html#matplotlib.legend.LineCollection" title="matplotlib.legend.LineCollection"><code class="xref py py-obj docutils literal"><span class="pre">LineCollection</span></code></a>(segments[,&nbsp;linewidths,&nbsp;...])</td>
+<td>All parameters must be sequences or scalars; if scalars, they will be converted to sequences.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.legend.Patch.html#matplotlib.legend.Patch" title="matplotlib.legend.Patch"><code class="xref py py-obj docutils literal"><span class="pre">Patch</span></code></a>([edgecolor,&nbsp;facecolor,&nbsp;color,&nbsp;...])</td>
+<td>A patch is a 2D artist with a face color and an edge color.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.legend.PathCollection.html#matplotlib.legend.PathCollection" title="matplotlib.legend.PathCollection"><code class="xref py py-obj docutils literal"><span class="pre">PathCollection</span></code></a>(paths[,&nbsp;sizes])</td>
+<td>This is the most basic <code class="xref py py-class docutils literal"><span class="pre">Collection</span></code> subclass.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.legend.PolyCollection.html#matplotlib.legend.PolyCollection" title="matplotlib.legend.PolyCollection"><code class="xref py py-obj docutils literal"><span class="pre">PolyCollection</span></code></a>(verts[,&nbsp;sizes,&nbsp;closed])</td>
+<td><p class="rubric">Attributes</p>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.legend.Rectangle.html#matplotlib.legend.Rectangle" title="matplotlib.legend.Rectangle"><code class="xref py py-obj docutils literal"><span class="pre">Rectangle</span></code></a>(xy,&nbsp;width,&nbsp;height[,&nbsp;angle])</td>
+<td>Draw a rectangle with lower left at <em>xy</em> = (<em>x</em>, <em>y</em>) with specified <em>width</em> and <em>height</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.legend.RegularPolyCollection.html#matplotlib.legend.RegularPolyCollection" title="matplotlib.legend.RegularPolyCollection"><code class="xref py py-obj docutils literal"><span class="pre">RegularPolyCollection</span></code></a>(numsides[,&nbsp;rotation,&nbsp;...])</td>
+<td>Draw a collection of regular polygons with <em>numsides</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.legend.Shadow.html#matplotlib.legend.Shadow" title="matplotlib.legend.Shadow"><code class="xref py py-obj docutils literal"><span class="pre">Shadow</span></code></a>(patch,&nbsp;ox,&nbsp;oy[,&nbsp;props])</td>
+<td><p class="rubric">Attributes</p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.legend.StemContainer.html#matplotlib.legend.StemContainer" title="matplotlib.legend.StemContainer"><code class="xref py py-obj docutils literal"><span class="pre">StemContainer</span></code></a>(markerline_stemlines_baseline,&nbsp;...)</td>
+<td><p class="rubric">Methods</p>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.legend.TextArea.html#matplotlib.legend.TextArea" title="matplotlib.legend.TextArea"><code class="xref py py-obj docutils literal"><span class="pre">TextArea</span></code></a>(s[,&nbsp;textprops,&nbsp;multilinebaseline,&nbsp;...])</td>
+<td>The TextArea is contains a single Text instance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.legend.TransformedBbox.html#matplotlib.legend.TransformedBbox" title="matplotlib.legend.TransformedBbox"><code class="xref py py-obj docutils literal"><span class="pre">TransformedBbox</span></code></a>(bbox,&nbsp;transform,&nbsp;**kwargs)</td>
+<td>A <a class="reference internal" href="generated/matplotlib.legend.Bbox.html#matplotlib.legend.Bbox" title="matplotlib.legend.Bbox"><code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code></a> that is automatically transformed by a given transform.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.legend.VPacker.html#matplotlib.legend.VPacker" title="matplotlib.legend.VPacker"><code class="xref py py-obj docutils literal"><span class="pre">VPacker</span></code></a>([pad,&nbsp;sep,&nbsp;width,&nbsp;height,&nbsp;align,&nbsp;...])</td>
+<td>The VPacker has its children packed vertically.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.legend.silent_list.html#matplotlib.legend.silent_list" title="matplotlib.legend.silent_list"><code class="xref py py-obj docutils literal"><span class="pre">silent_list</span></code></a>(type[,&nbsp;seq])</td>
+<td>override repr when returning a list of matplotlib artists to</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.legend.xrange.html#matplotlib.legend.xrange" title="matplotlib.legend.xrange"><code class="xref py py-obj docutils literal"><span class="pre">xrange</span></code></a></td>
+<td>xrange(start, stop[, step]) -&gt; xrange object</td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.legend.allow_rasterization.html" class="btn btn-neutral float-right" title="9.1.1. matplotlib.legend.allow_rasterization" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.figure.NonGuiException.html" class="btn btn-neutral" title="8.3.1. matplotlib.figure.NonGuiException" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../static/jquery.js"></script>
+      <script type="text/javascript" src="../static/underscore.js"></script>
+      <script type="text/javascript" src="../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

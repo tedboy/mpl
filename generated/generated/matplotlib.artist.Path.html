@@ -1,0 +1,504 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>18.2.5. matplotlib.artist.Path &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="18. matplotlib.artist" href="../matplotlib.artist.html"/>
+        <link rel="next" title="18.2.5.1. matplotlib.artist.Path.codes" href="matplotlib.artist.Path.codes.html"/>
+        <link rel="prev" title="18.2.4.21. matplotlib.artist.IdentityTransform.transform_point" href="matplotlib.artist.IdentityTransform.transform_point.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.artist.html">18. matplotlib.artist</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.artist.html#functions">18.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.artist.html#classes">18.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.artist.Artist.html">18.2.1. matplotlib.artist.Artist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.artist.ArtistInspector.html">18.2.2. matplotlib.artist.ArtistInspector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.artist.Bbox.html">18.2.3. matplotlib.artist.Bbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.artist.IdentityTransform.html">18.2.4. matplotlib.artist.IdentityTransform</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">18.2.5. matplotlib.artist.Path</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.Path.codes.html">18.2.5.1. matplotlib.artist.Path.codes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.Path.has_nonfinite.html">18.2.5.2. matplotlib.artist.Path.has_nonfinite</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.Path.readonly.html">18.2.5.3. matplotlib.artist.Path.readonly</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.Path.should_simplify.html">18.2.5.4. matplotlib.artist.Path.should_simplify</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.Path.simplify_threshold.html">18.2.5.5. matplotlib.artist.Path.simplify_threshold</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.Path.vertices.html">18.2.5.6. matplotlib.artist.Path.vertices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.Path.arc.html">18.2.5.7. matplotlib.artist.Path.arc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.Path.circle.html">18.2.5.8. matplotlib.artist.Path.circle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.Path.cleaned.html">18.2.5.9. matplotlib.artist.Path.cleaned</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.Path.clip_to_bbox.html">18.2.5.10. matplotlib.artist.Path.clip_to_bbox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.Path.contains_path.html">18.2.5.11. matplotlib.artist.Path.contains_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.Path.contains_point.html">18.2.5.12. matplotlib.artist.Path.contains_point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.Path.contains_points.html">18.2.5.13. matplotlib.artist.Path.contains_points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.Path.copy.html">18.2.5.14. matplotlib.artist.Path.copy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.Path.deepcopy.html">18.2.5.15. matplotlib.artist.Path.deepcopy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.Path.get_extents.html">18.2.5.16. matplotlib.artist.Path.get_extents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.Path.hatch.html">18.2.5.17. matplotlib.artist.Path.hatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.Path.interpolated.html">18.2.5.18. matplotlib.artist.Path.interpolated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.Path.intersects_bbox.html">18.2.5.19. matplotlib.artist.Path.intersects_bbox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.Path.intersects_path.html">18.2.5.20. matplotlib.artist.Path.intersects_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.Path.iter_segments.html">18.2.5.21. matplotlib.artist.Path.iter_segments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.Path.make_compound_path.html">18.2.5.22. matplotlib.artist.Path.make_compound_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.Path.make_compound_path_from_polys.html">18.2.5.23. matplotlib.artist.Path.make_compound_path_from_polys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.Path.to_polygons.html">18.2.5.24. matplotlib.artist.Path.to_polygons</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.Path.transformed.html">18.2.5.25. matplotlib.artist.Path.transformed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.Path.unit_circle.html">18.2.5.26. matplotlib.artist.Path.unit_circle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.Path.unit_circle_righthalf.html">18.2.5.27. matplotlib.artist.Path.unit_circle_righthalf</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.Path.unit_rectangle.html">18.2.5.28. matplotlib.artist.Path.unit_rectangle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.Path.unit_regular_asterisk.html">18.2.5.29. matplotlib.artist.Path.unit_regular_asterisk</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.Path.unit_regular_polygon.html">18.2.5.30. matplotlib.artist.Path.unit_regular_polygon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.Path.unit_regular_star.html">18.2.5.31. matplotlib.artist.Path.unit_regular_star</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.Path.wedge.html">18.2.5.32. matplotlib.artist.Path.wedge</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.artist.Transform.html">18.2.6. matplotlib.artist.Transform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.artist.TransformedBbox.html">18.2.7. matplotlib.artist.TransformedBbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.artist.TransformedPath.html">18.2.8. matplotlib.artist.TransformedPath</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.artist.html#exceptions">18.3. Exceptions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../infreq.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.artist.html">18. matplotlib.artist</a> &raquo;</li>
+        
+      <li>18.2.5. matplotlib.artist.Path</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.artist.Path.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-artist-path">
+<h1>18.2.5. matplotlib.artist.Path<a class="headerlink" href="#matplotlib-artist-path" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="matplotlib.artist.Path">
+<em class="property">class </em><code class="descclassname">matplotlib.artist.</code><code class="descname">Path</code><span class="sig-paren">(</span><em>vertices</em>, <em>codes=None</em>, <em>_interpolation_steps=1</em>, <em>closed=False</em>, <em>readonly=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/path.html#Path"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.artist.Path" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference internal" href="#matplotlib.artist.Path" title="matplotlib.artist.Path"><code class="xref py py-class docutils literal"><span class="pre">Path</span></code></a> represents a series of possibly disconnected,
+possibly closed, line and curve segments.</p>
+<dl class="docutils">
+<dt>The underlying storage is made up of two parallel numpy arrays:</dt>
+<dd><ul class="first last simple">
+<li><em>vertices</em>: an Nx2 float array of vertices</li>
+<li><em>codes</em>: an N-length uint8 array of vertex types</li>
+</ul>
+</dd>
+</dl>
+<p>These two arrays always have the same length in the first
+dimension.  For example, to represent a cubic curve, you must
+provide three vertices as well as three codes <code class="docutils literal"><span class="pre">CURVE3</span></code>.</p>
+<p>The code types are:</p>
+<blockquote>
+<div><ul>
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">STOP</span></code></dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">1 vertex (ignored)</span><dd><p class="first last">A marker for the end of the entire path (currently not
+required and ignored)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">MOVETO</span></code></dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">1 vertex</span><dd><p class="first last">Pick up the pen and move to the given vertex.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">LINETO</span></code></dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">1 vertex</span><dd><p class="first last">Draw a line from the current position to the given vertex.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">CURVE3</span></code></dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">1 control point, 1 endpoint</span><dd><p class="first last">Draw a quadratic Bezier curve from the current position,
+with the given control point, to the given end point.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">CURVE4</span></code></dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">2 control points, 1 endpoint</span><dd><p class="first last">Draw a cubic Bezier curve from the current position, with
+the given control points, to the given end point.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">CLOSEPOLY</span></code></dt>
+ <span class="classifier-delimiter">:</span> <span class="classifier">1 vertex (ignored)</span><dd><p class="first last">Draw a line segment to the start point of the current
+polyline.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<p>Users of Path objects should not access the vertices and codes
+arrays directly.  Instead, they should use <a class="reference internal" href="matplotlib.artist.Path.iter_segments.html#matplotlib.artist.Path.iter_segments" title="matplotlib.artist.Path.iter_segments"><code class="xref py py-meth docutils literal"><span class="pre">iter_segments()</span></code></a>
+or <a class="reference internal" href="matplotlib.artist.Path.cleaned.html#matplotlib.artist.Path.cleaned" title="matplotlib.artist.Path.cleaned"><code class="xref py py-meth docutils literal"><span class="pre">cleaned()</span></code></a> to get the vertex/code pairs.  This is important,
+since many <a class="reference internal" href="#matplotlib.artist.Path" title="matplotlib.artist.Path"><code class="xref py py-class docutils literal"><span class="pre">Path</span></code></a> objects, as an optimization, do not store a
+<em>codes</em> at all, but have a default one provided for them by
+<a class="reference internal" href="matplotlib.artist.Path.iter_segments.html#matplotlib.artist.Path.iter_segments" title="matplotlib.artist.Path.iter_segments"><code class="xref py py-meth docutils literal"><span class="pre">iter_segments()</span></code></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The vertices and codes arrays should be treated as
+immutable &#8211; there are a number of optimizations and assumptions
+made up front in the constructor that will not change when the
+data changes.</p>
+</div>
+<p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.Path.codes.html#matplotlib.artist.Path.codes" title="matplotlib.artist.Path.codes"><code class="xref py py-obj docutils literal"><span class="pre">codes</span></code></a></td>
+<td>The list of codes in the <cite>Path</cite> as a 1-D numpy array.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.Path.has_nonfinite.html#matplotlib.artist.Path.has_nonfinite" title="matplotlib.artist.Path.has_nonfinite"><code class="xref py py-obj docutils literal"><span class="pre">has_nonfinite</span></code></a></td>
+<td><cite>True</cite> if the vertices array has nonfinite values.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.Path.readonly.html#matplotlib.artist.Path.readonly" title="matplotlib.artist.Path.readonly"><code class="xref py py-obj docutils literal"><span class="pre">readonly</span></code></a></td>
+<td><cite>True</cite> if the <cite>Path</cite> is read-only.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.Path.should_simplify.html#matplotlib.artist.Path.should_simplify" title="matplotlib.artist.Path.should_simplify"><code class="xref py py-obj docutils literal"><span class="pre">should_simplify</span></code></a></td>
+<td><cite>True</cite> if the vertices array should be simplified.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.Path.simplify_threshold.html#matplotlib.artist.Path.simplify_threshold" title="matplotlib.artist.Path.simplify_threshold"><code class="xref py py-obj docutils literal"><span class="pre">simplify_threshold</span></code></a></td>
+<td>The fraction of a pixel difference below which vertices will be simplified out.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.Path.vertices.html#matplotlib.artist.Path.vertices" title="matplotlib.artist.Path.vertices"><code class="xref py py-obj docutils literal"><span class="pre">vertices</span></code></a></td>
+<td>The list of vertices in the <cite>Path</cite> as an Nx2 numpy array.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.Path.arc.html#matplotlib.artist.Path.arc" title="matplotlib.artist.Path.arc"><code class="xref py py-obj docutils literal"><span class="pre">arc</span></code></a>(theta1,&nbsp;theta2[,&nbsp;n,&nbsp;is_wedge])</td>
+<td>Return an arc on the unit circle from angle <em>theta1</em> to angle <em>theta2</em> (in degrees).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.Path.circle.html#matplotlib.artist.Path.circle" title="matplotlib.artist.Path.circle"><code class="xref py py-obj docutils literal"><span class="pre">circle</span></code></a>([center,&nbsp;radius,&nbsp;readonly])</td>
+<td>Return a Path representing a circle of a given radius and center.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.Path.cleaned.html#matplotlib.artist.Path.cleaned" title="matplotlib.artist.Path.cleaned"><code class="xref py py-obj docutils literal"><span class="pre">cleaned</span></code></a>([transform,&nbsp;remove_nans,&nbsp;clip,&nbsp;...])</td>
+<td>Cleans up the path according to the parameters returning a new Path instance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.Path.clip_to_bbox.html#matplotlib.artist.Path.clip_to_bbox" title="matplotlib.artist.Path.clip_to_bbox"><code class="xref py py-obj docutils literal"><span class="pre">clip_to_bbox</span></code></a>(bbox[,&nbsp;inside])</td>
+<td>Clip the path to the given bounding box.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">code_type</span></code></td>
+<td>alias of <code class="xref py py-class docutils literal"><span class="pre">uint8</span></code></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.Path.contains_path.html#matplotlib.artist.Path.contains_path" title="matplotlib.artist.Path.contains_path"><code class="xref py py-obj docutils literal"><span class="pre">contains_path</span></code></a>(path[,&nbsp;transform])</td>
+<td>Returns <em>True</em> if this path completely contains the given path.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.Path.contains_point.html#matplotlib.artist.Path.contains_point" title="matplotlib.artist.Path.contains_point"><code class="xref py py-obj docutils literal"><span class="pre">contains_point</span></code></a>(point[,&nbsp;transform,&nbsp;radius])</td>
+<td>Returns <em>True</em> if the path contains the given point.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.Path.contains_points.html#matplotlib.artist.Path.contains_points" title="matplotlib.artist.Path.contains_points"><code class="xref py py-obj docutils literal"><span class="pre">contains_points</span></code></a>(points[,&nbsp;transform,&nbsp;radius])</td>
+<td>Returns a bool array which is <em>True</em> if the path contains the corresponding point.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.Path.copy.html#matplotlib.artist.Path.copy" title="matplotlib.artist.Path.copy"><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code></a>()</td>
+<td>Returns a shallow copy of the <cite>Path</cite>, which will share the vertices and codes with the source <cite>Path</cite>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.Path.deepcopy.html#matplotlib.artist.Path.deepcopy" title="matplotlib.artist.Path.deepcopy"><code class="xref py py-obj docutils literal"><span class="pre">deepcopy</span></code></a>()</td>
+<td>Returns a deepcopy of the <cite>Path</cite>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.Path.get_extents.html#matplotlib.artist.Path.get_extents" title="matplotlib.artist.Path.get_extents"><code class="xref py py-obj docutils literal"><span class="pre">get_extents</span></code></a>([transform])</td>
+<td>Returns the extents (<em>xmin</em>, <em>ymin</em>, <em>xmax</em>, <em>ymax</em>) of the path.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.Path.hatch.html#matplotlib.artist.Path.hatch" title="matplotlib.artist.Path.hatch"><code class="xref py py-obj docutils literal"><span class="pre">hatch</span></code></a>(hatchpattern[,&nbsp;density])</td>
+<td>Given a hatch specifier, <em>hatchpattern</em>, generates a Path that can be used in a repeated hatching pattern.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.Path.interpolated.html#matplotlib.artist.Path.interpolated" title="matplotlib.artist.Path.interpolated"><code class="xref py py-obj docutils literal"><span class="pre">interpolated</span></code></a>(steps)</td>
+<td>Returns a new path resampled to length N x steps.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.Path.intersects_bbox.html#matplotlib.artist.Path.intersects_bbox" title="matplotlib.artist.Path.intersects_bbox"><code class="xref py py-obj docutils literal"><span class="pre">intersects_bbox</span></code></a>(bbox[,&nbsp;filled])</td>
+<td>Returns <em>True</em> if this path intersects a given <code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.Path.intersects_path.html#matplotlib.artist.Path.intersects_path" title="matplotlib.artist.Path.intersects_path"><code class="xref py py-obj docutils literal"><span class="pre">intersects_path</span></code></a>(other[,&nbsp;filled])</td>
+<td>Returns <em>True</em> if this path intersects another given path.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.Path.iter_segments.html#matplotlib.artist.Path.iter_segments" title="matplotlib.artist.Path.iter_segments"><code class="xref py py-obj docutils literal"><span class="pre">iter_segments</span></code></a>([transform,&nbsp;remove_nans,&nbsp;...])</td>
+<td>Iterates over all of the curve segments in the path.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.Path.make_compound_path.html#matplotlib.artist.Path.make_compound_path" title="matplotlib.artist.Path.make_compound_path"><code class="xref py py-obj docutils literal"><span class="pre">make_compound_path</span></code></a>(*args)</td>
+<td>Make a compound path from a list of Path objects.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.Path.make_compound_path_from_polys.html#matplotlib.artist.Path.make_compound_path_from_polys" title="matplotlib.artist.Path.make_compound_path_from_polys"><code class="xref py py-obj docutils literal"><span class="pre">make_compound_path_from_polys</span></code></a>(XY)</td>
+<td>Make a compound path object to draw a number of polygons with equal numbers of sides XY is a (numpolys x numsides x 2) numpy array of vertices.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.Path.to_polygons.html#matplotlib.artist.Path.to_polygons" title="matplotlib.artist.Path.to_polygons"><code class="xref py py-obj docutils literal"><span class="pre">to_polygons</span></code></a>([transform,&nbsp;width,&nbsp;height])</td>
+<td>Convert this path to a list of polygons.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.Path.transformed.html#matplotlib.artist.Path.transformed" title="matplotlib.artist.Path.transformed"><code class="xref py py-obj docutils literal"><span class="pre">transformed</span></code></a>(transform)</td>
+<td>Return a transformed copy of the path.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.Path.unit_circle.html#matplotlib.artist.Path.unit_circle" title="matplotlib.artist.Path.unit_circle"><code class="xref py py-obj docutils literal"><span class="pre">unit_circle</span></code></a>()</td>
+<td>Return the readonly <a class="reference internal" href="#matplotlib.artist.Path" title="matplotlib.artist.Path"><code class="xref py py-class docutils literal"><span class="pre">Path</span></code></a> of the unit circle.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.Path.unit_circle_righthalf.html#matplotlib.artist.Path.unit_circle_righthalf" title="matplotlib.artist.Path.unit_circle_righthalf"><code class="xref py py-obj docutils literal"><span class="pre">unit_circle_righthalf</span></code></a>()</td>
+<td>Return a <a class="reference internal" href="#matplotlib.artist.Path" title="matplotlib.artist.Path"><code class="xref py py-class docutils literal"><span class="pre">Path</span></code></a> of the right half of a unit circle.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.Path.unit_rectangle.html#matplotlib.artist.Path.unit_rectangle" title="matplotlib.artist.Path.unit_rectangle"><code class="xref py py-obj docutils literal"><span class="pre">unit_rectangle</span></code></a>()</td>
+<td>Return a <a class="reference internal" href="#matplotlib.artist.Path" title="matplotlib.artist.Path"><code class="xref py py-class docutils literal"><span class="pre">Path</span></code></a> instance of the unit rectangle from (0, 0) to (1, 1).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.Path.unit_regular_asterisk.html#matplotlib.artist.Path.unit_regular_asterisk" title="matplotlib.artist.Path.unit_regular_asterisk"><code class="xref py py-obj docutils literal"><span class="pre">unit_regular_asterisk</span></code></a>(numVertices)</td>
+<td>Return a <a class="reference internal" href="#matplotlib.artist.Path" title="matplotlib.artist.Path"><code class="xref py py-class docutils literal"><span class="pre">Path</span></code></a> for a unit regular asterisk with the given numVertices and radius of 1.0, centered at (0, 0).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.Path.unit_regular_polygon.html#matplotlib.artist.Path.unit_regular_polygon" title="matplotlib.artist.Path.unit_regular_polygon"><code class="xref py py-obj docutils literal"><span class="pre">unit_regular_polygon</span></code></a>(numVertices)</td>
+<td>Return a <a class="reference internal" href="#matplotlib.artist.Path" title="matplotlib.artist.Path"><code class="xref py py-class docutils literal"><span class="pre">Path</span></code></a> instance for a unit regular polygon with the given <em>numVertices</em> and radius of 1.0, centered at (0, 0).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.Path.unit_regular_star.html#matplotlib.artist.Path.unit_regular_star" title="matplotlib.artist.Path.unit_regular_star"><code class="xref py py-obj docutils literal"><span class="pre">unit_regular_star</span></code></a>(numVertices[,&nbsp;innerCircle])</td>
+<td>Return a <a class="reference internal" href="#matplotlib.artist.Path" title="matplotlib.artist.Path"><code class="xref py py-class docutils literal"><span class="pre">Path</span></code></a> for a unit regular star with the given numVertices and radius of 1.0, centered at (0, 0).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.Path.wedge.html#matplotlib.artist.Path.wedge" title="matplotlib.artist.Path.wedge"><code class="xref py py-obj docutils literal"><span class="pre">wedge</span></code></a>(theta1,&nbsp;theta2[,&nbsp;n])</td>
+<td>Return a wedge of the unit circle from angle <em>theta1</em> to angle <em>theta2</em> (in degrees).</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.artist.Path.codes.html" class="btn btn-neutral float-right" title="18.2.5.1. matplotlib.artist.Path.codes" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.artist.IdentityTransform.transform_point.html" class="btn btn-neutral" title="18.2.4.21. matplotlib.artist.IdentityTransform.transform_point" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

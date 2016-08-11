@@ -1,0 +1,415 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>14.2.13.99. matplotlib.text.Rectangle.set_linewidth &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="14.2.13. matplotlib.text.Rectangle" href="matplotlib.text.Rectangle.html"/>
+        <link rel="next" title="14.2.13.100. matplotlib.text.Rectangle.set_ls" href="matplotlib.text.Rectangle.set_ls.html"/>
+        <link rel="prev" title="14.2.13.98. matplotlib.text.Rectangle.set_linestyle" href="matplotlib.text.Rectangle.set_linestyle.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.text.html">14. matplotlib.text</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.text.html#functions">14.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.text.html#classes">14.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.Affine2D.html">14.2.1. matplotlib.text.Affine2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.Annotation.html">14.2.2. matplotlib.text.Annotation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.Artist.html">14.2.3. matplotlib.text.Artist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.Bbox.html">14.2.4. matplotlib.text.Bbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.BboxBase.html">14.2.5. matplotlib.text.BboxBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.BboxTransformTo.html">14.2.6. matplotlib.text.BboxTransformTo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.FancyArrowPatch.html">14.2.7. matplotlib.text.FancyArrowPatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.FancyBboxPatch.html">14.2.8. matplotlib.text.FancyBboxPatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.FontProperties.html">14.2.9. matplotlib.text.FontProperties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.Line2D.html">14.2.10. matplotlib.text.Line2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.OffsetFrom.html">14.2.11. matplotlib.text.OffsetFrom</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.Path.html">14.2.12. matplotlib.text.Path</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="matplotlib.text.Rectangle.html">14.2.13. matplotlib.text.Rectangle</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.axes.html">14.2.13.1. matplotlib.text.Rectangle.axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.fill.html">14.2.13.2. matplotlib.text.Rectangle.fill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.mouseover.html">14.2.13.3. matplotlib.text.Rectangle.mouseover</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.stale.html">14.2.13.4. matplotlib.text.Rectangle.stale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.xy.html">14.2.13.5. matplotlib.text.Rectangle.xy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.add_callback.html">14.2.13.6. matplotlib.text.Rectangle.add_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.contains.html">14.2.13.7. matplotlib.text.Rectangle.contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.contains_point.html">14.2.13.8. matplotlib.text.Rectangle.contains_point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.convert_xunits.html">14.2.13.9. matplotlib.text.Rectangle.convert_xunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.convert_yunits.html">14.2.13.10. matplotlib.text.Rectangle.convert_yunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.draw.html">14.2.13.11. matplotlib.text.Rectangle.draw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.findobj.html">14.2.13.12. matplotlib.text.Rectangle.findobj</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.format_cursor_data.html">14.2.13.13. matplotlib.text.Rectangle.format_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_aa.html">14.2.13.14. matplotlib.text.Rectangle.get_aa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_agg_filter.html">14.2.13.15. matplotlib.text.Rectangle.get_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_alpha.html">14.2.13.16. matplotlib.text.Rectangle.get_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_animated.html">14.2.13.17. matplotlib.text.Rectangle.get_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_antialiased.html">14.2.13.18. matplotlib.text.Rectangle.get_antialiased</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_axes.html">14.2.13.19. matplotlib.text.Rectangle.get_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_bbox.html">14.2.13.20. matplotlib.text.Rectangle.get_bbox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_capstyle.html">14.2.13.21. matplotlib.text.Rectangle.get_capstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_children.html">14.2.13.22. matplotlib.text.Rectangle.get_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_clip_box.html">14.2.13.23. matplotlib.text.Rectangle.get_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_clip_on.html">14.2.13.24. matplotlib.text.Rectangle.get_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_clip_path.html">14.2.13.25. matplotlib.text.Rectangle.get_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_contains.html">14.2.13.26. matplotlib.text.Rectangle.get_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_cursor_data.html">14.2.13.27. matplotlib.text.Rectangle.get_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_data_transform.html">14.2.13.28. matplotlib.text.Rectangle.get_data_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_ec.html">14.2.13.29. matplotlib.text.Rectangle.get_ec</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_edgecolor.html">14.2.13.30. matplotlib.text.Rectangle.get_edgecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_extents.html">14.2.13.31. matplotlib.text.Rectangle.get_extents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_facecolor.html">14.2.13.32. matplotlib.text.Rectangle.get_facecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_fc.html">14.2.13.33. matplotlib.text.Rectangle.get_fc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_figure.html">14.2.13.34. matplotlib.text.Rectangle.get_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_fill.html">14.2.13.35. matplotlib.text.Rectangle.get_fill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_gid.html">14.2.13.36. matplotlib.text.Rectangle.get_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_hatch.html">14.2.13.37. matplotlib.text.Rectangle.get_hatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_height.html">14.2.13.38. matplotlib.text.Rectangle.get_height</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_joinstyle.html">14.2.13.39. matplotlib.text.Rectangle.get_joinstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_label.html">14.2.13.40. matplotlib.text.Rectangle.get_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_linestyle.html">14.2.13.41. matplotlib.text.Rectangle.get_linestyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_linewidth.html">14.2.13.42. matplotlib.text.Rectangle.get_linewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_ls.html">14.2.13.43. matplotlib.text.Rectangle.get_ls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_lw.html">14.2.13.44. matplotlib.text.Rectangle.get_lw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_patch_transform.html">14.2.13.45. matplotlib.text.Rectangle.get_patch_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_path.html">14.2.13.46. matplotlib.text.Rectangle.get_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_path_effects.html">14.2.13.47. matplotlib.text.Rectangle.get_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_picker.html">14.2.13.48. matplotlib.text.Rectangle.get_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_rasterized.html">14.2.13.49. matplotlib.text.Rectangle.get_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_sketch_params.html">14.2.13.50. matplotlib.text.Rectangle.get_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_snap.html">14.2.13.51. matplotlib.text.Rectangle.get_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_transform.html">14.2.13.52. matplotlib.text.Rectangle.get_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_transformed_clip_path_and_affine.html">14.2.13.53. matplotlib.text.Rectangle.get_transformed_clip_path_and_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_url.html">14.2.13.54. matplotlib.text.Rectangle.get_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_verts.html">14.2.13.55. matplotlib.text.Rectangle.get_verts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_visible.html">14.2.13.56. matplotlib.text.Rectangle.get_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_width.html">14.2.13.57. matplotlib.text.Rectangle.get_width</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_window_extent.html">14.2.13.58. matplotlib.text.Rectangle.get_window_extent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_x.html">14.2.13.59. matplotlib.text.Rectangle.get_x</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_xy.html">14.2.13.60. matplotlib.text.Rectangle.get_xy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_y.html">14.2.13.61. matplotlib.text.Rectangle.get_y</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.get_zorder.html">14.2.13.62. matplotlib.text.Rectangle.get_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.have_units.html">14.2.13.63. matplotlib.text.Rectangle.have_units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.hitlist.html">14.2.13.64. matplotlib.text.Rectangle.hitlist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.is_figure_set.html">14.2.13.65. matplotlib.text.Rectangle.is_figure_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.is_transform_set.html">14.2.13.66. matplotlib.text.Rectangle.is_transform_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.pchanged.html">14.2.13.67. matplotlib.text.Rectangle.pchanged</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.pick.html">14.2.13.68. matplotlib.text.Rectangle.pick</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.pickable.html">14.2.13.69. matplotlib.text.Rectangle.pickable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.properties.html">14.2.13.70. matplotlib.text.Rectangle.properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.remove.html">14.2.13.71. matplotlib.text.Rectangle.remove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.remove_callback.html">14.2.13.72. matplotlib.text.Rectangle.remove_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set.html">14.2.13.73. matplotlib.text.Rectangle.set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_aa.html">14.2.13.74. matplotlib.text.Rectangle.set_aa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_agg_filter.html">14.2.13.75. matplotlib.text.Rectangle.set_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_alpha.html">14.2.13.76. matplotlib.text.Rectangle.set_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_animated.html">14.2.13.77. matplotlib.text.Rectangle.set_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_antialiased.html">14.2.13.78. matplotlib.text.Rectangle.set_antialiased</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_axes.html">14.2.13.79. matplotlib.text.Rectangle.set_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_bounds.html">14.2.13.80. matplotlib.text.Rectangle.set_bounds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_capstyle.html">14.2.13.81. matplotlib.text.Rectangle.set_capstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_clip_box.html">14.2.13.82. matplotlib.text.Rectangle.set_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_clip_on.html">14.2.13.83. matplotlib.text.Rectangle.set_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_clip_path.html">14.2.13.84. matplotlib.text.Rectangle.set_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_color.html">14.2.13.85. matplotlib.text.Rectangle.set_color</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_contains.html">14.2.13.86. matplotlib.text.Rectangle.set_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_ec.html">14.2.13.87. matplotlib.text.Rectangle.set_ec</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_edgecolor.html">14.2.13.88. matplotlib.text.Rectangle.set_edgecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_facecolor.html">14.2.13.89. matplotlib.text.Rectangle.set_facecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_fc.html">14.2.13.90. matplotlib.text.Rectangle.set_fc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_figure.html">14.2.13.91. matplotlib.text.Rectangle.set_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_fill.html">14.2.13.92. matplotlib.text.Rectangle.set_fill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_gid.html">14.2.13.93. matplotlib.text.Rectangle.set_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_hatch.html">14.2.13.94. matplotlib.text.Rectangle.set_hatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_height.html">14.2.13.95. matplotlib.text.Rectangle.set_height</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_joinstyle.html">14.2.13.96. matplotlib.text.Rectangle.set_joinstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_label.html">14.2.13.97. matplotlib.text.Rectangle.set_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_linestyle.html">14.2.13.98. matplotlib.text.Rectangle.set_linestyle</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">14.2.13.99. matplotlib.text.Rectangle.set_linewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_ls.html">14.2.13.100. matplotlib.text.Rectangle.set_ls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_lw.html">14.2.13.101. matplotlib.text.Rectangle.set_lw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_path_effects.html">14.2.13.102. matplotlib.text.Rectangle.set_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_picker.html">14.2.13.103. matplotlib.text.Rectangle.set_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_rasterized.html">14.2.13.104. matplotlib.text.Rectangle.set_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_sketch_params.html">14.2.13.105. matplotlib.text.Rectangle.set_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_snap.html">14.2.13.106. matplotlib.text.Rectangle.set_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_transform.html">14.2.13.107. matplotlib.text.Rectangle.set_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_url.html">14.2.13.108. matplotlib.text.Rectangle.set_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_visible.html">14.2.13.109. matplotlib.text.Rectangle.set_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_width.html">14.2.13.110. matplotlib.text.Rectangle.set_width</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_x.html">14.2.13.111. matplotlib.text.Rectangle.set_x</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_xy.html">14.2.13.112. matplotlib.text.Rectangle.set_xy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_y.html">14.2.13.113. matplotlib.text.Rectangle.set_y</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.set_zorder.html">14.2.13.114. matplotlib.text.Rectangle.set_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.update.html">14.2.13.115. matplotlib.text.Rectangle.update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Rectangle.update_from.html">14.2.13.116. matplotlib.text.Rectangle.update_from</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.RendererBase.html">14.2.14. matplotlib.text.RendererBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.Text.html">14.2.15. matplotlib.text.Text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.TextPath.html">14.2.16. matplotlib.text.TextPath</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.TextWithDash.html">14.2.17. matplotlib.text.TextWithDash</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.Transform.html">14.2.18. matplotlib.text.Transform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.maxdict.html">14.2.19. matplotlib.text.maxdict</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.zip.html">14.2.20. matplotlib.text.zip</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../freq.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.text.html">14. matplotlib.text</a> &raquo;</li>
+        
+          <li><a href="matplotlib.text.Rectangle.html">14.2.13. matplotlib.text.Rectangle</a> &raquo;</li>
+        
+      <li>14.2.13.99. matplotlib.text.Rectangle.set_linewidth</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.text.Rectangle.set_linewidth.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-text-rectangle-set-linewidth">
+<h1>14.2.13.99. matplotlib.text.Rectangle.set_linewidth<a class="headerlink" href="#matplotlib-text-rectangle-set-linewidth" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="matplotlib.text.Rectangle.set_linewidth">
+<code class="descclassname">Rectangle.</code><code class="descname">set_linewidth</code><span class="sig-paren">(</span><em>w</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.text.Rectangle.set_linewidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the patch linewidth in points</p>
+<p>ACCEPTS: float or None for default</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.text.Rectangle.set_ls.html" class="btn btn-neutral float-right" title="14.2.13.100. matplotlib.text.Rectangle.set_ls" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.text.Rectangle.set_linestyle.html" class="btn btn-neutral" title="14.2.13.98. matplotlib.text.Rectangle.set_linestyle" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

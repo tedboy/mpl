@@ -1,0 +1,392 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>9.2.15.50. matplotlib.legend.Legend.is_transform_set &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="9.2.15. matplotlib.legend.Legend" href="matplotlib.legend.Legend.html"/>
+        <link rel="next" title="9.2.15.51. matplotlib.legend.Legend.pchanged" href="matplotlib.legend.Legend.pchanged.html"/>
+        <link rel="prev" title="9.2.15.49. matplotlib.legend.Legend.is_figure_set" href="matplotlib.legend.Legend.is_figure_set.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.legend.html">9. matplotlib.legend</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.legend.html#functions">9.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.legend.html#classes">9.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.Artist.html">9.2.1. matplotlib.legend.Artist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.BarContainer.html">9.2.2. matplotlib.legend.BarContainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.Bbox.html">9.2.3. matplotlib.legend.Bbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.BboxBase.html">9.2.4. matplotlib.legend.BboxBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.BboxTransformFrom.html">9.2.5. matplotlib.legend.BboxTransformFrom</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.BboxTransformTo.html">9.2.6. matplotlib.legend.BboxTransformTo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.CircleCollection.html">9.2.7. matplotlib.legend.CircleCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.DraggableLegend.html">9.2.8. matplotlib.legend.DraggableLegend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.DraggableOffsetBox.html">9.2.9. matplotlib.legend.DraggableOffsetBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.DrawingArea.html">9.2.10. matplotlib.legend.DrawingArea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.ErrorbarContainer.html">9.2.11. matplotlib.legend.ErrorbarContainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.html">9.2.12. matplotlib.legend.FancyBboxPatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.FontProperties.html">9.2.13. matplotlib.legend.FontProperties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.HPacker.html">9.2.14. matplotlib.legend.HPacker</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="matplotlib.legend.Legend.html">9.2.15. matplotlib.legend.Legend</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.axes.html">9.2.15.1. matplotlib.legend.Legend.axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.mouseover.html">9.2.15.2. matplotlib.legend.Legend.mouseover</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.stale.html">9.2.15.3. matplotlib.legend.Legend.stale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.add_callback.html">9.2.15.4. matplotlib.legend.Legend.add_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.contains.html">9.2.15.5. matplotlib.legend.Legend.contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.convert_xunits.html">9.2.15.6. matplotlib.legend.Legend.convert_xunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.convert_yunits.html">9.2.15.7. matplotlib.legend.Legend.convert_yunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.draggable.html">9.2.15.8. matplotlib.legend.Legend.draggable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.draw.html">9.2.15.9. matplotlib.legend.Legend.draw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.draw_frame.html">9.2.15.10. matplotlib.legend.Legend.draw_frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.findobj.html">9.2.15.11. matplotlib.legend.Legend.findobj</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.format_cursor_data.html">9.2.15.12. matplotlib.legend.Legend.format_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.get_agg_filter.html">9.2.15.13. matplotlib.legend.Legend.get_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.get_alpha.html">9.2.15.14. matplotlib.legend.Legend.get_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.get_animated.html">9.2.15.15. matplotlib.legend.Legend.get_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.get_axes.html">9.2.15.16. matplotlib.legend.Legend.get_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.get_bbox_to_anchor.html">9.2.15.17. matplotlib.legend.Legend.get_bbox_to_anchor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.get_children.html">9.2.15.18. matplotlib.legend.Legend.get_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.get_clip_box.html">9.2.15.19. matplotlib.legend.Legend.get_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.get_clip_on.html">9.2.15.20. matplotlib.legend.Legend.get_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.get_clip_path.html">9.2.15.21. matplotlib.legend.Legend.get_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.get_contains.html">9.2.15.22. matplotlib.legend.Legend.get_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.get_cursor_data.html">9.2.15.23. matplotlib.legend.Legend.get_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.get_default_handler_map.html">9.2.15.24. matplotlib.legend.Legend.get_default_handler_map</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.get_figure.html">9.2.15.25. matplotlib.legend.Legend.get_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.get_frame.html">9.2.15.26. matplotlib.legend.Legend.get_frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.get_frame_on.html">9.2.15.27. matplotlib.legend.Legend.get_frame_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.get_gid.html">9.2.15.28. matplotlib.legend.Legend.get_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.get_label.html">9.2.15.29. matplotlib.legend.Legend.get_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.get_legend_handler.html">9.2.15.30. matplotlib.legend.Legend.get_legend_handler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.get_legend_handler_map.html">9.2.15.31. matplotlib.legend.Legend.get_legend_handler_map</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.get_lines.html">9.2.15.32. matplotlib.legend.Legend.get_lines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.get_patches.html">9.2.15.33. matplotlib.legend.Legend.get_patches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.get_path_effects.html">9.2.15.34. matplotlib.legend.Legend.get_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.get_picker.html">9.2.15.35. matplotlib.legend.Legend.get_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.get_rasterized.html">9.2.15.36. matplotlib.legend.Legend.get_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.get_sketch_params.html">9.2.15.37. matplotlib.legend.Legend.get_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.get_snap.html">9.2.15.38. matplotlib.legend.Legend.get_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.get_texts.html">9.2.15.39. matplotlib.legend.Legend.get_texts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.get_title.html">9.2.15.40. matplotlib.legend.Legend.get_title</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.get_transform.html">9.2.15.41. matplotlib.legend.Legend.get_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.get_transformed_clip_path_and_affine.html">9.2.15.42. matplotlib.legend.Legend.get_transformed_clip_path_and_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.get_url.html">9.2.15.43. matplotlib.legend.Legend.get_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.get_visible.html">9.2.15.44. matplotlib.legend.Legend.get_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.get_window_extent.html">9.2.15.45. matplotlib.legend.Legend.get_window_extent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.get_zorder.html">9.2.15.46. matplotlib.legend.Legend.get_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.have_units.html">9.2.15.47. matplotlib.legend.Legend.have_units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.hitlist.html">9.2.15.48. matplotlib.legend.Legend.hitlist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.is_figure_set.html">9.2.15.49. matplotlib.legend.Legend.is_figure_set</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">9.2.15.50. matplotlib.legend.Legend.is_transform_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.pchanged.html">9.2.15.51. matplotlib.legend.Legend.pchanged</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.pick.html">9.2.15.52. matplotlib.legend.Legend.pick</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.pickable.html">9.2.15.53. matplotlib.legend.Legend.pickable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.properties.html">9.2.15.54. matplotlib.legend.Legend.properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.remove.html">9.2.15.55. matplotlib.legend.Legend.remove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.remove_callback.html">9.2.15.56. matplotlib.legend.Legend.remove_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.set.html">9.2.15.57. matplotlib.legend.Legend.set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.set_agg_filter.html">9.2.15.58. matplotlib.legend.Legend.set_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.set_alpha.html">9.2.15.59. matplotlib.legend.Legend.set_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.set_animated.html">9.2.15.60. matplotlib.legend.Legend.set_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.set_axes.html">9.2.15.61. matplotlib.legend.Legend.set_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.set_bbox_to_anchor.html">9.2.15.62. matplotlib.legend.Legend.set_bbox_to_anchor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.set_clip_box.html">9.2.15.63. matplotlib.legend.Legend.set_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.set_clip_on.html">9.2.15.64. matplotlib.legend.Legend.set_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.set_clip_path.html">9.2.15.65. matplotlib.legend.Legend.set_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.set_contains.html">9.2.15.66. matplotlib.legend.Legend.set_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.set_default_handler_map.html">9.2.15.67. matplotlib.legend.Legend.set_default_handler_map</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.set_figure.html">9.2.15.68. matplotlib.legend.Legend.set_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.set_frame_on.html">9.2.15.69. matplotlib.legend.Legend.set_frame_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.set_gid.html">9.2.15.70. matplotlib.legend.Legend.set_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.set_label.html">9.2.15.71. matplotlib.legend.Legend.set_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.set_path_effects.html">9.2.15.72. matplotlib.legend.Legend.set_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.set_picker.html">9.2.15.73. matplotlib.legend.Legend.set_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.set_rasterized.html">9.2.15.74. matplotlib.legend.Legend.set_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.set_sketch_params.html">9.2.15.75. matplotlib.legend.Legend.set_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.set_snap.html">9.2.15.76. matplotlib.legend.Legend.set_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.set_title.html">9.2.15.77. matplotlib.legend.Legend.set_title</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.set_transform.html">9.2.15.78. matplotlib.legend.Legend.set_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.set_url.html">9.2.15.79. matplotlib.legend.Legend.set_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.set_visible.html">9.2.15.80. matplotlib.legend.Legend.set_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.set_zorder.html">9.2.15.81. matplotlib.legend.Legend.set_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.update.html">9.2.15.82. matplotlib.legend.Legend.update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.update_default_handler_map.html">9.2.15.83. matplotlib.legend.Legend.update_default_handler_map</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.Legend.update_from.html">9.2.15.84. matplotlib.legend.Legend.update_from</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.Line2D.html">9.2.16. matplotlib.legend.Line2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.LineCollection.html">9.2.17. matplotlib.legend.LineCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.Patch.html">9.2.18. matplotlib.legend.Patch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.PathCollection.html">9.2.19. matplotlib.legend.PathCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.PolyCollection.html">9.2.20. matplotlib.legend.PolyCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.Rectangle.html">9.2.21. matplotlib.legend.Rectangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.RegularPolyCollection.html">9.2.22. matplotlib.legend.RegularPolyCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.Shadow.html">9.2.23. matplotlib.legend.Shadow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.StemContainer.html">9.2.24. matplotlib.legend.StemContainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.TextArea.html">9.2.25. matplotlib.legend.TextArea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.TransformedBbox.html">9.2.26. matplotlib.legend.TransformedBbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.VPacker.html">9.2.27. matplotlib.legend.VPacker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.silent_list.html">9.2.28. matplotlib.legend.silent_list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.xrange.html">9.2.29. matplotlib.legend.xrange</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../freq.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.legend.html">9. matplotlib.legend</a> &raquo;</li>
+        
+          <li><a href="matplotlib.legend.Legend.html">9.2.15. matplotlib.legend.Legend</a> &raquo;</li>
+        
+      <li>9.2.15.50. matplotlib.legend.Legend.is_transform_set</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.legend.Legend.is_transform_set.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-legend-legend-is-transform-set">
+<h1>9.2.15.50. matplotlib.legend.Legend.is_transform_set<a class="headerlink" href="#matplotlib-legend-legend-is-transform-set" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="matplotlib.legend.Legend.is_transform_set">
+<code class="descclassname">Legend.</code><code class="descname">is_transform_set</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.legend.Legend.is_transform_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <em>True</em> if <a class="reference internal" href="matplotlib.legend.Artist.html#matplotlib.legend.Artist" title="matplotlib.legend.Artist"><code class="xref py py-class docutils literal"><span class="pre">Artist</span></code></a> has a transform explicitly
+set.</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.legend.Legend.pchanged.html" class="btn btn-neutral float-right" title="9.2.15.51. matplotlib.legend.Legend.pchanged" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.legend.Legend.is_figure_set.html" class="btn btn-neutral" title="9.2.15.49. matplotlib.legend.Legend.is_figure_set" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,506 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>11. matplotlib.markers &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../index.html"/>
+        <link rel="up" title="&lt;no title&gt;" href="../freq.html"/>
+        <link rel="next" title="11.1.1. matplotlib.markers.is_math_text" href="matplotlib.markers.is_math_text.html"/>
+        <link rel="prev" title="10.2.8.2. matplotlib.lines.VertexSelector.process_selected" href="generated/matplotlib.lines.VertexSelector.process_selected.html"/> 
+
+  
+  <script src="../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">11. matplotlib.markers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#functions">11.1. Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.markers.is_math_text.html">11.1.1. matplotlib.markers.is_math_text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.markers.is_numlike.html">11.1.2. matplotlib.markers.is_numlike</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.markers.is_string_like.html">11.1.3. matplotlib.markers.is_string_like</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.markers.iterable.html">11.1.4. matplotlib.markers.iterable</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#classes">11.2. Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.markers.Affine2D.html">11.2.1. matplotlib.markers.Affine2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.markers.IdentityTransform.html">11.2.2. matplotlib.markers.IdentityTransform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.markers.MarkerStyle.html">11.2.3. matplotlib.markers.MarkerStyle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.markers.Path.html">11.2.4. matplotlib.markers.Path</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/matplotlib.markers.xrange.html">11.2.5. matplotlib.markers.xrange</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../freq.html">&lt;no title&gt;</a> &raquo;</li>
+        
+      <li>11. matplotlib.markers</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../sources/generated/matplotlib.markers.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-matplotlib.markers">
+<span id="matplotlib-markers"></span><h1>11. matplotlib.markers<a class="headerlink" href="#module-matplotlib.markers" title="Permalink to this headline">¶</a></h1>
+<p>This module contains functions to handle markers.  Used by both the
+marker functionality of <cite>~matplotlib.axes.Axes.plot</cite> and
+<cite>~matplotlib.axes.Axes.scatter</cite>.</p>
+<p>All possible markers are defined here:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="38%" />
+<col width="62%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">marker</th>
+<th class="head">description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>&#8221;.&#8221;</td>
+<td>point</td>
+</tr>
+<tr class="row-odd"><td>&#8221;,&#8221;</td>
+<td>pixel</td>
+</tr>
+<tr class="row-even"><td>&#8220;o&#8221;</td>
+<td>circle</td>
+</tr>
+<tr class="row-odd"><td>&#8220;v&#8221;</td>
+<td>triangle_down</td>
+</tr>
+<tr class="row-even"><td>&#8220;^&#8221;</td>
+<td>triangle_up</td>
+</tr>
+<tr class="row-odd"><td>&#8220;&lt;&#8221;</td>
+<td>triangle_left</td>
+</tr>
+<tr class="row-even"><td>&#8220;&gt;&#8221;</td>
+<td>triangle_right</td>
+</tr>
+<tr class="row-odd"><td>&#8220;1&#8221;</td>
+<td>tri_down</td>
+</tr>
+<tr class="row-even"><td>&#8220;2&#8221;</td>
+<td>tri_up</td>
+</tr>
+<tr class="row-odd"><td>&#8220;3&#8221;</td>
+<td>tri_left</td>
+</tr>
+<tr class="row-even"><td>&#8220;4&#8221;</td>
+<td>tri_right</td>
+</tr>
+<tr class="row-odd"><td>&#8220;8&#8221;</td>
+<td>octagon</td>
+</tr>
+<tr class="row-even"><td>&#8220;s&#8221;</td>
+<td>square</td>
+</tr>
+<tr class="row-odd"><td>&#8220;p&#8221;</td>
+<td>pentagon</td>
+</tr>
+<tr class="row-even"><td>&#8220;*&#8221;</td>
+<td>star</td>
+</tr>
+<tr class="row-odd"><td>&#8220;h&#8221;</td>
+<td>hexagon1</td>
+</tr>
+<tr class="row-even"><td>&#8220;H&#8221;</td>
+<td>hexagon2</td>
+</tr>
+<tr class="row-odd"><td>&#8220;+&#8221;</td>
+<td>plus</td>
+</tr>
+<tr class="row-even"><td>&#8220;x&#8221;</td>
+<td>x</td>
+</tr>
+<tr class="row-odd"><td>&#8220;D&#8221;</td>
+<td>diamond</td>
+</tr>
+<tr class="row-even"><td>&#8220;d&#8221;</td>
+<td>thin_diamond</td>
+</tr>
+<tr class="row-odd"><td>&#8220;|&#8221;</td>
+<td>vline</td>
+</tr>
+<tr class="row-even"><td>&#8220;_&#8221;</td>
+<td>hline</td>
+</tr>
+<tr class="row-odd"><td>TICKLEFT</td>
+<td>tickleft</td>
+</tr>
+<tr class="row-even"><td>TICKRIGHT</td>
+<td>tickright</td>
+</tr>
+<tr class="row-odd"><td>TICKUP</td>
+<td>tickup</td>
+</tr>
+<tr class="row-even"><td>TICKDOWN</td>
+<td>tickdown</td>
+</tr>
+<tr class="row-odd"><td>CARETLEFT</td>
+<td>caretleft</td>
+</tr>
+<tr class="row-even"><td>CARETRIGHT</td>
+<td>caretright</td>
+</tr>
+<tr class="row-odd"><td>CARETUP</td>
+<td>caretup</td>
+</tr>
+<tr class="row-even"><td>CARETDOWN</td>
+<td>caretdown</td>
+</tr>
+<tr class="row-odd"><td>&#8220;None&#8221;</td>
+<td>nothing</td>
+</tr>
+<tr class="row-even"><td>None</td>
+<td>nothing</td>
+</tr>
+<tr class="row-odd"><td>&#8221; &#8220;</td>
+<td>nothing</td>
+</tr>
+<tr class="row-even"><td>&#8220;&#8221;</td>
+<td>nothing</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">'$...$'</span></code></td>
+<td>render the string using mathtext.</td>
+</tr>
+<tr class="row-even"><td><cite>verts</cite></td>
+<td>a list of (x, y) pairs used for Path vertices.
+The center of the marker is located at (0,0) and
+the size is normalized.</td>
+</tr>
+<tr class="row-odd"><td>path</td>
+<td>a <cite>~matplotlib.path.Path</cite> instance.</td>
+</tr>
+<tr class="row-even"><td>(<cite>numsides</cite>, <cite>style</cite>, <cite>angle</cite>)</td>
+<td>see below</td>
+</tr>
+</tbody>
+</table>
+<p>The marker can also be a tuple (<cite>numsides</cite>, <cite>style</cite>, <cite>angle</cite>), which
+will create a custom, regular symbol.</p>
+<blockquote>
+<div><dl class="docutils">
+<dt><cite>numsides</cite>:</dt>
+<dd>the number of sides</dd>
+<dt><cite>style</cite>:</dt>
+<dd><p class="first">the style of the regular symbol:</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Value</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>a regular polygon</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>a star-like symbol</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>an asterisk</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>a circle (<cite>numsides</cite> and <cite>angle</cite> is ignored)</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt><cite>angle</cite>:</dt>
+<dd>the angle of rotation of the symbol, in degrees</dd>
+</dl>
+</div></blockquote>
+<p>For backward compatibility, the form (<cite>verts</cite>, 0) is also accepted,
+but it is equivalent to just <cite>verts</cite> for giving a raw set of vertices
+that define the shape.</p>
+<div class="section" id="functions">
+<h2>11.1. Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.markers.is_math_text.html#matplotlib.markers.is_math_text" title="matplotlib.markers.is_math_text"><code class="xref py py-obj docutils literal"><span class="pre">is_math_text</span></code></a>(s)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.markers.is_numlike.html#matplotlib.markers.is_numlike" title="matplotlib.markers.is_numlike"><code class="xref py py-obj docutils literal"><span class="pre">is_numlike</span></code></a>(obj)</td>
+<td>return true if <em>obj</em> looks like a number</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.markers.is_string_like.html#matplotlib.markers.is_string_like" title="matplotlib.markers.is_string_like"><code class="xref py py-obj docutils literal"><span class="pre">is_string_like</span></code></a>(obj)</td>
+<td>Return True if <em>obj</em> looks like a string</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.markers.iterable.html#matplotlib.markers.iterable" title="matplotlib.markers.iterable"><code class="xref py py-obj docutils literal"><span class="pre">iterable</span></code></a>(obj)</td>
+<td>return true if <em>obj</em> is iterable</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="classes">
+<h2>11.2. Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.markers.Affine2D.html#matplotlib.markers.Affine2D" title="matplotlib.markers.Affine2D"><code class="xref py py-obj docutils literal"><span class="pre">Affine2D</span></code></a>([matrix])</td>
+<td>A mutable 2D affine transformation.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.markers.IdentityTransform.html#matplotlib.markers.IdentityTransform" title="matplotlib.markers.IdentityTransform"><code class="xref py py-obj docutils literal"><span class="pre">IdentityTransform</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>A special class that does on thing, the identity transform, in a fast way.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.markers.MarkerStyle.html#matplotlib.markers.MarkerStyle" title="matplotlib.markers.MarkerStyle"><code class="xref py py-obj docutils literal"><span class="pre">MarkerStyle</span></code></a>([marker,&nbsp;fillstyle])</td>
+<td><p class="rubric">Methods</p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/matplotlib.markers.Path.html#matplotlib.markers.Path" title="matplotlib.markers.Path"><code class="xref py py-obj docutils literal"><span class="pre">Path</span></code></a>(vertices[,&nbsp;codes,&nbsp;...])</td>
+<td><a class="reference internal" href="generated/matplotlib.markers.Path.html#matplotlib.markers.Path" title="matplotlib.markers.Path"><code class="xref py py-class docutils literal"><span class="pre">Path</span></code></a> represents a series of possibly disconnected,</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/matplotlib.markers.xrange.html#matplotlib.markers.xrange" title="matplotlib.markers.xrange"><code class="xref py py-obj docutils literal"><span class="pre">xrange</span></code></a></td>
+<td>xrange(start, stop[, step]) -&gt; xrange object</td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.markers.is_math_text.html" class="btn btn-neutral float-right" title="11.1.1. matplotlib.markers.is_math_text" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="generated/matplotlib.lines.VertexSelector.process_selected.html" class="btn btn-neutral" title="10.2.8.2. matplotlib.lines.VertexSelector.process_selected" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../static/jquery.js"></script>
+      <script type="text/javascript" src="../static/underscore.js"></script>
+      <script type="text/javascript" src="../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

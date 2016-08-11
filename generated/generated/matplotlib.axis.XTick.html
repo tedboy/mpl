@@ -1,0 +1,606 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4.2.5. matplotlib.axis.XTick &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="4. matplotlib.axis" href="../matplotlib.axis.html"/>
+        <link rel="next" title="4.2.5.1. matplotlib.axis.XTick.axes" href="matplotlib.axis.XTick.axes.html"/>
+        <link rel="prev" title="4.2.4.126. matplotlib.axis.XAxis.zoom" href="matplotlib.axis.XAxis.zoom.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.axis.html">4. matplotlib.axis</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.axis.html#functions">4.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.axis.html#classes">4.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.axis.Axis.html">4.2.1. matplotlib.axis.Axis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.axis.Tick.html">4.2.2. matplotlib.axis.Tick</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.axis.Ticker.html">4.2.3. matplotlib.axis.Ticker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.axis.XAxis.html">4.2.4. matplotlib.axis.XAxis</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">4.2.5. matplotlib.axis.XTick</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.axes.html">4.2.5.1. matplotlib.axis.XTick.axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.mouseover.html">4.2.5.2. matplotlib.axis.XTick.mouseover</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.stale.html">4.2.5.3. matplotlib.axis.XTick.stale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.add_callback.html">4.2.5.4. matplotlib.axis.XTick.add_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.apply_tickdir.html">4.2.5.5. matplotlib.axis.XTick.apply_tickdir</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.contains.html">4.2.5.6. matplotlib.axis.XTick.contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.convert_xunits.html">4.2.5.7. matplotlib.axis.XTick.convert_xunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.convert_yunits.html">4.2.5.8. matplotlib.axis.XTick.convert_yunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.draw.html">4.2.5.9. matplotlib.axis.XTick.draw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.findobj.html">4.2.5.10. matplotlib.axis.XTick.findobj</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.format_cursor_data.html">4.2.5.11. matplotlib.axis.XTick.format_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.get_agg_filter.html">4.2.5.12. matplotlib.axis.XTick.get_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.get_alpha.html">4.2.5.13. matplotlib.axis.XTick.get_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.get_animated.html">4.2.5.14. matplotlib.axis.XTick.get_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.get_axes.html">4.2.5.15. matplotlib.axis.XTick.get_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.get_children.html">4.2.5.16. matplotlib.axis.XTick.get_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.get_clip_box.html">4.2.5.17. matplotlib.axis.XTick.get_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.get_clip_on.html">4.2.5.18. matplotlib.axis.XTick.get_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.get_clip_path.html">4.2.5.19. matplotlib.axis.XTick.get_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.get_contains.html">4.2.5.20. matplotlib.axis.XTick.get_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.get_cursor_data.html">4.2.5.21. matplotlib.axis.XTick.get_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.get_figure.html">4.2.5.22. matplotlib.axis.XTick.get_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.get_gid.html">4.2.5.23. matplotlib.axis.XTick.get_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.get_label.html">4.2.5.24. matplotlib.axis.XTick.get_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.get_loc.html">4.2.5.25. matplotlib.axis.XTick.get_loc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.get_pad.html">4.2.5.26. matplotlib.axis.XTick.get_pad</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.get_pad_pixels.html">4.2.5.27. matplotlib.axis.XTick.get_pad_pixels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.get_path_effects.html">4.2.5.28. matplotlib.axis.XTick.get_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.get_picker.html">4.2.5.29. matplotlib.axis.XTick.get_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.get_rasterized.html">4.2.5.30. matplotlib.axis.XTick.get_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.get_sketch_params.html">4.2.5.31. matplotlib.axis.XTick.get_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.get_snap.html">4.2.5.32. matplotlib.axis.XTick.get_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.get_transform.html">4.2.5.33. matplotlib.axis.XTick.get_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.get_transformed_clip_path_and_affine.html">4.2.5.34. matplotlib.axis.XTick.get_transformed_clip_path_and_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.get_url.html">4.2.5.35. matplotlib.axis.XTick.get_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.get_view_interval.html">4.2.5.36. matplotlib.axis.XTick.get_view_interval</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.get_visible.html">4.2.5.37. matplotlib.axis.XTick.get_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.get_window_extent.html">4.2.5.38. matplotlib.axis.XTick.get_window_extent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.get_zorder.html">4.2.5.39. matplotlib.axis.XTick.get_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.have_units.html">4.2.5.40. matplotlib.axis.XTick.have_units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.hitlist.html">4.2.5.41. matplotlib.axis.XTick.hitlist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.is_figure_set.html">4.2.5.42. matplotlib.axis.XTick.is_figure_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.is_transform_set.html">4.2.5.43. matplotlib.axis.XTick.is_transform_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.pchanged.html">4.2.5.44. matplotlib.axis.XTick.pchanged</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.pick.html">4.2.5.45. matplotlib.axis.XTick.pick</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.pickable.html">4.2.5.46. matplotlib.axis.XTick.pickable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.properties.html">4.2.5.47. matplotlib.axis.XTick.properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.remove.html">4.2.5.48. matplotlib.axis.XTick.remove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.remove_callback.html">4.2.5.49. matplotlib.axis.XTick.remove_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.set.html">4.2.5.50. matplotlib.axis.XTick.set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.set_agg_filter.html">4.2.5.51. matplotlib.axis.XTick.set_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.set_alpha.html">4.2.5.52. matplotlib.axis.XTick.set_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.set_animated.html">4.2.5.53. matplotlib.axis.XTick.set_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.set_axes.html">4.2.5.54. matplotlib.axis.XTick.set_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.set_clip_box.html">4.2.5.55. matplotlib.axis.XTick.set_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.set_clip_on.html">4.2.5.56. matplotlib.axis.XTick.set_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.set_clip_path.html">4.2.5.57. matplotlib.axis.XTick.set_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.set_contains.html">4.2.5.58. matplotlib.axis.XTick.set_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.set_figure.html">4.2.5.59. matplotlib.axis.XTick.set_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.set_gid.html">4.2.5.60. matplotlib.axis.XTick.set_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.set_label.html">4.2.5.61. matplotlib.axis.XTick.set_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.set_label1.html">4.2.5.62. matplotlib.axis.XTick.set_label1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.set_label2.html">4.2.5.63. matplotlib.axis.XTick.set_label2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.set_pad.html">4.2.5.64. matplotlib.axis.XTick.set_pad</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.set_path_effects.html">4.2.5.65. matplotlib.axis.XTick.set_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.set_picker.html">4.2.5.66. matplotlib.axis.XTick.set_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.set_rasterized.html">4.2.5.67. matplotlib.axis.XTick.set_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.set_sketch_params.html">4.2.5.68. matplotlib.axis.XTick.set_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.set_snap.html">4.2.5.69. matplotlib.axis.XTick.set_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.set_transform.html">4.2.5.70. matplotlib.axis.XTick.set_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.set_url.html">4.2.5.71. matplotlib.axis.XTick.set_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.set_visible.html">4.2.5.72. matplotlib.axis.XTick.set_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.set_zorder.html">4.2.5.73. matplotlib.axis.XTick.set_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.update.html">4.2.5.74. matplotlib.axis.XTick.update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.update_from.html">4.2.5.75. matplotlib.axis.XTick.update_from</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.axis.XTick.update_position.html">4.2.5.76. matplotlib.axis.XTick.update_position</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.axis.YAxis.html">4.2.6. matplotlib.axis.YAxis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.axis.YTick.html">4.2.7. matplotlib.axis.YTick</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../freq.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.axis.html">4. matplotlib.axis</a> &raquo;</li>
+        
+      <li>4.2.5. matplotlib.axis.XTick</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.axis.XTick.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-axis-xtick">
+<h1>4.2.5. matplotlib.axis.XTick<a class="headerlink" href="#matplotlib-axis-xtick" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="matplotlib.axis.XTick">
+<em class="property">class </em><code class="descclassname">matplotlib.axis.</code><code class="descname">XTick</code><span class="sig-paren">(</span><em>axes</em>, <em>loc</em>, <em>label</em>, <em>size=None</em>, <em>width=None</em>, <em>color=None</em>, <em>tickdir=None</em>, <em>pad=None</em>, <em>labelsize=None</em>, <em>labelcolor=None</em>, <em>zorder=None</em>, <em>gridOn=None</em>, <em>tick1On=True</em>, <em>tick2On=True</em>, <em>label1On=True</em>, <em>label2On=False</em>, <em>major=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/axis.html#XTick"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.axis.XTick" title="Permalink to this definition">¶</a></dt>
+<dd><p>Contains all the Artists needed to make an x tick - the tick line,
+the label text and the grid line</p>
+<p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.axes.html#matplotlib.axis.XTick.axes" title="matplotlib.axis.XTick.axes"><code class="xref py py-obj docutils literal"><span class="pre">axes</span></code></a></td>
+<td>The <a class="reference internal" href="matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instance the artist resides in, or <em>None</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axis.XTick.mouseover.html#matplotlib.axis.XTick.mouseover" title="matplotlib.axis.XTick.mouseover"><code class="xref py py-obj docutils literal"><span class="pre">mouseover</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.stale.html#matplotlib.axis.XTick.stale" title="matplotlib.axis.XTick.stale"><code class="xref py py-obj docutils literal"><span class="pre">stale</span></code></a></td>
+<td>If the artist is &#8216;stale&#8217; and needs to be re-drawn for the output to match the internal state of the artist.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.add_callback.html#matplotlib.axis.XTick.add_callback" title="matplotlib.axis.XTick.add_callback"><code class="xref py py-obj docutils literal"><span class="pre">add_callback</span></code></a>(func)</td>
+<td>Adds a callback function that will be called whenever one of the <code class="xref py py-class docutils literal"><span class="pre">Artist</span></code>&#8216;s properties changes.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axis.XTick.apply_tickdir.html#matplotlib.axis.XTick.apply_tickdir" title="matplotlib.axis.XTick.apply_tickdir"><code class="xref py py-obj docutils literal"><span class="pre">apply_tickdir</span></code></a>(tickdir)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.contains.html#matplotlib.axis.XTick.contains" title="matplotlib.axis.XTick.contains"><code class="xref py py-obj docutils literal"><span class="pre">contains</span></code></a>(mouseevent)</td>
+<td>Test whether the mouse event occurred in the Tick marks.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axis.XTick.convert_xunits.html#matplotlib.axis.XTick.convert_xunits" title="matplotlib.axis.XTick.convert_xunits"><code class="xref py py-obj docutils literal"><span class="pre">convert_xunits</span></code></a>(x)</td>
+<td>For artists in an axes, if the xaxis has units support,</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.convert_yunits.html#matplotlib.axis.XTick.convert_yunits" title="matplotlib.axis.XTick.convert_yunits"><code class="xref py py-obj docutils literal"><span class="pre">convert_yunits</span></code></a>(y)</td>
+<td>For artists in an axes, if the yaxis has units support,</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axis.XTick.draw.html#matplotlib.axis.XTick.draw" title="matplotlib.axis.XTick.draw"><code class="xref py py-obj docutils literal"><span class="pre">draw</span></code></a>(artist,&nbsp;renderer,&nbsp;*args,&nbsp;**kwargs)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.findobj.html#matplotlib.axis.XTick.findobj" title="matplotlib.axis.XTick.findobj"><code class="xref py py-obj docutils literal"><span class="pre">findobj</span></code></a>([match,&nbsp;include_self])</td>
+<td>Find artist objects.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axis.XTick.format_cursor_data.html#matplotlib.axis.XTick.format_cursor_data" title="matplotlib.axis.XTick.format_cursor_data"><code class="xref py py-obj docutils literal"><span class="pre">format_cursor_data</span></code></a>(data)</td>
+<td>Return <em>cursor data</em> string formatted.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.get_agg_filter.html#matplotlib.axis.XTick.get_agg_filter" title="matplotlib.axis.XTick.get_agg_filter"><code class="xref py py-obj docutils literal"><span class="pre">get_agg_filter</span></code></a>()</td>
+<td>return filter function to be used for agg filter</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axis.XTick.get_alpha.html#matplotlib.axis.XTick.get_alpha" title="matplotlib.axis.XTick.get_alpha"><code class="xref py py-obj docutils literal"><span class="pre">get_alpha</span></code></a>()</td>
+<td>Return the alpha value used for blending - not supported on all</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.get_animated.html#matplotlib.axis.XTick.get_animated" title="matplotlib.axis.XTick.get_animated"><code class="xref py py-obj docutils literal"><span class="pre">get_animated</span></code></a>()</td>
+<td>Return the artist&#8217;s animated state</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axis.XTick.get_axes.html#matplotlib.axis.XTick.get_axes" title="matplotlib.axis.XTick.get_axes"><code class="xref py py-obj docutils literal"><span class="pre">get_axes</span></code></a>()</td>
+<td>Return the <a class="reference internal" href="matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instance the artist resides in, or <em>None</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.get_children.html#matplotlib.axis.XTick.get_children" title="matplotlib.axis.XTick.get_children"><code class="xref py py-obj docutils literal"><span class="pre">get_children</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axis.XTick.get_clip_box.html#matplotlib.axis.XTick.get_clip_box" title="matplotlib.axis.XTick.get_clip_box"><code class="xref py py-obj docutils literal"><span class="pre">get_clip_box</span></code></a>()</td>
+<td>Return artist clipbox</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.get_clip_on.html#matplotlib.axis.XTick.get_clip_on" title="matplotlib.axis.XTick.get_clip_on"><code class="xref py py-obj docutils literal"><span class="pre">get_clip_on</span></code></a>()</td>
+<td>Return whether artist uses clipping</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axis.XTick.get_clip_path.html#matplotlib.axis.XTick.get_clip_path" title="matplotlib.axis.XTick.get_clip_path"><code class="xref py py-obj docutils literal"><span class="pre">get_clip_path</span></code></a>()</td>
+<td>Return artist clip path</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.get_contains.html#matplotlib.axis.XTick.get_contains" title="matplotlib.axis.XTick.get_contains"><code class="xref py py-obj docutils literal"><span class="pre">get_contains</span></code></a>()</td>
+<td>Return the _contains test used by the artist, or <em>None</em> for default.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axis.XTick.get_cursor_data.html#matplotlib.axis.XTick.get_cursor_data" title="matplotlib.axis.XTick.get_cursor_data"><code class="xref py py-obj docutils literal"><span class="pre">get_cursor_data</span></code></a>(event)</td>
+<td>Get the cursor data for a given event.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.get_figure.html#matplotlib.axis.XTick.get_figure" title="matplotlib.axis.XTick.get_figure"><code class="xref py py-obj docutils literal"><span class="pre">get_figure</span></code></a>()</td>
+<td>Return the <a class="reference internal" href="matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure"><code class="xref py py-class docutils literal"><span class="pre">Figure</span></code></a> instance the artist belongs to.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axis.XTick.get_gid.html#matplotlib.axis.XTick.get_gid" title="matplotlib.axis.XTick.get_gid"><code class="xref py py-obj docutils literal"><span class="pre">get_gid</span></code></a>()</td>
+<td>Returns the group id</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.get_label.html#matplotlib.axis.XTick.get_label" title="matplotlib.axis.XTick.get_label"><code class="xref py py-obj docutils literal"><span class="pre">get_label</span></code></a>()</td>
+<td>Get the label used for this artist in the legend.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axis.XTick.get_loc.html#matplotlib.axis.XTick.get_loc" title="matplotlib.axis.XTick.get_loc"><code class="xref py py-obj docutils literal"><span class="pre">get_loc</span></code></a>()</td>
+<td>Return the tick location (data coords) as a scalar</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.get_pad.html#matplotlib.axis.XTick.get_pad" title="matplotlib.axis.XTick.get_pad"><code class="xref py py-obj docutils literal"><span class="pre">get_pad</span></code></a>()</td>
+<td>Get the value of the tick label pad in points</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axis.XTick.get_pad_pixels.html#matplotlib.axis.XTick.get_pad_pixels" title="matplotlib.axis.XTick.get_pad_pixels"><code class="xref py py-obj docutils literal"><span class="pre">get_pad_pixels</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.get_path_effects.html#matplotlib.axis.XTick.get_path_effects" title="matplotlib.axis.XTick.get_path_effects"><code class="xref py py-obj docutils literal"><span class="pre">get_path_effects</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axis.XTick.get_picker.html#matplotlib.axis.XTick.get_picker" title="matplotlib.axis.XTick.get_picker"><code class="xref py py-obj docutils literal"><span class="pre">get_picker</span></code></a>()</td>
+<td>Return the picker object used by this artist</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.get_rasterized.html#matplotlib.axis.XTick.get_rasterized" title="matplotlib.axis.XTick.get_rasterized"><code class="xref py py-obj docutils literal"><span class="pre">get_rasterized</span></code></a>()</td>
+<td>return True if the artist is to be rasterized</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axis.XTick.get_sketch_params.html#matplotlib.axis.XTick.get_sketch_params" title="matplotlib.axis.XTick.get_sketch_params"><code class="xref py py-obj docutils literal"><span class="pre">get_sketch_params</span></code></a>()</td>
+<td>Returns the sketch parameters for the artist.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.get_snap.html#matplotlib.axis.XTick.get_snap" title="matplotlib.axis.XTick.get_snap"><code class="xref py py-obj docutils literal"><span class="pre">get_snap</span></code></a>()</td>
+<td>Returns the snap setting which may be:</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axis.XTick.get_transform.html#matplotlib.axis.XTick.get_transform" title="matplotlib.axis.XTick.get_transform"><code class="xref py py-obj docutils literal"><span class="pre">get_transform</span></code></a>()</td>
+<td>Return the <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code> instance used by this artist.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.get_transformed_clip_path_and_affine.html#matplotlib.axis.XTick.get_transformed_clip_path_and_affine" title="matplotlib.axis.XTick.get_transformed_clip_path_and_affine"><code class="xref py py-obj docutils literal"><span class="pre">get_transformed_clip_path_and_affine</span></code></a>()</td>
+<td>Return the clip path with the non-affine part of its transformation applied, and the remaining affine part of its transformation.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axis.XTick.get_url.html#matplotlib.axis.XTick.get_url" title="matplotlib.axis.XTick.get_url"><code class="xref py py-obj docutils literal"><span class="pre">get_url</span></code></a>()</td>
+<td>Returns the url</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.get_view_interval.html#matplotlib.axis.XTick.get_view_interval" title="matplotlib.axis.XTick.get_view_interval"><code class="xref py py-obj docutils literal"><span class="pre">get_view_interval</span></code></a>()</td>
+<td>return the Interval instance for this axis view limits</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axis.XTick.get_visible.html#matplotlib.axis.XTick.get_visible" title="matplotlib.axis.XTick.get_visible"><code class="xref py py-obj docutils literal"><span class="pre">get_visible</span></code></a>()</td>
+<td>Return the artist&#8217;s visiblity</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.get_window_extent.html#matplotlib.axis.XTick.get_window_extent" title="matplotlib.axis.XTick.get_window_extent"><code class="xref py py-obj docutils literal"><span class="pre">get_window_extent</span></code></a>(renderer)</td>
+<td>Get the axes bounding box in display space.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axis.XTick.get_zorder.html#matplotlib.axis.XTick.get_zorder" title="matplotlib.axis.XTick.get_zorder"><code class="xref py py-obj docutils literal"><span class="pre">get_zorder</span></code></a>()</td>
+<td>Return the <code class="xref py py-class docutils literal"><span class="pre">Artist</span></code>&#8216;s zorder.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.have_units.html#matplotlib.axis.XTick.have_units" title="matplotlib.axis.XTick.have_units"><code class="xref py py-obj docutils literal"><span class="pre">have_units</span></code></a>()</td>
+<td>Return <em>True</em> if units are set on the <em>x</em> or <em>y</em> axes</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axis.XTick.hitlist.html#matplotlib.axis.XTick.hitlist" title="matplotlib.axis.XTick.hitlist"><code class="xref py py-obj docutils literal"><span class="pre">hitlist</span></code></a>(event)</td>
+<td>List the children of the artist which contain the mouse event <em>event</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.is_figure_set.html#matplotlib.axis.XTick.is_figure_set" title="matplotlib.axis.XTick.is_figure_set"><code class="xref py py-obj docutils literal"><span class="pre">is_figure_set</span></code></a>()</td>
+<td>Returns True if the artist is assigned to a <a class="reference internal" href="matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure"><code class="xref py py-class docutils literal"><span class="pre">Figure</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axis.XTick.is_transform_set.html#matplotlib.axis.XTick.is_transform_set" title="matplotlib.axis.XTick.is_transform_set"><code class="xref py py-obj docutils literal"><span class="pre">is_transform_set</span></code></a>()</td>
+<td>Returns <em>True</em> if <code class="xref py py-class docutils literal"><span class="pre">Artist</span></code> has a transform explicitly set.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.pchanged.html#matplotlib.axis.XTick.pchanged" title="matplotlib.axis.XTick.pchanged"><code class="xref py py-obj docutils literal"><span class="pre">pchanged</span></code></a>()</td>
+<td>Fire an event when property changed, calling all of the registered callbacks.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axis.XTick.pick.html#matplotlib.axis.XTick.pick" title="matplotlib.axis.XTick.pick"><code class="xref py py-obj docutils literal"><span class="pre">pick</span></code></a>(mouseevent)</td>
+<td>call signature:</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.pickable.html#matplotlib.axis.XTick.pickable" title="matplotlib.axis.XTick.pickable"><code class="xref py py-obj docutils literal"><span class="pre">pickable</span></code></a>()</td>
+<td>Return <em>True</em> if <code class="xref py py-class docutils literal"><span class="pre">Artist</span></code> is pickable.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axis.XTick.properties.html#matplotlib.axis.XTick.properties" title="matplotlib.axis.XTick.properties"><code class="xref py py-obj docutils literal"><span class="pre">properties</span></code></a>()</td>
+<td>return a dictionary mapping property name -&gt; value for all Artist props</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.remove.html#matplotlib.axis.XTick.remove" title="matplotlib.axis.XTick.remove"><code class="xref py py-obj docutils literal"><span class="pre">remove</span></code></a>()</td>
+<td>Remove the artist from the figure if possible.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axis.XTick.remove_callback.html#matplotlib.axis.XTick.remove_callback" title="matplotlib.axis.XTick.remove_callback"><code class="xref py py-obj docutils literal"><span class="pre">remove_callback</span></code></a>(oid)</td>
+<td>Remove a callback based on its <em>id</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.set.html#matplotlib.axis.XTick.set" title="matplotlib.axis.XTick.set"><code class="xref py py-obj docutils literal"><span class="pre">set</span></code></a>(**kwargs)</td>
+<td>A property batch setter.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axis.XTick.set_agg_filter.html#matplotlib.axis.XTick.set_agg_filter" title="matplotlib.axis.XTick.set_agg_filter"><code class="xref py py-obj docutils literal"><span class="pre">set_agg_filter</span></code></a>(filter_func)</td>
+<td>set agg_filter fuction.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.set_alpha.html#matplotlib.axis.XTick.set_alpha" title="matplotlib.axis.XTick.set_alpha"><code class="xref py py-obj docutils literal"><span class="pre">set_alpha</span></code></a>(alpha)</td>
+<td>Set the alpha value used for blending - not supported on all backends.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axis.XTick.set_animated.html#matplotlib.axis.XTick.set_animated" title="matplotlib.axis.XTick.set_animated"><code class="xref py py-obj docutils literal"><span class="pre">set_animated</span></code></a>(b)</td>
+<td>Set the artist&#8217;s animation state.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.set_axes.html#matplotlib.axis.XTick.set_axes" title="matplotlib.axis.XTick.set_axes"><code class="xref py py-obj docutils literal"><span class="pre">set_axes</span></code></a>(axes)</td>
+<td>Set the <a class="reference internal" href="matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instance in which the artist resides, if any.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axis.XTick.set_clip_box.html#matplotlib.axis.XTick.set_clip_box" title="matplotlib.axis.XTick.set_clip_box"><code class="xref py py-obj docutils literal"><span class="pre">set_clip_box</span></code></a>(clipbox)</td>
+<td>Set the artist&#8217;s clip <code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.set_clip_on.html#matplotlib.axis.XTick.set_clip_on" title="matplotlib.axis.XTick.set_clip_on"><code class="xref py py-obj docutils literal"><span class="pre">set_clip_on</span></code></a>(b)</td>
+<td>Set whether artist uses clipping.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axis.XTick.set_clip_path.html#matplotlib.axis.XTick.set_clip_path" title="matplotlib.axis.XTick.set_clip_path"><code class="xref py py-obj docutils literal"><span class="pre">set_clip_path</span></code></a>(clippath[,&nbsp;transform])</td>
+<td>Set the artist&#8217;s clip path, which may be:</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.set_contains.html#matplotlib.axis.XTick.set_contains" title="matplotlib.axis.XTick.set_contains"><code class="xref py py-obj docutils literal"><span class="pre">set_contains</span></code></a>(picker)</td>
+<td>Replace the contains test used by this artist.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axis.XTick.set_figure.html#matplotlib.axis.XTick.set_figure" title="matplotlib.axis.XTick.set_figure"><code class="xref py py-obj docutils literal"><span class="pre">set_figure</span></code></a>(fig)</td>
+<td>Set the <a class="reference internal" href="matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure"><code class="xref py py-class docutils literal"><span class="pre">Figure</span></code></a> instance the artist belongs to.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.set_gid.html#matplotlib.axis.XTick.set_gid" title="matplotlib.axis.XTick.set_gid"><code class="xref py py-obj docutils literal"><span class="pre">set_gid</span></code></a>(gid)</td>
+<td>Sets the (group) id for the artist</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axis.XTick.set_label.html#matplotlib.axis.XTick.set_label" title="matplotlib.axis.XTick.set_label"><code class="xref py py-obj docutils literal"><span class="pre">set_label</span></code></a>(s)</td>
+<td>Set the text of ticklabel</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.set_label1.html#matplotlib.axis.XTick.set_label1" title="matplotlib.axis.XTick.set_label1"><code class="xref py py-obj docutils literal"><span class="pre">set_label1</span></code></a>(s)</td>
+<td>Set the text of ticklabel</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axis.XTick.set_label2.html#matplotlib.axis.XTick.set_label2" title="matplotlib.axis.XTick.set_label2"><code class="xref py py-obj docutils literal"><span class="pre">set_label2</span></code></a>(s)</td>
+<td>Set the text of ticklabel2</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.set_pad.html#matplotlib.axis.XTick.set_pad" title="matplotlib.axis.XTick.set_pad"><code class="xref py py-obj docutils literal"><span class="pre">set_pad</span></code></a>(val)</td>
+<td>Set the tick label pad in points</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axis.XTick.set_path_effects.html#matplotlib.axis.XTick.set_path_effects" title="matplotlib.axis.XTick.set_path_effects"><code class="xref py py-obj docutils literal"><span class="pre">set_path_effects</span></code></a>(path_effects)</td>
+<td>set path_effects, which should be a list of instances of</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.set_picker.html#matplotlib.axis.XTick.set_picker" title="matplotlib.axis.XTick.set_picker"><code class="xref py py-obj docutils literal"><span class="pre">set_picker</span></code></a>(picker)</td>
+<td>Set the epsilon for picking used by this artist</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axis.XTick.set_rasterized.html#matplotlib.axis.XTick.set_rasterized" title="matplotlib.axis.XTick.set_rasterized"><code class="xref py py-obj docutils literal"><span class="pre">set_rasterized</span></code></a>(rasterized)</td>
+<td>Force rasterized (bitmap) drawing in vector backend output.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.set_sketch_params.html#matplotlib.axis.XTick.set_sketch_params" title="matplotlib.axis.XTick.set_sketch_params"><code class="xref py py-obj docutils literal"><span class="pre">set_sketch_params</span></code></a>([scale,&nbsp;length,&nbsp;randomness])</td>
+<td>Sets the sketch parameters.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axis.XTick.set_snap.html#matplotlib.axis.XTick.set_snap" title="matplotlib.axis.XTick.set_snap"><code class="xref py py-obj docutils literal"><span class="pre">set_snap</span></code></a>(snap)</td>
+<td>Sets the snap setting which may be:</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.set_transform.html#matplotlib.axis.XTick.set_transform" title="matplotlib.axis.XTick.set_transform"><code class="xref py py-obj docutils literal"><span class="pre">set_transform</span></code></a>(t)</td>
+<td>Set the <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code> instance used by this artist.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axis.XTick.set_url.html#matplotlib.axis.XTick.set_url" title="matplotlib.axis.XTick.set_url"><code class="xref py py-obj docutils literal"><span class="pre">set_url</span></code></a>(url)</td>
+<td>Sets the url for the artist</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.set_visible.html#matplotlib.axis.XTick.set_visible" title="matplotlib.axis.XTick.set_visible"><code class="xref py py-obj docutils literal"><span class="pre">set_visible</span></code></a>(b)</td>
+<td>Set the artist&#8217;s visiblity.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axis.XTick.set_zorder.html#matplotlib.axis.XTick.set_zorder" title="matplotlib.axis.XTick.set_zorder"><code class="xref py py-obj docutils literal"><span class="pre">set_zorder</span></code></a>(level)</td>
+<td>Set the zorder for the artist.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.update.html#matplotlib.axis.XTick.update" title="matplotlib.axis.XTick.update"><code class="xref py py-obj docutils literal"><span class="pre">update</span></code></a>(props)</td>
+<td>Update the properties of this <code class="xref py py-class docutils literal"><span class="pre">Artist</span></code> from the dictionary <em>prop</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axis.XTick.update_from.html#matplotlib.axis.XTick.update_from" title="matplotlib.axis.XTick.update_from"><code class="xref py py-obj docutils literal"><span class="pre">update_from</span></code></a>(other)</td>
+<td>Copy properties from <em>other</em> to <em>self</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axis.XTick.update_position.html#matplotlib.axis.XTick.update_position" title="matplotlib.axis.XTick.update_position"><code class="xref py py-obj docutils literal"><span class="pre">update_position</span></code></a>(loc)</td>
+<td>Set the location of tick in data coords with scalar <em>loc</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.axis.XTick.axes.html" class="btn btn-neutral float-right" title="4.2.5.1. matplotlib.axis.XTick.axes" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.axis.XAxis.zoom.html" class="btn btn-neutral" title="4.2.4.126. matplotlib.axis.XAxis.zoom" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,842 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>14.2.15. matplotlib.text.Text &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="14. matplotlib.text" href="../matplotlib.text.html"/>
+        <link rel="next" title="14.2.15.1. matplotlib.text.Text.axes" href="matplotlib.text.Text.axes.html"/>
+        <link rel="prev" title="14.2.14.25. matplotlib.text.RendererBase.strip_math" href="matplotlib.text.RendererBase.strip_math.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.text.html">14. matplotlib.text</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.text.html#functions">14.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.text.html#classes">14.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.Affine2D.html">14.2.1. matplotlib.text.Affine2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.Annotation.html">14.2.2. matplotlib.text.Annotation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.Artist.html">14.2.3. matplotlib.text.Artist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.Bbox.html">14.2.4. matplotlib.text.Bbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.BboxBase.html">14.2.5. matplotlib.text.BboxBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.BboxTransformTo.html">14.2.6. matplotlib.text.BboxTransformTo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.FancyArrowPatch.html">14.2.7. matplotlib.text.FancyArrowPatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.FancyBboxPatch.html">14.2.8. matplotlib.text.FancyBboxPatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.FontProperties.html">14.2.9. matplotlib.text.FontProperties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.Line2D.html">14.2.10. matplotlib.text.Line2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.OffsetFrom.html">14.2.11. matplotlib.text.OffsetFrom</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.Path.html">14.2.12. matplotlib.text.Path</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.Rectangle.html">14.2.13. matplotlib.text.Rectangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.RendererBase.html">14.2.14. matplotlib.text.RendererBase</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">14.2.15. matplotlib.text.Text</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.axes.html">14.2.15.1. matplotlib.text.Text.axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.mouseover.html">14.2.15.2. matplotlib.text.Text.mouseover</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.stale.html">14.2.15.3. matplotlib.text.Text.stale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.add_callback.html">14.2.15.4. matplotlib.text.Text.add_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.contains.html">14.2.15.5. matplotlib.text.Text.contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.convert_xunits.html">14.2.15.6. matplotlib.text.Text.convert_xunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.convert_yunits.html">14.2.15.7. matplotlib.text.Text.convert_yunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.draw.html">14.2.15.8. matplotlib.text.Text.draw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.findobj.html">14.2.15.9. matplotlib.text.Text.findobj</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.format_cursor_data.html">14.2.15.10. matplotlib.text.Text.format_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_agg_filter.html">14.2.15.11. matplotlib.text.Text.get_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_alpha.html">14.2.15.12. matplotlib.text.Text.get_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_animated.html">14.2.15.13. matplotlib.text.Text.get_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_axes.html">14.2.15.14. matplotlib.text.Text.get_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_bbox_patch.html">14.2.15.15. matplotlib.text.Text.get_bbox_patch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_children.html">14.2.15.16. matplotlib.text.Text.get_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_clip_box.html">14.2.15.17. matplotlib.text.Text.get_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_clip_on.html">14.2.15.18. matplotlib.text.Text.get_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_clip_path.html">14.2.15.19. matplotlib.text.Text.get_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_color.html">14.2.15.20. matplotlib.text.Text.get_color</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_contains.html">14.2.15.21. matplotlib.text.Text.get_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_cursor_data.html">14.2.15.22. matplotlib.text.Text.get_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_family.html">14.2.15.23. matplotlib.text.Text.get_family</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_figure.html">14.2.15.24. matplotlib.text.Text.get_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_font_properties.html">14.2.15.25. matplotlib.text.Text.get_font_properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_fontfamily.html">14.2.15.26. matplotlib.text.Text.get_fontfamily</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_fontname.html">14.2.15.27. matplotlib.text.Text.get_fontname</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_fontproperties.html">14.2.15.28. matplotlib.text.Text.get_fontproperties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_fontsize.html">14.2.15.29. matplotlib.text.Text.get_fontsize</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_fontstretch.html">14.2.15.30. matplotlib.text.Text.get_fontstretch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_fontstyle.html">14.2.15.31. matplotlib.text.Text.get_fontstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_fontvariant.html">14.2.15.32. matplotlib.text.Text.get_fontvariant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_fontweight.html">14.2.15.33. matplotlib.text.Text.get_fontweight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_gid.html">14.2.15.34. matplotlib.text.Text.get_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_ha.html">14.2.15.35. matplotlib.text.Text.get_ha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_horizontalalignment.html">14.2.15.36. matplotlib.text.Text.get_horizontalalignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_label.html">14.2.15.37. matplotlib.text.Text.get_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_name.html">14.2.15.38. matplotlib.text.Text.get_name</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_path_effects.html">14.2.15.39. matplotlib.text.Text.get_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_picker.html">14.2.15.40. matplotlib.text.Text.get_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_position.html">14.2.15.41. matplotlib.text.Text.get_position</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_prop_tup.html">14.2.15.42. matplotlib.text.Text.get_prop_tup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_rasterized.html">14.2.15.43. matplotlib.text.Text.get_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_rotation.html">14.2.15.44. matplotlib.text.Text.get_rotation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_rotation_mode.html">14.2.15.45. matplotlib.text.Text.get_rotation_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_size.html">14.2.15.46. matplotlib.text.Text.get_size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_sketch_params.html">14.2.15.47. matplotlib.text.Text.get_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_snap.html">14.2.15.48. matplotlib.text.Text.get_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_stretch.html">14.2.15.49. matplotlib.text.Text.get_stretch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_style.html">14.2.15.50. matplotlib.text.Text.get_style</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_text.html">14.2.15.51. matplotlib.text.Text.get_text</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_transform.html">14.2.15.52. matplotlib.text.Text.get_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_transformed_clip_path_and_affine.html">14.2.15.53. matplotlib.text.Text.get_transformed_clip_path_and_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_unitless_position.html">14.2.15.54. matplotlib.text.Text.get_unitless_position</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_url.html">14.2.15.55. matplotlib.text.Text.get_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_usetex.html">14.2.15.56. matplotlib.text.Text.get_usetex</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_va.html">14.2.15.57. matplotlib.text.Text.get_va</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_variant.html">14.2.15.58. matplotlib.text.Text.get_variant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_verticalalignment.html">14.2.15.59. matplotlib.text.Text.get_verticalalignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_visible.html">14.2.15.60. matplotlib.text.Text.get_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_weight.html">14.2.15.61. matplotlib.text.Text.get_weight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_window_extent.html">14.2.15.62. matplotlib.text.Text.get_window_extent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_wrap.html">14.2.15.63. matplotlib.text.Text.get_wrap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.get_zorder.html">14.2.15.64. matplotlib.text.Text.get_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.have_units.html">14.2.15.65. matplotlib.text.Text.have_units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.hitlist.html">14.2.15.66. matplotlib.text.Text.hitlist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.is_figure_set.html">14.2.15.67. matplotlib.text.Text.is_figure_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.is_math_text.html">14.2.15.68. matplotlib.text.Text.is_math_text</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.is_transform_set.html">14.2.15.69. matplotlib.text.Text.is_transform_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.pchanged.html">14.2.15.70. matplotlib.text.Text.pchanged</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.pick.html">14.2.15.71. matplotlib.text.Text.pick</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.pickable.html">14.2.15.72. matplotlib.text.Text.pickable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.properties.html">14.2.15.73. matplotlib.text.Text.properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.remove.html">14.2.15.74. matplotlib.text.Text.remove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.remove_callback.html">14.2.15.75. matplotlib.text.Text.remove_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set.html">14.2.15.76. matplotlib.text.Text.set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_agg_filter.html">14.2.15.77. matplotlib.text.Text.set_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_alpha.html">14.2.15.78. matplotlib.text.Text.set_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_animated.html">14.2.15.79. matplotlib.text.Text.set_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_axes.html">14.2.15.80. matplotlib.text.Text.set_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_backgroundcolor.html">14.2.15.81. matplotlib.text.Text.set_backgroundcolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_bbox.html">14.2.15.82. matplotlib.text.Text.set_bbox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_clip_box.html">14.2.15.83. matplotlib.text.Text.set_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_clip_on.html">14.2.15.84. matplotlib.text.Text.set_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_clip_path.html">14.2.15.85. matplotlib.text.Text.set_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_color.html">14.2.15.86. matplotlib.text.Text.set_color</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_contains.html">14.2.15.87. matplotlib.text.Text.set_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_family.html">14.2.15.88. matplotlib.text.Text.set_family</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_figure.html">14.2.15.89. matplotlib.text.Text.set_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_font_properties.html">14.2.15.90. matplotlib.text.Text.set_font_properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_fontname.html">14.2.15.91. matplotlib.text.Text.set_fontname</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_fontproperties.html">14.2.15.92. matplotlib.text.Text.set_fontproperties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_fontsize.html">14.2.15.93. matplotlib.text.Text.set_fontsize</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_fontstretch.html">14.2.15.94. matplotlib.text.Text.set_fontstretch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_fontstyle.html">14.2.15.95. matplotlib.text.Text.set_fontstyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_fontvariant.html">14.2.15.96. matplotlib.text.Text.set_fontvariant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_fontweight.html">14.2.15.97. matplotlib.text.Text.set_fontweight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_gid.html">14.2.15.98. matplotlib.text.Text.set_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_ha.html">14.2.15.99. matplotlib.text.Text.set_ha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_horizontalalignment.html">14.2.15.100. matplotlib.text.Text.set_horizontalalignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_label.html">14.2.15.101. matplotlib.text.Text.set_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_linespacing.html">14.2.15.102. matplotlib.text.Text.set_linespacing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_ma.html">14.2.15.103. matplotlib.text.Text.set_ma</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_multialignment.html">14.2.15.104. matplotlib.text.Text.set_multialignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_name.html">14.2.15.105. matplotlib.text.Text.set_name</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_path_effects.html">14.2.15.106. matplotlib.text.Text.set_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_picker.html">14.2.15.107. matplotlib.text.Text.set_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_position.html">14.2.15.108. matplotlib.text.Text.set_position</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_rasterized.html">14.2.15.109. matplotlib.text.Text.set_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_rotation.html">14.2.15.110. matplotlib.text.Text.set_rotation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_rotation_mode.html">14.2.15.111. matplotlib.text.Text.set_rotation_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_size.html">14.2.15.112. matplotlib.text.Text.set_size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_sketch_params.html">14.2.15.113. matplotlib.text.Text.set_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_snap.html">14.2.15.114. matplotlib.text.Text.set_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_stretch.html">14.2.15.115. matplotlib.text.Text.set_stretch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_style.html">14.2.15.116. matplotlib.text.Text.set_style</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_text.html">14.2.15.117. matplotlib.text.Text.set_text</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_transform.html">14.2.15.118. matplotlib.text.Text.set_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_url.html">14.2.15.119. matplotlib.text.Text.set_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_usetex.html">14.2.15.120. matplotlib.text.Text.set_usetex</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_va.html">14.2.15.121. matplotlib.text.Text.set_va</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_variant.html">14.2.15.122. matplotlib.text.Text.set_variant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_verticalalignment.html">14.2.15.123. matplotlib.text.Text.set_verticalalignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_visible.html">14.2.15.124. matplotlib.text.Text.set_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_weight.html">14.2.15.125. matplotlib.text.Text.set_weight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_wrap.html">14.2.15.126. matplotlib.text.Text.set_wrap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_x.html">14.2.15.127. matplotlib.text.Text.set_x</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_y.html">14.2.15.128. matplotlib.text.Text.set_y</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.set_zorder.html">14.2.15.129. matplotlib.text.Text.set_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.update.html">14.2.15.130. matplotlib.text.Text.update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.update_bbox_position_size.html">14.2.15.131. matplotlib.text.Text.update_bbox_position_size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Text.update_from.html">14.2.15.132. matplotlib.text.Text.update_from</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.TextPath.html">14.2.16. matplotlib.text.TextPath</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.TextWithDash.html">14.2.17. matplotlib.text.TextWithDash</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.Transform.html">14.2.18. matplotlib.text.Transform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.maxdict.html">14.2.19. matplotlib.text.maxdict</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.zip.html">14.2.20. matplotlib.text.zip</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../freq.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.text.html">14. matplotlib.text</a> &raquo;</li>
+        
+      <li>14.2.15. matplotlib.text.Text</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.text.Text.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-text-text">
+<h1>14.2.15. matplotlib.text.Text<a class="headerlink" href="#matplotlib-text-text" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="matplotlib.text.Text">
+<em class="property">class </em><code class="descclassname">matplotlib.text.</code><code class="descname">Text</code><span class="sig-paren">(</span><em>x=0</em>, <em>y=0</em>, <em>text=u''</em>, <em>color=None</em>, <em>verticalalignment=u'baseline'</em>, <em>horizontalalignment=u'left'</em>, <em>multialignment=None</em>, <em>fontproperties=None</em>, <em>rotation=None</em>, <em>linespacing=None</em>, <em>rotation_mode=None</em>, <em>usetex=None</em>, <em>wrap=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/text.html#Text"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.text.Text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle storing and drawing of text in window or data coordinates.</p>
+<p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.axes.html#matplotlib.text.Text.axes" title="matplotlib.text.Text.axes"><code class="xref py py-obj docutils literal"><span class="pre">axes</span></code></a></td>
+<td>The <a class="reference internal" href="matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instance the artist resides in, or <em>None</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.mouseover.html#matplotlib.text.Text.mouseover" title="matplotlib.text.Text.mouseover"><code class="xref py py-obj docutils literal"><span class="pre">mouseover</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.stale.html#matplotlib.text.Text.stale" title="matplotlib.text.Text.stale"><code class="xref py py-obj docutils literal"><span class="pre">stale</span></code></a></td>
+<td>If the artist is &#8216;stale&#8217; and needs to be re-drawn for the output to match the internal state of the artist.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.add_callback.html#matplotlib.text.Text.add_callback" title="matplotlib.text.Text.add_callback"><code class="xref py py-obj docutils literal"><span class="pre">add_callback</span></code></a>(func)</td>
+<td>Adds a callback function that will be called whenever one of the <a class="reference internal" href="matplotlib.text.Artist.html#matplotlib.text.Artist" title="matplotlib.text.Artist"><code class="xref py py-class docutils literal"><span class="pre">Artist</span></code></a>&#8216;s properties changes.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.contains.html#matplotlib.text.Text.contains" title="matplotlib.text.Text.contains"><code class="xref py py-obj docutils literal"><span class="pre">contains</span></code></a>(mouseevent)</td>
+<td>Test whether the mouse event occurred in the patch.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.convert_xunits.html#matplotlib.text.Text.convert_xunits" title="matplotlib.text.Text.convert_xunits"><code class="xref py py-obj docutils literal"><span class="pre">convert_xunits</span></code></a>(x)</td>
+<td>For artists in an axes, if the xaxis has units support,</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.convert_yunits.html#matplotlib.text.Text.convert_yunits" title="matplotlib.text.Text.convert_yunits"><code class="xref py py-obj docutils literal"><span class="pre">convert_yunits</span></code></a>(y)</td>
+<td>For artists in an axes, if the yaxis has units support,</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.draw.html#matplotlib.text.Text.draw" title="matplotlib.text.Text.draw"><code class="xref py py-obj docutils literal"><span class="pre">draw</span></code></a>(artist,&nbsp;renderer,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Draws the <a class="reference internal" href="#matplotlib.text.Text" title="matplotlib.text.Text"><code class="xref py py-class docutils literal"><span class="pre">Text</span></code></a> object to the given <em>renderer</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.findobj.html#matplotlib.text.Text.findobj" title="matplotlib.text.Text.findobj"><code class="xref py py-obj docutils literal"><span class="pre">findobj</span></code></a>([match,&nbsp;include_self])</td>
+<td>Find artist objects.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.format_cursor_data.html#matplotlib.text.Text.format_cursor_data" title="matplotlib.text.Text.format_cursor_data"><code class="xref py py-obj docutils literal"><span class="pre">format_cursor_data</span></code></a>(data)</td>
+<td>Return <em>cursor data</em> string formatted.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.get_agg_filter.html#matplotlib.text.Text.get_agg_filter" title="matplotlib.text.Text.get_agg_filter"><code class="xref py py-obj docutils literal"><span class="pre">get_agg_filter</span></code></a>()</td>
+<td>return filter function to be used for agg filter</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.get_alpha.html#matplotlib.text.Text.get_alpha" title="matplotlib.text.Text.get_alpha"><code class="xref py py-obj docutils literal"><span class="pre">get_alpha</span></code></a>()</td>
+<td>Return the alpha value used for blending - not supported on all</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.get_animated.html#matplotlib.text.Text.get_animated" title="matplotlib.text.Text.get_animated"><code class="xref py py-obj docutils literal"><span class="pre">get_animated</span></code></a>()</td>
+<td>Return the artist&#8217;s animated state</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.get_axes.html#matplotlib.text.Text.get_axes" title="matplotlib.text.Text.get_axes"><code class="xref py py-obj docutils literal"><span class="pre">get_axes</span></code></a>()</td>
+<td>Return the <a class="reference internal" href="matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instance the artist resides in, or <em>None</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.get_bbox_patch.html#matplotlib.text.Text.get_bbox_patch" title="matplotlib.text.Text.get_bbox_patch"><code class="xref py py-obj docutils literal"><span class="pre">get_bbox_patch</span></code></a>()</td>
+<td>Return the bbox Patch object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.get_children.html#matplotlib.text.Text.get_children" title="matplotlib.text.Text.get_children"><code class="xref py py-obj docutils literal"><span class="pre">get_children</span></code></a>()</td>
+<td>Return a list of the child <code class="xref py py-class docutils literal"><span class="pre">Artist`s</span> <span class="pre">this</span> <span class="pre">:class:`Artist</span></code> contains.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.get_clip_box.html#matplotlib.text.Text.get_clip_box" title="matplotlib.text.Text.get_clip_box"><code class="xref py py-obj docutils literal"><span class="pre">get_clip_box</span></code></a>()</td>
+<td>Return artist clipbox</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.get_clip_on.html#matplotlib.text.Text.get_clip_on" title="matplotlib.text.Text.get_clip_on"><code class="xref py py-obj docutils literal"><span class="pre">get_clip_on</span></code></a>()</td>
+<td>Return whether artist uses clipping</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.get_clip_path.html#matplotlib.text.Text.get_clip_path" title="matplotlib.text.Text.get_clip_path"><code class="xref py py-obj docutils literal"><span class="pre">get_clip_path</span></code></a>()</td>
+<td>Return artist clip path</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.get_color.html#matplotlib.text.Text.get_color" title="matplotlib.text.Text.get_color"><code class="xref py py-obj docutils literal"><span class="pre">get_color</span></code></a>()</td>
+<td>Return the color of the text</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.get_contains.html#matplotlib.text.Text.get_contains" title="matplotlib.text.Text.get_contains"><code class="xref py py-obj docutils literal"><span class="pre">get_contains</span></code></a>()</td>
+<td>Return the _contains test used by the artist, or <em>None</em> for default.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.get_cursor_data.html#matplotlib.text.Text.get_cursor_data" title="matplotlib.text.Text.get_cursor_data"><code class="xref py py-obj docutils literal"><span class="pre">get_cursor_data</span></code></a>(event)</td>
+<td>Get the cursor data for a given event.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.get_family.html#matplotlib.text.Text.get_family" title="matplotlib.text.Text.get_family"><code class="xref py py-obj docutils literal"><span class="pre">get_family</span></code></a>()</td>
+<td>Return the list of font families used for font lookup</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.get_figure.html#matplotlib.text.Text.get_figure" title="matplotlib.text.Text.get_figure"><code class="xref py py-obj docutils literal"><span class="pre">get_figure</span></code></a>()</td>
+<td>Return the <a class="reference internal" href="matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure"><code class="xref py py-class docutils literal"><span class="pre">Figure</span></code></a> instance the artist belongs to.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.get_font_properties.html#matplotlib.text.Text.get_font_properties" title="matplotlib.text.Text.get_font_properties"><code class="xref py py-obj docutils literal"><span class="pre">get_font_properties</span></code></a>()</td>
+<td>alias for get_fontproperties</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.get_fontfamily.html#matplotlib.text.Text.get_fontfamily" title="matplotlib.text.Text.get_fontfamily"><code class="xref py py-obj docutils literal"><span class="pre">get_fontfamily</span></code></a>()</td>
+<td>alias for get_family</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.get_fontname.html#matplotlib.text.Text.get_fontname" title="matplotlib.text.Text.get_fontname"><code class="xref py py-obj docutils literal"><span class="pre">get_fontname</span></code></a>()</td>
+<td>alias for get_name</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.get_fontproperties.html#matplotlib.text.Text.get_fontproperties" title="matplotlib.text.Text.get_fontproperties"><code class="xref py py-obj docutils literal"><span class="pre">get_fontproperties</span></code></a>()</td>
+<td>Return the <code class="xref py py-class docutils literal"><span class="pre">FontProperties</span></code> object</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.get_fontsize.html#matplotlib.text.Text.get_fontsize" title="matplotlib.text.Text.get_fontsize"><code class="xref py py-obj docutils literal"><span class="pre">get_fontsize</span></code></a>()</td>
+<td>alias for get_size</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.get_fontstretch.html#matplotlib.text.Text.get_fontstretch" title="matplotlib.text.Text.get_fontstretch"><code class="xref py py-obj docutils literal"><span class="pre">get_fontstretch</span></code></a>()</td>
+<td>alias for get_stretch</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.get_fontstyle.html#matplotlib.text.Text.get_fontstyle" title="matplotlib.text.Text.get_fontstyle"><code class="xref py py-obj docutils literal"><span class="pre">get_fontstyle</span></code></a>()</td>
+<td>alias for get_style</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.get_fontvariant.html#matplotlib.text.Text.get_fontvariant" title="matplotlib.text.Text.get_fontvariant"><code class="xref py py-obj docutils literal"><span class="pre">get_fontvariant</span></code></a>()</td>
+<td>alias for get_variant</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.get_fontweight.html#matplotlib.text.Text.get_fontweight" title="matplotlib.text.Text.get_fontweight"><code class="xref py py-obj docutils literal"><span class="pre">get_fontweight</span></code></a>()</td>
+<td>alias for get_weight</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.get_gid.html#matplotlib.text.Text.get_gid" title="matplotlib.text.Text.get_gid"><code class="xref py py-obj docutils literal"><span class="pre">get_gid</span></code></a>()</td>
+<td>Returns the group id</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.get_ha.html#matplotlib.text.Text.get_ha" title="matplotlib.text.Text.get_ha"><code class="xref py py-obj docutils literal"><span class="pre">get_ha</span></code></a>()</td>
+<td>alias for get_horizontalalignment</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.get_horizontalalignment.html#matplotlib.text.Text.get_horizontalalignment" title="matplotlib.text.Text.get_horizontalalignment"><code class="xref py py-obj docutils literal"><span class="pre">get_horizontalalignment</span></code></a>()</td>
+<td>Return the horizontal alignment as string.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.get_label.html#matplotlib.text.Text.get_label" title="matplotlib.text.Text.get_label"><code class="xref py py-obj docutils literal"><span class="pre">get_label</span></code></a>()</td>
+<td>Get the label used for this artist in the legend.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.get_name.html#matplotlib.text.Text.get_name" title="matplotlib.text.Text.get_name"><code class="xref py py-obj docutils literal"><span class="pre">get_name</span></code></a>()</td>
+<td>Return the font name as string</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.get_path_effects.html#matplotlib.text.Text.get_path_effects" title="matplotlib.text.Text.get_path_effects"><code class="xref py py-obj docutils literal"><span class="pre">get_path_effects</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.get_picker.html#matplotlib.text.Text.get_picker" title="matplotlib.text.Text.get_picker"><code class="xref py py-obj docutils literal"><span class="pre">get_picker</span></code></a>()</td>
+<td>Return the picker object used by this artist</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.get_position.html#matplotlib.text.Text.get_position" title="matplotlib.text.Text.get_position"><code class="xref py py-obj docutils literal"><span class="pre">get_position</span></code></a>()</td>
+<td>Return the position of the text as a tuple (<em>x</em>, <em>y</em>)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.get_prop_tup.html#matplotlib.text.Text.get_prop_tup" title="matplotlib.text.Text.get_prop_tup"><code class="xref py py-obj docutils literal"><span class="pre">get_prop_tup</span></code></a>()</td>
+<td>Return a hashable tuple of properties.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.get_rasterized.html#matplotlib.text.Text.get_rasterized" title="matplotlib.text.Text.get_rasterized"><code class="xref py py-obj docutils literal"><span class="pre">get_rasterized</span></code></a>()</td>
+<td>return True if the artist is to be rasterized</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.get_rotation.html#matplotlib.text.Text.get_rotation" title="matplotlib.text.Text.get_rotation"><code class="xref py py-obj docutils literal"><span class="pre">get_rotation</span></code></a>()</td>
+<td>return the text angle as float in degrees</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.get_rotation_mode.html#matplotlib.text.Text.get_rotation_mode" title="matplotlib.text.Text.get_rotation_mode"><code class="xref py py-obj docutils literal"><span class="pre">get_rotation_mode</span></code></a>()</td>
+<td>get text rotation mode</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.get_size.html#matplotlib.text.Text.get_size" title="matplotlib.text.Text.get_size"><code class="xref py py-obj docutils literal"><span class="pre">get_size</span></code></a>()</td>
+<td>Return the font size as integer</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.get_sketch_params.html#matplotlib.text.Text.get_sketch_params" title="matplotlib.text.Text.get_sketch_params"><code class="xref py py-obj docutils literal"><span class="pre">get_sketch_params</span></code></a>()</td>
+<td>Returns the sketch parameters for the artist.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.get_snap.html#matplotlib.text.Text.get_snap" title="matplotlib.text.Text.get_snap"><code class="xref py py-obj docutils literal"><span class="pre">get_snap</span></code></a>()</td>
+<td>Returns the snap setting which may be:</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.get_stretch.html#matplotlib.text.Text.get_stretch" title="matplotlib.text.Text.get_stretch"><code class="xref py py-obj docutils literal"><span class="pre">get_stretch</span></code></a>()</td>
+<td>Get the font stretch as a string or number</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.get_style.html#matplotlib.text.Text.get_style" title="matplotlib.text.Text.get_style"><code class="xref py py-obj docutils literal"><span class="pre">get_style</span></code></a>()</td>
+<td>Return the font style as string</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.get_text.html#matplotlib.text.Text.get_text" title="matplotlib.text.Text.get_text"><code class="xref py py-obj docutils literal"><span class="pre">get_text</span></code></a>()</td>
+<td>Get the text as string</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.get_transform.html#matplotlib.text.Text.get_transform" title="matplotlib.text.Text.get_transform"><code class="xref py py-obj docutils literal"><span class="pre">get_transform</span></code></a>()</td>
+<td>Return the <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code> instance used by this artist.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.get_transformed_clip_path_and_affine.html#matplotlib.text.Text.get_transformed_clip_path_and_affine" title="matplotlib.text.Text.get_transformed_clip_path_and_affine"><code class="xref py py-obj docutils literal"><span class="pre">get_transformed_clip_path_and_affine</span></code></a>()</td>
+<td>Return the clip path with the non-affine part of its transformation applied, and the remaining affine part of its transformation.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.get_unitless_position.html#matplotlib.text.Text.get_unitless_position" title="matplotlib.text.Text.get_unitless_position"><code class="xref py py-obj docutils literal"><span class="pre">get_unitless_position</span></code></a>()</td>
+<td>Return the unitless position of the text as a tuple (<em>x</em>, <em>y</em>)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.get_url.html#matplotlib.text.Text.get_url" title="matplotlib.text.Text.get_url"><code class="xref py py-obj docutils literal"><span class="pre">get_url</span></code></a>()</td>
+<td>Returns the url</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.get_usetex.html#matplotlib.text.Text.get_usetex" title="matplotlib.text.Text.get_usetex"><code class="xref py py-obj docutils literal"><span class="pre">get_usetex</span></code></a>()</td>
+<td>Return whether this <cite>Text</cite> object will render using TeX.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.get_va.html#matplotlib.text.Text.get_va" title="matplotlib.text.Text.get_va"><code class="xref py py-obj docutils literal"><span class="pre">get_va</span></code></a>()</td>
+<td>alias for <code class="xref py py-meth docutils literal"><span class="pre">getverticalalignment()</span></code></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.get_variant.html#matplotlib.text.Text.get_variant" title="matplotlib.text.Text.get_variant"><code class="xref py py-obj docutils literal"><span class="pre">get_variant</span></code></a>()</td>
+<td>Return the font variant as a string</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.get_verticalalignment.html#matplotlib.text.Text.get_verticalalignment" title="matplotlib.text.Text.get_verticalalignment"><code class="xref py py-obj docutils literal"><span class="pre">get_verticalalignment</span></code></a>()</td>
+<td>Return the vertical alignment as string.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.get_visible.html#matplotlib.text.Text.get_visible" title="matplotlib.text.Text.get_visible"><code class="xref py py-obj docutils literal"><span class="pre">get_visible</span></code></a>()</td>
+<td>Return the artist&#8217;s visiblity</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.get_weight.html#matplotlib.text.Text.get_weight" title="matplotlib.text.Text.get_weight"><code class="xref py py-obj docutils literal"><span class="pre">get_weight</span></code></a>()</td>
+<td>Get the font weight as string or number</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.get_window_extent.html#matplotlib.text.Text.get_window_extent" title="matplotlib.text.Text.get_window_extent"><code class="xref py py-obj docutils literal"><span class="pre">get_window_extent</span></code></a>([renderer,&nbsp;dpi])</td>
+<td>Return a <code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code> object bounding the text, in display units.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.get_wrap.html#matplotlib.text.Text.get_wrap" title="matplotlib.text.Text.get_wrap"><code class="xref py py-obj docutils literal"><span class="pre">get_wrap</span></code></a>()</td>
+<td>Returns the wrapping state for the text.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.get_zorder.html#matplotlib.text.Text.get_zorder" title="matplotlib.text.Text.get_zorder"><code class="xref py py-obj docutils literal"><span class="pre">get_zorder</span></code></a>()</td>
+<td>Return the <a class="reference internal" href="matplotlib.text.Artist.html#matplotlib.text.Artist" title="matplotlib.text.Artist"><code class="xref py py-class docutils literal"><span class="pre">Artist</span></code></a>&#8216;s zorder.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.have_units.html#matplotlib.text.Text.have_units" title="matplotlib.text.Text.have_units"><code class="xref py py-obj docutils literal"><span class="pre">have_units</span></code></a>()</td>
+<td>Return <em>True</em> if units are set on the <em>x</em> or <em>y</em> axes</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.hitlist.html#matplotlib.text.Text.hitlist" title="matplotlib.text.Text.hitlist"><code class="xref py py-obj docutils literal"><span class="pre">hitlist</span></code></a>(event)</td>
+<td>List the children of the artist which contain the mouse event <em>event</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.is_figure_set.html#matplotlib.text.Text.is_figure_set" title="matplotlib.text.Text.is_figure_set"><code class="xref py py-obj docutils literal"><span class="pre">is_figure_set</span></code></a>()</td>
+<td>Returns True if the artist is assigned to a <a class="reference internal" href="matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure"><code class="xref py py-class docutils literal"><span class="pre">Figure</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.is_math_text.html#matplotlib.text.Text.is_math_text" title="matplotlib.text.Text.is_math_text"><code class="xref py py-obj docutils literal"><span class="pre">is_math_text</span></code></a>(s)</td>
+<td>Returns a cleaned string and a boolean flag.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.is_transform_set.html#matplotlib.text.Text.is_transform_set" title="matplotlib.text.Text.is_transform_set"><code class="xref py py-obj docutils literal"><span class="pre">is_transform_set</span></code></a>()</td>
+<td>Returns <em>True</em> if <a class="reference internal" href="matplotlib.text.Artist.html#matplotlib.text.Artist" title="matplotlib.text.Artist"><code class="xref py py-class docutils literal"><span class="pre">Artist</span></code></a> has a transform explicitly set.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.pchanged.html#matplotlib.text.Text.pchanged" title="matplotlib.text.Text.pchanged"><code class="xref py py-obj docutils literal"><span class="pre">pchanged</span></code></a>()</td>
+<td>Fire an event when property changed, calling all of the registered callbacks.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.pick.html#matplotlib.text.Text.pick" title="matplotlib.text.Text.pick"><code class="xref py py-obj docutils literal"><span class="pre">pick</span></code></a>(mouseevent)</td>
+<td>call signature:</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.pickable.html#matplotlib.text.Text.pickable" title="matplotlib.text.Text.pickable"><code class="xref py py-obj docutils literal"><span class="pre">pickable</span></code></a>()</td>
+<td>Return <em>True</em> if <a class="reference internal" href="matplotlib.text.Artist.html#matplotlib.text.Artist" title="matplotlib.text.Artist"><code class="xref py py-class docutils literal"><span class="pre">Artist</span></code></a> is pickable.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.properties.html#matplotlib.text.Text.properties" title="matplotlib.text.Text.properties"><code class="xref py py-obj docutils literal"><span class="pre">properties</span></code></a>()</td>
+<td>return a dictionary mapping property name -&gt; value for all Artist props</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.remove.html#matplotlib.text.Text.remove" title="matplotlib.text.Text.remove"><code class="xref py py-obj docutils literal"><span class="pre">remove</span></code></a>()</td>
+<td>Remove the artist from the figure if possible.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.remove_callback.html#matplotlib.text.Text.remove_callback" title="matplotlib.text.Text.remove_callback"><code class="xref py py-obj docutils literal"><span class="pre">remove_callback</span></code></a>(oid)</td>
+<td>Remove a callback based on its <em>id</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.set.html#matplotlib.text.Text.set" title="matplotlib.text.Text.set"><code class="xref py py-obj docutils literal"><span class="pre">set</span></code></a>(**kwargs)</td>
+<td>A property batch setter.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.set_agg_filter.html#matplotlib.text.Text.set_agg_filter" title="matplotlib.text.Text.set_agg_filter"><code class="xref py py-obj docutils literal"><span class="pre">set_agg_filter</span></code></a>(filter_func)</td>
+<td>set agg_filter fuction.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.set_alpha.html#matplotlib.text.Text.set_alpha" title="matplotlib.text.Text.set_alpha"><code class="xref py py-obj docutils literal"><span class="pre">set_alpha</span></code></a>(alpha)</td>
+<td>Set the alpha value used for blending - not supported on all backends.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.set_animated.html#matplotlib.text.Text.set_animated" title="matplotlib.text.Text.set_animated"><code class="xref py py-obj docutils literal"><span class="pre">set_animated</span></code></a>(b)</td>
+<td>Set the artist&#8217;s animation state.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.set_axes.html#matplotlib.text.Text.set_axes" title="matplotlib.text.Text.set_axes"><code class="xref py py-obj docutils literal"><span class="pre">set_axes</span></code></a>(axes)</td>
+<td>Set the <a class="reference internal" href="matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instance in which the artist resides, if any.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.set_backgroundcolor.html#matplotlib.text.Text.set_backgroundcolor" title="matplotlib.text.Text.set_backgroundcolor"><code class="xref py py-obj docutils literal"><span class="pre">set_backgroundcolor</span></code></a>(color)</td>
+<td>Set the background color of the text by updating the bbox.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.set_bbox.html#matplotlib.text.Text.set_bbox" title="matplotlib.text.Text.set_bbox"><code class="xref py py-obj docutils literal"><span class="pre">set_bbox</span></code></a>(rectprops)</td>
+<td>Draw a bounding box around self.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.set_clip_box.html#matplotlib.text.Text.set_clip_box" title="matplotlib.text.Text.set_clip_box"><code class="xref py py-obj docutils literal"><span class="pre">set_clip_box</span></code></a>(clipbox)</td>
+<td>Set the artist&#8217;s clip <code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.set_clip_on.html#matplotlib.text.Text.set_clip_on" title="matplotlib.text.Text.set_clip_on"><code class="xref py py-obj docutils literal"><span class="pre">set_clip_on</span></code></a>(b)</td>
+<td>Set whether artist uses clipping.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.set_clip_path.html#matplotlib.text.Text.set_clip_path" title="matplotlib.text.Text.set_clip_path"><code class="xref py py-obj docutils literal"><span class="pre">set_clip_path</span></code></a>(path[,&nbsp;transform])</td>
+<td>Set the artist&#8217;s clip path, which may be:</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.set_color.html#matplotlib.text.Text.set_color" title="matplotlib.text.Text.set_color"><code class="xref py py-obj docutils literal"><span class="pre">set_color</span></code></a>(color)</td>
+<td>Set the foreground color of the text</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.set_contains.html#matplotlib.text.Text.set_contains" title="matplotlib.text.Text.set_contains"><code class="xref py py-obj docutils literal"><span class="pre">set_contains</span></code></a>(picker)</td>
+<td>Replace the contains test used by this artist.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.set_family.html#matplotlib.text.Text.set_family" title="matplotlib.text.Text.set_family"><code class="xref py py-obj docutils literal"><span class="pre">set_family</span></code></a>(fontname)</td>
+<td>Set the font family.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.set_figure.html#matplotlib.text.Text.set_figure" title="matplotlib.text.Text.set_figure"><code class="xref py py-obj docutils literal"><span class="pre">set_figure</span></code></a>(fig)</td>
+<td>Set the <a class="reference internal" href="matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure"><code class="xref py py-class docutils literal"><span class="pre">Figure</span></code></a> instance the artist belongs to.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.set_font_properties.html#matplotlib.text.Text.set_font_properties" title="matplotlib.text.Text.set_font_properties"><code class="xref py py-obj docutils literal"><span class="pre">set_font_properties</span></code></a>(fp)</td>
+<td>alias for set_fontproperties</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.set_fontname.html#matplotlib.text.Text.set_fontname" title="matplotlib.text.Text.set_fontname"><code class="xref py py-obj docutils literal"><span class="pre">set_fontname</span></code></a>(fontname)</td>
+<td>alias for set_family</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.set_fontproperties.html#matplotlib.text.Text.set_fontproperties" title="matplotlib.text.Text.set_fontproperties"><code class="xref py py-obj docutils literal"><span class="pre">set_fontproperties</span></code></a>(fp)</td>
+<td>Set the font properties that control the text.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.set_fontsize.html#matplotlib.text.Text.set_fontsize" title="matplotlib.text.Text.set_fontsize"><code class="xref py py-obj docutils literal"><span class="pre">set_fontsize</span></code></a>(fontsize)</td>
+<td>alias for set_size</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.set_fontstretch.html#matplotlib.text.Text.set_fontstretch" title="matplotlib.text.Text.set_fontstretch"><code class="xref py py-obj docutils literal"><span class="pre">set_fontstretch</span></code></a>(stretch)</td>
+<td>alias for set_stretch</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.set_fontstyle.html#matplotlib.text.Text.set_fontstyle" title="matplotlib.text.Text.set_fontstyle"><code class="xref py py-obj docutils literal"><span class="pre">set_fontstyle</span></code></a>(fontstyle)</td>
+<td>alias for set_style</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.set_fontvariant.html#matplotlib.text.Text.set_fontvariant" title="matplotlib.text.Text.set_fontvariant"><code class="xref py py-obj docutils literal"><span class="pre">set_fontvariant</span></code></a>(variant)</td>
+<td>alias for set_variant</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.set_fontweight.html#matplotlib.text.Text.set_fontweight" title="matplotlib.text.Text.set_fontweight"><code class="xref py py-obj docutils literal"><span class="pre">set_fontweight</span></code></a>(weight)</td>
+<td>alias for set_weight</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.set_gid.html#matplotlib.text.Text.set_gid" title="matplotlib.text.Text.set_gid"><code class="xref py py-obj docutils literal"><span class="pre">set_gid</span></code></a>(gid)</td>
+<td>Sets the (group) id for the artist</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.set_ha.html#matplotlib.text.Text.set_ha" title="matplotlib.text.Text.set_ha"><code class="xref py py-obj docutils literal"><span class="pre">set_ha</span></code></a>(align)</td>
+<td>alias for set_horizontalalignment</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.set_horizontalalignment.html#matplotlib.text.Text.set_horizontalalignment" title="matplotlib.text.Text.set_horizontalalignment"><code class="xref py py-obj docutils literal"><span class="pre">set_horizontalalignment</span></code></a>(align)</td>
+<td>Set the horizontal alignment to one of</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.set_label.html#matplotlib.text.Text.set_label" title="matplotlib.text.Text.set_label"><code class="xref py py-obj docutils literal"><span class="pre">set_label</span></code></a>(s)</td>
+<td>Set the label to <em>s</em> for auto legend.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.set_linespacing.html#matplotlib.text.Text.set_linespacing" title="matplotlib.text.Text.set_linespacing"><code class="xref py py-obj docutils literal"><span class="pre">set_linespacing</span></code></a>(spacing)</td>
+<td>Set the line spacing as a multiple of the font size.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.set_ma.html#matplotlib.text.Text.set_ma" title="matplotlib.text.Text.set_ma"><code class="xref py py-obj docutils literal"><span class="pre">set_ma</span></code></a>(align)</td>
+<td>alias for set_verticalalignment</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.set_multialignment.html#matplotlib.text.Text.set_multialignment" title="matplotlib.text.Text.set_multialignment"><code class="xref py py-obj docutils literal"><span class="pre">set_multialignment</span></code></a>(align)</td>
+<td>Set the alignment for multiple lines layout.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.set_name.html#matplotlib.text.Text.set_name" title="matplotlib.text.Text.set_name"><code class="xref py py-obj docutils literal"><span class="pre">set_name</span></code></a>(fontname)</td>
+<td>alias for set_family</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.set_path_effects.html#matplotlib.text.Text.set_path_effects" title="matplotlib.text.Text.set_path_effects"><code class="xref py py-obj docutils literal"><span class="pre">set_path_effects</span></code></a>(path_effects)</td>
+<td>set path_effects, which should be a list of instances of</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.set_picker.html#matplotlib.text.Text.set_picker" title="matplotlib.text.Text.set_picker"><code class="xref py py-obj docutils literal"><span class="pre">set_picker</span></code></a>(picker)</td>
+<td>Set the epsilon for picking used by this artist</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.set_position.html#matplotlib.text.Text.set_position" title="matplotlib.text.Text.set_position"><code class="xref py py-obj docutils literal"><span class="pre">set_position</span></code></a>(xy)</td>
+<td>Set the (<em>x</em>, <em>y</em>) position of the text</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.set_rasterized.html#matplotlib.text.Text.set_rasterized" title="matplotlib.text.Text.set_rasterized"><code class="xref py py-obj docutils literal"><span class="pre">set_rasterized</span></code></a>(rasterized)</td>
+<td>Force rasterized (bitmap) drawing in vector backend output.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.set_rotation.html#matplotlib.text.Text.set_rotation" title="matplotlib.text.Text.set_rotation"><code class="xref py py-obj docutils literal"><span class="pre">set_rotation</span></code></a>(s)</td>
+<td>Set the rotation of the text</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.set_rotation_mode.html#matplotlib.text.Text.set_rotation_mode" title="matplotlib.text.Text.set_rotation_mode"><code class="xref py py-obj docutils literal"><span class="pre">set_rotation_mode</span></code></a>(m)</td>
+<td>set text rotation mode. If &#8220;anchor&#8221;, the un-rotated text</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.set_size.html#matplotlib.text.Text.set_size" title="matplotlib.text.Text.set_size"><code class="xref py py-obj docutils literal"><span class="pre">set_size</span></code></a>(fontsize)</td>
+<td>Set the font size.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.set_sketch_params.html#matplotlib.text.Text.set_sketch_params" title="matplotlib.text.Text.set_sketch_params"><code class="xref py py-obj docutils literal"><span class="pre">set_sketch_params</span></code></a>([scale,&nbsp;length,&nbsp;randomness])</td>
+<td>Sets the sketch parameters.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.set_snap.html#matplotlib.text.Text.set_snap" title="matplotlib.text.Text.set_snap"><code class="xref py py-obj docutils literal"><span class="pre">set_snap</span></code></a>(snap)</td>
+<td>Sets the snap setting which may be:</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.set_stretch.html#matplotlib.text.Text.set_stretch" title="matplotlib.text.Text.set_stretch"><code class="xref py py-obj docutils literal"><span class="pre">set_stretch</span></code></a>(stretch)</td>
+<td>Set the font stretch (horizontal condensation or expansion).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.set_style.html#matplotlib.text.Text.set_style" title="matplotlib.text.Text.set_style"><code class="xref py py-obj docutils literal"><span class="pre">set_style</span></code></a>(fontstyle)</td>
+<td>Set the font style.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.set_text.html#matplotlib.text.Text.set_text" title="matplotlib.text.Text.set_text"><code class="xref py py-obj docutils literal"><span class="pre">set_text</span></code></a>(s)</td>
+<td>Set the text string <em>s</em></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.set_transform.html#matplotlib.text.Text.set_transform" title="matplotlib.text.Text.set_transform"><code class="xref py py-obj docutils literal"><span class="pre">set_transform</span></code></a>(t)</td>
+<td>Set the <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code> instance used by this artist.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.set_url.html#matplotlib.text.Text.set_url" title="matplotlib.text.Text.set_url"><code class="xref py py-obj docutils literal"><span class="pre">set_url</span></code></a>(url)</td>
+<td>Sets the url for the artist</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.set_usetex.html#matplotlib.text.Text.set_usetex" title="matplotlib.text.Text.set_usetex"><code class="xref py py-obj docutils literal"><span class="pre">set_usetex</span></code></a>(usetex)</td>
+<td>Set this <cite>Text</cite> object to render using TeX (or not).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.set_va.html#matplotlib.text.Text.set_va" title="matplotlib.text.Text.set_va"><code class="xref py py-obj docutils literal"><span class="pre">set_va</span></code></a>(align)</td>
+<td>alias for set_verticalalignment</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.set_variant.html#matplotlib.text.Text.set_variant" title="matplotlib.text.Text.set_variant"><code class="xref py py-obj docutils literal"><span class="pre">set_variant</span></code></a>(variant)</td>
+<td>Set the font variant, either &#8216;normal&#8217; or &#8216;small-caps&#8217;.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.set_verticalalignment.html#matplotlib.text.Text.set_verticalalignment" title="matplotlib.text.Text.set_verticalalignment"><code class="xref py py-obj docutils literal"><span class="pre">set_verticalalignment</span></code></a>(align)</td>
+<td>Set the vertical alignment</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.set_visible.html#matplotlib.text.Text.set_visible" title="matplotlib.text.Text.set_visible"><code class="xref py py-obj docutils literal"><span class="pre">set_visible</span></code></a>(b)</td>
+<td>Set the artist&#8217;s visiblity.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.set_weight.html#matplotlib.text.Text.set_weight" title="matplotlib.text.Text.set_weight"><code class="xref py py-obj docutils literal"><span class="pre">set_weight</span></code></a>(weight)</td>
+<td>Set the font weight.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.set_wrap.html#matplotlib.text.Text.set_wrap" title="matplotlib.text.Text.set_wrap"><code class="xref py py-obj docutils literal"><span class="pre">set_wrap</span></code></a>(wrap)</td>
+<td>Sets the wrapping state for the text.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.set_x.html#matplotlib.text.Text.set_x" title="matplotlib.text.Text.set_x"><code class="xref py py-obj docutils literal"><span class="pre">set_x</span></code></a>(x)</td>
+<td>Set the <em>x</em> position of the text</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.set_y.html#matplotlib.text.Text.set_y" title="matplotlib.text.Text.set_y"><code class="xref py py-obj docutils literal"><span class="pre">set_y</span></code></a>(y)</td>
+<td>Set the <em>y</em> position of the text</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.set_zorder.html#matplotlib.text.Text.set_zorder" title="matplotlib.text.Text.set_zorder"><code class="xref py py-obj docutils literal"><span class="pre">set_zorder</span></code></a>(level)</td>
+<td>Set the zorder for the artist.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.update.html#matplotlib.text.Text.update" title="matplotlib.text.Text.update"><code class="xref py py-obj docutils literal"><span class="pre">update</span></code></a>(kwargs)</td>
+<td>Update properties from a dictionary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Text.update_bbox_position_size.html#matplotlib.text.Text.update_bbox_position_size" title="matplotlib.text.Text.update_bbox_position_size"><code class="xref py py-obj docutils literal"><span class="pre">update_bbox_position_size</span></code></a>(renderer)</td>
+<td>Update the location and the size of the bbox.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Text.update_from.html#matplotlib.text.Text.update_from" title="matplotlib.text.Text.update_from"><code class="xref py py-obj docutils literal"><span class="pre">update_from</span></code></a>(other)</td>
+<td>Copy properties from other to self</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.text.Text.axes.html" class="btn btn-neutral float-right" title="14.2.15.1. matplotlib.text.Text.axes" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.text.RendererBase.strip_math.html" class="btn btn-neutral" title="14.2.14.25. matplotlib.text.RendererBase.strip_math" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

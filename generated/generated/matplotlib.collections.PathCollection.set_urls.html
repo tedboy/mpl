@@ -1,0 +1,413 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>21.2.9.115. matplotlib.collections.PathCollection.set_urls &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="21.2.9. matplotlib.collections.PathCollection" href="matplotlib.collections.PathCollection.html"/>
+        <link rel="next" title="21.2.9.116. matplotlib.collections.PathCollection.set_visible" href="matplotlib.collections.PathCollection.set_visible.html"/>
+        <link rel="prev" title="21.2.9.114. matplotlib.collections.PathCollection.set_url" href="matplotlib.collections.PathCollection.set_url.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../matplotlib.collections.html">21. matplotlib.collections</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.collections.html#functions">21.1. Functions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.collections.html#classes">21.2. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.AsteriskPolygonCollection.html">21.2.1. matplotlib.collections.AsteriskPolygonCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.BrokenBarHCollection.html">21.2.2. matplotlib.collections.BrokenBarHCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.CircleCollection.html">21.2.3. matplotlib.collections.CircleCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.Collection.html">21.2.4. matplotlib.collections.Collection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.EllipseCollection.html">21.2.5. matplotlib.collections.EllipseCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.EventCollection.html">21.2.6. matplotlib.collections.EventCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.LineCollection.html">21.2.7. matplotlib.collections.LineCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.PatchCollection.html">21.2.8. matplotlib.collections.PatchCollection</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="matplotlib.collections.PathCollection.html">21.2.9. matplotlib.collections.PathCollection</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.axes.html">21.2.9.1. matplotlib.collections.PathCollection.axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.mouseover.html">21.2.9.2. matplotlib.collections.PathCollection.mouseover</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.stale.html">21.2.9.3. matplotlib.collections.PathCollection.stale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.add_callback.html">21.2.9.4. matplotlib.collections.PathCollection.add_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.add_checker.html">21.2.9.5. matplotlib.collections.PathCollection.add_checker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.autoscale.html">21.2.9.6. matplotlib.collections.PathCollection.autoscale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.autoscale_None.html">21.2.9.7. matplotlib.collections.PathCollection.autoscale_None</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.changed.html">21.2.9.8. matplotlib.collections.PathCollection.changed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.check_update.html">21.2.9.9. matplotlib.collections.PathCollection.check_update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.contains.html">21.2.9.10. matplotlib.collections.PathCollection.contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.convert_xunits.html">21.2.9.11. matplotlib.collections.PathCollection.convert_xunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.convert_yunits.html">21.2.9.12. matplotlib.collections.PathCollection.convert_yunits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.draw.html">21.2.9.13. matplotlib.collections.PathCollection.draw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.findobj.html">21.2.9.14. matplotlib.collections.PathCollection.findobj</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.format_cursor_data.html">21.2.9.15. matplotlib.collections.PathCollection.format_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_agg_filter.html">21.2.9.16. matplotlib.collections.PathCollection.get_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_alpha.html">21.2.9.17. matplotlib.collections.PathCollection.get_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_animated.html">21.2.9.18. matplotlib.collections.PathCollection.get_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_array.html">21.2.9.19. matplotlib.collections.PathCollection.get_array</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_axes.html">21.2.9.20. matplotlib.collections.PathCollection.get_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_children.html">21.2.9.21. matplotlib.collections.PathCollection.get_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_clim.html">21.2.9.22. matplotlib.collections.PathCollection.get_clim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_clip_box.html">21.2.9.23. matplotlib.collections.PathCollection.get_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_clip_on.html">21.2.9.24. matplotlib.collections.PathCollection.get_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_clip_path.html">21.2.9.25. matplotlib.collections.PathCollection.get_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_cmap.html">21.2.9.26. matplotlib.collections.PathCollection.get_cmap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_contains.html">21.2.9.27. matplotlib.collections.PathCollection.get_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_cursor_data.html">21.2.9.28. matplotlib.collections.PathCollection.get_cursor_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_dashes.html">21.2.9.29. matplotlib.collections.PathCollection.get_dashes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_datalim.html">21.2.9.30. matplotlib.collections.PathCollection.get_datalim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_edgecolor.html">21.2.9.31. matplotlib.collections.PathCollection.get_edgecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_edgecolors.html">21.2.9.32. matplotlib.collections.PathCollection.get_edgecolors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_facecolor.html">21.2.9.33. matplotlib.collections.PathCollection.get_facecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_facecolors.html">21.2.9.34. matplotlib.collections.PathCollection.get_facecolors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_figure.html">21.2.9.35. matplotlib.collections.PathCollection.get_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_fill.html">21.2.9.36. matplotlib.collections.PathCollection.get_fill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_gid.html">21.2.9.37. matplotlib.collections.PathCollection.get_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_hatch.html">21.2.9.38. matplotlib.collections.PathCollection.get_hatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_label.html">21.2.9.39. matplotlib.collections.PathCollection.get_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_linestyle.html">21.2.9.40. matplotlib.collections.PathCollection.get_linestyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_linestyles.html">21.2.9.41. matplotlib.collections.PathCollection.get_linestyles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_linewidth.html">21.2.9.42. matplotlib.collections.PathCollection.get_linewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_linewidths.html">21.2.9.43. matplotlib.collections.PathCollection.get_linewidths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_offset_position.html">21.2.9.44. matplotlib.collections.PathCollection.get_offset_position</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_offset_transform.html">21.2.9.45. matplotlib.collections.PathCollection.get_offset_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_offsets.html">21.2.9.46. matplotlib.collections.PathCollection.get_offsets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_path_effects.html">21.2.9.47. matplotlib.collections.PathCollection.get_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_paths.html">21.2.9.48. matplotlib.collections.PathCollection.get_paths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_picker.html">21.2.9.49. matplotlib.collections.PathCollection.get_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_pickradius.html">21.2.9.50. matplotlib.collections.PathCollection.get_pickradius</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_rasterized.html">21.2.9.51. matplotlib.collections.PathCollection.get_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_sizes.html">21.2.9.52. matplotlib.collections.PathCollection.get_sizes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_sketch_params.html">21.2.9.53. matplotlib.collections.PathCollection.get_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_snap.html">21.2.9.54. matplotlib.collections.PathCollection.get_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_transform.html">21.2.9.55. matplotlib.collections.PathCollection.get_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_transformed_clip_path_and_affine.html">21.2.9.56. matplotlib.collections.PathCollection.get_transformed_clip_path_and_affine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_transforms.html">21.2.9.57. matplotlib.collections.PathCollection.get_transforms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_url.html">21.2.9.58. matplotlib.collections.PathCollection.get_url</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_urls.html">21.2.9.59. matplotlib.collections.PathCollection.get_urls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_visible.html">21.2.9.60. matplotlib.collections.PathCollection.get_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_window_extent.html">21.2.9.61. matplotlib.collections.PathCollection.get_window_extent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.get_zorder.html">21.2.9.62. matplotlib.collections.PathCollection.get_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.have_units.html">21.2.9.63. matplotlib.collections.PathCollection.have_units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.hitlist.html">21.2.9.64. matplotlib.collections.PathCollection.hitlist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.is_figure_set.html">21.2.9.65. matplotlib.collections.PathCollection.is_figure_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.is_transform_set.html">21.2.9.66. matplotlib.collections.PathCollection.is_transform_set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.pchanged.html">21.2.9.67. matplotlib.collections.PathCollection.pchanged</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.pick.html">21.2.9.68. matplotlib.collections.PathCollection.pick</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.pickable.html">21.2.9.69. matplotlib.collections.PathCollection.pickable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.properties.html">21.2.9.70. matplotlib.collections.PathCollection.properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.remove.html">21.2.9.71. matplotlib.collections.PathCollection.remove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.remove_callback.html">21.2.9.72. matplotlib.collections.PathCollection.remove_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set.html">21.2.9.73. matplotlib.collections.PathCollection.set</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_agg_filter.html">21.2.9.74. matplotlib.collections.PathCollection.set_agg_filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_alpha.html">21.2.9.75. matplotlib.collections.PathCollection.set_alpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_animated.html">21.2.9.76. matplotlib.collections.PathCollection.set_animated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_antialiased.html">21.2.9.77. matplotlib.collections.PathCollection.set_antialiased</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_antialiaseds.html">21.2.9.78. matplotlib.collections.PathCollection.set_antialiaseds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_array.html">21.2.9.79. matplotlib.collections.PathCollection.set_array</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_axes.html">21.2.9.80. matplotlib.collections.PathCollection.set_axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_clim.html">21.2.9.81. matplotlib.collections.PathCollection.set_clim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_clip_box.html">21.2.9.82. matplotlib.collections.PathCollection.set_clip_box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_clip_on.html">21.2.9.83. matplotlib.collections.PathCollection.set_clip_on</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_clip_path.html">21.2.9.84. matplotlib.collections.PathCollection.set_clip_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_cmap.html">21.2.9.85. matplotlib.collections.PathCollection.set_cmap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_color.html">21.2.9.86. matplotlib.collections.PathCollection.set_color</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_contains.html">21.2.9.87. matplotlib.collections.PathCollection.set_contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_dashes.html">21.2.9.88. matplotlib.collections.PathCollection.set_dashes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_edgecolor.html">21.2.9.89. matplotlib.collections.PathCollection.set_edgecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_edgecolors.html">21.2.9.90. matplotlib.collections.PathCollection.set_edgecolors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_facecolor.html">21.2.9.91. matplotlib.collections.PathCollection.set_facecolor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_facecolors.html">21.2.9.92. matplotlib.collections.PathCollection.set_facecolors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_figure.html">21.2.9.93. matplotlib.collections.PathCollection.set_figure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_gid.html">21.2.9.94. matplotlib.collections.PathCollection.set_gid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_hatch.html">21.2.9.95. matplotlib.collections.PathCollection.set_hatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_label.html">21.2.9.96. matplotlib.collections.PathCollection.set_label</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_linestyle.html">21.2.9.97. matplotlib.collections.PathCollection.set_linestyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_linestyles.html">21.2.9.98. matplotlib.collections.PathCollection.set_linestyles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_linewidth.html">21.2.9.99. matplotlib.collections.PathCollection.set_linewidth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_linewidths.html">21.2.9.100. matplotlib.collections.PathCollection.set_linewidths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_lw.html">21.2.9.101. matplotlib.collections.PathCollection.set_lw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_norm.html">21.2.9.102. matplotlib.collections.PathCollection.set_norm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_offset_position.html">21.2.9.103. matplotlib.collections.PathCollection.set_offset_position</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_offsets.html">21.2.9.104. matplotlib.collections.PathCollection.set_offsets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_path_effects.html">21.2.9.105. matplotlib.collections.PathCollection.set_path_effects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_paths.html">21.2.9.106. matplotlib.collections.PathCollection.set_paths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_picker.html">21.2.9.107. matplotlib.collections.PathCollection.set_picker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_pickradius.html">21.2.9.108. matplotlib.collections.PathCollection.set_pickradius</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_rasterized.html">21.2.9.109. matplotlib.collections.PathCollection.set_rasterized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_sizes.html">21.2.9.110. matplotlib.collections.PathCollection.set_sizes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_sketch_params.html">21.2.9.111. matplotlib.collections.PathCollection.set_sketch_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_snap.html">21.2.9.112. matplotlib.collections.PathCollection.set_snap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_transform.html">21.2.9.113. matplotlib.collections.PathCollection.set_transform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_url.html">21.2.9.114. matplotlib.collections.PathCollection.set_url</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">21.2.9.115. matplotlib.collections.PathCollection.set_urls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_visible.html">21.2.9.116. matplotlib.collections.PathCollection.set_visible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.set_zorder.html">21.2.9.117. matplotlib.collections.PathCollection.set_zorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.to_rgba.html">21.2.9.118. matplotlib.collections.PathCollection.to_rgba</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.update.html">21.2.9.119. matplotlib.collections.PathCollection.update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.update_from.html">21.2.9.120. matplotlib.collections.PathCollection.update_from</a></li>
+<li class="toctree-l4"><a class="reference internal" href="matplotlib.collections.PathCollection.update_scalarmappable.html">21.2.9.121. matplotlib.collections.PathCollection.update_scalarmappable</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.PolyCollection.html">21.2.10. matplotlib.collections.PolyCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.QuadMesh.html">21.2.11. matplotlib.collections.QuadMesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.RegularPolyCollection.html">21.2.12. matplotlib.collections.RegularPolyCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.StarPolygonCollection.html">21.2.13. matplotlib.collections.StarPolygonCollection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.TriMesh.html">21.2.14. matplotlib.collections.TriMesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.collections.zip.html">21.2.15. matplotlib.collections.zip</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../infreq.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.collections.html">21. matplotlib.collections</a> &raquo;</li>
+        
+          <li><a href="matplotlib.collections.PathCollection.html">21.2.9. matplotlib.collections.PathCollection</a> &raquo;</li>
+        
+      <li>21.2.9.115. matplotlib.collections.PathCollection.set_urls</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/matplotlib.collections.PathCollection.set_urls.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="matplotlib-collections-pathcollection-set-urls">
+<h1>21.2.9.115. matplotlib.collections.PathCollection.set_urls<a class="headerlink" href="#matplotlib-collections-pathcollection-set-urls" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="matplotlib.collections.PathCollection.set_urls">
+<code class="descclassname">PathCollection.</code><code class="descname">set_urls</code><span class="sig-paren">(</span><em>urls</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.collections.PathCollection.set_urls" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.collections.PathCollection.set_visible.html" class="btn btn-neutral float-right" title="21.2.9.116. matplotlib.collections.PathCollection.set_visible" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="matplotlib.collections.PathCollection.set_url.html" class="btn btn-neutral" title="21.2.9.114. matplotlib.collections.PathCollection.set_url" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
