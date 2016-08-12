@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>9.2.7. matplotlib.legend.CircleCollection &mdash; PROJECT_NAME 1 documentation</title>
+  <title>9.2.7. matplotlib.legend.CircleCollection &mdash; Matplotlib API 1 documentation</title>
   
 
   
@@ -24,19 +24,19 @@
 
   
   
-    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   
 
   
 
   
-    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
         <link rel="up" title="9. matplotlib.legend" href="../matplotlib.legend.html"/>
         <link rel="next" title="9.2.7.1. matplotlib.legend.CircleCollection.axes" href="matplotlib.legend.CircleCollection.axes.html"/>
         <link rel="prev" title="9.2.6.20. matplotlib.legend.BboxTransformTo.transform_point" href="matplotlib.legend.BboxTransformTo.transform_point.html"/> 
 
   
-  <script src="../../static/js/modernizr.min.js"></script>
+  <script src="../../_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+            <a href="../../index.html" class="icon icon-home"> Matplotlib API
           
 
           
@@ -296,7 +296,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">PROJECT_NAME</a>
+          <a href="../../index.html">Matplotlib API</a>
         
       </nav>
 
@@ -333,7 +333,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../sources/generated/generated/matplotlib.legend.CircleCollection.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/generated/generated/matplotlib.legend.CircleCollection.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -346,9 +346,10 @@
             
   <div class="section" id="matplotlib-legend-circlecollection">
 <h1>9.2.7. matplotlib.legend.CircleCollection<a class="headerlink" href="#matplotlib-legend-circlecollection" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="matplotlib.legend.CircleCollection.__init__.html#matplotlib.legend.CircleCollection.__init__" title="matplotlib.legend.CircleCollection.__init__"><code class="xref py py-func docutils literal"><span class="pre">CircleCollection.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.legend.CircleCollection">
-<em class="property">class </em><code class="descclassname">matplotlib.legend.</code><code class="descname">CircleCollection</code><span class="sig-paren">(</span><em>sizes</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/collections.html#CircleCollection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.legend.CircleCollection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">matplotlib.legend.</code><code class="descname">CircleCollection</code><span class="sig-paren">(</span><em>sizes</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/collections.html#CircleCollection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.legend.CircleCollection" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of circles, drawn using splines.</p>
 <p class="rubric">Attributes</p>
 <table border="1" class="longtable docutils">
@@ -731,6 +732,33 @@
 </tr>
 </tbody>
 </table>
+<dl class="method">
+<dt id="matplotlib.legend.CircleCollection.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>sizes</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/collections.html#CircleCollection.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.legend.CircleCollection.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>sizes</em>
+Gives the area of the circle in points^2</p>
+<p>Valid Collection keyword arguments:</p>
+<blockquote>
+<div><ul class="simple">
+<li><em>edgecolors</em>: None</li>
+<li><em>facecolors</em>: None</li>
+<li><em>linewidths</em>: None</li>
+<li><em>antialiaseds</em>: None</li>
+<li><em>offsets</em>: None</li>
+<li><em>transOffset</em>: transforms.IdentityTransform()</li>
+<li><em>norm</em>: None (optional for
+<a class="reference internal" href="matplotlib.cm.ScalarMappable.html#matplotlib.cm.ScalarMappable" title="matplotlib.cm.ScalarMappable"><code class="xref py py-class docutils literal"><span class="pre">matplotlib.cm.ScalarMappable</span></code></a>)</li>
+<li><em>cmap</em>: None (optional for
+<a class="reference internal" href="matplotlib.cm.ScalarMappable.html#matplotlib.cm.ScalarMappable" title="matplotlib.cm.ScalarMappable"><code class="xref py py-class docutils literal"><span class="pre">matplotlib.cm.ScalarMappable</span></code></a>)</li>
+</ul>
+</div></blockquote>
+<p><em>offsets</em> and <em>transOffset</em> are used to translate the patch after
+rendering (default no offsets)</p>
+<p>If any of <em>edgecolors</em>, <em>facecolors</em>, <em>linewidths</em>, <em>antialiaseds</em>
+are None, they default to their <code class="xref py py-data docutils literal"><span class="pre">matplotlib.rcParams</span></code> patch
+setting, in sequence form.</p>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -782,16 +810,16 @@
             HAS_SOURCE:  true
         };
     </script>
-      <script type="text/javascript" src="../../static/jquery.js"></script>
-      <script type="text/javascript" src="../../static/underscore.js"></script>
-      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
   
   
-    <script type="text/javascript" src="../../static/js/theme.js"></script>
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
   
 
   

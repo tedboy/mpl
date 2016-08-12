@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>33.2.5. matplotlib.sankey.Sankey &mdash; PROJECT_NAME 1 documentation</title>
+  <title>33.2.5. matplotlib.sankey.Sankey &mdash; Matplotlib API 1 documentation</title>
   
 
   
@@ -24,19 +24,19 @@
 
   
   
-    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   
 
   
 
   
-    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
         <link rel="up" title="33. matplotlib.sankey" href="../matplotlib.sankey.html"/>
         <link rel="next" title="33.2.5.1. matplotlib.sankey.Sankey.add" href="matplotlib.sankey.Sankey.add.html"/>
         <link rel="prev" title="33.2.4.103. matplotlib.sankey.PathPatch.update_from" href="matplotlib.sankey.PathPatch.update_from.html"/> 
 
   
-  <script src="../../static/js/modernizr.min.js"></script>
+  <script src="../../_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+            <a href="../../index.html" class="icon icon-home"> Matplotlib API
           
 
           
@@ -154,7 +154,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">PROJECT_NAME</a>
+          <a href="../../index.html">Matplotlib API</a>
         
       </nav>
 
@@ -191,7 +191,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../sources/generated/generated/matplotlib.sankey.Sankey.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/generated/generated/matplotlib.sankey.Sankey.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -204,9 +204,10 @@
             
   <div class="section" id="matplotlib-sankey-sankey">
 <h1>33.2.5. matplotlib.sankey.Sankey<a class="headerlink" href="#matplotlib-sankey-sankey" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="matplotlib.sankey.Sankey.__init__.html#matplotlib.sankey.Sankey.__init__" title="matplotlib.sankey.Sankey.__init__"><code class="xref py py-func docutils literal"><span class="pre">Sankey.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.sankey.Sankey">
-<em class="property">class </em><code class="descclassname">matplotlib.sankey.</code><code class="descname">Sankey</code><span class="sig-paren">(</span><em>ax=None</em>, <em>scale=1.0</em>, <em>unit=u''</em>, <em>format=u'%G'</em>, <em>gap=0.25</em>, <em>radius=0.1</em>, <em>shoulder=0.03</em>, <em>offset=0.15</em>, <em>head_angle=100</em>, <em>margin=0.4</em>, <em>tolerance=1e-06</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/sankey.html#Sankey"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.sankey.Sankey" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">matplotlib.sankey.</code><code class="descname">Sankey</code><span class="sig-paren">(</span><em>ax=None</em>, <em>scale=1.0</em>, <em>unit=u''</em>, <em>format=u'%G'</em>, <em>gap=0.25</em>, <em>radius=0.1</em>, <em>shoulder=0.03</em>, <em>offset=0.15</em>, <em>head_angle=100</em>, <em>margin=0.4</em>, <em>tolerance=1e-06</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/sankey.html#Sankey"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.sankey.Sankey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sankey diagram in matplotlib</p>
 <blockquote>
 <div>Sankey diagrams are a specific type of flow diagram, in which
@@ -229,6 +230,113 @@ material or cost transfers between processes.
 </tr>
 </tbody>
 </table>
+<dl class="method">
+<dt id="matplotlib.sankey.Sankey.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>ax=None</em>, <em>scale=1.0</em>, <em>unit=u''</em>, <em>format=u'%G'</em>, <em>gap=0.25</em>, <em>radius=0.1</em>, <em>shoulder=0.03</em>, <em>offset=0.15</em>, <em>head_angle=100</em>, <em>margin=0.4</em>, <em>tolerance=1e-06</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/sankey.html#Sankey.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.sankey.Sankey.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new Sankey instance.</p>
+<p>Optional keyword arguments:</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="77%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><em>ax</em></td>
+<td>axes onto which the data should be plotted
+If <em>ax</em> isn&#8217;t provided, new axes will be created.</td>
+</tr>
+<tr class="row-odd"><td><em>scale</em></td>
+<td>scaling factor for the flows
+<em>scale</em> sizes the width of the paths in order to
+maintain proper layout.  The same scale is applied
+to all subdiagrams.  The value should be chosen
+such that the product of the scale and the sum of
+the inputs is approximately 1.0 (and the product of
+the scale and the sum of the outputs is
+approximately -1.0).</td>
+</tr>
+<tr class="row-even"><td><em>unit</em></td>
+<td>string representing the physical unit associated
+with the flow quantities
+If <em>unit</em> is None, then none of the quantities are
+labeled.</td>
+</tr>
+<tr class="row-odd"><td><em>format</em></td>
+<td>a Python number formatting string to be used in
+labeling the flow as a quantity (i.e., a number
+times a unit, where the unit is given)</td>
+</tr>
+<tr class="row-even"><td><em>gap</em></td>
+<td>space between paths that break in/break away
+to/from the top or bottom</td>
+</tr>
+<tr class="row-odd"><td><em>radius</em></td>
+<td>inner radius of the vertical paths</td>
+</tr>
+<tr class="row-even"><td><em>shoulder</em></td>
+<td>size of the shoulders of output arrowS</td>
+</tr>
+<tr class="row-odd"><td><em>offset</em></td>
+<td>text offset (from the dip or tip of the arrow)</td>
+</tr>
+<tr class="row-even"><td><em>head_angle</em></td>
+<td>angle of the arrow heads (and negative of the angle
+of the tails) [deg]</td>
+</tr>
+<tr class="row-odd"><td><em>margin</em></td>
+<td>minimum space between Sankey outlines and the edge
+of the plot area</td>
+</tr>
+<tr class="row-even"><td><em>tolerance</em></td>
+<td>acceptable maximum of the magnitude of the sum of
+flows
+The magnitude of the sum of connected flows cannot
+be greater than <em>tolerance</em>.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>The optional arguments listed above are applied to all subdiagrams so
+that there is consistent alignment and formatting.</p>
+<p>If <a class="reference internal" href="#matplotlib.sankey.Sankey" title="matplotlib.sankey.Sankey"><code class="xref py py-class docutils literal"><span class="pre">Sankey</span></code></a> is instantiated with any keyword arguments other
+than those explicitly listed above (<code class="docutils literal"><span class="pre">**kwargs</span></code>), they will be passed
+to <a class="reference internal" href="matplotlib.sankey.Sankey.add.html#matplotlib.sankey.Sankey.add" title="matplotlib.sankey.Sankey.add"><code class="xref py py-meth docutils literal"><span class="pre">add()</span></code></a>, which will create the first subdiagram.</p>
+<p>In order to draw a complex Sankey diagram, create an instance of
+<a class="reference internal" href="#matplotlib.sankey.Sankey" title="matplotlib.sankey.Sankey"><code class="xref py py-class docutils literal"><span class="pre">Sankey</span></code></a> by calling it without any kwargs:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sankey</span> <span class="o">=</span> <span class="n">Sankey</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Then add simple Sankey sub-diagrams:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sankey</span><span class="o">.</span><span class="n">add</span><span class="p">()</span> <span class="c1"># 1</span>
+<span class="n">sankey</span><span class="o">.</span><span class="n">add</span><span class="p">()</span> <span class="c1"># 2</span>
+<span class="c1">#...</span>
+<span class="n">sankey</span><span class="o">.</span><span class="n">add</span><span class="p">()</span> <span class="c1"># n</span>
+</pre></div>
+</div>
+<p>Finally, create the full diagram:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sankey</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Or, instead, simply daisy-chain those calls:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Sankey</span><span class="p">()</span><span class="o">.</span><span class="n">add</span><span class="p">()</span><span class="o">.</span><span class="n">add</span><span class="o">...</span>  <span class="o">.</span><span class="n">add</span><span class="p">()</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="matplotlib.sankey.Sankey.add.html#matplotlib.sankey.Sankey.add" title="matplotlib.sankey.Sankey.add"><code class="xref py py-meth docutils literal"><span class="pre">add()</span></code></a>
+<a class="reference internal" href="matplotlib.sankey.Sankey.finish.html#matplotlib.sankey.Sankey.finish" title="matplotlib.sankey.Sankey.finish"><code class="xref py py-meth docutils literal"><span class="pre">finish()</span></code></a></p>
+</div>
+<p><strong>Examples:</strong></p>
+<blockquote>
+<div></div></blockquote>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -280,16 +388,16 @@ material or cost transfers between processes.
             HAS_SOURCE:  true
         };
     </script>
-      <script type="text/javascript" src="../../static/jquery.js"></script>
-      <script type="text/javascript" src="../../static/underscore.js"></script>
-      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
   
   
-    <script type="text/javascript" src="../../static/js/theme.js"></script>
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
   
 
   

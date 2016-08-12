@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.2.2. matplotlib.pyplot.Arrow &mdash; PROJECT_NAME 1 documentation</title>
+  <title>2.2.2. matplotlib.pyplot.Arrow &mdash; Matplotlib API 1 documentation</title>
   
 
   
@@ -24,19 +24,19 @@
 
   
   
-    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   
 
   
 
   
-    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
         <link rel="up" title="2. matplotlib.pyplot" href="../matplotlib.pyplot.html"/>
         <link rel="next" title="2.2.2.1. matplotlib.pyplot.Arrow.axes" href="matplotlib.pyplot.Arrow.axes.html"/>
         <link rel="prev" title="2.2.1.138. matplotlib.pyplot.Annotation.update_positions" href="matplotlib.pyplot.Annotation.update_positions.html"/> 
 
   
-  <script src="../../static/js/modernizr.min.js"></script>
+  <script src="../../_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+            <a href="../../index.html" class="icon icon-home"> Matplotlib API
           
 
           
@@ -288,7 +288,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">PROJECT_NAME</a>
+          <a href="../../index.html">Matplotlib API</a>
         
       </nav>
 
@@ -325,7 +325,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../sources/generated/generated/matplotlib.pyplot.Arrow.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/generated/generated/matplotlib.pyplot.Arrow.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -338,9 +338,10 @@
             
   <div class="section" id="matplotlib-pyplot-arrow">
 <h1>2.2.2. matplotlib.pyplot.Arrow<a class="headerlink" href="#matplotlib-pyplot-arrow" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="matplotlib.pyplot.Arrow.__init__.html#matplotlib.pyplot.Arrow.__init__" title="matplotlib.pyplot.Arrow.__init__"><code class="xref py py-func docutils literal"><span class="pre">Arrow.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.pyplot.Arrow">
-<em class="property">class </em><code class="descclassname">matplotlib.pyplot.</code><code class="descname">Arrow</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>dx</em>, <em>dy</em>, <em>width=1.0</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/patches.html#Arrow"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.pyplot.Arrow" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">matplotlib.pyplot.</code><code class="descname">Arrow</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>dx</em>, <em>dy</em>, <em>width=1.0</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/patches.html#Arrow"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.pyplot.Arrow" title="Permalink to this definition">¶</a></dt>
 <dd><p>An arrow patch.</p>
 <p class="rubric">Attributes</p>
 <table border="1" class="longtable docutils">
@@ -669,6 +670,46 @@
 </tr>
 </tbody>
 </table>
+<dl class="method">
+<dt id="matplotlib.pyplot.Arrow.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>dx</em>, <em>dy</em>, <em>width=1.0</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/patches.html#Arrow.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.pyplot.Arrow.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draws an arrow, starting at (<em>x</em>, <em>y</em>), direction and length
+given by (<em>dx</em>, <em>dy</em>) the width of the arrow is scaled by <em>width</em>.</p>
+<dl class="docutils">
+<dt>Valid kwargs are:</dt>
+<dd>agg_filter: unknown
+alpha: float or None 
+animated: [True | False] 
+antialiased or aa: [True | False]  or None for default 
+axes: an <a class="reference internal" href="matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instance 
+capstyle: [&#8216;butt&#8217; | &#8216;round&#8217; | &#8216;projecting&#8217;] 
+clip_box: a <code class="xref py py-class docutils literal"><span class="pre">matplotlib.transforms.Bbox</span></code> instance 
+clip_on: [True | False] 
+clip_path: [ (<a class="reference internal" href="matplotlib.path.Path.html#matplotlib.path.Path" title="matplotlib.path.Path"><code class="xref py py-class docutils literal"><span class="pre">Path</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code>) | <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a> | None ] 
+color: matplotlib color spec
+contains: a callable function 
+edgecolor or ec: mpl color spec, or None for default, or &#8216;none&#8217; for no color 
+facecolor or fc: mpl color spec, or None for default, or &#8216;none&#8217; for no color 
+figure: a <a class="reference internal" href="matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure"><code class="xref py py-class docutils literal"><span class="pre">matplotlib.figure.Figure</span></code></a> instance 
+fill: [True | False] 
+gid: an id string 
+hatch: [&#8216;/&#8217; | &#8216;\&#8217; | &#8216;|&#8217; | &#8216;-&#8216; | &#8216;+&#8217; | &#8216;x&#8217; | &#8216;o&#8217; | &#8216;O&#8217; | &#8216;.&#8217; | &#8216;*&#8217;] 
+joinstyle: [&#8216;miter&#8217; | &#8216;round&#8217; | &#8216;bevel&#8217;] 
+label: string or anything printable with &#8216;%s&#8217; conversion. 
+linestyle or ls: [&#8216;solid&#8217; | &#8216;dashed&#8217;, &#8216;dashdot&#8217;, &#8216;dotted&#8217; | (offset, on-off-dash-seq) | <code class="docutils literal"><span class="pre">'-'</span></code> | <code class="docutils literal"><span class="pre">'--'</span></code> | <code class="docutils literal"><span class="pre">'-.'</span></code> | <code class="docutils literal"><span class="pre">':'</span></code> | <code class="docutils literal"><span class="pre">'None'</span></code> | <code class="docutils literal"><span class="pre">'</span> <span class="pre">'</span></code> | <code class="docutils literal"><span class="pre">''</span></code>]
+linewidth or lw: float or None for default 
+path_effects: unknown
+picker: [None|float|boolean|callable] 
+rasterized: [True | False | None] 
+sketch_params: unknown
+snap: unknown
+transform: <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code> instance 
+url: a url string 
+visible: [True | False] 
+zorder: any number</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -720,16 +761,16 @@
             HAS_SOURCE:  true
         };
     </script>
-      <script type="text/javascript" src="../../static/jquery.js"></script>
-      <script type="text/javascript" src="../../static/underscore.js"></script>
-      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
   
   
-    <script type="text/javascript" src="../../static/js/theme.js"></script>
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
   
 
   

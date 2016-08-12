@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>7.2.11. matplotlib.colors.SymLogNorm &mdash; PROJECT_NAME 1 documentation</title>
+  <title>7.2.11. matplotlib.colors.SymLogNorm &mdash; Matplotlib API 1 documentation</title>
   
 
   
@@ -24,18 +24,18 @@
 
   
   
-    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   
 
   
 
   
-    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
         <link rel="up" title="7. matplotlib.colors" href="../matplotlib.colors.html"/>
         <link rel="prev" title="7.2.10.5. matplotlib.colors.PowerNorm.scaled" href="matplotlib.colors.PowerNorm.scaled.html"/> 
 
   
-  <script src="../../static/js/modernizr.min.js"></script>
+  <script src="../../_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -51,7 +51,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+            <a href="../../index.html" class="icon icon-home"> Matplotlib API
           
 
           
@@ -162,7 +162,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">PROJECT_NAME</a>
+          <a href="../../index.html">Matplotlib API</a>
         
       </nav>
 
@@ -199,7 +199,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../sources/generated/generated/matplotlib.colors.SymLogNorm.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/generated/generated/matplotlib.colors.SymLogNorm.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -212,9 +212,10 @@
             
   <div class="section" id="matplotlib-colors-symlognorm">
 <h1>7.2.11. matplotlib.colors.SymLogNorm<a class="headerlink" href="#matplotlib-colors-symlognorm" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="matplotlib.colors.SymLogNorm.__init__.html#matplotlib.colors.SymLogNorm.__init__" title="matplotlib.colors.SymLogNorm.__init__"><code class="xref py py-func docutils literal"><span class="pre">SymLogNorm.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.colors.SymLogNorm">
-<em class="property">class </em><code class="descclassname">matplotlib.colors.</code><code class="descname">SymLogNorm</code><span class="sig-paren">(</span><em>linthresh</em>, <em>linscale=1.0</em>, <em>vmin=None</em>, <em>vmax=None</em>, <em>clip=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/colors.html#SymLogNorm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.colors.SymLogNorm" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">matplotlib.colors.</code><code class="descname">SymLogNorm</code><span class="sig-paren">(</span><em>linthresh</em>, <em>linscale=1.0</em>, <em>vmin=None</em>, <em>vmax=None</em>, <em>clip=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/colors.html#SymLogNorm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.colors.SymLogNorm" title="Permalink to this definition">¶</a></dt>
 <dd><p>The symmetrical logarithmic scale is logarithmic in both the
 positive and negative directions from the origin.</p>
 <p>Since the values close to zero tend toward infinity, there is a
@@ -248,6 +249,22 @@ need to have a range around zero that is linear.  The parameter
 </tr>
 </tbody>
 </table>
+<dl class="method">
+<dt id="matplotlib.colors.SymLogNorm.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>linthresh</em>, <em>linscale=1.0</em>, <em>vmin=None</em>, <em>vmax=None</em>, <em>clip=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/colors.html#SymLogNorm.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.colors.SymLogNorm.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>linthresh</em>:
+The range within which the plot is linear (to
+avoid having the plot go to infinity around zero).</p>
+<p><em>linscale</em>:
+This allows the linear range (-<em>linthresh</em> to <em>linthresh</em>)
+to be stretched relative to the logarithmic range.  Its
+value is the number of decades to use for each half of the
+linear range.  For example, when <em>linscale</em> == 1.0 (the
+default), the space used for the positive and negative
+halves of the linear range will be equal to one decade in
+the logarithmic range. Defaults to 1.</p>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -297,16 +314,16 @@ need to have a range around zero that is linear.  The parameter
             HAS_SOURCE:  true
         };
     </script>
-      <script type="text/javascript" src="../../static/jquery.js"></script>
-      <script type="text/javascript" src="../../static/underscore.js"></script>
-      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
   
   
-    <script type="text/javascript" src="../../static/js/theme.js"></script>
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
   
 
   

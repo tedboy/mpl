@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>21.2.8. matplotlib.collections.PatchCollection &mdash; PROJECT_NAME 1 documentation</title>
+  <title>21.2.8. matplotlib.collections.PatchCollection &mdash; Matplotlib API 1 documentation</title>
   
 
   
@@ -24,19 +24,19 @@
 
   
   
-    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   
 
   
 
   
-    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
         <link rel="up" title="21. matplotlib.collections" href="../matplotlib.collections.html"/>
         <link rel="next" title="21.2.8.1. matplotlib.collections.PatchCollection.axes" href="matplotlib.collections.PatchCollection.axes.html"/>
         <link rel="prev" title="21.2.7.124. matplotlib.collections.LineCollection.update_scalarmappable" href="matplotlib.collections.LineCollection.update_scalarmappable.html"/> 
 
   
-  <script src="../../static/js/modernizr.min.js"></script>
+  <script src="../../_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+            <a href="../../index.html" class="icon icon-home"> Matplotlib API
           
 
           
@@ -280,7 +280,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">PROJECT_NAME</a>
+          <a href="../../index.html">Matplotlib API</a>
         
       </nav>
 
@@ -317,7 +317,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../sources/generated/generated/matplotlib.collections.PatchCollection.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/generated/generated/matplotlib.collections.PatchCollection.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -330,9 +330,10 @@
             
   <div class="section" id="matplotlib-collections-patchcollection">
 <h1>21.2.8. matplotlib.collections.PatchCollection<a class="headerlink" href="#matplotlib-collections-patchcollection" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="matplotlib.collections.PatchCollection.__init__.html#matplotlib.collections.PatchCollection.__init__" title="matplotlib.collections.PatchCollection.__init__"><code class="xref py py-func docutils literal"><span class="pre">PatchCollection.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.collections.PatchCollection">
-<em class="property">class </em><code class="descclassname">matplotlib.collections.</code><code class="descname">PatchCollection</code><span class="sig-paren">(</span><em>patches</em>, <em>match_original=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/collections.html#PatchCollection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.collections.PatchCollection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">matplotlib.collections.</code><code class="descname">PatchCollection</code><span class="sig-paren">(</span><em>patches</em>, <em>match_original=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/collections.html#PatchCollection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.collections.PatchCollection" title="Permalink to this definition">¶</a></dt>
 <dd><p>A generic collection of patches.</p>
 <p>This makes it easier to assign a color map to a heterogeneous
 collection of patches.</p>
@@ -713,6 +714,28 @@ draw faster than a large number of patches.</p>
 </tr>
 </tbody>
 </table>
+<dl class="method">
+<dt id="matplotlib.collections.PatchCollection.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>patches</em>, <em>match_original=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/collections.html#PatchCollection.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.collections.PatchCollection.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt><em>patches</em></dt>
+<dd>a sequence of Patch objects.  This list may include
+a heterogeneous assortment of different patch types.</dd>
+<dt><em>match_original</em></dt>
+<dd>If True, use the colors and linewidths of the original
+patches.  If False, new colors may be assigned by
+providing the standard collection arguments, facecolor,
+edgecolor, linewidths, norm or cmap.</dd>
+</dl>
+<p>If any of <em>edgecolors</em>, <em>facecolors</em>, <em>linewidths</em>,
+<em>antialiaseds</em> are None, they default to their
+<code class="xref py py-data docutils literal"><span class="pre">matplotlib.rcParams</span></code> patch setting, in sequence form.</p>
+<p>The use of <a class="reference internal" href="matplotlib.cm.ScalarMappable.html#matplotlib.cm.ScalarMappable" title="matplotlib.cm.ScalarMappable"><code class="xref py py-class docutils literal"><span class="pre">ScalarMappable</span></code></a> is optional.
+If the <a class="reference internal" href="matplotlib.cm.ScalarMappable.html#matplotlib.cm.ScalarMappable" title="matplotlib.cm.ScalarMappable"><code class="xref py py-class docutils literal"><span class="pre">ScalarMappable</span></code></a> matrix _A is not
+None (i.e., a call to set_array has been made), at draw time a
+call to scalar mappable will be made to set the face colors.</p>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -764,16 +787,16 @@ draw faster than a large number of patches.</p>
             HAS_SOURCE:  true
         };
     </script>
-      <script type="text/javascript" src="../../static/jquery.js"></script>
-      <script type="text/javascript" src="../../static/underscore.js"></script>
-      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
   
   
-    <script type="text/javascript" src="../../static/js/theme.js"></script>
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
   
 
   

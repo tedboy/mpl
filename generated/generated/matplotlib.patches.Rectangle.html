@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>12.2.17. matplotlib.patches.Rectangle &mdash; PROJECT_NAME 1 documentation</title>
+  <title>12.2.17. matplotlib.patches.Rectangle &mdash; Matplotlib API 1 documentation</title>
   
 
   
@@ -24,19 +24,19 @@
 
   
   
-    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   
 
   
 
   
-    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
         <link rel="up" title="12. matplotlib.patches" href="../matplotlib.patches.html"/>
         <link rel="next" title="12.2.17.1. matplotlib.patches.Rectangle.axes" href="matplotlib.patches.Rectangle.axes.html"/>
         <link rel="prev" title="12.2.16.108. matplotlib.patches.Polygon.update_from" href="matplotlib.patches.Polygon.update_from.html"/> 
 
   
-  <script src="../../static/js/modernizr.min.js"></script>
+  <script src="../../_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+            <a href="../../index.html" class="icon icon-home"> Matplotlib API
           
 
           
@@ -285,7 +285,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">PROJECT_NAME</a>
+          <a href="../../index.html">Matplotlib API</a>
         
       </nav>
 
@@ -322,7 +322,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../sources/generated/generated/matplotlib.patches.Rectangle.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/generated/generated/matplotlib.patches.Rectangle.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -335,9 +335,10 @@
             
   <div class="section" id="matplotlib-patches-rectangle">
 <h1>12.2.17. matplotlib.patches.Rectangle<a class="headerlink" href="#matplotlib-patches-rectangle" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="matplotlib.patches.Rectangle.__init__.html#matplotlib.patches.Rectangle.__init__" title="matplotlib.patches.Rectangle.__init__"><code class="xref py py-func docutils literal"><span class="pre">Rectangle.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.patches.Rectangle">
-<em class="property">class </em><code class="descclassname">matplotlib.patches.</code><code class="descname">Rectangle</code><span class="sig-paren">(</span><em>xy</em>, <em>width</em>, <em>height</em>, <em>angle=0.0</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/patches.html#Rectangle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.patches.Rectangle" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">matplotlib.patches.</code><code class="descname">Rectangle</code><span class="sig-paren">(</span><em>xy</em>, <em>width</em>, <em>height</em>, <em>angle=0.0</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/patches.html#Rectangle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.patches.Rectangle" title="Permalink to this definition">¶</a></dt>
 <dd><p>Draw a rectangle with lower left at <em>xy</em> = (<em>x</em>, <em>y</em>) with
 specified <em>width</em> and <em>height</em>.</p>
 <p class="rubric">Attributes</p>
@@ -706,6 +707,51 @@ specified <em>width</em> and <em>height</em>.</p>
 </tr>
 </tbody>
 </table>
+<dl class="method">
+<dt id="matplotlib.patches.Rectangle.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>xy</em>, <em>width</em>, <em>height</em>, <em>angle=0.0</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/patches.html#Rectangle.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.patches.Rectangle.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><dl class="docutils">
+<dt><em>angle</em></dt>
+<dd>rotation in degrees (anti-clockwise)</dd>
+</dl>
+<p><em>fill</em> is a boolean indicating whether to fill the rectangle</p>
+<dl class="docutils">
+<dt>Valid kwargs are:</dt>
+<dd>agg_filter: unknown</dd>
+</dl>
+</div></blockquote>
+<p>alpha: float or None 
+animated: [True | False] 
+antialiased or aa: [True | False]  or None for default 
+axes: an <a class="reference internal" href="matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instance 
+capstyle: [&#8216;butt&#8217; | &#8216;round&#8217; | &#8216;projecting&#8217;] 
+clip_box: a <code class="xref py py-class docutils literal"><span class="pre">matplotlib.transforms.Bbox</span></code> instance 
+clip_on: [True | False] 
+clip_path: [ (<a class="reference internal" href="matplotlib.path.Path.html#matplotlib.path.Path" title="matplotlib.path.Path"><code class="xref py py-class docutils literal"><span class="pre">Path</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code>) | <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a> | None ] 
+color: matplotlib color spec
+contains: a callable function 
+edgecolor or ec: mpl color spec, or None for default, or &#8216;none&#8217; for no color 
+facecolor or fc: mpl color spec, or None for default, or &#8216;none&#8217; for no color 
+figure: a <a class="reference internal" href="matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure"><code class="xref py py-class docutils literal"><span class="pre">matplotlib.figure.Figure</span></code></a> instance 
+fill: [True | False] 
+gid: an id string 
+hatch: [&#8216;/&#8217; | &#8216;\&#8217; | &#8216;|&#8217; | &#8216;-&#8216; | &#8216;+&#8217; | &#8216;x&#8217; | &#8216;o&#8217; | &#8216;O&#8217; | &#8216;.&#8217; | &#8216;*&#8217;] 
+joinstyle: [&#8216;miter&#8217; | &#8216;round&#8217; | &#8216;bevel&#8217;] 
+label: string or anything printable with &#8216;%s&#8217; conversion. 
+linestyle or ls: [&#8216;solid&#8217; | &#8216;dashed&#8217;, &#8216;dashdot&#8217;, &#8216;dotted&#8217; | (offset, on-off-dash-seq) | <code class="docutils literal"><span class="pre">'-'</span></code> | <code class="docutils literal"><span class="pre">'--'</span></code> | <code class="docutils literal"><span class="pre">'-.'</span></code> | <code class="docutils literal"><span class="pre">':'</span></code> | <code class="docutils literal"><span class="pre">'None'</span></code> | <code class="docutils literal"><span class="pre">'</span> <span class="pre">'</span></code> | <code class="docutils literal"><span class="pre">''</span></code>]
+linewidth or lw: float or None for default 
+path_effects: unknown
+picker: [None|float|boolean|callable] 
+rasterized: [True | False | None] 
+sketch_params: unknown
+snap: unknown
+transform: <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code> instance 
+url: a url string 
+visible: [True | False] 
+zorder: any number</p>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -757,16 +803,16 @@ specified <em>width</em> and <em>height</em>.</p>
             HAS_SOURCE:  true
         };
     </script>
-      <script type="text/javascript" src="../../static/jquery.js"></script>
-      <script type="text/javascript" src="../../static/underscore.js"></script>
-      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
   
   
-    <script type="text/javascript" src="../../static/js/theme.js"></script>
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
   
 
   

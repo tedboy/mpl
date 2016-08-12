@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>3.2.7. matplotlib.axes.SubplotBase &mdash; PROJECT_NAME 1 documentation</title>
+  <title>3.2.7. matplotlib.axes.SubplotBase &mdash; Matplotlib API 1 documentation</title>
   
 
   
@@ -24,19 +24,19 @@
 
   
   
-    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   
 
   
 
   
-    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
         <link rel="up" title="3. matplotlib.axes" href="../matplotlib.axes.html"/>
         <link rel="next" title="3.2.7.1. matplotlib.axes.SubplotBase.change_geometry" href="matplotlib.axes.SubplotBase.change_geometry.html"/>
         <link rel="prev" title="3.2.6. matplotlib.axes.Subplot" href="matplotlib.axes.Subplot.html"/> 
 
   
-  <script src="../../static/js/modernizr.min.js"></script>
+  <script src="../../_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+            <a href="../../index.html" class="icon icon-home"> Matplotlib API
           
 
           
@@ -169,7 +169,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">PROJECT_NAME</a>
+          <a href="../../index.html">Matplotlib API</a>
         
       </nav>
 
@@ -206,7 +206,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../sources/generated/generated/matplotlib.axes.SubplotBase.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/generated/generated/matplotlib.axes.SubplotBase.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -219,9 +219,10 @@
             
   <div class="section" id="matplotlib-axes-subplotbase">
 <h1>3.2.7. matplotlib.axes.SubplotBase<a class="headerlink" href="#matplotlib-axes-subplotbase" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="matplotlib.axes.SubplotBase.__init__.html#matplotlib.axes.SubplotBase.__init__" title="matplotlib.axes.SubplotBase.__init__"><code class="xref py py-func docutils literal"><span class="pre">SubplotBase.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.axes.SubplotBase">
-<em class="property">class </em><code class="descclassname">matplotlib.axes.</code><code class="descname">SubplotBase</code><span class="sig-paren">(</span><em>fig</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/axes/_subplots.html#SubplotBase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.axes.SubplotBase" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">matplotlib.axes.</code><code class="descname">SubplotBase</code><span class="sig-paren">(</span><em>fig</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/axes/_subplots.html#SubplotBase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.axes.SubplotBase" title="Permalink to this definition">¶</a></dt>
 <dd><p>Base class for subplots, which are <a class="reference internal" href="matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instances with
 additional methods to facilitate generating and manipulating a set
 of <a class="reference internal" href="matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> within a figure.</p>
@@ -264,6 +265,19 @@ of <a class="reference internal" href="matplotlib.axes.Axes.html#matplotlib.axes
 </tr>
 </tbody>
 </table>
+<dl class="method">
+<dt id="matplotlib.axes.SubplotBase.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>fig</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/axes/_subplots.html#SubplotBase.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.axes.SubplotBase.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>fig</em> is a <a class="reference internal" href="matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure"><code class="xref py py-class docutils literal"><span class="pre">matplotlib.figure.Figure</span></code></a> instance.</p>
+<p><em>args</em> is the tuple (<em>numRows</em>, <em>numCols</em>, <em>plotNum</em>), where
+the array of subplots in the figure has dimensions <em>numRows</em>,
+<em>numCols</em>, and where <em>plotNum</em> is the number of the subplot
+being created.  <em>plotNum</em> starts at 1 in the upper left
+corner and increases to the right.</p>
+<p>If <em>numRows</em> &lt;= <em>numCols</em> &lt;= <em>plotNum</em> &lt; 10, <em>args</em> can be the
+decimal integer <em>numRows</em> * 100 + <em>numCols</em> * 10 + <em>plotNum</em>.</p>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -315,16 +329,16 @@ of <a class="reference internal" href="matplotlib.axes.Axes.html#matplotlib.axes
             HAS_SOURCE:  true
         };
     </script>
-      <script type="text/javascript" src="../../static/jquery.js"></script>
-      <script type="text/javascript" src="../../static/underscore.js"></script>
-      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
   
   
-    <script type="text/javascript" src="../../static/js/theme.js"></script>
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
   
 
   

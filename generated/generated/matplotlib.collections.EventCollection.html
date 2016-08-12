@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>21.2.6. matplotlib.collections.EventCollection &mdash; PROJECT_NAME 1 documentation</title>
+  <title>21.2.6. matplotlib.collections.EventCollection &mdash; Matplotlib API 1 documentation</title>
   
 
   
@@ -24,19 +24,19 @@
 
   
   
-    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   
 
   
 
   
-    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
         <link rel="up" title="21. matplotlib.collections" href="../matplotlib.collections.html"/>
         <link rel="next" title="21.2.6.1. matplotlib.collections.EventCollection.axes" href="matplotlib.collections.EventCollection.axes.html"/>
         <link rel="prev" title="21.2.5.119. matplotlib.collections.EllipseCollection.update_scalarmappable" href="matplotlib.collections.EllipseCollection.update_scalarmappable.html"/> 
 
   
-  <script src="../../static/js/modernizr.min.js"></script>
+  <script src="../../_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+            <a href="../../index.html" class="icon icon-home"> Matplotlib API
           
 
           
@@ -298,7 +298,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">PROJECT_NAME</a>
+          <a href="../../index.html">Matplotlib API</a>
         
       </nav>
 
@@ -335,7 +335,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../sources/generated/generated/matplotlib.collections.EventCollection.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/generated/generated/matplotlib.collections.EventCollection.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -348,9 +348,10 @@
             
   <div class="section" id="matplotlib-collections-eventcollection">
 <h1>21.2.6. matplotlib.collections.EventCollection<a class="headerlink" href="#matplotlib-collections-eventcollection" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="matplotlib.collections.EventCollection.__init__.html#matplotlib.collections.EventCollection.__init__" title="matplotlib.collections.EventCollection.__init__"><code class="xref py py-func docutils literal"><span class="pre">EventCollection.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.collections.EventCollection">
-<em class="property">class </em><code class="descclassname">matplotlib.collections.</code><code class="descname">EventCollection</code><span class="sig-paren">(</span><em>positions</em>, <em>orientation=None</em>, <em>lineoffset=0</em>, <em>linelength=1</em>, <em>linewidth=None</em>, <em>color=None</em>, <em>linestyle=u'solid'</em>, <em>antialiased=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/collections.html#EventCollection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.collections.EventCollection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">matplotlib.collections.</code><code class="descname">EventCollection</code><span class="sig-paren">(</span><em>positions</em>, <em>orientation=None</em>, <em>lineoffset=0</em>, <em>linelength=1</em>, <em>linewidth=None</em>, <em>color=None</em>, <em>linestyle=u'solid'</em>, <em>antialiased=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/collections.html#EventCollection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.collections.EventCollection" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of discrete events.</p>
 <p>An event is a 1-dimensional value, usually the position of something along
 an axis, such as time or length.  Events do not have an amplitude.  They
@@ -784,6 +785,50 @@ are displayed as v</p>
 </tr>
 </tbody>
 </table>
+<dl class="method">
+<dt id="matplotlib.collections.EventCollection.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>positions</em>, <em>orientation=None</em>, <em>lineoffset=0</em>, <em>linelength=1</em>, <em>linewidth=None</em>, <em>color=None</em>, <em>linestyle=u'solid'</em>, <em>antialiased=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/collections.html#EventCollection.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.collections.EventCollection.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt><em>positions</em></dt>
+<dd>a sequence of numerical values or a 1D numpy array.  Can be None</dd>
+<dt><em>orientation</em> [ &#8216;horizontal&#8217; | &#8216;vertical&#8217; | None ]</dt>
+<dd>defaults to &#8216;horizontal&#8217; if not specified or None</dd>
+<dt><em>lineoffset</em></dt>
+<dd>a single numerical value, corresponding to the offset of the center
+of the markers from the origin</dd>
+<dt><em>linelength</em></dt>
+<dd>a single numerical value, corresponding to the total height of the
+marker (i.e. the marker stretches from lineoffset+linelength/2 to
+lineoffset-linelength/2).  Defaults to 1</dd>
+<dt><em>linewidth</em></dt>
+<dd>a single numerical value</dd>
+<dt><em>color</em></dt>
+<dd>must be a sequence of RGBA tuples (e.g., arbitrary color
+strings, etc, not allowed).</dd>
+</dl>
+<p><em>linestyle</em> [ &#8216;solid&#8217; | &#8216;dashed&#8217; | &#8216;dashdot&#8217; | &#8216;dotted&#8217; ]</p>
+<dl class="docutils">
+<dt><em>antialiased</em></dt>
+<dd>1 or 2</dd>
+</dl>
+<p>If <em>linewidth</em>, <em>color</em>, or <em>antialiased</em> is None, they
+default to their rcParams setting, in sequence form.</p>
+<dl class="docutils">
+<dt><em>norm</em></dt>
+<dd>None (optional for <a class="reference internal" href="matplotlib.cm.ScalarMappable.html#matplotlib.cm.ScalarMappable" title="matplotlib.cm.ScalarMappable"><code class="xref py py-class docutils literal"><span class="pre">matplotlib.cm.ScalarMappable</span></code></a>)</dd>
+<dt><em>cmap</em></dt>
+<dd>None (optional for <a class="reference internal" href="matplotlib.cm.ScalarMappable.html#matplotlib.cm.ScalarMappable" title="matplotlib.cm.ScalarMappable"><code class="xref py py-class docutils literal"><span class="pre">matplotlib.cm.ScalarMappable</span></code></a>)</dd>
+</dl>
+<p><em>pickradius</em> is the tolerance for mouse clicks picking a line.
+The default is 5 pt.</p>
+<p>The use of <a class="reference internal" href="matplotlib.cm.ScalarMappable.html#matplotlib.cm.ScalarMappable" title="matplotlib.cm.ScalarMappable"><code class="xref py py-class docutils literal"><span class="pre">ScalarMappable</span></code></a> is optional.
+If the <a class="reference internal" href="matplotlib.cm.ScalarMappable.html#matplotlib.cm.ScalarMappable" title="matplotlib.cm.ScalarMappable"><code class="xref py py-class docutils literal"><span class="pre">ScalarMappable</span></code></a> array
+<code class="xref py py-attr docutils literal"><span class="pre">_A</span></code> is not None (i.e., a call to
+<a class="reference internal" href="matplotlib.cm.ScalarMappable.set_array.html#matplotlib.cm.ScalarMappable.set_array" title="matplotlib.cm.ScalarMappable.set_array"><code class="xref py py-meth docutils literal"><span class="pre">set_array()</span></code></a> has been made), at
+draw time a call to scalar mappable will be made to set the colors.</p>
+<p><strong>Example:</strong></p>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -835,16 +880,16 @@ are displayed as v</p>
             HAS_SOURCE:  true
         };
     </script>
-      <script type="text/javascript" src="../../static/jquery.js"></script>
-      <script type="text/javascript" src="../../static/underscore.js"></script>
-      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
   
   
-    <script type="text/javascript" src="../../static/js/theme.js"></script>
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
   
 
   

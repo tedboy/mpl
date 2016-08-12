@@ -1,0 +1,1257 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>matplotlib.legend &mdash; Matplotlib API 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+        <link rel="up" title="matplotlib" href="../matplotlib.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Matplotlib API</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.html">matplotlib</a> &raquo;</li>
+        
+      <li>matplotlib.legend</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for matplotlib.legend</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">The legend module defines the Legend class, which is responsible for</span>
+<span class="sd">drawing legends associated with axes and/or figures.</span>
+
+<span class="sd">.. important::</span>
+
+<span class="sd">    It is unlikely that you would ever create a Legend instance manually.</span>
+<span class="sd">    Most users would normally create a legend via the</span>
+<span class="sd">    :meth:`~matplotlib.axes.Axes.legend` function. For more details on legends</span>
+<span class="sd">    there is also a :ref:`legend guide &lt;plotting-guide-legend&gt;`.</span>
+
+<span class="sd">The Legend class can be considered as a container of legend handles</span>
+<span class="sd">and legend texts. Creation of corresponding legend handles from the</span>
+<span class="sd">plot elements in the axes or figures (e.g., lines, patches, etc.) are</span>
+<span class="sd">specified by the handler map, which defines the mapping between the</span>
+<span class="sd">plot elements and the legend handlers to be used (the default legend</span>
+<span class="sd">handlers are defined in the :mod:`~matplotlib.legend_handler` module).</span>
+<span class="sd">Note that not all kinds of artist are supported by the legend yet by default</span>
+<span class="sd">but it is possible to extend the legend handler&#39;s capabilities to</span>
+<span class="sd">support arbitrary objects. See the :ref:`legend guide &lt;plotting-guide-legend&gt;`</span>
+<span class="sd">for more information.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="p">(</span><span class="n">absolute_import</span><span class="p">,</span> <span class="n">division</span><span class="p">,</span> <span class="n">print_function</span><span class="p">,</span>
+                        <span class="n">unicode_literals</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">matplotlib.externals</span> <span class="k">import</span> <span class="n">six</span>
+<span class="kn">from</span> <span class="nn">matplotlib.externals.six.moves</span> <span class="k">import</span> <span class="n">xrange</span>
+
+<span class="kn">import</span> <span class="nn">warnings</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="k">import</span> <span class="n">rcParams</span>
+<span class="kn">from</span> <span class="nn">matplotlib.artist</span> <span class="k">import</span> <span class="n">Artist</span><span class="p">,</span> <span class="n">allow_rasterization</span>
+<span class="kn">from</span> <span class="nn">matplotlib.cbook</span> <span class="k">import</span> <span class="p">(</span><span class="n">is_string_like</span><span class="p">,</span> <span class="n">iterable</span><span class="p">,</span> <span class="n">silent_list</span><span class="p">,</span> <span class="n">safezip</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">matplotlib.font_manager</span> <span class="k">import</span> <span class="n">FontProperties</span>
+<span class="kn">from</span> <span class="nn">matplotlib.lines</span> <span class="k">import</span> <span class="n">Line2D</span>
+<span class="kn">from</span> <span class="nn">matplotlib.patches</span> <span class="k">import</span> <span class="n">Patch</span><span class="p">,</span> <span class="n">Rectangle</span><span class="p">,</span> <span class="n">Shadow</span><span class="p">,</span> <span class="n">FancyBboxPatch</span>
+<span class="kn">from</span> <span class="nn">matplotlib.collections</span> <span class="k">import</span> <span class="p">(</span><span class="n">LineCollection</span><span class="p">,</span> <span class="n">RegularPolyCollection</span><span class="p">,</span>
+                                    <span class="n">CircleCollection</span><span class="p">,</span> <span class="n">PathCollection</span><span class="p">,</span>
+                                    <span class="n">PolyCollection</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">matplotlib.transforms</span> <span class="k">import</span> <span class="n">Bbox</span><span class="p">,</span> <span class="n">BboxBase</span><span class="p">,</span> <span class="n">TransformedBbox</span>
+<span class="kn">from</span> <span class="nn">matplotlib.transforms</span> <span class="k">import</span> <span class="n">BboxTransformTo</span><span class="p">,</span> <span class="n">BboxTransformFrom</span>
+
+<span class="kn">from</span> <span class="nn">matplotlib.offsetbox</span> <span class="k">import</span> <span class="n">HPacker</span><span class="p">,</span> <span class="n">VPacker</span><span class="p">,</span> <span class="n">TextArea</span><span class="p">,</span> <span class="n">DrawingArea</span>
+<span class="kn">from</span> <span class="nn">matplotlib.offsetbox</span> <span class="k">import</span> <span class="n">DraggableOffsetBox</span>
+
+<span class="kn">from</span> <span class="nn">matplotlib.container</span> <span class="k">import</span> <span class="n">ErrorbarContainer</span><span class="p">,</span> <span class="n">BarContainer</span><span class="p">,</span> <span class="n">StemContainer</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">legend_handler</span>
+
+
+<div class="viewcode-block" id="DraggableLegend"><a class="viewcode-back" href="../../generated/generated/matplotlib.legend.DraggableLegend.html#matplotlib.figure.DraggableLegend">[docs]</a><span class="k">class</span> <span class="nc">DraggableLegend</span><span class="p">(</span><span class="n">DraggableOffsetBox</span><span class="p">):</span>
+<div class="viewcode-block" id="DraggableLegend.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.legend.DraggableLegend.__init__.html#matplotlib.figure.DraggableLegend.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">legend</span><span class="p">,</span> <span class="n">use_blit</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">update</span><span class="o">=</span><span class="s2">&quot;loc&quot;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        update : If &quot;loc&quot;, update *loc* parameter of</span>
+<span class="sd">                 legend upon finalizing. If &quot;bbox&quot;, update</span>
+<span class="sd">                 *bbox_to_anchor* parameter.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">legend</span> <span class="o">=</span> <span class="n">legend</span>
+
+        <span class="k">if</span> <span class="n">update</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;loc&quot;</span><span class="p">,</span> <span class="s2">&quot;bbox&quot;</span><span class="p">]:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_update</span> <span class="o">=</span> <span class="n">update</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;update parameter &#39;</span><span class="si">%s</span><span class="s2">&#39; is not supported.&quot;</span> <span class="o">%</span>
+                             <span class="n">update</span><span class="p">)</span>
+
+        <span class="n">DraggableOffsetBox</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">legend</span><span class="p">,</span> <span class="n">legend</span><span class="o">.</span><span class="n">_legend_box</span><span class="p">,</span>
+                                    <span class="n">use_blit</span><span class="o">=</span><span class="n">use_blit</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DraggableLegend.artist_picker"><a class="viewcode-back" href="../../generated/generated/matplotlib.legend.DraggableLegend.artist_picker.html#matplotlib.figure.DraggableLegend.artist_picker">[docs]</a>    <span class="k">def</span> <span class="nf">artist_picker</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">legend</span><span class="p">,</span> <span class="n">evt</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">evt</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DraggableLegend.finalize_offset"><a class="viewcode-back" href="../../generated/generated/matplotlib.legend.DraggableLegend.finalize_offset.html#matplotlib.figure.DraggableLegend.finalize_offset">[docs]</a>    <span class="k">def</span> <span class="nf">finalize_offset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">loc_in_canvas</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_loc_in_canvas</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_update</span> <span class="o">==</span> <span class="s2">&quot;loc&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_update_loc</span><span class="p">(</span><span class="n">loc_in_canvas</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">_update</span> <span class="o">==</span> <span class="s2">&quot;bbox&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_update_bbox_to_anchor</span><span class="p">(</span><span class="n">loc_in_canvas</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;update parameter &#39;</span><span class="si">%s</span><span class="s2">&#39; is not supported.&quot;</span> <span class="o">%</span>
+                               <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">_update_loc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">loc_in_canvas</span><span class="p">):</span>
+        <span class="n">bbox</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">get_bbox_to_anchor</span><span class="p">()</span>
+
+        <span class="c1"># if bbox has zero width or height, the transformation is</span>
+        <span class="c1"># ill-defined. Fall back to the defaul bbox_to_anchor.</span>
+        <span class="k">if</span> <span class="n">bbox</span><span class="o">.</span><span class="n">width</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">bbox</span><span class="o">.</span><span class="n">height</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">set_bbox_to_anchor</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+            <span class="n">bbox</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">get_bbox_to_anchor</span><span class="p">()</span>
+
+        <span class="n">_bbox_transform</span> <span class="o">=</span> <span class="n">BboxTransformFrom</span><span class="p">(</span><span class="n">bbox</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">_loc</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span>
+            <span class="n">_bbox_transform</span><span class="o">.</span><span class="n">transform_point</span><span class="p">(</span><span class="n">loc_in_canvas</span><span class="p">)</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_update_bbox_to_anchor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">loc_in_canvas</span><span class="p">):</span>
+
+        <span class="n">tr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">transAxes</span>
+        <span class="n">loc_in_bbox</span> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">transform_point</span><span class="p">(</span><span class="n">loc_in_canvas</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">set_bbox_to_anchor</span><span class="p">(</span><span class="n">loc_in_bbox</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Legend"><a class="viewcode-back" href="../../generated/generated/matplotlib.legend.Legend.html#matplotlib.figure.Legend">[docs]</a><span class="k">class</span> <span class="nc">Legend</span><span class="p">(</span><span class="n">Artist</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Place a legend on the axes at location loc.  Labels are a</span>
+<span class="sd">    sequence of strings and loc can be a string or an integer</span>
+<span class="sd">    specifying the legend location</span>
+
+<span class="sd">    The location codes are::</span>
+
+<span class="sd">      &#39;best&#39;         : 0, (only implemented for axes legends)</span>
+<span class="sd">      &#39;upper right&#39;  : 1,</span>
+<span class="sd">      &#39;upper left&#39;   : 2,</span>
+<span class="sd">      &#39;lower left&#39;   : 3,</span>
+<span class="sd">      &#39;lower right&#39;  : 4,</span>
+<span class="sd">      &#39;right&#39;        : 5,</span>
+<span class="sd">      &#39;center left&#39;  : 6,</span>
+<span class="sd">      &#39;center right&#39; : 7,</span>
+<span class="sd">      &#39;lower center&#39; : 8,</span>
+<span class="sd">      &#39;upper center&#39; : 9,</span>
+<span class="sd">      &#39;center&#39;       : 10,</span>
+
+<span class="sd">    loc can be a tuple of the normalized coordinate values with</span>
+<span class="sd">    respect its parent.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">codes</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;best&#39;</span><span class="p">:</span>         <span class="mi">0</span><span class="p">,</span>  <span class="c1"># only implemented for axes legends</span>
+             <span class="s1">&#39;upper right&#39;</span><span class="p">:</span>  <span class="mi">1</span><span class="p">,</span>
+             <span class="s1">&#39;upper left&#39;</span><span class="p">:</span>   <span class="mi">2</span><span class="p">,</span>
+             <span class="s1">&#39;lower left&#39;</span><span class="p">:</span>   <span class="mi">3</span><span class="p">,</span>
+             <span class="s1">&#39;lower right&#39;</span><span class="p">:</span>  <span class="mi">4</span><span class="p">,</span>
+             <span class="s1">&#39;right&#39;</span><span class="p">:</span>        <span class="mi">5</span><span class="p">,</span>
+             <span class="s1">&#39;center left&#39;</span><span class="p">:</span>  <span class="mi">6</span><span class="p">,</span>
+             <span class="s1">&#39;center right&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+             <span class="s1">&#39;lower center&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+             <span class="s1">&#39;upper center&#39;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+             <span class="s1">&#39;center&#39;</span><span class="p">:</span>       <span class="mi">10</span><span class="p">,</span>
+             <span class="p">}</span>
+
+    <span class="n">zorder</span> <span class="o">=</span> <span class="mi">5</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Legend&quot;</span>
+
+<div class="viewcode-block" id="Legend.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.legend.Legend.__init__.html#matplotlib.figure.Legend.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">handles</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span>
+                 <span class="n">loc</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">numpoints</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>    <span class="c1"># the number of points in the legend line</span>
+                 <span class="n">markerscale</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># the relative size of legend markers</span>
+                                    <span class="c1"># vs. original</span>
+                 <span class="n">markerfirst</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  <span class="c1"># controls ordering (left-to-right) of</span>
+                                    <span class="c1"># legend marker and label</span>
+                 <span class="n">scatterpoints</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>    <span class="c1"># number of scatter points</span>
+                 <span class="n">scatteryoffsets</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">prop</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>          <span class="c1"># properties for the legend texts</span>
+                 <span class="n">fontsize</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>        <span class="c1"># keyword to set font size directly</span>
+
+                 <span class="c1"># spacing &amp; pad defined as a fraction of the font-size</span>
+                 <span class="n">borderpad</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>      <span class="c1"># the whitespace inside the legend border</span>
+                 <span class="n">labelspacing</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>   <span class="c1"># the vertical space between the legend</span>
+                                      <span class="c1"># entries</span>
+                 <span class="n">handlelength</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>   <span class="c1"># the length of the legend handles</span>
+                 <span class="n">handleheight</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>   <span class="c1"># the height of the legend handles</span>
+                 <span class="n">handletextpad</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># the pad between the legend handle</span>
+                                      <span class="c1"># and text</span>
+                 <span class="n">borderaxespad</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># the pad between the axes and legend</span>
+                                      <span class="c1"># border</span>
+                 <span class="n">columnspacing</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># spacing between columns</span>
+
+                 <span class="n">ncol</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>     <span class="c1"># number of columns</span>
+                 <span class="n">mode</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># mode for horizontal distribution of columns.</span>
+                             <span class="c1"># None, &quot;expand&quot;</span>
+
+                 <span class="n">fancybox</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># True use a fancy box, false use a rounded</span>
+                                 <span class="c1"># box, none use rc</span>
+                 <span class="n">shadow</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># set a title for the legend</span>
+
+                 <span class="n">framealpha</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># set frame alpha</span>
+
+                 <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># bbox that the legend will be anchored.</span>
+                 <span class="n">bbox_transform</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># transform for the bbox</span>
+                 <span class="n">frameon</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># draw frame</span>
+                 <span class="n">handler_map</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        - *parent*: the artist that contains the legend</span>
+<span class="sd">        - *handles*: a list of artists (lines, patches) to be added to the</span>
+<span class="sd">                      legend</span>
+<span class="sd">        - *labels*: a list of strings to label the legend</span>
+
+<span class="sd">        Optional keyword arguments:</span>
+
+<span class="sd">        ================   ====================================================</span>
+<span class="sd">        Keyword            Description</span>
+<span class="sd">        ================   ====================================================</span>
+<span class="sd">        loc                a location code</span>
+<span class="sd">        prop               the font property</span>
+<span class="sd">        fontsize           the font size (used only if prop is not specified)</span>
+<span class="sd">        markerscale        the relative size of legend markers vs. original</span>
+<span class="sd">        markerfirst        If true, place legend marker to left of label</span>
+<span class="sd">                           If false, place legend marker to right of label</span>
+<span class="sd">        numpoints          the number of points in the legend for line</span>
+<span class="sd">        scatterpoints      the number of points in the legend for scatter plot</span>
+<span class="sd">        scatteryoffsets    a list of yoffsets for scatter symbols in legend</span>
+<span class="sd">        frameon            if True, draw a frame around the legend.</span>
+<span class="sd">                           If None, use rc</span>
+<span class="sd">        fancybox           if True, draw a frame with a round fancybox.</span>
+<span class="sd">                           If None, use rc</span>
+<span class="sd">        shadow             if True, draw a shadow behind legend</span>
+<span class="sd">        framealpha         If not None, alpha channel for the frame.</span>
+<span class="sd">        ncol               number of columns</span>
+<span class="sd">        borderpad          the fractional whitespace inside the legend border</span>
+<span class="sd">        labelspacing       the vertical space between the legend entries</span>
+<span class="sd">        handlelength       the length of the legend handles</span>
+<span class="sd">        handleheight       the height of the legend handles</span>
+<span class="sd">        handletextpad      the pad between the legend handle and text</span>
+<span class="sd">        borderaxespad      the pad between the axes and legend border</span>
+<span class="sd">        columnspacing      the spacing between columns</span>
+<span class="sd">        title              the legend title</span>
+<span class="sd">        bbox_to_anchor     the bbox that the legend will be anchored.</span>
+<span class="sd">        bbox_transform     the transform for the bbox. transAxes if None.</span>
+<span class="sd">        ================   ====================================================</span>
+
+
+<span class="sd">        The pad and spacing parameters are measured in font-size units.  e.g.,</span>
+<span class="sd">        a fontsize of 10 points and a handlelength=5 implies a handlelength of</span>
+<span class="sd">        50 points.  Values from rcParams will be used if None.</span>
+
+<span class="sd">        Users can specify any arbitrary location for the legend using the</span>
+<span class="sd">        *bbox_to_anchor* keyword argument. bbox_to_anchor can be an instance</span>
+<span class="sd">        of BboxBase(or its derivatives) or a tuple of 2 or 4 floats.</span>
+<span class="sd">        See :meth:`set_bbox_to_anchor` for more detail.</span>
+
+<span class="sd">        The legend location can be specified by setting *loc* with a tuple of</span>
+<span class="sd">        2 floats, which is interpreted as the lower-left corner of the legend</span>
+<span class="sd">        in the normalized axes coordinate.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># local import only to avoid circularity</span>
+        <span class="kn">from</span> <span class="nn">matplotlib.axes</span> <span class="k">import</span> <span class="n">Axes</span>
+        <span class="kn">from</span> <span class="nn">matplotlib.figure</span> <span class="k">import</span> <span class="n">Figure</span>
+
+        <span class="n">Artist</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">prop</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">fontsize</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">prop</span> <span class="o">=</span> <span class="n">FontProperties</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="n">fontsize</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">prop</span> <span class="o">=</span> <span class="n">FontProperties</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;legend.fontsize&quot;</span><span class="p">])</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">prop</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">prop</span> <span class="o">=</span> <span class="n">FontProperties</span><span class="p">(</span><span class="o">**</span><span class="n">prop</span><span class="p">)</span>
+            <span class="k">if</span> <span class="s2">&quot;size&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">prop</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">prop</span><span class="o">.</span><span class="n">set_size</span><span class="p">(</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;legend.fontsize&quot;</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">prop</span> <span class="o">=</span> <span class="n">prop</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_fontsize</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">prop</span><span class="o">.</span><span class="n">get_size_in_points</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">texts</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">legendHandles</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_legend_title_box</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="c1">#: A dictionary with the extra handler mappings for this Legend</span>
+        <span class="c1">#: instance.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_custom_handler_map</span> <span class="o">=</span> <span class="n">handler_map</span>
+
+        <span class="n">locals_view</span> <span class="o">=</span> <span class="nb">locals</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;numpoints&quot;</span><span class="p">,</span> <span class="s2">&quot;markerscale&quot;</span><span class="p">,</span> <span class="s2">&quot;shadow&quot;</span><span class="p">,</span> <span class="s2">&quot;columnspacing&quot;</span><span class="p">,</span>
+                     <span class="s2">&quot;scatterpoints&quot;</span><span class="p">,</span> <span class="s2">&quot;handleheight&quot;</span><span class="p">,</span> <span class="s1">&#39;borderpad&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;labelspacing&#39;</span><span class="p">,</span> <span class="s1">&#39;handlelength&#39;</span><span class="p">,</span> <span class="s1">&#39;handletextpad&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;borderaxespad&#39;</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="n">locals_view</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">value</span> <span class="o">=</span> <span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;legend.&quot;</span> <span class="o">+</span> <span class="n">name</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">value</span> <span class="o">=</span> <span class="n">locals_view</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+        <span class="k">del</span> <span class="n">locals_view</span>
+
+        <span class="n">handles</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">handles</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">handles</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">ncol</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_ncol</span> <span class="o">=</span> <span class="n">ncol</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">numpoints</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;numpoints must be &gt; 0; it was </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">numpoints</span><span class="p">)</span>
+
+        <span class="c1"># introduce y-offset for handles of the scatter plot</span>
+        <span class="k">if</span> <span class="n">scatteryoffsets</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_scatteryoffsets</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">3.</span> <span class="o">/</span> <span class="mf">8.</span><span class="p">,</span> <span class="mf">4.</span> <span class="o">/</span> <span class="mf">8.</span><span class="p">,</span> <span class="mf">2.5</span> <span class="o">/</span> <span class="mf">8.</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_scatteryoffsets</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">scatteryoffsets</span><span class="p">)</span>
+        <span class="n">reps</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">scatterpoints</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_scatteryoffsets</span><span class="p">))</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_scatteryoffsets</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_scatteryoffsets</span><span class="p">,</span>
+                                        <span class="n">reps</span><span class="p">)[:</span><span class="bp">self</span><span class="o">.</span><span class="n">scatterpoints</span><span class="p">]</span>
+
+        <span class="c1"># _legend_box is an OffsetBox instance that contains all</span>
+        <span class="c1"># legend items and will be initialized from _init_legend_box()</span>
+        <span class="c1"># method.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_legend_box</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">Axes</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">isaxes</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">axes</span> <span class="o">=</span> <span class="n">parent</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_figure</span><span class="p">(</span><span class="n">parent</span><span class="o">.</span><span class="n">figure</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">Figure</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">isaxes</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_figure</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Legend needs either Axes or Figure as parent&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parent</span> <span class="o">=</span> <span class="n">parent</span>
+
+        <span class="k">if</span> <span class="n">loc</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">loc</span> <span class="o">=</span> <span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;legend.loc&quot;</span><span class="p">]</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">isaxes</span> <span class="ow">and</span> <span class="n">loc</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;best&#39;</span><span class="p">]:</span>
+                <span class="n">loc</span> <span class="o">=</span> <span class="s1">&#39;upper right&#39;</span>
+        <span class="k">if</span> <span class="n">is_string_like</span><span class="p">(</span><span class="n">loc</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">loc</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">codes</span><span class="p">:</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">isaxes</span><span class="p">:</span>
+                    <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;Unrecognized location &quot;</span><span class="si">%s</span><span class="s1">&quot;. Falling back &#39;</span>
+                                  <span class="s1">&#39;on &quot;best&quot;; valid locations are</span><span class="se">\n\t</span><span class="si">%s</span><span class="se">\n</span><span class="s1">&#39;</span>
+                                  <span class="o">%</span> <span class="p">(</span><span class="n">loc</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n\t</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+                                    <span class="n">six</span><span class="o">.</span><span class="n">iterkeys</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">codes</span><span class="p">))))</span>
+                    <span class="n">loc</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;Unrecognized location &quot;</span><span class="si">%s</span><span class="s1">&quot;. Falling back &#39;</span>
+                                  <span class="s1">&#39;on &quot;upper right&quot;; &#39;</span>
+                                  <span class="s1">&#39;valid locations are</span><span class="se">\n\t</span><span class="si">%s</span><span class="se">\n</span><span class="s1">&#39;</span>
+                                  <span class="o">%</span> <span class="p">(</span><span class="n">loc</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n\t</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+                                    <span class="n">six</span><span class="o">.</span><span class="n">iterkeys</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">codes</span><span class="p">))))</span>
+                    <span class="n">loc</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">loc</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">codes</span><span class="p">[</span><span class="n">loc</span><span class="p">]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">isaxes</span> <span class="ow">and</span> <span class="n">loc</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;Automatic legend placement (loc=&quot;best&quot;) not &#39;</span>
+                          <span class="s1">&#39;implemented for figure legend. &#39;</span>
+                          <span class="s1">&#39;Falling back on &quot;upper right&quot;.&#39;</span><span class="p">)</span>
+            <span class="n">loc</span> <span class="o">=</span> <span class="mi">1</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mode</span> <span class="o">=</span> <span class="n">mode</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_bbox_to_anchor</span><span class="p">(</span><span class="n">bbox_to_anchor</span><span class="p">,</span> <span class="n">bbox_transform</span><span class="p">)</span>
+
+        <span class="c1"># We use FancyBboxPatch to draw a legend frame. The location</span>
+        <span class="c1"># and size of the box will be updated during the drawing time.</span>
+
+        <span class="k">if</span> <span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;legend.facecolor&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;inherit&#39;</span><span class="p">:</span>
+            <span class="n">facecolor</span> <span class="o">=</span> <span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;axes.facecolor&quot;</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">facecolor</span> <span class="o">=</span> <span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;legend.facecolor&quot;</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;legend.edgecolor&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;inherit&#39;</span><span class="p">:</span>
+            <span class="n">edgecolor</span> <span class="o">=</span> <span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;axes.edgecolor&quot;</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">edgecolor</span> <span class="o">=</span> <span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;legend.edgecolor&quot;</span><span class="p">]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">legendPatch</span> <span class="o">=</span> <span class="n">FancyBboxPatch</span><span class="p">(</span>
+            <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">),</span> <span class="n">width</span><span class="o">=</span><span class="mf">1.</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mf">1.</span><span class="p">,</span>
+            <span class="n">facecolor</span><span class="o">=</span><span class="n">facecolor</span><span class="p">,</span>
+            <span class="n">edgecolor</span><span class="o">=</span><span class="n">edgecolor</span><span class="p">,</span>
+            <span class="n">mutation_scale</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_fontsize</span><span class="p">,</span>
+            <span class="n">snap</span><span class="o">=</span><span class="kc">True</span>
+            <span class="p">)</span>
+
+        <span class="c1"># The width and height of the legendPatch will be set (in the</span>
+        <span class="c1"># draw()) to the length that includes the padding. Thus we set</span>
+        <span class="c1"># pad=0 here.</span>
+        <span class="k">if</span> <span class="n">fancybox</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">fancybox</span> <span class="o">=</span> <span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;legend.fancybox&quot;</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">fancybox</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">legendPatch</span><span class="o">.</span><span class="n">set_boxstyle</span><span class="p">(</span><span class="s2">&quot;round&quot;</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                                          <span class="n">rounding_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">legendPatch</span><span class="o">.</span><span class="n">set_boxstyle</span><span class="p">(</span><span class="s2">&quot;square&quot;</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_set_artist_props</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">legendPatch</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_drawFrame</span> <span class="o">=</span> <span class="n">frameon</span>
+        <span class="k">if</span> <span class="n">frameon</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_drawFrame</span> <span class="o">=</span> <span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;legend.frameon&quot;</span><span class="p">]</span>
+
+        <span class="c1"># init with null renderer</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_init_legend_box</span><span class="p">(</span><span class="n">handles</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">markerfirst</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">framealpha</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">get_frame</span><span class="p">()</span><span class="o">.</span><span class="n">set_alpha</span><span class="p">(</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;legend.framealpha&quot;</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">get_frame</span><span class="p">()</span><span class="o">.</span><span class="n">set_alpha</span><span class="p">(</span><span class="n">framealpha</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_loc</span> <span class="o">=</span> <span class="n">loc</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_last_fontsize_points</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fontsize</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_draggable</span> <span class="o">=</span> <span class="kc">None</span></div>
+
+    <span class="k">def</span> <span class="nf">_set_artist_props</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        set the boilerplate props for artists added to axes</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">a</span><span class="o">.</span><span class="n">set_figure</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">figure</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">isaxes</span><span class="p">:</span>
+            <span class="c1"># a.set_axes(self.axes)</span>
+            <span class="n">a</span><span class="o">.</span><span class="n">axes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">axes</span>
+
+        <span class="n">a</span><span class="o">.</span><span class="n">set_transform</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_transform</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="nf">_set_loc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">loc</span><span class="p">):</span>
+        <span class="c1"># find_offset function will be provided to _legend_box and</span>
+        <span class="c1"># _legend_box will draw itself at the location of the return</span>
+        <span class="c1"># value of the find_offset.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_loc_real</span> <span class="o">=</span> <span class="n">loc</span>
+        <span class="k">if</span> <span class="n">loc</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">_findoffset</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_findoffset_best</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">_findoffset</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_findoffset_loc</span>
+
+<span class="c1">#       def findoffset(width, height, xdescent, ydescent):</span>
+<span class="c1">#           return _findoffset(width, height, xdescent, ydescent, renderer)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_legend_box</span><span class="o">.</span><span class="n">set_offset</span><span class="p">(</span><span class="n">_findoffset</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_loc_real</span> <span class="o">=</span> <span class="n">loc</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stale</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="k">def</span> <span class="nf">_get_loc</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_loc_real</span>
+
+    <span class="n">_loc</span> <span class="o">=</span> <span class="nb">property</span><span class="p">(</span><span class="n">_get_loc</span><span class="p">,</span> <span class="n">_set_loc</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_findoffset_best</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">xdescent</span><span class="p">,</span> <span class="n">ydescent</span><span class="p">,</span> <span class="n">renderer</span><span class="p">):</span>
+        <span class="s2">&quot;Helper function to locate the legend at its best position&quot;</span>
+        <span class="n">ox</span><span class="p">,</span> <span class="n">oy</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_find_best_position</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">renderer</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">ox</span> <span class="o">+</span> <span class="n">xdescent</span><span class="p">,</span> <span class="n">oy</span> <span class="o">+</span> <span class="n">ydescent</span>
+
+    <span class="k">def</span> <span class="nf">_findoffset_loc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">xdescent</span><span class="p">,</span> <span class="n">ydescent</span><span class="p">,</span> <span class="n">renderer</span><span class="p">):</span>
+        <span class="s2">&quot;Helper function to locate the legend using the location code&quot;</span>
+
+        <span class="k">if</span> <span class="n">iterable</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_loc</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_loc</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="c1"># when loc is a tuple of axes(or figure) coordinates.</span>
+            <span class="n">fx</span><span class="p">,</span> <span class="n">fy</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_loc</span>
+            <span class="n">bbox</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_bbox_to_anchor</span><span class="p">()</span>
+            <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">bbox</span><span class="o">.</span><span class="n">x0</span> <span class="o">+</span> <span class="n">bbox</span><span class="o">.</span><span class="n">width</span> <span class="o">*</span> <span class="n">fx</span><span class="p">,</span> <span class="n">bbox</span><span class="o">.</span><span class="n">y0</span> <span class="o">+</span> <span class="n">bbox</span><span class="o">.</span><span class="n">height</span> <span class="o">*</span> <span class="n">fy</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">bbox</span> <span class="o">=</span> <span class="n">Bbox</span><span class="o">.</span><span class="n">from_bounds</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+            <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_anchored_bbox</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_loc</span><span class="p">,</span> <span class="n">bbox</span><span class="p">,</span>
+                                           <span class="bp">self</span><span class="o">.</span><span class="n">get_bbox_to_anchor</span><span class="p">(),</span>
+                                           <span class="n">renderer</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">xdescent</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="n">ydescent</span>
+
+    <span class="nd">@allow_rasterization</span>
+    <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">renderer</span><span class="p">):</span>
+        <span class="s2">&quot;Draw everything that belongs to the legend&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_visible</span><span class="p">():</span>
+            <span class="k">return</span>
+
+        <span class="n">renderer</span><span class="o">.</span><span class="n">open_group</span><span class="p">(</span><span class="s1">&#39;legend&#39;</span><span class="p">)</span>
+
+        <span class="n">fontsize</span> <span class="o">=</span> <span class="n">renderer</span><span class="o">.</span><span class="n">points_to_pixels</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_fontsize</span><span class="p">)</span>
+
+        <span class="c1"># if mode == fill, set the width of the legend_box to the</span>
+        <span class="c1"># width of the paret (minus pads)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mode</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;expand&quot;</span><span class="p">]:</span>
+            <span class="n">pad</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">borderaxespad</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">borderpad</span><span class="p">)</span> <span class="o">*</span> <span class="n">fontsize</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_legend_box</span><span class="o">.</span><span class="n">set_width</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_bbox_to_anchor</span><span class="p">()</span><span class="o">.</span><span class="n">width</span> <span class="o">-</span> <span class="n">pad</span><span class="p">)</span>
+
+        <span class="c1"># update the location and size of the legend. This needs to</span>
+        <span class="c1"># be done in any case to clip the figure right.</span>
+        <span class="n">bbox</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_legend_box</span><span class="o">.</span><span class="n">get_window_extent</span><span class="p">(</span><span class="n">renderer</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">legendPatch</span><span class="o">.</span><span class="n">set_bounds</span><span class="p">(</span><span class="n">bbox</span><span class="o">.</span><span class="n">x0</span><span class="p">,</span> <span class="n">bbox</span><span class="o">.</span><span class="n">y0</span><span class="p">,</span>
+                                    <span class="n">bbox</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="n">bbox</span><span class="o">.</span><span class="n">height</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">legendPatch</span><span class="o">.</span><span class="n">set_mutation_scale</span><span class="p">(</span><span class="n">fontsize</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_drawFrame</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">shadow</span><span class="p">:</span>
+                <span class="n">shadow</span> <span class="o">=</span> <span class="n">Shadow</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">legendPatch</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+                <span class="n">shadow</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">renderer</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">legendPatch</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">renderer</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_legend_box</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">renderer</span><span class="p">)</span>
+
+        <span class="n">renderer</span><span class="o">.</span><span class="n">close_group</span><span class="p">(</span><span class="s1">&#39;legend&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stale</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="nf">_approx_text_height</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">renderer</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the approximate height of the text. This is used to place</span>
+<span class="sd">        the legend handle.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">renderer</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fontsize</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">renderer</span><span class="o">.</span><span class="n">points_to_pixels</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_fontsize</span><span class="p">)</span>
+
+    <span class="c1"># _default_handler_map defines the default mapping between plot</span>
+    <span class="c1"># elements and the legend handlers.</span>
+
+    <span class="n">_default_handler_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">StemContainer</span><span class="p">:</span> <span class="n">legend_handler</span><span class="o">.</span><span class="n">HandlerStem</span><span class="p">(),</span>
+        <span class="n">ErrorbarContainer</span><span class="p">:</span> <span class="n">legend_handler</span><span class="o">.</span><span class="n">HandlerErrorbar</span><span class="p">(),</span>
+        <span class="n">Line2D</span><span class="p">:</span> <span class="n">legend_handler</span><span class="o">.</span><span class="n">HandlerLine2D</span><span class="p">(),</span>
+        <span class="n">Patch</span><span class="p">:</span> <span class="n">legend_handler</span><span class="o">.</span><span class="n">HandlerPatch</span><span class="p">(),</span>
+        <span class="n">LineCollection</span><span class="p">:</span> <span class="n">legend_handler</span><span class="o">.</span><span class="n">HandlerLineCollection</span><span class="p">(),</span>
+        <span class="n">RegularPolyCollection</span><span class="p">:</span> <span class="n">legend_handler</span><span class="o">.</span><span class="n">HandlerRegularPolyCollection</span><span class="p">(),</span>
+        <span class="n">CircleCollection</span><span class="p">:</span> <span class="n">legend_handler</span><span class="o">.</span><span class="n">HandlerCircleCollection</span><span class="p">(),</span>
+        <span class="n">BarContainer</span><span class="p">:</span> <span class="n">legend_handler</span><span class="o">.</span><span class="n">HandlerPatch</span><span class="p">(</span>
+            <span class="n">update_func</span><span class="o">=</span><span class="n">legend_handler</span><span class="o">.</span><span class="n">update_from_first_child</span><span class="p">),</span>
+        <span class="nb">tuple</span><span class="p">:</span> <span class="n">legend_handler</span><span class="o">.</span><span class="n">HandlerTuple</span><span class="p">(),</span>
+        <span class="n">PathCollection</span><span class="p">:</span> <span class="n">legend_handler</span><span class="o">.</span><span class="n">HandlerPathCollection</span><span class="p">(),</span>
+        <span class="n">PolyCollection</span><span class="p">:</span> <span class="n">legend_handler</span><span class="o">.</span><span class="n">HandlerPolyCollection</span><span class="p">()</span>
+        <span class="p">}</span>
+
+    <span class="c1"># (get|set|update)_default_handler_maps are public interfaces to</span>
+    <span class="c1"># modify the default handler map.</span>
+
+    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="Legend.get_default_handler_map"><a class="viewcode-back" href="../../generated/generated/matplotlib.legend.Legend.get_default_handler_map.html#matplotlib.figure.Legend.get_default_handler_map">[docs]</a>    <span class="k">def</span> <span class="nf">get_default_handler_map</span><span class="p">(</span><span class="n">cls</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        A class method that returns the default handler map.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">cls</span><span class="o">.</span><span class="n">_default_handler_map</span></div>
+
+    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="Legend.set_default_handler_map"><a class="viewcode-back" href="../../generated/generated/matplotlib.legend.Legend.set_default_handler_map.html#matplotlib.figure.Legend.set_default_handler_map">[docs]</a>    <span class="k">def</span> <span class="nf">set_default_handler_map</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">handler_map</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        A class method to set the default handler map.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">cls</span><span class="o">.</span><span class="n">_default_handler_map</span> <span class="o">=</span> <span class="n">handler_map</span></div>
+
+    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="Legend.update_default_handler_map"><a class="viewcode-back" href="../../generated/generated/matplotlib.legend.Legend.update_default_handler_map.html#matplotlib.figure.Legend.update_default_handler_map">[docs]</a>    <span class="k">def</span> <span class="nf">update_default_handler_map</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">handler_map</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        A class method to update the default handler map.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">cls</span><span class="o">.</span><span class="n">_default_handler_map</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">handler_map</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Legend.get_legend_handler_map"><a class="viewcode-back" href="../../generated/generated/matplotlib.legend.Legend.get_legend_handler_map.html#matplotlib.figure.Legend.get_legend_handler_map">[docs]</a>    <span class="k">def</span> <span class="nf">get_legend_handler_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        return the handler map.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">default_handler_map</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_default_handler_map</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_custom_handler_map</span><span class="p">:</span>
+            <span class="n">hm</span> <span class="o">=</span> <span class="n">default_handler_map</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+            <span class="n">hm</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_custom_handler_map</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">hm</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">default_handler_map</span></div>
+
+    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="Legend.get_legend_handler"><a class="viewcode-back" href="../../generated/generated/matplotlib.legend.Legend.get_legend_handler.html#matplotlib.figure.Legend.get_legend_handler">[docs]</a>    <span class="k">def</span> <span class="nf">get_legend_handler</span><span class="p">(</span><span class="n">legend_handler_map</span><span class="p">,</span> <span class="n">orig_handle</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        return a legend handler from *legend_handler_map* that</span>
+<span class="sd">        corresponds to *orig_handler*.</span>
+
+<span class="sd">        *legend_handler_map* should be a dictionary object (that is</span>
+<span class="sd">        returned by the get_legend_handler_map method).</span>
+
+<span class="sd">        It first checks if the *orig_handle* itself is a key in the</span>
+<span class="sd">        *legend_hanler_map* and return the associated value.</span>
+<span class="sd">        Otherwise, it checks for each of the classes in its</span>
+<span class="sd">        method-resolution-order. If no matching key is found, it</span>
+<span class="sd">        returns None.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">legend_handler_keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">six</span><span class="o">.</span><span class="n">iterkeys</span><span class="p">(</span><span class="n">legend_handler_map</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">orig_handle</span> <span class="ow">in</span> <span class="n">legend_handler_keys</span><span class="p">:</span>
+            <span class="n">handler</span> <span class="o">=</span> <span class="n">legend_handler_map</span><span class="p">[</span><span class="n">orig_handle</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+
+            <span class="k">for</span> <span class="n">handle_type</span> <span class="ow">in</span> <span class="nb">type</span><span class="p">(</span><span class="n">orig_handle</span><span class="p">)</span><span class="o">.</span><span class="n">mro</span><span class="p">():</span>
+                <span class="k">if</span> <span class="n">handle_type</span> <span class="ow">in</span> <span class="n">legend_handler_map</span><span class="p">:</span>
+                    <span class="n">handler</span> <span class="o">=</span> <span class="n">legend_handler_map</span><span class="p">[</span><span class="n">handle_type</span><span class="p">]</span>
+                    <span class="k">break</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">handler</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">return</span> <span class="n">handler</span></div>
+
+    <span class="k">def</span> <span class="nf">_init_legend_box</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">handles</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">markerfirst</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize the legend_box. The legend_box is an instance of</span>
+<span class="sd">        the OffsetBox, which is packed with legend handles and</span>
+<span class="sd">        texts. Once packed, their location is calculated during the</span>
+<span class="sd">        drawing time.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">fontsize</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fontsize</span>
+
+        <span class="c1"># legend_box is a HPacker, horizontally packed with</span>
+        <span class="c1"># columns. Each column is a VPacker, vertically packed with</span>
+        <span class="c1"># legend items. Each legend item is HPacker packed with</span>
+        <span class="c1"># legend handleBox and labelBox. handleBox is an instance of</span>
+        <span class="c1"># offsetbox.DrawingArea which contains legend handle. labelBox</span>
+        <span class="c1"># is an instance of offsetbox.TextArea which contains legend</span>
+        <span class="c1"># text.</span>
+
+        <span class="n">text_list</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># the list of text instances</span>
+        <span class="n">handle_list</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># the list of text instances</span>
+
+        <span class="n">label_prop</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">verticalalignment</span><span class="o">=</span><span class="s1">&#39;baseline&#39;</span><span class="p">,</span>
+                          <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span>
+                          <span class="n">fontproperties</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">prop</span><span class="p">,</span>
+                          <span class="p">)</span>
+
+        <span class="n">labelboxes</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">handleboxes</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="c1"># The approximate height and descent of text. These values are</span>
+        <span class="c1"># only used for plotting the legend handle.</span>
+        <span class="n">descent</span> <span class="o">=</span> <span class="mf">0.35</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">_approx_text_height</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">handleheight</span> <span class="o">-</span> <span class="mf">0.7</span><span class="p">)</span>
+        <span class="c1"># 0.35 and 0.7 are just heuristic numbers and may need to be improved.</span>
+        <span class="n">height</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_approx_text_height</span><span class="p">()</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">handleheight</span> <span class="o">-</span> <span class="n">descent</span>
+        <span class="c1"># each handle needs to be drawn inside a box of (x, y, w, h) =</span>
+        <span class="c1"># (0, -descent, width, height).  And their coordinates should</span>
+        <span class="c1"># be given in the display coordinates.</span>
+
+        <span class="c1"># The transformation of each handle will be automatically set</span>
+        <span class="c1"># to self.get_trasnform(). If the artist does not use its</span>
+        <span class="c1"># default transform (e.g., Collections), you need to</span>
+        <span class="c1"># manually set their transform to the self.get_transform().</span>
+        <span class="n">legend_handler_map</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_legend_handler_map</span><span class="p">()</span>
+
+        <span class="k">for</span> <span class="n">orig_handle</span><span class="p">,</span> <span class="n">lab</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">handles</span><span class="p">,</span> <span class="n">labels</span><span class="p">):</span>
+            <span class="n">handler</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_legend_handler</span><span class="p">(</span><span class="n">legend_handler_map</span><span class="p">,</span> <span class="n">orig_handle</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">handler</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+                    <span class="s2">&quot;Legend does not support </span><span class="si">{!r}</span><span class="s2"> instances.</span><span class="se">\n</span><span class="s2">A proxy artist &quot;</span>
+                    <span class="s2">&quot;may be used instead.</span><span class="se">\n</span><span class="s2">See: &quot;</span>
+                    <span class="s2">&quot;http://matplotlib.org/users/legend_guide.html&quot;</span>
+                    <span class="s2">&quot;#using-proxy-artist&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">orig_handle</span><span class="p">)</span>
+                <span class="p">)</span>
+                <span class="c1"># We don&#39;t have a handle for this artist, so we just defer</span>
+                <span class="c1"># to None.</span>
+                <span class="n">handle_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">textbox</span> <span class="o">=</span> <span class="n">TextArea</span><span class="p">(</span><span class="n">lab</span><span class="p">,</span> <span class="n">textprops</span><span class="o">=</span><span class="n">label_prop</span><span class="p">,</span>
+                                   <span class="n">multilinebaseline</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                                   <span class="n">minimumdescent</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                <span class="n">text_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">textbox</span><span class="o">.</span><span class="n">_text</span><span class="p">)</span>
+
+                <span class="n">labelboxes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">textbox</span><span class="p">)</span>
+
+                <span class="n">handlebox</span> <span class="o">=</span> <span class="n">DrawingArea</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">handlelength</span> <span class="o">*</span> <span class="n">fontsize</span><span class="p">,</span>
+                                        <span class="n">height</span><span class="o">=</span><span class="n">height</span><span class="p">,</span>
+                                        <span class="n">xdescent</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span> <span class="n">ydescent</span><span class="o">=</span><span class="n">descent</span><span class="p">)</span>
+                <span class="n">handleboxes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">handlebox</span><span class="p">)</span>
+
+                <span class="c1"># Create the artist for the legend which represents the</span>
+                <span class="c1"># original artist/handle.</span>
+                <span class="n">handle_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">handler</span><span class="o">.</span><span class="n">legend_artist</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">orig_handle</span><span class="p">,</span>
+                                                         <span class="n">fontsize</span><span class="p">,</span> <span class="n">handlebox</span><span class="p">))</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">handleboxes</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+
+            <span class="c1"># We calculate number of rows in each column. The first</span>
+            <span class="c1"># (num_largecol) columns will have (nrows+1) rows, and remaining</span>
+            <span class="c1"># (num_smallcol) columns will have (nrows) rows.</span>
+            <span class="n">ncol</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_ncol</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">handleboxes</span><span class="p">))</span>
+            <span class="n">nrows</span><span class="p">,</span> <span class="n">num_largecol</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">handleboxes</span><span class="p">),</span> <span class="n">ncol</span><span class="p">)</span>
+            <span class="n">num_smallcol</span> <span class="o">=</span> <span class="n">ncol</span> <span class="o">-</span> <span class="n">num_largecol</span>
+
+            <span class="c1"># starting index of each column and number of rows in it.</span>
+            <span class="n">largecol</span> <span class="o">=</span> <span class="n">safezip</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">xrange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span>
+                                           <span class="n">num_largecol</span> <span class="o">*</span> <span class="p">(</span><span class="n">nrows</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span>
+                                           <span class="p">(</span><span class="n">nrows</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))),</span>
+                               <span class="p">[</span><span class="n">nrows</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">num_largecol</span><span class="p">)</span>
+            <span class="n">smallcol</span> <span class="o">=</span> <span class="n">safezip</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">xrange</span><span class="p">(</span><span class="n">num_largecol</span> <span class="o">*</span> <span class="p">(</span><span class="n">nrows</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span>
+                                           <span class="nb">len</span><span class="p">(</span><span class="n">handleboxes</span><span class="p">),</span> <span class="n">nrows</span><span class="p">)),</span>
+                               <span class="p">[</span><span class="n">nrows</span><span class="p">]</span> <span class="o">*</span> <span class="n">num_smallcol</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">largecol</span><span class="p">,</span> <span class="n">smallcol</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+
+        <span class="n">handle_label</span> <span class="o">=</span> <span class="n">safezip</span><span class="p">(</span><span class="n">handleboxes</span><span class="p">,</span> <span class="n">labelboxes</span><span class="p">)</span>
+        <span class="n">columnbox</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i0</span><span class="p">,</span> <span class="n">di</span> <span class="ow">in</span> <span class="n">largecol</span> <span class="o">+</span> <span class="n">smallcol</span><span class="p">:</span>
+            <span class="c1"># pack handleBox and labelBox into itemBox</span>
+            <span class="n">itemBoxes</span> <span class="o">=</span> <span class="p">[</span><span class="n">HPacker</span><span class="p">(</span><span class="n">pad</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                                 <span class="n">sep</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">handletextpad</span> <span class="o">*</span> <span class="n">fontsize</span><span class="p">,</span>
+                                 <span class="n">children</span><span class="o">=</span><span class="p">[</span><span class="n">h</span><span class="p">,</span> <span class="n">t</span><span class="p">]</span> <span class="k">if</span> <span class="n">markerfirst</span> <span class="k">else</span> <span class="p">[</span><span class="n">t</span><span class="p">,</span> <span class="n">h</span><span class="p">],</span>
+                                 <span class="n">align</span><span class="o">=</span><span class="s2">&quot;baseline&quot;</span><span class="p">)</span>
+                         <span class="k">for</span> <span class="n">h</span><span class="p">,</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">handle_label</span><span class="p">[</span><span class="n">i0</span><span class="p">:</span><span class="n">i0</span> <span class="o">+</span> <span class="n">di</span><span class="p">]]</span>
+            <span class="c1"># minimumdescent=False for the text of the last row of the column</span>
+            <span class="k">if</span> <span class="n">markerfirst</span><span class="p">:</span>
+                <span class="n">itemBoxes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">get_children</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_minimumdescent</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">itemBoxes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">get_children</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_minimumdescent</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+
+            <span class="c1"># pack columnBox</span>
+            <span class="k">if</span> <span class="n">markerfirst</span><span class="p">:</span>
+                <span class="n">alignment</span> <span class="o">=</span> <span class="s2">&quot;baseline&quot;</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">alignment</span> <span class="o">=</span> <span class="s2">&quot;right&quot;</span>
+            <span class="n">columnbox</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">VPacker</span><span class="p">(</span><span class="n">pad</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                                     <span class="n">sep</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">labelspacing</span> <span class="o">*</span> <span class="n">fontsize</span><span class="p">,</span>
+                                     <span class="n">align</span><span class="o">=</span><span class="n">alignment</span><span class="p">,</span>
+                                     <span class="n">children</span><span class="o">=</span><span class="n">itemBoxes</span><span class="p">))</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mode</span> <span class="o">==</span> <span class="s2">&quot;expand&quot;</span><span class="p">:</span>
+            <span class="n">mode</span> <span class="o">=</span> <span class="s2">&quot;expand&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">mode</span> <span class="o">=</span> <span class="s2">&quot;fixed&quot;</span>
+
+        <span class="n">sep</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">columnspacing</span> <span class="o">*</span> <span class="n">fontsize</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_legend_handle_box</span> <span class="o">=</span> <span class="n">HPacker</span><span class="p">(</span><span class="n">pad</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                                          <span class="n">sep</span><span class="o">=</span><span class="n">sep</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s2">&quot;baseline&quot;</span><span class="p">,</span>
+                                          <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span>
+                                          <span class="n">children</span><span class="o">=</span><span class="n">columnbox</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_legend_title_box</span> <span class="o">=</span> <span class="n">TextArea</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_legend_box</span> <span class="o">=</span> <span class="n">VPacker</span><span class="p">(</span><span class="n">pad</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">borderpad</span> <span class="o">*</span> <span class="n">fontsize</span><span class="p">,</span>
+                                   <span class="n">sep</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">labelspacing</span> <span class="o">*</span> <span class="n">fontsize</span><span class="p">,</span>
+                                   <span class="n">align</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
+                                   <span class="n">children</span><span class="o">=</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_legend_title_box</span><span class="p">,</span>
+                                             <span class="bp">self</span><span class="o">.</span><span class="n">_legend_handle_box</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_legend_box</span><span class="o">.</span><span class="n">set_figure</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">figure</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">texts</span> <span class="o">=</span> <span class="n">text_list</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">legendHandles</span> <span class="o">=</span> <span class="n">handle_list</span>
+
+    <span class="k">def</span> <span class="nf">_auto_legend_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns list of vertices and extents covered by the plot.</span>
+
+<span class="sd">        Returns a two long list.</span>
+
+<span class="sd">        First element is a list of (x, y) vertices (in</span>
+<span class="sd">        display-coordinates) covered by all the lines and line</span>
+<span class="sd">        collections, in the legend&#39;s handles.</span>
+
+<span class="sd">        Second element is a list of bounding boxes for all the patches in</span>
+<span class="sd">        the legend&#39;s handles.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># should always hold because function is only called internally</span>
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">isaxes</span>
+
+        <span class="n">ax</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span>
+        <span class="n">bboxes</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">lines</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">for</span> <span class="n">handle</span> <span class="ow">in</span> <span class="n">ax</span><span class="o">.</span><span class="n">lines</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">Line2D</span><span class="p">)</span>
+            <span class="n">path</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">get_path</span><span class="p">()</span>
+            <span class="n">trans</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">get_transform</span><span class="p">()</span>
+            <span class="n">tpath</span> <span class="o">=</span> <span class="n">trans</span><span class="o">.</span><span class="n">transform_path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+            <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tpath</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">handle</span> <span class="ow">in</span> <span class="n">ax</span><span class="o">.</span><span class="n">patches</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">Patch</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">Rectangle</span><span class="p">):</span>
+                <span class="n">transform</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">get_data_transform</span><span class="p">()</span>
+                <span class="n">bboxes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">handle</span><span class="o">.</span><span class="n">get_bbox</span><span class="p">()</span><span class="o">.</span><span class="n">transformed</span><span class="p">(</span><span class="n">transform</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">transform</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">get_transform</span><span class="p">()</span>
+                <span class="n">bboxes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">handle</span><span class="o">.</span><span class="n">get_path</span><span class="p">()</span><span class="o">.</span><span class="n">get_extents</span><span class="p">(</span><span class="n">transform</span><span class="p">))</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">vertices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">l</span><span class="o">.</span><span class="n">vertices</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">])</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="n">vertices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
+
+        <span class="k">return</span> <span class="p">[</span><span class="n">vertices</span><span class="p">,</span> <span class="n">bboxes</span><span class="p">,</span> <span class="n">lines</span><span class="p">]</span>
+
+<div class="viewcode-block" id="Legend.draw_frame"><a class="viewcode-back" href="../../generated/generated/matplotlib.legend.Legend.draw_frame.html#matplotlib.figure.Legend.draw_frame">[docs]</a>    <span class="k">def</span> <span class="nf">draw_frame</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+        <span class="s1">&#39;b is a boolean.  Set draw frame to b&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_frame_on</span><span class="p">(</span><span class="n">b</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Legend.get_children"><a class="viewcode-back" href="../../generated/generated/matplotlib.legend.Legend.get_children.html#matplotlib.figure.Legend.get_children">[docs]</a>    <span class="k">def</span> <span class="nf">get_children</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s1">&#39;return a list of child artists&#39;</span>
+        <span class="n">children</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_legend_box</span><span class="p">:</span>
+            <span class="n">children</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_legend_box</span><span class="p">)</span>
+        <span class="n">children</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_frame</span><span class="p">())</span>
+
+        <span class="k">return</span> <span class="n">children</span></div>
+
+<div class="viewcode-block" id="Legend.get_frame"><a class="viewcode-back" href="../../generated/generated/matplotlib.legend.Legend.get_frame.html#matplotlib.figure.Legend.get_frame">[docs]</a>    <span class="k">def</span> <span class="nf">get_frame</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s1">&#39;return the Rectangle instance used to frame the legend&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">legendPatch</span></div>
+
+<div class="viewcode-block" id="Legend.get_lines"><a class="viewcode-back" href="../../generated/generated/matplotlib.legend.Legend.get_lines.html#matplotlib.figure.Legend.get_lines">[docs]</a>    <span class="k">def</span> <span class="nf">get_lines</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s1">&#39;return a list of lines.Line2D instances in the legend&#39;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">h</span> <span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">legendHandles</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">Line2D</span><span class="p">)]</span></div>
+
+<div class="viewcode-block" id="Legend.get_patches"><a class="viewcode-back" href="../../generated/generated/matplotlib.legend.Legend.get_patches.html#matplotlib.figure.Legend.get_patches">[docs]</a>    <span class="k">def</span> <span class="nf">get_patches</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s1">&#39;return a list of patch instances in the legend&#39;</span>
+        <span class="k">return</span> <span class="n">silent_list</span><span class="p">(</span><span class="s1">&#39;Patch&#39;</span><span class="p">,</span>
+                           <span class="p">[</span><span class="n">h</span> <span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">legendHandles</span>
+                            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">Patch</span><span class="p">)])</span></div>
+
+<div class="viewcode-block" id="Legend.get_texts"><a class="viewcode-back" href="../../generated/generated/matplotlib.legend.Legend.get_texts.html#matplotlib.figure.Legend.get_texts">[docs]</a>    <span class="k">def</span> <span class="nf">get_texts</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s1">&#39;return a list of text.Text instance in the legend&#39;</span>
+        <span class="k">return</span> <span class="n">silent_list</span><span class="p">(</span><span class="s1">&#39;Text&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">texts</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Legend.set_title"><a class="viewcode-back" href="../../generated/generated/matplotlib.legend.Legend.set_title.html#matplotlib.figure.Legend.set_title">[docs]</a>    <span class="k">def</span> <span class="nf">set_title</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">prop</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        set the legend title. Fontproperties can be optionally set</span>
+<span class="sd">        with *prop* parameter.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_legend_title_box</span><span class="o">.</span><span class="n">_text</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">prop</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">prop</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+                <span class="n">prop</span> <span class="o">=</span> <span class="n">FontProperties</span><span class="p">(</span><span class="o">**</span><span class="n">prop</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_legend_title_box</span><span class="o">.</span><span class="n">_text</span><span class="o">.</span><span class="n">set_fontproperties</span><span class="p">(</span><span class="n">prop</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">title</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_legend_title_box</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_legend_title_box</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stale</span> <span class="o">=</span> <span class="kc">True</span></div>
+
+<div class="viewcode-block" id="Legend.get_title"><a class="viewcode-back" href="../../generated/generated/matplotlib.legend.Legend.get_title.html#matplotlib.figure.Legend.get_title">[docs]</a>    <span class="k">def</span> <span class="nf">get_title</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s1">&#39;return Text instance for the legend title&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_legend_title_box</span><span class="o">.</span><span class="n">_text</span></div>
+
+<div class="viewcode-block" id="Legend.get_window_extent"><a class="viewcode-back" href="../../generated/generated/matplotlib.legend.Legend.get_window_extent.html#matplotlib.figure.Legend.get_window_extent">[docs]</a>    <span class="k">def</span> <span class="nf">get_window_extent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="s1">&#39;return a extent of the legend&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">legendPatch</span><span class="o">.</span><span class="n">get_window_extent</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Legend.get_frame_on"><a class="viewcode-back" href="../../generated/generated/matplotlib.legend.Legend.get_frame_on.html#matplotlib.figure.Legend.get_frame_on">[docs]</a>    <span class="k">def</span> <span class="nf">get_frame_on</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get whether the legend box patch is drawn</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_drawFrame</span></div>
+
+<div class="viewcode-block" id="Legend.set_frame_on"><a class="viewcode-back" href="../../generated/generated/matplotlib.legend.Legend.set_frame_on.html#matplotlib.figure.Legend.set_frame_on">[docs]</a>    <span class="k">def</span> <span class="nf">set_frame_on</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set whether the legend box patch is drawn</span>
+
+<span class="sd">        ACCEPTS: [ *True* | *False* ]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_drawFrame</span> <span class="o">=</span> <span class="n">b</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stale</span> <span class="o">=</span> <span class="kc">True</span></div>
+
+<div class="viewcode-block" id="Legend.get_bbox_to_anchor"><a class="viewcode-back" href="../../generated/generated/matplotlib.legend.Legend.get_bbox_to_anchor.html#matplotlib.figure.Legend.get_bbox_to_anchor">[docs]</a>    <span class="k">def</span> <span class="nf">get_bbox_to_anchor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        return the bbox that the legend will be anchored</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bbox_to_anchor</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">bbox</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bbox_to_anchor</span></div>
+
+<div class="viewcode-block" id="Legend.set_bbox_to_anchor"><a class="viewcode-back" href="../../generated/generated/matplotlib.legend.Legend.set_bbox_to_anchor.html#matplotlib.figure.Legend.set_bbox_to_anchor">[docs]</a>    <span class="k">def</span> <span class="nf">set_bbox_to_anchor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bbox</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        set the bbox that the legend will be anchored.</span>
+
+<span class="sd">        *bbox* can be a BboxBase instance, a tuple of [left, bottom,</span>
+<span class="sd">        width, height] in the given transform (normalized axes</span>
+<span class="sd">        coordinate if None), or a tuple of [left, bottom] where the</span>
+<span class="sd">        width and height will be assumed to be zero.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">bbox</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_bbox_to_anchor</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="k">return</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">bbox</span><span class="p">,</span> <span class="n">BboxBase</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_bbox_to_anchor</span> <span class="o">=</span> <span class="n">bbox</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">l</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">bbox</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid argument for bbox : </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">bbox</span><span class="p">))</span>
+
+            <span class="k">if</span> <span class="n">l</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="n">bbox</span> <span class="o">=</span> <span class="p">[</span><span class="n">bbox</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">bbox</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">_bbox_to_anchor</span> <span class="o">=</span> <span class="n">Bbox</span><span class="o">.</span><span class="n">from_bounds</span><span class="p">(</span><span class="o">*</span><span class="n">bbox</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">transform</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">transform</span> <span class="o">=</span> <span class="n">BboxTransformTo</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">bbox</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_bbox_to_anchor</span> <span class="o">=</span> <span class="n">TransformedBbox</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bbox_to_anchor</span><span class="p">,</span>
+                                               <span class="n">transform</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stale</span> <span class="o">=</span> <span class="kc">True</span></div>
+
+    <span class="k">def</span> <span class="nf">_get_anchored_bbox</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">loc</span><span class="p">,</span> <span class="n">bbox</span><span class="p">,</span> <span class="n">parentbbox</span><span class="p">,</span> <span class="n">renderer</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Place the *bbox* inside the *parentbbox* according to a given</span>
+<span class="sd">        location code. Return the (x,y) coordinate of the bbox.</span>
+
+<span class="sd">        - loc: a location code in range(1, 11).</span>
+<span class="sd">          This corresponds to the possible values for self._loc, excluding</span>
+<span class="sd">          &quot;best&quot;.</span>
+
+<span class="sd">        - bbox: bbox to be placed, display coodinate units.</span>
+<span class="sd">        - parentbbox: a parent box which will contain the bbox. In</span>
+<span class="sd">            display coordinates.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="n">loc</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>  <span class="c1"># called only internally</span>
+
+        <span class="n">BEST</span><span class="p">,</span> <span class="n">UR</span><span class="p">,</span> <span class="n">UL</span><span class="p">,</span> <span class="n">LL</span><span class="p">,</span> <span class="n">LR</span><span class="p">,</span> <span class="n">R</span><span class="p">,</span> <span class="n">CL</span><span class="p">,</span> <span class="n">CR</span><span class="p">,</span> <span class="n">LC</span><span class="p">,</span> <span class="n">UC</span><span class="p">,</span> <span class="n">C</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">xrange</span><span class="p">(</span><span class="mi">11</span><span class="p">))</span>
+
+        <span class="n">anchor_coefs</span> <span class="o">=</span> <span class="p">{</span><span class="n">UR</span><span class="p">:</span> <span class="s2">&quot;NE&quot;</span><span class="p">,</span>
+                        <span class="n">UL</span><span class="p">:</span> <span class="s2">&quot;NW&quot;</span><span class="p">,</span>
+                        <span class="n">LL</span><span class="p">:</span> <span class="s2">&quot;SW&quot;</span><span class="p">,</span>
+                        <span class="n">LR</span><span class="p">:</span> <span class="s2">&quot;SE&quot;</span><span class="p">,</span>
+                        <span class="n">R</span><span class="p">:</span> <span class="s2">&quot;E&quot;</span><span class="p">,</span>
+                        <span class="n">CL</span><span class="p">:</span> <span class="s2">&quot;W&quot;</span><span class="p">,</span>
+                        <span class="n">CR</span><span class="p">:</span> <span class="s2">&quot;E&quot;</span><span class="p">,</span>
+                        <span class="n">LC</span><span class="p">:</span> <span class="s2">&quot;S&quot;</span><span class="p">,</span>
+                        <span class="n">UC</span><span class="p">:</span> <span class="s2">&quot;N&quot;</span><span class="p">,</span>
+                        <span class="n">C</span><span class="p">:</span> <span class="s2">&quot;C&quot;</span><span class="p">}</span>
+
+        <span class="n">c</span> <span class="o">=</span> <span class="n">anchor_coefs</span><span class="p">[</span><span class="n">loc</span><span class="p">]</span>
+
+        <span class="n">fontsize</span> <span class="o">=</span> <span class="n">renderer</span><span class="o">.</span><span class="n">points_to_pixels</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_fontsize</span><span class="p">)</span>
+        <span class="n">container</span> <span class="o">=</span> <span class="n">parentbbox</span><span class="o">.</span><span class="n">padded</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">borderaxespad</span><span class="p">)</span> <span class="o">*</span> <span class="n">fontsize</span><span class="p">)</span>
+        <span class="n">anchored_box</span> <span class="o">=</span> <span class="n">bbox</span><span class="o">.</span><span class="n">anchored</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">container</span><span class="o">=</span><span class="n">container</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">anchored_box</span><span class="o">.</span><span class="n">x0</span><span class="p">,</span> <span class="n">anchored_box</span><span class="o">.</span><span class="n">y0</span>
+
+    <span class="k">def</span> <span class="nf">_find_best_position</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">renderer</span><span class="p">,</span> <span class="n">consider</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Determine the best location to place the legend.</span>
+
+<span class="sd">        `consider` is a list of (x, y) pairs to consider as a potential</span>
+<span class="sd">        lower-left corner of the legend. All are display coords.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># should always hold because function is only called internally</span>
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">isaxes</span>
+
+        <span class="n">verts</span><span class="p">,</span> <span class="n">bboxes</span><span class="p">,</span> <span class="n">lines</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_auto_legend_data</span><span class="p">()</span>
+
+        <span class="n">bbox</span> <span class="o">=</span> <span class="n">Bbox</span><span class="o">.</span><span class="n">from_bounds</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">consider</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">consider</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_anchored_bbox</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">bbox</span><span class="p">,</span>
+                                                <span class="bp">self</span><span class="o">.</span><span class="n">get_bbox_to_anchor</span><span class="p">(),</span>
+                                                <span class="n">renderer</span><span class="p">)</span>
+                        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">codes</span><span class="p">))]</span>
+
+<span class="c1">#       tx, ty = self.legendPatch.get_x(), self.legendPatch.get_y()</span>
+
+        <span class="n">candidates</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">l</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">consider</span><span class="p">:</span>
+            <span class="n">legendBox</span> <span class="o">=</span> <span class="n">Bbox</span><span class="o">.</span><span class="n">from_bounds</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+            <span class="n">badness</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="c1"># XXX TODO: If markers are present, it would be good to</span>
+            <span class="c1"># take their into account when checking vertex overlaps in</span>
+            <span class="c1"># the next line.</span>
+            <span class="n">badness</span> <span class="o">=</span> <span class="n">legendBox</span><span class="o">.</span><span class="n">count_contains</span><span class="p">(</span><span class="n">verts</span><span class="p">)</span>
+            <span class="n">badness</span> <span class="o">+=</span> <span class="n">legendBox</span><span class="o">.</span><span class="n">count_overlaps</span><span class="p">(</span><span class="n">bboxes</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
+                <span class="c1"># FIXME: the following line is ill-suited for lines</span>
+                <span class="c1"># that &#39;spiral&#39; around the center, because the bbox</span>
+                <span class="c1"># may intersect with the legend even if the line</span>
+                <span class="c1"># itself doesn&#39;t. One solution would be to break up</span>
+                <span class="c1"># the line into its straight-segment components, but</span>
+                <span class="c1"># this may (or may not) result in a significant</span>
+                <span class="c1"># slowdown if lines with many vertices are present.</span>
+                <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">intersects_bbox</span><span class="p">(</span><span class="n">legendBox</span><span class="p">):</span>
+                    <span class="n">badness</span> <span class="o">+=</span> <span class="mi">1</span>
+
+            <span class="n">ox</span><span class="p">,</span> <span class="n">oy</span> <span class="o">=</span> <span class="n">l</span><span class="p">,</span> <span class="n">b</span>
+            <span class="k">if</span> <span class="n">badness</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">ox</span><span class="p">,</span> <span class="n">oy</span>
+
+            <span class="n">candidates</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">badness</span><span class="p">,</span> <span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">b</span><span class="p">)))</span>
+
+        <span class="c1"># rather than use min() or list.sort(), do this so that we are assured</span>
+        <span class="c1"># that in the case of two equal badnesses, the one first considered is</span>
+        <span class="c1"># returned.</span>
+        <span class="c1"># NOTE: list.sort() is stable.But leave as it is for now. -JJL</span>
+        <span class="n">minCandidate</span> <span class="o">=</span> <span class="n">candidates</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">candidate</span> <span class="ow">in</span> <span class="n">candidates</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">candidate</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">minCandidate</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+                <span class="n">minCandidate</span> <span class="o">=</span> <span class="n">candidate</span>
+
+        <span class="n">ox</span><span class="p">,</span> <span class="n">oy</span> <span class="o">=</span> <span class="n">minCandidate</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">ox</span><span class="p">,</span> <span class="n">oy</span>
+
+<div class="viewcode-block" id="Legend.contains"><a class="viewcode-back" href="../../generated/generated/matplotlib.legend.Legend.contains.html#matplotlib.figure.Legend.contains">[docs]</a>    <span class="k">def</span> <span class="nf">contains</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">legendPatch</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">event</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Legend.draggable"><a class="viewcode-back" href="../../generated/generated/matplotlib.legend.Legend.draggable.html#matplotlib.figure.Legend.draggable">[docs]</a>    <span class="k">def</span> <span class="nf">draggable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">use_blit</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">update</span><span class="o">=</span><span class="s2">&quot;loc&quot;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set the draggable state -- if state is</span>
+
+<span class="sd">          * None : toggle the current state</span>
+
+<span class="sd">          * True : turn draggable on</span>
+
+<span class="sd">          * False : turn draggable off</span>
+
+<span class="sd">        If draggable is on, you can drag the legend on the canvas with</span>
+<span class="sd">        the mouse.  The DraggableLegend helper instance is returned if</span>
+<span class="sd">        draggable is on.</span>
+
+<span class="sd">        The update parameter control which parameter of the legend changes</span>
+<span class="sd">        when dragged. If update is &quot;loc&quot;, the *loc* paramter of the legend</span>
+<span class="sd">        is changed. If &quot;bbox&quot;, the *bbox_to_anchor* parameter is changed.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">is_draggable</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_draggable</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+
+        <span class="c1"># if state is None we&#39;ll toggle</span>
+        <span class="k">if</span> <span class="n">state</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">state</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">is_draggable</span>
+
+        <span class="k">if</span> <span class="n">state</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_draggable</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_draggable</span> <span class="o">=</span> <span class="n">DraggableLegend</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                                                  <span class="n">use_blit</span><span class="p">,</span>
+                                                  <span class="n">update</span><span class="o">=</span><span class="n">update</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_draggable</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_draggable</span><span class="o">.</span><span class="n">disconnect</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_draggable</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_draggable</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

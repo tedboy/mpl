@@ -1,0 +1,778 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>matplotlib.textpath &mdash; Matplotlib API 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+        <link rel="up" title="matplotlib" href="../matplotlib.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Matplotlib API</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.html">matplotlib</a> &raquo;</li>
+        
+      <li>matplotlib.textpath</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for matplotlib.textpath</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="p">(</span><span class="n">absolute_import</span><span class="p">,</span> <span class="n">division</span><span class="p">,</span> <span class="n">print_function</span><span class="p">,</span>
+                        <span class="n">unicode_literals</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">matplotlib.externals</span> <span class="k">import</span> <span class="n">six</span>
+<span class="kn">from</span> <span class="nn">matplotlib.externals.six.moves</span> <span class="k">import</span> <span class="nb">zip</span>
+
+<span class="kn">import</span> <span class="nn">warnings</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">matplotlib.path</span> <span class="k">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="k">import</span> <span class="n">rcParams</span>
+<span class="kn">import</span> <span class="nn">matplotlib.font_manager</span> <span class="k">as</span> <span class="nn">font_manager</span>
+<span class="kn">from</span> <span class="nn">matplotlib.ft2font</span> <span class="k">import</span> <span class="n">FT2Font</span><span class="p">,</span> <span class="n">KERNING_DEFAULT</span><span class="p">,</span> <span class="n">LOAD_NO_HINTING</span>
+<span class="kn">from</span> <span class="nn">matplotlib.ft2font</span> <span class="k">import</span> <span class="n">LOAD_TARGET_LIGHT</span>
+<span class="kn">from</span> <span class="nn">matplotlib.mathtext</span> <span class="k">import</span> <span class="n">MathTextParser</span>
+<span class="kn">import</span> <span class="nn">matplotlib.dviread</span> <span class="k">as</span> <span class="nn">dviread</span>
+<span class="kn">from</span> <span class="nn">matplotlib.font_manager</span> <span class="k">import</span> <span class="n">FontProperties</span>
+<span class="kn">from</span> <span class="nn">matplotlib.transforms</span> <span class="k">import</span> <span class="n">Affine2D</span>
+<span class="kn">from</span> <span class="nn">matplotlib.externals.six.moves.urllib.parse</span> <span class="k">import</span> <span class="n">quote</span> <span class="k">as</span> <span class="n">urllib_quote</span>
+
+
+<span class="k">class</span> <span class="nc">TextToPath</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A class that convert a given text to a path using ttf fonts.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">FONT_SCALE</span> <span class="o">=</span> <span class="mf">100.</span>
+    <span class="n">DPI</span> <span class="o">=</span> <span class="mi">72</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialization</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mathtext_parser</span> <span class="o">=</span> <span class="n">MathTextParser</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tex_font_map</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="kn">from</span> <span class="nn">matplotlib.cbook</span> <span class="k">import</span> <span class="n">maxdict</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_ps_fontd</span> <span class="o">=</span> <span class="n">maxdict</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_texmanager</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_adobe_standard_encoding</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">_get_adobe_standard_encoding</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">enc_name</span> <span class="o">=</span> <span class="n">dviread</span><span class="o">.</span><span class="n">find_tex_file</span><span class="p">(</span><span class="s1">&#39;8a.enc&#39;</span><span class="p">)</span>
+        <span class="n">enc</span> <span class="o">=</span> <span class="n">dviread</span><span class="o">.</span><span class="n">Encoding</span><span class="p">(</span><span class="n">enc_name</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">dict</span><span class="p">([(</span><span class="n">c</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">enc</span><span class="o">.</span><span class="n">encoding</span><span class="p">)])</span>
+
+    <span class="k">def</span> <span class="nf">_get_font</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prop</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        find a ttf font.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">fname</span> <span class="o">=</span> <span class="n">font_manager</span><span class="o">.</span><span class="n">findfont</span><span class="p">(</span><span class="n">prop</span><span class="p">)</span>
+        <span class="n">font</span> <span class="o">=</span> <span class="n">FT2Font</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
+        <span class="n">font</span><span class="o">.</span><span class="n">set_size</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">FONT_SCALE</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">DPI</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">font</span>
+
+    <span class="k">def</span> <span class="nf">_get_hinting_flag</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">LOAD_NO_HINTING</span>
+
+    <span class="k">def</span> <span class="nf">_get_char_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">font</span><span class="p">,</span> <span class="n">ccode</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return a unique id for the given font and character-code set.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">sfnt</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">get_sfnt</span><span class="p">()</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">ps_name</span> <span class="o">=</span> <span class="n">sfnt</span><span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">)]</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;macroman&#39;</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="n">ps_name</span> <span class="o">=</span> <span class="n">sfnt</span><span class="p">[(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mh">0x0409</span><span class="p">,</span> <span class="mi">6</span><span class="p">)]</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-16be&#39;</span><span class="p">)</span>
+        <span class="n">char_id</span> <span class="o">=</span> <span class="n">urllib_quote</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">-</span><span class="si">%x</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">ps_name</span><span class="p">,</span> <span class="n">ccode</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">char_id</span>
+
+    <span class="k">def</span> <span class="nf">_get_char_id_ps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">font</span><span class="p">,</span> <span class="n">ccode</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return a unique id for the given font and character-code set (for tex).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">ps_name</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">get_ps_font_info</span><span class="p">()[</span><span class="mi">2</span><span class="p">]</span>
+        <span class="n">char_id</span> <span class="o">=</span> <span class="n">urllib_quote</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">-</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">ps_name</span><span class="p">,</span> <span class="n">ccode</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">char_id</span>
+
+    <span class="k">def</span> <span class="nf">glyph_to_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">font</span><span class="p">,</span> <span class="n">currx</span><span class="o">=</span><span class="mf">0.</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        convert the ft2font glyph to vertices and codes.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">verts</span><span class="p">,</span> <span class="n">codes</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">get_path</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">currx</span> <span class="o">!=</span> <span class="mf">0.0</span><span class="p">:</span>
+            <span class="n">verts</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">+=</span> <span class="n">currx</span>
+        <span class="k">return</span> <span class="n">verts</span><span class="p">,</span> <span class="n">codes</span>
+
+    <span class="k">def</span> <span class="nf">get_text_width_height_descent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">prop</span><span class="p">,</span> <span class="n">ismath</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;text.usetex&#39;</span><span class="p">]:</span>
+            <span class="n">texmanager</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_texmanager</span><span class="p">()</span>
+            <span class="n">fontsize</span> <span class="o">=</span> <span class="n">prop</span><span class="o">.</span><span class="n">get_size_in_points</span><span class="p">()</span>
+            <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">d</span> <span class="o">=</span> <span class="n">texmanager</span><span class="o">.</span><span class="n">get_text_width_height_descent</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">fontsize</span><span class="p">,</span>
+                                                               <span class="n">renderer</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">d</span>
+
+        <span class="n">fontsize</span> <span class="o">=</span> <span class="n">prop</span><span class="o">.</span><span class="n">get_size_in_points</span><span class="p">()</span>
+        <span class="n">scale</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">fontsize</span><span class="p">)</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">FONT_SCALE</span>
+
+        <span class="k">if</span> <span class="n">ismath</span><span class="p">:</span>
+            <span class="n">prop</span> <span class="o">=</span> <span class="n">prop</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+            <span class="n">prop</span><span class="o">.</span><span class="n">set_size</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">FONT_SCALE</span><span class="p">)</span>
+
+            <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">descent</span><span class="p">,</span> <span class="n">trash</span><span class="p">,</span> <span class="n">used_characters</span> <span class="o">=</span> \
+                <span class="bp">self</span><span class="o">.</span><span class="n">mathtext_parser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="n">prop</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">width</span> <span class="o">*</span> <span class="n">scale</span><span class="p">,</span> <span class="n">height</span> <span class="o">*</span> <span class="n">scale</span><span class="p">,</span> <span class="n">descent</span> <span class="o">*</span> <span class="n">scale</span>
+
+        <span class="n">font</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_font</span><span class="p">(</span><span class="n">prop</span><span class="p">)</span>
+        <span class="n">font</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="n">LOAD_NO_HINTING</span><span class="p">)</span>
+        <span class="n">w</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">get_width_height</span><span class="p">()</span>
+        <span class="n">w</span> <span class="o">/=</span> <span class="mf">64.0</span>  <span class="c1"># convert from subpixels</span>
+        <span class="n">h</span> <span class="o">/=</span> <span class="mf">64.0</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">get_descent</span><span class="p">()</span>
+        <span class="n">d</span> <span class="o">/=</span> <span class="mf">64.0</span>
+        <span class="k">return</span> <span class="n">w</span> <span class="o">*</span> <span class="n">scale</span><span class="p">,</span> <span class="n">h</span> <span class="o">*</span> <span class="n">scale</span><span class="p">,</span> <span class="n">d</span> <span class="o">*</span> <span class="n">scale</span>
+
+    <span class="k">def</span> <span class="nf">get_text_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prop</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">ismath</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">usetex</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        convert text *s* to path (a tuple of vertices and codes for</span>
+<span class="sd">        matplotlib.path.Path).</span>
+
+<span class="sd">        *prop*</span>
+<span class="sd">          font property</span>
+
+<span class="sd">        *s*</span>
+<span class="sd">          text to be converted</span>
+
+<span class="sd">        *usetex*</span>
+<span class="sd">          If True, use matplotlib usetex mode.</span>
+
+<span class="sd">        *ismath*</span>
+<span class="sd">          If True, use mathtext parser. Effective only if usetex == False.</span>
+
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">usetex</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">ismath</span><span class="p">:</span>
+                <span class="n">font</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_font</span><span class="p">(</span><span class="n">prop</span><span class="p">)</span>
+                <span class="n">glyph_info</span><span class="p">,</span> <span class="n">glyph_map</span><span class="p">,</span> <span class="n">rects</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_glyphs_with_font</span><span class="p">(</span>
+                                                    <span class="n">font</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">glyph_info</span><span class="p">,</span> <span class="n">glyph_map</span><span class="p">,</span> <span class="n">rects</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_glyphs_mathtext</span><span class="p">(</span>
+                                                    <span class="n">prop</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">glyph_info</span><span class="p">,</span> <span class="n">glyph_map</span><span class="p">,</span> <span class="n">rects</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_glyphs_tex</span><span class="p">(</span><span class="n">prop</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+
+        <span class="n">verts</span><span class="p">,</span> <span class="n">codes</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+
+        <span class="k">for</span> <span class="n">glyph_id</span><span class="p">,</span> <span class="n">xposition</span><span class="p">,</span> <span class="n">yposition</span><span class="p">,</span> <span class="n">scale</span> <span class="ow">in</span> <span class="n">glyph_info</span><span class="p">:</span>
+            <span class="n">verts1</span><span class="p">,</span> <span class="n">codes1</span> <span class="o">=</span> <span class="n">glyph_map</span><span class="p">[</span><span class="n">glyph_id</span><span class="p">]</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">verts1</span><span class="p">):</span>
+                <span class="n">verts1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">verts1</span><span class="p">)</span> <span class="o">*</span> <span class="n">scale</span> <span class="o">+</span> <span class="p">[</span><span class="n">xposition</span><span class="p">,</span> <span class="n">yposition</span><span class="p">]</span>
+                <span class="n">verts</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">verts1</span><span class="p">)</span>
+                <span class="n">codes</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">codes1</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">verts1</span><span class="p">,</span> <span class="n">codes1</span> <span class="ow">in</span> <span class="n">rects</span><span class="p">:</span>
+            <span class="n">verts</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">verts1</span><span class="p">)</span>
+            <span class="n">codes</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">codes1</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">verts</span><span class="p">,</span> <span class="n">codes</span>
+
+    <span class="k">def</span> <span class="nf">get_glyphs_with_font</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">font</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">glyph_map</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                             <span class="n">return_new_glyphs_only</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        convert the string *s* to vertices and codes using the</span>
+<span class="sd">        provided ttf font.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># Mostly copied from backend_svg.py.</span>
+
+        <span class="n">cmap</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">get_charmap</span><span class="p">()</span>
+        <span class="n">lastgind</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="n">currx</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">xpositions</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">glyph_ids</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">if</span> <span class="n">glyph_map</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">glyph_map</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">return_new_glyphs_only</span><span class="p">:</span>
+            <span class="n">glyph_map_new</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">glyph_map_new</span> <span class="o">=</span> <span class="n">glyph_map</span>
+
+        <span class="c1"># I&#39;m not sure if I get kernings right. Needs to be verified. -JJL</span>
+
+        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+            <span class="n">ccode</span> <span class="o">=</span> <span class="nb">ord</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+            <span class="n">gind</span> <span class="o">=</span> <span class="n">cmap</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ccode</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">gind</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">ccode</span> <span class="o">=</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;?&#39;</span><span class="p">)</span>
+                <span class="n">gind</span> <span class="o">=</span> <span class="mi">0</span>
+
+            <span class="k">if</span> <span class="n">lastgind</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">kern</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">get_kerning</span><span class="p">(</span><span class="n">lastgind</span><span class="p">,</span> <span class="n">gind</span><span class="p">,</span> <span class="n">KERNING_DEFAULT</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">kern</span> <span class="o">=</span> <span class="mi">0</span>
+
+            <span class="n">glyph</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">load_char</span><span class="p">(</span><span class="n">ccode</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="n">LOAD_NO_HINTING</span><span class="p">)</span>
+            <span class="n">horiz_advance</span> <span class="o">=</span> <span class="p">(</span><span class="n">glyph</span><span class="o">.</span><span class="n">linearHoriAdvance</span> <span class="o">/</span> <span class="mf">65536.0</span><span class="p">)</span>
+
+            <span class="n">char_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_char_id</span><span class="p">(</span><span class="n">font</span><span class="p">,</span> <span class="n">ccode</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">char_id</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">glyph_map</span><span class="p">:</span>
+                <span class="n">glyph_map_new</span><span class="p">[</span><span class="n">char_id</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">glyph_to_path</span><span class="p">(</span><span class="n">font</span><span class="p">)</span>
+
+            <span class="n">currx</span> <span class="o">+=</span> <span class="p">(</span><span class="n">kern</span> <span class="o">/</span> <span class="mf">64.0</span><span class="p">)</span>
+
+            <span class="n">xpositions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">currx</span><span class="p">)</span>
+            <span class="n">glyph_ids</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">char_id</span><span class="p">)</span>
+
+            <span class="n">currx</span> <span class="o">+=</span> <span class="n">horiz_advance</span>
+
+            <span class="n">lastgind</span> <span class="o">=</span> <span class="n">gind</span>
+
+        <span class="n">ypositions</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">xpositions</span><span class="p">)</span>
+        <span class="n">sizes</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">xpositions</span><span class="p">)</span>
+
+        <span class="n">rects</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">return</span> <span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">glyph_ids</span><span class="p">,</span> <span class="n">xpositions</span><span class="p">,</span> <span class="n">ypositions</span><span class="p">,</span> <span class="n">sizes</span><span class="p">)),</span>
+                     <span class="n">glyph_map_new</span><span class="p">,</span> <span class="n">rects</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_glyphs_mathtext</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prop</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">glyph_map</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                            <span class="n">return_new_glyphs_only</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        convert the string *s* to vertices and codes by parsing it with</span>
+<span class="sd">        mathtext.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">prop</span> <span class="o">=</span> <span class="n">prop</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="n">prop</span><span class="o">.</span><span class="n">set_size</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">FONT_SCALE</span><span class="p">)</span>
+
+        <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">descent</span><span class="p">,</span> <span class="n">glyphs</span><span class="p">,</span> <span class="n">rects</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mathtext_parser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span>
+            <span class="n">s</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">DPI</span><span class="p">,</span> <span class="n">prop</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">glyph_map</span><span class="p">:</span>
+            <span class="n">glyph_map</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">return_new_glyphs_only</span><span class="p">:</span>
+            <span class="n">glyph_map_new</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">glyph_map_new</span> <span class="o">=</span> <span class="n">glyph_map</span>
+
+        <span class="n">xpositions</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">ypositions</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">glyph_ids</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">sizes</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="n">currx</span><span class="p">,</span> <span class="n">curry</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">font</span><span class="p">,</span> <span class="n">fontsize</span><span class="p">,</span> <span class="n">ccode</span><span class="p">,</span> <span class="n">ox</span><span class="p">,</span> <span class="n">oy</span> <span class="ow">in</span> <span class="n">glyphs</span><span class="p">:</span>
+            <span class="n">char_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_char_id</span><span class="p">(</span><span class="n">font</span><span class="p">,</span> <span class="n">ccode</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">char_id</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">glyph_map</span><span class="p">:</span>
+                <span class="n">font</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+                <span class="n">font</span><span class="o">.</span><span class="n">set_size</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">FONT_SCALE</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">DPI</span><span class="p">)</span>
+                <span class="n">glyph</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">load_char</span><span class="p">(</span><span class="n">ccode</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="n">LOAD_NO_HINTING</span><span class="p">)</span>
+                <span class="n">glyph_map_new</span><span class="p">[</span><span class="n">char_id</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">glyph_to_path</span><span class="p">(</span><span class="n">font</span><span class="p">)</span>
+
+            <span class="n">xpositions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ox</span><span class="p">)</span>
+            <span class="n">ypositions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">oy</span><span class="p">)</span>
+            <span class="n">glyph_ids</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">char_id</span><span class="p">)</span>
+            <span class="n">size</span> <span class="o">=</span> <span class="n">fontsize</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">FONT_SCALE</span>
+            <span class="n">sizes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+
+        <span class="n">myrects</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">ox</span><span class="p">,</span> <span class="n">oy</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span> <span class="ow">in</span> <span class="n">rects</span><span class="p">:</span>
+            <span class="n">vert1</span> <span class="o">=</span> <span class="p">[(</span><span class="n">ox</span><span class="p">,</span> <span class="n">oy</span><span class="p">),</span> <span class="p">(</span><span class="n">ox</span><span class="p">,</span> <span class="n">oy</span> <span class="o">+</span> <span class="n">h</span><span class="p">),</span> <span class="p">(</span><span class="n">ox</span> <span class="o">+</span> <span class="n">w</span><span class="p">,</span> <span class="n">oy</span> <span class="o">+</span> <span class="n">h</span><span class="p">),</span>
+                     <span class="p">(</span><span class="n">ox</span> <span class="o">+</span> <span class="n">w</span><span class="p">,</span> <span class="n">oy</span><span class="p">),</span> <span class="p">(</span><span class="n">ox</span><span class="p">,</span> <span class="n">oy</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)]</span>
+            <span class="n">code1</span> <span class="o">=</span> <span class="p">[</span><span class="n">Path</span><span class="o">.</span><span class="n">MOVETO</span><span class="p">,</span>
+                     <span class="n">Path</span><span class="o">.</span><span class="n">LINETO</span><span class="p">,</span> <span class="n">Path</span><span class="o">.</span><span class="n">LINETO</span><span class="p">,</span> <span class="n">Path</span><span class="o">.</span><span class="n">LINETO</span><span class="p">,</span> <span class="n">Path</span><span class="o">.</span><span class="n">LINETO</span><span class="p">,</span>
+                     <span class="n">Path</span><span class="o">.</span><span class="n">CLOSEPOLY</span><span class="p">]</span>
+            <span class="n">myrects</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">vert1</span><span class="p">,</span> <span class="n">code1</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">glyph_ids</span><span class="p">,</span> <span class="n">xpositions</span><span class="p">,</span> <span class="n">ypositions</span><span class="p">,</span> <span class="n">sizes</span><span class="p">)),</span>
+                <span class="n">glyph_map_new</span><span class="p">,</span> <span class="n">myrects</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_texmanager</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        return the :class:`matplotlib.texmanager.TexManager` instance</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_texmanager</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="kn">from</span> <span class="nn">matplotlib.texmanager</span> <span class="k">import</span> <span class="n">TexManager</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_texmanager</span> <span class="o">=</span> <span class="n">TexManager</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_texmanager</span>
+
+    <span class="k">def</span> <span class="nf">get_glyphs_tex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prop</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">glyph_map</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                       <span class="n">return_new_glyphs_only</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        convert the string *s* to vertices and codes using matplotlib&#39;s usetex</span>
+<span class="sd">        mode.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># codes are modstly borrowed from pdf backend.</span>
+
+        <span class="n">texmanager</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_texmanager</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">tex_font_map</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tex_font_map</span> <span class="o">=</span> <span class="n">dviread</span><span class="o">.</span><span class="n">PsfontsMap</span><span class="p">(</span>
+                                    <span class="n">dviread</span><span class="o">.</span><span class="n">find_tex_file</span><span class="p">(</span><span class="s1">&#39;pdftex.map&#39;</span><span class="p">))</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_adobe_standard_encoding</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_adobe_standard_encoding</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_adobe_standard_encoding</span><span class="p">()</span>
+
+        <span class="n">fontsize</span> <span class="o">=</span> <span class="n">prop</span><span class="o">.</span><span class="n">get_size_in_points</span><span class="p">()</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">texmanager</span><span class="p">,</span> <span class="s2">&quot;get_dvi&quot;</span><span class="p">):</span>
+            <span class="n">dvifilelike</span> <span class="o">=</span> <span class="n">texmanager</span><span class="o">.</span><span class="n">get_dvi</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">FONT_SCALE</span><span class="p">)</span>
+            <span class="n">dvi</span> <span class="o">=</span> <span class="n">dviread</span><span class="o">.</span><span class="n">DviFromFileLike</span><span class="p">(</span><span class="n">dvifilelike</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">DPI</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">dvifile</span> <span class="o">=</span> <span class="n">texmanager</span><span class="o">.</span><span class="n">make_dvi</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">FONT_SCALE</span><span class="p">)</span>
+            <span class="n">dvi</span> <span class="o">=</span> <span class="n">dviread</span><span class="o">.</span><span class="n">Dvi</span><span class="p">(</span><span class="n">dvifile</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">DPI</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">page</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="nb">iter</span><span class="p">(</span><span class="n">dvi</span><span class="p">))</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="n">dvi</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">glyph_map</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">glyph_map</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">return_new_glyphs_only</span><span class="p">:</span>
+            <span class="n">glyph_map_new</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">glyph_map_new</span> <span class="o">=</span> <span class="n">glyph_map</span>
+
+        <span class="n">glyph_ids</span><span class="p">,</span> <span class="n">xpositions</span><span class="p">,</span> <span class="n">ypositions</span><span class="p">,</span> <span class="n">sizes</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[]</span>
+
+        <span class="c1"># Gather font information and do some setup for combining</span>
+        <span class="c1"># characters into strings.</span>
+        <span class="c1"># oldfont, seq = None, []</span>
+        <span class="k">for</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">dvifont</span><span class="p">,</span> <span class="n">glyph</span><span class="p">,</span> <span class="n">width</span> <span class="ow">in</span> <span class="n">page</span><span class="o">.</span><span class="n">text</span><span class="p">:</span>
+            <span class="n">font_and_encoding</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ps_fontd</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">dvifont</span><span class="o">.</span><span class="n">texname</span><span class="p">)</span>
+            <span class="n">font_bunch</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tex_font_map</span><span class="p">[</span><span class="n">dvifont</span><span class="o">.</span><span class="n">texname</span><span class="p">]</span>
+
+            <span class="k">if</span> <span class="n">font_and_encoding</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">font</span> <span class="o">=</span> <span class="n">FT2Font</span><span class="p">(</span><span class="n">font_bunch</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+
+                <span class="k">for</span> <span class="n">charmap_name</span><span class="p">,</span> <span class="n">charmap_code</span> <span class="ow">in</span> <span class="p">[(</span><span class="s2">&quot;ADOBE_CUSTOM&quot;</span><span class="p">,</span>
+                                                    <span class="mi">1094992451</span><span class="p">),</span>
+                                                   <span class="p">(</span><span class="s2">&quot;ADOBE_STANDARD&quot;</span><span class="p">,</span>
+                                                    <span class="mi">1094995778</span><span class="p">)]:</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="n">font</span><span class="o">.</span><span class="n">select_charmap</span><span class="p">(</span><span class="n">charmap_code</span><span class="p">)</span>
+                    <span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">RuntimeError</span><span class="p">):</span>
+                        <span class="k">pass</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="k">break</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">charmap_name</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+                    <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;No supported encoding in font (</span><span class="si">%s</span><span class="s2">).&quot;</span> <span class="o">%</span>
+                                  <span class="n">font_bunch</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">charmap_name</span> <span class="o">==</span> <span class="s2">&quot;ADOBE_STANDARD&quot;</span> <span class="ow">and</span> <span class="n">font_bunch</span><span class="o">.</span><span class="n">encoding</span><span class="p">:</span>
+                    <span class="n">enc0</span> <span class="o">=</span> <span class="n">dviread</span><span class="o">.</span><span class="n">Encoding</span><span class="p">(</span><span class="n">font_bunch</span><span class="o">.</span><span class="n">encoding</span><span class="p">)</span>
+                    <span class="n">enc</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">([(</span><span class="n">i</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_adobe_standard_encoding</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
+                                <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">enc0</span><span class="o">.</span><span class="n">encoding</span><span class="p">)])</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">enc</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_ps_fontd</span><span class="p">[</span><span class="n">dvifont</span><span class="o">.</span><span class="n">texname</span><span class="p">]</span> <span class="o">=</span> <span class="n">font</span><span class="p">,</span> <span class="n">enc</span>
+
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">font</span><span class="p">,</span> <span class="n">enc</span> <span class="o">=</span> <span class="n">font_and_encoding</span>
+
+            <span class="n">ft2font_flag</span> <span class="o">=</span> <span class="n">LOAD_TARGET_LIGHT</span>
+
+            <span class="n">char_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_char_id_ps</span><span class="p">(</span><span class="n">font</span><span class="p">,</span> <span class="n">glyph</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">char_id</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">glyph_map</span><span class="p">:</span>
+                <span class="n">font</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+                <span class="n">font</span><span class="o">.</span><span class="n">set_size</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">FONT_SCALE</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">DPI</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">enc</span><span class="p">:</span>
+                    <span class="n">charcode</span> <span class="o">=</span> <span class="n">enc</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">glyph</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">charcode</span> <span class="o">=</span> <span class="n">glyph</span>
+
+                <span class="k">if</span> <span class="n">charcode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">glyph0</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">load_char</span><span class="p">(</span><span class="n">charcode</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="n">ft2font_flag</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;The glyph (</span><span class="si">%d</span><span class="s2">) of font (</span><span class="si">%s</span><span class="s2">) cannot be &quot;</span>
+                                  <span class="s2">&quot;converted with the encoding. Glyph may &quot;</span>
+                                  <span class="s2">&quot;be wrong&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">glyph</span><span class="p">,</span> <span class="n">font_bunch</span><span class="o">.</span><span class="n">filename</span><span class="p">))</span>
+
+                    <span class="n">glyph0</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">load_char</span><span class="p">(</span><span class="n">glyph</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="n">ft2font_flag</span><span class="p">)</span>
+
+                <span class="n">glyph_map_new</span><span class="p">[</span><span class="n">char_id</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">glyph_to_path</span><span class="p">(</span><span class="n">font</span><span class="p">)</span>
+
+            <span class="n">glyph_ids</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">char_id</span><span class="p">)</span>
+            <span class="n">xpositions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span>
+            <span class="n">ypositions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y1</span><span class="p">)</span>
+            <span class="n">sizes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dvifont</span><span class="o">.</span><span class="n">size</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">FONT_SCALE</span><span class="p">)</span>
+
+        <span class="n">myrects</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">for</span> <span class="n">ox</span><span class="p">,</span> <span class="n">oy</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">page</span><span class="o">.</span><span class="n">boxes</span><span class="p">:</span>
+            <span class="n">vert1</span> <span class="o">=</span> <span class="p">[(</span><span class="n">ox</span><span class="p">,</span> <span class="n">oy</span><span class="p">),</span> <span class="p">(</span><span class="n">ox</span> <span class="o">+</span> <span class="n">w</span><span class="p">,</span> <span class="n">oy</span><span class="p">),</span> <span class="p">(</span><span class="n">ox</span> <span class="o">+</span> <span class="n">w</span><span class="p">,</span> <span class="n">oy</span> <span class="o">+</span> <span class="n">h</span><span class="p">),</span>
+                     <span class="p">(</span><span class="n">ox</span><span class="p">,</span> <span class="n">oy</span> <span class="o">+</span> <span class="n">h</span><span class="p">),</span> <span class="p">(</span><span class="n">ox</span><span class="p">,</span> <span class="n">oy</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)]</span>
+            <span class="n">code1</span> <span class="o">=</span> <span class="p">[</span><span class="n">Path</span><span class="o">.</span><span class="n">MOVETO</span><span class="p">,</span>
+                     <span class="n">Path</span><span class="o">.</span><span class="n">LINETO</span><span class="p">,</span> <span class="n">Path</span><span class="o">.</span><span class="n">LINETO</span><span class="p">,</span> <span class="n">Path</span><span class="o">.</span><span class="n">LINETO</span><span class="p">,</span> <span class="n">Path</span><span class="o">.</span><span class="n">LINETO</span><span class="p">,</span>
+                     <span class="n">Path</span><span class="o">.</span><span class="n">CLOSEPOLY</span><span class="p">]</span>
+            <span class="n">myrects</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">vert1</span><span class="p">,</span> <span class="n">code1</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">glyph_ids</span><span class="p">,</span> <span class="n">xpositions</span><span class="p">,</span> <span class="n">ypositions</span><span class="p">,</span> <span class="n">sizes</span><span class="p">)),</span>
+                <span class="n">glyph_map_new</span><span class="p">,</span> <span class="n">myrects</span><span class="p">)</span>
+
+
+<span class="n">text_to_path</span> <span class="o">=</span> <span class="n">TextToPath</span><span class="p">()</span>
+
+
+<div class="viewcode-block" id="TextPath"><a class="viewcode-back" href="../../generated/generated/matplotlib.text.TextPath.html#matplotlib.text.TextPath">[docs]</a><span class="k">class</span> <span class="nc">TextPath</span><span class="p">(</span><span class="n">Path</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Create a path from the text.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="TextPath.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.text.TextPath.__init__.html#matplotlib.text.TextPath.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xy</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">prop</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">_interpolation_steps</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">usetex</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="o">*</span><span class="n">kl</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create a path from the text. No support for TeX yet. Note that</span>
+<span class="sd">        it simply is a path, not an artist. You need to use the</span>
+<span class="sd">        PathPatch (or other artists) to draw this path onto the</span>
+<span class="sd">        canvas.</span>
+
+<span class="sd">        xy : position of the text.</span>
+<span class="sd">        s : text</span>
+<span class="sd">        size : font size</span>
+<span class="sd">        prop : font property</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">prop</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">prop</span> <span class="o">=</span> <span class="n">FontProperties</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">size</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">size</span> <span class="o">=</span> <span class="n">prop</span><span class="o">.</span><span class="n">get_size_in_points</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_xy</span> <span class="o">=</span> <span class="n">xy</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_size</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cached_vertices</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_vertices</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_codes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">text_get_vertices_codes</span><span class="p">(</span>
+                                            <span class="n">prop</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span>
+                                            <span class="n">usetex</span><span class="o">=</span><span class="n">usetex</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_should_simplify</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_simplify_threshold</span> <span class="o">=</span> <span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;path.simplify_threshold&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_has_nonfinite</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_interpolation_steps</span> <span class="o">=</span> <span class="n">_interpolation_steps</span></div>
+
+<div class="viewcode-block" id="TextPath.set_size"><a class="viewcode-back" href="../../generated/generated/matplotlib.text.TextPath.set_size.html#matplotlib.text.TextPath.set_size">[docs]</a>    <span class="k">def</span> <span class="nf">set_size</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        set the size of the text</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_size</span> <span class="o">=</span> <span class="n">size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_invalid</span> <span class="o">=</span> <span class="kc">True</span></div>
+
+<div class="viewcode-block" id="TextPath.get_size"><a class="viewcode-back" href="../../generated/generated/matplotlib.text.TextPath.get_size.html#matplotlib.text.TextPath.get_size">[docs]</a>    <span class="k">def</span> <span class="nf">get_size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        get the size of the text</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_size</span></div>
+
+    <span class="k">def</span> <span class="nf">_get_vertices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the cached path after updating it if necessary.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_revalidate_path</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cached_vertices</span>
+
+    <span class="k">def</span> <span class="nf">_get_codes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the codes</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_codes</span>
+
+    <span class="n">vertices</span> <span class="o">=</span> <span class="nb">property</span><span class="p">(</span><span class="n">_get_vertices</span><span class="p">)</span>
+    <span class="n">codes</span> <span class="o">=</span> <span class="nb">property</span><span class="p">(</span><span class="n">_get_codes</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_revalidate_path</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        update the path if necessary.</span>
+
+<span class="sd">        The path for the text is initially create with the font size</span>
+<span class="sd">        of FONT_SCALE, and this path is rescaled to other size when</span>
+<span class="sd">        necessary.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_invalid</span> <span class="ow">or</span>
+            <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_cached_vertices</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)):</span>
+            <span class="n">tr</span> <span class="o">=</span> <span class="n">Affine2D</span><span class="p">()</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_size</span> <span class="o">/</span> <span class="n">text_to_path</span><span class="o">.</span><span class="n">FONT_SCALE</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_size</span> <span class="o">/</span> <span class="n">text_to_path</span><span class="o">.</span><span class="n">FONT_SCALE</span><span class="p">)</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">_xy</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_cached_vertices</span> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_vertices</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_invalid</span> <span class="o">=</span> <span class="kc">False</span>
+
+<div class="viewcode-block" id="TextPath.is_math_text"><a class="viewcode-back" href="../../generated/generated/matplotlib.text.TextPath.is_math_text.html#matplotlib.text.TextPath.is_math_text">[docs]</a>    <span class="k">def</span> <span class="nf">is_math_text</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns True if the given string *s* contains any mathtext.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># copied from Text.is_math_text -JJL</span>
+
+        <span class="c1"># Did we find an even number of non-escaped dollar signs?</span>
+        <span class="c1"># If so, treat is as math text.</span>
+        <span class="n">dollar_count</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">r&#39;$&#39;</span><span class="p">)</span> <span class="o">-</span> <span class="n">s</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">r&#39;\$&#39;</span><span class="p">)</span>
+        <span class="n">even_dollars</span> <span class="o">=</span> <span class="p">(</span><span class="n">dollar_count</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">dollar_count</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;text.usetex&#39;</span><span class="p">]:</span>
+            <span class="k">return</span> <span class="n">s</span><span class="p">,</span> <span class="s1">&#39;TeX&#39;</span>
+
+        <span class="k">if</span> <span class="n">even_dollars</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">s</span><span class="p">,</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">r&#39;\$&#39;</span><span class="p">,</span> <span class="s1">&#39;$&#39;</span><span class="p">),</span> <span class="kc">False</span></div>
+
+<div class="viewcode-block" id="TextPath.text_get_vertices_codes"><a class="viewcode-back" href="../../generated/generated/matplotlib.text.TextPath.text_get_vertices_codes.html#matplotlib.text.TextPath.text_get_vertices_codes">[docs]</a>    <span class="k">def</span> <span class="nf">text_get_vertices_codes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prop</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">usetex</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        convert the string *s* to vertices and codes using the</span>
+<span class="sd">        provided font property *prop*. Mostly copied from</span>
+<span class="sd">        backend_svg.py.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">usetex</span><span class="p">:</span>
+            <span class="n">verts</span><span class="p">,</span> <span class="n">codes</span> <span class="o">=</span> <span class="n">text_to_path</span><span class="o">.</span><span class="n">get_text_path</span><span class="p">(</span><span class="n">prop</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">usetex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">clean_line</span><span class="p">,</span> <span class="n">ismath</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_math_text</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+            <span class="n">verts</span><span class="p">,</span> <span class="n">codes</span> <span class="o">=</span> <span class="n">text_to_path</span><span class="o">.</span><span class="n">get_text_path</span><span class="p">(</span><span class="n">prop</span><span class="p">,</span> <span class="n">clean_line</span><span class="p">,</span>
+                                                      <span class="n">ismath</span><span class="o">=</span><span class="n">ismath</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">verts</span><span class="p">,</span> <span class="n">codes</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>8.2.9. matplotlib.figure.Figure &mdash; PROJECT_NAME 1 documentation</title>
+  <title>8.2.9. matplotlib.figure.Figure &mdash; Matplotlib API 1 documentation</title>
   
 
   
@@ -24,19 +24,19 @@
 
   
   
-    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   
 
   
 
   
-    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
         <link rel="up" title="8. matplotlib.figure" href="../matplotlib.figure.html"/>
         <link rel="next" title="8.2.9.1. matplotlib.figure.Figure.axes" href="matplotlib.figure.Figure.axes.html"/>
         <link rel="prev" title="8.2.8.13. matplotlib.figure.BlockingMouseInput.post_event" href="matplotlib.figure.BlockingMouseInput.post_event.html"/> 
 
   
-  <script src="../../static/js/modernizr.min.js"></script>
+  <script src="../../_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+            <a href="../../index.html" class="icon icon-home"> Matplotlib API
           
 
           
@@ -274,7 +274,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">PROJECT_NAME</a>
+          <a href="../../index.html">Matplotlib API</a>
         
       </nav>
 
@@ -311,7 +311,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../sources/generated/generated/matplotlib.figure.Figure.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/generated/generated/matplotlib.figure.Figure.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -324,9 +324,10 @@
             
   <div class="section" id="matplotlib-figure-figure">
 <h1>8.2.9. matplotlib.figure.Figure<a class="headerlink" href="#matplotlib-figure-figure" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="matplotlib.figure.Figure.__init__.html#matplotlib.figure.Figure.__init__" title="matplotlib.figure.Figure.__init__"><code class="xref py py-func docutils literal"><span class="pre">Figure.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.figure.Figure">
-<em class="property">class </em><code class="descclassname">matplotlib.figure.</code><code class="descname">Figure</code><span class="sig-paren">(</span><em>figsize=None</em>, <em>dpi=None</em>, <em>facecolor=None</em>, <em>edgecolor=None</em>, <em>linewidth=0.0</em>, <em>frameon=None</em>, <em>subplotpars=None</em>, <em>tight_layout=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/figure.html#Figure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.figure.Figure" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">matplotlib.figure.</code><code class="descname">Figure</code><span class="sig-paren">(</span><em>figsize=None</em>, <em>dpi=None</em>, <em>facecolor=None</em>, <em>edgecolor=None</em>, <em>linewidth=0.0</em>, <em>frameon=None</em>, <em>subplotpars=None</em>, <em>tight_layout=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/figure.html#Figure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.figure.Figure" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Figure instance supports callbacks through a <em>callbacks</em>
 attribute which is a <a class="reference internal" href="matplotlib.cbook.CallbackRegistry.html#matplotlib.cbook.CallbackRegistry" title="matplotlib.cbook.CallbackRegistry"><code class="xref py py-class docutils literal"><span class="pre">matplotlib.cbook.CallbackRegistry</span></code></a>
 instance.  The events you can connect to are &#8216;dpi_changed&#8217;, and
@@ -687,6 +688,34 @@ override the renderer.</dd>
 </tr>
 </tbody>
 </table>
+<dl class="method">
+<dt id="matplotlib.figure.Figure.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>figsize=None</em>, <em>dpi=None</em>, <em>facecolor=None</em>, <em>edgecolor=None</em>, <em>linewidth=0.0</em>, <em>frameon=None</em>, <em>subplotpars=None</em>, <em>tight_layout=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/figure.html#Figure.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.figure.Figure.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt><em>figsize</em></dt>
+<dd>w,h tuple in inches</dd>
+<dt><em>dpi</em></dt>
+<dd>Dots per inch</dd>
+<dt><em>facecolor</em></dt>
+<dd>The figure patch facecolor; defaults to rc <code class="docutils literal"><span class="pre">figure.facecolor</span></code></dd>
+<dt><em>edgecolor</em></dt>
+<dd>The figure patch edge color; defaults to rc <code class="docutils literal"><span class="pre">figure.edgecolor</span></code></dd>
+<dt><em>linewidth</em></dt>
+<dd>The figure patch edge linewidth; the default linewidth of the frame</dd>
+<dt><em>frameon</em></dt>
+<dd>If <em>False</em>, suppress drawing the figure frame</dd>
+<dt><em>subplotpars</em></dt>
+<dd>A <a class="reference internal" href="matplotlib.figure.SubplotParams.html#matplotlib.figure.SubplotParams" title="matplotlib.figure.SubplotParams"><code class="xref py py-class docutils literal"><span class="pre">SubplotParams</span></code></a> instance, defaults to rc</dd>
+<dt><em>tight_layout</em></dt>
+<dd>If <em>False</em> use <em>subplotpars</em>; if <em>True</em> adjust subplot
+parameters using <a class="reference internal" href="matplotlib.figure.Figure.tight_layout.html#matplotlib.figure.Figure.tight_layout" title="matplotlib.figure.Figure.tight_layout"><code class="xref py py-meth docutils literal"><span class="pre">tight_layout()</span></code></a> with default padding.
+When providing a dict containing the keys <cite>pad</cite>, <cite>w_pad</cite>, <cite>h_pad</cite>
+and <cite>rect</cite>, the default <a class="reference internal" href="matplotlib.figure.Figure.tight_layout.html#matplotlib.figure.Figure.tight_layout" title="matplotlib.figure.Figure.tight_layout"><code class="xref py py-meth docutils literal"><span class="pre">tight_layout()</span></code></a> paddings will be
+overridden.
+Defaults to rc <code class="docutils literal"><span class="pre">figure.autolayout</span></code>.</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -738,16 +767,16 @@ override the renderer.</dd>
             HAS_SOURCE:  true
         };
     </script>
-      <script type="text/javascript" src="../../static/jquery.js"></script>
-      <script type="text/javascript" src="../../static/underscore.js"></script>
-      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
   
   
-    <script type="text/javascript" src="../../static/js/theme.js"></script>
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
   
 
   

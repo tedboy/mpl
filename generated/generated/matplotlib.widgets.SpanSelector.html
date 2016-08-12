@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>15.1.2.17. matplotlib.widgets.SpanSelector &mdash; PROJECT_NAME 1 documentation</title>
+  <title>15.1.2.17. matplotlib.widgets.SpanSelector &mdash; Matplotlib API 1 documentation</title>
   
 
   
@@ -24,19 +24,19 @@
 
   
   
-    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   
 
   
 
   
-    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
         <link rel="up" title="15. matplotlib.widgets" href="../matplotlib.widgets.html"/>
         <link rel="next" title="15.1.2.17.1. matplotlib.widgets.SpanSelector.active" href="matplotlib.widgets.SpanSelector.active.html"/>
         <link rel="prev" title="15.1.2.16.10. matplotlib.widgets.Slider.set_val" href="matplotlib.widgets.Slider.set_val.html"/> 
 
   
-  <script src="../../static/js/modernizr.min.js"></script>
+  <script src="../../_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+            <a href="../../index.html" class="icon icon-home"> Matplotlib API
           
 
           
@@ -168,7 +168,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">PROJECT_NAME</a>
+          <a href="../../index.html">Matplotlib API</a>
         
       </nav>
 
@@ -205,7 +205,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../sources/generated/generated/matplotlib.widgets.SpanSelector.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/generated/generated/matplotlib.widgets.SpanSelector.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -218,9 +218,10 @@
             
   <div class="section" id="matplotlib-widgets-spanselector">
 <h1>15.1.2.17. matplotlib.widgets.SpanSelector<a class="headerlink" href="#matplotlib-widgets-spanselector" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="matplotlib.widgets.SpanSelector.__init__.html#matplotlib.widgets.SpanSelector.__init__" title="matplotlib.widgets.SpanSelector.__init__"><code class="xref py py-func docutils literal"><span class="pre">SpanSelector.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.widgets.SpanSelector">
-<em class="property">class </em><code class="descclassname">matplotlib.widgets.</code><code class="descname">SpanSelector</code><span class="sig-paren">(</span><em>ax</em>, <em>onselect</em>, <em>direction</em>, <em>minspan=None</em>, <em>useblit=False</em>, <em>rectprops=None</em>, <em>onmove_callback=None</em>, <em>span_stays=False</em>, <em>button=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/widgets.html#SpanSelector"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.widgets.SpanSelector" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">matplotlib.widgets.</code><code class="descname">SpanSelector</code><span class="sig-paren">(</span><em>ax</em>, <em>onselect</em>, <em>direction</em>, <em>minspan=None</em>, <em>useblit=False</em>, <em>rectprops=None</em>, <em>onmove_callback=None</em>, <em>span_stays=False</em>, <em>button=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/widgets.html#SpanSelector"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.widgets.SpanSelector" title="Permalink to this definition">¶</a></dt>
 <dd><p>Select a min/max range of the x or y axes for a matplotlib Axes.</p>
 <p>For the selector to remain responsive you must keep a reference to
 it.</p>
@@ -304,6 +305,37 @@ move within the span range</p>
 </tr>
 </tbody>
 </table>
+<dl class="method">
+<dt id="matplotlib.widgets.SpanSelector.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>ax</em>, <em>onselect</em>, <em>direction</em>, <em>minspan=None</em>, <em>useblit=False</em>, <em>rectprops=None</em>, <em>onmove_callback=None</em>, <em>span_stays=False</em>, <em>button=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/widgets.html#SpanSelector.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.widgets.SpanSelector.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a span selector in <em>ax</em>.  When a selection is made, clear
+the span and call <em>onselect</em> with:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">onselect</span><span class="p">(</span><span class="n">vmin</span><span class="p">,</span> <span class="n">vmax</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>and clear the span.</p>
+<p><em>direction</em> must be &#8216;horizontal&#8217; or &#8216;vertical&#8217;</p>
+<p>If <em>minspan</em> is not <em>None</em>, ignore events smaller than <em>minspan</em></p>
+<p>The span rectangle is drawn with <em>rectprops</em>; default:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">rectprops</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Set the visible attribute to <em>False</em> if you want to turn off
+the functionality of the span selector</p>
+<p>If <em>span_stays</em> is True, the span stays visble after making
+a valid selection.</p>
+<p><em>button</em> is a list of integers indicating which mouse buttons should
+be used for selection.  You can also specify a single
+integer if only a single button is desired.  Default is <em>None</em>,
+which does not limit which button can be used.</p>
+<dl class="docutils">
+<dt>Note, typically:</dt>
+<dd>1 = left mouse button
+2 = center mouse button (scroll wheel)
+3 = right mouse button</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -355,16 +387,16 @@ move within the span range</p>
             HAS_SOURCE:  true
         };
     </script>
-      <script type="text/javascript" src="../../static/jquery.js"></script>
-      <script type="text/javascript" src="../../static/underscore.js"></script>
-      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
   
   
-    <script type="text/javascript" src="../../static/js/theme.js"></script>
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
   
 
   

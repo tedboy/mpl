@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>21.2.5. matplotlib.collections.EllipseCollection &mdash; PROJECT_NAME 1 documentation</title>
+  <title>21.2.5. matplotlib.collections.EllipseCollection &mdash; Matplotlib API 1 documentation</title>
   
 
   
@@ -24,19 +24,19 @@
 
   
   
-    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   
 
   
 
   
-    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
         <link rel="up" title="21. matplotlib.collections" href="../matplotlib.collections.html"/>
         <link rel="next" title="21.2.5.1. matplotlib.collections.EllipseCollection.axes" href="matplotlib.collections.EllipseCollection.axes.html"/>
         <link rel="prev" title="21.2.4.119. matplotlib.collections.Collection.update_scalarmappable" href="matplotlib.collections.Collection.update_scalarmappable.html"/> 
 
   
-  <script src="../../static/js/modernizr.min.js"></script>
+  <script src="../../_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+            <a href="../../index.html" class="icon icon-home"> Matplotlib API
           
 
           
@@ -280,7 +280,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">PROJECT_NAME</a>
+          <a href="../../index.html">Matplotlib API</a>
         
       </nav>
 
@@ -317,7 +317,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../sources/generated/generated/matplotlib.collections.EllipseCollection.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/generated/generated/matplotlib.collections.EllipseCollection.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -330,9 +330,10 @@
             
   <div class="section" id="matplotlib-collections-ellipsecollection">
 <h1>21.2.5. matplotlib.collections.EllipseCollection<a class="headerlink" href="#matplotlib-collections-ellipsecollection" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="matplotlib.collections.EllipseCollection.__init__.html#matplotlib.collections.EllipseCollection.__init__" title="matplotlib.collections.EllipseCollection.__init__"><code class="xref py py-func docutils literal"><span class="pre">EllipseCollection.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.collections.EllipseCollection">
-<em class="property">class </em><code class="descclassname">matplotlib.collections.</code><code class="descname">EllipseCollection</code><span class="sig-paren">(</span><em>widths</em>, <em>heights</em>, <em>angles</em>, <em>units=u'points'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/collections.html#EllipseCollection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.collections.EllipseCollection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">matplotlib.collections.</code><code class="descname">EllipseCollection</code><span class="sig-paren">(</span><em>widths</em>, <em>heights</em>, <em>angles</em>, <em>units=u'points'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/collections.html#EllipseCollection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.collections.EllipseCollection" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of ellipses, drawn using splines.</p>
 <p class="rubric">Attributes</p>
 <table border="1" class="longtable docutils">
@@ -709,6 +710,53 @@
 </tr>
 </tbody>
 </table>
+<dl class="method">
+<dt id="matplotlib.collections.EllipseCollection.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>widths</em>, <em>heights</em>, <em>angles</em>, <em>units=u'points'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/collections.html#EllipseCollection.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.collections.EllipseCollection.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt><em>widths</em>: sequence</dt>
+<dd>lengths of first axes (e.g., major axis lengths)</dd>
+<dt><em>heights</em>: sequence</dt>
+<dd>lengths of second axes</dd>
+<dt><em>angles</em>: sequence</dt>
+<dd>angles of first axes, degrees CCW from the X-axis</dd>
+</dl>
+<p><em>units</em>: [&#8216;points&#8217; | &#8216;inches&#8217; | &#8216;dots&#8217; | &#8216;width&#8217; | &#8216;height&#8217;
+| &#8216;x&#8217; | &#8216;y&#8217; | &#8216;xy&#8217;]</p>
+<blockquote>
+<div>units in which majors and minors are given; &#8216;width&#8217; and
+&#8216;height&#8217; refer to the dimensions of the axes, while &#8216;x&#8217;
+and &#8216;y&#8217; refer to the <em>offsets</em> data units. &#8216;xy&#8217; differs
+from all others in that the angle as plotted varies with
+the aspect ratio, and equals the specified angle only when
+the aspect ratio is unity.  Hence it behaves the same as
+the <a class="reference internal" href="matplotlib.patches.Ellipse.html#matplotlib.patches.Ellipse" title="matplotlib.patches.Ellipse"><code class="xref py py-class docutils literal"><span class="pre">Ellipse</span></code></a> with
+axes.transData as its transform.</div></blockquote>
+<p>Additional kwargs inherited from the base <a class="reference internal" href="matplotlib.collections.Collection.html#matplotlib.collections.Collection" title="matplotlib.collections.Collection"><code class="xref py py-class docutils literal"><span class="pre">Collection</span></code></a>:</p>
+<blockquote>
+<div><p>Valid Collection keyword arguments:</p>
+<blockquote>
+<div><ul class="simple">
+<li><em>edgecolors</em>: None</li>
+<li><em>facecolors</em>: None</li>
+<li><em>linewidths</em>: None</li>
+<li><em>antialiaseds</em>: None</li>
+<li><em>offsets</em>: None</li>
+<li><em>transOffset</em>: transforms.IdentityTransform()</li>
+<li><em>norm</em>: None (optional for
+<a class="reference internal" href="matplotlib.cm.ScalarMappable.html#matplotlib.cm.ScalarMappable" title="matplotlib.cm.ScalarMappable"><code class="xref py py-class docutils literal"><span class="pre">matplotlib.cm.ScalarMappable</span></code></a>)</li>
+<li><em>cmap</em>: None (optional for
+<a class="reference internal" href="matplotlib.cm.ScalarMappable.html#matplotlib.cm.ScalarMappable" title="matplotlib.cm.ScalarMappable"><code class="xref py py-class docutils literal"><span class="pre">matplotlib.cm.ScalarMappable</span></code></a>)</li>
+</ul>
+</div></blockquote>
+<p><em>offsets</em> and <em>transOffset</em> are used to translate the patch after
+rendering (default no offsets)</p>
+<p>If any of <em>edgecolors</em>, <em>facecolors</em>, <em>linewidths</em>, <em>antialiaseds</em>
+are None, they default to their <code class="xref py py-data docutils literal"><span class="pre">matplotlib.rcParams</span></code> patch
+setting, in sequence form.</p>
+</div></blockquote>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -760,16 +808,16 @@
             HAS_SOURCE:  true
         };
     </script>
-      <script type="text/javascript" src="../../static/jquery.js"></script>
-      <script type="text/javascript" src="../../static/underscore.js"></script>
-      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
   
   
-    <script type="text/javascript" src="../../static/js/theme.js"></script>
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
   
 
   

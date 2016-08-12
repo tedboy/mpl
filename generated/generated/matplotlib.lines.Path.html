@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>10.2.6. matplotlib.lines.Path &mdash; PROJECT_NAME 1 documentation</title>
+  <title>10.2.6. matplotlib.lines.Path &mdash; Matplotlib API 1 documentation</title>
   
 
   
@@ -24,19 +24,19 @@
 
   
   
-    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   
 
   
 
   
-    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
         <link rel="up" title="10. matplotlib.lines" href="../matplotlib.lines.html"/>
         <link rel="next" title="10.2.6.1. matplotlib.lines.Path.codes" href="matplotlib.lines.Path.codes.html"/>
         <link rel="prev" title="10.2.5.12. matplotlib.lines.MarkerStyle.set_marker" href="matplotlib.lines.MarkerStyle.set_marker.html"/> 
 
   
-  <script src="../../static/js/modernizr.min.js"></script>
+  <script src="../../_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+            <a href="../../index.html" class="icon icon-home"> Matplotlib API
           
 
           
@@ -186,7 +186,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">PROJECT_NAME</a>
+          <a href="../../index.html">Matplotlib API</a>
         
       </nav>
 
@@ -223,7 +223,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../sources/generated/generated/matplotlib.lines.Path.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/generated/generated/matplotlib.lines.Path.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -236,9 +236,10 @@
             
   <div class="section" id="matplotlib-lines-path">
 <h1>10.2.6. matplotlib.lines.Path<a class="headerlink" href="#matplotlib-lines-path" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="matplotlib.lines.Path.__init__.html#matplotlib.lines.Path.__init__" title="matplotlib.lines.Path.__init__"><code class="xref py py-func docutils literal"><span class="pre">Path.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.lines.Path">
-<em class="property">class </em><code class="descclassname">matplotlib.lines.</code><code class="descname">Path</code><span class="sig-paren">(</span><em>vertices</em>, <em>codes=None</em>, <em>_interpolation_steps=1</em>, <em>closed=False</em>, <em>readonly=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/path.html#Path"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.lines.Path" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">matplotlib.lines.</code><code class="descname">Path</code><span class="sig-paren">(</span><em>vertices</em>, <em>codes=None</em>, <em>_interpolation_steps=1</em>, <em>closed=False</em>, <em>readonly=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/path.html#Path"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.lines.Path" title="Permalink to this definition">¶</a></dt>
 <dd><p><a class="reference internal" href="#matplotlib.lines.Path" title="matplotlib.lines.Path"><code class="xref py py-class docutils literal"><span class="pre">Path</span></code></a> represents a series of possibly disconnected,
 possibly closed, line and curve segments.</p>
 <dl class="docutils">
@@ -427,6 +428,52 @@ data changes.</p>
 </tr>
 </tbody>
 </table>
+<dl class="method">
+<dt id="matplotlib.lines.Path.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>vertices</em>, <em>codes=None</em>, <em>_interpolation_steps=1</em>, <em>closed=False</em>, <em>readonly=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/path.html#Path.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.lines.Path.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new path with the given vertices and codes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>vertices</strong> : array_like</p>
+<blockquote>
+<div><p>The <code class="docutils literal"><span class="pre">(n,</span> <span class="pre">2)</span></code> float array, masked array or sequence of pairs
+representing the vertices of the path.</p>
+<p>If <em>vertices</em> contains masked values, they will be converted
+to NaNs which are then handled correctly by the Agg
+PathIterator and other consumers of path data, such as
+<a class="reference internal" href="matplotlib.lines.Path.iter_segments.html#matplotlib.lines.Path.iter_segments" title="matplotlib.lines.Path.iter_segments"><code class="xref py py-meth docutils literal"><span class="pre">iter_segments()</span></code></a>.</p>
+</div></blockquote>
+<p><strong>codes</strong> : {None, array_like}, optional</p>
+<blockquote>
+<div><p>n-length array integers representing the codes of the path.
+If not None, codes must be the same length as vertices.
+If None, <em>vertices</em> will be treated as a series of line segments.</p>
+</div></blockquote>
+<p><strong>_interpolation_steps</strong> : int, optional</p>
+<blockquote>
+<div><p>Used as a hint to certain projections, such as Polar, that this
+path should be linearly interpolated immediately before drawing.
+This attribute is primarily an implementation detail and is not
+intended for public use.</p>
+</div></blockquote>
+<p><strong>closed</strong> : bool, optional</p>
+<blockquote>
+<div><p>If <em>codes</em> is None and closed is True, vertices will be treated as
+line segments of a closed polygon.</p>
+</div></blockquote>
+<p><strong>readonly</strong> : bool, optional</p>
+<blockquote class="last">
+<div><p>Makes the path behave in an immutable way and sets the vertices
+and codes as read-only arrays.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -478,16 +525,16 @@ data changes.</p>
             HAS_SOURCE:  true
         };
     </script>
-      <script type="text/javascript" src="../../static/jquery.js"></script>
-      <script type="text/javascript" src="../../static/underscore.js"></script>
-      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
   
   
-    <script type="text/javascript" src="../../static/js/theme.js"></script>
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
   
 
   

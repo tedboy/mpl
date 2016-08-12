@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>21.2.1. matplotlib.collections.AsteriskPolygonCollection &mdash; PROJECT_NAME 1 documentation</title>
+  <title>21.2.1. matplotlib.collections.AsteriskPolygonCollection &mdash; Matplotlib API 1 documentation</title>
   
 
   
@@ -24,19 +24,19 @@
 
   
   
-    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   
 
   
 
   
-    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
         <link rel="up" title="21. matplotlib.collections" href="../matplotlib.collections.html"/>
         <link rel="next" title="21.2.1.1. matplotlib.collections.AsteriskPolygonCollection.axes" href="matplotlib.collections.AsteriskPolygonCollection.axes.html"/>
         <link rel="prev" title="21.1.1. matplotlib.collections.allow_rasterization" href="../matplotlib.collections.allow_rasterization.html"/> 
 
   
-  <script src="../../static/js/modernizr.min.js"></script>
+  <script src="../../_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+            <a href="../../index.html" class="icon icon-home"> Matplotlib API
           
 
           
@@ -284,7 +284,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">PROJECT_NAME</a>
+          <a href="../../index.html">Matplotlib API</a>
         
       </nav>
 
@@ -321,7 +321,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../sources/generated/generated/matplotlib.collections.AsteriskPolygonCollection.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/generated/generated/matplotlib.collections.AsteriskPolygonCollection.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -334,9 +334,10 @@
             
   <div class="section" id="matplotlib-collections-asteriskpolygoncollection">
 <h1>21.2.1. matplotlib.collections.AsteriskPolygonCollection<a class="headerlink" href="#matplotlib-collections-asteriskpolygoncollection" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="matplotlib.collections.AsteriskPolygonCollection.__init__.html#matplotlib.collections.AsteriskPolygonCollection.__init__" title="matplotlib.collections.AsteriskPolygonCollection.__init__"><code class="xref py py-func docutils literal"><span class="pre">AsteriskPolygonCollection.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.collections.AsteriskPolygonCollection">
-<em class="property">class </em><code class="descclassname">matplotlib.collections.</code><code class="descname">AsteriskPolygonCollection</code><span class="sig-paren">(</span><em>numsides</em>, <em>rotation=0</em>, <em>sizes=(1</em>, <em>)</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/collections.html#AsteriskPolygonCollection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.collections.AsteriskPolygonCollection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">matplotlib.collections.</code><code class="descname">AsteriskPolygonCollection</code><span class="sig-paren">(</span><em>numsides</em>, <em>rotation=0</em>, <em>sizes=(1</em>, <em>)</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/collections.html#AsteriskPolygonCollection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.collections.AsteriskPolygonCollection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Draw a collection of regular asterisks with <em>numsides</em> points.</p>
 <p class="rubric">Attributes</p>
 <table border="1" class="longtable docutils">
@@ -725,6 +726,58 @@
 </tr>
 </tbody>
 </table>
+<dl class="method">
+<dt id="matplotlib.collections.AsteriskPolygonCollection.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>numsides</em>, <em>rotation=0</em>, <em>sizes=(1</em>, <em>)</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.collections.AsteriskPolygonCollection.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt><em>numsides</em></dt>
+<dd>the number of sides of the polygon</dd>
+<dt><em>rotation</em></dt>
+<dd>the rotation of the polygon in radians</dd>
+<dt><em>sizes</em></dt>
+<dd><p class="first">gives the area of the circle circumscribing the
+regular polygon in points^2</p>
+<p>Valid Collection keyword arguments:</p>
+<blockquote>
+<div><ul class="simple">
+<li><em>edgecolors</em>: None</li>
+<li><em>facecolors</em>: None</li>
+<li><em>linewidths</em>: None</li>
+<li><em>antialiaseds</em>: None</li>
+<li><em>offsets</em>: None</li>
+<li><em>transOffset</em>: transforms.IdentityTransform()</li>
+<li><em>norm</em>: None (optional for
+<a class="reference internal" href="matplotlib.cm.ScalarMappable.html#matplotlib.cm.ScalarMappable" title="matplotlib.cm.ScalarMappable"><code class="xref py py-class docutils literal"><span class="pre">matplotlib.cm.ScalarMappable</span></code></a>)</li>
+<li><em>cmap</em>: None (optional for
+<a class="reference internal" href="matplotlib.cm.ScalarMappable.html#matplotlib.cm.ScalarMappable" title="matplotlib.cm.ScalarMappable"><code class="xref py py-class docutils literal"><span class="pre">matplotlib.cm.ScalarMappable</span></code></a>)</li>
+</ul>
+</div></blockquote>
+<p><em>offsets</em> and <em>transOffset</em> are used to translate the patch after
+rendering (default no offsets)</p>
+<p class="last">If any of <em>edgecolors</em>, <em>facecolors</em>, <em>linewidths</em>, <em>antialiaseds</em>
+are None, they default to their <code class="xref py py-data docutils literal"><span class="pre">matplotlib.rcParams</span></code> patch
+setting, in sequence form.</p>
+</dd>
+</dl>
+<p>Example: see <code class="file docutils literal"><span class="pre">examples/dynamic_collection.py</span></code> for
+complete example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">offsets</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">facecolors</span> <span class="o">=</span> <span class="p">[</span><span class="n">cm</span><span class="o">.</span><span class="n">jet</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">20</span><span class="p">)]</span>
+<span class="n">black</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">collection</span> <span class="o">=</span> <span class="n">RegularPolyCollection</span><span class="p">(</span>
+    <span class="n">numsides</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="c1"># a pentagon</span>
+    <span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sizes</span><span class="o">=</span><span class="p">(</span><span class="mi">50</span><span class="p">,),</span>
+    <span class="n">facecolors</span> <span class="o">=</span> <span class="n">facecolors</span><span class="p">,</span>
+    <span class="n">edgecolors</span> <span class="o">=</span> <span class="p">(</span><span class="n">black</span><span class="p">,),</span>
+    <span class="n">linewidths</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,),</span>
+    <span class="n">offsets</span> <span class="o">=</span> <span class="n">offsets</span><span class="p">,</span>
+    <span class="n">transOffset</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">transData</span><span class="p">,</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -776,16 +829,16 @@
             HAS_SOURCE:  true
         };
     </script>
-      <script type="text/javascript" src="../../static/jquery.js"></script>
-      <script type="text/javascript" src="../../static/underscore.js"></script>
-      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
   
   
-    <script type="text/javascript" src="../../static/js/theme.js"></script>
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
   
 
   

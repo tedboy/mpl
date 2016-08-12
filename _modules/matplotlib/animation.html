@@ -1,0 +1,1462 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>matplotlib.animation &mdash; Matplotlib API 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+        <link rel="up" title="matplotlib" href="../matplotlib.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Matplotlib API</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.html">matplotlib</a> &raquo;</li>
+        
+      <li>matplotlib.animation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for matplotlib.animation</h1><div class="highlight"><pre>
+<span></span><span class="c1"># TODO:</span>
+<span class="c1"># * Loop Delay is broken on GTKAgg. This is because source_remove() is not</span>
+<span class="c1">#   working as we want. PyGTK bug?</span>
+<span class="c1"># * Documentation -- this will need a new section of the User&#39;s Guide.</span>
+<span class="c1">#      Both for Animations and just timers.</span>
+<span class="c1">#   - Also need to update http://www.scipy.org/Cookbook/Matplotlib/Animations</span>
+<span class="c1"># * Blit</span>
+<span class="c1">#   * Currently broken with Qt4 for widgets that don&#39;t start on screen</span>
+<span class="c1">#   * Still a few edge cases that aren&#39;t working correctly</span>
+<span class="c1">#   * Can this integrate better with existing matplotlib animation artist flag?</span>
+<span class="c1">#     - If animated removes from default draw(), perhaps we could use this to</span>
+<span class="c1">#       simplify initial draw.</span>
+<span class="c1"># * Example</span>
+<span class="c1">#   * Frameless animation - pure procedural with no loop</span>
+<span class="c1">#   * Need example that uses something like inotify or subprocess</span>
+<span class="c1">#   * Complex syncing examples</span>
+<span class="c1"># * Movies</span>
+<span class="c1">#   * Can blit be enabled for movies?</span>
+<span class="c1"># * Need to consider event sources to allow clicking through multiple figures</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="p">(</span><span class="n">absolute_import</span><span class="p">,</span> <span class="n">division</span><span class="p">,</span> <span class="n">print_function</span><span class="p">,</span>
+                        <span class="n">unicode_literals</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">matplotlib.externals</span> <span class="k">import</span> <span class="n">six</span>
+<span class="kn">from</span> <span class="nn">matplotlib.externals.six.moves</span> <span class="k">import</span> <span class="n">xrange</span><span class="p">,</span> <span class="nb">zip</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">platform</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">itertools</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="c1"># python3</span>
+    <span class="kn">from</span> <span class="nn">base64</span> <span class="k">import</span> <span class="n">encodebytes</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="c1"># python2</span>
+    <span class="kn">from</span> <span class="nn">base64</span> <span class="k">import</span> <span class="n">encodestring</span> <span class="k">as</span> <span class="n">encodebytes</span>
+<span class="kn">import</span> <span class="nn">contextlib</span>
+<span class="kn">import</span> <span class="nn">tempfile</span>
+<span class="kn">from</span> <span class="nn">matplotlib.cbook</span> <span class="k">import</span> <span class="n">iterable</span><span class="p">,</span> <span class="n">is_string_like</span>
+<span class="kn">from</span> <span class="nn">matplotlib.compat</span> <span class="k">import</span> <span class="n">subprocess</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="k">import</span> <span class="n">verbose</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="k">import</span> <span class="n">rcParams</span><span class="p">,</span> <span class="n">rcParamsDefault</span>
+
+<span class="c1"># Process creation flag for subprocess to prevent it raising a terminal</span>
+<span class="c1"># window. See for example:</span>
+<span class="c1"># https://stackoverflow.com/questions/24130623/using-python-subprocess-popen-cant-prevent-exe-stopped-working-prompt</span>
+<span class="k">if</span> <span class="n">platform</span><span class="o">.</span><span class="n">system</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;Windows&#39;</span><span class="p">:</span>
+    <span class="n">CREATE_NO_WINDOW</span> <span class="o">=</span> <span class="mh">0x08000000</span>
+    <span class="n">subprocess_creation_flags</span> <span class="o">=</span> <span class="n">CREATE_NO_WINDOW</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c1"># Apparently None won&#39;t work here</span>
+    <span class="n">subprocess_creation_flags</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># Other potential writing methods:</span>
+<span class="c1"># * http://pymedia.org/</span>
+<span class="c1"># * libmng (produces swf) python wrappers: https://github.com/libming/libming</span>
+<span class="c1"># * Wrap x264 API:</span>
+
+<span class="c1"># (http://stackoverflow.com/questions/2940671/</span>
+<span class="c1"># how-to-encode-series-of-images-into-h264-using-x264-api-c-c )</span>
+
+
+<span class="c1"># A registry for available MovieWriter classes</span>
+<div class="viewcode-block" id="MovieWriterRegistry"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.MovieWriterRegistry.html#matplotlib.animation.MovieWriterRegistry">[docs]</a><span class="k">class</span> <span class="nc">MovieWriterRegistry</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="MovieWriterRegistry.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.MovieWriterRegistry.__init__.html#matplotlib.animation.MovieWriterRegistry.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">avail</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span></div>
+
+    <span class="c1"># Returns a decorator that can be used on classes to register them under</span>
+    <span class="c1"># a name. As in:</span>
+    <span class="c1"># @register(&#39;foo&#39;)</span>
+    <span class="c1"># class Foo:</span>
+    <span class="c1">#    pass</span>
+<div class="viewcode-block" id="MovieWriterRegistry.register"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.MovieWriterRegistry.register.html#matplotlib.animation.MovieWriterRegistry.register">[docs]</a>    <span class="k">def</span> <span class="nf">register</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="n">writerClass</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">writerClass</span><span class="o">.</span><span class="n">isAvailable</span><span class="p">():</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">avail</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">writerClass</span>
+            <span class="k">return</span> <span class="n">writerClass</span>
+        <span class="k">return</span> <span class="n">wrapper</span></div>
+
+<div class="viewcode-block" id="MovieWriterRegistry.list"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.MovieWriterRegistry.list.html#matplotlib.animation.MovieWriterRegistry.list">[docs]</a>    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39; Get a list of available MovieWriters.&#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">avail</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="MovieWriterRegistry.is_available"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.MovieWriterRegistry.is_available.html#matplotlib.animation.MovieWriterRegistry.is_available">[docs]</a>    <span class="k">def</span> <span class="nf">is_available</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">avail</span></div>
+
+    <span class="k">def</span> <span class="nf">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">avail</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;No MovieWriters available!&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">avail</span><span class="p">[</span><span class="n">name</span><span class="p">]</span></div>
+
+<span class="n">writers</span> <span class="o">=</span> <span class="n">MovieWriterRegistry</span><span class="p">()</span>
+
+
+<div class="viewcode-block" id="MovieWriter"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.MovieWriter.html#matplotlib.animation.MovieWriter">[docs]</a><span class="k">class</span> <span class="nc">MovieWriter</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Base class for writing movies. Fundamentally, what a MovieWriter does</span>
+<span class="sd">    is provide is a way to grab frames by calling grab_frame(). setup()</span>
+<span class="sd">    is called to start the process and finish() is called afterwards.</span>
+<span class="sd">    This class is set up to provide for writing movie frame data to a pipe.</span>
+<span class="sd">    saving() is provided as a context manager to facilitate this process as::</span>
+
+<span class="sd">      with moviewriter.saving(&#39;myfile.mp4&#39;):</span>
+<span class="sd">          # Iterate over frames</span>
+<span class="sd">          moviewriter.grab_frame()</span>
+
+<span class="sd">    The use of the context manager ensures that setup and cleanup are</span>
+<span class="sd">    performed as necessary.</span>
+
+<span class="sd">    frame_format: string</span>
+<span class="sd">        The format used in writing frame data, defaults to &#39;rgba&#39;</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+<div class="viewcode-block" id="MovieWriter.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.MovieWriter.__init__.html#matplotlib.animation.MovieWriter.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fps</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">codec</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">bitrate</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">extra_args</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Construct a new MovieWriter object.</span>
+
+<span class="sd">        fps: int</span>
+<span class="sd">            Framerate for movie.</span>
+<span class="sd">        codec: string or None, optional</span>
+<span class="sd">            The codec to use. If None (the default) the setting in the</span>
+<span class="sd">            rcParam `animation.codec` is used.</span>
+<span class="sd">        bitrate: int or None, optional</span>
+<span class="sd">            The bitrate for the saved movie file, which is one way to control</span>
+<span class="sd">            the output file size and quality. The default value is None,</span>
+<span class="sd">            which uses the value stored in the rcParam `animation.bitrate`.</span>
+<span class="sd">            A value of -1 implies that the bitrate should be determined</span>
+<span class="sd">            automatically by the underlying utility.</span>
+<span class="sd">        extra_args: list of strings or None</span>
+<span class="sd">            A list of extra string arguments to be passed to the underlying</span>
+<span class="sd">            movie utiltiy. The default is None, which passes the additional</span>
+<span class="sd">            argurments in the &#39;animation.extra_args&#39; rcParam.</span>
+<span class="sd">        metadata: dict of string:string or None</span>
+<span class="sd">            A dictionary of keys and values for metadata to include in the</span>
+<span class="sd">            output file. Some keys that may be of use include:</span>
+<span class="sd">            title, artist, genre, subject, copyright, srcform, comment.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fps</span> <span class="o">=</span> <span class="n">fps</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">frame_format</span> <span class="o">=</span> <span class="s1">&#39;rgba&#39;</span>
+
+        <span class="k">if</span> <span class="n">codec</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">codec</span> <span class="o">=</span> <span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;animation.codec&#39;</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">codec</span> <span class="o">=</span> <span class="n">codec</span>
+
+        <span class="k">if</span> <span class="n">bitrate</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">bitrate</span> <span class="o">=</span> <span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;animation.bitrate&#39;</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">bitrate</span> <span class="o">=</span> <span class="n">bitrate</span>
+
+        <span class="k">if</span> <span class="n">extra_args</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">extra_args</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">rcParams</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">args_key</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">extra_args</span> <span class="o">=</span> <span class="n">extra_args</span>
+
+        <span class="k">if</span> <span class="n">metadata</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="n">metadata</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">frame_size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s1">&#39;A tuple (width,height) in pixels of a movie frame.&#39;</span>
+        <span class="n">width_inches</span><span class="p">,</span> <span class="n">height_inches</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">get_size_inches</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">width_inches</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">dpi</span><span class="p">,</span> <span class="n">height_inches</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">dpi</span>
+
+<div class="viewcode-block" id="MovieWriter.setup"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.MovieWriter.setup.html#matplotlib.animation.MovieWriter.setup">[docs]</a>    <span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fig</span><span class="p">,</span> <span class="n">outfile</span><span class="p">,</span> <span class="n">dpi</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Perform setup for writing the movie file.</span>
+
+<span class="sd">        fig: `matplotlib.Figure` instance</span>
+<span class="sd">            The figure object that contains the information for frames</span>
+<span class="sd">        outfile: string</span>
+<span class="sd">            The filename of the resulting movie file</span>
+<span class="sd">        dpi: int</span>
+<span class="sd">            The DPI (or resolution) for the file.  This controls the size</span>
+<span class="sd">            in pixels of the resulting movie file.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">outfile</span> <span class="o">=</span> <span class="n">outfile</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fig</span> <span class="o">=</span> <span class="n">fig</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dpi</span> <span class="o">=</span> <span class="n">dpi</span>
+
+        <span class="c1"># Run here so that grab_frame() can write the data to a pipe. This</span>
+        <span class="c1"># eliminates the need for temp files.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_run</span><span class="p">()</span></div>
+
+    <span class="nd">@contextlib</span><span class="o">.</span><span class="n">contextmanager</span>
+<div class="viewcode-block" id="MovieWriter.saving"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.MovieWriter.saving.html#matplotlib.animation.MovieWriter.saving">[docs]</a>    <span class="k">def</span> <span class="nf">saving</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Context manager to facilitate writing the movie file.</span>
+
+<span class="sd">        ``*args`` are any parameters that should be passed to `setup`.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="c1"># This particular sequence is what contextlib.contextmanager wants</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+        <span class="k">yield</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span></div>
+
+    <span class="k">def</span> <span class="nf">_run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Uses subprocess to call the program for assembling frames into a</span>
+        <span class="c1"># movie file.  *args* returns the sequence of command line arguments</span>
+        <span class="c1"># from a few configuration options.</span>
+        <span class="n">command</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_args</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">verbose</span><span class="o">.</span><span class="n">ge</span><span class="p">(</span><span class="s1">&#39;debug&#39;</span><span class="p">):</span>
+            <span class="n">output</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">output</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span>
+        <span class="n">verbose</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="s1">&#39;MovieWriter.run: running command: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span>
+                       <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">command</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_proc</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span><span class="n">command</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                                      <span class="n">stdout</span><span class="o">=</span><span class="n">output</span><span class="p">,</span> <span class="n">stderr</span><span class="o">=</span><span class="n">output</span><span class="p">,</span>
+                                      <span class="n">stdin</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span>
+                                      <span class="n">creationflags</span><span class="o">=</span><span class="n">subprocess_creation_flags</span><span class="p">)</span>
+
+<div class="viewcode-block" id="MovieWriter.finish"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.MovieWriter.finish.html#matplotlib.animation.MovieWriter.finish">[docs]</a>    <span class="k">def</span> <span class="nf">finish</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s1">&#39;Finish any processing for writing the movie.&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cleanup</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="MovieWriter.grab_frame"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.MovieWriter.grab_frame.html#matplotlib.animation.MovieWriter.grab_frame">[docs]</a>    <span class="k">def</span> <span class="nf">grab_frame</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">savefig_kwargs</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Grab the image information from the figure and save as a movie frame.</span>
+<span class="sd">        All keyword arguments in savefig_kwargs are passed on to the &#39;savefig&#39;</span>
+<span class="sd">        command that saves the figure.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">verbose</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="s1">&#39;MovieWriter.grab_frame: Grabbing frame.&#39;</span><span class="p">,</span>
+                       <span class="n">level</span><span class="o">=</span><span class="s1">&#39;debug&#39;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># Tell the figure to save its data to the sink, using the</span>
+            <span class="c1"># frame format and dpi.</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_frame_sink</span><span class="p">(),</span> <span class="nb">format</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">frame_format</span><span class="p">,</span>
+                             <span class="n">dpi</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">dpi</span><span class="p">,</span> <span class="o">**</span><span class="n">savefig_kwargs</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">RuntimeError</span><span class="p">:</span>
+            <span class="n">out</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_proc</span><span class="o">.</span><span class="n">communicate</span><span class="p">()</span>
+            <span class="n">verbose</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="s1">&#39;MovieWriter -- Error &#39;</span>
+                           <span class="s1">&#39;running proc:</span><span class="se">\n</span><span class="si">%s</span><span class="se">\n</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">out</span><span class="p">,</span>
+                                                      <span class="n">err</span><span class="p">),</span> <span class="n">level</span><span class="o">=</span><span class="s1">&#39;helpful&#39;</span><span class="p">)</span>
+            <span class="k">raise</span></div>
+
+    <span class="k">def</span> <span class="nf">_frame_sink</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s1">&#39;Returns the place to which frames should be written.&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_proc</span><span class="o">.</span><span class="n">stdin</span>
+
+    <span class="k">def</span> <span class="nf">_args</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s1">&#39;Assemble list of utility-specific command-line arguments.&#39;</span>
+        <span class="k">return</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;args needs to be implemented by subclass.&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="MovieWriter.cleanup"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.MovieWriter.cleanup.html#matplotlib.animation.MovieWriter.cleanup">[docs]</a>    <span class="k">def</span> <span class="nf">cleanup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s1">&#39;Clean-up and collect the process used to write the movie file.&#39;</span>
+        <span class="n">out</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_proc</span><span class="o">.</span><span class="n">communicate</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_frame_sink</span><span class="p">()</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="n">verbose</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="s1">&#39;MovieWriter -- &#39;</span>
+                       <span class="s1">&#39;Command stdout:</span><span class="se">\n</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">out</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="s1">&#39;debug&#39;</span><span class="p">)</span>
+        <span class="n">verbose</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="s1">&#39;MovieWriter -- &#39;</span>
+                       <span class="s1">&#39;Command stderr:</span><span class="se">\n</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">err</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="s1">&#39;debug&#39;</span><span class="p">)</span></div>
+
+    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="MovieWriter.bin_path"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.MovieWriter.bin_path.html#matplotlib.animation.MovieWriter.bin_path">[docs]</a>    <span class="k">def</span> <span class="nf">bin_path</span><span class="p">(</span><span class="n">cls</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Returns the binary path to the commandline tool used by a specific</span>
+<span class="sd">        subclass. This is a class method so that the tool can be looked for</span>
+<span class="sd">        before making a particular MovieWriter subclass available.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="n">rcParams</span><span class="p">[</span><span class="n">cls</span><span class="o">.</span><span class="n">exec_key</span><span class="p">]</span></div>
+
+    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="MovieWriter.isAvailable"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.MovieWriter.isAvailable.html#matplotlib.animation.MovieWriter.isAvailable">[docs]</a>    <span class="k">def</span> <span class="nf">isAvailable</span><span class="p">(</span><span class="n">cls</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Check to see if a MovieWriter subclass is actually available by</span>
+<span class="sd">        running the commandline tool.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">cls</span><span class="o">.</span><span class="n">bin_path</span><span class="p">():</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">p</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span><span class="n">cls</span><span class="o">.</span><span class="n">bin_path</span><span class="p">(),</span>
+                             <span class="n">shell</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                             <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span>
+                             <span class="n">stderr</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span>
+                             <span class="n">creationflags</span><span class="o">=</span><span class="n">subprocess_creation_flags</span><span class="p">)</span>
+            <span class="n">p</span><span class="o">.</span><span class="n">communicate</span><span class="p">()</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">except</span> <span class="ne">OSError</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span></div></div>
+
+
+<div class="viewcode-block" id="FileMovieWriter"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.FileMovieWriter.html#matplotlib.animation.FileMovieWriter">[docs]</a><span class="k">class</span> <span class="nc">FileMovieWriter</span><span class="p">(</span><span class="n">MovieWriter</span><span class="p">):</span>
+    <span class="s1">&#39;`MovieWriter` subclass that handles writing to a file.&#39;</span>
+<div class="viewcode-block" id="FileMovieWriter.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.FileMovieWriter.__init__.html#matplotlib.animation.FileMovieWriter.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">MovieWriter</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">frame_format</span> <span class="o">=</span> <span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;animation.frame_format&#39;</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="FileMovieWriter.setup"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.FileMovieWriter.setup.html#matplotlib.animation.FileMovieWriter.setup">[docs]</a>    <span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fig</span><span class="p">,</span> <span class="n">outfile</span><span class="p">,</span> <span class="n">dpi</span><span class="p">,</span> <span class="n">frame_prefix</span><span class="o">=</span><span class="s1">&#39;_tmp&#39;</span><span class="p">,</span> <span class="n">clear_temp</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Perform setup for writing the movie file.</span>
+
+<span class="sd">        fig: `matplotlib.Figure` instance</span>
+<span class="sd">            The figure object that contains the information for frames</span>
+<span class="sd">        outfile: string</span>
+<span class="sd">            The filename of the resulting movie file</span>
+<span class="sd">        dpi: int</span>
+<span class="sd">            The DPI (or resolution) for the file.  This controls the size</span>
+<span class="sd">            in pixels of the resulting movie file.</span>
+<span class="sd">        frame_prefix: string, optional</span>
+<span class="sd">            The filename prefix to use for the temporary files. Defaults</span>
+<span class="sd">            to &#39;_tmp&#39;</span>
+<span class="sd">        clear_temp: bool</span>
+<span class="sd">            Specifies whether the temporary files should be deleted after</span>
+<span class="sd">            the movie is written. (Useful for debugging.) Defaults to True.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fig</span> <span class="o">=</span> <span class="n">fig</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">outfile</span> <span class="o">=</span> <span class="n">outfile</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dpi</span> <span class="o">=</span> <span class="n">dpi</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">clear_temp</span> <span class="o">=</span> <span class="n">clear_temp</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">temp_prefix</span> <span class="o">=</span> <span class="n">frame_prefix</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_frame_counter</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># used for generating sequential file names</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_temp_names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fname_format_str</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%s%%</span><span class="s1">07d.</span><span class="si">%s</span><span class="s1">&#39;</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">frame_format</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Format (png, jpeg, etc.) to use for saving the frames, which can be</span>
+<span class="sd">        decided by the individual subclasses.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_frame_format</span>
+
+    <span class="nd">@frame_format</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">frame_format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">frame_format</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">frame_format</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">supported_formats</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_frame_format</span> <span class="o">=</span> <span class="n">frame_format</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_frame_format</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">supported_formats</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">_base_temp_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Generates a template name (without number) given the frame format</span>
+        <span class="c1"># for extension and the prefix.</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">fname_format_str</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">temp_prefix</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">frame_format</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_frame_sink</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Creates a filename for saving using the basename and the current</span>
+        <span class="c1"># counter.</span>
+        <span class="n">fname</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_base_temp_name</span><span class="p">()</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">_frame_counter</span>
+
+        <span class="c1"># Save the filename so we can delete it later if necessary</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_temp_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
+        <span class="n">verbose</span><span class="o">.</span><span class="n">report</span><span class="p">(</span>
+            <span class="s1">&#39;FileMovieWriter.frame_sink: saving frame </span><span class="si">%d</span><span class="s1"> to fname=</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span>
+            <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_frame_counter</span><span class="p">,</span> <span class="n">fname</span><span class="p">),</span>
+            <span class="n">level</span><span class="o">=</span><span class="s1">&#39;debug&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_frame_counter</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># Ensures each created name is &#39;unique&#39;</span>
+
+        <span class="c1"># This file returned here will be closed once it&#39;s used by savefig()</span>
+        <span class="c1"># because it will no longer be referenced and will be gc-ed.</span>
+        <span class="k">return</span> <span class="nb">open</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="FileMovieWriter.grab_frame"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.FileMovieWriter.grab_frame.html#matplotlib.animation.FileMovieWriter.grab_frame">[docs]</a>    <span class="k">def</span> <span class="nf">grab_frame</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">savefig_kwargs</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Grab the image information from the figure and save as a movie frame.</span>
+<span class="sd">        All keyword arguments in savefig_kwargs are passed on to the &#39;savefig&#39;</span>
+<span class="sd">        command that saves the figure.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="c1"># Overloaded to explicitly close temp file.</span>
+        <span class="n">verbose</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="s1">&#39;MovieWriter.grab_frame: Grabbing frame.&#39;</span><span class="p">,</span>
+                       <span class="n">level</span><span class="o">=</span><span class="s1">&#39;debug&#39;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># Tell the figure to save its data to the sink, using the</span>
+            <span class="c1"># frame format and dpi.</span>
+            <span class="n">myframesink</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_frame_sink</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">myframesink</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">frame_format</span><span class="p">,</span>
+                             <span class="n">dpi</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">dpi</span><span class="p">,</span> <span class="o">**</span><span class="n">savefig_kwargs</span><span class="p">)</span>
+            <span class="n">myframesink</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+        <span class="k">except</span> <span class="ne">RuntimeError</span><span class="p">:</span>
+            <span class="n">out</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_proc</span><span class="o">.</span><span class="n">communicate</span><span class="p">()</span>
+            <span class="n">verbose</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="s1">&#39;MovieWriter -- Error &#39;</span>
+                           <span class="s1">&#39;running proc:</span><span class="se">\n</span><span class="si">%s</span><span class="se">\n</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">out</span><span class="p">,</span>
+                                                      <span class="n">err</span><span class="p">),</span> <span class="n">level</span><span class="o">=</span><span class="s1">&#39;helpful&#39;</span><span class="p">)</span>
+            <span class="k">raise</span></div>
+
+<div class="viewcode-block" id="FileMovieWriter.finish"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.FileMovieWriter.finish.html#matplotlib.animation.FileMovieWriter.finish">[docs]</a>    <span class="k">def</span> <span class="nf">finish</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Call run here now that all frame grabbing is done. All temp files</span>
+        <span class="c1"># are available to be assembled.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_run</span><span class="p">()</span>
+        <span class="n">MovieWriter</span><span class="o">.</span><span class="n">finish</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>  <span class="c1"># Will call clean-up</span>
+
+        <span class="c1"># Check error code for creating file here, since we just run</span>
+        <span class="c1"># the process here, rather than having an open pipe.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_proc</span><span class="o">.</span><span class="n">returncode</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s1">&#39;Error creating movie, return code: &#39;</span>
+                               <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_proc</span><span class="o">.</span><span class="n">returncode</span><span class="p">)</span>
+                               <span class="o">+</span> <span class="s1">&#39; Try running with --verbose-debug&#39;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="FileMovieWriter.cleanup"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.FileMovieWriter.cleanup.html#matplotlib.animation.FileMovieWriter.cleanup">[docs]</a>    <span class="k">def</span> <span class="nf">cleanup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">MovieWriter</span><span class="o">.</span><span class="n">cleanup</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+        <span class="c1"># Delete temporary files</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">clear_temp</span><span class="p">:</span>
+            <span class="n">verbose</span><span class="o">.</span><span class="n">report</span><span class="p">(</span>
+                <span class="s1">&#39;MovieWriter: clearing temporary fnames=</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span>
+                <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_temp_names</span><span class="p">),</span>
+                <span class="n">level</span><span class="o">=</span><span class="s1">&#39;debug&#39;</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">fname</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_temp_names</span><span class="p">:</span>
+                <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span></div></div>
+
+
+<span class="c1"># Base class of ffmpeg information. Has the config keys and the common set</span>
+<span class="c1"># of arguments that controls the *output* side of things.</span>
+<div class="viewcode-block" id="FFMpegBase"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.FFMpegBase.html#matplotlib.animation.FFMpegBase">[docs]</a><span class="k">class</span> <span class="nc">FFMpegBase</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="n">exec_key</span> <span class="o">=</span> <span class="s1">&#39;animation.ffmpeg_path&#39;</span>
+    <span class="n">args_key</span> <span class="o">=</span> <span class="s1">&#39;animation.ffmpeg_args&#39;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">output_args</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># The %dk adds &#39;k&#39; as a suffix so that ffmpeg treats our bitrate as in</span>
+        <span class="c1"># kbps</span>
+        <span class="n">args</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;-vcodec&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">codec</span><span class="p">]</span>
+        <span class="c1"># For h264, the default format is yuv444p, which is not compatible</span>
+        <span class="c1"># with quicktime (and others). Specifying yuv420p fixes playback on</span>
+        <span class="c1"># iOS,as well as HTML5 video in firefox and safari (on both Win and</span>
+        <span class="c1"># OSX). Also fixes internet explorer. This is as of 2015/10/29.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">codec</span> <span class="o">==</span> <span class="s1">&#39;h264&#39;</span> <span class="ow">and</span> <span class="s1">&#39;-pix_fmt&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">extra_args</span><span class="p">:</span>
+            <span class="n">args</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="s1">&#39;-pix_fmt&#39;</span><span class="p">,</span> <span class="s1">&#39;yuv420p&#39;</span><span class="p">])</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">bitrate</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">args</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="s1">&#39;-b&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1">k&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">bitrate</span><span class="p">])</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">extra_args</span><span class="p">:</span>
+            <span class="n">args</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">extra_args</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">):</span>
+            <span class="n">args</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="s1">&#39;-metadata&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1">=</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)])</span>
+
+        <span class="k">return</span> <span class="n">args</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;-y&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">outfile</span><span class="p">]</span></div>
+
+
+<span class="c1"># Combine FFMpeg options with pipe-based writing</span>
+<span class="nd">@writers</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s1">&#39;ffmpeg&#39;</span><span class="p">)</span>
+<div class="viewcode-block" id="FFMpegWriter"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.FFMpegWriter.html#matplotlib.animation.FFMpegWriter">[docs]</a><span class="k">class</span> <span class="nc">FFMpegWriter</span><span class="p">(</span><span class="n">MovieWriter</span><span class="p">,</span> <span class="n">FFMpegBase</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">_args</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Returns the command line parameters for subprocess to use</span>
+        <span class="c1"># ffmpeg to create a movie using a pipe.</span>
+        <span class="n">args</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">bin_path</span><span class="p">(),</span> <span class="s1">&#39;-f&#39;</span><span class="p">,</span> <span class="s1">&#39;rawvideo&#39;</span><span class="p">,</span> <span class="s1">&#39;-vcodec&#39;</span><span class="p">,</span> <span class="s1">&#39;rawvideo&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;-s&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1">x</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">frame_size</span><span class="p">,</span> <span class="s1">&#39;-pix_fmt&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">frame_format</span><span class="p">,</span>
+                <span class="s1">&#39;-r&#39;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fps</span><span class="p">)]</span>
+        <span class="c1"># Logging is quieted because subprocess.PIPE has limited buffer size.</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">verbose</span><span class="o">.</span><span class="n">ge</span><span class="p">(</span><span class="s1">&#39;debug&#39;</span><span class="p">):</span>
+            <span class="n">args</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;-loglevel&#39;</span><span class="p">,</span> <span class="s1">&#39;quiet&#39;</span><span class="p">]</span>
+        <span class="n">args</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;-i&#39;</span><span class="p">,</span> <span class="s1">&#39;pipe:&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">output_args</span>
+        <span class="k">return</span> <span class="n">args</span></div>
+
+
+<span class="c1"># Combine FFMpeg options with temp file-based writing</span>
+<span class="nd">@writers</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s1">&#39;ffmpeg_file&#39;</span><span class="p">)</span>
+<div class="viewcode-block" id="FFMpegFileWriter"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.FFMpegFileWriter.html#matplotlib.animation.FFMpegFileWriter">[docs]</a><span class="k">class</span> <span class="nc">FFMpegFileWriter</span><span class="p">(</span><span class="n">FileMovieWriter</span><span class="p">,</span> <span class="n">FFMpegBase</span><span class="p">):</span>
+    <span class="n">supported_formats</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;png&#39;</span><span class="p">,</span> <span class="s1">&#39;jpeg&#39;</span><span class="p">,</span> <span class="s1">&#39;ppm&#39;</span><span class="p">,</span> <span class="s1">&#39;tiff&#39;</span><span class="p">,</span> <span class="s1">&#39;sgi&#39;</span><span class="p">,</span> <span class="s1">&#39;bmp&#39;</span><span class="p">,</span>
+                         <span class="s1">&#39;pbm&#39;</span><span class="p">,</span> <span class="s1">&#39;raw&#39;</span><span class="p">,</span> <span class="s1">&#39;rgba&#39;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">_args</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Returns the command line parameters for subprocess to use</span>
+        <span class="c1"># ffmpeg to create a movie using a collection of temp images</span>
+        <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">bin_path</span><span class="p">(),</span> <span class="s1">&#39;-i&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_base_temp_name</span><span class="p">(),</span>
+                <span class="s1">&#39;-vframes&#39;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_frame_counter</span><span class="p">),</span>
+                <span class="s1">&#39;-r&#39;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fps</span><span class="p">)]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">output_args</span></div>
+
+
+<span class="c1"># Base class of avconv information.  AVConv has identical arguments to</span>
+<span class="c1"># FFMpeg</span>
+<div class="viewcode-block" id="AVConvBase"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.AVConvBase.html#matplotlib.animation.AVConvBase">[docs]</a><span class="k">class</span> <span class="nc">AVConvBase</span><span class="p">(</span><span class="n">FFMpegBase</span><span class="p">):</span>
+    <span class="n">exec_key</span> <span class="o">=</span> <span class="s1">&#39;animation.avconv_path&#39;</span>
+    <span class="n">args_key</span> <span class="o">=</span> <span class="s1">&#39;animation.avconv_args&#39;</span></div>
+
+
+<span class="c1"># Combine AVConv options with pipe-based writing</span>
+<span class="nd">@writers</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s1">&#39;avconv&#39;</span><span class="p">)</span>
+<div class="viewcode-block" id="AVConvWriter"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.AVConvWriter.html#matplotlib.animation.AVConvWriter">[docs]</a><span class="k">class</span> <span class="nc">AVConvWriter</span><span class="p">(</span><span class="n">AVConvBase</span><span class="p">,</span> <span class="n">FFMpegWriter</span><span class="p">):</span>
+    <span class="k">pass</span></div>
+
+
+<span class="c1"># Combine AVConv options with file-based writing</span>
+<span class="nd">@writers</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s1">&#39;avconv_file&#39;</span><span class="p">)</span>
+<div class="viewcode-block" id="AVConvFileWriter"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.AVConvFileWriter.html#matplotlib.animation.AVConvFileWriter">[docs]</a><span class="k">class</span> <span class="nc">AVConvFileWriter</span><span class="p">(</span><span class="n">AVConvBase</span><span class="p">,</span> <span class="n">FFMpegFileWriter</span><span class="p">):</span>
+    <span class="k">pass</span></div>
+
+
+<span class="c1"># Base class of mencoder information. Contains configuration key information</span>
+<span class="c1"># as well as arguments for controlling *output*</span>
+<div class="viewcode-block" id="MencoderBase"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.MencoderBase.html#matplotlib.animation.MencoderBase">[docs]</a><span class="k">class</span> <span class="nc">MencoderBase</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="n">exec_key</span> <span class="o">=</span> <span class="s1">&#39;animation.mencoder_path&#39;</span>
+    <span class="n">args_key</span> <span class="o">=</span> <span class="s1">&#39;animation.mencoder_args&#39;</span>
+
+    <span class="c1"># Mencoder only allows certain keys, other ones cause the program</span>
+    <span class="c1"># to fail.</span>
+    <span class="n">allowed_metadata</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;artist&#39;</span><span class="p">,</span> <span class="s1">&#39;genre&#39;</span><span class="p">,</span> <span class="s1">&#39;subject&#39;</span><span class="p">,</span> <span class="s1">&#39;copyright&#39;</span><span class="p">,</span>
+                        <span class="s1">&#39;srcform&#39;</span><span class="p">,</span> <span class="s1">&#39;comment&#39;</span><span class="p">]</span>
+
+    <span class="c1"># Mencoder mandates using name, but &#39;title&#39; works better with ffmpeg.</span>
+    <span class="c1"># If we find it, just put it&#39;s value into name</span>
+    <span class="k">def</span> <span class="nf">_remap_metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="s1">&#39;title&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">output_args</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_remap_metadata</span><span class="p">()</span>
+        <span class="n">lavcopts</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;vcodec&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">codec</span><span class="p">}</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">bitrate</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">lavcopts</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">vbitrate</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">bitrate</span><span class="p">)</span>
+        <span class="n">args</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;-o&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">outfile</span><span class="p">,</span> <span class="s1">&#39;-ovc&#39;</span><span class="p">,</span> <span class="s1">&#39;lavc&#39;</span><span class="p">,</span> <span class="s1">&#39;-lavcopts&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;:&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">starmap</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{0}</span><span class="s1">=</span><span class="si">{1}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">,</span>
+                                           <span class="n">lavcopts</span><span class="o">.</span><span class="n">items</span><span class="p">()))]</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">extra_args</span><span class="p">:</span>
+            <span class="n">args</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">extra_args</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">:</span>
+            <span class="n">args</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="s1">&#39;-info&#39;</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">=</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+                         <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">)</span>
+                         <span class="k">if</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">allowed_metadata</span><span class="p">)])</span>
+        <span class="k">return</span> <span class="n">args</span></div>
+
+
+<span class="c1"># Combine Mencoder options with pipe-based writing</span>
+<span class="nd">@writers</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s1">&#39;mencoder&#39;</span><span class="p">)</span>
+<div class="viewcode-block" id="MencoderWriter"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.MencoderWriter.html#matplotlib.animation.MencoderWriter">[docs]</a><span class="k">class</span> <span class="nc">MencoderWriter</span><span class="p">(</span><span class="n">MovieWriter</span><span class="p">,</span> <span class="n">MencoderBase</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">_args</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Returns the command line parameters for subprocess to use</span>
+        <span class="c1"># mencoder to create a movie</span>
+        <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">bin_path</span><span class="p">(),</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39;-demuxer&#39;</span><span class="p">,</span> <span class="s1">&#39;rawvideo&#39;</span><span class="p">,</span> <span class="s1">&#39;-rawvideo&#39;</span><span class="p">,</span>
+                <span class="p">(</span><span class="s1">&#39;w=</span><span class="si">%i</span><span class="s1">:h=</span><span class="si">%i</span><span class="s1">:&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">frame_size</span> <span class="o">+</span>
+                <span class="s1">&#39;fps=</span><span class="si">%i</span><span class="s1">:format=</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fps</span><span class="p">,</span>
+                                      <span class="bp">self</span><span class="o">.</span><span class="n">frame_format</span><span class="p">))]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">output_args</span></div>
+
+
+<span class="c1"># Combine Mencoder options with temp file-based writing</span>
+<span class="nd">@writers</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s1">&#39;mencoder_file&#39;</span><span class="p">)</span>
+<div class="viewcode-block" id="MencoderFileWriter"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.MencoderFileWriter.html#matplotlib.animation.MencoderFileWriter">[docs]</a><span class="k">class</span> <span class="nc">MencoderFileWriter</span><span class="p">(</span><span class="n">FileMovieWriter</span><span class="p">,</span> <span class="n">MencoderBase</span><span class="p">):</span>
+    <span class="n">supported_formats</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;png&#39;</span><span class="p">,</span> <span class="s1">&#39;jpeg&#39;</span><span class="p">,</span> <span class="s1">&#39;tga&#39;</span><span class="p">,</span> <span class="s1">&#39;sgi&#39;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">_args</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Returns the command line parameters for subprocess to use</span>
+        <span class="c1"># mencoder to create a movie</span>
+        <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">bin_path</span><span class="p">(),</span>
+                <span class="s1">&#39;mf://</span><span class="si">%s</span><span class="s1">*.</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">temp_prefix</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">frame_format</span><span class="p">),</span>
+                <span class="s1">&#39;-frames&#39;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_frame_counter</span><span class="p">),</span> <span class="s1">&#39;-mf&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;type=</span><span class="si">%s</span><span class="s1">:fps=</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">frame_format</span><span class="p">,</span>
+                                    <span class="bp">self</span><span class="o">.</span><span class="n">fps</span><span class="p">)]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">output_args</span></div>
+
+
+<span class="c1"># Base class for animated GIFs with convert utility</span>
+<div class="viewcode-block" id="ImageMagickBase"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.ImageMagickBase.html#matplotlib.animation.ImageMagickBase">[docs]</a><span class="k">class</span> <span class="nc">ImageMagickBase</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="n">exec_key</span> <span class="o">=</span> <span class="s1">&#39;animation.convert_path&#39;</span>
+    <span class="n">args_key</span> <span class="o">=</span> <span class="s1">&#39;animation.convert_args&#39;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">delay</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mf">100.</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">fps</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">output_args</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">outfile</span><span class="p">]</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">_init_from_registry</span><span class="p">(</span><span class="n">cls</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">platform</span> <span class="o">!=</span> <span class="s1">&#39;win32&#39;</span> <span class="ow">or</span> <span class="n">rcParams</span><span class="p">[</span><span class="n">cls</span><span class="o">.</span><span class="n">exec_key</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;convert&#39;</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="kn">from</span> <span class="nn">matplotlib.externals.six.moves</span> <span class="k">import</span> <span class="n">winreg</span>
+        <span class="k">for</span> <span class="n">flag</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">winreg</span><span class="o">.</span><span class="n">KEY_WOW64_32KEY</span><span class="p">,</span> <span class="n">winreg</span><span class="o">.</span><span class="n">KEY_WOW64_64KEY</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">hkey</span> <span class="o">=</span> <span class="n">winreg</span><span class="o">.</span><span class="n">OpenKeyEx</span><span class="p">(</span><span class="n">winreg</span><span class="o">.</span><span class="n">HKEY_LOCAL_MACHINE</span><span class="p">,</span>
+                                        <span class="s1">&#39;Software</span><span class="se">\\</span><span class="s1">Imagemagick</span><span class="se">\\</span><span class="s1">Current&#39;</span><span class="p">,</span>
+                                        <span class="mi">0</span><span class="p">,</span> <span class="n">winreg</span><span class="o">.</span><span class="n">KEY_QUERY_VALUE</span> <span class="o">|</span> <span class="n">flag</span><span class="p">)</span>
+                <span class="n">binpath</span> <span class="o">=</span> <span class="n">winreg</span><span class="o">.</span><span class="n">QueryValueEx</span><span class="p">(</span><span class="n">hkey</span><span class="p">,</span> <span class="s1">&#39;BinPath&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">winreg</span><span class="o">.</span><span class="n">CloseKey</span><span class="p">(</span><span class="n">hkey</span><span class="p">)</span>
+                <span class="n">binpath</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">convert.exe&#39;</span>
+                <span class="k">break</span>
+            <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+                <span class="n">binpath</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="n">rcParams</span><span class="p">[</span><span class="n">cls</span><span class="o">.</span><span class="n">exec_key</span><span class="p">]</span> <span class="o">=</span> <span class="n">rcParamsDefault</span><span class="p">[</span><span class="n">cls</span><span class="o">.</span><span class="n">exec_key</span><span class="p">]</span> <span class="o">=</span> <span class="n">binpath</span></div>
+
+
+<span class="n">ImageMagickBase</span><span class="o">.</span><span class="n">_init_from_registry</span><span class="p">()</span>
+
+
+<span class="nd">@writers</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s1">&#39;imagemagick&#39;</span><span class="p">)</span>
+<div class="viewcode-block" id="ImageMagickWriter"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.ImageMagickWriter.html#matplotlib.animation.ImageMagickWriter">[docs]</a><span class="k">class</span> <span class="nc">ImageMagickWriter</span><span class="p">(</span><span class="n">MovieWriter</span><span class="p">,</span> <span class="n">ImageMagickBase</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">_args</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">bin_path</span><span class="p">(),</span>
+                 <span class="s1">&#39;-size&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">%i</span><span class="s1">x</span><span class="si">%i</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">frame_size</span><span class="p">,</span> <span class="s1">&#39;-depth&#39;</span><span class="p">,</span> <span class="s1">&#39;8&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;-delay&#39;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">delay</span><span class="p">),</span> <span class="s1">&#39;-loop&#39;</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;</span><span class="si">%s</span><span class="s1">:-&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">frame_format</span><span class="p">]</span>
+                <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">output_args</span><span class="p">)</span></div>
+
+
+<span class="nd">@writers</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s1">&#39;imagemagick_file&#39;</span><span class="p">)</span>
+<div class="viewcode-block" id="ImageMagickFileWriter"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.ImageMagickFileWriter.html#matplotlib.animation.ImageMagickFileWriter">[docs]</a><span class="k">class</span> <span class="nc">ImageMagickFileWriter</span><span class="p">(</span><span class="n">FileMovieWriter</span><span class="p">,</span> <span class="n">ImageMagickBase</span><span class="p">):</span>
+    <span class="n">supported_formats</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;png&#39;</span><span class="p">,</span> <span class="s1">&#39;jpeg&#39;</span><span class="p">,</span> <span class="s1">&#39;ppm&#39;</span><span class="p">,</span> <span class="s1">&#39;tiff&#39;</span><span class="p">,</span> <span class="s1">&#39;sgi&#39;</span><span class="p">,</span> <span class="s1">&#39;bmp&#39;</span><span class="p">,</span>
+                         <span class="s1">&#39;pbm&#39;</span><span class="p">,</span> <span class="s1">&#39;raw&#39;</span><span class="p">,</span> <span class="s1">&#39;rgba&#39;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">_args</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">bin_path</span><span class="p">(),</span> <span class="s1">&#39;-delay&#39;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">delay</span><span class="p">),</span> <span class="s1">&#39;-loop&#39;</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;</span><span class="si">%s</span><span class="s1">*.</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">temp_prefix</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">frame_format</span><span class="p">)]</span>
+                <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">output_args</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Animation"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.Animation.html#matplotlib.animation.Animation">[docs]</a><span class="k">class</span> <span class="nc">Animation</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    This class wraps the creation of an animation using matplotlib. It is</span>
+<span class="sd">    only a base class which should be subclassed to provide needed behavior.</span>
+
+<span class="sd">    *fig* is the figure object that is used to get draw, resize, and any</span>
+<span class="sd">    other needed events.</span>
+
+<span class="sd">    *event_source* is a class that can run a callback when desired events</span>
+<span class="sd">    are generated, as well as be stopped and started. Examples include timers</span>
+<span class="sd">    (see :class:`TimedAnimation`) and file system notifications.</span>
+
+<span class="sd">    *blit* is a boolean that controls whether blitting is used to optimize</span>
+<span class="sd">    drawing.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+<div class="viewcode-block" id="Animation.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.Animation.__init__.html#matplotlib.animation.Animation.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fig</span><span class="p">,</span> <span class="n">event_source</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">blit</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_fig</span> <span class="o">=</span> <span class="n">fig</span>
+        <span class="c1"># Disables blitting for backends that don&#39;t support it.  This</span>
+        <span class="c1"># allows users to request it if available, but still have a</span>
+        <span class="c1"># fallback that works if it is not.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_blit</span> <span class="o">=</span> <span class="n">blit</span> <span class="ow">and</span> <span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">supports_blit</span>
+
+        <span class="c1"># These are the basics of the animation.  The frame sequence represents</span>
+        <span class="c1"># information for each frame of the animation and depends on how the</span>
+        <span class="c1"># drawing is handled by the subclasses. The event source fires events</span>
+        <span class="c1"># that cause the frame sequence to be iterated.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">frame_seq</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">new_frame_seq</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">event_source</span> <span class="o">=</span> <span class="n">event_source</span>
+
+        <span class="c1"># Instead of starting the event source now, we connect to the figure&#39;s</span>
+        <span class="c1"># draw_event, so that we only start once the figure has been drawn.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_first_draw_id</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">mpl_connect</span><span class="p">(</span><span class="s1">&#39;draw_event&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_start</span><span class="p">)</span>
+
+        <span class="c1"># Connect to the figure&#39;s close_event so that we don&#39;t continue to</span>
+        <span class="c1"># fire events and try to draw to a deleted figure.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_close_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">mpl_connect</span><span class="p">(</span><span class="s1">&#39;close_event&#39;</span><span class="p">,</span>
+                                                      <span class="bp">self</span><span class="o">.</span><span class="n">_stop</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_blit</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_setup_blit</span><span class="p">()</span></div>
+
+    <span class="k">def</span> <span class="nf">_start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Starts interactive animation. Adds the draw frame command to the GUI</span>
+<span class="sd">        handler, calls show to start the event loop.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="c1"># First disconnect our draw event handler</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">mpl_disconnect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_first_draw_id</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_first_draw_id</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># So we can check on save</span>
+
+        <span class="c1"># Now do any initial draw</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_init_draw</span><span class="p">()</span>
+
+        <span class="c1"># Add our callback for stepping the animation and</span>
+        <span class="c1"># actually start the event_source.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">event_source</span><span class="o">.</span><span class="n">add_callback</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_step</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">event_source</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_stop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="c1"># On stop we disconnect all of our events.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_blit</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">mpl_disconnect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_resize_id</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">mpl_disconnect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_close_id</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">event_source</span><span class="o">.</span><span class="n">remove_callback</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_step</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">event_source</span> <span class="o">=</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="Animation.save"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.Animation.save.html#matplotlib.animation.Animation.save">[docs]</a>    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">writer</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fps</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">codec</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+             <span class="n">bitrate</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">extra_args</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">extra_anim</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+             <span class="n">savefig_kwargs</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Saves a movie file by drawing every frame.</span>
+
+<span class="sd">        *filename* is the output filename, e.g., :file:`mymovie.mp4`</span>
+
+<span class="sd">        *writer* is either an instance of :class:`MovieWriter` or a string</span>
+<span class="sd">        key that identifies a class to use, such as &#39;ffmpeg&#39; or &#39;mencoder&#39;.</span>
+<span class="sd">        If nothing is passed, the value of the rcparam `animation.writer` is</span>
+<span class="sd">        used.</span>
+
+<span class="sd">        *fps* is the frames per second in the movie. Defaults to None,</span>
+<span class="sd">        which will use the animation&#39;s specified interval to set the frames</span>
+<span class="sd">        per second.</span>
+
+<span class="sd">        *dpi* controls the dots per inch for the movie frames. This combined</span>
+<span class="sd">        with the figure&#39;s size in inches controls the size of the movie.</span>
+
+<span class="sd">        *codec* is the video codec to be used. Not all codecs are supported</span>
+<span class="sd">        by a given :class:`MovieWriter`. If none is given, this defaults to the</span>
+<span class="sd">        value specified by the rcparam `animation.codec`.</span>
+
+<span class="sd">        *bitrate* specifies the amount of bits used per second in the</span>
+<span class="sd">        compressed movie, in kilobits per second. A higher number means a</span>
+<span class="sd">        higher quality movie, but at the cost of increased file size. If no</span>
+<span class="sd">        value is given, this defaults to the value given by the rcparam</span>
+<span class="sd">        `animation.bitrate`.</span>
+
+<span class="sd">        *extra_args* is a list of extra string arguments to be passed to the</span>
+<span class="sd">        underlying movie utiltiy. The default is None, which passes the</span>
+<span class="sd">        additional argurments in the &#39;animation.extra_args&#39; rcParam.</span>
+
+<span class="sd">        *metadata* is a dictionary of keys and values for metadata to include</span>
+<span class="sd">        in the output file. Some keys that may be of use include:</span>
+<span class="sd">        title, artist, genre, subject, copyright, srcform, comment.</span>
+
+<span class="sd">        *extra_anim* is a list of additional `Animation` objects that should</span>
+<span class="sd">        be included in the saved movie file. These need to be from the same</span>
+<span class="sd">        `matplotlib.Figure` instance. Also, animation frames will just be</span>
+<span class="sd">        simply combined, so there should be a 1:1 correspondence between</span>
+<span class="sd">        the frames from the different animations.</span>
+
+<span class="sd">        *savefig_kwargs* is a dictionary containing keyword arguments to be</span>
+<span class="sd">        passed on to the &#39;savefig&#39; command which is called repeatedly to save</span>
+<span class="sd">        the individual frames. This can be used to set tight bounding boxes,</span>
+<span class="sd">        for example.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="n">savefig_kwargs</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">savefig_kwargs</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="c1"># FIXME: Using &#39;bbox_inches&#39; doesn&#39;t currently work with</span>
+        <span class="c1"># writers that pipe the data to the command because this</span>
+        <span class="c1"># requires a fixed frame size (see Ryan May&#39;s reply in this</span>
+        <span class="c1"># thread: [1]). Thus we drop the &#39;bbox_inches&#39; argument if it</span>
+        <span class="c1"># exists in savefig_kwargs.</span>
+        <span class="c1">#</span>
+        <span class="c1"># [1] (http://matplotlib.1069221.n5.nabble.com/</span>
+        <span class="c1"># Animation-class-let-save-accept-kwargs-which-</span>
+        <span class="c1"># are-passed-on-to-savefig-td39627.html)</span>
+        <span class="c1">#</span>
+        <span class="k">if</span> <span class="s1">&#39;bbox_inches&#39;</span> <span class="ow">in</span> <span class="n">savefig_kwargs</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">writer</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;ffmpeg_file&#39;</span><span class="p">,</span> <span class="s1">&#39;mencoder_file&#39;</span><span class="p">]</span> <span class="ow">or</span>
+                    <span class="nb">isinstance</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span>
+                               <span class="p">(</span><span class="n">FFMpegFileWriter</span><span class="p">,</span> <span class="n">MencoderFileWriter</span><span class="p">))):</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Warning: discarding the &#39;bbox_inches&#39; argument in &quot;</span>
+                      <span class="s2">&quot;&#39;savefig_kwargs&#39; as it is only currently supported &quot;</span>
+                      <span class="s2">&quot;with the writers &#39;ffmpeg_file&#39; and &#39;mencoder_file&#39; &quot;</span>
+                      <span class="s2">&quot;(writer used: &quot;</span>
+                      <span class="s2">&quot;&#39;</span><span class="si">{0}</span><span class="s2">&#39;).&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                          <span class="n">writer</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">six</span><span class="o">.</span><span class="n">string_types</span><span class="p">)</span>
+                          <span class="k">else</span> <span class="n">writer</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span><span class="p">))</span>
+                <span class="n">savefig_kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;bbox_inches&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Need to disconnect the first draw callback, since we&#39;ll be doing</span>
+        <span class="c1"># draws. Otherwise, we&#39;ll end up starting the animation.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_first_draw_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">mpl_disconnect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_first_draw_id</span><span class="p">)</span>
+            <span class="n">reconnect_first_draw</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">reconnect_first_draw</span> <span class="o">=</span> <span class="kc">False</span>
+
+        <span class="k">if</span> <span class="n">fps</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;_interval&#39;</span><span class="p">):</span>
+            <span class="c1"># Convert interval in ms to frames per second</span>
+            <span class="n">fps</span> <span class="o">=</span> <span class="mf">1000.</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interval</span>
+
+        <span class="c1"># If the writer is None, use the rc param to find the name of the one</span>
+        <span class="c1"># to use</span>
+        <span class="k">if</span> <span class="n">writer</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">writer</span> <span class="o">=</span> <span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;animation.writer&#39;</span><span class="p">]</span>
+
+        <span class="c1"># Re-use the savefig DPI for ours if none is given</span>
+        <span class="k">if</span> <span class="n">dpi</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">dpi</span> <span class="o">=</span> <span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;savefig.dpi&#39;</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">dpi</span> <span class="o">==</span> <span class="s1">&#39;figure&#39;</span><span class="p">:</span>
+                <span class="n">dpi</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fig</span><span class="o">.</span><span class="n">dpi</span>
+
+        <span class="k">if</span> <span class="n">codec</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">codec</span> <span class="o">=</span> <span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;animation.codec&#39;</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">bitrate</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">bitrate</span> <span class="o">=</span> <span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;animation.bitrate&#39;</span><span class="p">]</span>
+
+        <span class="n">all_anim</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">extra_anim</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">all_anim</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">anim</span>
+                            <span class="k">for</span> <span class="n">anim</span>
+                            <span class="ow">in</span> <span class="n">extra_anim</span> <span class="k">if</span> <span class="n">anim</span><span class="o">.</span><span class="n">_fig</span> <span class="ow">is</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fig</span><span class="p">)</span>
+
+        <span class="c1"># If we have the name of a writer, instantiate an instance of the</span>
+        <span class="c1"># registered class.</span>
+        <span class="k">if</span> <span class="n">is_string_like</span><span class="p">(</span><span class="n">writer</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">writer</span> <span class="ow">in</span> <span class="n">writers</span><span class="o">.</span><span class="n">avail</span><span class="p">:</span>
+                <span class="n">writer</span> <span class="o">=</span> <span class="n">writers</span><span class="p">[</span><span class="n">writer</span><span class="p">](</span><span class="n">fps</span><span class="p">,</span> <span class="n">codec</span><span class="p">,</span> <span class="n">bitrate</span><span class="p">,</span>
+                                         <span class="n">extra_args</span><span class="o">=</span><span class="n">extra_args</span><span class="p">,</span>
+                                         <span class="n">metadata</span><span class="o">=</span><span class="n">metadata</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="kn">import</span> <span class="nn">warnings</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;MovieWriter </span><span class="si">%s</span><span class="s2"> unavailable&quot;</span> <span class="o">%</span> <span class="n">writer</span><span class="p">)</span>
+
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">writer</span> <span class="o">=</span> <span class="n">writers</span><span class="p">[</span><span class="n">writers</span><span class="o">.</span><span class="n">list</span><span class="p">()[</span><span class="mi">0</span><span class="p">]](</span><span class="n">fps</span><span class="p">,</span> <span class="n">codec</span><span class="p">,</span> <span class="n">bitrate</span><span class="p">,</span>
+                                                        <span class="n">extra_args</span><span class="o">=</span><span class="n">extra_args</span><span class="p">,</span>
+                                                        <span class="n">metadata</span><span class="o">=</span><span class="n">metadata</span><span class="p">)</span>
+                <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Cannot save animation: no writers are &quot;</span>
+                                     <span class="s2">&quot;available. Please install mencoder or &quot;</span>
+                                     <span class="s2">&quot;ffmpeg to save animations.&quot;</span><span class="p">)</span>
+
+        <span class="n">verbose</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="s1">&#39;Animation.save using </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="nb">type</span><span class="p">(</span><span class="n">writer</span><span class="p">),</span>
+                       <span class="n">level</span><span class="o">=</span><span class="s1">&#39;helpful&#39;</span><span class="p">)</span>
+        <span class="c1"># Create a new sequence of frames for saved data. This is different</span>
+        <span class="c1"># from new_frame_seq() to give the ability to save &#39;live&#39; generated</span>
+        <span class="c1"># frame information to be saved later.</span>
+        <span class="c1"># TODO: Right now, after closing the figure, saving a movie won&#39;t work</span>
+        <span class="c1"># since GUI widgets are gone. Either need to remove extra code to</span>
+        <span class="c1"># allow for this non-existant use case or find a way to make it work.</span>
+        <span class="k">with</span> <span class="n">writer</span><span class="o">.</span><span class="n">saving</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_fig</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">dpi</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">anim</span> <span class="ow">in</span> <span class="n">all_anim</span><span class="p">:</span>
+                <span class="c1"># Clear the initial frame</span>
+                <span class="n">anim</span><span class="o">.</span><span class="n">_init_draw</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="p">[</span><span class="n">a</span><span class="o">.</span><span class="n">new_saved_frame_seq</span><span class="p">()</span>
+                              <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">all_anim</span><span class="p">]):</span>
+                <span class="k">for</span> <span class="n">anim</span><span class="p">,</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">all_anim</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+                    <span class="c1"># TODO: Need to see if turning off blit is really necessary</span>
+                    <span class="n">anim</span><span class="o">.</span><span class="n">_draw_next_frame</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">blit</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+                <span class="n">writer</span><span class="o">.</span><span class="n">grab_frame</span><span class="p">(</span><span class="o">**</span><span class="n">savefig_kwargs</span><span class="p">)</span>
+
+        <span class="c1"># Reconnect signal for first draw if necessary</span>
+        <span class="k">if</span> <span class="n">reconnect_first_draw</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_first_draw_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">mpl_connect</span><span class="p">(</span><span class="s1">&#39;draw_event&#39;</span><span class="p">,</span>
+                                                               <span class="bp">self</span><span class="o">.</span><span class="n">_start</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">_step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Handler for getting events. By default, gets the next frame in the</span>
+<span class="sd">        sequence and hands the data off to be drawn.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="c1"># Returns True to indicate that the event source should continue to</span>
+        <span class="c1"># call _step, until the frame sequence reaches the end of iteration,</span>
+        <span class="c1"># at which point False will be returned.</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">framedata</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">frame_seq</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_draw_next_frame</span><span class="p">(</span><span class="n">framedata</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_blit</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+<div class="viewcode-block" id="Animation.new_frame_seq"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.Animation.new_frame_seq.html#matplotlib.animation.Animation.new_frame_seq">[docs]</a>    <span class="k">def</span> <span class="nf">new_frame_seq</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s1">&#39;Creates a new sequence of frame information.&#39;</span>
+        <span class="c1"># Default implementation is just an iterator over self._framedata</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_framedata</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Animation.new_saved_frame_seq"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.Animation.new_saved_frame_seq.html#matplotlib.animation.Animation.new_saved_frame_seq">[docs]</a>    <span class="k">def</span> <span class="nf">new_saved_frame_seq</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s1">&#39;Creates a new sequence of saved/cached frame information.&#39;</span>
+        <span class="c1"># Default is the same as the regular frame sequence</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">new_frame_seq</span><span class="p">()</span></div>
+
+    <span class="k">def</span> <span class="nf">_draw_next_frame</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">framedata</span><span class="p">,</span> <span class="n">blit</span><span class="p">):</span>
+        <span class="c1"># Breaks down the drawing of the next frame into steps of pre- and</span>
+        <span class="c1"># post- draw, as well as the drawing of the frame itself.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_pre_draw</span><span class="p">(</span><span class="n">framedata</span><span class="p">,</span> <span class="n">blit</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_draw_frame</span><span class="p">(</span><span class="n">framedata</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_post_draw</span><span class="p">(</span><span class="n">framedata</span><span class="p">,</span> <span class="n">blit</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_init_draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Initial draw to clear the frame. Also used by the blitting code</span>
+        <span class="c1"># when a clean base is required.</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">_pre_draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">framedata</span><span class="p">,</span> <span class="n">blit</span><span class="p">):</span>
+        <span class="c1"># Perform any cleaning or whatnot before the drawing of the frame.</span>
+        <span class="c1"># This default implementation allows blit to clear the frame.</span>
+        <span class="k">if</span> <span class="n">blit</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_blit_clear</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_drawn_artists</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_blit_cache</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_draw_frame</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">framedata</span><span class="p">):</span>
+        <span class="c1"># Performs actual drawing of the frame.</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;Needs to be implemented by subclasses to&#39;</span>
+                                  <span class="s1">&#39; actually make an animation.&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_post_draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">framedata</span><span class="p">,</span> <span class="n">blit</span><span class="p">):</span>
+        <span class="c1"># After the frame is rendered, this handles the actual flushing of</span>
+        <span class="c1"># the draw, which can be a direct draw_idle() or make use of the</span>
+        <span class="c1"># blitting.</span>
+        <span class="k">if</span> <span class="n">blit</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_drawn_artists</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_blit_draw</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_drawn_artists</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_blit_cache</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw_idle</span><span class="p">()</span>
+
+    <span class="c1"># The rest of the code in this class is to facilitate easy blitting</span>
+    <span class="k">def</span> <span class="nf">_blit_draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">artists</span><span class="p">,</span> <span class="n">bg_cache</span><span class="p">):</span>
+        <span class="c1"># Handles blitted drawing, which renders only the artists given instead</span>
+        <span class="c1"># of the entire figure.</span>
+        <span class="n">updated_ax</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">artists</span><span class="p">:</span>
+            <span class="c1"># If we haven&#39;t cached the background for this axes object, do</span>
+            <span class="c1"># so now. This might not always be reliable, but it&#39;s an attempt</span>
+            <span class="c1"># to automate the process.</span>
+            <span class="k">if</span> <span class="n">a</span><span class="o">.</span><span class="n">axes</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">bg_cache</span><span class="p">:</span>
+                <span class="n">bg_cache</span><span class="p">[</span><span class="n">a</span><span class="o">.</span><span class="n">axes</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">figure</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">copy_from_bbox</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">bbox</span><span class="p">)</span>
+            <span class="n">a</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">draw_artist</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+            <span class="n">updated_ax</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">axes</span><span class="p">)</span>
+
+        <span class="c1"># After rendering all the needed artists, blit each axes individually.</span>
+        <span class="k">for</span> <span class="n">ax</span> <span class="ow">in</span> <span class="nb">set</span><span class="p">(</span><span class="n">updated_ax</span><span class="p">):</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">figure</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">ax</span><span class="o">.</span><span class="n">bbox</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_blit_clear</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">artists</span><span class="p">,</span> <span class="n">bg_cache</span><span class="p">):</span>
+        <span class="c1"># Get a list of the axes that need clearing from the artists that</span>
+        <span class="c1"># have been drawn. Grab the appropriate saved background from the</span>
+        <span class="c1"># cache and restore.</span>
+        <span class="n">axes</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">axes</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">artists</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">axes</span><span class="p">:</span>
+            <span class="n">a</span><span class="o">.</span><span class="n">figure</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">restore_region</span><span class="p">(</span><span class="n">bg_cache</span><span class="p">[</span><span class="n">a</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="nf">_setup_blit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Setting up the blit requires: a cache of the background for the</span>
+        <span class="c1"># axes</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_blit_cache</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_drawn_artists</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_resize_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">mpl_connect</span><span class="p">(</span><span class="s1">&#39;resize_event&#39;</span><span class="p">,</span>
+                                                       <span class="bp">self</span><span class="o">.</span><span class="n">_handle_resize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_post_draw</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_blit</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_handle_resize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="c1"># On resize, we need to disable the resize event handling so we don&#39;t</span>
+        <span class="c1"># get too many events. Also stop the animation events, so that</span>
+        <span class="c1"># we&#39;re paused. Reset the cache and re-init. Set up an event handler</span>
+        <span class="c1"># to catch once the draw has actually taken place.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">mpl_disconnect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_resize_id</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">event_source</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_blit_cache</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_init_draw</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_resize_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">mpl_connect</span><span class="p">(</span><span class="s1">&#39;draw_event&#39;</span><span class="p">,</span>
+                                                       <span class="bp">self</span><span class="o">.</span><span class="n">_end_redraw</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_end_redraw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">evt</span><span class="p">):</span>
+        <span class="c1"># Now that the redraw has happened, do the post draw flushing and</span>
+        <span class="c1"># blit handling. Then re-enable all of the original events.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_post_draw</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_blit</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">event_source</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">mpl_disconnect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_resize_id</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_resize_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">mpl_connect</span><span class="p">(</span><span class="s1">&#39;resize_event&#39;</span><span class="p">,</span>
+                                                       <span class="bp">self</span><span class="o">.</span><span class="n">_handle_resize</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Animation.to_html5_video"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.Animation.to_html5_video.html#matplotlib.animation.Animation.to_html5_video">[docs]</a>    <span class="k">def</span> <span class="nf">to_html5_video</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">r&#39;&#39;&#39;Returns animation as an HTML5 video tag.</span>
+
+<span class="sd">        This saves the animation as an h264 video, encoded in base64</span>
+<span class="sd">        directly into the HTML5 video tag. This respects the rc parameters</span>
+<span class="sd">        for the writer as well as the bitrate. This also makes use of the</span>
+<span class="sd">        ``interval`` to control the speed, and uses the ``repeat``</span>
+<span class="sd">        paramter to decide whether to loop.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">VIDEO_TAG</span> <span class="o">=</span> <span class="s1">r&#39;&#39;&#39;&lt;video </span><span class="si">{size}</span><span class="s1"> </span><span class="si">{options}</span><span class="s1">&gt;</span>
+<span class="s1">  &lt;source type=&quot;video/mp4&quot; src=&quot;data:video/mp4;base64,</span><span class="si">{video}</span><span class="s1">&quot;&gt;</span>
+<span class="s1">  Your browser does not support the video tag.</span>
+<span class="s1">&lt;/video&gt;&#39;&#39;&#39;</span>
+        <span class="c1"># Cache the the rendering of the video as HTML</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;_base64_video&#39;</span><span class="p">):</span>
+            <span class="c1"># First write the video to a tempfile. Set delete to False</span>
+            <span class="c1"># so we can re-open to read binary data.</span>
+            <span class="k">with</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">NamedTemporaryFile</span><span class="p">(</span><span class="n">suffix</span><span class="o">=</span><span class="s1">&#39;.m4v&#39;</span><span class="p">,</span>
+                                             <span class="n">delete</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                <span class="c1"># We create a writer manually so that we can get the</span>
+                <span class="c1"># appropriate size for the tag</span>
+                <span class="n">Writer</span> <span class="o">=</span> <span class="n">writers</span><span class="p">[</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;animation.writer&#39;</span><span class="p">]]</span>
+                <span class="n">writer</span> <span class="o">=</span> <span class="n">Writer</span><span class="p">(</span><span class="n">codec</span><span class="o">=</span><span class="s1">&#39;h264&#39;</span><span class="p">,</span>
+                                <span class="n">bitrate</span><span class="o">=</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;animation.bitrate&#39;</span><span class="p">],</span>
+                                <span class="n">fps</span><span class="o">=</span><span class="mf">1000.</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interval</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">writer</span><span class="o">=</span><span class="n">writer</span><span class="p">)</span>
+
+            <span class="c1"># Now open and base64 encode</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">video</span><span class="p">:</span>
+                <span class="n">vid64</span> <span class="o">=</span> <span class="n">encodebytes</span><span class="p">(</span><span class="n">video</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_base64_video</span> <span class="o">=</span> <span class="n">vid64</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_video_size</span> <span class="o">=</span> <span class="s1">&#39;width=&quot;</span><span class="si">{0}</span><span class="s1">&quot; height=&quot;</span><span class="si">{1}</span><span class="s1">&quot;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                        <span class="o">*</span><span class="n">writer</span><span class="o">.</span><span class="n">frame_size</span><span class="p">)</span>
+
+            <span class="c1"># Now we can remove</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+        <span class="c1"># Default HTML5 options are to autoplay and to display video controls</span>
+        <span class="n">options</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;controls&#39;</span><span class="p">,</span> <span class="s1">&#39;autoplay&#39;</span><span class="p">]</span>
+
+        <span class="c1"># If we&#39;re set to repeat, make it loop</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">repeat</span><span class="p">:</span>
+            <span class="n">options</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;loop&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">VIDEO_TAG</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">video</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_base64_video</span><span class="p">,</span>
+                                <span class="n">size</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_video_size</span><span class="p">,</span>
+                                <span class="n">options</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">options</span><span class="p">))</span></div>
+
+    <span class="k">def</span> <span class="nf">_repr_html_</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s1">r&#39;IPython display hook for rendering.&#39;</span>
+        <span class="n">fmt</span> <span class="o">=</span> <span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;animation.html&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">fmt</span> <span class="o">==</span> <span class="s1">&#39;html5&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_html5_video</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="TimedAnimation"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.TimedAnimation.html#matplotlib.animation.TimedAnimation">[docs]</a><span class="k">class</span> <span class="nc">TimedAnimation</span><span class="p">(</span><span class="n">Animation</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    :class:`Animation` subclass that supports time-based animation, drawing</span>
+<span class="sd">    a new frame every *interval* milliseconds.</span>
+
+<span class="sd">    *repeat* controls whether the animation should repeat when the sequence</span>
+<span class="sd">    of frames is completed.</span>
+
+<span class="sd">    *repeat_delay* optionally adds a delay in milliseconds before repeating</span>
+<span class="sd">    the animation.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+<div class="viewcode-block" id="TimedAnimation.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.TimedAnimation.__init__.html#matplotlib.animation.TimedAnimation.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fig</span><span class="p">,</span> <span class="n">interval</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">repeat_delay</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">repeat</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                 <span class="n">event_source</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># Store the timing information</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_interval</span> <span class="o">=</span> <span class="n">interval</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_repeat_delay</span> <span class="o">=</span> <span class="n">repeat_delay</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">repeat</span> <span class="o">=</span> <span class="n">repeat</span>
+
+        <span class="c1"># If we&#39;re not given an event source, create a new timer. This permits</span>
+        <span class="c1"># sharing timers between animation objects for syncing animations.</span>
+        <span class="k">if</span> <span class="n">event_source</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">event_source</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">new_timer</span><span class="p">()</span>
+            <span class="n">event_source</span><span class="o">.</span><span class="n">interval</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interval</span>
+
+        <span class="n">Animation</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fig</span><span class="p">,</span> <span class="n">event_source</span><span class="o">=</span><span class="n">event_source</span><span class="p">,</span>
+                           <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">_step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Handler for getting events.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="c1"># Extends the _step() method for the Animation class.  If</span>
+        <span class="c1"># Animation._step signals that it reached the end and we want to</span>
+        <span class="c1"># repeat, we refresh the frame sequence and return True. If</span>
+        <span class="c1"># _repeat_delay is set, change the event_source&#39;s interval to our loop</span>
+        <span class="c1"># delay and set the callback to one which will then set the interval</span>
+        <span class="c1"># back.</span>
+        <span class="n">still_going</span> <span class="o">=</span> <span class="n">Animation</span><span class="o">.</span><span class="n">_step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">still_going</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">repeat</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_init_draw</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">frame_seq</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">new_frame_seq</span><span class="p">()</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_repeat_delay</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">event_source</span><span class="o">.</span><span class="n">remove_callback</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_step</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">event_source</span><span class="o">.</span><span class="n">add_callback</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_loop_delay</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">event_source</span><span class="o">.</span><span class="n">interval</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_repeat_delay</span>
+                <span class="k">return</span> <span class="kc">True</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">Animation</span><span class="o">.</span><span class="n">_step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">still_going</span>
+
+    <span class="k">def</span> <span class="nf">_stop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="c1"># If we stop in the middle of a loop delay (which is relatively likely</span>
+        <span class="c1"># given the potential pause here, remove the loop_delay callback as</span>
+        <span class="c1"># well.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">event_source</span><span class="o">.</span><span class="n">remove_callback</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_loop_delay</span><span class="p">)</span>
+        <span class="n">Animation</span><span class="o">.</span><span class="n">_stop</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_loop_delay</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="c1"># Reset the interval and change callbacks after the delay.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">event_source</span><span class="o">.</span><span class="n">remove_callback</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_loop_delay</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">event_source</span><span class="o">.</span><span class="n">interval</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interval</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">event_source</span><span class="o">.</span><span class="n">add_callback</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_step</span><span class="p">)</span>
+        <span class="n">Animation</span><span class="o">.</span><span class="n">_step</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="ArtistAnimation"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.ArtistAnimation.html#matplotlib.animation.ArtistAnimation">[docs]</a><span class="k">class</span> <span class="nc">ArtistAnimation</span><span class="p">(</span><span class="n">TimedAnimation</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Before calling this function, all plotting should have taken place</span>
+<span class="sd">    and the relevant artists saved.</span>
+
+<span class="sd">    frame_info is a list, with each list entry a collection of artists that</span>
+<span class="sd">    represent what needs to be enabled on each frame. These will be disabled</span>
+<span class="sd">    for other frames.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+<div class="viewcode-block" id="ArtistAnimation.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.ArtistAnimation.__init__.html#matplotlib.animation.ArtistAnimation.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fig</span><span class="p">,</span> <span class="n">artists</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># Internal list of artists drawn in the most recent frame.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_drawn_artists</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="c1"># Use the list of artists as the framedata, which will be iterated</span>
+        <span class="c1"># over by the machinery.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_framedata</span> <span class="o">=</span> <span class="n">artists</span>
+        <span class="n">TimedAnimation</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fig</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">_init_draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Make all the artists involved in *any* frame invisible</span>
+        <span class="n">figs</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">new_frame_seq</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">artist</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+                <span class="n">artist</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+                <span class="n">artist</span><span class="o">.</span><span class="n">set_animated</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_blit</span><span class="p">)</span>
+                <span class="c1"># Assemble a list of unique axes that need flushing</span>
+                <span class="k">if</span> <span class="n">artist</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">figure</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">figs</span><span class="p">:</span>
+                    <span class="n">figs</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">artist</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">figure</span><span class="p">)</span>
+
+        <span class="c1"># Flush the needed axes</span>
+        <span class="k">for</span> <span class="n">fig</span> <span class="ow">in</span> <span class="n">figs</span><span class="p">:</span>
+            <span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw_idle</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_pre_draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">framedata</span><span class="p">,</span> <span class="n">blit</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Clears artists from the last frame.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="n">blit</span><span class="p">:</span>
+            <span class="c1"># Let blit handle clearing</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_blit_clear</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_drawn_artists</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_blit_cache</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Otherwise, make all the artists from the previous frame invisible</span>
+            <span class="k">for</span> <span class="n">artist</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_drawn_artists</span><span class="p">:</span>
+                <span class="n">artist</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_draw_frame</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">artists</span><span class="p">):</span>
+        <span class="c1"># Save the artists that were passed in as framedata for the other</span>
+        <span class="c1"># steps (esp. blitting) to use.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_drawn_artists</span> <span class="o">=</span> <span class="n">artists</span>
+
+        <span class="c1"># Make all the artists from the current frame visible</span>
+        <span class="k">for</span> <span class="n">artist</span> <span class="ow">in</span> <span class="n">artists</span><span class="p">:</span>
+            <span class="n">artist</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="FuncAnimation"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.FuncAnimation.html#matplotlib.animation.FuncAnimation">[docs]</a><span class="k">class</span> <span class="nc">FuncAnimation</span><span class="p">(</span><span class="n">TimedAnimation</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Makes an animation by repeatedly calling a function *func*, passing in</span>
+<span class="sd">    (optional) arguments in *fargs*.</span>
+
+<span class="sd">    *frames* can be a generator, an iterable, or a number of frames.</span>
+
+<span class="sd">    *init_func* is a function used to draw a clear frame. If not given, the</span>
+<span class="sd">    results of drawing from the first item in the frames sequence will be</span>
+<span class="sd">    used. This function will be called once before the first frame.</span>
+
+<span class="sd">    If blit=True, *func* and *init_func* should return an iterable of</span>
+<span class="sd">    drawables to clear.</span>
+
+<span class="sd">    *kwargs* include *repeat*, *repeat_delay*, and *interval*:</span>
+<span class="sd">    *interval* draws a new frame every *interval* milliseconds.</span>
+<span class="sd">    *repeat* controls whether the animation should repeat when the sequence</span>
+<span class="sd">    of frames is completed.</span>
+<span class="sd">    *repeat_delay* optionally adds a delay in milliseconds before repeating</span>
+<span class="sd">    the animation.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+<div class="viewcode-block" id="FuncAnimation.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.FuncAnimation.__init__.html#matplotlib.animation.FuncAnimation.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fig</span><span class="p">,</span> <span class="n">func</span><span class="p">,</span> <span class="n">frames</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">init_func</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fargs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">save_count</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">fargs</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_args</span> <span class="o">=</span> <span class="n">fargs</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_args</span> <span class="o">=</span> <span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_func</span> <span class="o">=</span> <span class="n">func</span>
+
+        <span class="c1"># Amount of framedata to keep around for saving movies. This is only</span>
+        <span class="c1"># used if we don&#39;t know how many frames there will be: in the case</span>
+        <span class="c1"># of no generator or in the case of a callable.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">save_count</span> <span class="o">=</span> <span class="n">save_count</span>
+
+        <span class="c1"># Set up a function that creates a new iterable when needed. If nothing</span>
+        <span class="c1"># is passed in for frames, just use itertools.count, which will just</span>
+        <span class="c1"># keep counting from 0. A callable passed in for frames is assumed to</span>
+        <span class="c1"># be a generator. An iterable will be used as is, and anything else</span>
+        <span class="c1"># will be treated as a number of frames.</span>
+        <span class="k">if</span> <span class="n">frames</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_iter_gen</span> <span class="o">=</span> <span class="n">itertools</span><span class="o">.</span><span class="n">count</span>
+        <span class="k">elif</span> <span class="n">six</span><span class="o">.</span><span class="n">callable</span><span class="p">(</span><span class="n">frames</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_iter_gen</span> <span class="o">=</span> <span class="n">frames</span>
+        <span class="k">elif</span> <span class="n">iterable</span><span class="p">(</span><span class="n">frames</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_iter_gen</span> <span class="o">=</span> <span class="k">lambda</span><span class="p">:</span> <span class="nb">iter</span><span class="p">(</span><span class="n">frames</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">frames</span><span class="p">,</span> <span class="s1">&#39;__len__&#39;</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">save_count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">frames</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_iter_gen</span> <span class="o">=</span> <span class="k">lambda</span><span class="p">:</span> <span class="n">xrange</span><span class="p">(</span><span class="n">frames</span><span class="p">)</span><span class="o">.</span><span class="n">__iter__</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">save_count</span> <span class="o">=</span> <span class="n">frames</span>
+
+        <span class="c1"># If we&#39;re passed in and using the default, set it to 100.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">save_count</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">save_count</span> <span class="o">=</span> <span class="mi">100</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_init_func</span> <span class="o">=</span> <span class="n">init_func</span>
+
+        <span class="c1"># Needs to be initialized so the draw functions work without checking</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_save_seq</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="n">TimedAnimation</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fig</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="c1"># Need to reset the saved seq, since right now it will contain data</span>
+        <span class="c1"># for a single frame from init, which is not what we want.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_save_seq</span> <span class="o">=</span> <span class="p">[]</span></div>
+
+<div class="viewcode-block" id="FuncAnimation.new_frame_seq"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.FuncAnimation.new_frame_seq.html#matplotlib.animation.FuncAnimation.new_frame_seq">[docs]</a>    <span class="k">def</span> <span class="nf">new_frame_seq</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Use the generating function to generate a new frame sequence</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_iter_gen</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="FuncAnimation.new_saved_frame_seq"><a class="viewcode-back" href="../../generated/generated/matplotlib.animation.FuncAnimation.new_saved_frame_seq.html#matplotlib.animation.FuncAnimation.new_saved_frame_seq">[docs]</a>    <span class="k">def</span> <span class="nf">new_saved_frame_seq</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Generate an iterator for the sequence of saved data. If there are</span>
+        <span class="c1"># no saved frames, generate a new frame sequence and take the first</span>
+        <span class="c1"># save_count entries in it.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_save_seq</span><span class="p">:</span>
+            <span class="c1"># While iterating we are going to update _save_seq</span>
+            <span class="c1"># so make a copy to safely iterate over</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_old_saved_seq</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_save_seq</span><span class="p">)</span>
+            <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_old_saved_seq</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">itertools</span><span class="o">.</span><span class="n">islice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">new_frame_seq</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">save_count</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">_init_draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Initialize the drawing either using the given init_func or by</span>
+        <span class="c1"># calling the draw function with the first item of the frame sequence.</span>
+        <span class="c1"># For blitting, the init_func should return a sequence of modified</span>
+        <span class="c1"># artists.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_init_func</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_draw_frame</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">new_frame_seq</span><span class="p">()))</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_drawn_artists</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_init_func</span><span class="p">()</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_blit</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_drawn_artists</span><span class="p">:</span>
+                    <span class="n">a</span><span class="o">.</span><span class="n">set_animated</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_blit</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_save_seq</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="nf">_draw_frame</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">framedata</span><span class="p">):</span>
+        <span class="c1"># Save the data for potential saving of movies.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_save_seq</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">framedata</span><span class="p">)</span>
+
+        <span class="c1"># Make sure to respect save_count (keep only the last save_count</span>
+        <span class="c1"># around)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_save_seq</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_save_seq</span><span class="p">[</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">save_count</span><span class="p">:]</span>
+
+        <span class="c1"># Call the func with framedata and args. If blitting is desired,</span>
+        <span class="c1"># func needs to return a sequence of any artists that were modified.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_drawn_artists</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_func</span><span class="p">(</span><span class="n">framedata</span><span class="p">,</span> <span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">_args</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_blit</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_drawn_artists</span><span class="p">:</span>
+                <span class="n">a</span><span class="o">.</span><span class="n">set_animated</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_blit</span><span class="p">)</span></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

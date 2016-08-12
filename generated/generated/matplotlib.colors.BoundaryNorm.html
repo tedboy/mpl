@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>7.2.1. matplotlib.colors.BoundaryNorm &mdash; PROJECT_NAME 1 documentation</title>
+  <title>7.2.1. matplotlib.colors.BoundaryNorm &mdash; Matplotlib API 1 documentation</title>
   
 
   
@@ -24,18 +24,18 @@
 
   
   
-    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   
 
   
 
   
-    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
         <link rel="up" title="7. matplotlib.colors" href="../matplotlib.colors.html"/>
         <link rel="prev" title="7.1.7. matplotlib.colors.rgb_to_hsv" href="../matplotlib.colors.rgb_to_hsv.html"/> 
 
   
-  <script src="../../static/js/modernizr.min.js"></script>
+  <script src="../../_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -51,7 +51,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+            <a href="../../index.html" class="icon icon-home"> Matplotlib API
           
 
           
@@ -162,7 +162,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">PROJECT_NAME</a>
+          <a href="../../index.html">Matplotlib API</a>
         
       </nav>
 
@@ -199,7 +199,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../sources/generated/generated/matplotlib.colors.BoundaryNorm.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/generated/generated/matplotlib.colors.BoundaryNorm.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -212,9 +212,10 @@
             
   <div class="section" id="matplotlib-colors-boundarynorm">
 <h1>7.2.1. matplotlib.colors.BoundaryNorm<a class="headerlink" href="#matplotlib-colors-boundarynorm" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="matplotlib.colors.BoundaryNorm.__init__.html#matplotlib.colors.BoundaryNorm.__init__" title="matplotlib.colors.BoundaryNorm.__init__"><code class="xref py py-func docutils literal"><span class="pre">BoundaryNorm.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.colors.BoundaryNorm">
-<em class="property">class </em><code class="descclassname">matplotlib.colors.</code><code class="descname">BoundaryNorm</code><span class="sig-paren">(</span><em>boundaries</em>, <em>ncolors</em>, <em>clip=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/colors.html#BoundaryNorm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.colors.BoundaryNorm" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">matplotlib.colors.</code><code class="descname">BoundaryNorm</code><span class="sig-paren">(</span><em>boundaries</em>, <em>ncolors</em>, <em>clip=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/colors.html#BoundaryNorm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.colors.BoundaryNorm" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate a colormap index based on discrete intervals.</p>
 <p>Unlike <a class="reference internal" href="matplotlib.colors.Normalize.html#matplotlib.colors.Normalize" title="matplotlib.colors.Normalize"><code class="xref py py-class docutils literal"><span class="pre">Normalize</span></code></a> or <a class="reference internal" href="matplotlib.colors.LogNorm.html#matplotlib.colors.LogNorm" title="matplotlib.colors.LogNorm"><code class="xref py py-class docutils literal"><span class="pre">LogNorm</span></code></a>,
 <a class="reference internal" href="#matplotlib.colors.BoundaryNorm" title="matplotlib.colors.BoundaryNorm"><code class="xref py py-class docutils literal"><span class="pre">BoundaryNorm</span></code></a> maps values to integers instead of to the
@@ -250,6 +251,30 @@ between integer and floating point.</p>
 </tr>
 </tbody>
 </table>
+<dl class="method">
+<dt id="matplotlib.colors.BoundaryNorm.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>boundaries</em>, <em>ncolors</em>, <em>clip=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/colors.html#BoundaryNorm.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.colors.BoundaryNorm.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt><em>boundaries</em></dt>
+<dd>a monotonically increasing sequence</dd>
+<dt><em>ncolors</em></dt>
+<dd>number of colors in the colormap to be used</dd>
+</dl>
+<p>If:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">v</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>then v is mapped to color j;
+as i varies from 0 to len(boundaries)-2,
+j goes from 0 to ncolors-1.</p>
+<p>Out-of-range values are mapped
+to -1 if low and ncolors if high; these are converted
+to valid indices by
+<code class="xref py py-meth docutils literal"><span class="pre">Colormap.__call__()</span></code> .
+If clip == True, out-of-range values
+are mapped to 0 if low and ncolors-1 if high.</p>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -299,16 +324,16 @@ between integer and floating point.</p>
             HAS_SOURCE:  true
         };
     </script>
-      <script type="text/javascript" src="../../static/jquery.js"></script>
-      <script type="text/javascript" src="../../static/underscore.js"></script>
-      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
   
   
-    <script type="text/javascript" src="../../static/js/theme.js"></script>
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
   
 
   

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>9.2.27. matplotlib.legend.VPacker &mdash; PROJECT_NAME 1 documentation</title>
+  <title>9.2.27. matplotlib.legend.VPacker &mdash; Matplotlib API 1 documentation</title>
   
 
   
@@ -24,19 +24,19 @@
 
   
   
-    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   
 
   
 
   
-    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
         <link rel="up" title="9. matplotlib.legend" href="../matplotlib.legend.html"/>
         <link rel="next" title="9.2.27.1. matplotlib.legend.VPacker.axes" href="matplotlib.legend.VPacker.axes.html"/>
         <link rel="prev" title="9.2.26.48. matplotlib.legend.TransformedBbox.union" href="matplotlib.legend.TransformedBbox.union.html"/> 
 
   
-  <script src="../../static/js/modernizr.min.js"></script>
+  <script src="../../_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+            <a href="../../index.html" class="icon icon-home"> Matplotlib API
           
 
           
@@ -249,7 +249,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">PROJECT_NAME</a>
+          <a href="../../index.html">Matplotlib API</a>
         
       </nav>
 
@@ -286,7 +286,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../sources/generated/generated/matplotlib.legend.VPacker.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/generated/generated/matplotlib.legend.VPacker.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -299,9 +299,10 @@
             
   <div class="section" id="matplotlib-legend-vpacker">
 <h1>9.2.27. matplotlib.legend.VPacker<a class="headerlink" href="#matplotlib-legend-vpacker" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="matplotlib.legend.VPacker.__init__.html#matplotlib.legend.VPacker.__init__" title="matplotlib.legend.VPacker.__init__"><code class="xref py py-func docutils literal"><span class="pre">VPacker.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.legend.VPacker">
-<em class="property">class </em><code class="descclassname">matplotlib.legend.</code><code class="descname">VPacker</code><span class="sig-paren">(</span><em>pad=None</em>, <em>sep=None</em>, <em>width=None</em>, <em>height=None</em>, <em>align=u'baseline'</em>, <em>mode=u'fixed'</em>, <em>children=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/offsetbox.html#VPacker"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.legend.VPacker" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">matplotlib.legend.</code><code class="descname">VPacker</code><span class="sig-paren">(</span><em>pad=None</em>, <em>sep=None</em>, <em>width=None</em>, <em>height=None</em>, <em>align=u'baseline'</em>, <em>mode=u'fixed'</em>, <em>children=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/offsetbox.html#VPacker"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.legend.VPacker" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPacker has its children packed vertically. It automatically
 adjust the relative positions of children in the drawing time.</p>
 <p class="rubric">Attributes</p>
@@ -544,6 +545,45 @@ adjust the relative positions of children in the drawing time.</p>
 </tr>
 </tbody>
 </table>
+<dl class="method">
+<dt id="matplotlib.legend.VPacker.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>pad=None</em>, <em>sep=None</em>, <em>width=None</em>, <em>height=None</em>, <em>align=u'baseline'</em>, <em>mode=u'fixed'</em>, <em>children=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/offsetbox.html#VPacker.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.legend.VPacker.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>pad</strong> : float, optional</p>
+<blockquote>
+<div><p>Boundary pad.</p>
+</div></blockquote>
+<p><strong>sep</strong> : float, optional</p>
+<blockquote>
+<div><p>Spacing between items.</p>
+</div></blockquote>
+<p><strong>width</strong> : float, optional</p>
+<p><strong>height</strong> : float, optional</p>
+<blockquote>
+<div><p>width and height of the container box, calculated if
+<cite>None</cite>.</p>
+</div></blockquote>
+<p><strong>align</strong> : str, optional</p>
+<blockquote>
+<div><p>Alignment of boxes.</p>
+</div></blockquote>
+<p><strong>mode</strong> : str, optional</p>
+<blockquote class="last">
+<div><p>Packing mode.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p><em>pad</em> and <em>sep</em> need to given in points and will be scale with
+the renderer dpi, while <em>width</em> and <em>height</em> need to be in
+pixels.</p>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -595,16 +635,16 @@ adjust the relative positions of children in the drawing time.</p>
             HAS_SOURCE:  true
         };
     </script>
-      <script type="text/javascript" src="../../static/jquery.js"></script>
-      <script type="text/javascript" src="../../static/underscore.js"></script>
-      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
   
   
-    <script type="text/javascript" src="../../static/js/theme.js"></script>
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
   
 
   

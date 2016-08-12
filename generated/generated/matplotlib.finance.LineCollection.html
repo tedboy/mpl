@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>24.2.3. matplotlib.finance.LineCollection &mdash; PROJECT_NAME 1 documentation</title>
+  <title>24.2.3. matplotlib.finance.LineCollection &mdash; Matplotlib API 1 documentation</title>
   
 
   
@@ -24,19 +24,19 @@
 
   
   
-    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   
 
   
 
   
-    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
         <link rel="up" title="24. matplotlib.finance" href="../matplotlib.finance.html"/>
         <link rel="next" title="24.2.3.1. matplotlib.finance.LineCollection.axes" href="matplotlib.finance.LineCollection.axes.html"/>
         <link rel="prev" title="24.2.2.133. matplotlib.finance.Line2D.update_from" href="matplotlib.finance.Line2D.update_from.html"/> 
 
   
-  <script src="../../static/js/modernizr.min.js"></script>
+  <script src="../../_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+            <a href="../../index.html" class="icon icon-home"> Matplotlib API
           
 
           
@@ -277,7 +277,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">PROJECT_NAME</a>
+          <a href="../../index.html">Matplotlib API</a>
         
       </nav>
 
@@ -314,7 +314,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../sources/generated/generated/matplotlib.finance.LineCollection.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/generated/generated/matplotlib.finance.LineCollection.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -327,9 +327,10 @@
             
   <div class="section" id="matplotlib-finance-linecollection">
 <h1>24.2.3. matplotlib.finance.LineCollection<a class="headerlink" href="#matplotlib-finance-linecollection" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="matplotlib.finance.LineCollection.__init__.html#matplotlib.finance.LineCollection.__init__" title="matplotlib.finance.LineCollection.__init__"><code class="xref py py-func docutils literal"><span class="pre">LineCollection.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.finance.LineCollection">
-<em class="property">class </em><code class="descclassname">matplotlib.finance.</code><code class="descname">LineCollection</code><span class="sig-paren">(</span><em>segments</em>, <em>linewidths=None</em>, <em>colors=None</em>, <em>antialiaseds=None</em>, <em>linestyles=u'solid'</em>, <em>offsets=None</em>, <em>transOffset=None</em>, <em>norm=None</em>, <em>cmap=None</em>, <em>pickradius=5</em>, <em>zorder=2</em>, <em>facecolors=u'none'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/collections.html#LineCollection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.finance.LineCollection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">matplotlib.finance.</code><code class="descname">LineCollection</code><span class="sig-paren">(</span><em>segments</em>, <em>linewidths=None</em>, <em>colors=None</em>, <em>antialiaseds=None</em>, <em>linestyles=u'solid'</em>, <em>offsets=None</em>, <em>transOffset=None</em>, <em>norm=None</em>, <em>cmap=None</em>, <em>pickradius=5</em>, <em>zorder=2</em>, <em>facecolors=u'none'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/collections.html#LineCollection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.finance.LineCollection" title="Permalink to this definition">¶</a></dt>
 <dd><p>All parameters must be sequences or scalars; if scalars, they will
 be converted to sequences.  The property of the ith line
 segment is:</p>
@@ -728,6 +729,68 @@ number of segments.</p>
 </tr>
 </tbody>
 </table>
+<dl class="method">
+<dt id="matplotlib.finance.LineCollection.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>segments</em>, <em>linewidths=None</em>, <em>colors=None</em>, <em>antialiaseds=None</em>, <em>linestyles=u'solid'</em>, <em>offsets=None</em>, <em>transOffset=None</em>, <em>norm=None</em>, <em>cmap=None</em>, <em>pickradius=5</em>, <em>zorder=2</em>, <em>facecolors=u'none'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/collections.html#LineCollection.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.finance.LineCollection.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt><em>segments</em></dt>
+<dd><p class="first">a sequence of (<em>line0</em>, <em>line1</em>, <em>line2</em>), where:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">linen</span> <span class="o">=</span> <span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">),</span> <span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">),</span> <span class="o">...</span> <span class="p">(</span><span class="n">xm</span><span class="p">,</span> <span class="n">ym</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="last">or the equivalent numpy array with two columns. Each line
+can be a different length.</p>
+</dd>
+<dt><em>colors</em></dt>
+<dd>must be a sequence of RGBA tuples (e.g., arbitrary color
+strings, etc, not allowed).</dd>
+<dt><em>antialiaseds</em></dt>
+<dd>must be a sequence of ones or zeros</dd>
+<dt><em>linestyles</em> [ &#8216;solid&#8217; | &#8216;dashed&#8217; | &#8216;dashdot&#8217; | &#8216;dotted&#8217; ]</dt>
+<dd><p class="first">a string or dash tuple. The dash tuple is:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">offset</span><span class="p">,</span> <span class="n">onoffseq</span><span class="p">),</span>
+</pre></div>
+</div>
+<p class="last">where <em>onoffseq</em> is an even length tuple of on and off ink
+in points.</p>
+</dd>
+</dl>
+<p>If <em>linewidths</em>, <em>colors</em>, or <em>antialiaseds</em> is None, they
+default to their rcParams setting, in sequence form.</p>
+<p>If <em>offsets</em> and <em>transOffset</em> are not None, then
+<em>offsets</em> are transformed by <em>transOffset</em> and applied after
+the segments have been transformed to display coordinates.</p>
+<p>If <em>offsets</em> is not None but <em>transOffset</em> is None, then the
+<em>offsets</em> are added to the segments before any transformation.
+In this case, a single offset can be specified as:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">offsets</span><span class="o">=</span><span class="p">(</span><span class="n">xo</span><span class="p">,</span><span class="n">yo</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>and this value will be added cumulatively to each successive
+segment, so as to produce a set of successively offset curves.</p>
+<dl class="docutils">
+<dt><em>norm</em></dt>
+<dd>None (optional for <a class="reference internal" href="matplotlib.cm.ScalarMappable.html#matplotlib.cm.ScalarMappable" title="matplotlib.cm.ScalarMappable"><code class="xref py py-class docutils literal"><span class="pre">matplotlib.cm.ScalarMappable</span></code></a>)</dd>
+<dt><em>cmap</em></dt>
+<dd>None (optional for <a class="reference internal" href="matplotlib.cm.ScalarMappable.html#matplotlib.cm.ScalarMappable" title="matplotlib.cm.ScalarMappable"><code class="xref py py-class docutils literal"><span class="pre">matplotlib.cm.ScalarMappable</span></code></a>)</dd>
+</dl>
+<p><em>pickradius</em> is the tolerance for mouse clicks picking a line.
+The default is 5 pt.</p>
+<dl class="docutils">
+<dt><em>zorder</em></dt>
+<dd>The zorder of the LineCollection.  Default is 2</dd>
+<dt><em>facecolors</em></dt>
+<dd>The facecolors of the LineCollection. Default is &#8216;none&#8217;
+Setting to a value other than &#8216;none&#8217; will lead to a filled
+polygon being drawn between points on each line.</dd>
+</dl>
+<p>The use of <a class="reference internal" href="matplotlib.cm.ScalarMappable.html#matplotlib.cm.ScalarMappable" title="matplotlib.cm.ScalarMappable"><code class="xref py py-class docutils literal"><span class="pre">ScalarMappable</span></code></a> is optional.
+If the <a class="reference internal" href="matplotlib.cm.ScalarMappable.html#matplotlib.cm.ScalarMappable" title="matplotlib.cm.ScalarMappable"><code class="xref py py-class docutils literal"><span class="pre">ScalarMappable</span></code></a> array
+<code class="xref py py-attr docutils literal"><span class="pre">_A</span></code> is not None (i.e., a call to
+<a class="reference internal" href="matplotlib.cm.ScalarMappable.set_array.html#matplotlib.cm.ScalarMappable.set_array" title="matplotlib.cm.ScalarMappable.set_array"><code class="xref py py-meth docutils literal"><span class="pre">set_array()</span></code></a> has been made), at
+draw time a call to scalar mappable will be made to set the colors.</p>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -779,16 +842,16 @@ number of segments.</p>
             HAS_SOURCE:  true
         };
     </script>
-      <script type="text/javascript" src="../../static/jquery.js"></script>
-      <script type="text/javascript" src="../../static/underscore.js"></script>
-      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
   
   
-    <script type="text/javascript" src="../../static/js/theme.js"></script>
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
   
 
   

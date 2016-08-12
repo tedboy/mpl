@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>7.2.6. matplotlib.colors.ListedColormap &mdash; PROJECT_NAME 1 documentation</title>
+  <title>7.2.6. matplotlib.colors.ListedColormap &mdash; Matplotlib API 1 documentation</title>
   
 
   
@@ -24,18 +24,18 @@
 
   
   
-    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   
 
   
 
   
-    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
         <link rel="up" title="7. matplotlib.colors" href="../matplotlib.colors.html"/>
         <link rel="prev" title="7.2.5.6. matplotlib.colors.LinearSegmentedColormap.set_under" href="matplotlib.colors.LinearSegmentedColormap.set_under.html"/> 
 
   
-  <script src="../../static/js/modernizr.min.js"></script>
+  <script src="../../_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -51,7 +51,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+            <a href="../../index.html" class="icon icon-home"> Matplotlib API
           
 
           
@@ -161,7 +161,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">PROJECT_NAME</a>
+          <a href="../../index.html">Matplotlib API</a>
         
       </nav>
 
@@ -198,7 +198,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../sources/generated/generated/matplotlib.colors.ListedColormap.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/generated/generated/matplotlib.colors.ListedColormap.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -211,9 +211,10 @@
             
   <div class="section" id="matplotlib-colors-listedcolormap">
 <h1>7.2.6. matplotlib.colors.ListedColormap<a class="headerlink" href="#matplotlib-colors-listedcolormap" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="matplotlib.colors.ListedColormap.__init__.html#matplotlib.colors.ListedColormap.__init__" title="matplotlib.colors.ListedColormap.__init__"><code class="xref py py-func docutils literal"><span class="pre">ListedColormap.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.colors.ListedColormap">
-<em class="property">class </em><code class="descclassname">matplotlib.colors.</code><code class="descname">ListedColormap</code><span class="sig-paren">(</span><em>colors</em>, <em>name=u'from_list'</em>, <em>N=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/colors.html#ListedColormap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.colors.ListedColormap" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">matplotlib.colors.</code><code class="descname">ListedColormap</code><span class="sig-paren">(</span><em>colors</em>, <em>name=u'from_list'</em>, <em>N=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/colors.html#ListedColormap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.colors.ListedColormap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Colormap object generated from a list of colors.</p>
 <p>This may be most useful when indexing directly into a colormap,
 but it can also be used to generate special colormaps for ordinary
@@ -250,6 +251,33 @@ mapping.</p>
 </tr>
 </tbody>
 </table>
+<dl class="method">
+<dt id="matplotlib.colors.ListedColormap.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>colors</em>, <em>name=u'from_list'</em>, <em>N=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/colors.html#ListedColormap.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.colors.ListedColormap.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make a colormap from a list of colors.</p>
+<dl class="docutils">
+<dt><em>colors</em></dt>
+<dd>a list of matplotlib color specifications,
+or an equivalent Nx3 or Nx4 floating point array
+(<em>N</em> rgb or rgba values)</dd>
+<dt><em>name</em></dt>
+<dd>a string to identify the colormap</dd>
+<dt><em>N</em></dt>
+<dd><p class="first">the number of entries in the map.  The default is <em>None</em>,
+in which case there is one colormap entry for each
+element in the list of colors.  If:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">colors</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>the list will be truncated at <em>N</em>.  If:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">colors</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="last">the list will be extended by repetition.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -299,16 +327,16 @@ mapping.</p>
             HAS_SOURCE:  true
         };
     </script>
-      <script type="text/javascript" src="../../static/jquery.js"></script>
-      <script type="text/javascript" src="../../static/underscore.js"></script>
-      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
   
   
-    <script type="text/javascript" src="../../static/js/theme.js"></script>
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
   
 
   

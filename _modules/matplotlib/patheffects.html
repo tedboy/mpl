@@ -1,0 +1,639 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>matplotlib.patheffects &mdash; Matplotlib API 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+        <link rel="up" title="matplotlib" href="../matplotlib.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Matplotlib API</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.html">matplotlib</a> &raquo;</li>
+        
+      <li>matplotlib.patheffects</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for matplotlib.patheffects</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Defines classes for path effects. The path effects are supported in</span>
+<span class="sd">:class:`~matplotlib.text.Text`, :class:`~matplotlib.lines.Line2D`</span>
+<span class="sd">and :class:`~matplotlib.patches.Patch`.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="p">(</span><span class="n">absolute_import</span><span class="p">,</span> <span class="n">division</span><span class="p">,</span> <span class="n">print_function</span><span class="p">,</span>
+                        <span class="n">unicode_literals</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">matplotlib.externals</span> <span class="k">import</span> <span class="n">six</span>
+
+<span class="kn">from</span> <span class="nn">matplotlib.backend_bases</span> <span class="k">import</span> <span class="n">RendererBase</span>
+<span class="kn">import</span> <span class="nn">matplotlib.transforms</span> <span class="k">as</span> <span class="nn">mtransforms</span>
+<span class="kn">from</span> <span class="nn">matplotlib.colors</span> <span class="k">import</span> <span class="n">colorConverter</span>
+<span class="kn">import</span> <span class="nn">matplotlib.patches</span> <span class="k">as</span> <span class="nn">mpatches</span>
+
+
+<div class="viewcode-block" id="AbstractPathEffect"><a class="viewcode-back" href="../../generated/generated/matplotlib.patheffects.AbstractPathEffect.html#matplotlib.patheffects.AbstractPathEffect">[docs]</a><span class="k">class</span> <span class="nc">AbstractPathEffect</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A base class for path effects.</span>
+
+<span class="sd">    Subclasses should override the ``draw_path`` method to add effect</span>
+<span class="sd">    functionality.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="AbstractPathEffect.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.patheffects.AbstractPathEffect.__init__.html#matplotlib.patheffects.AbstractPathEffect.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">)):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        offset : pair of floats</span>
+<span class="sd">            The offset to apply to the path, measured in points.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_offset</span> <span class="o">=</span> <span class="n">offset</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_offset_trans</span> <span class="o">=</span> <span class="n">mtransforms</span><span class="o">.</span><span class="n">Affine2D</span><span class="p">()</span></div>
+
+    <span class="k">def</span> <span class="nf">_offset_transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">renderer</span><span class="p">,</span> <span class="n">transform</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Apply the offset to the given transform.&quot;&quot;&quot;</span>
+        <span class="n">offset_x</span> <span class="o">=</span> <span class="n">renderer</span><span class="o">.</span><span class="n">points_to_pixels</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_offset</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">offset_y</span> <span class="o">=</span> <span class="n">renderer</span><span class="o">.</span><span class="n">points_to_pixels</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_offset</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">transform</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_offset_trans</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="n">offset_x</span><span class="p">,</span>
+                                                                <span class="n">offset_y</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_update_gc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gc</span><span class="p">,</span> <span class="n">new_gc_dict</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Update the given GraphicsCollection with the given</span>
+<span class="sd">        dictionary of properties. The keys in the dictionary are used to</span>
+<span class="sd">        identify the appropriate set_ method on the gc.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">new_gc_dict</span> <span class="o">=</span> <span class="n">new_gc_dict</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+        <span class="n">dashes</span> <span class="o">=</span> <span class="n">new_gc_dict</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;dashes&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">dashes</span><span class="p">:</span>
+            <span class="n">gc</span><span class="o">.</span><span class="n">set_dashes</span><span class="p">(</span><span class="o">**</span><span class="n">dashes</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="n">new_gc_dict</span><span class="p">):</span>
+            <span class="n">set_method</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">gc</span><span class="p">,</span> <span class="s1">&#39;set_&#39;</span> <span class="o">+</span> <span class="n">k</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">set_method</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">six</span><span class="o">.</span><span class="n">callable</span><span class="p">(</span><span class="n">set_method</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span><span class="s1">&#39;Unknown property </span><span class="si">{0}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">k</span><span class="p">))</span>
+            <span class="n">set_method</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">gc</span>
+
+<div class="viewcode-block" id="AbstractPathEffect.draw_path"><a class="viewcode-back" href="../../generated/generated/matplotlib.patheffects.AbstractPathEffect.draw_path.html#matplotlib.patheffects.AbstractPathEffect.draw_path">[docs]</a>    <span class="k">def</span> <span class="nf">draw_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">renderer</span><span class="p">,</span> <span class="n">gc</span><span class="p">,</span> <span class="n">tpath</span><span class="p">,</span> <span class="n">affine</span><span class="p">,</span> <span class="n">rgbFace</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Derived should override this method. The arguments are the same</span>
+<span class="sd">        as :meth:`matplotlib.backend_bases.RendererBase.draw_path`</span>
+<span class="sd">        except the first argument is a renderer.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Get the real renderer, not a PathEffectRenderer.</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">renderer</span><span class="p">,</span> <span class="n">PathEffectRenderer</span><span class="p">):</span>
+            <span class="n">renderer</span> <span class="o">=</span> <span class="n">renderer</span><span class="o">.</span><span class="n">_renderer</span>
+        <span class="k">return</span> <span class="n">renderer</span><span class="o">.</span><span class="n">draw_path</span><span class="p">(</span><span class="n">gc</span><span class="p">,</span> <span class="n">tpath</span><span class="p">,</span> <span class="n">affine</span><span class="p">,</span> <span class="n">rgbFace</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="PathEffectRenderer"><a class="viewcode-back" href="../../generated/generated/matplotlib.patheffects.PathEffectRenderer.html#matplotlib.patheffects.PathEffectRenderer">[docs]</a><span class="k">class</span> <span class="nc">PathEffectRenderer</span><span class="p">(</span><span class="n">RendererBase</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Implements a Renderer which contains another renderer.</span>
+
+<span class="sd">    This proxy then intercepts draw calls, calling the appropriate</span>
+<span class="sd">    :class:`AbstractPathEffect` draw method.</span>
+
+<span class="sd">    .. note::</span>
+<span class="sd">        Not all methods have been overridden on this RendererBase subclass.</span>
+<span class="sd">        It may be necessary to add further methods to extend the PathEffects</span>
+<span class="sd">        capabilities further.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="PathEffectRenderer.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.patheffects.PathEffectRenderer.__init__.html#matplotlib.patheffects.PathEffectRenderer.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path_effects</span><span class="p">,</span> <span class="n">renderer</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        path_effects : iterable of :class:`AbstractPathEffect`</span>
+<span class="sd">            The path effects which this renderer represents.</span>
+<span class="sd">        renderer : :class:`matplotlib.backend_bases.RendererBase` instance</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_path_effects</span> <span class="o">=</span> <span class="n">path_effects</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_renderer</span> <span class="o">=</span> <span class="n">renderer</span></div>
+
+<div class="viewcode-block" id="PathEffectRenderer.new_gc"><a class="viewcode-back" href="../../generated/generated/matplotlib.patheffects.PathEffectRenderer.new_gc.html#matplotlib.patheffects.PathEffectRenderer.new_gc">[docs]</a>    <span class="k">def</span> <span class="nf">new_gc</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_renderer</span><span class="o">.</span><span class="n">new_gc</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="PathEffectRenderer.copy_with_path_effect"><a class="viewcode-back" href="../../generated/generated/matplotlib.patheffects.PathEffectRenderer.copy_with_path_effect.html#matplotlib.patheffects.PathEffectRenderer.copy_with_path_effect">[docs]</a>    <span class="k">def</span> <span class="nf">copy_with_path_effect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path_effects</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="p">(</span><span class="n">path_effects</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_renderer</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PathEffectRenderer.draw_path"><a class="viewcode-back" href="../../generated/generated/matplotlib.patheffects.PathEffectRenderer.draw_path.html#matplotlib.patheffects.PathEffectRenderer.draw_path">[docs]</a>    <span class="k">def</span> <span class="nf">draw_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gc</span><span class="p">,</span> <span class="n">tpath</span><span class="p">,</span> <span class="n">affine</span><span class="p">,</span> <span class="n">rgbFace</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">path_effect</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_path_effects</span><span class="p">:</span>
+            <span class="n">path_effect</span><span class="o">.</span><span class="n">draw_path</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_renderer</span><span class="p">,</span> <span class="n">gc</span><span class="p">,</span> <span class="n">tpath</span><span class="p">,</span> <span class="n">affine</span><span class="p">,</span>
+                                  <span class="n">rgbFace</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PathEffectRenderer.draw_markers"><a class="viewcode-back" href="../../generated/generated/matplotlib.patheffects.PathEffectRenderer.draw_markers.html#matplotlib.patheffects.PathEffectRenderer.draw_markers">[docs]</a>    <span class="k">def</span> <span class="nf">draw_markers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gc</span><span class="p">,</span> <span class="n">marker_path</span><span class="p">,</span> <span class="n">marker_trans</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span>
+                             <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># We do a little shimmy so that all markers are drawn for each path</span>
+        <span class="c1"># effect in turn. Essentially, we induce recursion (depth 1) which is</span>
+        <span class="c1"># terminated once we have just a single path effect to work with.</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_path_effects</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="c1"># Call the base path effect function - this uses the unoptimised</span>
+            <span class="c1"># approach of calling &quot;draw_path&quot; multiple times.</span>
+            <span class="k">return</span> <span class="n">RendererBase</span><span class="o">.</span><span class="n">draw_markers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gc</span><span class="p">,</span> <span class="n">marker_path</span><span class="p">,</span>
+                                             <span class="n">marker_trans</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span>
+                                             <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">path_effect</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_path_effects</span><span class="p">:</span>
+            <span class="n">renderer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">copy_with_path_effect</span><span class="p">([</span><span class="n">path_effect</span><span class="p">])</span>
+            <span class="c1"># Recursively call this method, only next time we will only have</span>
+            <span class="c1"># one path effect.</span>
+            <span class="n">renderer</span><span class="o">.</span><span class="n">draw_markers</span><span class="p">(</span><span class="n">gc</span><span class="p">,</span> <span class="n">marker_path</span><span class="p">,</span> <span class="n">marker_trans</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span>
+                                  <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PathEffectRenderer.draw_path_collection"><a class="viewcode-back" href="../../generated/generated/matplotlib.patheffects.PathEffectRenderer.draw_path_collection.html#matplotlib.patheffects.PathEffectRenderer.draw_path_collection">[docs]</a>    <span class="k">def</span> <span class="nf">draw_path_collection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gc</span><span class="p">,</span> <span class="n">master_transform</span><span class="p">,</span> <span class="n">paths</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span>
+                             <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># We do a little shimmy so that all paths are drawn for each path</span>
+        <span class="c1"># effect in turn. Essentially, we induce recursion (depth 1) which is</span>
+        <span class="c1"># terminated once we have just a single path effect to work with.</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_path_effects</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="c1"># Call the base path effect function - this uses the unoptimised</span>
+            <span class="c1"># approach of calling &quot;draw_path&quot; multiple times.</span>
+            <span class="k">return</span> <span class="n">RendererBase</span><span class="o">.</span><span class="n">draw_path_collection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gc</span><span class="p">,</span>
+                                                     <span class="n">master_transform</span><span class="p">,</span> <span class="n">paths</span><span class="p">,</span>
+                                                     <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">path_effect</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_path_effects</span><span class="p">:</span>
+            <span class="n">renderer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">copy_with_path_effect</span><span class="p">([</span><span class="n">path_effect</span><span class="p">])</span>
+            <span class="c1"># Recursively call this method, only next time we will only have</span>
+            <span class="c1"># one path effect.</span>
+            <span class="n">renderer</span><span class="o">.</span><span class="n">draw_path_collection</span><span class="p">(</span><span class="n">gc</span><span class="p">,</span> <span class="n">master_transform</span><span class="p">,</span> <span class="n">paths</span><span class="p">,</span>
+                                          <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PathEffectRenderer.points_to_pixels"><a class="viewcode-back" href="../../generated/generated/matplotlib.patheffects.PathEffectRenderer.points_to_pixels.html#matplotlib.patheffects.PathEffectRenderer.points_to_pixels">[docs]</a>    <span class="k">def</span> <span class="nf">points_to_pixels</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">points</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_renderer</span><span class="o">.</span><span class="n">points_to_pixels</span><span class="p">(</span><span class="n">points</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">_draw_text_as_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gc</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">prop</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="n">ismath</span><span class="p">):</span>
+        <span class="c1"># Implements the naive text drawing as is found in RendererBase.</span>
+        <span class="n">path</span><span class="p">,</span> <span class="n">transform</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_text_path_transform</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">prop</span><span class="p">,</span>
+                                                        <span class="n">angle</span><span class="p">,</span> <span class="n">ismath</span><span class="p">)</span>
+        <span class="n">color</span> <span class="o">=</span> <span class="n">gc</span><span class="o">.</span><span class="n">get_rgb</span><span class="p">()</span>
+        <span class="n">gc</span><span class="o">.</span><span class="n">set_linewidth</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">draw_path</span><span class="p">(</span><span class="n">gc</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">transform</span><span class="p">,</span> <span class="n">rgbFace</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__getattribute__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;_text2path&#39;</span><span class="p">,</span> <span class="s1">&#39;flipy&#39;</span><span class="p">,</span> <span class="s1">&#39;height&#39;</span><span class="p">,</span> <span class="s1">&#39;width&#39;</span><span class="p">]:</span>
+            <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_renderer</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">object</span><span class="o">.</span><span class="n">__getattribute__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Normal"><a class="viewcode-back" href="../../generated/generated/matplotlib.patheffects.Normal.html#matplotlib.patheffects.Normal">[docs]</a><span class="k">class</span> <span class="nc">Normal</span><span class="p">(</span><span class="n">AbstractPathEffect</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The &quot;identity&quot; PathEffect.</span>
+
+<span class="sd">    The Normal PathEffect&#39;s sole purpose is to draw the original artist with</span>
+<span class="sd">    no special path effect.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">pass</span></div>
+
+
+<div class="viewcode-block" id="Stroke"><a class="viewcode-back" href="../../generated/generated/matplotlib.patheffects.Stroke.html#matplotlib.patheffects.Stroke">[docs]</a><span class="k">class</span> <span class="nc">Stroke</span><span class="p">(</span><span class="n">AbstractPathEffect</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A line based PathEffect which re-draws a stroke.&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="Stroke.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.patheffects.Stroke.__init__.html#matplotlib.patheffects.Stroke.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The path will be stroked with its gc updated with the given</span>
+<span class="sd">        keyword arguments, i.e., the keyword arguments should be valid</span>
+<span class="sd">        gc parameter values.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Stroke</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">offset</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_gc</span> <span class="o">=</span> <span class="n">kwargs</span></div>
+
+<div class="viewcode-block" id="Stroke.draw_path"><a class="viewcode-back" href="../../generated/generated/matplotlib.patheffects.Stroke.draw_path.html#matplotlib.patheffects.Stroke.draw_path">[docs]</a>    <span class="k">def</span> <span class="nf">draw_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">renderer</span><span class="p">,</span> <span class="n">gc</span><span class="p">,</span> <span class="n">tpath</span><span class="p">,</span> <span class="n">affine</span><span class="p">,</span> <span class="n">rgbFace</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        draw the path with updated gc.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Do not modify the input! Use copy instead.</span>
+
+        <span class="n">gc0</span> <span class="o">=</span> <span class="n">renderer</span><span class="o">.</span><span class="n">new_gc</span><span class="p">()</span>
+        <span class="n">gc0</span><span class="o">.</span><span class="n">copy_properties</span><span class="p">(</span><span class="n">gc</span><span class="p">)</span>
+
+        <span class="n">gc0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_update_gc</span><span class="p">(</span><span class="n">gc0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_gc</span><span class="p">)</span>
+        <span class="n">trans</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_offset_transform</span><span class="p">(</span><span class="n">renderer</span><span class="p">,</span> <span class="n">affine</span><span class="p">)</span>
+        <span class="n">renderer</span><span class="o">.</span><span class="n">draw_path</span><span class="p">(</span><span class="n">gc0</span><span class="p">,</span> <span class="n">tpath</span><span class="p">,</span> <span class="n">trans</span><span class="p">,</span> <span class="n">rgbFace</span><span class="p">)</span>
+        <span class="n">gc0</span><span class="o">.</span><span class="n">restore</span><span class="p">()</span></div></div>
+
+
+<div class="viewcode-block" id="withStroke"><a class="viewcode-back" href="../../generated/generated/matplotlib.patheffects.withStroke.html#matplotlib.patheffects.withStroke">[docs]</a><span class="k">class</span> <span class="nc">withStroke</span><span class="p">(</span><span class="n">Stroke</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Adds a simple :class:`Stroke` and then draws the</span>
+<span class="sd">    original Artist to avoid needing to call :class:`Normal`.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="withStroke.draw_path"><a class="viewcode-back" href="../../generated/generated/matplotlib.patheffects.withStroke.draw_path.html#matplotlib.patheffects.withStroke.draw_path">[docs]</a>    <span class="k">def</span> <span class="nf">draw_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">renderer</span><span class="p">,</span> <span class="n">gc</span><span class="p">,</span> <span class="n">tpath</span><span class="p">,</span> <span class="n">affine</span><span class="p">,</span> <span class="n">rgbFace</span><span class="p">):</span>
+        <span class="n">Stroke</span><span class="o">.</span><span class="n">draw_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">renderer</span><span class="p">,</span> <span class="n">gc</span><span class="p">,</span> <span class="n">tpath</span><span class="p">,</span> <span class="n">affine</span><span class="p">,</span> <span class="n">rgbFace</span><span class="p">)</span>
+        <span class="n">renderer</span><span class="o">.</span><span class="n">draw_path</span><span class="p">(</span><span class="n">gc</span><span class="p">,</span> <span class="n">tpath</span><span class="p">,</span> <span class="n">affine</span><span class="p">,</span> <span class="n">rgbFace</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="SimplePatchShadow"><a class="viewcode-back" href="../../generated/generated/matplotlib.patheffects.SimplePatchShadow.html#matplotlib.patheffects.SimplePatchShadow">[docs]</a><span class="k">class</span> <span class="nc">SimplePatchShadow</span><span class="p">(</span><span class="n">AbstractPathEffect</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A simple shadow via a filled patch.&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="SimplePatchShadow.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.patheffects.SimplePatchShadow.__init__.html#matplotlib.patheffects.SimplePatchShadow.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">),</span>
+                 <span class="n">shadow_rgbFace</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">rho</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        offset : pair of floats</span>
+<span class="sd">            The offset of the shadow in points.</span>
+<span class="sd">        shadow_rgbFace : color</span>
+<span class="sd">            The shadow color.</span>
+<span class="sd">        alpha : float</span>
+<span class="sd">            The alpha transparency of the created shadow patch.</span>
+<span class="sd">            Default is 0.3.</span>
+<span class="sd">            http://matplotlib.1069221.n5.nabble.com/path-effects-question-td27630.html</span>
+<span class="sd">        rho : float</span>
+<span class="sd">            A scale factor to apply to the rgbFace color if `shadow_rgbFace`</span>
+<span class="sd">            is not specified. Default is 0.3.</span>
+<span class="sd">        **kwargs</span>
+<span class="sd">            Extra keywords are stored and passed through to</span>
+<span class="sd">            :meth:`AbstractPathEffect._update_gc`.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">SimplePatchShadow</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">offset</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">shadow_rgbFace</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_shadow_rgbFace</span> <span class="o">=</span> <span class="n">shadow_rgbFace</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_shadow_rgbFace</span> <span class="o">=</span> <span class="n">colorConverter</span><span class="o">.</span><span class="n">to_rgba</span><span class="p">(</span><span class="n">shadow_rgbFace</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">alpha</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.3</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_alpha</span> <span class="o">=</span> <span class="n">alpha</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_rho</span> <span class="o">=</span> <span class="n">rho</span>
+
+        <span class="c1">#: The dictionary of keywords to update the graphics collection with.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_gc</span> <span class="o">=</span> <span class="n">kwargs</span>
+
+        <span class="c1">#: The offset transform object. The offset isn&#39;t calculated yet</span>
+        <span class="c1">#: as we don&#39;t know how big the figure will be in pixels.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_offset_tran</span> <span class="o">=</span> <span class="n">mtransforms</span><span class="o">.</span><span class="n">Affine2D</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="SimplePatchShadow.draw_path"><a class="viewcode-back" href="../../generated/generated/matplotlib.patheffects.SimplePatchShadow.draw_path.html#matplotlib.patheffects.SimplePatchShadow.draw_path">[docs]</a>    <span class="k">def</span> <span class="nf">draw_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">renderer</span><span class="p">,</span> <span class="n">gc</span><span class="p">,</span> <span class="n">tpath</span><span class="p">,</span> <span class="n">affine</span><span class="p">,</span> <span class="n">rgbFace</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Overrides the standard draw_path to add the shadow offset and</span>
+<span class="sd">        necessary color changes for the shadow.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># IMPORTANT: Do not modify the input - we copy everything instead.</span>
+        <span class="n">affine0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_offset_transform</span><span class="p">(</span><span class="n">renderer</span><span class="p">,</span> <span class="n">affine</span><span class="p">)</span>
+        <span class="n">gc0</span> <span class="o">=</span> <span class="n">renderer</span><span class="o">.</span><span class="n">new_gc</span><span class="p">()</span>
+        <span class="n">gc0</span><span class="o">.</span><span class="n">copy_properties</span><span class="p">(</span><span class="n">gc</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_shadow_rgbFace</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">r</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="p">(</span><span class="n">rgbFace</span> <span class="ow">or</span> <span class="p">(</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">))[:</span><span class="mi">3</span><span class="p">]</span>
+            <span class="c1"># Scale the colors by a factor to improve the shadow effect.</span>
+            <span class="n">shadow_rgbFace</span> <span class="o">=</span> <span class="p">(</span><span class="n">r</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rho</span><span class="p">,</span> <span class="n">g</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rho</span><span class="p">,</span> <span class="n">b</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rho</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">shadow_rgbFace</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_shadow_rgbFace</span>
+
+        <span class="n">gc0</span><span class="o">.</span><span class="n">set_foreground</span><span class="p">(</span><span class="s2">&quot;none&quot;</span><span class="p">)</span>
+        <span class="n">gc0</span><span class="o">.</span><span class="n">set_alpha</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_alpha</span><span class="p">)</span>
+        <span class="n">gc0</span><span class="o">.</span><span class="n">set_linewidth</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="n">gc0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_update_gc</span><span class="p">(</span><span class="n">gc0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_gc</span><span class="p">)</span>
+        <span class="n">renderer</span><span class="o">.</span><span class="n">draw_path</span><span class="p">(</span><span class="n">gc0</span><span class="p">,</span> <span class="n">tpath</span><span class="p">,</span> <span class="n">affine0</span><span class="p">,</span> <span class="n">shadow_rgbFace</span><span class="p">)</span>
+        <span class="n">gc0</span><span class="o">.</span><span class="n">restore</span><span class="p">()</span></div></div>
+
+
+<div class="viewcode-block" id="withSimplePatchShadow"><a class="viewcode-back" href="../../generated/generated/matplotlib.patheffects.withSimplePatchShadow.html#matplotlib.patheffects.withSimplePatchShadow">[docs]</a><span class="k">class</span> <span class="nc">withSimplePatchShadow</span><span class="p">(</span><span class="n">SimplePatchShadow</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Adds a simple :class:`SimplePatchShadow` and then draws the</span>
+<span class="sd">    original Artist to avoid needing to call :class:`Normal`.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="withSimplePatchShadow.draw_path"><a class="viewcode-back" href="../../generated/generated/matplotlib.patheffects.withSimplePatchShadow.draw_path.html#matplotlib.patheffects.withSimplePatchShadow.draw_path">[docs]</a>    <span class="k">def</span> <span class="nf">draw_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">renderer</span><span class="p">,</span> <span class="n">gc</span><span class="p">,</span> <span class="n">tpath</span><span class="p">,</span> <span class="n">affine</span><span class="p">,</span> <span class="n">rgbFace</span><span class="p">):</span>
+        <span class="n">SimplePatchShadow</span><span class="o">.</span><span class="n">draw_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">renderer</span><span class="p">,</span> <span class="n">gc</span><span class="p">,</span> <span class="n">tpath</span><span class="p">,</span> <span class="n">affine</span><span class="p">,</span> <span class="n">rgbFace</span><span class="p">)</span>
+        <span class="n">renderer</span><span class="o">.</span><span class="n">draw_path</span><span class="p">(</span><span class="n">gc</span><span class="p">,</span> <span class="n">tpath</span><span class="p">,</span> <span class="n">affine</span><span class="p">,</span> <span class="n">rgbFace</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="SimpleLineShadow"><a class="viewcode-back" href="../../generated/generated/matplotlib.patheffects.SimpleLineShadow.html#matplotlib.patheffects.SimpleLineShadow">[docs]</a><span class="k">class</span> <span class="nc">SimpleLineShadow</span><span class="p">(</span><span class="n">AbstractPathEffect</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A simple shadow via a line.&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="SimpleLineShadow.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.patheffects.SimpleLineShadow.__init__.html#matplotlib.patheffects.SimpleLineShadow.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">),</span>
+                 <span class="n">shadow_color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">rho</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        offset : pair of floats</span>
+<span class="sd">            The offset to apply to the path, in points.</span>
+<span class="sd">        shadow_color : color</span>
+<span class="sd">            The shadow color. Default is black.</span>
+<span class="sd">            A value of ``None`` takes the original artist&#39;s color</span>
+<span class="sd">            with a scale factor of `rho`.</span>
+<span class="sd">        alpha : float</span>
+<span class="sd">            The alpha transparency of the created shadow patch.</span>
+<span class="sd">            Default is 0.3.</span>
+<span class="sd">        rho : float</span>
+<span class="sd">            A scale factor to apply to the rgbFace color if `shadow_rgbFace`</span>
+<span class="sd">            is ``None``. Default is 0.3.</span>
+<span class="sd">        **kwargs</span>
+<span class="sd">            Extra keywords are stored and passed through to</span>
+<span class="sd">            :meth:`AbstractPathEffect._update_gc`.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">SimpleLineShadow</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">offset</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">shadow_color</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_shadow_color</span> <span class="o">=</span> <span class="n">shadow_color</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_shadow_color</span> <span class="o">=</span> <span class="n">colorConverter</span><span class="o">.</span><span class="n">to_rgba</span><span class="p">(</span><span class="n">shadow_color</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_alpha</span> <span class="o">=</span> <span class="n">alpha</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_rho</span> <span class="o">=</span> <span class="n">rho</span>
+
+        <span class="c1">#: The dictionary of keywords to update the graphics collection with.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_gc</span> <span class="o">=</span> <span class="n">kwargs</span>
+
+        <span class="c1">#: The offset transform object. The offset isn&#39;t calculated yet</span>
+        <span class="c1">#: as we don&#39;t know how big the figure will be in pixels.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_offset_tran</span> <span class="o">=</span> <span class="n">mtransforms</span><span class="o">.</span><span class="n">Affine2D</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="SimpleLineShadow.draw_path"><a class="viewcode-back" href="../../generated/generated/matplotlib.patheffects.SimpleLineShadow.draw_path.html#matplotlib.patheffects.SimpleLineShadow.draw_path">[docs]</a>    <span class="k">def</span> <span class="nf">draw_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">renderer</span><span class="p">,</span> <span class="n">gc</span><span class="p">,</span> <span class="n">tpath</span><span class="p">,</span> <span class="n">affine</span><span class="p">,</span> <span class="n">rgbFace</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Overrides the standard draw_path to add the shadow offset and</span>
+<span class="sd">        necessary color changes for the shadow.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># IMPORTANT: Do not modify the input - we copy everything instead.</span>
+        <span class="n">affine0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_offset_transform</span><span class="p">(</span><span class="n">renderer</span><span class="p">,</span> <span class="n">affine</span><span class="p">)</span>
+        <span class="n">gc0</span> <span class="o">=</span> <span class="n">renderer</span><span class="o">.</span><span class="n">new_gc</span><span class="p">()</span>
+        <span class="n">gc0</span><span class="o">.</span><span class="n">copy_properties</span><span class="p">(</span><span class="n">gc</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_shadow_color</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">r</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="p">(</span><span class="n">gc0</span><span class="o">.</span><span class="n">get_foreground</span><span class="p">()</span> <span class="ow">or</span> <span class="p">(</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">))[:</span><span class="mi">3</span><span class="p">]</span>
+            <span class="c1"># Scale the colors by a factor to improve the shadow effect.</span>
+            <span class="n">shadow_rgbFace</span> <span class="o">=</span> <span class="p">(</span><span class="n">r</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rho</span><span class="p">,</span> <span class="n">g</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rho</span><span class="p">,</span> <span class="n">b</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rho</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">shadow_rgbFace</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_shadow_color</span>
+
+        <span class="n">fill_color</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="n">gc0</span><span class="o">.</span><span class="n">set_foreground</span><span class="p">(</span><span class="n">shadow_rgbFace</span><span class="p">)</span>
+        <span class="n">gc0</span><span class="o">.</span><span class="n">set_alpha</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_alpha</span><span class="p">)</span>
+        <span class="n">gc0</span><span class="o">.</span><span class="n">set_linestyle</span><span class="p">(</span><span class="s2">&quot;solid&quot;</span><span class="p">)</span>
+
+        <span class="n">gc0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_update_gc</span><span class="p">(</span><span class="n">gc0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_gc</span><span class="p">)</span>
+        <span class="n">renderer</span><span class="o">.</span><span class="n">draw_path</span><span class="p">(</span><span class="n">gc0</span><span class="p">,</span> <span class="n">tpath</span><span class="p">,</span> <span class="n">affine0</span><span class="p">,</span> <span class="n">fill_color</span><span class="p">)</span>
+        <span class="n">gc0</span><span class="o">.</span><span class="n">restore</span><span class="p">()</span></div></div>
+
+
+<div class="viewcode-block" id="PathPatchEffect"><a class="viewcode-back" href="../../generated/generated/matplotlib.patheffects.PathPatchEffect.html#matplotlib.patheffects.PathPatchEffect">[docs]</a><span class="k">class</span> <span class="nc">PathPatchEffect</span><span class="p">(</span><span class="n">AbstractPathEffect</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Draws a :class:`~matplotlib.patches.PathPatch` instance whose Path</span>
+<span class="sd">    comes from the original PathEffect artist.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="PathPatchEffect.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.patheffects.PathPatchEffect.__init__.html#matplotlib.patheffects.PathPatchEffect.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        offset : pair of floats</span>
+<span class="sd">            The offset to apply to the path, in points.</span>
+<span class="sd">        **kwargs :</span>
+<span class="sd">            All keyword arguments are passed through to the</span>
+<span class="sd">            :class:`~matplotlib.patches.PathPatch` constructor. The</span>
+<span class="sd">            properties which cannot be overridden are &quot;path&quot;, &quot;clip_box&quot;</span>
+<span class="sd">            &quot;transform&quot; and &quot;clip_path&quot;.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">PathPatchEffect</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">offset</span><span class="o">=</span><span class="n">offset</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">patch</span> <span class="o">=</span> <span class="n">mpatches</span><span class="o">.</span><span class="n">PathPatch</span><span class="p">([],</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PathPatchEffect.draw_path"><a class="viewcode-back" href="../../generated/generated/matplotlib.patheffects.PathPatchEffect.draw_path.html#matplotlib.patheffects.PathPatchEffect.draw_path">[docs]</a>    <span class="k">def</span> <span class="nf">draw_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">renderer</span><span class="p">,</span> <span class="n">gc</span><span class="p">,</span> <span class="n">tpath</span><span class="p">,</span> <span class="n">affine</span><span class="p">,</span> <span class="n">rgbFace</span><span class="p">):</span>
+        <span class="n">affine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_offset_transform</span><span class="p">(</span><span class="n">renderer</span><span class="p">,</span> <span class="n">affine</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">patch</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">tpath</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">patch</span><span class="o">.</span><span class="n">set_transform</span><span class="p">(</span><span class="n">affine</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">patch</span><span class="o">.</span><span class="n">set_clip_box</span><span class="p">(</span><span class="n">gc</span><span class="o">.</span><span class="n">_cliprect</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">patch</span><span class="o">.</span><span class="n">set_clip_path</span><span class="p">(</span><span class="n">gc</span><span class="o">.</span><span class="n">_clippath</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">patch</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">renderer</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

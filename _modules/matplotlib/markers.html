@@ -1,0 +1,1038 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>matplotlib.markers &mdash; Matplotlib API 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+        <link rel="up" title="matplotlib" href="../matplotlib.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.html">1. matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.pyplot.html">2. matplotlib.pyplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.axes.html">3. matplotlib.axes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.axis.html">4. matplotlib.axis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.cm.html">5. matplotlib.cm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.colorbar.html">6. matplotlib.colorbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.colors.html">7. matplotlib.colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.figure.html">8. matplotlib.figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.legend.html">9. matplotlib.legend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.lines.html">10. matplotlib.lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.markers.html">11. matplotlib.markers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.patches.html">12. matplotlib.patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.style.html">13. matplotlib.style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.text.html">14. matplotlib.text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.widgets.html">15. matplotlib.widgets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../separator.html">16. ===== INFREQ =====</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.animation.html">17. matplotlib.animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.artist.html">18. matplotlib.artist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.backends.html">19. matplotlib.backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.cbook.html">20. matplotlib.cbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.collections.html">21. matplotlib.collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.dates.html">22. matplotlib.dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.dviread.html">23. matplotlib.dviread</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.finance.html">24. matplotlib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.font_manager.html">25. matplotlib.font_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.gridspec.html">26. matplotlib.gridspec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.image.html">27. matplotlib.image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.mathtext.html">28. matplotlib.mathtext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.mlab.html">29. matplotlib.mlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.offsetbox.html">30. matplotlib.offsetbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.path.html">31. matplotlib.path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.patheffects.html">32. matplotlib.patheffects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.sankey.html">33. matplotlib.sankey</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.spines.html">34. matplotlib.spines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.ticker.html">35. matplotlib.ticker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.tight_layout.html">36. matplotlib.tight_layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.tri.html">37. matplotlib.tri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.type1font.html">38. matplotlib.type1font</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/matplotlib.units.html">39. matplotlib.units</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Matplotlib API</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../matplotlib.html">matplotlib</a> &raquo;</li>
+        
+      <li>matplotlib.markers</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for matplotlib.markers</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This module contains functions to handle markers.  Used by both the</span>
+<span class="sd">marker functionality of `~matplotlib.axes.Axes.plot` and</span>
+<span class="sd">`~matplotlib.axes.Axes.scatter`.</span>
+
+<span class="sd">All possible markers are defined here:</span>
+
+<span class="sd">============================== ===============================================</span>
+<span class="sd">marker                         description</span>
+<span class="sd">============================== ===============================================</span>
+<span class="sd">&quot;.&quot;                            point</span>
+<span class="sd">&quot;,&quot;                            pixel</span>
+<span class="sd">&quot;o&quot;                            circle</span>
+<span class="sd">&quot;v&quot;                            triangle_down</span>
+<span class="sd">&quot;^&quot;                            triangle_up</span>
+<span class="sd">&quot;&lt;&quot;                            triangle_left</span>
+<span class="sd">&quot;&gt;&quot;                            triangle_right</span>
+<span class="sd">&quot;1&quot;                            tri_down</span>
+<span class="sd">&quot;2&quot;                            tri_up</span>
+<span class="sd">&quot;3&quot;                            tri_left</span>
+<span class="sd">&quot;4&quot;                            tri_right</span>
+<span class="sd">&quot;8&quot;                            octagon</span>
+<span class="sd">&quot;s&quot;                            square</span>
+<span class="sd">&quot;p&quot;                            pentagon</span>
+<span class="sd">&quot;*&quot;                            star</span>
+<span class="sd">&quot;h&quot;                            hexagon1</span>
+<span class="sd">&quot;H&quot;                            hexagon2</span>
+<span class="sd">&quot;+&quot;                            plus</span>
+<span class="sd">&quot;x&quot;                            x</span>
+<span class="sd">&quot;D&quot;                            diamond</span>
+<span class="sd">&quot;d&quot;                            thin_diamond</span>
+<span class="sd">&quot;|&quot;                            vline</span>
+<span class="sd">&quot;_&quot;                            hline</span>
+<span class="sd">TICKLEFT                       tickleft</span>
+<span class="sd">TICKRIGHT                      tickright</span>
+<span class="sd">TICKUP                         tickup</span>
+<span class="sd">TICKDOWN                       tickdown</span>
+<span class="sd">CARETLEFT                      caretleft</span>
+<span class="sd">CARETRIGHT                     caretright</span>
+<span class="sd">CARETUP                        caretup</span>
+<span class="sd">CARETDOWN                      caretdown</span>
+<span class="sd">&quot;None&quot;                         nothing</span>
+<span class="sd">None                           nothing</span>
+<span class="sd">&quot; &quot;                            nothing</span>
+<span class="sd">&quot;&quot;                             nothing</span>
+<span class="sd">``&#39;$...$&#39;``                    render the string using mathtext.</span>
+<span class="sd">`verts`                        a list of (x, y) pairs used for Path vertices.</span>
+<span class="sd">                               The center of the marker is located at (0,0) and</span>
+<span class="sd">                               the size is normalized.</span>
+<span class="sd">path                           a `~matplotlib.path.Path` instance.</span>
+<span class="sd">(`numsides`, `style`, `angle`) see below</span>
+<span class="sd">============================== ===============================================</span>
+
+<span class="sd">The marker can also be a tuple (`numsides`, `style`, `angle`), which</span>
+<span class="sd">will create a custom, regular symbol.</span>
+
+<span class="sd">    `numsides`:</span>
+<span class="sd">      the number of sides</span>
+
+<span class="sd">    `style`:</span>
+<span class="sd">      the style of the regular symbol:</span>
+
+<span class="sd">      =====   =============================================</span>
+<span class="sd">      Value   Description</span>
+<span class="sd">      =====   =============================================</span>
+<span class="sd">      0       a regular polygon</span>
+<span class="sd">      1       a star-like symbol</span>
+<span class="sd">      2       an asterisk</span>
+<span class="sd">      3       a circle (`numsides` and `angle` is ignored)</span>
+<span class="sd">      =====   =============================================</span>
+
+<span class="sd">    `angle`:</span>
+<span class="sd">      the angle of rotation of the symbol, in degrees</span>
+
+<span class="sd">For backward compatibility, the form (`verts`, 0) is also accepted,</span>
+<span class="sd">but it is equivalent to just `verts` for giving a raw set of vertices</span>
+<span class="sd">that define the shape.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="p">(</span><span class="n">absolute_import</span><span class="p">,</span> <span class="n">division</span><span class="p">,</span> <span class="n">print_function</span><span class="p">,</span>
+                        <span class="n">unicode_literals</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">matplotlib.externals</span> <span class="k">import</span> <span class="n">six</span>
+<span class="kn">from</span> <span class="nn">matplotlib.externals.six.moves</span> <span class="k">import</span> <span class="n">xrange</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">.cbook</span> <span class="k">import</span> <span class="n">is_math_text</span><span class="p">,</span> <span class="n">is_string_like</span><span class="p">,</span> <span class="n">is_numlike</span><span class="p">,</span> <span class="n">iterable</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="k">import</span> <span class="n">rcParams</span>
+<span class="kn">from</span> <span class="nn">.path</span> <span class="k">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">.transforms</span> <span class="k">import</span> <span class="n">IdentityTransform</span><span class="p">,</span> <span class="n">Affine2D</span>
+
+<span class="c1"># special-purpose marker identifiers:</span>
+<span class="p">(</span><span class="n">TICKLEFT</span><span class="p">,</span> <span class="n">TICKRIGHT</span><span class="p">,</span> <span class="n">TICKUP</span><span class="p">,</span> <span class="n">TICKDOWN</span><span class="p">,</span>
+ <span class="n">CARETLEFT</span><span class="p">,</span> <span class="n">CARETRIGHT</span><span class="p">,</span> <span class="n">CARETUP</span><span class="p">,</span> <span class="n">CARETDOWN</span><span class="p">)</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">xrange</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
+
+
+<div class="viewcode-block" id="MarkerStyle"><a class="viewcode-back" href="../../generated/generated/matplotlib.markers.MarkerStyle.html#matplotlib.lines.MarkerStyle">[docs]</a><span class="k">class</span> <span class="nc">MarkerStyle</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="n">markers</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;.&#39;</span><span class="p">:</span> <span class="s1">&#39;point&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;,&#39;</span><span class="p">:</span> <span class="s1">&#39;pixel&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;o&#39;</span><span class="p">:</span> <span class="s1">&#39;circle&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;v&#39;</span><span class="p">:</span> <span class="s1">&#39;triangle_down&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;^&#39;</span><span class="p">:</span> <span class="s1">&#39;triangle_up&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;&lt;&#39;</span><span class="p">:</span> <span class="s1">&#39;triangle_left&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;&gt;&#39;</span><span class="p">:</span> <span class="s1">&#39;triangle_right&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;1&#39;</span><span class="p">:</span> <span class="s1">&#39;tri_down&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;2&#39;</span><span class="p">:</span> <span class="s1">&#39;tri_up&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;3&#39;</span><span class="p">:</span> <span class="s1">&#39;tri_left&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;4&#39;</span><span class="p">:</span> <span class="s1">&#39;tri_right&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;8&#39;</span><span class="p">:</span> <span class="s1">&#39;octagon&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;s&#39;</span><span class="p">:</span> <span class="s1">&#39;square&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;p&#39;</span><span class="p">:</span> <span class="s1">&#39;pentagon&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;*&#39;</span><span class="p">:</span> <span class="s1">&#39;star&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;h&#39;</span><span class="p">:</span> <span class="s1">&#39;hexagon1&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;H&#39;</span><span class="p">:</span> <span class="s1">&#39;hexagon2&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;+&#39;</span><span class="p">:</span> <span class="s1">&#39;plus&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="s1">&#39;x&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="s1">&#39;diamond&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;d&#39;</span><span class="p">:</span> <span class="s1">&#39;thin_diamond&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;|&#39;</span><span class="p">:</span> <span class="s1">&#39;vline&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;_&#39;</span><span class="p">:</span> <span class="s1">&#39;hline&#39;</span><span class="p">,</span>
+        <span class="n">TICKLEFT</span><span class="p">:</span> <span class="s1">&#39;tickleft&#39;</span><span class="p">,</span>
+        <span class="n">TICKRIGHT</span><span class="p">:</span> <span class="s1">&#39;tickright&#39;</span><span class="p">,</span>
+        <span class="n">TICKUP</span><span class="p">:</span> <span class="s1">&#39;tickup&#39;</span><span class="p">,</span>
+        <span class="n">TICKDOWN</span><span class="p">:</span> <span class="s1">&#39;tickdown&#39;</span><span class="p">,</span>
+        <span class="n">CARETLEFT</span><span class="p">:</span> <span class="s1">&#39;caretleft&#39;</span><span class="p">,</span>
+        <span class="n">CARETRIGHT</span><span class="p">:</span> <span class="s1">&#39;caretright&#39;</span><span class="p">,</span>
+        <span class="n">CARETUP</span><span class="p">:</span> <span class="s1">&#39;caretup&#39;</span><span class="p">,</span>
+        <span class="n">CARETDOWN</span><span class="p">:</span> <span class="s1">&#39;caretdown&#39;</span><span class="p">,</span>
+        <span class="s2">&quot;None&quot;</span><span class="p">:</span> <span class="s1">&#39;nothing&#39;</span><span class="p">,</span>
+        <span class="kc">None</span><span class="p">:</span> <span class="s1">&#39;nothing&#39;</span><span class="p">,</span>
+        <span class="s1">&#39; &#39;</span><span class="p">:</span> <span class="s1">&#39;nothing&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;&#39;</span><span class="p">:</span> <span class="s1">&#39;nothing&#39;</span>
+    <span class="p">}</span>
+
+    <span class="c1"># Just used for informational purposes.  is_filled()</span>
+    <span class="c1"># is calculated in the _set_* functions.</span>
+    <span class="n">filled_markers</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;v&#39;</span><span class="p">,</span> <span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;&#39;</span><span class="p">,</span> <span class="s1">&#39;&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;8&#39;</span><span class="p">,</span> <span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="s1">&#39;p&#39;</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">)</span>
+
+    <span class="n">fillstyles</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;full&#39;</span><span class="p">,</span> <span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="s1">&#39;bottom&#39;</span><span class="p">,</span> <span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="s1">&#39;none&#39;</span><span class="p">)</span>
+    <span class="n">_half_fillstyles</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="s1">&#39;bottom&#39;</span><span class="p">,</span> <span class="s1">&#39;top&#39;</span><span class="p">)</span>
+
+    <span class="c1"># TODO: Is this ever used as a non-constant?</span>
+    <span class="n">_point_size_reduction</span> <span class="o">=</span> <span class="mf">0.5</span>
+
+<div class="viewcode-block" id="MarkerStyle.__init__"><a class="viewcode-back" href="../../generated/generated/matplotlib.markers.MarkerStyle.__init__.html#matplotlib.lines.MarkerStyle.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fillstyle</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        MarkerStyle</span>
+
+<span class="sd">        Attributes</span>
+<span class="sd">        ----------</span>
+<span class="sd">        markers : list of known markes</span>
+
+<span class="sd">        fillstyles : list of known fillstyles</span>
+
+<span class="sd">        filled_markers : list of known filled markers.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        marker : string or array_like, optional, default: None</span>
+<span class="sd">            See the descriptions of possible markers in the module docstring.</span>
+
+<span class="sd">        fillstyle : string, optional, default: &#39;full&#39;</span>
+<span class="sd">            &#39;full&#39;, &#39;left&quot;, &#39;right&#39;, &#39;bottom&#39;, &#39;top&#39;, &#39;none&#39;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># The fillstyle has to be set here as it might be accessed by calls to</span>
+        <span class="c1"># _recache() in set_marker.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_fillstyle</span> <span class="o">=</span> <span class="n">fillstyle</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_marker</span><span class="p">(</span><span class="n">marker</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_fillstyle</span><span class="p">(</span><span class="n">fillstyle</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">__getstate__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__dict__</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="n">d</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;_marker_function&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">d</span>
+
+    <span class="k">def</span> <span class="nf">__setstate__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">statedict</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__dict__</span> <span class="o">=</span> <span class="n">statedict</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_marker</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_marker</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_recache</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_recache</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span> <span class="o">=</span> <span class="n">IdentityTransform</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_alt_path</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_alt_transform</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_snap_threshold</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_joinstyle</span> <span class="o">=</span> <span class="s1">&#39;round&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_capstyle</span> <span class="o">=</span> <span class="s1">&#39;butt&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_filled</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_marker_function</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">six</span><span class="o">.</span><span class="n">PY3</span><span class="p">:</span>
+        <span class="k">def</span> <span class="nf">__bool__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_path</span><span class="o">.</span><span class="n">vertices</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">def</span> <span class="nf">__nonzero__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_path</span><span class="o">.</span><span class="n">vertices</span><span class="p">))</span>
+
+<div class="viewcode-block" id="MarkerStyle.is_filled"><a class="viewcode-back" href="../../generated/generated/matplotlib.markers.MarkerStyle.is_filled.html#matplotlib.lines.MarkerStyle.is_filled">[docs]</a>    <span class="k">def</span> <span class="nf">is_filled</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_filled</span></div>
+
+<div class="viewcode-block" id="MarkerStyle.get_fillstyle"><a class="viewcode-back" href="../../generated/generated/matplotlib.markers.MarkerStyle.get_fillstyle.html#matplotlib.lines.MarkerStyle.get_fillstyle">[docs]</a>    <span class="k">def</span> <span class="nf">get_fillstyle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fillstyle</span></div>
+
+<div class="viewcode-block" id="MarkerStyle.set_fillstyle"><a class="viewcode-back" href="../../generated/generated/matplotlib.markers.MarkerStyle.set_fillstyle.html#matplotlib.lines.MarkerStyle.set_fillstyle">[docs]</a>    <span class="k">def</span> <span class="nf">set_fillstyle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fillstyle</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Sets fillstyle</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        fillstyle : string amongst known fillstyles</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">fillstyle</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">fillstyle</span> <span class="o">=</span> <span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;markers.fillstyle&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">fillstyle</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">fillstyles</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Unrecognized fillstyle </span><span class="si">%s</span><span class="s2">&quot;</span>
+                             <span class="o">%</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fillstyles</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_fillstyle</span> <span class="o">=</span> <span class="n">fillstyle</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_recache</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="MarkerStyle.get_joinstyle"><a class="viewcode-back" href="../../generated/generated/matplotlib.markers.MarkerStyle.get_joinstyle.html#matplotlib.lines.MarkerStyle.get_joinstyle">[docs]</a>    <span class="k">def</span> <span class="nf">get_joinstyle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_joinstyle</span></div>
+
+<div class="viewcode-block" id="MarkerStyle.get_capstyle"><a class="viewcode-back" href="../../generated/generated/matplotlib.markers.MarkerStyle.get_capstyle.html#matplotlib.lines.MarkerStyle.get_capstyle">[docs]</a>    <span class="k">def</span> <span class="nf">get_capstyle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_capstyle</span></div>
+
+<div class="viewcode-block" id="MarkerStyle.get_marker"><a class="viewcode-back" href="../../generated/generated/matplotlib.markers.MarkerStyle.get_marker.html#matplotlib.lines.MarkerStyle.get_marker">[docs]</a>    <span class="k">def</span> <span class="nf">get_marker</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_marker</span></div>
+
+<div class="viewcode-block" id="MarkerStyle.set_marker"><a class="viewcode-back" href="../../generated/generated/matplotlib.markers.MarkerStyle.set_marker.html#matplotlib.lines.MarkerStyle.set_marker">[docs]</a>    <span class="k">def</span> <span class="nf">set_marker</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">marker</span><span class="p">):</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">iterable</span><span class="p">(</span><span class="n">marker</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">marker</span><span class="p">)</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="ow">and</span>
+                <span class="n">marker</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_marker_function</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_set_tuple_marker</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">marker</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_marker_function</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_set_vertices</span>
+        <span class="k">elif</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">marker</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="ow">and</span> <span class="n">marker</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">markers</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_marker_function</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span>
+                <span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;_set_&#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">markers</span><span class="p">[</span><span class="n">marker</span><span class="p">])</span>
+        <span class="k">elif</span> <span class="n">is_string_like</span><span class="p">(</span><span class="n">marker</span><span class="p">)</span> <span class="ow">and</span> <span class="n">is_math_text</span><span class="p">(</span><span class="n">marker</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_marker_function</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_set_mathtext_path</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">marker</span><span class="p">,</span> <span class="n">Path</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_marker_function</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_set_path_marker</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">Path</span><span class="p">(</span><span class="n">marker</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_marker_function</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_set_vertices</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Unrecognized marker style&#39;</span>
+                                 <span class="s1">&#39; </span><span class="si">{0}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">marker</span><span class="p">))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_marker</span> <span class="o">=</span> <span class="n">marker</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_recache</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="MarkerStyle.get_path"><a class="viewcode-back" href="../../generated/generated/matplotlib.markers.MarkerStyle.get_path.html#matplotlib.lines.MarkerStyle.get_path">[docs]</a>    <span class="k">def</span> <span class="nf">get_path</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_path</span></div>
+
+<div class="viewcode-block" id="MarkerStyle.get_transform"><a class="viewcode-back" href="../../generated/generated/matplotlib.markers.MarkerStyle.get_transform.html#matplotlib.lines.MarkerStyle.get_transform">[docs]</a>    <span class="k">def</span> <span class="nf">get_transform</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span><span class="o">.</span><span class="n">frozen</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="MarkerStyle.get_alt_path"><a class="viewcode-back" href="../../generated/generated/matplotlib.markers.MarkerStyle.get_alt_path.html#matplotlib.lines.MarkerStyle.get_alt_path">[docs]</a>    <span class="k">def</span> <span class="nf">get_alt_path</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_alt_path</span></div>
+
+<div class="viewcode-block" id="MarkerStyle.get_alt_transform"><a class="viewcode-back" href="../../generated/generated/matplotlib.markers.MarkerStyle.get_alt_transform.html#matplotlib.lines.MarkerStyle.get_alt_transform">[docs]</a>    <span class="k">def</span> <span class="nf">get_alt_transform</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_alt_transform</span><span class="o">.</span><span class="n">frozen</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="MarkerStyle.get_snap_threshold"><a class="viewcode-back" href="../../generated/generated/matplotlib.markers.MarkerStyle.get_snap_threshold.html#matplotlib.lines.MarkerStyle.get_snap_threshold">[docs]</a>    <span class="k">def</span> <span class="nf">get_snap_threshold</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_snap_threshold</span></div>
+
+    <span class="k">def</span> <span class="nf">_set_nothing</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_filled</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="nf">_set_custom_marker</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+        <span class="n">verts</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">vertices</span>
+        <span class="n">rescale</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">verts</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])),</span>
+                      <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">verts</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span> <span class="o">=</span> <span class="n">Affine2D</span><span class="p">()</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">0.5</span> <span class="o">/</span> <span class="n">rescale</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">path</span>
+
+    <span class="k">def</span> <span class="nf">_set_path_marker</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_set_custom_marker</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_marker</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_set_vertices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">verts</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_marker</span>
+        <span class="n">marker</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">verts</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_set_custom_marker</span><span class="p">(</span><span class="n">marker</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_set_tuple_marker</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">marker</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_marker</span>
+        <span class="k">if</span> <span class="n">is_numlike</span><span class="p">(</span><span class="n">marker</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">marker</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="n">numsides</span><span class="p">,</span> <span class="n">rotation</span> <span class="o">=</span> <span class="n">marker</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mf">0.0</span>
+            <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">marker</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+                <span class="n">numsides</span><span class="p">,</span> <span class="n">rotation</span> <span class="o">=</span> <span class="n">marker</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">marker</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+            <span class="n">symstyle</span> <span class="o">=</span> <span class="n">marker</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">symstyle</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">unit_regular_polygon</span><span class="p">(</span><span class="n">numsides</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_joinstyle</span> <span class="o">=</span> <span class="s1">&#39;miter&#39;</span>
+            <span class="k">elif</span> <span class="n">symstyle</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">unit_regular_star</span><span class="p">(</span><span class="n">numsides</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_joinstyle</span> <span class="o">=</span> <span class="s1">&#39;bevel&#39;</span>
+            <span class="k">elif</span> <span class="n">symstyle</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">unit_regular_asterisk</span><span class="p">(</span><span class="n">numsides</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_filled</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_joinstyle</span> <span class="o">=</span> <span class="s1">&#39;bevel&#39;</span>
+            <span class="k">elif</span> <span class="n">symstyle</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">unit_circle</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span> <span class="o">=</span> <span class="n">Affine2D</span><span class="p">()</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">rotate_deg</span><span class="p">(</span><span class="n">rotation</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">verts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">marker</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">verts</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_set_custom_marker</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_set_mathtext_path</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Draws mathtext markers &#39;$...$&#39; using TextPath object.</span>
+
+<span class="sd">        Submitted by tcb</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="kn">from</span> <span class="nn">matplotlib.text</span> <span class="k">import</span> <span class="n">TextPath</span>
+        <span class="kn">from</span> <span class="nn">matplotlib.font_manager</span> <span class="k">import</span> <span class="n">FontProperties</span>
+
+        <span class="c1"># again, the properties could be initialised just once outside</span>
+        <span class="c1"># this function</span>
+        <span class="c1"># Font size is irrelevant here, it will be rescaled based on</span>
+        <span class="c1"># the drawn size later</span>
+        <span class="n">props</span> <span class="o">=</span> <span class="n">FontProperties</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="n">TextPath</span><span class="p">(</span><span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">s</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_marker</span><span class="p">(),</span> <span class="n">fontproperties</span><span class="o">=</span><span class="n">props</span><span class="p">,</span>
+                        <span class="n">usetex</span><span class="o">=</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;text.usetex&#39;</span><span class="p">])</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">vertices</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="n">xmin</span><span class="p">,</span> <span class="n">ymin</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">vertices</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">xmax</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">vertices</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">width</span> <span class="o">=</span> <span class="n">xmax</span> <span class="o">-</span> <span class="n">xmin</span>
+        <span class="n">height</span> <span class="o">=</span> <span class="n">ymax</span> <span class="o">-</span> <span class="n">ymin</span>
+        <span class="n">max_dim</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span> <span class="o">=</span> <span class="n">Affine2D</span><span class="p">()</span> \
+            <span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="o">-</span><span class="n">xmin</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="o">-</span><span class="n">width</span><span class="p">,</span> <span class="o">-</span><span class="n">ymin</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="o">-</span><span class="n">height</span><span class="p">)</span> \
+            <span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">/</span> <span class="n">max_dim</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">text</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_snap</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="nf">_half_fill</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">fs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_fillstyle</span><span class="p">()</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">fs</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_half_fillstyles</span>
+        <span class="k">return</span> <span class="n">result</span>
+
+    <span class="k">def</span> <span class="nf">_set_circle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">reduction</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span> <span class="o">=</span> <span class="n">Affine2D</span><span class="p">()</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">0.5</span> <span class="o">*</span> <span class="n">reduction</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_snap_threshold</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span>
+        <span class="n">fs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_fillstyle</span><span class="p">()</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_half_fill</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">unit_circle</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># build a right-half circle</span>
+            <span class="k">if</span> <span class="n">fs</span> <span class="o">==</span> <span class="s1">&#39;bottom&#39;</span><span class="p">:</span>
+                <span class="n">rotate</span> <span class="o">=</span> <span class="mf">270.</span>
+            <span class="k">elif</span> <span class="n">fs</span> <span class="o">==</span> <span class="s1">&#39;top&#39;</span><span class="p">:</span>
+                <span class="n">rotate</span> <span class="o">=</span> <span class="mf">90.</span>
+            <span class="k">elif</span> <span class="n">fs</span> <span class="o">==</span> <span class="s1">&#39;left&#39;</span><span class="p">:</span>
+                <span class="n">rotate</span> <span class="o">=</span> <span class="mf">180.</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">rotate</span> <span class="o">=</span> <span class="mf">0.</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_alt_path</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">unit_circle_righthalf</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span><span class="o">.</span><span class="n">rotate_deg</span><span class="p">(</span><span class="n">rotate</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_alt_transform</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span><span class="o">.</span><span class="n">frozen</span><span class="p">()</span><span class="o">.</span><span class="n">rotate_deg</span><span class="p">(</span><span class="mf">180.</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_set_pixel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">unit_rectangle</span><span class="p">()</span>
+        <span class="c1"># Ideally, you&#39;d want -0.5, -0.5 here, but then the snapping</span>
+        <span class="c1"># algorithm in the Agg backend will round this to a 2x2</span>
+        <span class="c1"># rectangle from (-1, -1) to (1, 1).  By offsetting it</span>
+        <span class="c1"># slightly, we can force it to be (0, 0) to (1, 1), which both</span>
+        <span class="c1"># makes it only be a single pixel and places it correctly</span>
+        <span class="c1"># aligned to 1-width stroking (i.e. the ticks).  This hack is</span>
+        <span class="c1"># the best of a number of bad alternatives, mainly because the</span>
+        <span class="c1"># backends are not aware of what marker is actually being used</span>
+        <span class="c1"># beyond just its path data.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span> <span class="o">=</span> <span class="n">Affine2D</span><span class="p">()</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="o">-</span><span class="mf">0.49999</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.49999</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_snap_threshold</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">_set_point</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_set_circle</span><span class="p">(</span><span class="n">reduction</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_point_size_reduction</span><span class="p">)</span>
+
+    <span class="n">_triangle_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span>
+        <span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]],</span>
+        <span class="p">[</span><span class="n">Path</span><span class="o">.</span><span class="n">MOVETO</span><span class="p">,</span> <span class="n">Path</span><span class="o">.</span><span class="n">LINETO</span><span class="p">,</span> <span class="n">Path</span><span class="o">.</span><span class="n">LINETO</span><span class="p">,</span> <span class="n">Path</span><span class="o">.</span><span class="n">CLOSEPOLY</span><span class="p">])</span>
+    <span class="c1"># Going down halfway looks to small.  Golden ratio is too far.</span>
+    <span class="n">_triangle_path_u</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span>
+        <span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">3</span> <span class="o">/</span> <span class="mf">5.</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span> <span class="o">/</span> <span class="mf">5.</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span> <span class="o">/</span> <span class="mf">5.</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span> <span class="o">/</span> <span class="mf">5.</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]],</span>
+        <span class="p">[</span><span class="n">Path</span><span class="o">.</span><span class="n">MOVETO</span><span class="p">,</span> <span class="n">Path</span><span class="o">.</span><span class="n">LINETO</span><span class="p">,</span> <span class="n">Path</span><span class="o">.</span><span class="n">LINETO</span><span class="p">,</span> <span class="n">Path</span><span class="o">.</span><span class="n">CLOSEPOLY</span><span class="p">])</span>
+    <span class="n">_triangle_path_d</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span>
+        <span class="p">[[</span><span class="o">-</span><span class="mi">3</span> <span class="o">/</span> <span class="mf">5.</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span> <span class="o">/</span> <span class="mf">5.</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span> <span class="o">/</span> <span class="mf">5.</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span> <span class="o">/</span> <span class="mf">5.</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">],</span>
+         <span class="p">[</span><span class="o">-</span><span class="mi">3</span> <span class="o">/</span> <span class="mf">5.</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span> <span class="o">/</span> <span class="mf">5.</span><span class="p">]],</span>
+        <span class="p">[</span><span class="n">Path</span><span class="o">.</span><span class="n">MOVETO</span><span class="p">,</span> <span class="n">Path</span><span class="o">.</span><span class="n">LINETO</span><span class="p">,</span> <span class="n">Path</span><span class="o">.</span><span class="n">LINETO</span><span class="p">,</span> <span class="n">Path</span><span class="o">.</span><span class="n">LINETO</span><span class="p">,</span> <span class="n">Path</span><span class="o">.</span><span class="n">CLOSEPOLY</span><span class="p">])</span>
+    <span class="n">_triangle_path_l</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span>
+        <span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]],</span>
+        <span class="p">[</span><span class="n">Path</span><span class="o">.</span><span class="n">MOVETO</span><span class="p">,</span> <span class="n">Path</span><span class="o">.</span><span class="n">LINETO</span><span class="p">,</span> <span class="n">Path</span><span class="o">.</span><span class="n">LINETO</span><span class="p">,</span> <span class="n">Path</span><span class="o">.</span><span class="n">CLOSEPOLY</span><span class="p">])</span>
+    <span class="n">_triangle_path_r</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span>
+        <span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]],</span>
+        <span class="p">[</span><span class="n">Path</span><span class="o">.</span><span class="n">MOVETO</span><span class="p">,</span> <span class="n">Path</span><span class="o">.</span><span class="n">LINETO</span><span class="p">,</span> <span class="n">Path</span><span class="o">.</span><span class="n">LINETO</span><span class="p">,</span> <span class="n">Path</span><span class="o">.</span><span class="n">CLOSEPOLY</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="nf">_set_triangle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rot</span><span class="p">,</span> <span class="n">skip</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span> <span class="o">=</span> <span class="n">Affine2D</span><span class="p">()</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">rotate_deg</span><span class="p">(</span><span class="n">rot</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_snap_threshold</span> <span class="o">=</span> <span class="mf">5.0</span>
+        <span class="n">fs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_fillstyle</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_half_fill</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_triangle_path</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">mpaths</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_triangle_path_u</span><span class="p">,</span>
+                      <span class="bp">self</span><span class="o">.</span><span class="n">_triangle_path_l</span><span class="p">,</span>
+                      <span class="bp">self</span><span class="o">.</span><span class="n">_triangle_path_d</span><span class="p">,</span>
+                      <span class="bp">self</span><span class="o">.</span><span class="n">_triangle_path_r</span><span class="p">]</span>
+
+            <span class="k">if</span> <span class="n">fs</span> <span class="o">==</span> <span class="s1">&#39;top&#39;</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">mpaths</span><span class="p">[(</span><span class="mi">0</span> <span class="o">+</span> <span class="n">skip</span><span class="p">)</span> <span class="o">%</span> <span class="mi">4</span><span class="p">]</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_alt_path</span> <span class="o">=</span> <span class="n">mpaths</span><span class="p">[(</span><span class="mi">2</span> <span class="o">+</span> <span class="n">skip</span><span class="p">)</span> <span class="o">%</span> <span class="mi">4</span><span class="p">]</span>
+            <span class="k">elif</span> <span class="n">fs</span> <span class="o">==</span> <span class="s1">&#39;bottom&#39;</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">mpaths</span><span class="p">[(</span><span class="mi">2</span> <span class="o">+</span> <span class="n">skip</span><span class="p">)</span> <span class="o">%</span> <span class="mi">4</span><span class="p">]</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_alt_path</span> <span class="o">=</span> <span class="n">mpaths</span><span class="p">[(</span><span class="mi">0</span> <span class="o">+</span> <span class="n">skip</span><span class="p">)</span> <span class="o">%</span> <span class="mi">4</span><span class="p">]</span>
+            <span class="k">elif</span> <span class="n">fs</span> <span class="o">==</span> <span class="s1">&#39;left&#39;</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">mpaths</span><span class="p">[(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">skip</span><span class="p">)</span> <span class="o">%</span> <span class="mi">4</span><span class="p">]</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_alt_path</span> <span class="o">=</span> <span class="n">mpaths</span><span class="p">[(</span><span class="mi">3</span> <span class="o">+</span> <span class="n">skip</span><span class="p">)</span> <span class="o">%</span> <span class="mi">4</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">mpaths</span><span class="p">[(</span><span class="mi">3</span> <span class="o">+</span> <span class="n">skip</span><span class="p">)</span> <span class="o">%</span> <span class="mi">4</span><span class="p">]</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_alt_path</span> <span class="o">=</span> <span class="n">mpaths</span><span class="p">[(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">skip</span><span class="p">)</span> <span class="o">%</span> <span class="mi">4</span><span class="p">]</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">_alt_transform</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_joinstyle</span> <span class="o">=</span> <span class="s1">&#39;miter&#39;</span>
+
+    <span class="k">def</span> <span class="nf">_set_triangle_up</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_set_triangle</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_set_triangle_down</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_set_triangle</span><span class="p">(</span><span class="mf">180.0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_set_triangle_left</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_set_triangle</span><span class="p">(</span><span class="mf">90.0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_set_triangle_right</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_set_triangle</span><span class="p">(</span><span class="mf">270.0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_set_square</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span> <span class="o">=</span> <span class="n">Affine2D</span><span class="p">()</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_snap_threshold</span> <span class="o">=</span> <span class="mf">2.0</span>
+        <span class="n">fs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_fillstyle</span><span class="p">()</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_half_fill</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">unit_rectangle</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># build a bottom filled square out of two rectangles, one</span>
+            <span class="c1"># filled.  Use the rotation to support left, right, bottom</span>
+            <span class="c1"># or top</span>
+            <span class="k">if</span> <span class="n">fs</span> <span class="o">==</span> <span class="s1">&#39;bottom&#39;</span><span class="p">:</span>
+                <span class="n">rotate</span> <span class="o">=</span> <span class="mf">0.</span>
+            <span class="k">elif</span> <span class="n">fs</span> <span class="o">==</span> <span class="s1">&#39;top&#39;</span><span class="p">:</span>
+                <span class="n">rotate</span> <span class="o">=</span> <span class="mf">180.</span>
+            <span class="k">elif</span> <span class="n">fs</span> <span class="o">==</span> <span class="s1">&#39;left&#39;</span><span class="p">:</span>
+                <span class="n">rotate</span> <span class="o">=</span> <span class="mf">270.</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">rotate</span> <span class="o">=</span> <span class="mf">90.</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">([[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span>
+                               <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_alt_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">([[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span>
+                                   <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">]])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span><span class="o">.</span><span class="n">rotate_deg</span><span class="p">(</span><span class="n">rotate</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_alt_transform</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_joinstyle</span> <span class="o">=</span> <span class="s1">&#39;miter&#39;</span>
+
+    <span class="k">def</span> <span class="nf">_set_diamond</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span> <span class="o">=</span> <span class="n">Affine2D</span><span class="p">()</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">rotate_deg</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_snap_threshold</span> <span class="o">=</span> <span class="mf">5.0</span>
+        <span class="n">fs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_fillstyle</span><span class="p">()</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_half_fill</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">unit_rectangle</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">([[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_alt_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">([[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span>
+                                   <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]])</span>
+
+            <span class="k">if</span> <span class="n">fs</span> <span class="o">==</span> <span class="s1">&#39;bottom&#39;</span><span class="p">:</span>
+                <span class="n">rotate</span> <span class="o">=</span> <span class="mf">270.</span>
+            <span class="k">elif</span> <span class="n">fs</span> <span class="o">==</span> <span class="s1">&#39;top&#39;</span><span class="p">:</span>
+                <span class="n">rotate</span> <span class="o">=</span> <span class="mf">90.</span>
+            <span class="k">elif</span> <span class="n">fs</span> <span class="o">==</span> <span class="s1">&#39;left&#39;</span><span class="p">:</span>
+                <span class="n">rotate</span> <span class="o">=</span> <span class="mf">180.</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">rotate</span> <span class="o">=</span> <span class="mf">0.</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span><span class="o">.</span><span class="n">rotate_deg</span><span class="p">(</span><span class="n">rotate</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_alt_transform</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_joinstyle</span> <span class="o">=</span> <span class="s1">&#39;miter&#39;</span>
+
+    <span class="k">def</span> <span class="nf">_set_thin_diamond</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_set_diamond</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">0.6</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_set_pentagon</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span> <span class="o">=</span> <span class="n">Affine2D</span><span class="p">()</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_snap_threshold</span> <span class="o">=</span> <span class="mf">5.0</span>
+
+        <span class="n">polypath</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">unit_regular_polygon</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+        <span class="n">fs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_fillstyle</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_half_fill</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">polypath</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">verts</span> <span class="o">=</span> <span class="n">polypath</span><span class="o">.</span><span class="n">vertices</span>
+
+            <span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span> <span class="o">/</span> <span class="mf">4.</span>
+            <span class="n">top</span> <span class="o">=</span> <span class="n">Path</span><span class="p">([</span><span class="n">verts</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">verts</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">verts</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">verts</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+            <span class="n">bottom</span> <span class="o">=</span> <span class="n">Path</span><span class="p">([</span><span class="n">verts</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">verts</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">verts</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">verts</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">verts</span><span class="p">[</span><span class="mi">1</span><span class="p">]])</span>
+            <span class="n">left</span> <span class="o">=</span> <span class="n">Path</span><span class="p">([</span><span class="n">verts</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">verts</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">verts</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="n">y</span><span class="p">],</span> <span class="n">verts</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+            <span class="n">right</span> <span class="o">=</span> <span class="n">Path</span><span class="p">([</span><span class="n">verts</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">verts</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">verts</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="n">y</span><span class="p">],</span> <span class="n">verts</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+
+            <span class="k">if</span> <span class="n">fs</span> <span class="o">==</span> <span class="s1">&#39;top&#39;</span><span class="p">:</span>
+                <span class="n">mpath</span><span class="p">,</span> <span class="n">mpath_alt</span> <span class="o">=</span> <span class="n">top</span><span class="p">,</span> <span class="n">bottom</span>
+            <span class="k">elif</span> <span class="n">fs</span> <span class="o">==</span> <span class="s1">&#39;bottom&#39;</span><span class="p">:</span>
+                <span class="n">mpath</span><span class="p">,</span> <span class="n">mpath_alt</span> <span class="o">=</span> <span class="n">bottom</span><span class="p">,</span> <span class="n">top</span>
+            <span class="k">elif</span> <span class="n">fs</span> <span class="o">==</span> <span class="s1">&#39;left&#39;</span><span class="p">:</span>
+                <span class="n">mpath</span><span class="p">,</span> <span class="n">mpath_alt</span> <span class="o">=</span> <span class="n">left</span><span class="p">,</span> <span class="n">right</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">mpath</span><span class="p">,</span> <span class="n">mpath_alt</span> <span class="o">=</span> <span class="n">right</span><span class="p">,</span> <span class="n">left</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">mpath</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_alt_path</span> <span class="o">=</span> <span class="n">mpath_alt</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_alt_transform</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_joinstyle</span> <span class="o">=</span> <span class="s1">&#39;miter&#39;</span>
+
+    <span class="k">def</span> <span class="nf">_set_star</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span> <span class="o">=</span> <span class="n">Affine2D</span><span class="p">()</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_snap_threshold</span> <span class="o">=</span> <span class="mf">5.0</span>
+
+        <span class="n">fs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_fillstyle</span><span class="p">()</span>
+        <span class="n">polypath</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">unit_regular_star</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">innerCircle</span><span class="o">=</span><span class="mf">0.381966</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_half_fill</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">polypath</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">verts</span> <span class="o">=</span> <span class="n">polypath</span><span class="o">.</span><span class="n">vertices</span>
+
+            <span class="n">top</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">verts</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span> <span class="p">:],</span> <span class="n">verts</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span> <span class="p">:],</span> <span class="n">verts</span><span class="p">[</span><span class="mi">0</span><span class="p">])))</span>
+            <span class="n">bottom</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">verts</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">8</span><span class="p">,</span> <span class="p">:],</span> <span class="n">verts</span><span class="p">[</span><span class="mi">3</span><span class="p">])))</span>
+            <span class="n">left</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">verts</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span> <span class="p">:],</span> <span class="n">verts</span><span class="p">[</span><span class="mi">0</span><span class="p">])))</span>
+            <span class="n">right</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">verts</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">verts</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span> <span class="p">:],</span> <span class="n">verts</span><span class="p">[</span><span class="mi">0</span><span class="p">])))</span>
+
+            <span class="k">if</span> <span class="n">fs</span> <span class="o">==</span> <span class="s1">&#39;top&#39;</span><span class="p">:</span>
+                <span class="n">mpath</span><span class="p">,</span> <span class="n">mpath_alt</span> <span class="o">=</span> <span class="n">top</span><span class="p">,</span> <span class="n">bottom</span>
+            <span class="k">elif</span> <span class="n">fs</span> <span class="o">==</span> <span class="s1">&#39;bottom&#39;</span><span class="p">:</span>
+                <span class="n">mpath</span><span class="p">,</span> <span class="n">mpath_alt</span> <span class="o">=</span> <span class="n">bottom</span><span class="p">,</span> <span class="n">top</span>
+            <span class="k">elif</span> <span class="n">fs</span> <span class="o">==</span> <span class="s1">&#39;left&#39;</span><span class="p">:</span>
+                <span class="n">mpath</span><span class="p">,</span> <span class="n">mpath_alt</span> <span class="o">=</span> <span class="n">left</span><span class="p">,</span> <span class="n">right</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">mpath</span><span class="p">,</span> <span class="n">mpath_alt</span> <span class="o">=</span> <span class="n">right</span><span class="p">,</span> <span class="n">left</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">mpath</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_alt_path</span> <span class="o">=</span> <span class="n">mpath_alt</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_alt_transform</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_joinstyle</span> <span class="o">=</span> <span class="s1">&#39;bevel&#39;</span>
+
+    <span class="k">def</span> <span class="nf">_set_hexagon1</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span> <span class="o">=</span> <span class="n">Affine2D</span><span class="p">()</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_snap_threshold</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="n">fs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_fillstyle</span><span class="p">()</span>
+        <span class="n">polypath</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">unit_regular_polygon</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_half_fill</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">polypath</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">verts</span> <span class="o">=</span> <span class="n">polypath</span><span class="o">.</span><span class="n">vertices</span>
+
+            <span class="c1"># not drawing inside lines</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mf">6.</span><span class="p">))</span>
+            <span class="n">top</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">(([</span><span class="o">-</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">verts</span><span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">:],</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">])))</span>
+            <span class="n">bottom</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">(([</span><span class="o">-</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">verts</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="p">:],</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">])))</span>
+            <span class="n">left</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">verts</span><span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">:])</span>
+            <span class="n">right</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">verts</span><span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">:])</span>
+
+            <span class="k">if</span> <span class="n">fs</span> <span class="o">==</span> <span class="s1">&#39;top&#39;</span><span class="p">:</span>
+                <span class="n">mpath</span><span class="p">,</span> <span class="n">mpath_alt</span> <span class="o">=</span> <span class="n">top</span><span class="p">,</span> <span class="n">bottom</span>
+            <span class="k">elif</span> <span class="n">fs</span> <span class="o">==</span> <span class="s1">&#39;bottom&#39;</span><span class="p">:</span>
+                <span class="n">mpath</span><span class="p">,</span> <span class="n">mpath_alt</span> <span class="o">=</span> <span class="n">bottom</span><span class="p">,</span> <span class="n">top</span>
+            <span class="k">elif</span> <span class="n">fs</span> <span class="o">==</span> <span class="s1">&#39;left&#39;</span><span class="p">:</span>
+                <span class="n">mpath</span><span class="p">,</span> <span class="n">mpath_alt</span> <span class="o">=</span> <span class="n">left</span><span class="p">,</span> <span class="n">right</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">mpath</span><span class="p">,</span> <span class="n">mpath_alt</span> <span class="o">=</span> <span class="n">right</span><span class="p">,</span> <span class="n">left</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">mpath</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_alt_path</span> <span class="o">=</span> <span class="n">mpath_alt</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_alt_transform</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_joinstyle</span> <span class="o">=</span> <span class="s1">&#39;miter&#39;</span>
+
+    <span class="k">def</span> <span class="nf">_set_hexagon2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span> <span class="o">=</span> <span class="n">Affine2D</span><span class="p">()</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">rotate_deg</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_snap_threshold</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="n">fs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_fillstyle</span><span class="p">()</span>
+        <span class="n">polypath</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">unit_regular_polygon</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_half_fill</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">polypath</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">verts</span> <span class="o">=</span> <span class="n">polypath</span><span class="o">.</span><span class="n">vertices</span>
+
+            <span class="c1"># not drawing inside lines</span>
+            <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">/</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span> <span class="o">/</span> <span class="mf">4.</span>
+            <span class="n">top</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">verts</span><span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">:])</span>
+            <span class="n">bottom</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">verts</span><span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">:])</span>
+            <span class="n">left</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">(([</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">],</span> <span class="n">verts</span><span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">:],</span>
+                                   <span class="p">[</span><span class="o">-</span><span class="n">x</span><span class="p">,</span> <span class="o">-</span><span class="n">y</span><span class="p">],</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">])))</span>
+            <span class="n">right</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">(([</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">],</span> <span class="n">verts</span><span class="p">[(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">:],</span> <span class="p">[</span><span class="o">-</span><span class="n">x</span><span class="p">,</span> <span class="o">-</span><span class="n">y</span><span class="p">])))</span>
+
+            <span class="k">if</span> <span class="n">fs</span> <span class="o">==</span> <span class="s1">&#39;top&#39;</span><span class="p">:</span>
+                <span class="n">mpath</span><span class="p">,</span> <span class="n">mpath_alt</span> <span class="o">=</span> <span class="n">top</span><span class="p">,</span> <span class="n">bottom</span>
+            <span class="k">elif</span> <span class="n">fs</span> <span class="o">==</span> <span class="s1">&#39;bottom&#39;</span><span class="p">:</span>
+                <span class="n">mpath</span><span class="p">,</span> <span class="n">mpath_alt</span> <span class="o">=</span> <span class="n">bottom</span><span class="p">,</span> <span class="n">top</span>
+            <span class="k">elif</span> <span class="n">fs</span> <span class="o">==</span> <span class="s1">&#39;left&#39;</span><span class="p">:</span>
+                <span class="n">mpath</span><span class="p">,</span> <span class="n">mpath_alt</span> <span class="o">=</span> <span class="n">left</span><span class="p">,</span> <span class="n">right</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">mpath</span><span class="p">,</span> <span class="n">mpath_alt</span> <span class="o">=</span> <span class="n">right</span><span class="p">,</span> <span class="n">left</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">mpath</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_alt_path</span> <span class="o">=</span> <span class="n">mpath_alt</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_alt_transform</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_joinstyle</span> <span class="o">=</span> <span class="s1">&#39;miter&#39;</span>
+
+    <span class="k">def</span> <span class="nf">_set_octagon</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span> <span class="o">=</span> <span class="n">Affine2D</span><span class="p">()</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_snap_threshold</span> <span class="o">=</span> <span class="mf">5.0</span>
+
+        <span class="n">fs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_fillstyle</span><span class="p">()</span>
+        <span class="n">polypath</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">unit_regular_polygon</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_half_fill</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span><span class="o">.</span><span class="n">rotate_deg</span><span class="p">(</span><span class="mf">22.5</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">polypath</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">2.</span><span class="p">)</span> <span class="o">/</span> <span class="mf">4.</span>
+            <span class="n">half</span> <span class="o">=</span> <span class="n">Path</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="n">x</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="p">],</span>
+                         <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="n">x</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="n">x</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
+
+            <span class="k">if</span> <span class="n">fs</span> <span class="o">==</span> <span class="s1">&#39;bottom&#39;</span><span class="p">:</span>
+                <span class="n">rotate</span> <span class="o">=</span> <span class="mf">90.</span>
+            <span class="k">elif</span> <span class="n">fs</span> <span class="o">==</span> <span class="s1">&#39;top&#39;</span><span class="p">:</span>
+                <span class="n">rotate</span> <span class="o">=</span> <span class="mf">270.</span>
+            <span class="k">elif</span> <span class="n">fs</span> <span class="o">==</span> <span class="s1">&#39;right&#39;</span><span class="p">:</span>
+                <span class="n">rotate</span> <span class="o">=</span> <span class="mf">180.</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">rotate</span> <span class="o">=</span> <span class="mf">0.</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span><span class="o">.</span><span class="n">rotate_deg</span><span class="p">(</span><span class="n">rotate</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_alt_path</span> <span class="o">=</span> <span class="n">half</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_alt_transform</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span><span class="o">.</span><span class="n">frozen</span><span class="p">()</span><span class="o">.</span><span class="n">rotate_deg</span><span class="p">(</span><span class="mf">180.0</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_joinstyle</span> <span class="o">=</span> <span class="s1">&#39;miter&#39;</span>
+
+    <span class="n">_line_marker_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">([[</span><span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]])</span>
+
+    <span class="k">def</span> <span class="nf">_set_vline</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span> <span class="o">=</span> <span class="n">Affine2D</span><span class="p">()</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_snap_threshold</span> <span class="o">=</span> <span class="mf">1.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_filled</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_line_marker_path</span>
+
+    <span class="k">def</span> <span class="nf">_set_hline</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span> <span class="o">=</span> <span class="n">Affine2D</span><span class="p">()</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">rotate_deg</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_snap_threshold</span> <span class="o">=</span> <span class="mf">1.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_filled</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_line_marker_path</span>
+
+    <span class="n">_tickhoriz_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">([[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]])</span>
+
+    <span class="k">def</span> <span class="nf">_set_tickleft</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span> <span class="o">=</span> <span class="n">Affine2D</span><span class="p">()</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_snap_threshold</span> <span class="o">=</span> <span class="mf">1.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_filled</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tickhoriz_path</span>
+
+    <span class="k">def</span> <span class="nf">_set_tickright</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span> <span class="o">=</span> <span class="n">Affine2D</span><span class="p">()</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_snap_threshold</span> <span class="o">=</span> <span class="mf">1.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_filled</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tickhoriz_path</span>
+
+    <span class="n">_tickvert_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">([[</span><span class="o">-</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]])</span>
+
+    <span class="k">def</span> <span class="nf">_set_tickup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span> <span class="o">=</span> <span class="n">Affine2D</span><span class="p">()</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_snap_threshold</span> <span class="o">=</span> <span class="mf">1.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_filled</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tickvert_path</span>
+
+    <span class="k">def</span> <span class="nf">_set_tickdown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span> <span class="o">=</span> <span class="n">Affine2D</span><span class="p">()</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_snap_threshold</span> <span class="o">=</span> <span class="mf">1.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_filled</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tickvert_path</span>
+
+    <span class="n">_plus_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">([[</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+                       <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]],</span>
+                      <span class="p">[</span><span class="n">Path</span><span class="o">.</span><span class="n">MOVETO</span><span class="p">,</span> <span class="n">Path</span><span class="o">.</span><span class="n">LINETO</span><span class="p">,</span>
+                       <span class="n">Path</span><span class="o">.</span><span class="n">MOVETO</span><span class="p">,</span> <span class="n">Path</span><span class="o">.</span><span class="n">LINETO</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="nf">_set_plus</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span> <span class="o">=</span> <span class="n">Affine2D</span><span class="p">()</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_snap_threshold</span> <span class="o">=</span> <span class="mf">1.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_filled</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_plus_path</span>
+
+    <span class="n">_tri_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">([[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">],</span>
+                      <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span>
+                      <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">]],</span>
+                     <span class="p">[</span><span class="n">Path</span><span class="o">.</span><span class="n">MOVETO</span><span class="p">,</span> <span class="n">Path</span><span class="o">.</span><span class="n">LINETO</span><span class="p">,</span>
+                      <span class="n">Path</span><span class="o">.</span><span class="n">MOVETO</span><span class="p">,</span> <span class="n">Path</span><span class="o">.</span><span class="n">LINETO</span><span class="p">,</span>
+                      <span class="n">Path</span><span class="o">.</span><span class="n">MOVETO</span><span class="p">,</span> <span class="n">Path</span><span class="o">.</span><span class="n">LINETO</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="nf">_set_tri_down</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span> <span class="o">=</span> <span class="n">Affine2D</span><span class="p">()</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_snap_threshold</span> <span class="o">=</span> <span class="mf">5.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_filled</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tri_path</span>
+
+    <span class="k">def</span> <span class="nf">_set_tri_up</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span> <span class="o">=</span> <span class="n">Affine2D</span><span class="p">()</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">rotate_deg</span><span class="p">(</span><span class="mi">180</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_snap_threshold</span> <span class="o">=</span> <span class="mf">5.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_filled</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tri_path</span>
+
+    <span class="k">def</span> <span class="nf">_set_tri_left</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span> <span class="o">=</span> <span class="n">Affine2D</span><span class="p">()</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">rotate_deg</span><span class="p">(</span><span class="mi">270</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_snap_threshold</span> <span class="o">=</span> <span class="mf">5.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_filled</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tri_path</span>
+
+    <span class="k">def</span> <span class="nf">_set_tri_right</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span> <span class="o">=</span> <span class="n">Affine2D</span><span class="p">()</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">rotate_deg</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_snap_threshold</span> <span class="o">=</span> <span class="mf">5.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_filled</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tri_path</span>
+
+    <span class="n">_caret_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">([[</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">]])</span>
+
+    <span class="k">def</span> <span class="nf">_set_caretdown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span> <span class="o">=</span> <span class="n">Affine2D</span><span class="p">()</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_snap_threshold</span> <span class="o">=</span> <span class="mf">3.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_filled</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_caret_path</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_joinstyle</span> <span class="o">=</span> <span class="s1">&#39;miter&#39;</span>
+
+    <span class="k">def</span> <span class="nf">_set_caretup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span> <span class="o">=</span> <span class="n">Affine2D</span><span class="p">()</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">rotate_deg</span><span class="p">(</span><span class="mi">180</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_snap_threshold</span> <span class="o">=</span> <span class="mf">3.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_filled</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_caret_path</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_joinstyle</span> <span class="o">=</span> <span class="s1">&#39;miter&#39;</span>
+
+    <span class="k">def</span> <span class="nf">_set_caretleft</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span> <span class="o">=</span> <span class="n">Affine2D</span><span class="p">()</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">rotate_deg</span><span class="p">(</span><span class="mi">270</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_snap_threshold</span> <span class="o">=</span> <span class="mf">3.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_filled</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_caret_path</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_joinstyle</span> <span class="o">=</span> <span class="s1">&#39;miter&#39;</span>
+
+    <span class="k">def</span> <span class="nf">_set_caretright</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span> <span class="o">=</span> <span class="n">Affine2D</span><span class="p">()</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">rotate_deg</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_snap_threshold</span> <span class="o">=</span> <span class="mf">3.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_filled</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_caret_path</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_joinstyle</span> <span class="o">=</span> <span class="s1">&#39;miter&#39;</span>
+
+    <span class="n">_x_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">([[</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span>
+                    <span class="p">[</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">]],</span>
+                   <span class="p">[</span><span class="n">Path</span><span class="o">.</span><span class="n">MOVETO</span><span class="p">,</span> <span class="n">Path</span><span class="o">.</span><span class="n">LINETO</span><span class="p">,</span>
+                    <span class="n">Path</span><span class="o">.</span><span class="n">MOVETO</span><span class="p">,</span> <span class="n">Path</span><span class="o">.</span><span class="n">LINETO</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="nf">_set_x</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_transform</span> <span class="o">=</span> <span class="n">Affine2D</span><span class="p">()</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_snap_threshold</span> <span class="o">=</span> <span class="mf">3.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_filled</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_x_path</span></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

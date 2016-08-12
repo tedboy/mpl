@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>7.2.5. matplotlib.colors.LinearSegmentedColormap &mdash; PROJECT_NAME 1 documentation</title>
+  <title>7.2.5. matplotlib.colors.LinearSegmentedColormap &mdash; Matplotlib API 1 documentation</title>
   
 
   
@@ -24,18 +24,18 @@
 
   
   
-    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   
 
   
 
   
-    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
         <link rel="up" title="7. matplotlib.colors" href="../matplotlib.colors.html"/>
         <link rel="prev" title="7.2.4.6. matplotlib.colors.LightSource.shade_rgb" href="matplotlib.colors.LightSource.shade_rgb.html"/> 
 
   
-  <script src="../../static/js/modernizr.min.js"></script>
+  <script src="../../_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -51,7 +51,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+            <a href="../../index.html" class="icon icon-home"> Matplotlib API
           
 
           
@@ -163,7 +163,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">PROJECT_NAME</a>
+          <a href="../../index.html">Matplotlib API</a>
         
       </nav>
 
@@ -200,7 +200,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../sources/generated/generated/matplotlib.colors.LinearSegmentedColormap.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/generated/generated/matplotlib.colors.LinearSegmentedColormap.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -213,9 +213,10 @@
             
   <div class="section" id="matplotlib-colors-linearsegmentedcolormap">
 <h1>7.2.5. matplotlib.colors.LinearSegmentedColormap<a class="headerlink" href="#matplotlib-colors-linearsegmentedcolormap" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="matplotlib.colors.LinearSegmentedColormap.__init__.html#matplotlib.colors.LinearSegmentedColormap.__init__" title="matplotlib.colors.LinearSegmentedColormap.__init__"><code class="xref py py-func docutils literal"><span class="pre">LinearSegmentedColormap.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.colors.LinearSegmentedColormap">
-<em class="property">class </em><code class="descclassname">matplotlib.colors.</code><code class="descname">LinearSegmentedColormap</code><span class="sig-paren">(</span><em>name</em>, <em>segmentdata</em>, <em>N=256</em>, <em>gamma=1.0</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/colors.html#LinearSegmentedColormap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.colors.LinearSegmentedColormap" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">matplotlib.colors.</code><code class="descname">LinearSegmentedColormap</code><span class="sig-paren">(</span><em>name</em>, <em>segmentdata</em>, <em>N=256</em>, <em>gamma=1.0</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/colors.html#LinearSegmentedColormap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.colors.LinearSegmentedColormap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Colormap objects based on lookup tables using linear segments.</p>
 <p>The lookup table is generated using linear interpolation for each
 primary color, with the 0-1 domain divided into any number of
@@ -258,6 +259,52 @@ segments.</p>
 </tr>
 </tbody>
 </table>
+<dl class="method">
+<dt id="matplotlib.colors.LinearSegmentedColormap.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>name</em>, <em>segmentdata</em>, <em>N=256</em>, <em>gamma=1.0</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/colors.html#LinearSegmentedColormap.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.colors.LinearSegmentedColormap.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create color map from linear mapping segments</p>
+<p>segmentdata argument is a dictionary with a red, green and blue
+entries. Each entry should be a list of <em>x</em>, <em>y0</em>, <em>y1</em> tuples,
+forming rows in a table. Entries for alpha are optional.</p>
+<p>Example: suppose you want red to increase from 0 to 1 over
+the bottom half, green to do the same over the middle half,
+and blue over the top half.  Then you would use:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cdict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;red&#39;</span><span class="p">:</span>   <span class="p">[(</span><span class="mf">0.0</span><span class="p">,</span>  <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">),</span>
+                   <span class="p">(</span><span class="mf">0.5</span><span class="p">,</span>  <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span>
+                   <span class="p">(</span><span class="mf">1.0</span><span class="p">,</span>  <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)],</span>
+
+         <span class="s1">&#39;green&#39;</span><span class="p">:</span> <span class="p">[(</span><span class="mf">0.0</span><span class="p">,</span>  <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">),</span>
+                   <span class="p">(</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">),</span>
+                   <span class="p">(</span><span class="mf">0.75</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span>
+                   <span class="p">(</span><span class="mf">1.0</span><span class="p">,</span>  <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)],</span>
+
+         <span class="s1">&#39;blue&#39;</span><span class="p">:</span>  <span class="p">[(</span><span class="mf">0.0</span><span class="p">,</span>  <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">),</span>
+                   <span class="p">(</span><span class="mf">0.5</span><span class="p">,</span>  <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">),</span>
+                   <span class="p">(</span><span class="mf">1.0</span><span class="p">,</span>  <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)]}</span>
+</pre></div>
+</div>
+<p>Each row in the table for a given color is a sequence of
+<em>x</em>, <em>y0</em>, <em>y1</em> tuples.  In each sequence, <em>x</em> must increase
+monotonically from 0 to 1.  For any input value <em>z</em> falling
+between <em>x[i]</em> and <em>x[i+1]</em>, the output value of a given color
+will be linearly interpolated between <em>y1[i]</em> and <em>y0[i+1]</em>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">row</span> <span class="n">i</span><span class="p">:</span>   <span class="n">x</span>  <span class="n">y0</span>  <span class="n">y1</span>
+               <span class="o">/</span>
+              <span class="o">/</span>
+<span class="n">row</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span> <span class="n">x</span>  <span class="n">y0</span>  <span class="n">y1</span>
+</pre></div>
+</div>
+<p>Hence y0 in the first row and y1 in the last row are never used.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p><a class="reference internal" href="matplotlib.colors.LinearSegmentedColormap.from_list.html#matplotlib.colors.LinearSegmentedColormap.from_list" title="matplotlib.colors.LinearSegmentedColormap.from_list"><code class="xref py py-meth docutils literal"><span class="pre">LinearSegmentedColormap.from_list()</span></code></a>
+Static method; factory function for generating a
+smoothly-varying LinearSegmentedColormap.</p>
+<p class="last"><a class="reference internal" href="../matplotlib.colors.makeMappingArray.html#matplotlib.colors.makeMappingArray" title="matplotlib.colors.makeMappingArray"><code class="xref py py-func docutils literal"><span class="pre">makeMappingArray()</span></code></a>
+For information about making a mapping array.</p>
+</div>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -307,16 +354,16 @@ segments.</p>
             HAS_SOURCE:  true
         };
     </script>
-      <script type="text/javascript" src="../../static/jquery.js"></script>
-      <script type="text/javascript" src="../../static/underscore.js"></script>
-      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
   
   
-    <script type="text/javascript" src="../../static/js/theme.js"></script>
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
   
 
   

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>32.1.6. matplotlib.patheffects.SimpleLineShadow &mdash; PROJECT_NAME 1 documentation</title>
+  <title>32.1.6. matplotlib.patheffects.SimpleLineShadow &mdash; Matplotlib API 1 documentation</title>
   
 
   
@@ -24,19 +24,19 @@
 
   
   
-    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   
 
   
 
   
-    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
         <link rel="up" title="32. matplotlib.patheffects" href="../matplotlib.patheffects.html"/>
         <link rel="next" title="32.1.6.1. matplotlib.patheffects.SimpleLineShadow.draw_path" href="matplotlib.patheffects.SimpleLineShadow.draw_path.html"/>
         <link rel="prev" title="32.1.5.25. matplotlib.patheffects.RendererBase.strip_math" href="matplotlib.patheffects.RendererBase.strip_math.html"/> 
 
   
-  <script src="../../static/js/modernizr.min.js"></script>
+  <script src="../../_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+            <a href="../../index.html" class="icon icon-home"> Matplotlib API
           
 
           
@@ -156,7 +156,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">PROJECT_NAME</a>
+          <a href="../../index.html">Matplotlib API</a>
         
       </nav>
 
@@ -193,7 +193,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../sources/generated/generated/matplotlib.patheffects.SimpleLineShadow.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/generated/generated/matplotlib.patheffects.SimpleLineShadow.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -206,9 +206,10 @@
             
   <div class="section" id="matplotlib-patheffects-simplelineshadow">
 <h1>32.1.6. matplotlib.patheffects.SimpleLineShadow<a class="headerlink" href="#matplotlib-patheffects-simplelineshadow" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="matplotlib.patheffects.SimpleLineShadow.__init__.html#matplotlib.patheffects.SimpleLineShadow.__init__" title="matplotlib.patheffects.SimpleLineShadow.__init__"><code class="xref py py-func docutils literal"><span class="pre">SimpleLineShadow.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.patheffects.SimpleLineShadow">
-<em class="property">class </em><code class="descclassname">matplotlib.patheffects.</code><code class="descname">SimpleLineShadow</code><span class="sig-paren">(</span><em>offset=(2</em>, <em>-2)</em>, <em>shadow_color=u'k'</em>, <em>alpha=0.3</em>, <em>rho=0.3</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/patheffects.html#SimpleLineShadow"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.patheffects.SimpleLineShadow" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">matplotlib.patheffects.</code><code class="descname">SimpleLineShadow</code><span class="sig-paren">(</span><em>offset=(2</em>, <em>-2)</em>, <em>shadow_color=u'k'</em>, <em>alpha=0.3</em>, <em>rho=0.3</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/patheffects.html#SimpleLineShadow"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.patheffects.SimpleLineShadow" title="Permalink to this definition">¶</a></dt>
 <dd><p>A simple shadow via a line.</p>
 <p class="rubric">Methods</p>
 <table border="1" class="longtable docutils">
@@ -222,6 +223,44 @@
 </tr>
 </tbody>
 </table>
+<dl class="method">
+<dt id="matplotlib.patheffects.SimpleLineShadow.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>offset=(2</em>, <em>-2)</em>, <em>shadow_color=u'k'</em>, <em>alpha=0.3</em>, <em>rho=0.3</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/patheffects.html#SimpleLineShadow.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.patheffects.SimpleLineShadow.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>offset</strong> : pair of floats</p>
+<blockquote>
+<div><p>The offset to apply to the path, in points.</p>
+</div></blockquote>
+<p><strong>shadow_color</strong> : color</p>
+<blockquote>
+<div><p>The shadow color. Default is black.
+A value of <code class="docutils literal"><span class="pre">None</span></code> takes the original artist&#8217;s color
+with a scale factor of <cite>rho</cite>.</p>
+</div></blockquote>
+<p><strong>alpha</strong> : float</p>
+<blockquote>
+<div><p>The alpha transparency of the created shadow patch.
+Default is 0.3.</p>
+</div></blockquote>
+<p><strong>rho</strong> : float</p>
+<blockquote>
+<div><p>A scale factor to apply to the rgbFace color if <cite>shadow_rgbFace</cite>
+is <code class="docutils literal"><span class="pre">None</span></code>. Default is 0.3.</p>
+</div></blockquote>
+<p><strong>**kwargs</strong></p>
+<blockquote class="last">
+<div><p>Extra keywords are stored and passed through to
+<code class="xref py py-meth docutils literal"><span class="pre">AbstractPathEffect._update_gc()</span></code>.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -273,16 +312,16 @@
             HAS_SOURCE:  true
         };
     </script>
-      <script type="text/javascript" src="../../static/jquery.js"></script>
-      <script type="text/javascript" src="../../static/underscore.js"></script>
-      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
   
   
-    <script type="text/javascript" src="../../static/js/theme.js"></script>
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
   
 
   

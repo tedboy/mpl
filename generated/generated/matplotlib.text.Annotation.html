@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>14.2.2. matplotlib.text.Annotation &mdash; PROJECT_NAME 1 documentation</title>
+  <title>14.2.2. matplotlib.text.Annotation &mdash; Matplotlib API 1 documentation</title>
   
 
   
@@ -24,19 +24,19 @@
 
   
   
-    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   
 
   
 
   
-    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
         <link rel="up" title="14. matplotlib.text" href="../matplotlib.text.html"/>
         <link rel="next" title="14.2.2.1. matplotlib.text.Annotation.anncoords" href="matplotlib.text.Annotation.anncoords.html"/>
         <link rel="prev" title="14.2.1.34. matplotlib.text.Affine2D.translate" href="matplotlib.text.Affine2D.translate.html"/> 
 
   
-  <script src="../../static/js/modernizr.min.js"></script>
+  <script src="../../_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+            <a href="../../index.html" class="icon icon-home"> Matplotlib API
           
 
           
@@ -304,7 +304,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">PROJECT_NAME</a>
+          <a href="../../index.html">Matplotlib API</a>
         
       </nav>
 
@@ -341,7 +341,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../sources/generated/generated/matplotlib.text.Annotation.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/generated/generated/matplotlib.text.Annotation.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -354,9 +354,10 @@
             
   <div class="section" id="matplotlib-text-annotation">
 <h1>14.2.2. matplotlib.text.Annotation<a class="headerlink" href="#matplotlib-text-annotation" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="matplotlib.text.Annotation.__init__.html#matplotlib.text.Annotation.__init__" title="matplotlib.text.Annotation.__init__"><code class="xref py py-func docutils literal"><span class="pre">Annotation.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.text.Annotation">
-<em class="property">class </em><code class="descclassname">matplotlib.text.</code><code class="descname">Annotation</code><span class="sig-paren">(</span><em>s</em>, <em>xy</em>, <em>xytext=None</em>, <em>xycoords=u'data'</em>, <em>textcoords=None</em>, <em>arrowprops=None</em>, <em>annotation_clip=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/text.html#Annotation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.text.Annotation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">matplotlib.text.</code><code class="descname">Annotation</code><span class="sig-paren">(</span><em>s</em>, <em>xy</em>, <em>xytext=None</em>, <em>xycoords=u'data'</em>, <em>textcoords=None</em>, <em>arrowprops=None</em>, <em>annotation_clip=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/text.html#Annotation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.text.Annotation" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <a class="reference internal" href="matplotlib.text.Text.html#matplotlib.text.Text" title="matplotlib.text.Text"><code class="xref py py-class docutils literal"><span class="pre">Text</span></code></a> class to make annotating things
 in the figure, such as <a class="reference internal" href="matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure"><code class="xref py py-class docutils literal"><span class="pre">Figure</span></code></a>,
 <a class="reference internal" href="matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a>,
@@ -796,6 +797,207 @@ and if <em>textcoords</em> = <em>None</em>, defaults to <em>xycoords</em>).</p>
 </tr>
 </tbody>
 </table>
+<dl class="method">
+<dt id="matplotlib.text.Annotation.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>s</em>, <em>xy</em>, <em>xytext=None</em>, <em>xycoords=u'data'</em>, <em>textcoords=None</em>, <em>arrowprops=None</em>, <em>annotation_clip=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/text.html#Annotation.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.text.Annotation.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>arrowprops</em>, if not <em>None</em>, is a dictionary of line properties
+(see <a class="reference internal" href="matplotlib.lines.Line2D.html#matplotlib.lines.Line2D" title="matplotlib.lines.Line2D"><code class="xref py py-class docutils literal"><span class="pre">matplotlib.lines.Line2D</span></code></a>) for the arrow that connects
+annotation to the point.</p>
+<p>If the dictionary has a key <em>arrowstyle</em>, a
+<cite>~matplotlib.patches.FancyArrowPatch</cite> instance is created with
+the given dictionary and is drawn. Otherwise, a
+<cite>~matplotlib.patches.YAArrow</cite> patch instance is created and
+drawn. Valid keys for <cite>~matplotlib.patches.YAArrow</cite> are:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>width</td>
+<td>the width of the arrow in points</td>
+</tr>
+<tr class="row-odd"><td>frac</td>
+<td>the fraction of the arrow length occupied by the head</td>
+</tr>
+<tr class="row-even"><td>headwidth</td>
+<td>the width of the base of the arrow head in points</td>
+</tr>
+<tr class="row-odd"><td>shrink</td>
+<td>oftentimes it is convenient to have the arrowtip
+and base a bit away from the text and point being
+annotated.  If <em>d</em> is the distance between the text and
+annotated point, shrink will shorten the arrow so the tip
+and base are shink percent of the distance <em>d</em> away from
+the endpoints.  i.e., <code class="docutils literal"><span class="pre">shrink=0.05</span> <span class="pre">is</span> <span class="pre">5%</span></code></td>
+</tr>
+<tr class="row-even"><td>?</td>
+<td>any key for <code class="xref py py-class docutils literal"><span class="pre">matplotlib.patches.polygon</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Valid keys for <cite>~matplotlib.patches.FancyArrowPatch</cite> are:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="78%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>arrowstyle</td>
+<td>the arrow style</td>
+</tr>
+<tr class="row-odd"><td>connectionstyle</td>
+<td>the connection style</td>
+</tr>
+<tr class="row-even"><td>relpos</td>
+<td>default is (0.5, 0.5)</td>
+</tr>
+<tr class="row-odd"><td>patchA</td>
+<td>default is bounding box of the text</td>
+</tr>
+<tr class="row-even"><td>patchB</td>
+<td>default is None</td>
+</tr>
+<tr class="row-odd"><td>shrinkA</td>
+<td>default is 2 points</td>
+</tr>
+<tr class="row-even"><td>shrinkB</td>
+<td>default is 2 points</td>
+</tr>
+<tr class="row-odd"><td>mutation_scale</td>
+<td>default is text size (in points)</td>
+</tr>
+<tr class="row-even"><td>mutation_aspect</td>
+<td>default is 1.</td>
+</tr>
+<tr class="row-odd"><td>?</td>
+<td>any key for <a class="reference internal" href="matplotlib.patches.PathPatch.html#matplotlib.patches.PathPatch" title="matplotlib.patches.PathPatch"><code class="xref py py-class docutils literal"><span class="pre">matplotlib.patches.PathPatch</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p><em>xycoords</em> and <em>textcoords</em> are strings that indicate the
+coordinates of <em>xy</em> and <em>xytext</em>, and may be one of the
+following values:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Property</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>&#8216;figure points&#8217;</td>
+<td>points from the lower left corner of the figure</td>
+</tr>
+<tr class="row-odd"><td>&#8216;figure pixels&#8217;</td>
+<td>pixels from the lower left corner of the figure</td>
+</tr>
+<tr class="row-even"><td>&#8216;figure fraction&#8217;</td>
+<td>0,0 is lower left of figure and 1,1 is upper right</td>
+</tr>
+<tr class="row-odd"><td>&#8216;axes points&#8217;</td>
+<td>points from lower left corner of axes</td>
+</tr>
+<tr class="row-even"><td>&#8216;axes pixels&#8217;</td>
+<td>pixels from lower left corner of axes</td>
+</tr>
+<tr class="row-odd"><td>&#8216;axes fraction&#8217;</td>
+<td>0,0 is lower left of axes and 1,1 is upper right</td>
+</tr>
+<tr class="row-even"><td>&#8216;data&#8217;</td>
+<td>use the coordinate system of the object being
+annotated (default)</td>
+</tr>
+<tr class="row-odd"><td>&#8216;offset points&#8217;</td>
+<td>Specify an offset (in points) from the <em>xy</em> value</td>
+</tr>
+<tr class="row-even"><td>&#8216;polar&#8217;</td>
+<td>you can specify <em>theta</em>, <em>r</em> for the annotation,
+even in cartesian plots.  Note that if you
+are using a polar axes, you do not need
+to specify polar for the coordinate
+system since that is the native &#8220;data&#8221; coordinate
+system.</td>
+</tr>
+</tbody>
+</table>
+<p>If a &#8216;points&#8217; or &#8216;pixels&#8217; option is specified, values will be
+added to the bottom-left and if negative, values will be
+subtracted from the top-right.  e.g.:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># 10 points to the right of the left border of the axes and</span>
+<span class="c1"># 5 points below the top border</span>
+<span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="o">-</span><span class="mi">5</span><span class="p">),</span> <span class="n">xycoords</span><span class="o">=</span><span class="s1">&#39;axes points&#39;</span>
+</pre></div>
+</div>
+<p>You may use an instance of
+<code class="xref py py-class docutils literal"><span class="pre">Transform</span></code> or
+<a class="reference internal" href="matplotlib.artist.Artist.html#matplotlib.artist.Artist" title="matplotlib.artist.Artist"><code class="xref py py-class docutils literal"><span class="pre">Artist</span></code></a>. See
+<span class="xref std std-ref">plotting-guide-annotation</span> for more details.</p>
+<p>The <em>annotation_clip</em> attribute controls the visibility of the
+annotation when it goes outside the axes area. If <cite>True</cite>, the
+annotation will only be drawn when the <em>xy</em> is inside the
+axes. If <cite>False</cite>, the annotation will always be drawn
+regardless of its position.  The default is <cite>None</cite>, which
+behave as <cite>True</cite> only if <em>xycoords</em> is &#8220;data&#8221;.</p>
+<p>Additional kwargs are <cite>~matplotlib.text.Text</cite> properties:</p>
+<blockquote>
+<div>agg_filter: unknown
+alpha: float (0.0 transparent through 1.0 opaque) 
+animated: [True | False] 
+axes: an <a class="reference internal" href="matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instance 
+backgroundcolor: any matplotlib color 
+bbox: FancyBboxPatch prop dict 
+clip_box: a <code class="xref py py-class docutils literal"><span class="pre">matplotlib.transforms.Bbox</span></code> instance 
+clip_on: [True | False] 
+clip_path: [ (<a class="reference internal" href="matplotlib.path.Path.html#matplotlib.path.Path" title="matplotlib.path.Path"><code class="xref py py-class docutils literal"><span class="pre">Path</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code>) | <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a> | None ] 
+color: any matplotlib color 
+contains: a callable function 
+family or fontfamily or fontname or name: [FONTNAME | &#8216;serif&#8217; | &#8216;sans-serif&#8217; | &#8216;cursive&#8217; | &#8216;fantasy&#8217; | &#8216;monospace&#8217; ] 
+figure: a <a class="reference internal" href="matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure"><code class="xref py py-class docutils literal"><span class="pre">matplotlib.figure.Figure</span></code></a> instance 
+fontproperties or font_properties: a <a class="reference internal" href="matplotlib.font_manager.FontProperties.html#matplotlib.font_manager.FontProperties" title="matplotlib.font_manager.FontProperties"><code class="xref py py-class docutils literal"><span class="pre">matplotlib.font_manager.FontProperties</span></code></a> instance 
+gid: an id string 
+horizontalalignment or ha: [ &#8216;center&#8217; | &#8216;right&#8217; | &#8216;left&#8217; ] 
+label: string or anything printable with &#8216;%s&#8217; conversion. 
+linespacing: float (multiple of font size) 
+multialignment: [&#8216;left&#8217; | &#8216;right&#8217; | &#8216;center&#8217; ] 
+path_effects: unknown
+picker: [None|float|boolean|callable] 
+position: (x,y) 
+rasterized: [True | False | None] 
+rotation: [ angle in degrees | &#8216;vertical&#8217; | &#8216;horizontal&#8217; ] 
+rotation_mode: unknown
+size or fontsize: [size in points | &#8216;xx-small&#8217; | &#8216;x-small&#8217; | &#8216;small&#8217; | &#8216;medium&#8217; | &#8216;large&#8217; | &#8216;x-large&#8217; | &#8216;xx-large&#8217; ] 
+sketch_params: unknown
+snap: unknown
+stretch or fontstretch: [a numeric value in range 0-1000 | &#8216;ultra-condensed&#8217; | &#8216;extra-condensed&#8217; | &#8216;condensed&#8217; | &#8216;semi-condensed&#8217; | &#8216;normal&#8217; | &#8216;semi-expanded&#8217; | &#8216;expanded&#8217; | &#8216;extra-expanded&#8217; | &#8216;ultra-expanded&#8217; ] 
+style or fontstyle: [ &#8216;normal&#8217; | &#8216;italic&#8217; | &#8216;oblique&#8217;] 
+text: string or anything printable with &#8216;%s&#8217; conversion. 
+transform: <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code> instance 
+url: a url string 
+usetex: unknown
+variant or fontvariant: [ &#8216;normal&#8217; | &#8216;small-caps&#8217; ] 
+verticalalignment or va or ma: [ &#8216;center&#8217; | &#8216;top&#8217; | &#8216;bottom&#8217; | &#8216;baseline&#8217; ] 
+visible: [True | False] 
+weight or fontweight: [a numeric value in range 0-1000 | &#8216;ultralight&#8217; | &#8216;light&#8217; | &#8216;normal&#8217; | &#8216;regular&#8217; | &#8216;book&#8217; | &#8216;medium&#8217; | &#8216;roman&#8217; | &#8216;semibold&#8217; | &#8216;demibold&#8217; | &#8216;demi&#8217; | &#8216;bold&#8217; | &#8216;heavy&#8217; | &#8216;extra bold&#8217; | &#8216;black&#8217; ] 
+wrap: unknown
+x: float 
+y: float 
+zorder: any number</div></blockquote>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -847,16 +1049,16 @@ and if <em>textcoords</em> = <em>None</em>, defaults to <em>xycoords</em>).</p>
             HAS_SOURCE:  true
         };
     </script>
-      <script type="text/javascript" src="../../static/jquery.js"></script>
-      <script type="text/javascript" src="../../static/underscore.js"></script>
-      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
   
   
-    <script type="text/javascript" src="../../static/js/theme.js"></script>
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
   
 
   

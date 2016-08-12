@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.2.33. matplotlib.pyplot.Slider &mdash; PROJECT_NAME 1 documentation</title>
+  <title>2.2.33. matplotlib.pyplot.Slider &mdash; Matplotlib API 1 documentation</title>
   
 
   
@@ -24,19 +24,19 @@
 
   
   
-    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   
 
   
 
   
-    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
         <link rel="up" title="2. matplotlib.pyplot" href="../matplotlib.pyplot.html"/>
         <link rel="next" title="2.2.33.1. matplotlib.pyplot.Slider.active" href="matplotlib.pyplot.Slider.active.html"/>
         <link rel="prev" title="2.2.32.19. matplotlib.pyplot.ScalarFormatter.set_view_interval" href="matplotlib.pyplot.ScalarFormatter.set_view_interval.html"/> 
 
   
-  <script src="../../static/js/modernizr.min.js"></script>
+  <script src="../../_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+            <a href="../../index.html" class="icon icon-home"> Matplotlib API
           
 
           
@@ -195,7 +195,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">PROJECT_NAME</a>
+          <a href="../../index.html">Matplotlib API</a>
         
       </nav>
 
@@ -232,7 +232,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../sources/generated/generated/matplotlib.pyplot.Slider.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/generated/generated/matplotlib.pyplot.Slider.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -245,9 +245,10 @@
             
   <div class="section" id="matplotlib-pyplot-slider">
 <h1>2.2.33. matplotlib.pyplot.Slider<a class="headerlink" href="#matplotlib-pyplot-slider" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="matplotlib.pyplot.Slider.__init__.html#matplotlib.pyplot.Slider.__init__" title="matplotlib.pyplot.Slider.__init__"><code class="xref py py-func docutils literal"><span class="pre">Slider.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.pyplot.Slider">
-<em class="property">class </em><code class="descclassname">matplotlib.pyplot.</code><code class="descname">Slider</code><span class="sig-paren">(</span><em>ax</em>, <em>label</em>, <em>valmin</em>, <em>valmax</em>, <em>valinit=0.5</em>, <em>valfmt=u'%1.2f'</em>, <em>closedmin=True</em>, <em>closedmax=True</em>, <em>slidermin=None</em>, <em>slidermax=None</em>, <em>dragging=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/widgets.html#Slider"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.pyplot.Slider" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">matplotlib.pyplot.</code><code class="descname">Slider</code><span class="sig-paren">(</span><em>ax</em>, <em>label</em>, <em>valmin</em>, <em>valmax</em>, <em>valinit=0.5</em>, <em>valfmt=u'%1.2f'</em>, <em>closedmin=True</em>, <em>closedmax=True</em>, <em>slidermin=None</em>, <em>slidermax=None</em>, <em>dragging=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/widgets.html#Slider"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.pyplot.Slider" title="Permalink to this definition">¶</a></dt>
 <dd><p>A slider representing a floating point range.</p>
 <p>For the slider to remain responsive you must maintain a
 reference to it.</p>
@@ -326,6 +327,74 @@ reference to it.</p>
 </tr>
 </tbody>
 </table>
+<dl class="method">
+<dt id="matplotlib.pyplot.Slider.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>ax</em>, <em>label</em>, <em>valmin</em>, <em>valmax</em>, <em>valinit=0.5</em>, <em>valfmt=u'%1.2f'</em>, <em>closedmin=True</em>, <em>closedmax=True</em>, <em>slidermin=None</em>, <em>slidermax=None</em>, <em>dragging=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/widgets.html#Slider.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.pyplot.Slider.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a slider from <em>valmin</em> to <em>valmax</em> in axes <em>ax</em>.</p>
+<p>Additional kwargs are passed on to <code class="docutils literal"><span class="pre">self.poly</span></code> which is the
+<a class="reference internal" href="matplotlib.patches.Rectangle.html#matplotlib.patches.Rectangle" title="matplotlib.patches.Rectangle"><code class="xref py py-class docutils literal"><span class="pre">matplotlib.patches.Rectangle</span></code></a> that draws the slider
+knob.  See the <a class="reference internal" href="matplotlib.patches.Rectangle.html#matplotlib.patches.Rectangle" title="matplotlib.patches.Rectangle"><code class="xref py py-class docutils literal"><span class="pre">matplotlib.patches.Rectangle</span></code></a> documentation for
+valid property names (e.g., <em>facecolor</em>, <em>edgecolor</em>, <em>alpha</em>, ...).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>ax</strong> : Axes</p>
+<blockquote>
+<div><p>The Axes to put the slider in</p>
+</div></blockquote>
+<p><strong>label</strong> : str</p>
+<blockquote>
+<div><p>Slider label</p>
+</div></blockquote>
+<p><strong>valmin</strong> : float</p>
+<blockquote>
+<div><p>The minimum value of the slider</p>
+</div></blockquote>
+<p><strong>valmax</strong> : float</p>
+<blockquote>
+<div><p>The maximum value of the slider</p>
+</div></blockquote>
+<p><strong>valinit</strong> : float</p>
+<blockquote>
+<div><p>The slider initial position</p>
+</div></blockquote>
+<p><strong>label</strong> : str</p>
+<blockquote>
+<div><p>The slider label</p>
+</div></blockquote>
+<p><strong>valfmt</strong> : str</p>
+<blockquote>
+<div><p>Used to format the slider value, fprint format string</p>
+</div></blockquote>
+<p><strong>closedmin</strong> : bool</p>
+<blockquote>
+<div><p>Indicate whether the slider interval is closed on the bottom</p>
+</div></blockquote>
+<p><strong>closedmax</strong> : bool</p>
+<blockquote>
+<div><p>Indicate whether the slider interval is closed on the top</p>
+</div></blockquote>
+<p><strong>slidermin</strong> : Slider or None</p>
+<blockquote>
+<div><p>Do not allow the current slider to have a value less than
+<cite>slidermin</cite></p>
+</div></blockquote>
+<p><strong>slidermax</strong> : Slider or None</p>
+<blockquote>
+<div><p>Do not allow the current slider to have a value greater than
+<cite>slidermax</cite></p>
+</div></blockquote>
+<p><strong>dragging</strong> : bool</p>
+<blockquote class="last">
+<div><p>if the slider can be dragged by the mouse</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -377,16 +446,16 @@ reference to it.</p>
             HAS_SOURCE:  true
         };
     </script>
-      <script type="text/javascript" src="../../static/jquery.js"></script>
-      <script type="text/javascript" src="../../static/underscore.js"></script>
-      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
   
   
-    <script type="text/javascript" src="../../static/js/theme.js"></script>
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
   
 
   

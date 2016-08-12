@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>7.2.4. matplotlib.colors.LightSource &mdash; PROJECT_NAME 1 documentation</title>
+  <title>7.2.4. matplotlib.colors.LightSource &mdash; Matplotlib API 1 documentation</title>
   
 
   
@@ -24,19 +24,19 @@
 
   
   
-    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   
 
   
 
   
-    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
         <link rel="up" title="7. matplotlib.colors" href="../matplotlib.colors.html"/>
         <link rel="next" title="7.2.4.1. matplotlib.colors.LightSource.blend_hsv" href="matplotlib.colors.LightSource.blend_hsv.html"/>
         <link rel="prev" title="7.2.3.4. matplotlib.colors.Colormap.set_under" href="matplotlib.colors.Colormap.set_under.html"/> 
 
   
-  <script src="../../static/js/modernizr.min.js"></script>
+  <script src="../../_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+            <a href="../../index.html" class="icon icon-home"> Matplotlib API
           
 
           
@@ -164,7 +164,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">PROJECT_NAME</a>
+          <a href="../../index.html">Matplotlib API</a>
         
       </nav>
 
@@ -201,7 +201,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../sources/generated/generated/matplotlib.colors.LightSource.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/generated/generated/matplotlib.colors.LightSource.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -214,9 +214,10 @@
             
   <div class="section" id="matplotlib-colors-lightsource">
 <h1>7.2.4. matplotlib.colors.LightSource<a class="headerlink" href="#matplotlib-colors-lightsource" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="matplotlib.colors.LightSource.__init__.html#matplotlib.colors.LightSource.__init__" title="matplotlib.colors.LightSource.__init__"><code class="xref py py-func docutils literal"><span class="pre">LightSource.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.colors.LightSource">
-<em class="property">class </em><code class="descclassname">matplotlib.colors.</code><code class="descname">LightSource</code><span class="sig-paren">(</span><em>azdeg=315</em>, <em>altdeg=45</em>, <em>hsv_min_val=0</em>, <em>hsv_max_val=1</em>, <em>hsv_min_sat=1</em>, <em>hsv_max_sat=0</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/matplotlib/colors.html#LightSource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.colors.LightSource" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">matplotlib.colors.</code><code class="descname">LightSource</code><span class="sig-paren">(</span><em>azdeg=315</em>, <em>altdeg=45</em>, <em>hsv_min_val=0</em>, <em>hsv_max_val=1</em>, <em>hsv_min_sat=1</em>, <em>hsv_max_sat=0</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/colors.html#LightSource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.colors.LightSource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a light source coming from the specified azimuth and elevation.
 Angles are in degrees, with the azimuth measured
 clockwise from north and elevation up from the zero plane of the surface.</p>
@@ -251,6 +252,38 @@ The <a class="reference internal" href="matplotlib.colors.LightSource.hillshade.
 </tr>
 </tbody>
 </table>
+<dl class="method">
+<dt id="matplotlib.colors.LightSource.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>azdeg=315</em>, <em>altdeg=45</em>, <em>hsv_min_val=0</em>, <em>hsv_max_val=1</em>, <em>hsv_min_sat=1</em>, <em>hsv_max_sat=0</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/colors.html#LightSource.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.colors.LightSource.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specify the azimuth (measured clockwise from south) and altitude
+(measured up from the plane of the surface) of the light source
+in degrees.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>azdeg</strong> : number, optional</p>
+<blockquote>
+<div><p>The azimuth (0-360, degrees clockwise from North) of the light
+source. Defaults to 315 degrees (from the northwest).</p>
+</div></blockquote>
+<p><strong>altdeg</strong> : number, optional</p>
+<blockquote class="last">
+<div><p>The altitude (0-90, degrees up from horizontal) of the light
+source.  Defaults to 45 degrees from horizontal.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>For backwards compatibility, the parameters <em>hsv_min_val</em>,
+<em>hsv_max_val</em>, <em>hsv_min_sat</em>, and <em>hsv_max_sat</em> may be supplied at
+initialization as well.  However, these parameters will only be used if
+&#8220;blend_mode=&#8217;hsv&#8217;&#8221; is passed into <a class="reference internal" href="matplotlib.colors.LightSource.shade.html#matplotlib.colors.LightSource.shade" title="matplotlib.colors.LightSource.shade"><code class="xref py py-meth docutils literal"><span class="pre">shade()</span></code></a> or <a class="reference internal" href="matplotlib.colors.LightSource.shade_rgb.html#matplotlib.colors.LightSource.shade_rgb" title="matplotlib.colors.LightSource.shade_rgb"><code class="xref py py-meth docutils literal"><span class="pre">shade_rgb()</span></code></a>.
+See the documentation for <a class="reference internal" href="matplotlib.colors.LightSource.blend_hsv.html#matplotlib.colors.LightSource.blend_hsv" title="matplotlib.colors.LightSource.blend_hsv"><code class="xref py py-meth docutils literal"><span class="pre">blend_hsv()</span></code></a> for more details.</p>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -302,16 +335,16 @@ The <a class="reference internal" href="matplotlib.colors.LightSource.hillshade.
             HAS_SOURCE:  true
         };
     </script>
-      <script type="text/javascript" src="../../static/jquery.js"></script>
-      <script type="text/javascript" src="../../static/underscore.js"></script>
-      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
   
   
-    <script type="text/javascript" src="../../static/js/theme.js"></script>
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
   
 
   
