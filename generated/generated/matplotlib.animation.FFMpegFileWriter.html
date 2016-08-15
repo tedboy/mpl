@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>17.2.7. matplotlib.animation.FFMpegFileWriter &mdash; Matplotlib API 1 documentation</title>
+  <title>17.2.7. matplotlib.animation.FFMpegFileWriter &mdash; My Project v1</title>
   
 
   
@@ -30,10 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="17. matplotlib.animation" href="../matplotlib.animation.html"/>
-        <link rel="next" title="17.2.7.1. matplotlib.animation.FFMpegFileWriter.frame_format" href="matplotlib.animation.FFMpegFileWriter.frame_format.html"/>
-        <link rel="prev" title="17.2.6.1. matplotlib.animation.FFMpegBase.output_args" href="matplotlib.animation.FFMpegBase.output_args.html"/> 
+        <link rel="next" title="17.2.7.1.1. matplotlib.animation.FFMpegFileWriter.__init__" href="matplotlib.animation.FFMpegFileWriter.__init__.html"/>
+        <link rel="prev" title="17.2.6.1.3. matplotlib.animation.FFMpegBase.output_args" href="matplotlib.animation.FFMpegBase.output_args.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -111,16 +111,8 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.animation.ArtistAnimation.html">17.2.5. matplotlib.animation.ArtistAnimation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.animation.FFMpegBase.html">17.2.6. matplotlib.animation.FFMpegBase</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">17.2.7. matplotlib.animation.FFMpegFileWriter</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.animation.FFMpegFileWriter.frame_format.html">17.2.7.1. matplotlib.animation.FFMpegFileWriter.frame_format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.animation.FFMpegFileWriter.frame_size.html">17.2.7.2. matplotlib.animation.FFMpegFileWriter.frame_size</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.animation.FFMpegFileWriter.output_args.html">17.2.7.3. matplotlib.animation.FFMpegFileWriter.output_args</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.animation.FFMpegFileWriter.bin_path.html">17.2.7.4. matplotlib.animation.FFMpegFileWriter.bin_path</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.animation.FFMpegFileWriter.cleanup.html">17.2.7.5. matplotlib.animation.FFMpegFileWriter.cleanup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.animation.FFMpegFileWriter.finish.html">17.2.7.6. matplotlib.animation.FFMpegFileWriter.finish</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.animation.FFMpegFileWriter.grab_frame.html">17.2.7.7. matplotlib.animation.FFMpegFileWriter.grab_frame</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.animation.FFMpegFileWriter.isAvailable.html">17.2.7.8. matplotlib.animation.FFMpegFileWriter.isAvailable</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.animation.FFMpegFileWriter.saving.html">17.2.7.9. matplotlib.animation.FFMpegFileWriter.saving</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.animation.FFMpegFileWriter.setup.html">17.2.7.10. matplotlib.animation.FFMpegFileWriter.setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">17.2.7.1. Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#attributes">17.2.7.2. Attributes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.animation.FFMpegWriter.html">17.2.8. matplotlib.animation.FFMpegWriter</a></li>
@@ -135,8 +127,6 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.animation.MovieWriter.html">17.2.17. matplotlib.animation.MovieWriter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.animation.MovieWriterRegistry.html">17.2.18. matplotlib.animation.MovieWriterRegistry</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.animation.TimedAnimation.html">17.2.19. matplotlib.animation.TimedAnimation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.animation.xrange.html">17.2.20. matplotlib.animation.xrange</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.animation.zip.html">17.2.21. matplotlib.animation.zip</a></li>
 </ul>
 </li>
 </ul>
@@ -177,7 +167,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -227,17 +217,65 @@
             
   <div class="section" id="matplotlib-animation-ffmpegfilewriter">
 <h1>17.2.7. matplotlib.animation.FFMpegFileWriter<a class="headerlink" href="#matplotlib-animation-ffmpegfilewriter" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.animation.FFMpegFileWriter.__init__.html#matplotlib.animation.FFMpegFileWriter.__init__" title="matplotlib.animation.FFMpegFileWriter.__init__"><code class="xref py py-func docutils literal"><span class="pre">FFMpegFileWriter.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.animation.FFMpegFileWriter">
 <em class="property">class </em><code class="descclassname">matplotlib.animation.</code><code class="descname">FFMpegFileWriter</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/animation.html#FFMpegFileWriter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.animation.FFMpegFileWriter" title="Permalink to this definition">¶</a></dt>
-<dd><p class="rubric">Attributes</p>
+<dd><dl class="method">
+<dt id="matplotlib.animation.FFMpegFileWriter.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.animation.FFMpegFileWriter.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="section" id="methods">
+<h2>17.2.7.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="longtable docutils">
 <colgroup>
 <col width="10%" />
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.animation.FFMpegFileWriter.__init__.html#matplotlib.animation.FFMpegFileWriter.__init__" title="matplotlib.animation.FFMpegFileWriter.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.animation.FFMpegFileWriter.bin_path.html#matplotlib.animation.FFMpegFileWriter.bin_path" title="matplotlib.animation.FFMpegFileWriter.bin_path"><code class="xref py py-obj docutils literal"><span class="pre">bin_path</span></code></a>()</td>
+<td>Returns the binary path to the commandline tool used by a specific subclass.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.animation.FFMpegFileWriter.cleanup.html#matplotlib.animation.FFMpegFileWriter.cleanup" title="matplotlib.animation.FFMpegFileWriter.cleanup"><code class="xref py py-obj docutils literal"><span class="pre">cleanup</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.animation.FFMpegFileWriter.finish.html#matplotlib.animation.FFMpegFileWriter.finish" title="matplotlib.animation.FFMpegFileWriter.finish"><code class="xref py py-obj docutils literal"><span class="pre">finish</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.animation.FFMpegFileWriter.grab_frame.html#matplotlib.animation.FFMpegFileWriter.grab_frame" title="matplotlib.animation.FFMpegFileWriter.grab_frame"><code class="xref py py-obj docutils literal"><span class="pre">grab_frame</span></code></a>(**savefig_kwargs)</td>
+<td>Grab the image information from the figure and save as a movie frame.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.animation.FFMpegFileWriter.isAvailable.html#matplotlib.animation.FFMpegFileWriter.isAvailable" title="matplotlib.animation.FFMpegFileWriter.isAvailable"><code class="xref py py-obj docutils literal"><span class="pre">isAvailable</span></code></a>()</td>
+<td>Check to see if a MovieWriter subclass is actually available by running the commandline tool.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.animation.FFMpegFileWriter.saving.html#matplotlib.animation.FFMpegFileWriter.saving" title="matplotlib.animation.FFMpegFileWriter.saving"><code class="xref py py-obj docutils literal"><span class="pre">saving</span></code></a>(*args,&nbsp;**kwds)</td>
+<td>Context manager to facilitate writing the movie file.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.animation.FFMpegFileWriter.setup.html#matplotlib.animation.FFMpegFileWriter.setup" title="matplotlib.animation.FFMpegFileWriter.setup"><code class="xref py py-obj docutils literal"><span class="pre">setup</span></code></a>(fig,&nbsp;outfile,&nbsp;dpi[,&nbsp;frame_prefix,&nbsp;...])</td>
+<td>Perform setup for writing the movie file.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attributes">
+<h2>17.2.7.2. Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.animation.FFMpegFileWriter.args_key.html#matplotlib.animation.FFMpegFileWriter.args_key" title="matplotlib.animation.FFMpegFileWriter.args_key"><code class="xref py py-obj docutils literal"><span class="pre">args_key</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.animation.FFMpegFileWriter.exec_key.html#matplotlib.animation.FFMpegFileWriter.exec_key" title="matplotlib.animation.FFMpegFileWriter.exec_key"><code class="xref py py-obj docutils literal"><span class="pre">exec_key</span></code></a></td>
+<td></td>
+</tr>
 <tr class="row-odd"><td><a class="reference internal" href="matplotlib.animation.FFMpegFileWriter.frame_format.html#matplotlib.animation.FFMpegFileWriter.frame_format" title="matplotlib.animation.FFMpegFileWriter.frame_format"><code class="xref py py-obj docutils literal"><span class="pre">frame_format</span></code></a></td>
 <td>Format (png, jpeg, etc.) to use for saving the frames, which can be decided by the individual subclasses.</td>
 </tr>
@@ -247,40 +285,12 @@
 <tr class="row-odd"><td><a class="reference internal" href="matplotlib.animation.FFMpegFileWriter.output_args.html#matplotlib.animation.FFMpegFileWriter.output_args" title="matplotlib.animation.FFMpegFileWriter.output_args"><code class="xref py py-obj docutils literal"><span class="pre">output_args</span></code></a></td>
 <td></td>
 </tr>
-</tbody>
-</table>
-<p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.animation.FFMpegFileWriter.bin_path.html#matplotlib.animation.FFMpegFileWriter.bin_path" title="matplotlib.animation.FFMpegFileWriter.bin_path"><code class="xref py py-obj docutils literal"><span class="pre">bin_path</span></code></a>()</td>
-<td>Returns the binary path to the commandline tool used by a specific subclass.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.animation.FFMpegFileWriter.cleanup.html#matplotlib.animation.FFMpegFileWriter.cleanup" title="matplotlib.animation.FFMpegFileWriter.cleanup"><code class="xref py py-obj docutils literal"><span class="pre">cleanup</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.animation.FFMpegFileWriter.supported_formats.html#matplotlib.animation.FFMpegFileWriter.supported_formats" title="matplotlib.animation.FFMpegFileWriter.supported_formats"><code class="xref py py-obj docutils literal"><span class="pre">supported_formats</span></code></a></td>
 <td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.animation.FFMpegFileWriter.finish.html#matplotlib.animation.FFMpegFileWriter.finish" title="matplotlib.animation.FFMpegFileWriter.finish"><code class="xref py py-obj docutils literal"><span class="pre">finish</span></code></a>()</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.animation.FFMpegFileWriter.grab_frame.html#matplotlib.animation.FFMpegFileWriter.grab_frame" title="matplotlib.animation.FFMpegFileWriter.grab_frame"><code class="xref py py-obj docutils literal"><span class="pre">grab_frame</span></code></a>(**savefig_kwargs)</td>
-<td>Grab the image information from the figure and save as a movie frame.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.animation.FFMpegFileWriter.isAvailable.html#matplotlib.animation.FFMpegFileWriter.isAvailable" title="matplotlib.animation.FFMpegFileWriter.isAvailable"><code class="xref py py-obj docutils literal"><span class="pre">isAvailable</span></code></a>()</td>
-<td>Check to see if a MovieWriter subclass is actually available by running the commandline tool.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.animation.FFMpegFileWriter.saving.html#matplotlib.animation.FFMpegFileWriter.saving" title="matplotlib.animation.FFMpegFileWriter.saving"><code class="xref py py-obj docutils literal"><span class="pre">saving</span></code></a>(*args,&nbsp;**kwds)</td>
-<td>Context manager to facilitate writing the movie file.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.animation.FFMpegFileWriter.setup.html#matplotlib.animation.FFMpegFileWriter.setup" title="matplotlib.animation.FFMpegFileWriter.setup"><code class="xref py py-obj docutils literal"><span class="pre">setup</span></code></a>(fig,&nbsp;outfile,&nbsp;dpi[,&nbsp;frame_prefix,&nbsp;...])</td>
-<td>Perform setup for writing the movie file.</td>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
+</div>
 </div>
 
 
@@ -290,10 +300,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="matplotlib.animation.FFMpegFileWriter.frame_format.html" class="btn btn-neutral float-right" title="17.2.7.1. matplotlib.animation.FFMpegFileWriter.frame_format" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="matplotlib.animation.FFMpegFileWriter.__init__.html" class="btn btn-neutral float-right" title="17.2.7.1.1. matplotlib.animation.FFMpegFileWriter.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="matplotlib.animation.FFMpegBase.output_args.html" class="btn btn-neutral" title="17.2.6.1. matplotlib.animation.FFMpegBase.output_args" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="matplotlib.animation.FFMpegBase.output_args.html" class="btn btn-neutral" title="17.2.6.1.3. matplotlib.animation.FFMpegBase.output_args" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

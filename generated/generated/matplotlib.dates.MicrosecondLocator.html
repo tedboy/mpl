@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>22.4.9. matplotlib.dates.MicrosecondLocator &mdash; Matplotlib API 1 documentation</title>
+  <title>22.4.9. matplotlib.dates.MicrosecondLocator &mdash; My Project v1</title>
   
 
   
@@ -30,9 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="22. matplotlib.dates" href="../matplotlib.dates.html"/>
-        <link rel="prev" title="22.4.8.10. matplotlib.dates.IndexDateFormatter.set_view_interval" href="matplotlib.dates.IndexDateFormatter.set_view_interval.html"/> 
+        <link rel="next" title="22.4.9.1.1. matplotlib.dates.MicrosecondLocator.__init__" href="matplotlib.dates.MicrosecondLocator.__init__.html"/>
+        <link rel="prev" title="22.4.8.2.2. matplotlib.dates.IndexDateFormatter.locs" href="matplotlib.dates.IndexDateFormatter.locs.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -51,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -119,23 +120,8 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.HourLocator.html">22.4.7. matplotlib.dates.HourLocator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.IndexDateFormatter.html">22.4.8. matplotlib.dates.IndexDateFormatter</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">22.4.9. matplotlib.dates.MicrosecondLocator</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.MicrosecondLocator.autoscale.html">22.4.9.1. matplotlib.dates.MicrosecondLocator.autoscale</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.MicrosecondLocator.create_dummy_axis.html">22.4.9.2. matplotlib.dates.MicrosecondLocator.create_dummy_axis</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.MicrosecondLocator.datalim_to_dt.html">22.4.9.3. matplotlib.dates.MicrosecondLocator.datalim_to_dt</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.MicrosecondLocator.nonsingular.html">22.4.9.4. matplotlib.dates.MicrosecondLocator.nonsingular</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.MicrosecondLocator.pan.html">22.4.9.5. matplotlib.dates.MicrosecondLocator.pan</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.MicrosecondLocator.raise_if_exceeds.html">22.4.9.6. matplotlib.dates.MicrosecondLocator.raise_if_exceeds</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.MicrosecondLocator.refresh.html">22.4.9.7. matplotlib.dates.MicrosecondLocator.refresh</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.MicrosecondLocator.set_axis.html">22.4.9.8. matplotlib.dates.MicrosecondLocator.set_axis</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.MicrosecondLocator.set_bounds.html">22.4.9.9. matplotlib.dates.MicrosecondLocator.set_bounds</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.MicrosecondLocator.set_data_interval.html">22.4.9.10. matplotlib.dates.MicrosecondLocator.set_data_interval</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.MicrosecondLocator.set_params.html">22.4.9.11. matplotlib.dates.MicrosecondLocator.set_params</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.MicrosecondLocator.set_tzinfo.html">22.4.9.12. matplotlib.dates.MicrosecondLocator.set_tzinfo</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.MicrosecondLocator.set_view_interval.html">22.4.9.13. matplotlib.dates.MicrosecondLocator.set_view_interval</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.MicrosecondLocator.tick_values.html">22.4.9.14. matplotlib.dates.MicrosecondLocator.tick_values</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.MicrosecondLocator.view_limits.html">22.4.9.15. matplotlib.dates.MicrosecondLocator.view_limits</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.MicrosecondLocator.viewlim_to_dt.html">22.4.9.16. matplotlib.dates.MicrosecondLocator.viewlim_to_dt</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.MicrosecondLocator.zoom.html">22.4.9.17. matplotlib.dates.MicrosecondLocator.zoom</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">22.4.9.1. Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#attributes">22.4.9.2. Attributes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.MinuteLocator.html">22.4.10. matplotlib.dates.MinuteLocator</a></li>
@@ -145,12 +131,8 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.WeekdayLocator.html">22.4.14. matplotlib.dates.WeekdayLocator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.YearLocator.html">22.4.15. matplotlib.dates.YearLocator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.bytespdate2num.html">22.4.16. matplotlib.dates.bytespdate2num</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.relativedelta.html">22.4.17. matplotlib.dates.relativedelta</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.rrule.html">22.4.18. matplotlib.dates.rrule</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.rrulewrapper.html">22.4.19. matplotlib.dates.rrulewrapper</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.strpdate2num.html">22.4.20. matplotlib.dates.strpdate2num</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.xrange.html">22.4.21. matplotlib.dates.xrange</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.zip.html">22.4.22. matplotlib.dates.zip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.rrulewrapper.html">22.4.17. matplotlib.dates.rrulewrapper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.strpdate2num.html">22.4.18. matplotlib.dates.strpdate2num</a></li>
 </ul>
 </li>
 </ul>
@@ -186,7 +168,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -236,32 +218,29 @@
             
   <div class="section" id="matplotlib-dates-microsecondlocator">
 <h1>22.4.9. matplotlib.dates.MicrosecondLocator<a class="headerlink" href="#matplotlib-dates-microsecondlocator" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.dates.MicrosecondLocator.__init__.html#matplotlib.dates.MicrosecondLocator.__init__" title="matplotlib.dates.MicrosecondLocator.__init__"><code class="xref py py-func docutils literal"><span class="pre">MicrosecondLocator.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.dates.MicrosecondLocator">
 <em class="property">class </em><code class="descclassname">matplotlib.dates.</code><code class="descname">MicrosecondLocator</code><span class="sig-paren">(</span><em>interval=1</em>, <em>tz=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/dates.html#MicrosecondLocator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.dates.MicrosecondLocator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Make ticks on occurances of each microsecond.</p>
-<p class="rubric">Attributes</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="29%" />
-<col width="71%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>axis</td>
-<td>&nbsp;</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="matplotlib.dates.MicrosecondLocator.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>interval=1</em>, <em>tz=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/dates.html#MicrosecondLocator.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.dates.MicrosecondLocator.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>interval</em> is the interval between each iteration.  For
+example, if <code class="docutils literal"><span class="pre">interval=2</span></code>, mark every second microsecond.</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="section" id="methods">
+<h2>22.4.9.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="longtable docutils">
 <colgroup>
 <col width="10%" />
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">__call__</span></code>()</td>
-<td></td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.dates.MicrosecondLocator.__init__.html#matplotlib.dates.MicrosecondLocator.__init__" title="matplotlib.dates.MicrosecondLocator.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>([interval,&nbsp;tz])</td>
+<td><em>interval</em> is the interval between each iteration.  For</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="matplotlib.dates.MicrosecondLocator.autoscale.html#matplotlib.dates.MicrosecondLocator.autoscale" title="matplotlib.dates.MicrosecondLocator.autoscale"><code class="xref py py-obj docutils literal"><span class="pre">autoscale</span></code></a>()</td>
 <td>autoscale the view limits</td>
@@ -316,15 +295,27 @@
 </tr>
 </tbody>
 </table>
-<dl class="method">
-<dt id="matplotlib.dates.MicrosecondLocator.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>interval=1</em>, <em>tz=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/dates.html#MicrosecondLocator.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.dates.MicrosecondLocator.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p><em>interval</em> is the interval between each iteration.  For
-example, if <code class="docutils literal"><span class="pre">interval=2</span></code>, mark every second microsecond.</p>
-</dd></dl>
-
-</dd></dl>
-
+</div>
+<div class="section" id="attributes">
+<h2>22.4.9.2. Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.dates.MicrosecondLocator.MAXTICKS.html#matplotlib.dates.MicrosecondLocator.MAXTICKS" title="matplotlib.dates.MicrosecondLocator.MAXTICKS"><code class="xref py py-obj docutils literal"><span class="pre">MAXTICKS</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.dates.MicrosecondLocator.axis.html#matplotlib.dates.MicrosecondLocator.axis" title="matplotlib.dates.MicrosecondLocator.axis"><code class="xref py py-obj docutils literal"><span class="pre">axis</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.dates.MicrosecondLocator.hms0d.html#matplotlib.dates.MicrosecondLocator.hms0d" title="matplotlib.dates.MicrosecondLocator.hms0d"><code class="xref py py-obj docutils literal"><span class="pre">hms0d</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -334,8 +325,10 @@ example, if <code class="docutils literal"><span class="pre">interval=2</span></
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="matplotlib.dates.MicrosecondLocator.__init__.html" class="btn btn-neutral float-right" title="22.4.9.1.1. matplotlib.dates.MicrosecondLocator.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="matplotlib.dates.IndexDateFormatter.set_view_interval.html" class="btn btn-neutral" title="22.4.8.10. matplotlib.dates.IndexDateFormatter.set_view_interval" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="matplotlib.dates.IndexDateFormatter.locs.html" class="btn btn-neutral" title="22.4.8.2.2. matplotlib.dates.IndexDateFormatter.locs" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

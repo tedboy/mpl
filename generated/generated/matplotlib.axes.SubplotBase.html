@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>3.2.7. matplotlib.axes.SubplotBase &mdash; Matplotlib API 1 documentation</title>
+  <title>3.2.7. matplotlib.axes.SubplotBase &mdash; My Project v1</title>
   
 
   
@@ -30,10 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="3. matplotlib.axes" href="../matplotlib.axes.html"/>
-        <link rel="next" title="3.2.7.1. matplotlib.axes.SubplotBase.change_geometry" href="matplotlib.axes.SubplotBase.change_geometry.html"/>
-        <link rel="prev" title="3.2.6. matplotlib.axes.Subplot" href="matplotlib.axes.Subplot.html"/> 
+        <link rel="next" title="3.2.7.1.1. matplotlib.axes.SubplotBase.__init__" href="matplotlib.axes.SubplotBase.__init__.html"/>
+        <link rel="prev" title="3.2.6.2.6. matplotlib.axes.Subplot.zorder" href="matplotlib.axes.Subplot.zorder.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -97,23 +97,10 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.axes.StemContainer.html">3.2.5. matplotlib.axes.StemContainer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.axes.Subplot.html">3.2.6. matplotlib.axes.Subplot</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">3.2.7. matplotlib.axes.SubplotBase</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.SubplotBase.change_geometry.html">3.2.7.1. matplotlib.axes.SubplotBase.change_geometry</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.SubplotBase.get_geometry.html">3.2.7.2. matplotlib.axes.SubplotBase.get_geometry</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.SubplotBase.get_subplotspec.html">3.2.7.3. matplotlib.axes.SubplotBase.get_subplotspec</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.SubplotBase.is_first_col.html">3.2.7.4. matplotlib.axes.SubplotBase.is_first_col</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.SubplotBase.is_first_row.html">3.2.7.5. matplotlib.axes.SubplotBase.is_first_row</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.SubplotBase.is_last_col.html">3.2.7.6. matplotlib.axes.SubplotBase.is_last_col</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.SubplotBase.is_last_row.html">3.2.7.7. matplotlib.axes.SubplotBase.is_last_row</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.SubplotBase.label_outer.html">3.2.7.8. matplotlib.axes.SubplotBase.label_outer</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.SubplotBase.set_subplotspec.html">3.2.7.9. matplotlib.axes.SubplotBase.set_subplotspec</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.SubplotBase.update_params.html">3.2.7.10. matplotlib.axes.SubplotBase.update_params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">3.2.7.1. Methods</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.axes.SubplotSpec.html">3.2.8. matplotlib.axes.SubplotSpec</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.axes.map.html">3.2.9. matplotlib.axes.map</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.axes.xrange.html">3.2.10. matplotlib.axes.xrange</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.axes.zip.html">3.2.11. matplotlib.axes.zip</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.axes.zip_longest.html">3.2.12. matplotlib.axes.zip_longest</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../matplotlib.axes.html#exceptions">3.3. Exceptions</a></li>
@@ -169,7 +156,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -219,52 +206,12 @@
             
   <div class="section" id="matplotlib-axes-subplotbase">
 <h1>3.2.7. matplotlib.axes.SubplotBase<a class="headerlink" href="#matplotlib-axes-subplotbase" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.axes.SubplotBase.__init__.html#matplotlib.axes.SubplotBase.__init__" title="matplotlib.axes.SubplotBase.__init__"><code class="xref py py-func docutils literal"><span class="pre">SubplotBase.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.axes.SubplotBase">
 <em class="property">class </em><code class="descclassname">matplotlib.axes.</code><code class="descname">SubplotBase</code><span class="sig-paren">(</span><em>fig</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/axes/_subplots.html#SubplotBase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.axes.SubplotBase" title="Permalink to this definition">¶</a></dt>
 <dd><p>Base class for subplots, which are <a class="reference internal" href="matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instances with
 additional methods to facilitate generating and manipulating a set
 of <a class="reference internal" href="matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> within a figure.</p>
-<p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.SubplotBase.change_geometry.html#matplotlib.axes.SubplotBase.change_geometry" title="matplotlib.axes.SubplotBase.change_geometry"><code class="xref py py-obj docutils literal"><span class="pre">change_geometry</span></code></a>(numrows,&nbsp;numcols,&nbsp;num)</td>
-<td>change subplot geometry, e.g., from 1,1,1 to 2,2,3</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.SubplotBase.get_geometry.html#matplotlib.axes.SubplotBase.get_geometry" title="matplotlib.axes.SubplotBase.get_geometry"><code class="xref py py-obj docutils literal"><span class="pre">get_geometry</span></code></a>()</td>
-<td>get the subplot geometry, e.g., 2,2,3</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.SubplotBase.get_subplotspec.html#matplotlib.axes.SubplotBase.get_subplotspec" title="matplotlib.axes.SubplotBase.get_subplotspec"><code class="xref py py-obj docutils literal"><span class="pre">get_subplotspec</span></code></a>()</td>
-<td>get the SubplotSpec instance associated with the subplot</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.SubplotBase.is_first_col.html#matplotlib.axes.SubplotBase.is_first_col" title="matplotlib.axes.SubplotBase.is_first_col"><code class="xref py py-obj docutils literal"><span class="pre">is_first_col</span></code></a>()</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.SubplotBase.is_first_row.html#matplotlib.axes.SubplotBase.is_first_row" title="matplotlib.axes.SubplotBase.is_first_row"><code class="xref py py-obj docutils literal"><span class="pre">is_first_row</span></code></a>()</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.SubplotBase.is_last_col.html#matplotlib.axes.SubplotBase.is_last_col" title="matplotlib.axes.SubplotBase.is_last_col"><code class="xref py py-obj docutils literal"><span class="pre">is_last_col</span></code></a>()</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.SubplotBase.is_last_row.html#matplotlib.axes.SubplotBase.is_last_row" title="matplotlib.axes.SubplotBase.is_last_row"><code class="xref py py-obj docutils literal"><span class="pre">is_last_row</span></code></a>()</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.SubplotBase.label_outer.html#matplotlib.axes.SubplotBase.label_outer" title="matplotlib.axes.SubplotBase.label_outer"><code class="xref py py-obj docutils literal"><span class="pre">label_outer</span></code></a>()</td>
-<td>set the visible property on ticklabels so xticklabels are</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.SubplotBase.set_subplotspec.html#matplotlib.axes.SubplotBase.set_subplotspec" title="matplotlib.axes.SubplotBase.set_subplotspec"><code class="xref py py-obj docutils literal"><span class="pre">set_subplotspec</span></code></a>(subplotspec)</td>
-<td>set the SubplotSpec instance associated with the subplot</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.SubplotBase.update_params.html#matplotlib.axes.SubplotBase.update_params" title="matplotlib.axes.SubplotBase.update_params"><code class="xref py py-obj docutils literal"><span class="pre">update_params</span></code></a>()</td>
-<td>update the subplot position from fig.subplotpars</td>
-</tr>
-</tbody>
-</table>
 <dl class="method">
 <dt id="matplotlib.axes.SubplotBase.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>fig</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/axes/_subplots.html#SubplotBase.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.axes.SubplotBase.__init__" title="Permalink to this definition">¶</a></dt>
@@ -280,6 +227,50 @@ decimal integer <em>numRows</em> * 100 + <em>numCols</em> * 10 + <em>plotNum</em
 
 </dd></dl>
 
+<div class="section" id="methods">
+<h2>3.2.7.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.SubplotBase.__init__.html#matplotlib.axes.SubplotBase.__init__" title="matplotlib.axes.SubplotBase.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>(fig,&nbsp;*args,&nbsp;**kwargs)</td>
+<td><em>fig</em> is a <a class="reference internal" href="matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure"><code class="xref py py-class docutils literal"><span class="pre">matplotlib.figure.Figure</span></code></a> instance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.SubplotBase.change_geometry.html#matplotlib.axes.SubplotBase.change_geometry" title="matplotlib.axes.SubplotBase.change_geometry"><code class="xref py py-obj docutils literal"><span class="pre">change_geometry</span></code></a>(numrows,&nbsp;numcols,&nbsp;num)</td>
+<td>change subplot geometry, e.g., from 1,1,1 to 2,2,3</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.SubplotBase.get_geometry.html#matplotlib.axes.SubplotBase.get_geometry" title="matplotlib.axes.SubplotBase.get_geometry"><code class="xref py py-obj docutils literal"><span class="pre">get_geometry</span></code></a>()</td>
+<td>get the subplot geometry, e.g., 2,2,3</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.SubplotBase.get_subplotspec.html#matplotlib.axes.SubplotBase.get_subplotspec" title="matplotlib.axes.SubplotBase.get_subplotspec"><code class="xref py py-obj docutils literal"><span class="pre">get_subplotspec</span></code></a>()</td>
+<td>get the SubplotSpec instance associated with the subplot</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.SubplotBase.is_first_col.html#matplotlib.axes.SubplotBase.is_first_col" title="matplotlib.axes.SubplotBase.is_first_col"><code class="xref py py-obj docutils literal"><span class="pre">is_first_col</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.SubplotBase.is_first_row.html#matplotlib.axes.SubplotBase.is_first_row" title="matplotlib.axes.SubplotBase.is_first_row"><code class="xref py py-obj docutils literal"><span class="pre">is_first_row</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.SubplotBase.is_last_col.html#matplotlib.axes.SubplotBase.is_last_col" title="matplotlib.axes.SubplotBase.is_last_col"><code class="xref py py-obj docutils literal"><span class="pre">is_last_col</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.SubplotBase.is_last_row.html#matplotlib.axes.SubplotBase.is_last_row" title="matplotlib.axes.SubplotBase.is_last_row"><code class="xref py py-obj docutils literal"><span class="pre">is_last_row</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.SubplotBase.label_outer.html#matplotlib.axes.SubplotBase.label_outer" title="matplotlib.axes.SubplotBase.label_outer"><code class="xref py py-obj docutils literal"><span class="pre">label_outer</span></code></a>()</td>
+<td>set the visible property on ticklabels so xticklabels are</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.SubplotBase.set_subplotspec.html#matplotlib.axes.SubplotBase.set_subplotspec" title="matplotlib.axes.SubplotBase.set_subplotspec"><code class="xref py py-obj docutils literal"><span class="pre">set_subplotspec</span></code></a>(subplotspec)</td>
+<td>set the SubplotSpec instance associated with the subplot</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.SubplotBase.update_params.html#matplotlib.axes.SubplotBase.update_params" title="matplotlib.axes.SubplotBase.update_params"><code class="xref py py-obj docutils literal"><span class="pre">update_params</span></code></a>()</td>
+<td>update the subplot position from fig.subplotpars</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -289,10 +280,10 @@ decimal integer <em>numRows</em> * 100 + <em>numCols</em> * 10 + <em>plotNum</em
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="matplotlib.axes.SubplotBase.change_geometry.html" class="btn btn-neutral float-right" title="3.2.7.1. matplotlib.axes.SubplotBase.change_geometry" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="matplotlib.axes.SubplotBase.__init__.html" class="btn btn-neutral float-right" title="3.2.7.1.1. matplotlib.axes.SubplotBase.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="matplotlib.axes.Subplot.html" class="btn btn-neutral" title="3.2.6. matplotlib.axes.Subplot" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="matplotlib.axes.Subplot.zorder.html" class="btn btn-neutral" title="3.2.6.2.6. matplotlib.axes.Subplot.zorder" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

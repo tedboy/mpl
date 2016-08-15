@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>3.2.5. matplotlib.axes.StemContainer &mdash; Matplotlib API 1 documentation</title>
+  <title>3.2.5. matplotlib.axes.StemContainer &mdash; My Project v1</title>
   
 
   
@@ -30,10 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="3. matplotlib.axes" href="../matplotlib.axes.html"/>
-        <link rel="next" title="3.2.5.1. matplotlib.axes.StemContainer.add_callback" href="matplotlib.axes.StemContainer.add_callback.html"/>
-        <link rel="prev" title="3.2.4.11. matplotlib.axes.GridSpec.update" href="matplotlib.axes.GridSpec.update.html"/> 
+        <link rel="next" title="3.2.5.1.1. matplotlib.axes.StemContainer.__init__" href="matplotlib.axes.StemContainer.__init__.html"/>
+        <link rel="prev" title="3.2.4.1.12. matplotlib.axes.GridSpec.update" href="matplotlib.axes.GridSpec.update.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -95,25 +95,12 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.axes.ErrorbarContainer.html">3.2.3. matplotlib.axes.ErrorbarContainer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.axes.GridSpec.html">3.2.4. matplotlib.axes.GridSpec</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">3.2.5. matplotlib.axes.StemContainer</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.StemContainer.add_callback.html">3.2.5.1. matplotlib.axes.StemContainer.add_callback</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.StemContainer.count.html">3.2.5.2. matplotlib.axes.StemContainer.count</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.StemContainer.get_children.html">3.2.5.3. matplotlib.axes.StemContainer.get_children</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.StemContainer.get_label.html">3.2.5.4. matplotlib.axes.StemContainer.get_label</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.StemContainer.index.html">3.2.5.5. matplotlib.axes.StemContainer.index</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.StemContainer.pchanged.html">3.2.5.6. matplotlib.axes.StemContainer.pchanged</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.StemContainer.remove.html">3.2.5.7. matplotlib.axes.StemContainer.remove</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.StemContainer.remove_callback.html">3.2.5.8. matplotlib.axes.StemContainer.remove_callback</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.StemContainer.set_label.html">3.2.5.9. matplotlib.axes.StemContainer.set_label</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.axes.StemContainer.set_remove_method.html">3.2.5.10. matplotlib.axes.StemContainer.set_remove_method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">3.2.5.1. Methods</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.axes.Subplot.html">3.2.6. matplotlib.axes.Subplot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.axes.SubplotBase.html">3.2.7. matplotlib.axes.SubplotBase</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.axes.SubplotSpec.html">3.2.8. matplotlib.axes.SubplotSpec</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.axes.map.html">3.2.9. matplotlib.axes.map</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.axes.xrange.html">3.2.10. matplotlib.axes.xrange</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.axes.zip.html">3.2.11. matplotlib.axes.zip</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.axes.zip_longest.html">3.2.12. matplotlib.axes.zip_longest</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../matplotlib.axes.html#exceptions">3.3. Exceptions</a></li>
@@ -169,7 +156,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -219,51 +206,60 @@
             
   <div class="section" id="matplotlib-axes-stemcontainer">
 <h1>3.2.5. matplotlib.axes.StemContainer<a class="headerlink" href="#matplotlib-axes-stemcontainer" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.axes.StemContainer.__init__.html#matplotlib.axes.StemContainer.__init__" title="matplotlib.axes.StemContainer.__init__"><code class="xref py py-func docutils literal"><span class="pre">StemContainer.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.axes.StemContainer">
 <em class="property">class </em><code class="descclassname">matplotlib.axes.</code><code class="descname">StemContainer</code><span class="sig-paren">(</span><em>markerline_stemlines_baseline</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/container.html#StemContainer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.axes.StemContainer" title="Permalink to this definition">¶</a></dt>
-<dd><p class="rubric">Methods</p>
+<dd><dl class="method">
+<dt id="matplotlib.axes.StemContainer.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>markerline_stemlines_baseline</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/container.html#StemContainer.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.axes.StemContainer.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="section" id="methods">
+<h2>3.2.5.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="longtable docutils">
 <colgroup>
 <col width="10%" />
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.StemContainer.add_callback.html#matplotlib.axes.StemContainer.add_callback" title="matplotlib.axes.StemContainer.add_callback"><code class="xref py py-obj docutils literal"><span class="pre">add_callback</span></code></a>(func)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.StemContainer.__init__.html#matplotlib.axes.StemContainer.__init__" title="matplotlib.axes.StemContainer.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>(markerline_stemlines_baseline,&nbsp;**kwargs)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.StemContainer.add_callback.html#matplotlib.axes.StemContainer.add_callback" title="matplotlib.axes.StemContainer.add_callback"><code class="xref py py-obj docutils literal"><span class="pre">add_callback</span></code></a>(func)</td>
 <td>Adds a callback function that will be called whenever one of the <code class="xref py py-class docutils literal"><span class="pre">Artist</span></code>&#8216;s properties changes.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.StemContainer.count.html#matplotlib.axes.StemContainer.count" title="matplotlib.axes.StemContainer.count"><code class="xref py py-obj docutils literal"><span class="pre">count</span></code></a>(...)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.StemContainer.count.html#matplotlib.axes.StemContainer.count" title="matplotlib.axes.StemContainer.count"><code class="xref py py-obj docutils literal"><span class="pre">count</span></code></a>(...)</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.StemContainer.get_children.html#matplotlib.axes.StemContainer.get_children" title="matplotlib.axes.StemContainer.get_children"><code class="xref py py-obj docutils literal"><span class="pre">get_children</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.StemContainer.get_children.html#matplotlib.axes.StemContainer.get_children" title="matplotlib.axes.StemContainer.get_children"><code class="xref py py-obj docutils literal"><span class="pre">get_children</span></code></a>()</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.StemContainer.get_label.html#matplotlib.axes.StemContainer.get_label" title="matplotlib.axes.StemContainer.get_label"><code class="xref py py-obj docutils literal"><span class="pre">get_label</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.StemContainer.get_label.html#matplotlib.axes.StemContainer.get_label" title="matplotlib.axes.StemContainer.get_label"><code class="xref py py-obj docutils literal"><span class="pre">get_label</span></code></a>()</td>
 <td>Get the label used for this artist in the legend.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.StemContainer.index.html#matplotlib.axes.StemContainer.index" title="matplotlib.axes.StemContainer.index"><code class="xref py py-obj docutils literal"><span class="pre">index</span></code></a>((value,&nbsp;[start,&nbsp;...)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.StemContainer.index.html#matplotlib.axes.StemContainer.index" title="matplotlib.axes.StemContainer.index"><code class="xref py py-obj docutils literal"><span class="pre">index</span></code></a>((value,&nbsp;[start,&nbsp;...)</td>
 <td>Raises ValueError if the value is not present.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.StemContainer.pchanged.html#matplotlib.axes.StemContainer.pchanged" title="matplotlib.axes.StemContainer.pchanged"><code class="xref py py-obj docutils literal"><span class="pre">pchanged</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.StemContainer.pchanged.html#matplotlib.axes.StemContainer.pchanged" title="matplotlib.axes.StemContainer.pchanged"><code class="xref py py-obj docutils literal"><span class="pre">pchanged</span></code></a>()</td>
 <td>Fire an event when property changed, calling all of the registered callbacks.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.StemContainer.remove.html#matplotlib.axes.StemContainer.remove" title="matplotlib.axes.StemContainer.remove"><code class="xref py py-obj docutils literal"><span class="pre">remove</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.StemContainer.remove.html#matplotlib.axes.StemContainer.remove" title="matplotlib.axes.StemContainer.remove"><code class="xref py py-obj docutils literal"><span class="pre">remove</span></code></a>()</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.StemContainer.remove_callback.html#matplotlib.axes.StemContainer.remove_callback" title="matplotlib.axes.StemContainer.remove_callback"><code class="xref py py-obj docutils literal"><span class="pre">remove_callback</span></code></a>(oid)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.StemContainer.remove_callback.html#matplotlib.axes.StemContainer.remove_callback" title="matplotlib.axes.StemContainer.remove_callback"><code class="xref py py-obj docutils literal"><span class="pre">remove_callback</span></code></a>(oid)</td>
 <td>Remove a callback based on its <em>id</em>.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.StemContainer.set_label.html#matplotlib.axes.StemContainer.set_label" title="matplotlib.axes.StemContainer.set_label"><code class="xref py py-obj docutils literal"><span class="pre">set_label</span></code></a>(s)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.StemContainer.set_label.html#matplotlib.axes.StemContainer.set_label" title="matplotlib.axes.StemContainer.set_label"><code class="xref py py-obj docutils literal"><span class="pre">set_label</span></code></a>(s)</td>
 <td>Set the label to <em>s</em> for auto legend.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.axes.StemContainer.set_remove_method.html#matplotlib.axes.StemContainer.set_remove_method" title="matplotlib.axes.StemContainer.set_remove_method"><code class="xref py py-obj docutils literal"><span class="pre">set_remove_method</span></code></a>(f)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.axes.StemContainer.set_remove_method.html#matplotlib.axes.StemContainer.set_remove_method" title="matplotlib.axes.StemContainer.set_remove_method"><code class="xref py py-obj docutils literal"><span class="pre">set_remove_method</span></code></a>(f)</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
+</div>
 </div>
 
 
@@ -273,10 +269,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="matplotlib.axes.StemContainer.add_callback.html" class="btn btn-neutral float-right" title="3.2.5.1. matplotlib.axes.StemContainer.add_callback" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="matplotlib.axes.StemContainer.__init__.html" class="btn btn-neutral float-right" title="3.2.5.1.1. matplotlib.axes.StemContainer.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="matplotlib.axes.GridSpec.update.html" class="btn btn-neutral" title="3.2.4.11. matplotlib.axes.GridSpec.update" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="matplotlib.axes.GridSpec.update.html" class="btn btn-neutral" title="3.2.4.1.12. matplotlib.axes.GridSpec.update" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.2.18. matplotlib.pyplot.LinearLocator &mdash; Matplotlib API 1 documentation</title>
+  <title>2.2.18. matplotlib.pyplot.LinearLocator &mdash; My Project v1</title>
   
 
   
@@ -30,9 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="2. matplotlib.pyplot" href="../matplotlib.pyplot.html"/>
-        <link rel="prev" title="2.2.17.133. matplotlib.pyplot.Line2D.update_from" href="matplotlib.pyplot.Line2D.update_from.html"/> 
+        <link rel="next" title="2.2.18.1.1. matplotlib.pyplot.LinearLocator.__init__" href="matplotlib.pyplot.LinearLocator.__init__.html"/>
+        <link rel="prev" title="2.2.17.2.13. matplotlib.pyplot.Line2D.zorder" href="matplotlib.pyplot.Line2D.zorder.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -51,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -106,19 +107,8 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.IndexLocator.html">2.2.16. matplotlib.pyplot.IndexLocator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Line2D.html">2.2.17. matplotlib.pyplot.Line2D</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">2.2.18. matplotlib.pyplot.LinearLocator</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.LinearLocator.autoscale.html">2.2.18.1. matplotlib.pyplot.LinearLocator.autoscale</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.LinearLocator.create_dummy_axis.html">2.2.18.2. matplotlib.pyplot.LinearLocator.create_dummy_axis</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.LinearLocator.pan.html">2.2.18.3. matplotlib.pyplot.LinearLocator.pan</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.LinearLocator.raise_if_exceeds.html">2.2.18.4. matplotlib.pyplot.LinearLocator.raise_if_exceeds</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.LinearLocator.refresh.html">2.2.18.5. matplotlib.pyplot.LinearLocator.refresh</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.LinearLocator.set_axis.html">2.2.18.6. matplotlib.pyplot.LinearLocator.set_axis</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.LinearLocator.set_bounds.html">2.2.18.7. matplotlib.pyplot.LinearLocator.set_bounds</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.LinearLocator.set_data_interval.html">2.2.18.8. matplotlib.pyplot.LinearLocator.set_data_interval</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.LinearLocator.set_params.html">2.2.18.9. matplotlib.pyplot.LinearLocator.set_params</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.LinearLocator.set_view_interval.html">2.2.18.10. matplotlib.pyplot.LinearLocator.set_view_interval</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.LinearLocator.tick_values.html">2.2.18.11. matplotlib.pyplot.LinearLocator.tick_values</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.LinearLocator.view_limits.html">2.2.18.12. matplotlib.pyplot.LinearLocator.view_limits</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.LinearLocator.zoom.html">2.2.18.13. matplotlib.pyplot.LinearLocator.zoom</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">2.2.18.1. Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#attributes">2.2.18.2. Attributes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Locator.html">2.2.19. matplotlib.pyplot.Locator</a></li>
@@ -197,7 +187,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -247,7 +237,6 @@
             
   <div class="section" id="matplotlib-pyplot-linearlocator">
 <h1>2.2.18. matplotlib.pyplot.LinearLocator<a class="headerlink" href="#matplotlib-pyplot-linearlocator" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.pyplot.LinearLocator.__init__.html#matplotlib.pyplot.LinearLocator.__init__" title="matplotlib.pyplot.LinearLocator.__init__"><code class="xref py py-func docutils literal"><span class="pre">LinearLocator.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.pyplot.LinearLocator">
 <em class="property">class </em><code class="descclassname">matplotlib.pyplot.</code><code class="descname">LinearLocator</code><span class="sig-paren">(</span><em>numticks=None</em>, <em>presets=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/ticker.html#LinearLocator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.pyplot.LinearLocator" title="Permalink to this definition">¶</a></dt>
@@ -256,27 +245,24 @@
 number of ticks to make a nice tick partitioning.  Thereafter the
 number of ticks will be fixed so that interactive navigation will
 be nice</p>
-<p class="rubric">Attributes</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="29%" />
-<col width="71%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>axis</td>
-<td>&nbsp;</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="matplotlib.pyplot.LinearLocator.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>numticks=None</em>, <em>presets=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/ticker.html#LinearLocator.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.pyplot.LinearLocator.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use presets to set locs based on lom.  A dict mapping vmin, vmax-&gt;locs</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="section" id="methods">
+<h2>2.2.18.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="longtable docutils">
 <colgroup>
 <col width="10%" />
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">__call__</span></code>()</td>
-<td>Return the locations of the ticks</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.LinearLocator.__init__.html#matplotlib.pyplot.LinearLocator.__init__" title="matplotlib.pyplot.LinearLocator.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>([numticks,&nbsp;presets])</td>
+<td>Use presets to set locs based on lom.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.LinearLocator.autoscale.html#matplotlib.pyplot.LinearLocator.autoscale" title="matplotlib.pyplot.LinearLocator.autoscale"><code class="xref py py-obj docutils literal"><span class="pre">autoscale</span></code></a>()</td>
 <td>autoscale the view limits</td>
@@ -319,14 +305,24 @@ be nice</p>
 </tr>
 </tbody>
 </table>
-<dl class="method">
-<dt id="matplotlib.pyplot.LinearLocator.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>numticks=None</em>, <em>presets=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/ticker.html#LinearLocator.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.pyplot.LinearLocator.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use presets to set locs based on lom.  A dict mapping vmin, vmax-&gt;locs</p>
-</dd></dl>
-
-</dd></dl>
-
+</div>
+<div class="section" id="attributes">
+<h2>2.2.18.2. Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.LinearLocator.MAXTICKS.html#matplotlib.pyplot.LinearLocator.MAXTICKS" title="matplotlib.pyplot.LinearLocator.MAXTICKS"><code class="xref py py-obj docutils literal"><span class="pre">MAXTICKS</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.LinearLocator.axis.html#matplotlib.pyplot.LinearLocator.axis" title="matplotlib.pyplot.LinearLocator.axis"><code class="xref py py-obj docutils literal"><span class="pre">axis</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -336,8 +332,10 @@ be nice</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="matplotlib.pyplot.LinearLocator.__init__.html" class="btn btn-neutral float-right" title="2.2.18.1.1. matplotlib.pyplot.LinearLocator.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="matplotlib.pyplot.Line2D.update_from.html" class="btn btn-neutral" title="2.2.17.133. matplotlib.pyplot.Line2D.update_from" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="matplotlib.pyplot.Line2D.zorder.html" class="btn btn-neutral" title="2.2.17.2.13. matplotlib.pyplot.Line2D.zorder" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

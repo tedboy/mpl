@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>15.1.2.5. matplotlib.widgets.Cursor &mdash; Matplotlib API 1 documentation</title>
+  <title>15.1.2.5. matplotlib.widgets.Cursor &mdash; My Project v1</title>
   
 
   
@@ -30,10 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="15. matplotlib.widgets" href="../matplotlib.widgets.html"/>
-        <link rel="next" title="15.1.2.5.1. matplotlib.widgets.Cursor.active" href="matplotlib.widgets.Cursor.active.html"/>
-        <link rel="prev" title="15.1.2.4.106. matplotlib.widgets.Circle.update_from" href="matplotlib.widgets.Circle.update_from.html"/> 
+        <link rel="next" title="15.1.2.5.1.1. matplotlib.widgets.Cursor.__init__" href="matplotlib.widgets.Cursor.__init__.html"/>
+        <link rel="prev" title="15.1.2.4.2.9. matplotlib.widgets.Circle.zorder" href="matplotlib.widgets.Circle.zorder.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -123,7 +123,6 @@
 <li class="toctree-l4"><a class="reference internal" href="matplotlib.widgets.SubplotTool.html">15.1.2.18. matplotlib.widgets.SubplotTool</a></li>
 <li class="toctree-l4"><a class="reference internal" href="matplotlib.widgets.ToolHandles.html">15.1.2.19. matplotlib.widgets.ToolHandles</a></li>
 <li class="toctree-l4"><a class="reference internal" href="matplotlib.widgets.Widget.html">15.1.2.20. matplotlib.widgets.Widget</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.widgets.zip.html">15.1.2.21. matplotlib.widgets.zip</a></li>
 </ul>
 </li>
 </ul>
@@ -168,7 +167,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -218,7 +217,6 @@
             
   <div class="section" id="matplotlib-widgets-cursor">
 <h1>15.1.2.5. matplotlib.widgets.Cursor<a class="headerlink" href="#matplotlib-widgets-cursor" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.widgets.Cursor.__init__.html#matplotlib.widgets.Cursor.__init__" title="matplotlib.widgets.Cursor.__init__"><code class="xref py py-func docutils literal"><span class="pre">Cursor.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.widgets.Cursor">
 <em class="property">class </em><code class="descclassname">matplotlib.widgets.</code><code class="descname">Cursor</code><span class="sig-paren">(</span><em>ax</em>, <em>horizOn=True</em>, <em>vertOn=True</em>, <em>useblit=False</em>, <em>**lineprops</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/widgets.html#Cursor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.widgets.Cursor" title="Permalink to this definition">¶</a></dt>
@@ -236,48 +234,6 @@ the following attributes:</p>
 <p>and the visibility of the cursor itself with the <em>visible</em> attribute.</p>
 <p>For the cursor to remain responsive you must keep a reference to
 it.</p>
-<p class="rubric">Attributes</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.widgets.Cursor.active.html#matplotlib.widgets.Cursor.active" title="matplotlib.widgets.Cursor.active"><code class="xref py py-obj docutils literal"><span class="pre">active</span></code></a></td>
-<td>Is the widget active?</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.widgets.Cursor.clear.html#matplotlib.widgets.Cursor.clear" title="matplotlib.widgets.Cursor.clear"><code class="xref py py-obj docutils literal"><span class="pre">clear</span></code></a>(event)</td>
-<td>clear the cursor</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.widgets.Cursor.connect_event.html#matplotlib.widgets.Cursor.connect_event" title="matplotlib.widgets.Cursor.connect_event"><code class="xref py py-obj docutils literal"><span class="pre">connect_event</span></code></a>(event,&nbsp;callback)</td>
-<td>Connect callback with an event.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.widgets.Cursor.disconnect_events.html#matplotlib.widgets.Cursor.disconnect_events" title="matplotlib.widgets.Cursor.disconnect_events"><code class="xref py py-obj docutils literal"><span class="pre">disconnect_events</span></code></a>()</td>
-<td>Disconnect all events created by this widget.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.widgets.Cursor.get_active.html#matplotlib.widgets.Cursor.get_active" title="matplotlib.widgets.Cursor.get_active"><code class="xref py py-obj docutils literal"><span class="pre">get_active</span></code></a>()</td>
-<td>Get whether the widget is active.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.widgets.Cursor.ignore.html#matplotlib.widgets.Cursor.ignore" title="matplotlib.widgets.Cursor.ignore"><code class="xref py py-obj docutils literal"><span class="pre">ignore</span></code></a>(event)</td>
-<td>Return True if event should be ignored.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.widgets.Cursor.onmove.html#matplotlib.widgets.Cursor.onmove" title="matplotlib.widgets.Cursor.onmove"><code class="xref py py-obj docutils literal"><span class="pre">onmove</span></code></a>(event)</td>
-<td>on mouse motion draw the cursor if visible</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.widgets.Cursor.set_active.html#matplotlib.widgets.Cursor.set_active" title="matplotlib.widgets.Cursor.set_active"><code class="xref py py-obj docutils literal"><span class="pre">set_active</span></code></a>(active)</td>
-<td>Set whether the widget is active.</td>
-</tr>
-</tbody>
-</table>
 <dl class="method">
 <dt id="matplotlib.widgets.Cursor.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>ax</em>, <em>horizOn=True</em>, <em>vertOn=True</em>, <em>useblit=False</em>, <em>**lineprops</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/widgets.html#Cursor.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.widgets.Cursor.__init__" title="Permalink to this definition">¶</a></dt>
@@ -288,6 +244,61 @@ only for now).  <em>lineprops</em> is a dictionary of line properties.</p>
 
 </dd></dl>
 
+<div class="section" id="methods">
+<h2>15.1.2.5.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.widgets.Cursor.__init__.html#matplotlib.widgets.Cursor.__init__" title="matplotlib.widgets.Cursor.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>(ax[,&nbsp;horizOn,&nbsp;vertOn,&nbsp;useblit])</td>
+<td>Add a cursor to <em>ax</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.widgets.Cursor.clear.html#matplotlib.widgets.Cursor.clear" title="matplotlib.widgets.Cursor.clear"><code class="xref py py-obj docutils literal"><span class="pre">clear</span></code></a>(event)</td>
+<td>clear the cursor</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.widgets.Cursor.connect_event.html#matplotlib.widgets.Cursor.connect_event" title="matplotlib.widgets.Cursor.connect_event"><code class="xref py py-obj docutils literal"><span class="pre">connect_event</span></code></a>(event,&nbsp;callback)</td>
+<td>Connect callback with an event.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.widgets.Cursor.disconnect_events.html#matplotlib.widgets.Cursor.disconnect_events" title="matplotlib.widgets.Cursor.disconnect_events"><code class="xref py py-obj docutils literal"><span class="pre">disconnect_events</span></code></a>()</td>
+<td>Disconnect all events created by this widget.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.widgets.Cursor.get_active.html#matplotlib.widgets.Cursor.get_active" title="matplotlib.widgets.Cursor.get_active"><code class="xref py py-obj docutils literal"><span class="pre">get_active</span></code></a>()</td>
+<td>Get whether the widget is active.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.widgets.Cursor.ignore.html#matplotlib.widgets.Cursor.ignore" title="matplotlib.widgets.Cursor.ignore"><code class="xref py py-obj docutils literal"><span class="pre">ignore</span></code></a>(event)</td>
+<td>Return True if event should be ignored.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.widgets.Cursor.onmove.html#matplotlib.widgets.Cursor.onmove" title="matplotlib.widgets.Cursor.onmove"><code class="xref py py-obj docutils literal"><span class="pre">onmove</span></code></a>(event)</td>
+<td>on mouse motion draw the cursor if visible</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.widgets.Cursor.set_active.html#matplotlib.widgets.Cursor.set_active" title="matplotlib.widgets.Cursor.set_active"><code class="xref py py-obj docutils literal"><span class="pre">set_active</span></code></a>(active)</td>
+<td>Set whether the widget is active.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attributes">
+<h2>15.1.2.5.2. Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.widgets.Cursor.active.html#matplotlib.widgets.Cursor.active" title="matplotlib.widgets.Cursor.active"><code class="xref py py-obj docutils literal"><span class="pre">active</span></code></a></td>
+<td>Is the widget active?</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.widgets.Cursor.drawon.html#matplotlib.widgets.Cursor.drawon" title="matplotlib.widgets.Cursor.drawon"><code class="xref py py-obj docutils literal"><span class="pre">drawon</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.widgets.Cursor.eventson.html#matplotlib.widgets.Cursor.eventson" title="matplotlib.widgets.Cursor.eventson"><code class="xref py py-obj docutils literal"><span class="pre">eventson</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -297,10 +308,10 @@ only for now).  <em>lineprops</em> is a dictionary of line properties.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="matplotlib.widgets.Cursor.active.html" class="btn btn-neutral float-right" title="15.1.2.5.1. matplotlib.widgets.Cursor.active" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="matplotlib.widgets.Cursor.__init__.html" class="btn btn-neutral float-right" title="15.1.2.5.1.1. matplotlib.widgets.Cursor.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="matplotlib.widgets.Circle.update_from.html" class="btn btn-neutral" title="15.1.2.4.106. matplotlib.widgets.Circle.update_from" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="matplotlib.widgets.Circle.zorder.html" class="btn btn-neutral" title="15.1.2.4.2.9. matplotlib.widgets.Circle.zorder" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

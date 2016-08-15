@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>35.1.5.2. matplotlib.ticker.AutoMinorLocator &mdash; Matplotlib API 1 documentation</title>
+  <title>35.1.5.2. matplotlib.ticker.AutoMinorLocator &mdash; My Project v1</title>
   
 
   
@@ -30,9 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="35. matplotlib.ticker" href="../matplotlib.ticker.html"/>
-        <link rel="prev" title="35.1.5.1.14. matplotlib.ticker.AutoLocator.zoom" href="matplotlib.ticker.AutoLocator.zoom.html"/> 
+        <link rel="next" title="35.1.5.2.1.1. matplotlib.ticker.AutoMinorLocator.__init__" href="matplotlib.ticker.AutoMinorLocator.__init__.html"/>
+        <link rel="prev" title="35.1.5.1.2.3. matplotlib.ticker.AutoLocator.default_params" href="matplotlib.ticker.AutoLocator.default_params.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -51,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -178,7 +179,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -228,34 +229,33 @@
             
   <div class="section" id="matplotlib-ticker-autominorlocator">
 <h1>35.1.5.2. matplotlib.ticker.AutoMinorLocator<a class="headerlink" href="#matplotlib-ticker-autominorlocator" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.ticker.AutoMinorLocator.__init__.html#matplotlib.ticker.AutoMinorLocator.__init__" title="matplotlib.ticker.AutoMinorLocator.__init__"><code class="xref py py-func docutils literal"><span class="pre">AutoMinorLocator.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.ticker.AutoMinorLocator">
 <em class="property">class </em><code class="descclassname">matplotlib.ticker.</code><code class="descname">AutoMinorLocator</code><span class="sig-paren">(</span><em>n=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/ticker.html#AutoMinorLocator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.ticker.AutoMinorLocator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Dynamically find minor tick positions based on the positions of
 major ticks. Assumes the scale is linear and major ticks are
 evenly spaced.</p>
-<p class="rubric">Attributes</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="29%" />
-<col width="71%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>axis</td>
-<td>&nbsp;</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="matplotlib.ticker.AutoMinorLocator.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>n=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/ticker.html#AutoMinorLocator.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.ticker.AutoMinorLocator.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>n</em> is the number of subdivisions of the interval between
+major ticks; e.g., n=2 will place a single minor tick midway
+between major ticks.</p>
+<p>If <em>n</em> is omitted or None, it will be set to 5 or 4.</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="section" id="methods">
+<h2>35.1.5.2.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="longtable docutils">
 <colgroup>
 <col width="10%" />
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">__call__</span></code>()</td>
-<td>Return the locations of the ticks</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.ticker.AutoMinorLocator.__init__.html#matplotlib.ticker.AutoMinorLocator.__init__" title="matplotlib.ticker.AutoMinorLocator.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>([n])</td>
+<td><em>n</em> is the number of subdivisions of the interval between</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="matplotlib.ticker.AutoMinorLocator.autoscale.html#matplotlib.ticker.AutoMinorLocator.autoscale" title="matplotlib.ticker.AutoMinorLocator.autoscale"><code class="xref py py-obj docutils literal"><span class="pre">autoscale</span></code></a>()</td>
 <td>autoscale the view limits</td>
@@ -298,17 +298,24 @@ evenly spaced.</p>
 </tr>
 </tbody>
 </table>
-<dl class="method">
-<dt id="matplotlib.ticker.AutoMinorLocator.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>n=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/ticker.html#AutoMinorLocator.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.ticker.AutoMinorLocator.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p><em>n</em> is the number of subdivisions of the interval between
-major ticks; e.g., n=2 will place a single minor tick midway
-between major ticks.</p>
-<p>If <em>n</em> is omitted or None, it will be set to 5 or 4.</p>
-</dd></dl>
-
-</dd></dl>
-
+</div>
+<div class="section" id="attributes">
+<h2>35.1.5.2.2. Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.ticker.AutoMinorLocator.MAXTICKS.html#matplotlib.ticker.AutoMinorLocator.MAXTICKS" title="matplotlib.ticker.AutoMinorLocator.MAXTICKS"><code class="xref py py-obj docutils literal"><span class="pre">MAXTICKS</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.ticker.AutoMinorLocator.axis.html#matplotlib.ticker.AutoMinorLocator.axis" title="matplotlib.ticker.AutoMinorLocator.axis"><code class="xref py py-obj docutils literal"><span class="pre">axis</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -318,8 +325,10 @@ between major ticks.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="matplotlib.ticker.AutoMinorLocator.__init__.html" class="btn btn-neutral float-right" title="35.1.5.2.1.1. matplotlib.ticker.AutoMinorLocator.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="matplotlib.ticker.AutoLocator.zoom.html" class="btn btn-neutral" title="35.1.5.1.14. matplotlib.ticker.AutoLocator.zoom" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="matplotlib.ticker.AutoLocator.default_params.html" class="btn btn-neutral" title="35.1.5.1.2.3. matplotlib.ticker.AutoLocator.default_params" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

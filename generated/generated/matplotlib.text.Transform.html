@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>14.2.18. matplotlib.text.Transform &mdash; Matplotlib API 1 documentation</title>
+  <title>14.2.18. matplotlib.text.Transform &mdash; My Project v1</title>
   
 
   
@@ -30,10 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="14. matplotlib.text" href="../matplotlib.text.html"/>
-        <link rel="next" title="14.2.18.1. matplotlib.text.Transform.depth" href="matplotlib.text.Transform.depth.html"/>
-        <link rel="prev" title="14.2.17.143. matplotlib.text.TextWithDash.update_from" href="matplotlib.text.TextWithDash.update_from.html"/> 
+        <link rel="next" title="14.2.18.1.1. matplotlib.text.Transform.__init__" href="matplotlib.text.Transform.__init__.html"/>
+        <link rel="prev" title="14.2.17.2.5. matplotlib.text.TextWithDash.zorder" href="matplotlib.text.TextWithDash.zorder.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -119,28 +119,11 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.text.TextPath.html">14.2.16. matplotlib.text.TextPath</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.text.TextWithDash.html">14.2.17. matplotlib.text.TextWithDash</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">14.2.18. matplotlib.text.Transform</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Transform.depth.html">14.2.18.1. matplotlib.text.Transform.depth</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Transform.contains_branch.html">14.2.18.2. matplotlib.text.Transform.contains_branch</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Transform.contains_branch_seperately.html">14.2.18.3. matplotlib.text.Transform.contains_branch_seperately</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Transform.frozen.html">14.2.18.4. matplotlib.text.Transform.frozen</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Transform.get_affine.html">14.2.18.5. matplotlib.text.Transform.get_affine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Transform.get_matrix.html">14.2.18.6. matplotlib.text.Transform.get_matrix</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Transform.invalidate.html">14.2.18.7. matplotlib.text.Transform.invalidate</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Transform.inverted.html">14.2.18.8. matplotlib.text.Transform.inverted</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Transform.set_children.html">14.2.18.9. matplotlib.text.Transform.set_children</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Transform.transform.html">14.2.18.10. matplotlib.text.Transform.transform</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Transform.transform_affine.html">14.2.18.11. matplotlib.text.Transform.transform_affine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Transform.transform_angles.html">14.2.18.12. matplotlib.text.Transform.transform_angles</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Transform.transform_bbox.html">14.2.18.13. matplotlib.text.Transform.transform_bbox</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Transform.transform_non_affine.html">14.2.18.14. matplotlib.text.Transform.transform_non_affine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Transform.transform_path.html">14.2.18.15. matplotlib.text.Transform.transform_path</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Transform.transform_path_affine.html">14.2.18.16. matplotlib.text.Transform.transform_path_affine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Transform.transform_path_non_affine.html">14.2.18.17. matplotlib.text.Transform.transform_path_non_affine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.Transform.transform_point.html">14.2.18.18. matplotlib.text.Transform.transform_point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">14.2.18.1. Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#attributes">14.2.18.2. Attributes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.text.maxdict.html">14.2.19. matplotlib.text.maxdict</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.zip.html">14.2.20. matplotlib.text.zip</a></li>
 </ul>
 </li>
 </ul>
@@ -184,7 +167,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -234,7 +217,6 @@
             
   <div class="section" id="matplotlib-text-transform">
 <h1>14.2.18. matplotlib.text.Transform<a class="headerlink" href="#matplotlib-text-transform" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.text.Transform.__init__.html#matplotlib.text.Transform.__init__" title="matplotlib.text.Transform.__init__"><code class="xref py py-func docutils literal"><span class="pre">Transform.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.text.Transform">
 <em class="property">class </em><code class="descclassname">matplotlib.text.</code><code class="descname">Transform</code><span class="sig-paren">(</span><em>shorthand_name=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/transforms.html#Transform"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.text.Transform" title="Permalink to this definition">¶</a></dt>
@@ -263,92 +245,6 @@ where there were once line segments, it should override:</p>
 <li><a class="reference internal" href="matplotlib.text.Transform.transform_path.html#matplotlib.text.Transform.transform_path" title="matplotlib.text.Transform.transform_path"><code class="xref py py-meth docutils literal"><span class="pre">transform_path()</span></code></a></li>
 </ul>
 </div></blockquote>
-<p class="rubric">Attributes</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Transform.depth.html#matplotlib.text.Transform.depth" title="matplotlib.text.Transform.depth"><code class="xref py py-obj docutils literal"><span class="pre">depth</span></code></a></td>
-<td>Returns the number of transforms which have been chained together to form this Transform instance.</td>
-</tr>
-</tbody>
-</table>
-<table border="1" class="docutils">
-<colgroup>
-<col width="52%" />
-<col width="48%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>input_dims</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>output_dims</td>
-<td>&nbsp;</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Transform.contains_branch.html#matplotlib.text.Transform.contains_branch" title="matplotlib.text.Transform.contains_branch"><code class="xref py py-obj docutils literal"><span class="pre">contains_branch</span></code></a>(other)</td>
-<td>Return whether the given transform is a sub-tree of this transform.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Transform.contains_branch_seperately.html#matplotlib.text.Transform.contains_branch_seperately" title="matplotlib.text.Transform.contains_branch_seperately"><code class="xref py py-obj docutils literal"><span class="pre">contains_branch_seperately</span></code></a>(other_transform)</td>
-<td>Returns whether the given branch is a sub-tree of this transform on each seperate dimension.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Transform.frozen.html#matplotlib.text.Transform.frozen" title="matplotlib.text.Transform.frozen"><code class="xref py py-obj docutils literal"><span class="pre">frozen</span></code></a>()</td>
-<td>Returns a frozen copy of this transform node.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Transform.get_affine.html#matplotlib.text.Transform.get_affine" title="matplotlib.text.Transform.get_affine"><code class="xref py py-obj docutils literal"><span class="pre">get_affine</span></code></a>()</td>
-<td>Get the affine part of this transform.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Transform.get_matrix.html#matplotlib.text.Transform.get_matrix" title="matplotlib.text.Transform.get_matrix"><code class="xref py py-obj docutils literal"><span class="pre">get_matrix</span></code></a>()</td>
-<td>Get the Affine transformation array for the affine part of this transform.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Transform.invalidate.html#matplotlib.text.Transform.invalidate" title="matplotlib.text.Transform.invalidate"><code class="xref py py-obj docutils literal"><span class="pre">invalidate</span></code></a>()</td>
-<td>Invalidate this <code class="xref py py-class docutils literal"><span class="pre">TransformNode</span></code> and triggers an invalidation of its ancestors.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Transform.inverted.html#matplotlib.text.Transform.inverted" title="matplotlib.text.Transform.inverted"><code class="xref py py-obj docutils literal"><span class="pre">inverted</span></code></a>()</td>
-<td>Return the corresponding inverse transformation.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Transform.set_children.html#matplotlib.text.Transform.set_children" title="matplotlib.text.Transform.set_children"><code class="xref py py-obj docutils literal"><span class="pre">set_children</span></code></a>(*children)</td>
-<td>Set the children of the transform, to let the invalidation system know which transforms can invalidate this transform.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Transform.transform.html#matplotlib.text.Transform.transform" title="matplotlib.text.Transform.transform"><code class="xref py py-obj docutils literal"><span class="pre">transform</span></code></a>(values)</td>
-<td>Performs the transformation on the given array of values.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Transform.transform_affine.html#matplotlib.text.Transform.transform_affine" title="matplotlib.text.Transform.transform_affine"><code class="xref py py-obj docutils literal"><span class="pre">transform_affine</span></code></a>(values)</td>
-<td>Performs only the affine part of this transformation on the given array of values.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Transform.transform_angles.html#matplotlib.text.Transform.transform_angles" title="matplotlib.text.Transform.transform_angles"><code class="xref py py-obj docutils literal"><span class="pre">transform_angles</span></code></a>(angles,&nbsp;pts[,&nbsp;radians,&nbsp;pushoff])</td>
-<td>Performs transformation on a set of angles anchored at specific locations.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Transform.transform_bbox.html#matplotlib.text.Transform.transform_bbox" title="matplotlib.text.Transform.transform_bbox"><code class="xref py py-obj docutils literal"><span class="pre">transform_bbox</span></code></a>(bbox)</td>
-<td>Transform the given bounding box.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Transform.transform_non_affine.html#matplotlib.text.Transform.transform_non_affine" title="matplotlib.text.Transform.transform_non_affine"><code class="xref py py-obj docutils literal"><span class="pre">transform_non_affine</span></code></a>(values)</td>
-<td>Performs only the non-affine part of the transformation.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Transform.transform_path.html#matplotlib.text.Transform.transform_path" title="matplotlib.text.Transform.transform_path"><code class="xref py py-obj docutils literal"><span class="pre">transform_path</span></code></a>(path)</td>
-<td>Returns a transformed path.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Transform.transform_path_affine.html#matplotlib.text.Transform.transform_path_affine" title="matplotlib.text.Transform.transform_path_affine"><code class="xref py py-obj docutils literal"><span class="pre">transform_path_affine</span></code></a>(path)</td>
-<td>Returns a path, transformed only by the affine part of this transform.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Transform.transform_path_non_affine.html#matplotlib.text.Transform.transform_path_non_affine" title="matplotlib.text.Transform.transform_path_non_affine"><code class="xref py py-obj docutils literal"><span class="pre">transform_path_non_affine</span></code></a>(path)</td>
-<td>Returns a path, transformed only by the non-affine part of this transform.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Transform.transform_point.html#matplotlib.text.Transform.transform_point" title="matplotlib.text.Transform.transform_point"><code class="xref py py-obj docutils literal"><span class="pre">transform_point</span></code></a>(point)</td>
-<td>A convenience function that returns the transformed copy of a single point.</td>
-</tr>
-</tbody>
-</table>
 <dl class="method">
 <dt id="matplotlib.text.Transform.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>shorthand_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.text.Transform.__init__" title="Permalink to this definition">¶</a></dt>
@@ -363,6 +259,115 @@ other than to improve the readability of
 
 </dd></dl>
 
+<div class="section" id="methods">
+<h2>14.2.18.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Transform.__init__.html#matplotlib.text.Transform.__init__" title="matplotlib.text.Transform.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>([shorthand_name])</td>
+<td>Creates a new <code class="xref py py-class docutils literal"><span class="pre">TransformNode</span></code>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Transform.contains_branch.html#matplotlib.text.Transform.contains_branch" title="matplotlib.text.Transform.contains_branch"><code class="xref py py-obj docutils literal"><span class="pre">contains_branch</span></code></a>(other)</td>
+<td>Return whether the given transform is a sub-tree of this transform.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Transform.contains_branch_seperately.html#matplotlib.text.Transform.contains_branch_seperately" title="matplotlib.text.Transform.contains_branch_seperately"><code class="xref py py-obj docutils literal"><span class="pre">contains_branch_seperately</span></code></a>(other_transform)</td>
+<td>Returns whether the given branch is a sub-tree of this transform on each seperate dimension.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Transform.frozen.html#matplotlib.text.Transform.frozen" title="matplotlib.text.Transform.frozen"><code class="xref py py-obj docutils literal"><span class="pre">frozen</span></code></a>()</td>
+<td>Returns a frozen copy of this transform node.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Transform.get_affine.html#matplotlib.text.Transform.get_affine" title="matplotlib.text.Transform.get_affine"><code class="xref py py-obj docutils literal"><span class="pre">get_affine</span></code></a>()</td>
+<td>Get the affine part of this transform.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Transform.get_matrix.html#matplotlib.text.Transform.get_matrix" title="matplotlib.text.Transform.get_matrix"><code class="xref py py-obj docutils literal"><span class="pre">get_matrix</span></code></a>()</td>
+<td>Get the Affine transformation array for the affine part of this transform.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Transform.invalidate.html#matplotlib.text.Transform.invalidate" title="matplotlib.text.Transform.invalidate"><code class="xref py py-obj docutils literal"><span class="pre">invalidate</span></code></a>()</td>
+<td>Invalidate this <code class="xref py py-class docutils literal"><span class="pre">TransformNode</span></code> and triggers an invalidation of its ancestors.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Transform.inverted.html#matplotlib.text.Transform.inverted" title="matplotlib.text.Transform.inverted"><code class="xref py py-obj docutils literal"><span class="pre">inverted</span></code></a>()</td>
+<td>Return the corresponding inverse transformation.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Transform.set_children.html#matplotlib.text.Transform.set_children" title="matplotlib.text.Transform.set_children"><code class="xref py py-obj docutils literal"><span class="pre">set_children</span></code></a>(*children)</td>
+<td>Set the children of the transform, to let the invalidation system know which transforms can invalidate this transform.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Transform.transform.html#matplotlib.text.Transform.transform" title="matplotlib.text.Transform.transform"><code class="xref py py-obj docutils literal"><span class="pre">transform</span></code></a>(values)</td>
+<td>Performs the transformation on the given array of values.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Transform.transform_affine.html#matplotlib.text.Transform.transform_affine" title="matplotlib.text.Transform.transform_affine"><code class="xref py py-obj docutils literal"><span class="pre">transform_affine</span></code></a>(values)</td>
+<td>Performs only the affine part of this transformation on the given array of values.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Transform.transform_angles.html#matplotlib.text.Transform.transform_angles" title="matplotlib.text.Transform.transform_angles"><code class="xref py py-obj docutils literal"><span class="pre">transform_angles</span></code></a>(angles,&nbsp;pts[,&nbsp;radians,&nbsp;pushoff])</td>
+<td>Performs transformation on a set of angles anchored at specific locations.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Transform.transform_bbox.html#matplotlib.text.Transform.transform_bbox" title="matplotlib.text.Transform.transform_bbox"><code class="xref py py-obj docutils literal"><span class="pre">transform_bbox</span></code></a>(bbox)</td>
+<td>Transform the given bounding box.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Transform.transform_non_affine.html#matplotlib.text.Transform.transform_non_affine" title="matplotlib.text.Transform.transform_non_affine"><code class="xref py py-obj docutils literal"><span class="pre">transform_non_affine</span></code></a>(values)</td>
+<td>Performs only the non-affine part of the transformation.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Transform.transform_path.html#matplotlib.text.Transform.transform_path" title="matplotlib.text.Transform.transform_path"><code class="xref py py-obj docutils literal"><span class="pre">transform_path</span></code></a>(path)</td>
+<td>Returns a transformed path.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Transform.transform_path_affine.html#matplotlib.text.Transform.transform_path_affine" title="matplotlib.text.Transform.transform_path_affine"><code class="xref py py-obj docutils literal"><span class="pre">transform_path_affine</span></code></a>(path)</td>
+<td>Returns a path, transformed only by the affine part of this transform.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Transform.transform_path_non_affine.html#matplotlib.text.Transform.transform_path_non_affine" title="matplotlib.text.Transform.transform_path_non_affine"><code class="xref py py-obj docutils literal"><span class="pre">transform_path_non_affine</span></code></a>(path)</td>
+<td>Returns a path, transformed only by the non-affine part of this transform.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Transform.transform_point.html#matplotlib.text.Transform.transform_point" title="matplotlib.text.Transform.transform_point"><code class="xref py py-obj docutils literal"><span class="pre">transform_point</span></code></a>(point)</td>
+<td>A convenience function that returns the transformed copy of a single point.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attributes">
+<h2>14.2.18.2. Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Transform.INVALID.html#matplotlib.text.Transform.INVALID" title="matplotlib.text.Transform.INVALID"><code class="xref py py-obj docutils literal"><span class="pre">INVALID</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Transform.INVALID_AFFINE.html#matplotlib.text.Transform.INVALID_AFFINE" title="matplotlib.text.Transform.INVALID_AFFINE"><code class="xref py py-obj docutils literal"><span class="pre">INVALID_AFFINE</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Transform.INVALID_NON_AFFINE.html#matplotlib.text.Transform.INVALID_NON_AFFINE" title="matplotlib.text.Transform.INVALID_NON_AFFINE"><code class="xref py py-obj docutils literal"><span class="pre">INVALID_NON_AFFINE</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Transform.depth.html#matplotlib.text.Transform.depth" title="matplotlib.text.Transform.depth"><code class="xref py py-obj docutils literal"><span class="pre">depth</span></code></a></td>
+<td>Returns the number of transforms which have been chained together to form this Transform instance.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Transform.has_inverse.html#matplotlib.text.Transform.has_inverse" title="matplotlib.text.Transform.has_inverse"><code class="xref py py-obj docutils literal"><span class="pre">has_inverse</span></code></a></td>
+<td>True if this transform has a corresponding inverse transform.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Transform.input_dims.html#matplotlib.text.Transform.input_dims" title="matplotlib.text.Transform.input_dims"><code class="xref py py-obj docutils literal"><span class="pre">input_dims</span></code></a></td>
+<td>The number of input dimensions of this transform.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Transform.is_affine.html#matplotlib.text.Transform.is_affine" title="matplotlib.text.Transform.is_affine"><code class="xref py py-obj docutils literal"><span class="pre">is_affine</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Transform.is_bbox.html#matplotlib.text.Transform.is_bbox" title="matplotlib.text.Transform.is_bbox"><code class="xref py py-obj docutils literal"><span class="pre">is_bbox</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Transform.is_separable.html#matplotlib.text.Transform.is_separable" title="matplotlib.text.Transform.is_separable"><code class="xref py py-obj docutils literal"><span class="pre">is_separable</span></code></a></td>
+<td>True if this transform is separable in the x- and y- dimensions.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.Transform.output_dims.html#matplotlib.text.Transform.output_dims" title="matplotlib.text.Transform.output_dims"><code class="xref py py-obj docutils literal"><span class="pre">output_dims</span></code></a></td>
+<td>The number of output dimensions of this transform.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.Transform.pass_through.html#matplotlib.text.Transform.pass_through" title="matplotlib.text.Transform.pass_through"><code class="xref py py-obj docutils literal"><span class="pre">pass_through</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -372,10 +377,10 @@ other than to improve the readability of
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="matplotlib.text.Transform.depth.html" class="btn btn-neutral float-right" title="14.2.18.1. matplotlib.text.Transform.depth" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="matplotlib.text.Transform.__init__.html" class="btn btn-neutral float-right" title="14.2.18.1.1. matplotlib.text.Transform.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="matplotlib.text.TextWithDash.update_from.html" class="btn btn-neutral" title="14.2.17.143. matplotlib.text.TextWithDash.update_from" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="matplotlib.text.TextWithDash.zorder.html" class="btn btn-neutral" title="14.2.17.2.5. matplotlib.text.TextWithDash.zorder" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

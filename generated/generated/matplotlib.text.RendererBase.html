@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>14.2.14. matplotlib.text.RendererBase &mdash; Matplotlib API 1 documentation</title>
+  <title>14.2.14. matplotlib.text.RendererBase &mdash; My Project v1</title>
   
 
   
@@ -30,10 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="14. matplotlib.text" href="../matplotlib.text.html"/>
-        <link rel="next" title="14.2.14.1. matplotlib.text.RendererBase.close_group" href="matplotlib.text.RendererBase.close_group.html"/>
-        <link rel="prev" title="14.2.13.116. matplotlib.text.Rectangle.update_from" href="matplotlib.text.Rectangle.update_from.html"/> 
+        <link rel="next" title="14.2.14.1.1. matplotlib.text.RendererBase.__init__" href="matplotlib.text.RendererBase.__init__.html"/>
+        <link rel="prev" title="14.2.13.2.9. matplotlib.text.Rectangle.zorder" href="matplotlib.text.Rectangle.zorder.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -115,31 +115,7 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.text.Path.html">14.2.12. matplotlib.text.Path</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.text.Rectangle.html">14.2.13. matplotlib.text.Rectangle</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">14.2.14. matplotlib.text.RendererBase</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.RendererBase.close_group.html">14.2.14.1. matplotlib.text.RendererBase.close_group</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.RendererBase.draw_gouraud_triangle.html">14.2.14.2. matplotlib.text.RendererBase.draw_gouraud_triangle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.RendererBase.draw_gouraud_triangles.html">14.2.14.3. matplotlib.text.RendererBase.draw_gouraud_triangles</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.RendererBase.draw_image.html">14.2.14.4. matplotlib.text.RendererBase.draw_image</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.RendererBase.draw_markers.html">14.2.14.5. matplotlib.text.RendererBase.draw_markers</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.RendererBase.draw_path.html">14.2.14.6. matplotlib.text.RendererBase.draw_path</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.RendererBase.draw_path_collection.html">14.2.14.7. matplotlib.text.RendererBase.draw_path_collection</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.RendererBase.draw_quad_mesh.html">14.2.14.8. matplotlib.text.RendererBase.draw_quad_mesh</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.RendererBase.draw_tex.html">14.2.14.9. matplotlib.text.RendererBase.draw_tex</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.RendererBase.draw_text.html">14.2.14.10. matplotlib.text.RendererBase.draw_text</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.RendererBase.flipy.html">14.2.14.11. matplotlib.text.RendererBase.flipy</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.RendererBase.get_canvas_width_height.html">14.2.14.12. matplotlib.text.RendererBase.get_canvas_width_height</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.RendererBase.get_image_magnification.html">14.2.14.13. matplotlib.text.RendererBase.get_image_magnification</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.RendererBase.get_texmanager.html">14.2.14.14. matplotlib.text.RendererBase.get_texmanager</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.RendererBase.get_text_width_height_descent.html">14.2.14.15. matplotlib.text.RendererBase.get_text_width_height_descent</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.RendererBase.new_gc.html">14.2.14.16. matplotlib.text.RendererBase.new_gc</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.RendererBase.open_group.html">14.2.14.17. matplotlib.text.RendererBase.open_group</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.RendererBase.option_image_nocomposite.html">14.2.14.18. matplotlib.text.RendererBase.option_image_nocomposite</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.RendererBase.option_scale_image.html">14.2.14.19. matplotlib.text.RendererBase.option_scale_image</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.RendererBase.points_to_pixels.html">14.2.14.20. matplotlib.text.RendererBase.points_to_pixels</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.RendererBase.start_filter.html">14.2.14.21. matplotlib.text.RendererBase.start_filter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.RendererBase.start_rasterizing.html">14.2.14.22. matplotlib.text.RendererBase.start_rasterizing</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.RendererBase.stop_filter.html">14.2.14.23. matplotlib.text.RendererBase.stop_filter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.RendererBase.stop_rasterizing.html">14.2.14.24. matplotlib.text.RendererBase.stop_rasterizing</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.RendererBase.strip_math.html">14.2.14.25. matplotlib.text.RendererBase.strip_math</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">14.2.14.1. Methods</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.text.Text.html">14.2.15. matplotlib.text.Text</a></li>
@@ -147,7 +123,6 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.text.TextWithDash.html">14.2.17. matplotlib.text.TextWithDash</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.text.Transform.html">14.2.18. matplotlib.text.Transform</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.text.maxdict.html">14.2.19. matplotlib.text.maxdict</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.zip.html">14.2.20. matplotlib.text.zip</a></li>
 </ul>
 </li>
 </ul>
@@ -191,7 +166,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -241,7 +216,6 @@
             
   <div class="section" id="matplotlib-text-rendererbase">
 <h1>14.2.14. matplotlib.text.RendererBase<a class="headerlink" href="#matplotlib-text-rendererbase" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.text.RendererBase.__init__.html#matplotlib.text.RendererBase.__init__" title="matplotlib.text.RendererBase.__init__"><code class="xref py py-func docutils literal"><span class="pre">RendererBase.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.text.RendererBase">
 <em class="property">class </em><code class="descclassname">matplotlib.text.</code><code class="descname">RendererBase</code><a class="reference internal" href="../../_modules/matplotlib/backend_bases.html#RendererBase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.text.RendererBase" title="Permalink to this definition">¶</a></dt>
@@ -262,92 +236,102 @@ optimization reasons:</p>
 <li><a class="reference internal" href="matplotlib.text.RendererBase.draw_path_collection.html#matplotlib.text.RendererBase.draw_path_collection" title="matplotlib.text.RendererBase.draw_path_collection"><code class="xref py py-meth docutils literal"><span class="pre">draw_path_collection()</span></code></a></li>
 <li><a class="reference internal" href="matplotlib.text.RendererBase.draw_quad_mesh.html#matplotlib.text.RendererBase.draw_quad_mesh" title="matplotlib.text.RendererBase.draw_quad_mesh"><code class="xref py py-meth docutils literal"><span class="pre">draw_quad_mesh()</span></code></a></li>
 </ul>
-<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="matplotlib.text.RendererBase.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/backend_bases.html#RendererBase.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.text.RendererBase.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="section" id="methods">
+<h2>14.2.14.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="longtable docutils">
 <colgroup>
 <col width="10%" />
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.RendererBase.close_group.html#matplotlib.text.RendererBase.close_group" title="matplotlib.text.RendererBase.close_group"><code class="xref py py-obj docutils literal"><span class="pre">close_group</span></code></a>(s)</td>
-<td>Close a grouping element with label <em>s</em></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.RendererBase.draw_gouraud_triangle.html#matplotlib.text.RendererBase.draw_gouraud_triangle" title="matplotlib.text.RendererBase.draw_gouraud_triangle"><code class="xref py py-obj docutils literal"><span class="pre">draw_gouraud_triangle</span></code></a>(gc,&nbsp;points,&nbsp;colors,&nbsp;...)</td>
-<td>Draw a Gouraud-shaded triangle.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.RendererBase.draw_gouraud_triangles.html#matplotlib.text.RendererBase.draw_gouraud_triangles" title="matplotlib.text.RendererBase.draw_gouraud_triangles"><code class="xref py py-obj docutils literal"><span class="pre">draw_gouraud_triangles</span></code></a>(gc,&nbsp;triangles_array,&nbsp;...)</td>
-<td>Draws a series of Gouraud triangles.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.RendererBase.draw_image.html#matplotlib.text.RendererBase.draw_image" title="matplotlib.text.RendererBase.draw_image"><code class="xref py py-obj docutils literal"><span class="pre">draw_image</span></code></a>(gc,&nbsp;x,&nbsp;y,&nbsp;im)</td>
-<td>Draw the image instance into the current axes;</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.RendererBase.draw_markers.html#matplotlib.text.RendererBase.draw_markers" title="matplotlib.text.RendererBase.draw_markers"><code class="xref py py-obj docutils literal"><span class="pre">draw_markers</span></code></a>(gc,&nbsp;marker_path,&nbsp;marker_trans,&nbsp;...)</td>
-<td>Draws a marker at each of the vertices in path.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.RendererBase.draw_path.html#matplotlib.text.RendererBase.draw_path" title="matplotlib.text.RendererBase.draw_path"><code class="xref py py-obj docutils literal"><span class="pre">draw_path</span></code></a>(gc,&nbsp;path,&nbsp;transform[,&nbsp;rgbFace])</td>
-<td>Draws a <a class="reference internal" href="matplotlib.path.Path.html#matplotlib.path.Path" title="matplotlib.path.Path"><code class="xref py py-class docutils literal"><span class="pre">Path</span></code></a> instance using the given affine transform.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.RendererBase.draw_path_collection.html#matplotlib.text.RendererBase.draw_path_collection" title="matplotlib.text.RendererBase.draw_path_collection"><code class="xref py py-obj docutils literal"><span class="pre">draw_path_collection</span></code></a>(gc,&nbsp;master_transform,&nbsp;...)</td>
-<td>Draws a collection of paths selecting drawing properties from the lists <em>facecolors</em>, <em>edgecolors</em>, <em>linewidths</em>, <em>linestyles</em> and <em>antialiaseds</em>.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.RendererBase.draw_quad_mesh.html#matplotlib.text.RendererBase.draw_quad_mesh" title="matplotlib.text.RendererBase.draw_quad_mesh"><code class="xref py py-obj docutils literal"><span class="pre">draw_quad_mesh</span></code></a>(gc,&nbsp;master_transform,&nbsp;...)</td>
-<td>This provides a fallback implementation of <a class="reference internal" href="matplotlib.text.RendererBase.draw_quad_mesh.html#matplotlib.text.RendererBase.draw_quad_mesh" title="matplotlib.text.RendererBase.draw_quad_mesh"><code class="xref py py-meth docutils literal"><span class="pre">draw_quad_mesh()</span></code></a> that generates paths and then calls <a class="reference internal" href="matplotlib.text.RendererBase.draw_path_collection.html#matplotlib.text.RendererBase.draw_path_collection" title="matplotlib.text.RendererBase.draw_path_collection"><code class="xref py py-meth docutils literal"><span class="pre">draw_path_collection()</span></code></a>.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.RendererBase.draw_tex.html#matplotlib.text.RendererBase.draw_tex" title="matplotlib.text.RendererBase.draw_tex"><code class="xref py py-obj docutils literal"><span class="pre">draw_tex</span></code></a>(gc,&nbsp;x,&nbsp;y,&nbsp;s,&nbsp;prop,&nbsp;angle[,&nbsp;ismath,&nbsp;...])</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.RendererBase.__init__.html#matplotlib.text.RendererBase.__init__" title="matplotlib.text.RendererBase.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>()</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.RendererBase.draw_text.html#matplotlib.text.RendererBase.draw_text" title="matplotlib.text.RendererBase.draw_text"><code class="xref py py-obj docutils literal"><span class="pre">draw_text</span></code></a>(gc,&nbsp;x,&nbsp;y,&nbsp;s,&nbsp;prop,&nbsp;angle[,&nbsp;...])</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.RendererBase.close_group.html#matplotlib.text.RendererBase.close_group" title="matplotlib.text.RendererBase.close_group"><code class="xref py py-obj docutils literal"><span class="pre">close_group</span></code></a>(s)</td>
+<td>Close a grouping element with label <em>s</em></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.RendererBase.draw_gouraud_triangle.html#matplotlib.text.RendererBase.draw_gouraud_triangle" title="matplotlib.text.RendererBase.draw_gouraud_triangle"><code class="xref py py-obj docutils literal"><span class="pre">draw_gouraud_triangle</span></code></a>(gc,&nbsp;points,&nbsp;colors,&nbsp;...)</td>
+<td>Draw a Gouraud-shaded triangle.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.RendererBase.draw_gouraud_triangles.html#matplotlib.text.RendererBase.draw_gouraud_triangles" title="matplotlib.text.RendererBase.draw_gouraud_triangles"><code class="xref py py-obj docutils literal"><span class="pre">draw_gouraud_triangles</span></code></a>(gc,&nbsp;triangles_array,&nbsp;...)</td>
+<td>Draws a series of Gouraud triangles.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.RendererBase.draw_image.html#matplotlib.text.RendererBase.draw_image" title="matplotlib.text.RendererBase.draw_image"><code class="xref py py-obj docutils literal"><span class="pre">draw_image</span></code></a>(gc,&nbsp;x,&nbsp;y,&nbsp;im)</td>
+<td>Draw the image instance into the current axes;</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.RendererBase.draw_markers.html#matplotlib.text.RendererBase.draw_markers" title="matplotlib.text.RendererBase.draw_markers"><code class="xref py py-obj docutils literal"><span class="pre">draw_markers</span></code></a>(gc,&nbsp;marker_path,&nbsp;marker_trans,&nbsp;...)</td>
+<td>Draws a marker at each of the vertices in path.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.RendererBase.draw_path.html#matplotlib.text.RendererBase.draw_path" title="matplotlib.text.RendererBase.draw_path"><code class="xref py py-obj docutils literal"><span class="pre">draw_path</span></code></a>(gc,&nbsp;path,&nbsp;transform[,&nbsp;rgbFace])</td>
+<td>Draws a <a class="reference internal" href="matplotlib.path.Path.html#matplotlib.path.Path" title="matplotlib.path.Path"><code class="xref py py-class docutils literal"><span class="pre">Path</span></code></a> instance using the given affine transform.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.RendererBase.draw_path_collection.html#matplotlib.text.RendererBase.draw_path_collection" title="matplotlib.text.RendererBase.draw_path_collection"><code class="xref py py-obj docutils literal"><span class="pre">draw_path_collection</span></code></a>(gc,&nbsp;master_transform,&nbsp;...)</td>
+<td>Draws a collection of paths selecting drawing properties from the lists <em>facecolors</em>, <em>edgecolors</em>, <em>linewidths</em>, <em>linestyles</em> and <em>antialiaseds</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.RendererBase.draw_quad_mesh.html#matplotlib.text.RendererBase.draw_quad_mesh" title="matplotlib.text.RendererBase.draw_quad_mesh"><code class="xref py py-obj docutils literal"><span class="pre">draw_quad_mesh</span></code></a>(gc,&nbsp;master_transform,&nbsp;...)</td>
+<td>This provides a fallback implementation of <code class="xref py py-meth docutils literal"><span class="pre">draw_quad_mesh()</span></code> that generates paths and then calls <code class="xref py py-meth docutils literal"><span class="pre">draw_path_collection()</span></code>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.RendererBase.draw_tex.html#matplotlib.text.RendererBase.draw_tex" title="matplotlib.text.RendererBase.draw_tex"><code class="xref py py-obj docutils literal"><span class="pre">draw_tex</span></code></a>(gc,&nbsp;x,&nbsp;y,&nbsp;s,&nbsp;prop,&nbsp;angle[,&nbsp;ismath,&nbsp;...])</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.RendererBase.draw_text.html#matplotlib.text.RendererBase.draw_text" title="matplotlib.text.RendererBase.draw_text"><code class="xref py py-obj docutils literal"><span class="pre">draw_text</span></code></a>(gc,&nbsp;x,&nbsp;y,&nbsp;s,&nbsp;prop,&nbsp;angle[,&nbsp;...])</td>
 <td>Draw the text instance</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.RendererBase.flipy.html#matplotlib.text.RendererBase.flipy" title="matplotlib.text.RendererBase.flipy"><code class="xref py py-obj docutils literal"><span class="pre">flipy</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.RendererBase.flipy.html#matplotlib.text.RendererBase.flipy" title="matplotlib.text.RendererBase.flipy"><code class="xref py py-obj docutils literal"><span class="pre">flipy</span></code></a>()</td>
 <td>Return true if y small numbers are top for renderer Is used</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.RendererBase.get_canvas_width_height.html#matplotlib.text.RendererBase.get_canvas_width_height" title="matplotlib.text.RendererBase.get_canvas_width_height"><code class="xref py py-obj docutils literal"><span class="pre">get_canvas_width_height</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.RendererBase.get_canvas_width_height.html#matplotlib.text.RendererBase.get_canvas_width_height" title="matplotlib.text.RendererBase.get_canvas_width_height"><code class="xref py py-obj docutils literal"><span class="pre">get_canvas_width_height</span></code></a>()</td>
 <td>return the canvas width and height in display coords</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.RendererBase.get_image_magnification.html#matplotlib.text.RendererBase.get_image_magnification" title="matplotlib.text.RendererBase.get_image_magnification"><code class="xref py py-obj docutils literal"><span class="pre">get_image_magnification</span></code></a>()</td>
-<td>Get the factor by which to magnify images passed to <a class="reference internal" href="matplotlib.text.RendererBase.draw_image.html#matplotlib.text.RendererBase.draw_image" title="matplotlib.text.RendererBase.draw_image"><code class="xref py py-meth docutils literal"><span class="pre">draw_image()</span></code></a>.</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.RendererBase.get_image_magnification.html#matplotlib.text.RendererBase.get_image_magnification" title="matplotlib.text.RendererBase.get_image_magnification"><code class="xref py py-obj docutils literal"><span class="pre">get_image_magnification</span></code></a>()</td>
+<td>Get the factor by which to magnify images passed to <code class="xref py py-meth docutils literal"><span class="pre">draw_image()</span></code>.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.RendererBase.get_texmanager.html#matplotlib.text.RendererBase.get_texmanager" title="matplotlib.text.RendererBase.get_texmanager"><code class="xref py py-obj docutils literal"><span class="pre">get_texmanager</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.RendererBase.get_texmanager.html#matplotlib.text.RendererBase.get_texmanager" title="matplotlib.text.RendererBase.get_texmanager"><code class="xref py py-obj docutils literal"><span class="pre">get_texmanager</span></code></a>()</td>
 <td>return the <code class="xref py py-class docutils literal"><span class="pre">matplotlib.texmanager.TexManager</span></code> instance</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.RendererBase.get_text_width_height_descent.html#matplotlib.text.RendererBase.get_text_width_height_descent" title="matplotlib.text.RendererBase.get_text_width_height_descent"><code class="xref py py-obj docutils literal"><span class="pre">get_text_width_height_descent</span></code></a>(s,&nbsp;prop,&nbsp;ismath)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.RendererBase.get_text_width_height_descent.html#matplotlib.text.RendererBase.get_text_width_height_descent" title="matplotlib.text.RendererBase.get_text_width_height_descent"><code class="xref py py-obj docutils literal"><span class="pre">get_text_width_height_descent</span></code></a>(s,&nbsp;prop,&nbsp;ismath)</td>
 <td>get the width and height, and the offset from the bottom to the</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.RendererBase.new_gc.html#matplotlib.text.RendererBase.new_gc" title="matplotlib.text.RendererBase.new_gc"><code class="xref py py-obj docutils literal"><span class="pre">new_gc</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.RendererBase.new_gc.html#matplotlib.text.RendererBase.new_gc" title="matplotlib.text.RendererBase.new_gc"><code class="xref py py-obj docutils literal"><span class="pre">new_gc</span></code></a>()</td>
 <td>Return an instance of a <code class="xref py py-class docutils literal"><span class="pre">GraphicsContextBase</span></code></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.RendererBase.open_group.html#matplotlib.text.RendererBase.open_group" title="matplotlib.text.RendererBase.open_group"><code class="xref py py-obj docutils literal"><span class="pre">open_group</span></code></a>(s[,&nbsp;gid])</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.RendererBase.open_group.html#matplotlib.text.RendererBase.open_group" title="matplotlib.text.RendererBase.open_group"><code class="xref py py-obj docutils literal"><span class="pre">open_group</span></code></a>(s[,&nbsp;gid])</td>
 <td>Open a grouping element with label <em>s</em>.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.RendererBase.option_image_nocomposite.html#matplotlib.text.RendererBase.option_image_nocomposite" title="matplotlib.text.RendererBase.option_image_nocomposite"><code class="xref py py-obj docutils literal"><span class="pre">option_image_nocomposite</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.RendererBase.option_image_nocomposite.html#matplotlib.text.RendererBase.option_image_nocomposite" title="matplotlib.text.RendererBase.option_image_nocomposite"><code class="xref py py-obj docutils literal"><span class="pre">option_image_nocomposite</span></code></a>()</td>
 <td>override this method for renderers that do not necessarily always</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.RendererBase.option_scale_image.html#matplotlib.text.RendererBase.option_scale_image" title="matplotlib.text.RendererBase.option_scale_image"><code class="xref py py-obj docutils literal"><span class="pre">option_scale_image</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.RendererBase.option_scale_image.html#matplotlib.text.RendererBase.option_scale_image" title="matplotlib.text.RendererBase.option_scale_image"><code class="xref py py-obj docutils literal"><span class="pre">option_scale_image</span></code></a>()</td>
 <td>override this method for renderers that support arbitrary</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.RendererBase.points_to_pixels.html#matplotlib.text.RendererBase.points_to_pixels" title="matplotlib.text.RendererBase.points_to_pixels"><code class="xref py py-obj docutils literal"><span class="pre">points_to_pixels</span></code></a>(points)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.RendererBase.points_to_pixels.html#matplotlib.text.RendererBase.points_to_pixels" title="matplotlib.text.RendererBase.points_to_pixels"><code class="xref py py-obj docutils literal"><span class="pre">points_to_pixels</span></code></a>(points)</td>
 <td>Convert points to display units</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.RendererBase.start_filter.html#matplotlib.text.RendererBase.start_filter" title="matplotlib.text.RendererBase.start_filter"><code class="xref py py-obj docutils literal"><span class="pre">start_filter</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.RendererBase.start_filter.html#matplotlib.text.RendererBase.start_filter" title="matplotlib.text.RendererBase.start_filter"><code class="xref py py-obj docutils literal"><span class="pre">start_filter</span></code></a>()</td>
 <td>Used in AggRenderer.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.RendererBase.start_rasterizing.html#matplotlib.text.RendererBase.start_rasterizing" title="matplotlib.text.RendererBase.start_rasterizing"><code class="xref py py-obj docutils literal"><span class="pre">start_rasterizing</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.RendererBase.start_rasterizing.html#matplotlib.text.RendererBase.start_rasterizing" title="matplotlib.text.RendererBase.start_rasterizing"><code class="xref py py-obj docutils literal"><span class="pre">start_rasterizing</span></code></a>()</td>
 <td>Used in MixedModeRenderer.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.RendererBase.stop_filter.html#matplotlib.text.RendererBase.stop_filter" title="matplotlib.text.RendererBase.stop_filter"><code class="xref py py-obj docutils literal"><span class="pre">stop_filter</span></code></a>(filter_func)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.RendererBase.stop_filter.html#matplotlib.text.RendererBase.stop_filter" title="matplotlib.text.RendererBase.stop_filter"><code class="xref py py-obj docutils literal"><span class="pre">stop_filter</span></code></a>(filter_func)</td>
 <td>Used in AggRenderer.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.RendererBase.stop_rasterizing.html#matplotlib.text.RendererBase.stop_rasterizing" title="matplotlib.text.RendererBase.stop_rasterizing"><code class="xref py py-obj docutils literal"><span class="pre">stop_rasterizing</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.RendererBase.stop_rasterizing.html#matplotlib.text.RendererBase.stop_rasterizing" title="matplotlib.text.RendererBase.stop_rasterizing"><code class="xref py py-obj docutils literal"><span class="pre">stop_rasterizing</span></code></a>()</td>
 <td>Used in MixedModeRenderer.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.RendererBase.strip_math.html#matplotlib.text.RendererBase.strip_math" title="matplotlib.text.RendererBase.strip_math"><code class="xref py py-obj docutils literal"><span class="pre">strip_math</span></code></a>(s)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.RendererBase.strip_math.html#matplotlib.text.RendererBase.strip_math" title="matplotlib.text.RendererBase.strip_math"><code class="xref py py-obj docutils literal"><span class="pre">strip_math</span></code></a>(s)</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
+</div>
 </div>
 
 
@@ -357,10 +341,10 @@ optimization reasons:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="matplotlib.text.RendererBase.close_group.html" class="btn btn-neutral float-right" title="14.2.14.1. matplotlib.text.RendererBase.close_group" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="matplotlib.text.RendererBase.__init__.html" class="btn btn-neutral float-right" title="14.2.14.1.1. matplotlib.text.RendererBase.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="matplotlib.text.Rectangle.update_from.html" class="btn btn-neutral" title="14.2.13.116. matplotlib.text.Rectangle.update_from" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="matplotlib.text.Rectangle.zorder.html" class="btn btn-neutral" title="14.2.13.2.9. matplotlib.text.Rectangle.zorder" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

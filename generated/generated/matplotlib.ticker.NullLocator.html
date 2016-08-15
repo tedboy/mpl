@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>35.1.5.23. matplotlib.ticker.NullLocator &mdash; Matplotlib API 1 documentation</title>
+  <title>35.1.5.23. matplotlib.ticker.NullLocator &mdash; My Project v1</title>
   
 
   
@@ -30,9 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="35. matplotlib.ticker" href="../matplotlib.ticker.html"/>
-        <link rel="prev" title="35.1.5.22.10. matplotlib.ticker.NullFormatter.set_view_interval" href="matplotlib.ticker.NullFormatter.set_view_interval.html"/> 
+        <link rel="next" title="35.1.5.23.1.1. matplotlib.ticker.NullLocator.autoscale" href="matplotlib.ticker.NullLocator.autoscale.html"/>
+        <link rel="prev" title="35.1.5.22.2.2. matplotlib.ticker.NullFormatter.locs" href="matplotlib.ticker.NullFormatter.locs.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -51,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -178,7 +179,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -228,74 +229,10 @@
             
   <div class="section" id="matplotlib-ticker-nulllocator">
 <h1>35.1.5.23. matplotlib.ticker.NullLocator<a class="headerlink" href="#matplotlib-ticker-nulllocator" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="#matplotlib.ticker.NullLocator.__init__" title="matplotlib.ticker.NullLocator.__init__"><code class="xref py py-func docutils literal"><span class="pre">NullLocator.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.ticker.NullLocator">
 <em class="property">class </em><code class="descclassname">matplotlib.ticker.</code><code class="descname">NullLocator</code><a class="reference internal" href="../../_modules/matplotlib/ticker.html#NullLocator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.ticker.NullLocator" title="Permalink to this definition">¶</a></dt>
 <dd><p>No ticks</p>
-<p class="rubric">Attributes</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="29%" />
-<col width="71%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>axis</td>
-<td>&nbsp;</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">__call__</span></code>()</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.ticker.NullLocator.autoscale.html#matplotlib.ticker.NullLocator.autoscale" title="matplotlib.ticker.NullLocator.autoscale"><code class="xref py py-obj docutils literal"><span class="pre">autoscale</span></code></a>()</td>
-<td>autoscale the view limits</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.ticker.NullLocator.create_dummy_axis.html#matplotlib.ticker.NullLocator.create_dummy_axis" title="matplotlib.ticker.NullLocator.create_dummy_axis"><code class="xref py py-obj docutils literal"><span class="pre">create_dummy_axis</span></code></a>(**kwargs)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.ticker.NullLocator.pan.html#matplotlib.ticker.NullLocator.pan" title="matplotlib.ticker.NullLocator.pan"><code class="xref py py-obj docutils literal"><span class="pre">pan</span></code></a>(numsteps)</td>
-<td>Pan numticks (can be positive or negative)</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.ticker.NullLocator.raise_if_exceeds.html#matplotlib.ticker.NullLocator.raise_if_exceeds" title="matplotlib.ticker.NullLocator.raise_if_exceeds"><code class="xref py py-obj docutils literal"><span class="pre">raise_if_exceeds</span></code></a>(locs)</td>
-<td>raise a RuntimeError if Locator attempts to create more than</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.ticker.NullLocator.refresh.html#matplotlib.ticker.NullLocator.refresh" title="matplotlib.ticker.NullLocator.refresh"><code class="xref py py-obj docutils literal"><span class="pre">refresh</span></code></a>()</td>
-<td>refresh internal information based on current lim</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.ticker.NullLocator.set_axis.html#matplotlib.ticker.NullLocator.set_axis" title="matplotlib.ticker.NullLocator.set_axis"><code class="xref py py-obj docutils literal"><span class="pre">set_axis</span></code></a>(axis)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.ticker.NullLocator.set_bounds.html#matplotlib.ticker.NullLocator.set_bounds" title="matplotlib.ticker.NullLocator.set_bounds"><code class="xref py py-obj docutils literal"><span class="pre">set_bounds</span></code></a>(vmin,&nbsp;vmax)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.ticker.NullLocator.set_data_interval.html#matplotlib.ticker.NullLocator.set_data_interval" title="matplotlib.ticker.NullLocator.set_data_interval"><code class="xref py py-obj docutils literal"><span class="pre">set_data_interval</span></code></a>(vmin,&nbsp;vmax)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.ticker.NullLocator.set_params.html#matplotlib.ticker.NullLocator.set_params" title="matplotlib.ticker.NullLocator.set_params"><code class="xref py py-obj docutils literal"><span class="pre">set_params</span></code></a>(**kwargs)</td>
-<td>Do nothing, and rase a warning.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.ticker.NullLocator.set_view_interval.html#matplotlib.ticker.NullLocator.set_view_interval" title="matplotlib.ticker.NullLocator.set_view_interval"><code class="xref py py-obj docutils literal"><span class="pre">set_view_interval</span></code></a>(vmin,&nbsp;vmax)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.ticker.NullLocator.tick_values.html#matplotlib.ticker.NullLocator.tick_values" title="matplotlib.ticker.NullLocator.tick_values"><code class="xref py py-obj docutils literal"><span class="pre">tick_values</span></code></a>(vmin,&nbsp;vmax)</td>
-<td>&#8220;</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.ticker.NullLocator.view_limits.html#matplotlib.ticker.NullLocator.view_limits" title="matplotlib.ticker.NullLocator.view_limits"><code class="xref py py-obj docutils literal"><span class="pre">view_limits</span></code></a>(vmin,&nbsp;vmax)</td>
-<td>select a scale for the range from vmin to vmax</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.ticker.NullLocator.zoom.html#matplotlib.ticker.NullLocator.zoom" title="matplotlib.ticker.NullLocator.zoom"><code class="xref py py-obj docutils literal"><span class="pre">zoom</span></code></a>(direction)</td>
-<td>Zoom in/out on axis; if direction is &gt;0 zoom in, else zoom out</td>
-</tr>
-</tbody>
-</table>
 <dl class="attribute">
 <dt id="matplotlib.ticker.NullLocator.__init__">
 <code class="descname">__init__</code><a class="headerlink" href="#matplotlib.ticker.NullLocator.__init__" title="Permalink to this definition">¶</a></dt>
@@ -304,6 +241,73 @@
 
 </dd></dl>
 
+<div class="section" id="methods">
+<h2>35.1.5.23.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.ticker.NullLocator.autoscale.html#matplotlib.ticker.NullLocator.autoscale" title="matplotlib.ticker.NullLocator.autoscale"><code class="xref py py-obj docutils literal"><span class="pre">autoscale</span></code></a>()</td>
+<td>autoscale the view limits</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.ticker.NullLocator.create_dummy_axis.html#matplotlib.ticker.NullLocator.create_dummy_axis" title="matplotlib.ticker.NullLocator.create_dummy_axis"><code class="xref py py-obj docutils literal"><span class="pre">create_dummy_axis</span></code></a>(**kwargs)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.ticker.NullLocator.pan.html#matplotlib.ticker.NullLocator.pan" title="matplotlib.ticker.NullLocator.pan"><code class="xref py py-obj docutils literal"><span class="pre">pan</span></code></a>(numsteps)</td>
+<td>Pan numticks (can be positive or negative)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.ticker.NullLocator.raise_if_exceeds.html#matplotlib.ticker.NullLocator.raise_if_exceeds" title="matplotlib.ticker.NullLocator.raise_if_exceeds"><code class="xref py py-obj docutils literal"><span class="pre">raise_if_exceeds</span></code></a>(locs)</td>
+<td>raise a RuntimeError if Locator attempts to create more than</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.ticker.NullLocator.refresh.html#matplotlib.ticker.NullLocator.refresh" title="matplotlib.ticker.NullLocator.refresh"><code class="xref py py-obj docutils literal"><span class="pre">refresh</span></code></a>()</td>
+<td>refresh internal information based on current lim</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.ticker.NullLocator.set_axis.html#matplotlib.ticker.NullLocator.set_axis" title="matplotlib.ticker.NullLocator.set_axis"><code class="xref py py-obj docutils literal"><span class="pre">set_axis</span></code></a>(axis)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.ticker.NullLocator.set_bounds.html#matplotlib.ticker.NullLocator.set_bounds" title="matplotlib.ticker.NullLocator.set_bounds"><code class="xref py py-obj docutils literal"><span class="pre">set_bounds</span></code></a>(vmin,&nbsp;vmax)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.ticker.NullLocator.set_data_interval.html#matplotlib.ticker.NullLocator.set_data_interval" title="matplotlib.ticker.NullLocator.set_data_interval"><code class="xref py py-obj docutils literal"><span class="pre">set_data_interval</span></code></a>(vmin,&nbsp;vmax)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.ticker.NullLocator.set_params.html#matplotlib.ticker.NullLocator.set_params" title="matplotlib.ticker.NullLocator.set_params"><code class="xref py py-obj docutils literal"><span class="pre">set_params</span></code></a>(**kwargs)</td>
+<td>Do nothing, and rase a warning.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.ticker.NullLocator.set_view_interval.html#matplotlib.ticker.NullLocator.set_view_interval" title="matplotlib.ticker.NullLocator.set_view_interval"><code class="xref py py-obj docutils literal"><span class="pre">set_view_interval</span></code></a>(vmin,&nbsp;vmax)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.ticker.NullLocator.tick_values.html#matplotlib.ticker.NullLocator.tick_values" title="matplotlib.ticker.NullLocator.tick_values"><code class="xref py py-obj docutils literal"><span class="pre">tick_values</span></code></a>(vmin,&nbsp;vmax)</td>
+<td>&#8220;</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.ticker.NullLocator.view_limits.html#matplotlib.ticker.NullLocator.view_limits" title="matplotlib.ticker.NullLocator.view_limits"><code class="xref py py-obj docutils literal"><span class="pre">view_limits</span></code></a>(vmin,&nbsp;vmax)</td>
+<td>select a scale for the range from vmin to vmax</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.ticker.NullLocator.zoom.html#matplotlib.ticker.NullLocator.zoom" title="matplotlib.ticker.NullLocator.zoom"><code class="xref py py-obj docutils literal"><span class="pre">zoom</span></code></a>(direction)</td>
+<td>Zoom in/out on axis; if direction is &gt;0 zoom in, else zoom out</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attributes">
+<h2>35.1.5.23.2. Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.ticker.NullLocator.MAXTICKS.html#matplotlib.ticker.NullLocator.MAXTICKS" title="matplotlib.ticker.NullLocator.MAXTICKS"><code class="xref py py-obj docutils literal"><span class="pre">MAXTICKS</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.ticker.NullLocator.axis.html#matplotlib.ticker.NullLocator.axis" title="matplotlib.ticker.NullLocator.axis"><code class="xref py py-obj docutils literal"><span class="pre">axis</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -313,8 +317,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="matplotlib.ticker.NullLocator.autoscale.html" class="btn btn-neutral float-right" title="35.1.5.23.1.1. matplotlib.ticker.NullLocator.autoscale" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="matplotlib.ticker.NullFormatter.set_view_interval.html" class="btn btn-neutral" title="35.1.5.22.10. matplotlib.ticker.NullFormatter.set_view_interval" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="matplotlib.ticker.NullFormatter.locs.html" class="btn btn-neutral" title="35.1.5.22.2.2. matplotlib.ticker.NullFormatter.locs" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

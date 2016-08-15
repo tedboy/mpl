@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>15.1.2.16. matplotlib.widgets.Slider &mdash; Matplotlib API 1 documentation</title>
+  <title>15.1.2.16. matplotlib.widgets.Slider &mdash; My Project v1</title>
   
 
   
@@ -30,10 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="15. matplotlib.widgets" href="../matplotlib.widgets.html"/>
-        <link rel="next" title="15.1.2.16.1. matplotlib.widgets.Slider.active" href="matplotlib.widgets.Slider.active.html"/>
-        <link rel="prev" title="15.1.2.15.22. matplotlib.widgets.RectangleSelector.update_background" href="matplotlib.widgets.RectangleSelector.update_background.html"/> 
+        <link rel="next" title="15.1.2.16.1.1. matplotlib.widgets.Slider.__init__" href="matplotlib.widgets.Slider.__init__.html"/>
+        <link rel="prev" title="15.1.2.15.2.8. matplotlib.widgets.RectangleSelector.geometry" href="matplotlib.widgets.RectangleSelector.geometry.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -123,7 +123,6 @@
 <li class="toctree-l4"><a class="reference internal" href="matplotlib.widgets.SubplotTool.html">15.1.2.18. matplotlib.widgets.SubplotTool</a></li>
 <li class="toctree-l4"><a class="reference internal" href="matplotlib.widgets.ToolHandles.html">15.1.2.19. matplotlib.widgets.ToolHandles</a></li>
 <li class="toctree-l4"><a class="reference internal" href="matplotlib.widgets.Widget.html">15.1.2.20. matplotlib.widgets.Widget</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.widgets.zip.html">15.1.2.21. matplotlib.widgets.zip</a></li>
 </ul>
 </li>
 </ul>
@@ -168,7 +167,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -218,7 +217,6 @@
             
   <div class="section" id="matplotlib-widgets-slider">
 <h1>15.1.2.16. matplotlib.widgets.Slider<a class="headerlink" href="#matplotlib-widgets-slider" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.widgets.Slider.__init__.html#matplotlib.widgets.Slider.__init__" title="matplotlib.widgets.Slider.__init__"><code class="xref py py-func docutils literal"><span class="pre">Slider.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.widgets.Slider">
 <em class="property">class </em><code class="descclassname">matplotlib.widgets.</code><code class="descname">Slider</code><span class="sig-paren">(</span><em>ax</em>, <em>label</em>, <em>valmin</em>, <em>valmax</em>, <em>valinit=0.5</em>, <em>valfmt=u'%1.2f'</em>, <em>closedmin=True</em>, <em>closedmax=True</em>, <em>slidermin=None</em>, <em>slidermax=None</em>, <em>dragging=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/widgets.html#Slider"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.widgets.Slider" title="Permalink to this definition">¶</a></dt>
@@ -252,54 +250,6 @@ reference to it.</p>
 </dd>
 </dl>
 <p>Call <a class="reference internal" href="matplotlib.widgets.Slider.on_changed.html#matplotlib.widgets.Slider.on_changed" title="matplotlib.widgets.Slider.on_changed"><code class="xref py py-meth docutils literal"><span class="pre">on_changed()</span></code></a> to connect to the slider event</p>
-<p class="rubric">Attributes</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.widgets.Slider.active.html#matplotlib.widgets.Slider.active" title="matplotlib.widgets.Slider.active"><code class="xref py py-obj docutils literal"><span class="pre">active</span></code></a></td>
-<td>Is the widget active?</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.widgets.Slider.connect_event.html#matplotlib.widgets.Slider.connect_event" title="matplotlib.widgets.Slider.connect_event"><code class="xref py py-obj docutils literal"><span class="pre">connect_event</span></code></a>(event,&nbsp;callback)</td>
-<td>Connect callback with an event.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.widgets.Slider.disconnect.html#matplotlib.widgets.Slider.disconnect" title="matplotlib.widgets.Slider.disconnect"><code class="xref py py-obj docutils literal"><span class="pre">disconnect</span></code></a>(cid)</td>
-<td>remove the observer with connection id <em>cid</em></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.widgets.Slider.disconnect_events.html#matplotlib.widgets.Slider.disconnect_events" title="matplotlib.widgets.Slider.disconnect_events"><code class="xref py py-obj docutils literal"><span class="pre">disconnect_events</span></code></a>()</td>
-<td>Disconnect all events created by this widget.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.widgets.Slider.get_active.html#matplotlib.widgets.Slider.get_active" title="matplotlib.widgets.Slider.get_active"><code class="xref py py-obj docutils literal"><span class="pre">get_active</span></code></a>()</td>
-<td>Get whether the widget is active.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.widgets.Slider.ignore.html#matplotlib.widgets.Slider.ignore" title="matplotlib.widgets.Slider.ignore"><code class="xref py py-obj docutils literal"><span class="pre">ignore</span></code></a>(event)</td>
-<td>Return True if event should be ignored.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.widgets.Slider.on_changed.html#matplotlib.widgets.Slider.on_changed" title="matplotlib.widgets.Slider.on_changed"><code class="xref py py-obj docutils literal"><span class="pre">on_changed</span></code></a>(func)</td>
-<td>When the slider value is changed, call <em>func</em> with the new</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.widgets.Slider.reset.html#matplotlib.widgets.Slider.reset" title="matplotlib.widgets.Slider.reset"><code class="xref py py-obj docutils literal"><span class="pre">reset</span></code></a>()</td>
-<td>reset the slider to the initial value if needed</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.widgets.Slider.set_active.html#matplotlib.widgets.Slider.set_active" title="matplotlib.widgets.Slider.set_active"><code class="xref py py-obj docutils literal"><span class="pre">set_active</span></code></a>(active)</td>
-<td>Set whether the widget is active.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.widgets.Slider.set_val.html#matplotlib.widgets.Slider.set_val" title="matplotlib.widgets.Slider.set_val"><code class="xref py py-obj docutils literal"><span class="pre">set_val</span></code></a>(val)</td>
-<td></td>
-</tr>
-</tbody>
-</table>
 <dl class="method">
 <dt id="matplotlib.widgets.Slider.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>ax</em>, <em>label</em>, <em>valmin</em>, <em>valmax</em>, <em>valinit=0.5</em>, <em>valfmt=u'%1.2f'</em>, <em>closedmin=True</em>, <em>closedmax=True</em>, <em>slidermin=None</em>, <em>slidermax=None</em>, <em>dragging=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/widgets.html#Slider.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.widgets.Slider.__init__" title="Permalink to this definition">¶</a></dt>
@@ -370,6 +320,67 @@ valid property names (e.g., <em>facecolor</em>, <em>edgecolor</em>, <em>alpha</e
 
 </dd></dl>
 
+<div class="section" id="methods">
+<h2>15.1.2.16.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.widgets.Slider.__init__.html#matplotlib.widgets.Slider.__init__" title="matplotlib.widgets.Slider.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>(ax,&nbsp;label,&nbsp;valmin,&nbsp;valmax[,&nbsp;...])</td>
+<td>Create a slider from <em>valmin</em> to <em>valmax</em> in axes <em>ax</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.widgets.Slider.connect_event.html#matplotlib.widgets.Slider.connect_event" title="matplotlib.widgets.Slider.connect_event"><code class="xref py py-obj docutils literal"><span class="pre">connect_event</span></code></a>(event,&nbsp;callback)</td>
+<td>Connect callback with an event.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.widgets.Slider.disconnect.html#matplotlib.widgets.Slider.disconnect" title="matplotlib.widgets.Slider.disconnect"><code class="xref py py-obj docutils literal"><span class="pre">disconnect</span></code></a>(cid)</td>
+<td>remove the observer with connection id <em>cid</em></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.widgets.Slider.disconnect_events.html#matplotlib.widgets.Slider.disconnect_events" title="matplotlib.widgets.Slider.disconnect_events"><code class="xref py py-obj docutils literal"><span class="pre">disconnect_events</span></code></a>()</td>
+<td>Disconnect all events created by this widget.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.widgets.Slider.get_active.html#matplotlib.widgets.Slider.get_active" title="matplotlib.widgets.Slider.get_active"><code class="xref py py-obj docutils literal"><span class="pre">get_active</span></code></a>()</td>
+<td>Get whether the widget is active.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.widgets.Slider.ignore.html#matplotlib.widgets.Slider.ignore" title="matplotlib.widgets.Slider.ignore"><code class="xref py py-obj docutils literal"><span class="pre">ignore</span></code></a>(event)</td>
+<td>Return True if event should be ignored.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.widgets.Slider.on_changed.html#matplotlib.widgets.Slider.on_changed" title="matplotlib.widgets.Slider.on_changed"><code class="xref py py-obj docutils literal"><span class="pre">on_changed</span></code></a>(func)</td>
+<td>When the slider value is changed, call <em>func</em> with the new</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.widgets.Slider.reset.html#matplotlib.widgets.Slider.reset" title="matplotlib.widgets.Slider.reset"><code class="xref py py-obj docutils literal"><span class="pre">reset</span></code></a>()</td>
+<td>reset the slider to the initial value if needed</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.widgets.Slider.set_active.html#matplotlib.widgets.Slider.set_active" title="matplotlib.widgets.Slider.set_active"><code class="xref py py-obj docutils literal"><span class="pre">set_active</span></code></a>(active)</td>
+<td>Set whether the widget is active.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.widgets.Slider.set_val.html#matplotlib.widgets.Slider.set_val" title="matplotlib.widgets.Slider.set_val"><code class="xref py py-obj docutils literal"><span class="pre">set_val</span></code></a>(val)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attributes">
+<h2>15.1.2.16.2. Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.widgets.Slider.active.html#matplotlib.widgets.Slider.active" title="matplotlib.widgets.Slider.active"><code class="xref py py-obj docutils literal"><span class="pre">active</span></code></a></td>
+<td>Is the widget active?</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.widgets.Slider.drawon.html#matplotlib.widgets.Slider.drawon" title="matplotlib.widgets.Slider.drawon"><code class="xref py py-obj docutils literal"><span class="pre">drawon</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.widgets.Slider.eventson.html#matplotlib.widgets.Slider.eventson" title="matplotlib.widgets.Slider.eventson"><code class="xref py py-obj docutils literal"><span class="pre">eventson</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -379,10 +390,10 @@ valid property names (e.g., <em>facecolor</em>, <em>edgecolor</em>, <em>alpha</e
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="matplotlib.widgets.Slider.active.html" class="btn btn-neutral float-right" title="15.1.2.16.1. matplotlib.widgets.Slider.active" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="matplotlib.widgets.Slider.__init__.html" class="btn btn-neutral float-right" title="15.1.2.16.1.1. matplotlib.widgets.Slider.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="matplotlib.widgets.RectangleSelector.update_background.html" class="btn btn-neutral" title="15.1.2.15.22. matplotlib.widgets.RectangleSelector.update_background" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="matplotlib.widgets.RectangleSelector.geometry.html" class="btn btn-neutral" title="15.1.2.15.2.8. matplotlib.widgets.RectangleSelector.geometry" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

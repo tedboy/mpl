@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>22.4.11. matplotlib.dates.MonthLocator &mdash; Matplotlib API 1 documentation</title>
+  <title>22.4.11. matplotlib.dates.MonthLocator &mdash; My Project v1</title>
   
 
   
@@ -30,9 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="22. matplotlib.dates" href="../matplotlib.dates.html"/>
-        <link rel="prev" title="22.4.10.18. matplotlib.dates.MinuteLocator.zoom" href="matplotlib.dates.MinuteLocator.zoom.html"/> 
+        <link rel="next" title="22.4.11.1.1. matplotlib.dates.MonthLocator.__init__" href="matplotlib.dates.MonthLocator.__init__.html"/>
+        <link rel="prev" title="22.4.10.2.3. matplotlib.dates.MinuteLocator.hms0d" href="matplotlib.dates.MinuteLocator.hms0d.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -51,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -121,24 +122,8 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.MicrosecondLocator.html">22.4.9. matplotlib.dates.MicrosecondLocator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.MinuteLocator.html">22.4.10. matplotlib.dates.MinuteLocator</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">22.4.11. matplotlib.dates.MonthLocator</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.MonthLocator.autoscale.html">22.4.11.1. matplotlib.dates.MonthLocator.autoscale</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.MonthLocator.create_dummy_axis.html">22.4.11.2. matplotlib.dates.MonthLocator.create_dummy_axis</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.MonthLocator.datalim_to_dt.html">22.4.11.3. matplotlib.dates.MonthLocator.datalim_to_dt</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.MonthLocator.get_unit_generic.html">22.4.11.4. matplotlib.dates.MonthLocator.get_unit_generic</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.MonthLocator.nonsingular.html">22.4.11.5. matplotlib.dates.MonthLocator.nonsingular</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.MonthLocator.pan.html">22.4.11.6. matplotlib.dates.MonthLocator.pan</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.MonthLocator.raise_if_exceeds.html">22.4.11.7. matplotlib.dates.MonthLocator.raise_if_exceeds</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.MonthLocator.refresh.html">22.4.11.8. matplotlib.dates.MonthLocator.refresh</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.MonthLocator.set_axis.html">22.4.11.9. matplotlib.dates.MonthLocator.set_axis</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.MonthLocator.set_bounds.html">22.4.11.10. matplotlib.dates.MonthLocator.set_bounds</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.MonthLocator.set_data_interval.html">22.4.11.11. matplotlib.dates.MonthLocator.set_data_interval</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.MonthLocator.set_params.html">22.4.11.12. matplotlib.dates.MonthLocator.set_params</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.MonthLocator.set_tzinfo.html">22.4.11.13. matplotlib.dates.MonthLocator.set_tzinfo</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.MonthLocator.set_view_interval.html">22.4.11.14. matplotlib.dates.MonthLocator.set_view_interval</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.MonthLocator.tick_values.html">22.4.11.15. matplotlib.dates.MonthLocator.tick_values</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.MonthLocator.view_limits.html">22.4.11.16. matplotlib.dates.MonthLocator.view_limits</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.MonthLocator.viewlim_to_dt.html">22.4.11.17. matplotlib.dates.MonthLocator.viewlim_to_dt</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.MonthLocator.zoom.html">22.4.11.18. matplotlib.dates.MonthLocator.zoom</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">22.4.11.1. Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#attributes">22.4.11.2. Attributes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.RRuleLocator.html">22.4.12. matplotlib.dates.RRuleLocator</a></li>
@@ -146,12 +131,8 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.WeekdayLocator.html">22.4.14. matplotlib.dates.WeekdayLocator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.YearLocator.html">22.4.15. matplotlib.dates.YearLocator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.bytespdate2num.html">22.4.16. matplotlib.dates.bytespdate2num</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.relativedelta.html">22.4.17. matplotlib.dates.relativedelta</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.rrule.html">22.4.18. matplotlib.dates.rrule</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.rrulewrapper.html">22.4.19. matplotlib.dates.rrulewrapper</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.strpdate2num.html">22.4.20. matplotlib.dates.strpdate2num</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.xrange.html">22.4.21. matplotlib.dates.xrange</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.zip.html">22.4.22. matplotlib.dates.zip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.rrulewrapper.html">22.4.17. matplotlib.dates.rrulewrapper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.strpdate2num.html">22.4.18. matplotlib.dates.strpdate2num</a></li>
 </ul>
 </li>
 </ul>
@@ -187,7 +168,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -237,32 +218,31 @@
             
   <div class="section" id="matplotlib-dates-monthlocator">
 <h1>22.4.11. matplotlib.dates.MonthLocator<a class="headerlink" href="#matplotlib-dates-monthlocator" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.dates.MonthLocator.__init__.html#matplotlib.dates.MonthLocator.__init__" title="matplotlib.dates.MonthLocator.__init__"><code class="xref py py-func docutils literal"><span class="pre">MonthLocator.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.dates.MonthLocator">
 <em class="property">class </em><code class="descclassname">matplotlib.dates.</code><code class="descname">MonthLocator</code><span class="sig-paren">(</span><em>bymonth=None</em>, <em>bymonthday=1</em>, <em>interval=1</em>, <em>tz=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/dates.html#MonthLocator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.dates.MonthLocator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Make ticks on occurances of each month month, e.g., 1, 3, 12.</p>
-<p class="rubric">Attributes</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="29%" />
-<col width="71%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>axis</td>
-<td>&nbsp;</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="matplotlib.dates.MonthLocator.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>bymonth=None</em>, <em>bymonthday=1</em>, <em>interval=1</em>, <em>tz=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/dates.html#MonthLocator.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.dates.MonthLocator.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mark every month in <em>bymonth</em>; <em>bymonth</em> can be an int or
+sequence.  Default is <code class="docutils literal"><span class="pre">range(1,13)</span></code>, i.e. every month.</p>
+<p><em>interval</em> is the interval between each iteration.  For
+example, if <code class="docutils literal"><span class="pre">interval=2</span></code>, mark every second occurance.</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="section" id="methods">
+<h2>22.4.11.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="longtable docutils">
 <colgroup>
 <col width="10%" />
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">__call__</span></code>()</td>
-<td></td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.dates.MonthLocator.__init__.html#matplotlib.dates.MonthLocator.__init__" title="matplotlib.dates.MonthLocator.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>([bymonth,&nbsp;bymonthday,&nbsp;interval,&nbsp;tz])</td>
+<td>Mark every month in <em>bymonth</em>; <em>bymonth</em> can be an int or sequence.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="matplotlib.dates.MonthLocator.autoscale.html#matplotlib.dates.MonthLocator.autoscale" title="matplotlib.dates.MonthLocator.autoscale"><code class="xref py py-obj docutils literal"><span class="pre">autoscale</span></code></a>()</td>
 <td>Set the view limits to include the data range.</td>
@@ -320,17 +300,27 @@
 </tr>
 </tbody>
 </table>
-<dl class="method">
-<dt id="matplotlib.dates.MonthLocator.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>bymonth=None</em>, <em>bymonthday=1</em>, <em>interval=1</em>, <em>tz=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/dates.html#MonthLocator.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.dates.MonthLocator.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Mark every month in <em>bymonth</em>; <em>bymonth</em> can be an int or
-sequence.  Default is <code class="docutils literal"><span class="pre">range(1,13)</span></code>, i.e. every month.</p>
-<p><em>interval</em> is the interval between each iteration.  For
-example, if <code class="docutils literal"><span class="pre">interval=2</span></code>, mark every second occurance.</p>
-</dd></dl>
-
-</dd></dl>
-
+</div>
+<div class="section" id="attributes">
+<h2>22.4.11.2. Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.dates.MonthLocator.MAXTICKS.html#matplotlib.dates.MonthLocator.MAXTICKS" title="matplotlib.dates.MonthLocator.MAXTICKS"><code class="xref py py-obj docutils literal"><span class="pre">MAXTICKS</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.dates.MonthLocator.axis.html#matplotlib.dates.MonthLocator.axis" title="matplotlib.dates.MonthLocator.axis"><code class="xref py py-obj docutils literal"><span class="pre">axis</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.dates.MonthLocator.hms0d.html#matplotlib.dates.MonthLocator.hms0d" title="matplotlib.dates.MonthLocator.hms0d"><code class="xref py py-obj docutils literal"><span class="pre">hms0d</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -340,8 +330,10 @@ example, if <code class="docutils literal"><span class="pre">interval=2</span></
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="matplotlib.dates.MonthLocator.__init__.html" class="btn btn-neutral float-right" title="22.4.11.1.1. matplotlib.dates.MonthLocator.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="matplotlib.dates.MinuteLocator.zoom.html" class="btn btn-neutral" title="22.4.10.18. matplotlib.dates.MinuteLocator.zoom" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="matplotlib.dates.MinuteLocator.hms0d.html" class="btn btn-neutral" title="22.4.10.2.3. matplotlib.dates.MinuteLocator.hms0d" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

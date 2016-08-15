@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>18.2.4. matplotlib.artist.IdentityTransform &mdash; Matplotlib API 1 documentation</title>
+  <title>18.2.4. matplotlib.artist.IdentityTransform &mdash; My Project v1</title>
   
 
   
@@ -30,10 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="18. matplotlib.artist" href="../matplotlib.artist.html"/>
-        <link rel="next" title="18.2.4.1. matplotlib.artist.IdentityTransform.depth" href="matplotlib.artist.IdentityTransform.depth.html"/>
-        <link rel="prev" title="18.2.3.64. matplotlib.artist.Bbox.update_from_path" href="matplotlib.artist.Bbox.update_from_path.html"/> 
+        <link rel="next" title="18.2.4.1.1. matplotlib.artist.IdentityTransform.__init__" href="matplotlib.artist.IdentityTransform.__init__.html"/>
+        <link rel="prev" title="18.2.3.2.29. matplotlib.artist.Bbox.ymin" href="matplotlib.artist.Bbox.ymin.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -109,27 +109,8 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.artist.ArtistInspector.html">18.2.2. matplotlib.artist.ArtistInspector</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.artist.Bbox.html">18.2.3. matplotlib.artist.Bbox</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">18.2.4. matplotlib.artist.IdentityTransform</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.IdentityTransform.depth.html">18.2.4.1. matplotlib.artist.IdentityTransform.depth</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.IdentityTransform.is_separable.html">18.2.4.2. matplotlib.artist.IdentityTransform.is_separable</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.IdentityTransform.contains_branch.html">18.2.4.3. matplotlib.artist.IdentityTransform.contains_branch</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.IdentityTransform.contains_branch_seperately.html">18.2.4.4. matplotlib.artist.IdentityTransform.contains_branch_seperately</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.IdentityTransform.frozen.html">18.2.4.5. matplotlib.artist.IdentityTransform.frozen</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.IdentityTransform.get_affine.html">18.2.4.6. matplotlib.artist.IdentityTransform.get_affine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.IdentityTransform.get_matrix.html">18.2.4.7. matplotlib.artist.IdentityTransform.get_matrix</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.IdentityTransform.invalidate.html">18.2.4.8. matplotlib.artist.IdentityTransform.invalidate</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.IdentityTransform.inverted.html">18.2.4.9. matplotlib.artist.IdentityTransform.inverted</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.IdentityTransform.matrix_from_values.html">18.2.4.10. matplotlib.artist.IdentityTransform.matrix_from_values</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.IdentityTransform.set_children.html">18.2.4.11. matplotlib.artist.IdentityTransform.set_children</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.IdentityTransform.to_values.html">18.2.4.12. matplotlib.artist.IdentityTransform.to_values</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.IdentityTransform.transform.html">18.2.4.13. matplotlib.artist.IdentityTransform.transform</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.IdentityTransform.transform_affine.html">18.2.4.14. matplotlib.artist.IdentityTransform.transform_affine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.IdentityTransform.transform_angles.html">18.2.4.15. matplotlib.artist.IdentityTransform.transform_angles</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.IdentityTransform.transform_bbox.html">18.2.4.16. matplotlib.artist.IdentityTransform.transform_bbox</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.IdentityTransform.transform_non_affine.html">18.2.4.17. matplotlib.artist.IdentityTransform.transform_non_affine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.IdentityTransform.transform_path.html">18.2.4.18. matplotlib.artist.IdentityTransform.transform_path</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.IdentityTransform.transform_path_affine.html">18.2.4.19. matplotlib.artist.IdentityTransform.transform_path_affine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.IdentityTransform.transform_path_non_affine.html">18.2.4.20. matplotlib.artist.IdentityTransform.transform_path_non_affine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.IdentityTransform.transform_point.html">18.2.4.21. matplotlib.artist.IdentityTransform.transform_point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">18.2.4.1. Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#attributes">18.2.4.2. Attributes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.artist.Path.html">18.2.5. matplotlib.artist.Path</a></li>
@@ -176,7 +157,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -226,95 +207,133 @@
             
   <div class="section" id="matplotlib-artist-identitytransform">
 <h1>18.2.4. matplotlib.artist.IdentityTransform<a class="headerlink" href="#matplotlib-artist-identitytransform" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.artist.IdentityTransform.__init__.html#matplotlib.artist.IdentityTransform.__init__" title="matplotlib.artist.IdentityTransform.__init__"><code class="xref py py-func docutils literal"><span class="pre">IdentityTransform.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.artist.IdentityTransform">
 <em class="property">class </em><code class="descclassname">matplotlib.artist.</code><code class="descname">IdentityTransform</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/transforms.html#IdentityTransform"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.artist.IdentityTransform" title="Permalink to this definition">¶</a></dt>
 <dd><p>A special class that does on thing, the identity transform, in a
 fast way.</p>
-<p class="rubric">Attributes</p>
+<dl class="method">
+<dt id="matplotlib.artist.IdentityTransform.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.artist.IdentityTransform.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="section" id="methods">
+<h2>18.2.4.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="longtable docutils">
 <colgroup>
 <col width="10%" />
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.depth.html#matplotlib.artist.IdentityTransform.depth" title="matplotlib.artist.IdentityTransform.depth"><code class="xref py py-obj docutils literal"><span class="pre">depth</span></code></a></td>
-<td>Returns the number of transforms which have been chained together to form this Transform instance.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.is_separable.html#matplotlib.artist.IdentityTransform.is_separable" title="matplotlib.artist.IdentityTransform.is_separable"><code class="xref py py-obj docutils literal"><span class="pre">is_separable</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.__init__.html#matplotlib.artist.IdentityTransform.__init__" title="matplotlib.artist.IdentityTransform.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>(*args,&nbsp;**kwargs)</td>
 <td></td>
 </tr>
-</tbody>
-</table>
-<p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.contains_branch.html#matplotlib.artist.IdentityTransform.contains_branch" title="matplotlib.artist.IdentityTransform.contains_branch"><code class="xref py py-obj docutils literal"><span class="pre">contains_branch</span></code></a>(other)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.contains_branch.html#matplotlib.artist.IdentityTransform.contains_branch" title="matplotlib.artist.IdentityTransform.contains_branch"><code class="xref py py-obj docutils literal"><span class="pre">contains_branch</span></code></a>(other)</td>
 <td>Return whether the given transform is a sub-tree of this transform.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.contains_branch_seperately.html#matplotlib.artist.IdentityTransform.contains_branch_seperately" title="matplotlib.artist.IdentityTransform.contains_branch_seperately"><code class="xref py py-obj docutils literal"><span class="pre">contains_branch_seperately</span></code></a>(other_transform)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.contains_branch_seperately.html#matplotlib.artist.IdentityTransform.contains_branch_seperately" title="matplotlib.artist.IdentityTransform.contains_branch_seperately"><code class="xref py py-obj docutils literal"><span class="pre">contains_branch_seperately</span></code></a>(other_transform)</td>
 <td>Returns whether the given branch is a sub-tree of this transform on each seperate dimension.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.frozen.html#matplotlib.artist.IdentityTransform.frozen" title="matplotlib.artist.IdentityTransform.frozen"><code class="xref py py-obj docutils literal"><span class="pre">frozen</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.frozen.html#matplotlib.artist.IdentityTransform.frozen" title="matplotlib.artist.IdentityTransform.frozen"><code class="xref py py-obj docutils literal"><span class="pre">frozen</span></code></a>()</td>
 <td>Returns a frozen copy of this transform node.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.get_affine.html#matplotlib.artist.IdentityTransform.get_affine" title="matplotlib.artist.IdentityTransform.get_affine"><code class="xref py py-obj docutils literal"><span class="pre">get_affine</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.get_affine.html#matplotlib.artist.IdentityTransform.get_affine" title="matplotlib.artist.IdentityTransform.get_affine"><code class="xref py py-obj docutils literal"><span class="pre">get_affine</span></code></a>()</td>
 <td>Return the corresponding inverse transformation.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.get_matrix.html#matplotlib.artist.IdentityTransform.get_matrix" title="matplotlib.artist.IdentityTransform.get_matrix"><code class="xref py py-obj docutils literal"><span class="pre">get_matrix</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.get_matrix.html#matplotlib.artist.IdentityTransform.get_matrix" title="matplotlib.artist.IdentityTransform.get_matrix"><code class="xref py py-obj docutils literal"><span class="pre">get_matrix</span></code></a>()</td>
 <td>Get the Affine transformation array for the affine part of this transform.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.invalidate.html#matplotlib.artist.IdentityTransform.invalidate" title="matplotlib.artist.IdentityTransform.invalidate"><code class="xref py py-obj docutils literal"><span class="pre">invalidate</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.invalidate.html#matplotlib.artist.IdentityTransform.invalidate" title="matplotlib.artist.IdentityTransform.invalidate"><code class="xref py py-obj docutils literal"><span class="pre">invalidate</span></code></a>()</td>
 <td>Invalidate this <code class="xref py py-class docutils literal"><span class="pre">TransformNode</span></code> and triggers an invalidation of its ancestors.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.inverted.html#matplotlib.artist.IdentityTransform.inverted" title="matplotlib.artist.IdentityTransform.inverted"><code class="xref py py-obj docutils literal"><span class="pre">inverted</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.inverted.html#matplotlib.artist.IdentityTransform.inverted" title="matplotlib.artist.IdentityTransform.inverted"><code class="xref py py-obj docutils literal"><span class="pre">inverted</span></code></a>()</td>
 <td>Return the corresponding inverse transformation.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.matrix_from_values.html#matplotlib.artist.IdentityTransform.matrix_from_values" title="matplotlib.artist.IdentityTransform.matrix_from_values"><code class="xref py py-obj docutils literal"><span class="pre">matrix_from_values</span></code></a>(a,&nbsp;b,&nbsp;c,&nbsp;d,&nbsp;e,&nbsp;f)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.matrix_from_values.html#matplotlib.artist.IdentityTransform.matrix_from_values" title="matplotlib.artist.IdentityTransform.matrix_from_values"><code class="xref py py-obj docutils literal"><span class="pre">matrix_from_values</span></code></a>(a,&nbsp;b,&nbsp;c,&nbsp;d,&nbsp;e,&nbsp;f)</td>
 <td>(staticmethod) Create a new transformation matrix as a 3x3</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.set_children.html#matplotlib.artist.IdentityTransform.set_children" title="matplotlib.artist.IdentityTransform.set_children"><code class="xref py py-obj docutils literal"><span class="pre">set_children</span></code></a>(*children)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.set_children.html#matplotlib.artist.IdentityTransform.set_children" title="matplotlib.artist.IdentityTransform.set_children"><code class="xref py py-obj docutils literal"><span class="pre">set_children</span></code></a>(*children)</td>
 <td>Set the children of the transform, to let the invalidation system know which transforms can invalidate this transform.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.to_values.html#matplotlib.artist.IdentityTransform.to_values" title="matplotlib.artist.IdentityTransform.to_values"><code class="xref py py-obj docutils literal"><span class="pre">to_values</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.to_values.html#matplotlib.artist.IdentityTransform.to_values" title="matplotlib.artist.IdentityTransform.to_values"><code class="xref py py-obj docutils literal"><span class="pre">to_values</span></code></a>()</td>
 <td>Return the values of the matrix as a sequence (a,b,c,d,e,f)</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.transform.html#matplotlib.artist.IdentityTransform.transform" title="matplotlib.artist.IdentityTransform.transform"><code class="xref py py-obj docutils literal"><span class="pre">transform</span></code></a>(points)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.transform.html#matplotlib.artist.IdentityTransform.transform" title="matplotlib.artist.IdentityTransform.transform"><code class="xref py py-obj docutils literal"><span class="pre">transform</span></code></a>(points)</td>
 <td>Performs only the non-affine part of the transformation.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.transform_affine.html#matplotlib.artist.IdentityTransform.transform_affine" title="matplotlib.artist.IdentityTransform.transform_affine"><code class="xref py py-obj docutils literal"><span class="pre">transform_affine</span></code></a>(points)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.transform_affine.html#matplotlib.artist.IdentityTransform.transform_affine" title="matplotlib.artist.IdentityTransform.transform_affine"><code class="xref py py-obj docutils literal"><span class="pre">transform_affine</span></code></a>(points)</td>
 <td>Performs only the non-affine part of the transformation.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.transform_angles.html#matplotlib.artist.IdentityTransform.transform_angles" title="matplotlib.artist.IdentityTransform.transform_angles"><code class="xref py py-obj docutils literal"><span class="pre">transform_angles</span></code></a>(angles,&nbsp;pts[,&nbsp;radians,&nbsp;pushoff])</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.transform_angles.html#matplotlib.artist.IdentityTransform.transform_angles" title="matplotlib.artist.IdentityTransform.transform_angles"><code class="xref py py-obj docutils literal"><span class="pre">transform_angles</span></code></a>(angles,&nbsp;pts[,&nbsp;radians,&nbsp;pushoff])</td>
 <td>Performs transformation on a set of angles anchored at specific locations.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.transform_bbox.html#matplotlib.artist.IdentityTransform.transform_bbox" title="matplotlib.artist.IdentityTransform.transform_bbox"><code class="xref py py-obj docutils literal"><span class="pre">transform_bbox</span></code></a>(bbox)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.transform_bbox.html#matplotlib.artist.IdentityTransform.transform_bbox" title="matplotlib.artist.IdentityTransform.transform_bbox"><code class="xref py py-obj docutils literal"><span class="pre">transform_bbox</span></code></a>(bbox)</td>
 <td>Transform the given bounding box.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.transform_non_affine.html#matplotlib.artist.IdentityTransform.transform_non_affine" title="matplotlib.artist.IdentityTransform.transform_non_affine"><code class="xref py py-obj docutils literal"><span class="pre">transform_non_affine</span></code></a>(points)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.transform_non_affine.html#matplotlib.artist.IdentityTransform.transform_non_affine" title="matplotlib.artist.IdentityTransform.transform_non_affine"><code class="xref py py-obj docutils literal"><span class="pre">transform_non_affine</span></code></a>(points)</td>
 <td>Performs only the non-affine part of the transformation.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.transform_path.html#matplotlib.artist.IdentityTransform.transform_path" title="matplotlib.artist.IdentityTransform.transform_path"><code class="xref py py-obj docutils literal"><span class="pre">transform_path</span></code></a>(path)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.transform_path.html#matplotlib.artist.IdentityTransform.transform_path" title="matplotlib.artist.IdentityTransform.transform_path"><code class="xref py py-obj docutils literal"><span class="pre">transform_path</span></code></a>(path)</td>
 <td>Returns a path, transformed only by the non-affine part of this transform.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.transform_path_affine.html#matplotlib.artist.IdentityTransform.transform_path_affine" title="matplotlib.artist.IdentityTransform.transform_path_affine"><code class="xref py py-obj docutils literal"><span class="pre">transform_path_affine</span></code></a>(path)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.transform_path_affine.html#matplotlib.artist.IdentityTransform.transform_path_affine" title="matplotlib.artist.IdentityTransform.transform_path_affine"><code class="xref py py-obj docutils literal"><span class="pre">transform_path_affine</span></code></a>(path)</td>
 <td>Returns a path, transformed only by the non-affine part of this transform.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.transform_path_non_affine.html#matplotlib.artist.IdentityTransform.transform_path_non_affine" title="matplotlib.artist.IdentityTransform.transform_path_non_affine"><code class="xref py py-obj docutils literal"><span class="pre">transform_path_non_affine</span></code></a>(path)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.transform_path_non_affine.html#matplotlib.artist.IdentityTransform.transform_path_non_affine" title="matplotlib.artist.IdentityTransform.transform_path_non_affine"><code class="xref py py-obj docutils literal"><span class="pre">transform_path_non_affine</span></code></a>(path)</td>
 <td>Returns a path, transformed only by the non-affine part of this transform.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.transform_point.html#matplotlib.artist.IdentityTransform.transform_point" title="matplotlib.artist.IdentityTransform.transform_point"><code class="xref py py-obj docutils literal"><span class="pre">transform_point</span></code></a>(point)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.transform_point.html#matplotlib.artist.IdentityTransform.transform_point" title="matplotlib.artist.IdentityTransform.transform_point"><code class="xref py py-obj docutils literal"><span class="pre">transform_point</span></code></a>(point)</td>
 <td>A convenience function that returns the transformed copy of a single point.</td>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
+</div>
+<div class="section" id="attributes">
+<h2>18.2.4.2. Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.INVALID.html#matplotlib.artist.IdentityTransform.INVALID" title="matplotlib.artist.IdentityTransform.INVALID"><code class="xref py py-obj docutils literal"><span class="pre">INVALID</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.INVALID_AFFINE.html#matplotlib.artist.IdentityTransform.INVALID_AFFINE" title="matplotlib.artist.IdentityTransform.INVALID_AFFINE"><code class="xref py py-obj docutils literal"><span class="pre">INVALID_AFFINE</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.INVALID_NON_AFFINE.html#matplotlib.artist.IdentityTransform.INVALID_NON_AFFINE" title="matplotlib.artist.IdentityTransform.INVALID_NON_AFFINE"><code class="xref py py-obj docutils literal"><span class="pre">INVALID_NON_AFFINE</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.depth.html#matplotlib.artist.IdentityTransform.depth" title="matplotlib.artist.IdentityTransform.depth"><code class="xref py py-obj docutils literal"><span class="pre">depth</span></code></a></td>
+<td>Returns the number of transforms which have been chained together to form this Transform instance.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.has_inverse.html#matplotlib.artist.IdentityTransform.has_inverse" title="matplotlib.artist.IdentityTransform.has_inverse"><code class="xref py py-obj docutils literal"><span class="pre">has_inverse</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.input_dims.html#matplotlib.artist.IdentityTransform.input_dims" title="matplotlib.artist.IdentityTransform.input_dims"><code class="xref py py-obj docutils literal"><span class="pre">input_dims</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.is_affine.html#matplotlib.artist.IdentityTransform.is_affine" title="matplotlib.artist.IdentityTransform.is_affine"><code class="xref py py-obj docutils literal"><span class="pre">is_affine</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.is_bbox.html#matplotlib.artist.IdentityTransform.is_bbox" title="matplotlib.artist.IdentityTransform.is_bbox"><code class="xref py py-obj docutils literal"><span class="pre">is_bbox</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.is_separable.html#matplotlib.artist.IdentityTransform.is_separable" title="matplotlib.artist.IdentityTransform.is_separable"><code class="xref py py-obj docutils literal"><span class="pre">is_separable</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.output_dims.html#matplotlib.artist.IdentityTransform.output_dims" title="matplotlib.artist.IdentityTransform.output_dims"><code class="xref py py-obj docutils literal"><span class="pre">output_dims</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.IdentityTransform.pass_through.html#matplotlib.artist.IdentityTransform.pass_through" title="matplotlib.artist.IdentityTransform.pass_through"><code class="xref py py-obj docutils literal"><span class="pre">pass_through</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -324,10 +343,10 @@ fast way.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="matplotlib.artist.IdentityTransform.depth.html" class="btn btn-neutral float-right" title="18.2.4.1. matplotlib.artist.IdentityTransform.depth" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="matplotlib.artist.IdentityTransform.__init__.html" class="btn btn-neutral float-right" title="18.2.4.1.1. matplotlib.artist.IdentityTransform.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="matplotlib.artist.Bbox.update_from_path.html" class="btn btn-neutral" title="18.2.3.64. matplotlib.artist.Bbox.update_from_path" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="matplotlib.artist.Bbox.ymin.html" class="btn btn-neutral" title="18.2.3.2.29. matplotlib.artist.Bbox.ymin" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

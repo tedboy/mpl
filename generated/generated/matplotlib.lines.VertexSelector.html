@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>10.2.8. matplotlib.lines.VertexSelector &mdash; Matplotlib API 1 documentation</title>
+  <title>10.2.8. matplotlib.lines.VertexSelector &mdash; My Project v1</title>
   
 
   
@@ -30,10 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="10. matplotlib.lines" href="../matplotlib.lines.html"/>
-        <link rel="next" title="10.2.8.1. matplotlib.lines.VertexSelector.onpick" href="matplotlib.lines.VertexSelector.onpick.html"/>
-        <link rel="prev" title="10.2.7.7. matplotlib.lines.TransformedPath.set_children" href="matplotlib.lines.TransformedPath.set_children.html"/> 
+        <link rel="next" title="10.2.8.1.1. matplotlib.lines.VertexSelector.__init__" href="matplotlib.lines.VertexSelector.__init__.html"/>
+        <link rel="prev" title="10.2.7.2.6. matplotlib.lines.TransformedPath.pass_through" href="matplotlib.lines.TransformedPath.pass_through.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -105,8 +105,7 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.lines.Path.html">10.2.6. matplotlib.lines.Path</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.lines.TransformedPath.html">10.2.7. matplotlib.lines.TransformedPath</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">10.2.8. matplotlib.lines.VertexSelector</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.VertexSelector.onpick.html">10.2.8.1. matplotlib.lines.VertexSelector.onpick</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.VertexSelector.process_selected.html">10.2.8.2. matplotlib.lines.VertexSelector.process_selected</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">10.2.8.1. Methods</a></li>
 </ul>
 </li>
 </ul>
@@ -156,7 +155,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -206,7 +205,6 @@
             
   <div class="section" id="matplotlib-lines-vertexselector">
 <h1>10.2.8. matplotlib.lines.VertexSelector<a class="headerlink" href="#matplotlib-lines-vertexselector" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.lines.VertexSelector.__init__.html#matplotlib.lines.VertexSelector.__init__" title="matplotlib.lines.VertexSelector.__init__"><code class="xref py py-func docutils literal"><span class="pre">VertexSelector.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.lines.VertexSelector">
 <em class="property">class </em><code class="descclassname">matplotlib.lines.</code><code class="descname">VertexSelector</code><span class="sig-paren">(</span><em>line</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/lines.html#VertexSelector"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.lines.VertexSelector" title="Permalink to this definition">¶</a></dt>
@@ -238,21 +236,6 @@ circles:</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.lines.VertexSelector.onpick.html#matplotlib.lines.VertexSelector.onpick" title="matplotlib.lines.VertexSelector.onpick"><code class="xref py py-obj docutils literal"><span class="pre">onpick</span></code></a>(event)</td>
-<td>When the line is picked, update the set of selected indicies.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.lines.VertexSelector.process_selected.html#matplotlib.lines.VertexSelector.process_selected" title="matplotlib.lines.VertexSelector.process_selected"><code class="xref py py-obj docutils literal"><span class="pre">process_selected</span></code></a>(ind,&nbsp;xs,&nbsp;ys)</td>
-<td>Default &#8220;do nothing&#8221; implementation of the <a class="reference internal" href="matplotlib.lines.VertexSelector.process_selected.html#matplotlib.lines.VertexSelector.process_selected" title="matplotlib.lines.VertexSelector.process_selected"><code class="xref py py-meth docutils literal"><span class="pre">process_selected()</span></code></a> method.</td>
-</tr>
-</tbody>
-</table>
 <dl class="method">
 <dt id="matplotlib.lines.VertexSelector.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>line</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/lines.html#VertexSelector.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.lines.VertexSelector.__init__" title="Permalink to this definition">¶</a></dt>
@@ -264,6 +247,26 @@ picker property set.</p>
 
 </dd></dl>
 
+<div class="section" id="methods">
+<h2>10.2.8.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.lines.VertexSelector.__init__.html#matplotlib.lines.VertexSelector.__init__" title="matplotlib.lines.VertexSelector.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>(line)</td>
+<td>Initialize the class with a <a class="reference internal" href="matplotlib.lines.Line2D.html#matplotlib.lines.Line2D" title="matplotlib.lines.Line2D"><code class="xref py py-class docutils literal"><span class="pre">matplotlib.lines.Line2D</span></code></a> instance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.lines.VertexSelector.onpick.html#matplotlib.lines.VertexSelector.onpick" title="matplotlib.lines.VertexSelector.onpick"><code class="xref py py-obj docutils literal"><span class="pre">onpick</span></code></a>(event)</td>
+<td>When the line is picked, update the set of selected indicies.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.lines.VertexSelector.process_selected.html#matplotlib.lines.VertexSelector.process_selected" title="matplotlib.lines.VertexSelector.process_selected"><code class="xref py py-obj docutils literal"><span class="pre">process_selected</span></code></a>(ind,&nbsp;xs,&nbsp;ys)</td>
+<td>Default &#8220;do nothing&#8221; implementation of the <code class="xref py py-meth docutils literal"><span class="pre">process_selected()</span></code> method.</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -273,10 +276,10 @@ picker property set.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="matplotlib.lines.VertexSelector.onpick.html" class="btn btn-neutral float-right" title="10.2.8.1. matplotlib.lines.VertexSelector.onpick" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="matplotlib.lines.VertexSelector.__init__.html" class="btn btn-neutral float-right" title="10.2.8.1.1. matplotlib.lines.VertexSelector.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="matplotlib.lines.TransformedPath.set_children.html" class="btn btn-neutral" title="10.2.7.7. matplotlib.lines.TransformedPath.set_children" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="matplotlib.lines.TransformedPath.pass_through.html" class="btn btn-neutral" title="10.2.7.2.6. matplotlib.lines.TransformedPath.pass_through" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

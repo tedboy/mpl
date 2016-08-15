@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>14.2.19. matplotlib.text.maxdict &mdash; Matplotlib API 1 documentation</title>
+  <title>14.2.19. matplotlib.text.maxdict &mdash; My Project v1</title>
   
 
   
@@ -30,10 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="14. matplotlib.text" href="../matplotlib.text.html"/>
-        <link rel="next" title="14.2.19.1. matplotlib.text.maxdict.clear" href="matplotlib.text.maxdict.clear.html"/>
-        <link rel="prev" title="14.2.18.18. matplotlib.text.Transform.transform_point" href="matplotlib.text.Transform.transform_point.html"/> 
+        <link rel="next" title="14.2.19.1.1. matplotlib.text.maxdict.__init__" href="matplotlib.text.maxdict.__init__.html"/>
+        <link rel="prev" title="14.2.18.2.11. matplotlib.text.Transform.pass_through" href="matplotlib.text.Transform.pass_through.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -120,27 +120,9 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.text.TextWithDash.html">14.2.17. matplotlib.text.TextWithDash</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.text.Transform.html">14.2.18. matplotlib.text.Transform</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">14.2.19. matplotlib.text.maxdict</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.maxdict.clear.html">14.2.19.1. matplotlib.text.maxdict.clear</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.maxdict.copy.html">14.2.19.2. matplotlib.text.maxdict.copy</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.maxdict.fromkeys.html">14.2.19.3. matplotlib.text.maxdict.fromkeys</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.maxdict.get.html">14.2.19.4. matplotlib.text.maxdict.get</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.maxdict.has_key.html">14.2.19.5. matplotlib.text.maxdict.has_key</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.maxdict.items.html">14.2.19.6. matplotlib.text.maxdict.items</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.maxdict.iteritems.html">14.2.19.7. matplotlib.text.maxdict.iteritems</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.maxdict.iterkeys.html">14.2.19.8. matplotlib.text.maxdict.iterkeys</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.maxdict.itervalues.html">14.2.19.9. matplotlib.text.maxdict.itervalues</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.maxdict.keys.html">14.2.19.10. matplotlib.text.maxdict.keys</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.maxdict.pop.html">14.2.19.11. matplotlib.text.maxdict.pop</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.maxdict.popitem.html">14.2.19.12. matplotlib.text.maxdict.popitem</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.maxdict.setdefault.html">14.2.19.13. matplotlib.text.maxdict.setdefault</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.maxdict.update.html">14.2.19.14. matplotlib.text.maxdict.update</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.maxdict.values.html">14.2.19.15. matplotlib.text.maxdict.values</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.maxdict.viewitems.html">14.2.19.16. matplotlib.text.maxdict.viewitems</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.maxdict.viewkeys.html">14.2.19.17. matplotlib.text.maxdict.viewkeys</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.maxdict.viewvalues.html">14.2.19.18. matplotlib.text.maxdict.viewvalues</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">14.2.19.1. Methods</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.zip.html">14.2.20. matplotlib.text.zip</a></li>
 </ul>
 </li>
 </ul>
@@ -184,7 +166,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -234,78 +216,87 @@
             
   <div class="section" id="matplotlib-text-maxdict">
 <h1>14.2.19. matplotlib.text.maxdict<a class="headerlink" href="#matplotlib-text-maxdict" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.text.maxdict.__init__.html#matplotlib.text.maxdict.__init__" title="matplotlib.text.maxdict.__init__"><code class="xref py py-func docutils literal"><span class="pre">maxdict.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.text.maxdict">
 <em class="property">class </em><code class="descclassname">matplotlib.text.</code><code class="descname">maxdict</code><span class="sig-paren">(</span><em>maxsize</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/cbook.html#maxdict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.text.maxdict" title="Permalink to this definition">¶</a></dt>
 <dd><p>A dictionary with a maximum size; this doesn&#8217;t override all the
 relevant methods to contrain size, just setitem, so use with
 caution</p>
-<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="matplotlib.text.maxdict.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>maxsize</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/cbook.html#maxdict.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.text.maxdict.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="section" id="methods">
+<h2>14.2.19.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="longtable docutils">
 <colgroup>
 <col width="10%" />
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.maxdict.clear.html#matplotlib.text.maxdict.clear" title="matplotlib.text.maxdict.clear"><code class="xref py py-obj docutils literal"><span class="pre">clear</span></code></a>(()&nbsp;-&gt;&nbsp;None.&nbsp;&nbsp;Remove&nbsp;all&nbsp;items&nbsp;from&nbsp;D.)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.maxdict.__init__.html#matplotlib.text.maxdict.__init__" title="matplotlib.text.maxdict.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>(maxsize)</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.maxdict.copy.html#matplotlib.text.maxdict.copy" title="matplotlib.text.maxdict.copy"><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code></a>(()&nbsp;-&gt;&nbsp;a&nbsp;shallow&nbsp;copy&nbsp;of&nbsp;D)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.maxdict.clear.html#matplotlib.text.maxdict.clear" title="matplotlib.text.maxdict.clear"><code class="xref py py-obj docutils literal"><span class="pre">clear</span></code></a>(()&nbsp;-&gt;&nbsp;None.&nbsp;&nbsp;Remove&nbsp;all&nbsp;items&nbsp;from&nbsp;D.)</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.maxdict.fromkeys.html#matplotlib.text.maxdict.fromkeys" title="matplotlib.text.maxdict.fromkeys"><code class="xref py py-obj docutils literal"><span class="pre">fromkeys</span></code></a>(...)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.maxdict.copy.html#matplotlib.text.maxdict.copy" title="matplotlib.text.maxdict.copy"><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code></a>(()&nbsp;-&gt;&nbsp;a&nbsp;shallow&nbsp;copy&nbsp;of&nbsp;D)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.maxdict.fromkeys.html#matplotlib.text.maxdict.fromkeys" title="matplotlib.text.maxdict.fromkeys"><code class="xref py py-obj docutils literal"><span class="pre">fromkeys</span></code></a>(...)</td>
 <td>v defaults to None.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.maxdict.get.html#matplotlib.text.maxdict.get" title="matplotlib.text.maxdict.get"><code class="xref py py-obj docutils literal"><span class="pre">get</span></code></a>((k[,d])&nbsp;-&gt;&nbsp;D[k]&nbsp;if&nbsp;k&nbsp;in&nbsp;D,&nbsp;...)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.maxdict.get.html#matplotlib.text.maxdict.get" title="matplotlib.text.maxdict.get"><code class="xref py py-obj docutils literal"><span class="pre">get</span></code></a>((k[,d])&nbsp;-&gt;&nbsp;D[k]&nbsp;if&nbsp;k&nbsp;in&nbsp;D,&nbsp;...)</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.maxdict.has_key.html#matplotlib.text.maxdict.has_key" title="matplotlib.text.maxdict.has_key"><code class="xref py py-obj docutils literal"><span class="pre">has_key</span></code></a>((k)&nbsp;-&gt;&nbsp;True&nbsp;if&nbsp;D&nbsp;has&nbsp;a&nbsp;key&nbsp;k,&nbsp;else&nbsp;False)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.maxdict.has_key.html#matplotlib.text.maxdict.has_key" title="matplotlib.text.maxdict.has_key"><code class="xref py py-obj docutils literal"><span class="pre">has_key</span></code></a>((k)&nbsp;-&gt;&nbsp;True&nbsp;if&nbsp;D&nbsp;has&nbsp;a&nbsp;key&nbsp;k,&nbsp;else&nbsp;False)</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.maxdict.items.html#matplotlib.text.maxdict.items" title="matplotlib.text.maxdict.items"><code class="xref py py-obj docutils literal"><span class="pre">items</span></code></a>(()&nbsp;-&gt;&nbsp;list&nbsp;of&nbsp;D&#8217;s&nbsp;(key,&nbsp;value)&nbsp;pairs,&nbsp;...)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.maxdict.items.html#matplotlib.text.maxdict.items" title="matplotlib.text.maxdict.items"><code class="xref py py-obj docutils literal"><span class="pre">items</span></code></a>(()&nbsp;-&gt;&nbsp;list&nbsp;of&nbsp;D&#8217;s&nbsp;(key,&nbsp;value)&nbsp;pairs,&nbsp;...)</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.maxdict.iteritems.html#matplotlib.text.maxdict.iteritems" title="matplotlib.text.maxdict.iteritems"><code class="xref py py-obj docutils literal"><span class="pre">iteritems</span></code></a>(()&nbsp;-&gt;&nbsp;an&nbsp;iterator&nbsp;over&nbsp;the&nbsp;(key,&nbsp;...)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.maxdict.iteritems.html#matplotlib.text.maxdict.iteritems" title="matplotlib.text.maxdict.iteritems"><code class="xref py py-obj docutils literal"><span class="pre">iteritems</span></code></a>(()&nbsp;-&gt;&nbsp;an&nbsp;iterator&nbsp;over&nbsp;the&nbsp;(key,&nbsp;...)</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.maxdict.iterkeys.html#matplotlib.text.maxdict.iterkeys" title="matplotlib.text.maxdict.iterkeys"><code class="xref py py-obj docutils literal"><span class="pre">iterkeys</span></code></a>(()&nbsp;-&gt;&nbsp;an&nbsp;iterator&nbsp;over&nbsp;the&nbsp;keys&nbsp;of&nbsp;D)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.maxdict.iterkeys.html#matplotlib.text.maxdict.iterkeys" title="matplotlib.text.maxdict.iterkeys"><code class="xref py py-obj docutils literal"><span class="pre">iterkeys</span></code></a>(()&nbsp;-&gt;&nbsp;an&nbsp;iterator&nbsp;over&nbsp;the&nbsp;keys&nbsp;of&nbsp;D)</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.maxdict.itervalues.html#matplotlib.text.maxdict.itervalues" title="matplotlib.text.maxdict.itervalues"><code class="xref py py-obj docutils literal"><span class="pre">itervalues</span></code></a>(...)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.maxdict.itervalues.html#matplotlib.text.maxdict.itervalues" title="matplotlib.text.maxdict.itervalues"><code class="xref py py-obj docutils literal"><span class="pre">itervalues</span></code></a>(...)</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.maxdict.keys.html#matplotlib.text.maxdict.keys" title="matplotlib.text.maxdict.keys"><code class="xref py py-obj docutils literal"><span class="pre">keys</span></code></a>(()&nbsp;-&gt;&nbsp;list&nbsp;of&nbsp;D&#8217;s&nbsp;keys)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.maxdict.keys.html#matplotlib.text.maxdict.keys" title="matplotlib.text.maxdict.keys"><code class="xref py py-obj docutils literal"><span class="pre">keys</span></code></a>(()&nbsp;-&gt;&nbsp;list&nbsp;of&nbsp;D&#8217;s&nbsp;keys)</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.maxdict.pop.html#matplotlib.text.maxdict.pop" title="matplotlib.text.maxdict.pop"><code class="xref py py-obj docutils literal"><span class="pre">pop</span></code></a>((k[,d])&nbsp;-&gt;&nbsp;v,&nbsp;...)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.maxdict.pop.html#matplotlib.text.maxdict.pop" title="matplotlib.text.maxdict.pop"><code class="xref py py-obj docutils literal"><span class="pre">pop</span></code></a>((k[,d])&nbsp;-&gt;&nbsp;v,&nbsp;...)</td>
 <td>If key is not found, d is returned if given, otherwise KeyError is raised</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.maxdict.popitem.html#matplotlib.text.maxdict.popitem" title="matplotlib.text.maxdict.popitem"><code class="xref py py-obj docutils literal"><span class="pre">popitem</span></code></a>(()&nbsp;-&gt;&nbsp;(k,&nbsp;v),&nbsp;...)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.maxdict.popitem.html#matplotlib.text.maxdict.popitem" title="matplotlib.text.maxdict.popitem"><code class="xref py py-obj docutils literal"><span class="pre">popitem</span></code></a>(()&nbsp;-&gt;&nbsp;(k,&nbsp;v),&nbsp;...)</td>
 <td>2-tuple; but raise KeyError if D is empty.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.maxdict.setdefault.html#matplotlib.text.maxdict.setdefault" title="matplotlib.text.maxdict.setdefault"><code class="xref py py-obj docutils literal"><span class="pre">setdefault</span></code></a>((k[,d])&nbsp;-&gt;&nbsp;D.get(k,d),&nbsp;...)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.maxdict.setdefault.html#matplotlib.text.maxdict.setdefault" title="matplotlib.text.maxdict.setdefault"><code class="xref py py-obj docutils literal"><span class="pre">setdefault</span></code></a>((k[,d])&nbsp;-&gt;&nbsp;D.get(k,d),&nbsp;...)</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.maxdict.update.html#matplotlib.text.maxdict.update" title="matplotlib.text.maxdict.update"><code class="xref py py-obj docutils literal"><span class="pre">update</span></code></a>(([E,&nbsp;...)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.maxdict.update.html#matplotlib.text.maxdict.update" title="matplotlib.text.maxdict.update"><code class="xref py py-obj docutils literal"><span class="pre">update</span></code></a>(([E,&nbsp;...)</td>
 <td>If E present and has a .keys() method, does:     for k in E: D[k] = E[k]</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.maxdict.values.html#matplotlib.text.maxdict.values" title="matplotlib.text.maxdict.values"><code class="xref py py-obj docutils literal"><span class="pre">values</span></code></a>(()&nbsp;-&gt;&nbsp;list&nbsp;of&nbsp;D&#8217;s&nbsp;values)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.maxdict.values.html#matplotlib.text.maxdict.values" title="matplotlib.text.maxdict.values"><code class="xref py py-obj docutils literal"><span class="pre">values</span></code></a>(()&nbsp;-&gt;&nbsp;list&nbsp;of&nbsp;D&#8217;s&nbsp;values)</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.maxdict.viewitems.html#matplotlib.text.maxdict.viewitems" title="matplotlib.text.maxdict.viewitems"><code class="xref py py-obj docutils literal"><span class="pre">viewitems</span></code></a>(...)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.maxdict.viewitems.html#matplotlib.text.maxdict.viewitems" title="matplotlib.text.maxdict.viewitems"><code class="xref py py-obj docutils literal"><span class="pre">viewitems</span></code></a>(...)</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.maxdict.viewkeys.html#matplotlib.text.maxdict.viewkeys" title="matplotlib.text.maxdict.viewkeys"><code class="xref py py-obj docutils literal"><span class="pre">viewkeys</span></code></a>(...)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.maxdict.viewkeys.html#matplotlib.text.maxdict.viewkeys" title="matplotlib.text.maxdict.viewkeys"><code class="xref py py-obj docutils literal"><span class="pre">viewkeys</span></code></a>(...)</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.maxdict.viewvalues.html#matplotlib.text.maxdict.viewvalues" title="matplotlib.text.maxdict.viewvalues"><code class="xref py py-obj docutils literal"><span class="pre">viewvalues</span></code></a>(...)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.maxdict.viewvalues.html#matplotlib.text.maxdict.viewvalues" title="matplotlib.text.maxdict.viewvalues"><code class="xref py py-obj docutils literal"><span class="pre">viewvalues</span></code></a>(...)</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
+</div>
 </div>
 
 
@@ -315,10 +306,10 @@ caution</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="matplotlib.text.maxdict.clear.html" class="btn btn-neutral float-right" title="14.2.19.1. matplotlib.text.maxdict.clear" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="matplotlib.text.maxdict.__init__.html" class="btn btn-neutral float-right" title="14.2.19.1.1. matplotlib.text.maxdict.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="matplotlib.text.Transform.transform_point.html" class="btn btn-neutral" title="14.2.18.18. matplotlib.text.Transform.transform_point" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="matplotlib.text.Transform.pass_through.html" class="btn btn-neutral" title="14.2.18.2.11. matplotlib.text.Transform.pass_through" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

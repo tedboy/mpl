@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.2.33. matplotlib.pyplot.Slider &mdash; Matplotlib API 1 documentation</title>
+  <title>2.2.33. matplotlib.pyplot.Slider &mdash; My Project v1</title>
   
 
   
@@ -30,10 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="2. matplotlib.pyplot" href="../matplotlib.pyplot.html"/>
-        <link rel="next" title="2.2.33.1. matplotlib.pyplot.Slider.active" href="matplotlib.pyplot.Slider.active.html"/>
-        <link rel="prev" title="2.2.32.19. matplotlib.pyplot.ScalarFormatter.set_view_interval" href="matplotlib.pyplot.ScalarFormatter.set_view_interval.html"/> 
+        <link rel="next" title="2.2.33.1.1. matplotlib.pyplot.Slider.__init__" href="matplotlib.pyplot.Slider.__init__.html"/>
+        <link rel="prev" title="2.2.32.2.4. matplotlib.pyplot.ScalarFormatter.useOffset" href="matplotlib.pyplot.ScalarFormatter.useOffset.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -122,16 +122,8 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Rectangle.html">2.2.31. matplotlib.pyplot.Rectangle</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.ScalarFormatter.html">2.2.32. matplotlib.pyplot.ScalarFormatter</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">2.2.33. matplotlib.pyplot.Slider</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Slider.active.html">2.2.33.1. matplotlib.pyplot.Slider.active</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Slider.connect_event.html">2.2.33.2. matplotlib.pyplot.Slider.connect_event</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Slider.disconnect.html">2.2.33.3. matplotlib.pyplot.Slider.disconnect</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Slider.disconnect_events.html">2.2.33.4. matplotlib.pyplot.Slider.disconnect_events</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Slider.get_active.html">2.2.33.5. matplotlib.pyplot.Slider.get_active</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Slider.ignore.html">2.2.33.6. matplotlib.pyplot.Slider.ignore</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Slider.on_changed.html">2.2.33.7. matplotlib.pyplot.Slider.on_changed</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Slider.reset.html">2.2.33.8. matplotlib.pyplot.Slider.reset</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Slider.set_active.html">2.2.33.9. matplotlib.pyplot.Slider.set_active</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Slider.set_val.html">2.2.33.10. matplotlib.pyplot.Slider.set_val</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">2.2.33.1. Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#attributes">2.2.33.2. Attributes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Subplot.html">2.2.34. matplotlib.pyplot.Subplot</a></li>
@@ -195,7 +187,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -245,7 +237,6 @@
             
   <div class="section" id="matplotlib-pyplot-slider">
 <h1>2.2.33. matplotlib.pyplot.Slider<a class="headerlink" href="#matplotlib-pyplot-slider" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.pyplot.Slider.__init__.html#matplotlib.pyplot.Slider.__init__" title="matplotlib.pyplot.Slider.__init__"><code class="xref py py-func docutils literal"><span class="pre">Slider.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.pyplot.Slider">
 <em class="property">class </em><code class="descclassname">matplotlib.pyplot.</code><code class="descname">Slider</code><span class="sig-paren">(</span><em>ax</em>, <em>label</em>, <em>valmin</em>, <em>valmax</em>, <em>valinit=0.5</em>, <em>valfmt=u'%1.2f'</em>, <em>closedmin=True</em>, <em>closedmax=True</em>, <em>slidermin=None</em>, <em>slidermax=None</em>, <em>dragging=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/widgets.html#Slider"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.pyplot.Slider" title="Permalink to this definition">¶</a></dt>
@@ -279,54 +270,6 @@ reference to it.</p>
 </dd>
 </dl>
 <p>Call <a class="reference internal" href="matplotlib.pyplot.Slider.on_changed.html#matplotlib.pyplot.Slider.on_changed" title="matplotlib.pyplot.Slider.on_changed"><code class="xref py py-meth docutils literal"><span class="pre">on_changed()</span></code></a> to connect to the slider event</p>
-<p class="rubric">Attributes</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Slider.active.html#matplotlib.pyplot.Slider.active" title="matplotlib.pyplot.Slider.active"><code class="xref py py-obj docutils literal"><span class="pre">active</span></code></a></td>
-<td>Is the widget active?</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Slider.connect_event.html#matplotlib.pyplot.Slider.connect_event" title="matplotlib.pyplot.Slider.connect_event"><code class="xref py py-obj docutils literal"><span class="pre">connect_event</span></code></a>(event,&nbsp;callback)</td>
-<td>Connect callback with an event.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Slider.disconnect.html#matplotlib.pyplot.Slider.disconnect" title="matplotlib.pyplot.Slider.disconnect"><code class="xref py py-obj docutils literal"><span class="pre">disconnect</span></code></a>(cid)</td>
-<td>remove the observer with connection id <em>cid</em></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Slider.disconnect_events.html#matplotlib.pyplot.Slider.disconnect_events" title="matplotlib.pyplot.Slider.disconnect_events"><code class="xref py py-obj docutils literal"><span class="pre">disconnect_events</span></code></a>()</td>
-<td>Disconnect all events created by this widget.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Slider.get_active.html#matplotlib.pyplot.Slider.get_active" title="matplotlib.pyplot.Slider.get_active"><code class="xref py py-obj docutils literal"><span class="pre">get_active</span></code></a>()</td>
-<td>Get whether the widget is active.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Slider.ignore.html#matplotlib.pyplot.Slider.ignore" title="matplotlib.pyplot.Slider.ignore"><code class="xref py py-obj docutils literal"><span class="pre">ignore</span></code></a>(event)</td>
-<td>Return True if event should be ignored.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Slider.on_changed.html#matplotlib.pyplot.Slider.on_changed" title="matplotlib.pyplot.Slider.on_changed"><code class="xref py py-obj docutils literal"><span class="pre">on_changed</span></code></a>(func)</td>
-<td>When the slider value is changed, call <em>func</em> with the new</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Slider.reset.html#matplotlib.pyplot.Slider.reset" title="matplotlib.pyplot.Slider.reset"><code class="xref py py-obj docutils literal"><span class="pre">reset</span></code></a>()</td>
-<td>reset the slider to the initial value if needed</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Slider.set_active.html#matplotlib.pyplot.Slider.set_active" title="matplotlib.pyplot.Slider.set_active"><code class="xref py py-obj docutils literal"><span class="pre">set_active</span></code></a>(active)</td>
-<td>Set whether the widget is active.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Slider.set_val.html#matplotlib.pyplot.Slider.set_val" title="matplotlib.pyplot.Slider.set_val"><code class="xref py py-obj docutils literal"><span class="pre">set_val</span></code></a>(val)</td>
-<td></td>
-</tr>
-</tbody>
-</table>
 <dl class="method">
 <dt id="matplotlib.pyplot.Slider.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>ax</em>, <em>label</em>, <em>valmin</em>, <em>valmax</em>, <em>valinit=0.5</em>, <em>valfmt=u'%1.2f'</em>, <em>closedmin=True</em>, <em>closedmax=True</em>, <em>slidermin=None</em>, <em>slidermax=None</em>, <em>dragging=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/widgets.html#Slider.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.pyplot.Slider.__init__" title="Permalink to this definition">¶</a></dt>
@@ -397,6 +340,67 @@ valid property names (e.g., <em>facecolor</em>, <em>edgecolor</em>, <em>alpha</e
 
 </dd></dl>
 
+<div class="section" id="methods">
+<h2>2.2.33.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Slider.__init__.html#matplotlib.pyplot.Slider.__init__" title="matplotlib.pyplot.Slider.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>(ax,&nbsp;label,&nbsp;valmin,&nbsp;valmax[,&nbsp;...])</td>
+<td>Create a slider from <em>valmin</em> to <em>valmax</em> in axes <em>ax</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Slider.connect_event.html#matplotlib.pyplot.Slider.connect_event" title="matplotlib.pyplot.Slider.connect_event"><code class="xref py py-obj docutils literal"><span class="pre">connect_event</span></code></a>(event,&nbsp;callback)</td>
+<td>Connect callback with an event.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Slider.disconnect.html#matplotlib.pyplot.Slider.disconnect" title="matplotlib.pyplot.Slider.disconnect"><code class="xref py py-obj docutils literal"><span class="pre">disconnect</span></code></a>(cid)</td>
+<td>remove the observer with connection id <em>cid</em></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Slider.disconnect_events.html#matplotlib.pyplot.Slider.disconnect_events" title="matplotlib.pyplot.Slider.disconnect_events"><code class="xref py py-obj docutils literal"><span class="pre">disconnect_events</span></code></a>()</td>
+<td>Disconnect all events created by this widget.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Slider.get_active.html#matplotlib.pyplot.Slider.get_active" title="matplotlib.pyplot.Slider.get_active"><code class="xref py py-obj docutils literal"><span class="pre">get_active</span></code></a>()</td>
+<td>Get whether the widget is active.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Slider.ignore.html#matplotlib.pyplot.Slider.ignore" title="matplotlib.pyplot.Slider.ignore"><code class="xref py py-obj docutils literal"><span class="pre">ignore</span></code></a>(event)</td>
+<td>Return True if event should be ignored.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Slider.on_changed.html#matplotlib.pyplot.Slider.on_changed" title="matplotlib.pyplot.Slider.on_changed"><code class="xref py py-obj docutils literal"><span class="pre">on_changed</span></code></a>(func)</td>
+<td>When the slider value is changed, call <em>func</em> with the new</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Slider.reset.html#matplotlib.pyplot.Slider.reset" title="matplotlib.pyplot.Slider.reset"><code class="xref py py-obj docutils literal"><span class="pre">reset</span></code></a>()</td>
+<td>reset the slider to the initial value if needed</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Slider.set_active.html#matplotlib.pyplot.Slider.set_active" title="matplotlib.pyplot.Slider.set_active"><code class="xref py py-obj docutils literal"><span class="pre">set_active</span></code></a>(active)</td>
+<td>Set whether the widget is active.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Slider.set_val.html#matplotlib.pyplot.Slider.set_val" title="matplotlib.pyplot.Slider.set_val"><code class="xref py py-obj docutils literal"><span class="pre">set_val</span></code></a>(val)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attributes">
+<h2>2.2.33.2. Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Slider.active.html#matplotlib.pyplot.Slider.active" title="matplotlib.pyplot.Slider.active"><code class="xref py py-obj docutils literal"><span class="pre">active</span></code></a></td>
+<td>Is the widget active?</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Slider.drawon.html#matplotlib.pyplot.Slider.drawon" title="matplotlib.pyplot.Slider.drawon"><code class="xref py py-obj docutils literal"><span class="pre">drawon</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Slider.eventson.html#matplotlib.pyplot.Slider.eventson" title="matplotlib.pyplot.Slider.eventson"><code class="xref py py-obj docutils literal"><span class="pre">eventson</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -406,10 +410,10 @@ valid property names (e.g., <em>facecolor</em>, <em>edgecolor</em>, <em>alpha</e
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="matplotlib.pyplot.Slider.active.html" class="btn btn-neutral float-right" title="2.2.33.1. matplotlib.pyplot.Slider.active" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="matplotlib.pyplot.Slider.__init__.html" class="btn btn-neutral float-right" title="2.2.33.1.1. matplotlib.pyplot.Slider.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="matplotlib.pyplot.ScalarFormatter.set_view_interval.html" class="btn btn-neutral" title="2.2.32.19. matplotlib.pyplot.ScalarFormatter.set_view_interval" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="matplotlib.pyplot.ScalarFormatter.useOffset.html" class="btn btn-neutral" title="2.2.32.2.4. matplotlib.pyplot.ScalarFormatter.useOffset" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

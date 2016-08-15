@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>14.2.16. matplotlib.text.TextPath &mdash; Matplotlib API 1 documentation</title>
+  <title>14.2.16. matplotlib.text.TextPath &mdash; My Project v1</title>
   
 
   
@@ -30,10 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="14. matplotlib.text" href="../matplotlib.text.html"/>
-        <link rel="next" title="14.2.16.1. matplotlib.text.TextPath.codes" href="matplotlib.text.TextPath.codes.html"/>
-        <link rel="prev" title="14.2.15.132. matplotlib.text.Text.update_from" href="matplotlib.text.Text.update_from.html"/> 
+        <link rel="next" title="14.2.16.1.1. matplotlib.text.TextPath.__init__" href="matplotlib.text.TextPath.__init__.html"/>
+        <link rel="prev" title="14.2.15.2.5. matplotlib.text.Text.zorder" href="matplotlib.text.Text.zorder.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -117,48 +117,13 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.text.RendererBase.html">14.2.14. matplotlib.text.RendererBase</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.text.Text.html">14.2.15. matplotlib.text.Text</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">14.2.16. matplotlib.text.TextPath</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextPath.codes.html">14.2.16.1. matplotlib.text.TextPath.codes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextPath.has_nonfinite.html">14.2.16.2. matplotlib.text.TextPath.has_nonfinite</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextPath.readonly.html">14.2.16.3. matplotlib.text.TextPath.readonly</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextPath.should_simplify.html">14.2.16.4. matplotlib.text.TextPath.should_simplify</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextPath.simplify_threshold.html">14.2.16.5. matplotlib.text.TextPath.simplify_threshold</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextPath.vertices.html">14.2.16.6. matplotlib.text.TextPath.vertices</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextPath.arc.html">14.2.16.7. matplotlib.text.TextPath.arc</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextPath.circle.html">14.2.16.8. matplotlib.text.TextPath.circle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextPath.cleaned.html">14.2.16.9. matplotlib.text.TextPath.cleaned</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextPath.clip_to_bbox.html">14.2.16.10. matplotlib.text.TextPath.clip_to_bbox</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextPath.contains_path.html">14.2.16.11. matplotlib.text.TextPath.contains_path</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextPath.contains_point.html">14.2.16.12. matplotlib.text.TextPath.contains_point</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextPath.contains_points.html">14.2.16.13. matplotlib.text.TextPath.contains_points</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextPath.copy.html">14.2.16.14. matplotlib.text.TextPath.copy</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextPath.deepcopy.html">14.2.16.15. matplotlib.text.TextPath.deepcopy</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextPath.get_extents.html">14.2.16.16. matplotlib.text.TextPath.get_extents</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextPath.get_size.html">14.2.16.17. matplotlib.text.TextPath.get_size</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextPath.hatch.html">14.2.16.18. matplotlib.text.TextPath.hatch</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextPath.interpolated.html">14.2.16.19. matplotlib.text.TextPath.interpolated</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextPath.intersects_bbox.html">14.2.16.20. matplotlib.text.TextPath.intersects_bbox</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextPath.intersects_path.html">14.2.16.21. matplotlib.text.TextPath.intersects_path</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextPath.is_math_text.html">14.2.16.22. matplotlib.text.TextPath.is_math_text</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextPath.iter_segments.html">14.2.16.23. matplotlib.text.TextPath.iter_segments</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextPath.make_compound_path.html">14.2.16.24. matplotlib.text.TextPath.make_compound_path</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextPath.make_compound_path_from_polys.html">14.2.16.25. matplotlib.text.TextPath.make_compound_path_from_polys</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextPath.set_size.html">14.2.16.26. matplotlib.text.TextPath.set_size</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextPath.text_get_vertices_codes.html">14.2.16.27. matplotlib.text.TextPath.text_get_vertices_codes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextPath.to_polygons.html">14.2.16.28. matplotlib.text.TextPath.to_polygons</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextPath.transformed.html">14.2.16.29. matplotlib.text.TextPath.transformed</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextPath.unit_circle.html">14.2.16.30. matplotlib.text.TextPath.unit_circle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextPath.unit_circle_righthalf.html">14.2.16.31. matplotlib.text.TextPath.unit_circle_righthalf</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextPath.unit_rectangle.html">14.2.16.32. matplotlib.text.TextPath.unit_rectangle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextPath.unit_regular_asterisk.html">14.2.16.33. matplotlib.text.TextPath.unit_regular_asterisk</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextPath.unit_regular_polygon.html">14.2.16.34. matplotlib.text.TextPath.unit_regular_polygon</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextPath.unit_regular_star.html">14.2.16.35. matplotlib.text.TextPath.unit_regular_star</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextPath.wedge.html">14.2.16.36. matplotlib.text.TextPath.wedge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">14.2.16.1. Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#attributes">14.2.16.2. Attributes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.text.TextWithDash.html">14.2.17. matplotlib.text.TextWithDash</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.text.Transform.html">14.2.18. matplotlib.text.Transform</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.text.maxdict.html">14.2.19. matplotlib.text.maxdict</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.zip.html">14.2.20. matplotlib.text.zip</a></li>
 </ul>
 </li>
 </ul>
@@ -202,7 +167,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -252,59 +217,47 @@
             
   <div class="section" id="matplotlib-text-textpath">
 <h1>14.2.16. matplotlib.text.TextPath<a class="headerlink" href="#matplotlib-text-textpath" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.text.TextPath.__init__.html#matplotlib.text.TextPath.__init__" title="matplotlib.text.TextPath.__init__"><code class="xref py py-func docutils literal"><span class="pre">TextPath.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.text.TextPath">
 <em class="property">class </em><code class="descclassname">matplotlib.text.</code><code class="descname">TextPath</code><span class="sig-paren">(</span><em>xy</em>, <em>s</em>, <em>size=None</em>, <em>prop=None</em>, <em>_interpolation_steps=1</em>, <em>usetex=False</em>, <em>*kl</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/textpath.html#TextPath"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.text.TextPath" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a path from the text.</p>
-<p class="rubric">Attributes</p>
+<dl class="method">
+<dt id="matplotlib.text.TextPath.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>xy</em>, <em>s</em>, <em>size=None</em>, <em>prop=None</em>, <em>_interpolation_steps=1</em>, <em>usetex=False</em>, <em>*kl</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/textpath.html#TextPath.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.text.TextPath.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a path from the text. No support for TeX yet. Note that
+it simply is a path, not an artist. You need to use the
+PathPatch (or other artists) to draw this path onto the
+canvas.</p>
+<p>xy : position of the text.
+s : text
+size : font size
+prop : font property</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="section" id="methods">
+<h2>14.2.16.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="longtable docutils">
 <colgroup>
 <col width="10%" />
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextPath.codes.html#matplotlib.text.TextPath.codes" title="matplotlib.text.TextPath.codes"><code class="xref py py-obj docutils literal"><span class="pre">codes</span></code></a></td>
-<td>Return the codes</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextPath.__init__.html#matplotlib.text.TextPath.__init__" title="matplotlib.text.TextPath.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>(xy,&nbsp;s[,&nbsp;size,&nbsp;prop,&nbsp;...])</td>
+<td>Create a path from the text.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextPath.has_nonfinite.html#matplotlib.text.TextPath.has_nonfinite" title="matplotlib.text.TextPath.has_nonfinite"><code class="xref py py-obj docutils literal"><span class="pre">has_nonfinite</span></code></a></td>
-<td><cite>True</cite> if the vertices array has nonfinite values.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextPath.readonly.html#matplotlib.text.TextPath.readonly" title="matplotlib.text.TextPath.readonly"><code class="xref py py-obj docutils literal"><span class="pre">readonly</span></code></a></td>
-<td><cite>True</cite> if the <cite>Path</cite> is read-only.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextPath.should_simplify.html#matplotlib.text.TextPath.should_simplify" title="matplotlib.text.TextPath.should_simplify"><code class="xref py py-obj docutils literal"><span class="pre">should_simplify</span></code></a></td>
-<td><cite>True</cite> if the vertices array should be simplified.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextPath.simplify_threshold.html#matplotlib.text.TextPath.simplify_threshold" title="matplotlib.text.TextPath.simplify_threshold"><code class="xref py py-obj docutils literal"><span class="pre">simplify_threshold</span></code></a></td>
-<td>The fraction of a pixel difference below which vertices will be simplified out.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextPath.vertices.html#matplotlib.text.TextPath.vertices" title="matplotlib.text.TextPath.vertices"><code class="xref py py-obj docutils literal"><span class="pre">vertices</span></code></a></td>
-<td>Return the cached path after updating it if necessary.</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextPath.arc.html#matplotlib.text.TextPath.arc" title="matplotlib.text.TextPath.arc"><code class="xref py py-obj docutils literal"><span class="pre">arc</span></code></a>(theta1,&nbsp;theta2[,&nbsp;n,&nbsp;is_wedge])</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextPath.arc.html#matplotlib.text.TextPath.arc" title="matplotlib.text.TextPath.arc"><code class="xref py py-obj docutils literal"><span class="pre">arc</span></code></a>(theta1,&nbsp;theta2[,&nbsp;n,&nbsp;is_wedge])</td>
 <td>Return an arc on the unit circle from angle <em>theta1</em> to angle <em>theta2</em> (in degrees).</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextPath.circle.html#matplotlib.text.TextPath.circle" title="matplotlib.text.TextPath.circle"><code class="xref py py-obj docutils literal"><span class="pre">circle</span></code></a>([center,&nbsp;radius,&nbsp;readonly])</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextPath.circle.html#matplotlib.text.TextPath.circle" title="matplotlib.text.TextPath.circle"><code class="xref py py-obj docutils literal"><span class="pre">circle</span></code></a>([center,&nbsp;radius,&nbsp;readonly])</td>
 <td>Return a Path representing a circle of a given radius and center.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextPath.cleaned.html#matplotlib.text.TextPath.cleaned" title="matplotlib.text.TextPath.cleaned"><code class="xref py py-obj docutils literal"><span class="pre">cleaned</span></code></a>([transform,&nbsp;remove_nans,&nbsp;clip,&nbsp;...])</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextPath.cleaned.html#matplotlib.text.TextPath.cleaned" title="matplotlib.text.TextPath.cleaned"><code class="xref py py-obj docutils literal"><span class="pre">cleaned</span></code></a>([transform,&nbsp;remove_nans,&nbsp;clip,&nbsp;...])</td>
 <td>Cleans up the path according to the parameters returning a new Path instance.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextPath.clip_to_bbox.html#matplotlib.text.TextPath.clip_to_bbox" title="matplotlib.text.TextPath.clip_to_bbox"><code class="xref py py-obj docutils literal"><span class="pre">clip_to_bbox</span></code></a>(bbox[,&nbsp;inside])</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextPath.clip_to_bbox.html#matplotlib.text.TextPath.clip_to_bbox" title="matplotlib.text.TextPath.clip_to_bbox"><code class="xref py py-obj docutils literal"><span class="pre">clip_to_bbox</span></code></a>(bbox[,&nbsp;inside])</td>
 <td>Clip the path to the given bounding box.</td>
-</tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">code_type</span></code></td>
-<td>alias of <code class="xref py py-class docutils literal"><span class="pre">uint8</span></code></td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextPath.contains_path.html#matplotlib.text.TextPath.contains_path" title="matplotlib.text.TextPath.contains_path"><code class="xref py py-obj docutils literal"><span class="pre">contains_path</span></code></a>(path[,&nbsp;transform])</td>
 <td>Returns <em>True</em> if this path completely contains the given path.</td>
@@ -386,21 +339,57 @@
 </tr>
 </tbody>
 </table>
-<dl class="method">
-<dt id="matplotlib.text.TextPath.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>xy</em>, <em>s</em>, <em>size=None</em>, <em>prop=None</em>, <em>_interpolation_steps=1</em>, <em>usetex=False</em>, <em>*kl</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/textpath.html#TextPath.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.text.TextPath.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a path from the text. No support for TeX yet. Note that
-it simply is a path, not an artist. You need to use the
-PathPatch (or other artists) to draw this path onto the
-canvas.</p>
-<p>xy : position of the text.
-s : text
-size : font size
-prop : font property</p>
-</dd></dl>
-
-</dd></dl>
-
+</div>
+<div class="section" id="attributes">
+<h2>14.2.16.2. Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextPath.CLOSEPOLY.html#matplotlib.text.TextPath.CLOSEPOLY" title="matplotlib.text.TextPath.CLOSEPOLY"><code class="xref py py-obj docutils literal"><span class="pre">CLOSEPOLY</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextPath.CURVE3.html#matplotlib.text.TextPath.CURVE3" title="matplotlib.text.TextPath.CURVE3"><code class="xref py py-obj docutils literal"><span class="pre">CURVE3</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextPath.CURVE4.html#matplotlib.text.TextPath.CURVE4" title="matplotlib.text.TextPath.CURVE4"><code class="xref py py-obj docutils literal"><span class="pre">CURVE4</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextPath.LINETO.html#matplotlib.text.TextPath.LINETO" title="matplotlib.text.TextPath.LINETO"><code class="xref py py-obj docutils literal"><span class="pre">LINETO</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextPath.MOVETO.html#matplotlib.text.TextPath.MOVETO" title="matplotlib.text.TextPath.MOVETO"><code class="xref py py-obj docutils literal"><span class="pre">MOVETO</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextPath.NUM_VERTICES_FOR_CODE.html#matplotlib.text.TextPath.NUM_VERTICES_FOR_CODE" title="matplotlib.text.TextPath.NUM_VERTICES_FOR_CODE"><code class="xref py py-obj docutils literal"><span class="pre">NUM_VERTICES_FOR_CODE</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextPath.STOP.html#matplotlib.text.TextPath.STOP" title="matplotlib.text.TextPath.STOP"><code class="xref py py-obj docutils literal"><span class="pre">STOP</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextPath.codes.html#matplotlib.text.TextPath.codes" title="matplotlib.text.TextPath.codes"><code class="xref py py-obj docutils literal"><span class="pre">codes</span></code></a></td>
+<td>Return the codes</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextPath.has_nonfinite.html#matplotlib.text.TextPath.has_nonfinite" title="matplotlib.text.TextPath.has_nonfinite"><code class="xref py py-obj docutils literal"><span class="pre">has_nonfinite</span></code></a></td>
+<td><cite>True</cite> if the vertices array has nonfinite values.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextPath.readonly.html#matplotlib.text.TextPath.readonly" title="matplotlib.text.TextPath.readonly"><code class="xref py py-obj docutils literal"><span class="pre">readonly</span></code></a></td>
+<td><cite>True</cite> if the <cite>Path</cite> is read-only.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextPath.should_simplify.html#matplotlib.text.TextPath.should_simplify" title="matplotlib.text.TextPath.should_simplify"><code class="xref py py-obj docutils literal"><span class="pre">should_simplify</span></code></a></td>
+<td><cite>True</cite> if the vertices array should be simplified.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextPath.simplify_threshold.html#matplotlib.text.TextPath.simplify_threshold" title="matplotlib.text.TextPath.simplify_threshold"><code class="xref py py-obj docutils literal"><span class="pre">simplify_threshold</span></code></a></td>
+<td>The fraction of a pixel difference below which vertices will be simplified out.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextPath.vertices.html#matplotlib.text.TextPath.vertices" title="matplotlib.text.TextPath.vertices"><code class="xref py py-obj docutils literal"><span class="pre">vertices</span></code></a></td>
+<td>Return the cached path after updating it if necessary.</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -410,10 +399,10 @@ prop : font property</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="matplotlib.text.TextPath.codes.html" class="btn btn-neutral float-right" title="14.2.16.1. matplotlib.text.TextPath.codes" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="matplotlib.text.TextPath.__init__.html" class="btn btn-neutral float-right" title="14.2.16.1.1. matplotlib.text.TextPath.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="matplotlib.text.Text.update_from.html" class="btn btn-neutral" title="14.2.15.132. matplotlib.text.Text.update_from" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="matplotlib.text.Text.zorder.html" class="btn btn-neutral" title="14.2.15.2.5. matplotlib.text.Text.zorder" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

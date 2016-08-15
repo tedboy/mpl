@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>32.1.10. matplotlib.patheffects.withStroke &mdash; Matplotlib API 1 documentation</title>
+  <title>32.1.10. matplotlib.patheffects.withStroke &mdash; My Project v1</title>
   
 
   
@@ -30,10 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="32. matplotlib.patheffects" href="../matplotlib.patheffects.html"/>
-        <link rel="next" title="32.1.10.1. matplotlib.patheffects.withStroke.draw_path" href="matplotlib.patheffects.withStroke.draw_path.html"/>
-        <link rel="prev" title="32.1.9.1. matplotlib.patheffects.withSimplePatchShadow.draw_path" href="matplotlib.patheffects.withSimplePatchShadow.draw_path.html"/> 
+        <link rel="next" title="32.1.10.1.1. matplotlib.patheffects.withStroke.__init__" href="matplotlib.patheffects.withStroke.__init__.html"/>
+        <link rel="prev" title="32.1.9.1.2. matplotlib.patheffects.withSimplePatchShadow.draw_path" href="matplotlib.patheffects.withSimplePatchShadow.draw_path.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -128,7 +128,7 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.patheffects.Stroke.html">32.1.8. matplotlib.patheffects.Stroke</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.patheffects.withSimplePatchShadow.html">32.1.9. matplotlib.patheffects.withSimplePatchShadow</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">32.1.10. matplotlib.patheffects.withStroke</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patheffects.withStroke.draw_path.html">32.1.10.1. matplotlib.patheffects.withStroke.draw_path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">32.1.10.1. Methods</a></li>
 </ul>
 </li>
 </ul>
@@ -156,7 +156,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -206,24 +206,11 @@
             
   <div class="section" id="matplotlib-patheffects-withstroke">
 <h1>32.1.10. matplotlib.patheffects.withStroke<a class="headerlink" href="#matplotlib-patheffects-withstroke" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.patheffects.withStroke.__init__.html#matplotlib.patheffects.withStroke.__init__" title="matplotlib.patheffects.withStroke.__init__"><code class="xref py py-func docutils literal"><span class="pre">withStroke.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.patheffects.withStroke">
 <em class="property">class </em><code class="descclassname">matplotlib.patheffects.</code><code class="descname">withStroke</code><span class="sig-paren">(</span><em>offset=(0</em>, <em>0)</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/patheffects.html#withStroke"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.patheffects.withStroke" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a simple <a class="reference internal" href="matplotlib.patheffects.Stroke.html#matplotlib.patheffects.Stroke" title="matplotlib.patheffects.Stroke"><code class="xref py py-class docutils literal"><span class="pre">Stroke</span></code></a> and then draws the
 original Artist to avoid needing to call <a class="reference internal" href="matplotlib.patheffects.Normal.html#matplotlib.patheffects.Normal" title="matplotlib.patheffects.Normal"><code class="xref py py-class docutils literal"><span class="pre">Normal</span></code></a>.</p>
-<p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patheffects.withStroke.draw_path.html#matplotlib.patheffects.withStroke.draw_path" title="matplotlib.patheffects.withStroke.draw_path"><code class="xref py py-obj docutils literal"><span class="pre">draw_path</span></code></a>(renderer,&nbsp;gc,&nbsp;tpath,&nbsp;affine,&nbsp;rgbFace)</td>
-<td></td>
-</tr>
-</tbody>
-</table>
 <dl class="method">
 <dt id="matplotlib.patheffects.withStroke.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>offset=(0</em>, <em>0)</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#matplotlib.patheffects.withStroke.__init__" title="Permalink to this definition">¶</a></dt>
@@ -234,6 +221,23 @@ gc parameter values.</p>
 
 </dd></dl>
 
+<div class="section" id="methods">
+<h2>32.1.10.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patheffects.withStroke.__init__.html#matplotlib.patheffects.withStroke.__init__" title="matplotlib.patheffects.withStroke.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>([offset])</td>
+<td>The path will be stroked with its gc updated with the given keyword arguments, i.e., the keyword arguments should be valid gc parameter values.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patheffects.withStroke.draw_path.html#matplotlib.patheffects.withStroke.draw_path" title="matplotlib.patheffects.withStroke.draw_path"><code class="xref py py-obj docutils literal"><span class="pre">draw_path</span></code></a>(renderer,&nbsp;gc,&nbsp;tpath,&nbsp;affine,&nbsp;rgbFace)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -243,10 +247,10 @@ gc parameter values.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="matplotlib.patheffects.withStroke.draw_path.html" class="btn btn-neutral float-right" title="32.1.10.1. matplotlib.patheffects.withStroke.draw_path" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="matplotlib.patheffects.withStroke.__init__.html" class="btn btn-neutral float-right" title="32.1.10.1.1. matplotlib.patheffects.withStroke.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="matplotlib.patheffects.withSimplePatchShadow.draw_path.html" class="btn btn-neutral" title="32.1.9.1. matplotlib.patheffects.withSimplePatchShadow.draw_path" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="matplotlib.patheffects.withSimplePatchShadow.draw_path.html" class="btn btn-neutral" title="32.1.9.1.2. matplotlib.patheffects.withSimplePatchShadow.draw_path" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

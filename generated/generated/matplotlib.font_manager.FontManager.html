@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>25.2.2. matplotlib.font_manager.FontManager &mdash; Matplotlib API 1 documentation</title>
+  <title>25.2.2. matplotlib.font_manager.FontManager &mdash; My Project v1</title>
   
 
   
@@ -30,10 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="25. matplotlib.font_manager" href="../matplotlib.font_manager.html"/>
-        <link rel="next" title="25.2.2.1. matplotlib.font_manager.FontManager.findfont" href="matplotlib.font_manager.FontManager.findfont.html"/>
-        <link rel="prev" title="25.2.1. matplotlib.font_manager.FontEntry" href="matplotlib.font_manager.FontEntry.html"/> 
+        <link rel="next" title="25.2.2.1.1. matplotlib.font_manager.FontManager.__init__" href="matplotlib.font_manager.FontManager.__init__.html"/>
+        <link rel="prev" title="25.2.1.1.1. matplotlib.font_manager.FontEntry.__init__" href="matplotlib.font_manager.FontEntry.__init__.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -114,22 +114,11 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.font_manager.html#classes">25.2. Classes</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.font_manager.FontEntry.html">25.2.1. matplotlib.font_manager.FontEntry</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">25.2.2. matplotlib.font_manager.FontManager</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.font_manager.FontManager.findfont.html">25.2.2.1. matplotlib.font_manager.FontManager.findfont</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.font_manager.FontManager.get_default_size.html">25.2.2.2. matplotlib.font_manager.FontManager.get_default_size</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.font_manager.FontManager.get_default_weight.html">25.2.2.3. matplotlib.font_manager.FontManager.get_default_weight</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.font_manager.FontManager.score_family.html">25.2.2.4. matplotlib.font_manager.FontManager.score_family</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.font_manager.FontManager.score_size.html">25.2.2.5. matplotlib.font_manager.FontManager.score_size</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.font_manager.FontManager.score_stretch.html">25.2.2.6. matplotlib.font_manager.FontManager.score_stretch</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.font_manager.FontManager.score_style.html">25.2.2.7. matplotlib.font_manager.FontManager.score_style</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.font_manager.FontManager.score_variant.html">25.2.2.8. matplotlib.font_manager.FontManager.score_variant</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.font_manager.FontManager.score_weight.html">25.2.2.9. matplotlib.font_manager.FontManager.score_weight</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.font_manager.FontManager.set_default_weight.html">25.2.2.10. matplotlib.font_manager.FontManager.set_default_weight</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.font_manager.FontManager.update_fonts.html">25.2.2.11. matplotlib.font_manager.FontManager.update_fonts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">25.2.2.1. Methods</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.font_manager.FontProperties.html">25.2.3. matplotlib.font_manager.FontProperties</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.font_manager.Iterable.html">25.2.4. matplotlib.font_manager.Iterable</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.font_manager.TempCache.html">25.2.5. matplotlib.font_manager.TempCache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.font_manager.TempCache.html">25.2.4. matplotlib.font_manager.TempCache</a></li>
 </ul>
 </li>
 </ul>
@@ -162,7 +151,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -212,7 +201,6 @@
             
   <div class="section" id="matplotlib-font-manager-fontmanager">
 <h1>25.2.2. matplotlib.font_manager.FontManager<a class="headerlink" href="#matplotlib-font-manager-fontmanager" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.font_manager.FontManager.__init__.html#matplotlib.font_manager.FontManager.__init__" title="matplotlib.font_manager.FontManager.__init__"><code class="xref py py-func docutils literal"><span class="pre">FontManager.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.font_manager.FontManager">
 <em class="property">class </em><code class="descclassname">matplotlib.font_manager.</code><code class="descname">FontManager</code><span class="sig-paren">(</span><em>size=None</em>, <em>weight=u'normal'</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/font_manager.html#FontManager"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.font_manager.FontManager" title="Permalink to this definition">¶</a></dt>
@@ -222,50 +210,60 @@ variant, weight, stretch, and size.  The <a class="reference internal" href="../
 does a nearest neighbor search to find the font that most closely
 matches the specification.  If no good enough match is found, a
 default font is returned.</p>
-<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="matplotlib.font_manager.FontManager.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>size=None</em>, <em>weight=u'normal'</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/font_manager.html#FontManager.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.font_manager.FontManager.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="section" id="methods">
+<h2>25.2.2.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="longtable docutils">
 <colgroup>
 <col width="10%" />
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.font_manager.FontManager.findfont.html#matplotlib.font_manager.FontManager.findfont" title="matplotlib.font_manager.FontManager.findfont"><code class="xref py py-obj docutils literal"><span class="pre">findfont</span></code></a>(prop[,&nbsp;fontext,&nbsp;directory,&nbsp;...])</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.font_manager.FontManager.__init__.html#matplotlib.font_manager.FontManager.__init__" title="matplotlib.font_manager.FontManager.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>([size,&nbsp;weight])</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.font_manager.FontManager.findfont.html#matplotlib.font_manager.FontManager.findfont" title="matplotlib.font_manager.FontManager.findfont"><code class="xref py py-obj docutils literal"><span class="pre">findfont</span></code></a>(prop[,&nbsp;fontext,&nbsp;directory,&nbsp;...])</td>
 <td>Search the font list for the font that most closely matches the <a class="reference internal" href="matplotlib.font_manager.FontProperties.html#matplotlib.font_manager.FontProperties" title="matplotlib.font_manager.FontProperties"><code class="xref py py-class docutils literal"><span class="pre">FontProperties</span></code></a> <em>prop</em>.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.font_manager.FontManager.get_default_size.html#matplotlib.font_manager.FontManager.get_default_size" title="matplotlib.font_manager.FontManager.get_default_size"><code class="xref py py-obj docutils literal"><span class="pre">get_default_size</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.font_manager.FontManager.get_default_size.html#matplotlib.font_manager.FontManager.get_default_size" title="matplotlib.font_manager.FontManager.get_default_size"><code class="xref py py-obj docutils literal"><span class="pre">get_default_size</span></code></a>()</td>
 <td>Return the default font size.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.font_manager.FontManager.get_default_weight.html#matplotlib.font_manager.FontManager.get_default_weight" title="matplotlib.font_manager.FontManager.get_default_weight"><code class="xref py py-obj docutils literal"><span class="pre">get_default_weight</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.font_manager.FontManager.get_default_weight.html#matplotlib.font_manager.FontManager.get_default_weight" title="matplotlib.font_manager.FontManager.get_default_weight"><code class="xref py py-obj docutils literal"><span class="pre">get_default_weight</span></code></a>()</td>
 <td>Return the default font weight.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.font_manager.FontManager.score_family.html#matplotlib.font_manager.FontManager.score_family" title="matplotlib.font_manager.FontManager.score_family"><code class="xref py py-obj docutils literal"><span class="pre">score_family</span></code></a>(families,&nbsp;family2)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.font_manager.FontManager.score_family.html#matplotlib.font_manager.FontManager.score_family" title="matplotlib.font_manager.FontManager.score_family"><code class="xref py py-obj docutils literal"><span class="pre">score_family</span></code></a>(families,&nbsp;family2)</td>
 <td>Returns a match score between the list of font families in <em>families</em> and the font family name <em>family2</em>.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.font_manager.FontManager.score_size.html#matplotlib.font_manager.FontManager.score_size" title="matplotlib.font_manager.FontManager.score_size"><code class="xref py py-obj docutils literal"><span class="pre">score_size</span></code></a>(size1,&nbsp;size2)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.font_manager.FontManager.score_size.html#matplotlib.font_manager.FontManager.score_size" title="matplotlib.font_manager.FontManager.score_size"><code class="xref py py-obj docutils literal"><span class="pre">score_size</span></code></a>(size1,&nbsp;size2)</td>
 <td>Returns a match score between <em>size1</em> and <em>size2</em>.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.font_manager.FontManager.score_stretch.html#matplotlib.font_manager.FontManager.score_stretch" title="matplotlib.font_manager.FontManager.score_stretch"><code class="xref py py-obj docutils literal"><span class="pre">score_stretch</span></code></a>(stretch1,&nbsp;stretch2)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.font_manager.FontManager.score_stretch.html#matplotlib.font_manager.FontManager.score_stretch" title="matplotlib.font_manager.FontManager.score_stretch"><code class="xref py py-obj docutils literal"><span class="pre">score_stretch</span></code></a>(stretch1,&nbsp;stretch2)</td>
 <td>Returns a match score between <em>stretch1</em> and <em>stretch2</em>.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.font_manager.FontManager.score_style.html#matplotlib.font_manager.FontManager.score_style" title="matplotlib.font_manager.FontManager.score_style"><code class="xref py py-obj docutils literal"><span class="pre">score_style</span></code></a>(style1,&nbsp;style2)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.font_manager.FontManager.score_style.html#matplotlib.font_manager.FontManager.score_style" title="matplotlib.font_manager.FontManager.score_style"><code class="xref py py-obj docutils literal"><span class="pre">score_style</span></code></a>(style1,&nbsp;style2)</td>
 <td>Returns a match score between <em>style1</em> and <em>style2</em>.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.font_manager.FontManager.score_variant.html#matplotlib.font_manager.FontManager.score_variant" title="matplotlib.font_manager.FontManager.score_variant"><code class="xref py py-obj docutils literal"><span class="pre">score_variant</span></code></a>(variant1,&nbsp;variant2)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.font_manager.FontManager.score_variant.html#matplotlib.font_manager.FontManager.score_variant" title="matplotlib.font_manager.FontManager.score_variant"><code class="xref py py-obj docutils literal"><span class="pre">score_variant</span></code></a>(variant1,&nbsp;variant2)</td>
 <td>Returns a match score between <em>variant1</em> and <em>variant2</em>.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.font_manager.FontManager.score_weight.html#matplotlib.font_manager.FontManager.score_weight" title="matplotlib.font_manager.FontManager.score_weight"><code class="xref py py-obj docutils literal"><span class="pre">score_weight</span></code></a>(weight1,&nbsp;weight2)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.font_manager.FontManager.score_weight.html#matplotlib.font_manager.FontManager.score_weight" title="matplotlib.font_manager.FontManager.score_weight"><code class="xref py py-obj docutils literal"><span class="pre">score_weight</span></code></a>(weight1,&nbsp;weight2)</td>
 <td>Returns a match score between <em>weight1</em> and <em>weight2</em>.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.font_manager.FontManager.set_default_weight.html#matplotlib.font_manager.FontManager.set_default_weight" title="matplotlib.font_manager.FontManager.set_default_weight"><code class="xref py py-obj docutils literal"><span class="pre">set_default_weight</span></code></a>(weight)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.font_manager.FontManager.set_default_weight.html#matplotlib.font_manager.FontManager.set_default_weight" title="matplotlib.font_manager.FontManager.set_default_weight"><code class="xref py py-obj docutils literal"><span class="pre">set_default_weight</span></code></a>(weight)</td>
 <td>Set the default font weight.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.font_manager.FontManager.update_fonts.html#matplotlib.font_manager.FontManager.update_fonts" title="matplotlib.font_manager.FontManager.update_fonts"><code class="xref py py-obj docutils literal"><span class="pre">update_fonts</span></code></a>(filenames)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.font_manager.FontManager.update_fonts.html#matplotlib.font_manager.FontManager.update_fonts" title="matplotlib.font_manager.FontManager.update_fonts"><code class="xref py py-obj docutils literal"><span class="pre">update_fonts</span></code></a>(filenames)</td>
 <td>Update the font dictionary with new font files.</td>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
+</div>
 </div>
 
 
@@ -275,10 +273,10 @@ default font is returned.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="matplotlib.font_manager.FontManager.findfont.html" class="btn btn-neutral float-right" title="25.2.2.1. matplotlib.font_manager.FontManager.findfont" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="matplotlib.font_manager.FontManager.__init__.html" class="btn btn-neutral float-right" title="25.2.2.1.1. matplotlib.font_manager.FontManager.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="matplotlib.font_manager.FontEntry.html" class="btn btn-neutral" title="25.2.1. matplotlib.font_manager.FontEntry" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="matplotlib.font_manager.FontEntry.__init__.html" class="btn btn-neutral" title="25.2.1.1.1. matplotlib.font_manager.FontEntry.__init__" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

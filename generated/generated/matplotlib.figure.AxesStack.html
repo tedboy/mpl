@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>8.2.4. matplotlib.figure.AxesStack &mdash; Matplotlib API 1 documentation</title>
+  <title>8.2.4. matplotlib.figure.AxesStack &mdash; My Project v1</title>
   
 
   
@@ -30,9 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="8. matplotlib.figure" href="../matplotlib.figure.html"/>
-        <link rel="prev" title="8.2.3.266. matplotlib.figure.Axes.yaxis_inverted" href="matplotlib.figure.Axes.yaxis_inverted.html"/> 
+        <link rel="next" title="8.2.4.1.1. matplotlib.figure.AxesStack.__init__" href="matplotlib.figure.AxesStack.__init__.html"/>
+        <link rel="prev" title="8.2.3.2.6. matplotlib.figure.Axes.zorder" href="matplotlib.figure.Axes.zorder.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -51,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -98,18 +99,7 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.Artist.html">8.2.2. matplotlib.figure.Artist</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.Axes.html">8.2.3. matplotlib.figure.Axes</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">8.2.4. matplotlib.figure.AxesStack</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.AxesStack.add.html">8.2.4.1. matplotlib.figure.AxesStack.add</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.AxesStack.as_list.html">8.2.4.2. matplotlib.figure.AxesStack.as_list</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.AxesStack.back.html">8.2.4.3. matplotlib.figure.AxesStack.back</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.AxesStack.bubble.html">8.2.4.4. matplotlib.figure.AxesStack.bubble</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.AxesStack.clear.html">8.2.4.5. matplotlib.figure.AxesStack.clear</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.AxesStack.current_key_axes.html">8.2.4.6. matplotlib.figure.AxesStack.current_key_axes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.AxesStack.empty.html">8.2.4.7. matplotlib.figure.AxesStack.empty</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.AxesStack.forward.html">8.2.4.8. matplotlib.figure.AxesStack.forward</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.AxesStack.get.html">8.2.4.9. matplotlib.figure.AxesStack.get</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.AxesStack.home.html">8.2.4.10. matplotlib.figure.AxesStack.home</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.AxesStack.push.html">8.2.4.11. matplotlib.figure.AxesStack.push</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.AxesStack.remove.html">8.2.4.12. matplotlib.figure.AxesStack.remove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">8.2.4.1. Methods</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.Bbox.html">8.2.5. matplotlib.figure.Bbox</a></li>
@@ -125,7 +115,6 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.SubplotParams.html">8.2.15. matplotlib.figure.SubplotParams</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.Text.html">8.2.16. matplotlib.figure.Text</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.TransformedBbox.html">8.2.17. matplotlib.figure.TransformedBbox</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.itemgetter.html">8.2.18. matplotlib.figure.itemgetter</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../matplotlib.figure.html#exceptions">8.3. Exceptions</a></li>
@@ -176,7 +165,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -226,7 +215,6 @@
             
   <div class="section" id="matplotlib-figure-axesstack">
 <h1>8.2.4. matplotlib.figure.AxesStack<a class="headerlink" href="#matplotlib-figure-axesstack" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.figure.AxesStack.__init__.html#matplotlib.figure.AxesStack.__init__" title="matplotlib.figure.AxesStack.__init__"><code class="xref py py-func docutils literal"><span class="pre">AxesStack.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.figure.AxesStack">
 <em class="property">class </em><code class="descclassname">matplotlib.figure.</code><code class="descname">AxesStack</code><a class="reference internal" href="../../_modules/matplotlib/figure.html#AxesStack"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.figure.AxesStack" title="Permalink to this definition">¶</a></dt>
@@ -243,14 +231,22 @@ in which axes were added.</li>
 <p>The AxesStack is a callable, where <code class="docutils literal"><span class="pre">ax_stack()</span></code> returns
 the current axes. Alternatively the <a class="reference internal" href="matplotlib.figure.AxesStack.current_key_axes.html#matplotlib.figure.AxesStack.current_key_axes" title="matplotlib.figure.AxesStack.current_key_axes"><code class="xref py py-meth docutils literal"><span class="pre">current_key_axes()</span></code></a> will
 return the current key and associated axes.</p>
-<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="matplotlib.figure.AxesStack.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/figure.html#AxesStack.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.figure.AxesStack.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="section" id="methods">
+<h2>8.2.4.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="longtable docutils">
 <colgroup>
 <col width="10%" />
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">__call__</span></code>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.figure.AxesStack.__init__.html#matplotlib.figure.AxesStack.__init__" title="matplotlib.figure.AxesStack.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>()</td>
 <td></td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="matplotlib.figure.AxesStack.add.html#matplotlib.figure.AxesStack.add" title="matplotlib.figure.AxesStack.add"><code class="xref py py-obj docutils literal"><span class="pre">add</span></code></a>(key,&nbsp;a)</td>
@@ -291,8 +287,7 @@ return the current key and associated axes.</p>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
+</div>
 </div>
 
 
@@ -302,8 +297,10 @@ return the current key and associated axes.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="matplotlib.figure.AxesStack.__init__.html" class="btn btn-neutral float-right" title="8.2.4.1.1. matplotlib.figure.AxesStack.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="matplotlib.figure.Axes.yaxis_inverted.html" class="btn btn-neutral" title="8.2.3.266. matplotlib.figure.Axes.yaxis_inverted" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="matplotlib.figure.Axes.zorder.html" class="btn btn-neutral" title="8.2.3.2.6. matplotlib.figure.Axes.zorder" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

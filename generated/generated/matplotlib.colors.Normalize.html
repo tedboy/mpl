@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>7.2.9. matplotlib.colors.Normalize &mdash; Matplotlib API 1 documentation</title>
+  <title>7.2.9. matplotlib.colors.Normalize &mdash; My Project v1</title>
   
 
   
@@ -30,9 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="7. matplotlib.colors" href="../matplotlib.colors.html"/>
-        <link rel="prev" title="7.2.8.5. matplotlib.colors.NoNorm.scaled" href="matplotlib.colors.NoNorm.scaled.html"/> 
+        <link rel="next" title="7.2.9.1.1. matplotlib.colors.Normalize.__init__" href="matplotlib.colors.Normalize.__init__.html"/>
+        <link rel="prev" title="7.2.8.1.6. matplotlib.colors.NoNorm.scaled" href="matplotlib.colors.NoNorm.scaled.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -51,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -102,16 +103,11 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.colors.LogNorm.html">7.2.7. matplotlib.colors.LogNorm</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.colors.NoNorm.html">7.2.8. matplotlib.colors.NoNorm</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">7.2.9. matplotlib.colors.Normalize</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.colors.Normalize.autoscale.html">7.2.9.1. matplotlib.colors.Normalize.autoscale</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.colors.Normalize.autoscale_None.html">7.2.9.2. matplotlib.colors.Normalize.autoscale_None</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.colors.Normalize.inverse.html">7.2.9.3. matplotlib.colors.Normalize.inverse</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.colors.Normalize.process_value.html">7.2.9.4. matplotlib.colors.Normalize.process_value</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.colors.Normalize.scaled.html">7.2.9.5. matplotlib.colors.Normalize.scaled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">7.2.9.1. Methods</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.colors.PowerNorm.html">7.2.10. matplotlib.colors.PowerNorm</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.colors.SymLogNorm.html">7.2.11. matplotlib.colors.SymLogNorm</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.colors.zip.html">7.2.12. matplotlib.colors.zip</a></li>
 </ul>
 </li>
 </ul>
@@ -162,7 +158,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -212,39 +208,11 @@
             
   <div class="section" id="matplotlib-colors-normalize">
 <h1>7.2.9. matplotlib.colors.Normalize<a class="headerlink" href="#matplotlib-colors-normalize" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.colors.Normalize.__init__.html#matplotlib.colors.Normalize.__init__" title="matplotlib.colors.Normalize.__init__"><code class="xref py py-func docutils literal"><span class="pre">Normalize.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.colors.Normalize">
 <em class="property">class </em><code class="descclassname">matplotlib.colors.</code><code class="descname">Normalize</code><span class="sig-paren">(</span><em>vmin=None</em>, <em>vmax=None</em>, <em>clip=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/colors.html#Normalize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.colors.Normalize" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class which, when called, can normalize data into
 the <code class="docutils literal"><span class="pre">[0.0,</span> <span class="pre">1.0]</span></code> interval.</p>
-<p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">__call__</span></code>(value[,&nbsp;clip])</td>
-<td>Normalize <em>value</em> data in the <code class="docutils literal"><span class="pre">[vmin,</span> <span class="pre">vmax]</span></code> interval into the <code class="docutils literal"><span class="pre">[0.0,</span> <span class="pre">1.0]</span></code> interval and return it.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.colors.Normalize.autoscale.html#matplotlib.colors.Normalize.autoscale" title="matplotlib.colors.Normalize.autoscale"><code class="xref py py-obj docutils literal"><span class="pre">autoscale</span></code></a>(A)</td>
-<td>Set <em>vmin</em>, <em>vmax</em> to min, max of <em>A</em>.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.colors.Normalize.autoscale_None.html#matplotlib.colors.Normalize.autoscale_None" title="matplotlib.colors.Normalize.autoscale_None"><code class="xref py py-obj docutils literal"><span class="pre">autoscale_None</span></code></a>(A)</td>
-<td>autoscale only None-valued vmin or vmax</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.colors.Normalize.inverse.html#matplotlib.colors.Normalize.inverse" title="matplotlib.colors.Normalize.inverse"><code class="xref py py-obj docutils literal"><span class="pre">inverse</span></code></a>(value)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.colors.Normalize.process_value.html#matplotlib.colors.Normalize.process_value" title="matplotlib.colors.Normalize.process_value"><code class="xref py py-obj docutils literal"><span class="pre">process_value</span></code></a>(value)</td>
-<td>Homogenize the input <em>value</em> for easy and efficient normalization.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.colors.Normalize.scaled.html#matplotlib.colors.Normalize.scaled" title="matplotlib.colors.Normalize.scaled"><code class="xref py py-obj docutils literal"><span class="pre">scaled</span></code></a>()</td>
-<td>return true if vmin and vmax set</td>
-</tr>
-</tbody>
-</table>
 <dl class="method">
 <dt id="matplotlib.colors.Normalize.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>vmin=None</em>, <em>vmax=None</em>, <em>clip=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/colors.html#Normalize.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.colors.Normalize.__init__" title="Permalink to this definition">¶</a></dt>
@@ -267,6 +235,35 @@ likely to lead to surprises; therefore the default is
 
 </dd></dl>
 
+<div class="section" id="methods">
+<h2>7.2.9.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.colors.Normalize.__init__.html#matplotlib.colors.Normalize.__init__" title="matplotlib.colors.Normalize.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>([vmin,&nbsp;vmax,&nbsp;clip])</td>
+<td>If <em>vmin</em> or <em>vmax</em> is not given, they are initialized from the minimum and maximum value respectively of the first input processed.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.colors.Normalize.autoscale.html#matplotlib.colors.Normalize.autoscale" title="matplotlib.colors.Normalize.autoscale"><code class="xref py py-obj docutils literal"><span class="pre">autoscale</span></code></a>(A)</td>
+<td>Set <em>vmin</em>, <em>vmax</em> to min, max of <em>A</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.colors.Normalize.autoscale_None.html#matplotlib.colors.Normalize.autoscale_None" title="matplotlib.colors.Normalize.autoscale_None"><code class="xref py py-obj docutils literal"><span class="pre">autoscale_None</span></code></a>(A)</td>
+<td>autoscale only None-valued vmin or vmax</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.colors.Normalize.inverse.html#matplotlib.colors.Normalize.inverse" title="matplotlib.colors.Normalize.inverse"><code class="xref py py-obj docutils literal"><span class="pre">inverse</span></code></a>(value)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.colors.Normalize.process_value.html#matplotlib.colors.Normalize.process_value" title="matplotlib.colors.Normalize.process_value"><code class="xref py py-obj docutils literal"><span class="pre">process_value</span></code></a>(value)</td>
+<td>Homogenize the input <em>value</em> for easy and efficient normalization.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.colors.Normalize.scaled.html#matplotlib.colors.Normalize.scaled" title="matplotlib.colors.Normalize.scaled"><code class="xref py py-obj docutils literal"><span class="pre">scaled</span></code></a>()</td>
+<td>return true if vmin and vmax set</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -276,8 +273,10 @@ likely to lead to surprises; therefore the default is
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="matplotlib.colors.Normalize.__init__.html" class="btn btn-neutral float-right" title="7.2.9.1.1. matplotlib.colors.Normalize.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="matplotlib.colors.NoNorm.scaled.html" class="btn btn-neutral" title="7.2.8.5. matplotlib.colors.NoNorm.scaled" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="matplotlib.colors.NoNorm.scaled.html" class="btn btn-neutral" title="7.2.8.1.6. matplotlib.colors.NoNorm.scaled" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

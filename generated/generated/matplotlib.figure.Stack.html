@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>8.2.13. matplotlib.figure.Stack &mdash; Matplotlib API 1 documentation</title>
+  <title>8.2.13. matplotlib.figure.Stack &mdash; My Project v1</title>
   
 
   
@@ -30,9 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="8. matplotlib.figure" href="../matplotlib.figure.html"/>
-        <link rel="prev" title="8.2.12.116. matplotlib.figure.Rectangle.update_from" href="matplotlib.figure.Rectangle.update_from.html"/> 
+        <link rel="next" title="8.2.13.1.1. matplotlib.figure.Stack.__init__" href="matplotlib.figure.Stack.__init__.html"/>
+        <link rel="prev" title="8.2.12.2.9. matplotlib.figure.Rectangle.zorder" href="matplotlib.figure.Rectangle.zorder.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -51,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -107,21 +108,13 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.Legend.html">8.2.11. matplotlib.figure.Legend</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.Rectangle.html">8.2.12. matplotlib.figure.Rectangle</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">8.2.13. matplotlib.figure.Stack</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Stack.back.html">8.2.13.1. matplotlib.figure.Stack.back</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Stack.bubble.html">8.2.13.2. matplotlib.figure.Stack.bubble</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Stack.clear.html">8.2.13.3. matplotlib.figure.Stack.clear</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Stack.empty.html">8.2.13.4. matplotlib.figure.Stack.empty</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Stack.forward.html">8.2.13.5. matplotlib.figure.Stack.forward</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Stack.home.html">8.2.13.6. matplotlib.figure.Stack.home</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Stack.push.html">8.2.13.7. matplotlib.figure.Stack.push</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.Stack.remove.html">8.2.13.8. matplotlib.figure.Stack.remove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">8.2.13.1. Methods</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.SubplotBase.html">8.2.14. matplotlib.figure.SubplotBase</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.SubplotParams.html">8.2.15. matplotlib.figure.SubplotParams</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.Text.html">8.2.16. matplotlib.figure.Text</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.TransformedBbox.html">8.2.17. matplotlib.figure.TransformedBbox</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.itemgetter.html">8.2.18. matplotlib.figure.itemgetter</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../matplotlib.figure.html#exceptions">8.3. Exceptions</a></li>
@@ -172,7 +165,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -222,22 +215,29 @@
             
   <div class="section" id="matplotlib-figure-stack">
 <h1>8.2.13. matplotlib.figure.Stack<a class="headerlink" href="#matplotlib-figure-stack" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.figure.Stack.__init__.html#matplotlib.figure.Stack.__init__" title="matplotlib.figure.Stack.__init__"><code class="xref py py-func docutils literal"><span class="pre">Stack.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.figure.Stack">
 <em class="property">class </em><code class="descclassname">matplotlib.figure.</code><code class="descname">Stack</code><span class="sig-paren">(</span><em>default=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/cbook.html#Stack"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.figure.Stack" title="Permalink to this definition">¶</a></dt>
 <dd><p>Implement a stack where elements can be pushed on and you can move
 back and forth.  But no pop.  Should mimic home / back / forward
 in a browser</p>
-<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="matplotlib.figure.Stack.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>default=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/cbook.html#Stack.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.figure.Stack.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="section" id="methods">
+<h2>8.2.13.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="longtable docutils">
 <colgroup>
 <col width="10%" />
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">__call__</span></code>()</td>
-<td>return the current element, or None</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.figure.Stack.__init__.html#matplotlib.figure.Stack.__init__" title="matplotlib.figure.Stack.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>([default])</td>
+<td></td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="matplotlib.figure.Stack.back.html#matplotlib.figure.Stack.back" title="matplotlib.figure.Stack.back"><code class="xref py py-obj docutils literal"><span class="pre">back</span></code></a>()</td>
 <td>move the position back and return the current element</td>
@@ -265,8 +265,7 @@ in a browser</p>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
+</div>
 </div>
 
 
@@ -276,8 +275,10 @@ in a browser</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="matplotlib.figure.Stack.__init__.html" class="btn btn-neutral float-right" title="8.2.13.1.1. matplotlib.figure.Stack.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="matplotlib.figure.Rectangle.update_from.html" class="btn btn-neutral" title="8.2.12.116. matplotlib.figure.Rectangle.update_from" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="matplotlib.figure.Rectangle.zorder.html" class="btn btn-neutral" title="8.2.12.2.9. matplotlib.figure.Rectangle.zorder" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

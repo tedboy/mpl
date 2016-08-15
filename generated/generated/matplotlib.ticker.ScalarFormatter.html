@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>35.1.5.26. matplotlib.ticker.ScalarFormatter &mdash; Matplotlib API 1 documentation</title>
+  <title>35.1.5.26. matplotlib.ticker.ScalarFormatter &mdash; My Project v1</title>
   
 
   
@@ -30,10 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="35. matplotlib.ticker" href="../matplotlib.ticker.html"/>
-        <link rel="next" title="35.1.5.26.1. matplotlib.ticker.ScalarFormatter.useLocale" href="matplotlib.ticker.ScalarFormatter.useLocale.html"/>
-        <link rel="prev" title="35.1.5.25.11. matplotlib.ticker.OldScalarFormatter.set_view_interval" href="matplotlib.ticker.OldScalarFormatter.set_view_interval.html"/> 
+        <link rel="next" title="35.1.5.26.1.1. matplotlib.ticker.ScalarFormatter.__init__" href="matplotlib.ticker.ScalarFormatter.__init__.html"/>
+        <link rel="prev" title="35.1.5.25.2.2. matplotlib.ticker.OldScalarFormatter.locs" href="matplotlib.ticker.OldScalarFormatter.locs.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -179,7 +179,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -229,7 +229,6 @@
             
   <div class="section" id="matplotlib-ticker-scalarformatter">
 <h1>35.1.5.26. matplotlib.ticker.ScalarFormatter<a class="headerlink" href="#matplotlib-ticker-scalarformatter" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.ticker.ScalarFormatter.__init__.html#matplotlib.ticker.ScalarFormatter.__init__" title="matplotlib.ticker.ScalarFormatter.__init__"><code class="xref py py-func docutils literal"><span class="pre">ScalarFormatter.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.ticker.ScalarFormatter">
 <em class="property">class </em><code class="descclassname">matplotlib.ticker.</code><code class="descname">ScalarFormatter</code><span class="sig-paren">(</span><em>useOffset=None</em>, <em>useMathText=None</em>, <em>useLocale=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/ticker.html#ScalarFormatter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.ticker.ScalarFormatter" title="Permalink to this definition">¶</a></dt>
@@ -239,41 +238,23 @@ such that the tick labels are meaningful. Scientific notation is used for
 data &lt; 10^-n or data &gt;= 10^m, where n and m are the power limits set using
 set_powerlimits((n,m)). The defaults for these are controlled by the
 axes.formatter.limits rc parameter.</p>
-<p class="rubric">Attributes</p>
+<dl class="method">
+<dt id="matplotlib.ticker.ScalarFormatter.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>useOffset=None</em>, <em>useMathText=None</em>, <em>useLocale=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/ticker.html#ScalarFormatter.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.ticker.ScalarFormatter.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="section" id="methods">
+<h2>35.1.5.26.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="longtable docutils">
 <colgroup>
 <col width="10%" />
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.ticker.ScalarFormatter.useLocale.html#matplotlib.ticker.ScalarFormatter.useLocale" title="matplotlib.ticker.ScalarFormatter.useLocale"><code class="xref py py-obj docutils literal"><span class="pre">useLocale</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.ticker.ScalarFormatter.__init__.html#matplotlib.ticker.ScalarFormatter.__init__" title="matplotlib.ticker.ScalarFormatter.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>([useOffset,&nbsp;useMathText,&nbsp;useLocale])</td>
 <td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.ticker.ScalarFormatter.useOffset.html#matplotlib.ticker.ScalarFormatter.useOffset" title="matplotlib.ticker.ScalarFormatter.useOffset"><code class="xref py py-obj docutils literal"><span class="pre">useOffset</span></code></a></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<table border="1" class="docutils">
-<colgroup>
-<col width="29%" />
-<col width="71%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>axis</td>
-<td>&nbsp;</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">__call__</span></code>(x[,&nbsp;pos])</td>
-<td>Return the format for tick val <em>x</em> at position <em>pos</em></td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="matplotlib.ticker.ScalarFormatter.create_dummy_axis.html#matplotlib.ticker.ScalarFormatter.create_dummy_axis" title="matplotlib.ticker.ScalarFormatter.create_dummy_axis"><code class="xref py py-obj docutils literal"><span class="pre">create_dummy_axis</span></code></a>(**kwargs)</td>
 <td></td>
@@ -328,8 +309,30 @@ axes.formatter.limits rc parameter.</p>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
+</div>
+<div class="section" id="attributes">
+<h2>35.1.5.26.2. Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.ticker.ScalarFormatter.axis.html#matplotlib.ticker.ScalarFormatter.axis" title="matplotlib.ticker.ScalarFormatter.axis"><code class="xref py py-obj docutils literal"><span class="pre">axis</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.ticker.ScalarFormatter.locs.html#matplotlib.ticker.ScalarFormatter.locs" title="matplotlib.ticker.ScalarFormatter.locs"><code class="xref py py-obj docutils literal"><span class="pre">locs</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.ticker.ScalarFormatter.useLocale.html#matplotlib.ticker.ScalarFormatter.useLocale" title="matplotlib.ticker.ScalarFormatter.useLocale"><code class="xref py py-obj docutils literal"><span class="pre">useLocale</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.ticker.ScalarFormatter.useOffset.html#matplotlib.ticker.ScalarFormatter.useOffset" title="matplotlib.ticker.ScalarFormatter.useOffset"><code class="xref py py-obj docutils literal"><span class="pre">useOffset</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -339,10 +342,10 @@ axes.formatter.limits rc parameter.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="matplotlib.ticker.ScalarFormatter.useLocale.html" class="btn btn-neutral float-right" title="35.1.5.26.1. matplotlib.ticker.ScalarFormatter.useLocale" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="matplotlib.ticker.ScalarFormatter.__init__.html" class="btn btn-neutral float-right" title="35.1.5.26.1.1. matplotlib.ticker.ScalarFormatter.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="matplotlib.ticker.OldScalarFormatter.set_view_interval.html" class="btn btn-neutral" title="35.1.5.25.11. matplotlib.ticker.OldScalarFormatter.set_view_interval" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="matplotlib.ticker.OldScalarFormatter.locs.html" class="btn btn-neutral" title="35.1.5.25.2.2. matplotlib.ticker.OldScalarFormatter.locs" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

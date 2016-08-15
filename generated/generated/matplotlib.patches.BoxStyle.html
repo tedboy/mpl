@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>12.2.4. matplotlib.patches.BoxStyle &mdash; Matplotlib API 1 documentation</title>
+  <title>12.2.4. matplotlib.patches.BoxStyle &mdash; My Project v1</title>
   
 
   
@@ -30,9 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="12. matplotlib.patches" href="../matplotlib.patches.html"/>
-        <link rel="prev" title="12.2.3.3. matplotlib.patches.ArrowStyle.register" href="matplotlib.patches.ArrowStyle.register.html"/> 
+        <link rel="next" title="12.2.4.1.1. matplotlib.patches.BoxStyle.get_styles" href="matplotlib.patches.BoxStyle.get_styles.html"/>
+        <link rel="prev" title="12.2.3.1.3. matplotlib.patches.ArrowStyle.register" href="matplotlib.patches.ArrowStyle.register.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -51,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -102,9 +103,7 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Arrow.html">12.2.2. matplotlib.patches.Arrow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.ArrowStyle.html">12.2.3. matplotlib.patches.ArrowStyle</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">12.2.4. matplotlib.patches.BoxStyle</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.BoxStyle.get_styles.html">12.2.4.1. matplotlib.patches.BoxStyle.get_styles</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.BoxStyle.pprint_styles.html">12.2.4.2. matplotlib.patches.BoxStyle.pprint_styles</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.BoxStyle.register.html">12.2.4.3. matplotlib.patches.BoxStyle.register</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">12.2.4.1. Methods</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Circle.html">12.2.5. matplotlib.patches.Circle</a></li>
@@ -124,8 +123,6 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Shadow.html">12.2.19. matplotlib.patches.Shadow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Wedge.html">12.2.20. matplotlib.patches.Wedge</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.YAArrow.html">12.2.21. matplotlib.patches.YAArrow</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.map.html">12.2.22. matplotlib.patches.map</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.zip.html">12.2.23. matplotlib.patches.zip</a></li>
 </ul>
 </li>
 </ul>
@@ -171,7 +168,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -221,7 +218,6 @@
             
   <div class="section" id="matplotlib-patches-boxstyle">
 <h1>12.2.4. matplotlib.patches.BoxStyle<a class="headerlink" href="#matplotlib-patches-boxstyle" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="#matplotlib.patches.BoxStyle.__init__" title="matplotlib.patches.BoxStyle.__init__"><code class="xref py py-func docutils literal"><span class="pre">BoxStyle.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.patches.BoxStyle">
 <em class="property">class </em><code class="descclassname">matplotlib.patches.</code><code class="descname">BoxStyle</code><a class="reference internal" href="../../_modules/matplotlib/patches.html#BoxStyle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.patches.BoxStyle" title="Permalink to this definition">¶</a></dt>
@@ -304,51 +300,6 @@ drawn. <em>mutation_scale</em> determines the overall size of the
 mutation (by which I mean the transformation of the rectangle to
 the fancy box).  <em>mutation_aspect</em> determines the aspect-ratio of
 the mutation.</p>
-<p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">Circle</span></code>([pad])</td>
-<td>A simple circle box.</td>
-</tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">DArrow</span></code>([pad])</td>
-<td>(Double) Arrow Box</td>
-</tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">LArrow</span></code>([pad])</td>
-<td>(left) Arrow Box</td>
-</tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">RArrow</span></code>([pad])</td>
-<td>(right) Arrow Box</td>
-</tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">Round</span></code>([pad,&nbsp;rounding_size])</td>
-<td>A box with round corners.</td>
-</tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">Round4</span></code>([pad,&nbsp;rounding_size])</td>
-<td>Another box with round edges.</td>
-</tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">Roundtooth</span></code>([pad,&nbsp;tooth_size])</td>
-<td>A rounded tooth box.</td>
-</tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">Sawtooth</span></code>([pad,&nbsp;tooth_size])</td>
-<td>A sawtooth box.</td>
-</tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">Square</span></code>([pad])</td>
-<td>A simple square box.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.BoxStyle.get_styles.html#matplotlib.patches.BoxStyle.get_styles" title="matplotlib.patches.BoxStyle.get_styles"><code class="xref py py-obj docutils literal"><span class="pre">get_styles</span></code></a>(klass)</td>
-<td>A class method which returns a dictionary of available styles.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.BoxStyle.pprint_styles.html#matplotlib.patches.BoxStyle.pprint_styles" title="matplotlib.patches.BoxStyle.pprint_styles"><code class="xref py py-obj docutils literal"><span class="pre">pprint_styles</span></code></a>(klass)</td>
-<td>A class method which returns a string of the available styles.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.BoxStyle.register.html#matplotlib.patches.BoxStyle.register" title="matplotlib.patches.BoxStyle.register"><code class="xref py py-obj docutils literal"><span class="pre">register</span></code></a>(klass,&nbsp;name,&nbsp;style)</td>
-<td>Register a new style.</td>
-</tr>
-</tbody>
-</table>
 <dl class="attribute">
 <dt id="matplotlib.patches.BoxStyle.__init__">
 <code class="descname">__init__</code><a class="headerlink" href="#matplotlib.patches.BoxStyle.__init__" title="Permalink to this definition">¶</a></dt>
@@ -357,6 +308,26 @@ the mutation.</p>
 
 </dd></dl>
 
+<div class="section" id="methods">
+<h2>12.2.4.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.BoxStyle.get_styles.html#matplotlib.patches.BoxStyle.get_styles" title="matplotlib.patches.BoxStyle.get_styles"><code class="xref py py-obj docutils literal"><span class="pre">get_styles</span></code></a>(klass)</td>
+<td>A class method which returns a dictionary of available styles.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.BoxStyle.pprint_styles.html#matplotlib.patches.BoxStyle.pprint_styles" title="matplotlib.patches.BoxStyle.pprint_styles"><code class="xref py py-obj docutils literal"><span class="pre">pprint_styles</span></code></a>(klass)</td>
+<td>A class method which returns a string of the available styles.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.BoxStyle.register.html#matplotlib.patches.BoxStyle.register" title="matplotlib.patches.BoxStyle.register"><code class="xref py py-obj docutils literal"><span class="pre">register</span></code></a>(klass,&nbsp;name,&nbsp;style)</td>
+<td>Register a new style.</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -366,8 +337,10 @@ the mutation.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="matplotlib.patches.BoxStyle.get_styles.html" class="btn btn-neutral float-right" title="12.2.4.1.1. matplotlib.patches.BoxStyle.get_styles" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="matplotlib.patches.ArrowStyle.register.html" class="btn btn-neutral" title="12.2.3.3. matplotlib.patches.ArrowStyle.register" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="matplotlib.patches.ArrowStyle.register.html" class="btn btn-neutral" title="12.2.3.1.3. matplotlib.patches.ArrowStyle.register" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

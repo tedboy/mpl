@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>7.2.4. matplotlib.colors.LightSource &mdash; Matplotlib API 1 documentation</title>
+  <title>7.2.4. matplotlib.colors.LightSource &mdash; My Project v1</title>
   
 
   
@@ -30,10 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="7. matplotlib.colors" href="../matplotlib.colors.html"/>
-        <link rel="next" title="7.2.4.1. matplotlib.colors.LightSource.blend_hsv" href="matplotlib.colors.LightSource.blend_hsv.html"/>
-        <link rel="prev" title="7.2.3.4. matplotlib.colors.Colormap.set_under" href="matplotlib.colors.Colormap.set_under.html"/> 
+        <link rel="next" title="7.2.4.1.1. matplotlib.colors.LightSource.__init__" href="matplotlib.colors.LightSource.__init__.html"/>
+        <link rel="prev" title="7.2.3.1.5. matplotlib.colors.Colormap.set_under" href="matplotlib.colors.Colormap.set_under.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -98,12 +98,7 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.colors.ColorConverter.html">7.2.2. matplotlib.colors.ColorConverter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.colors.Colormap.html">7.2.3. matplotlib.colors.Colormap</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">7.2.4. matplotlib.colors.LightSource</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.colors.LightSource.blend_hsv.html">7.2.4.1. matplotlib.colors.LightSource.blend_hsv</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.colors.LightSource.blend_overlay.html">7.2.4.2. matplotlib.colors.LightSource.blend_overlay</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.colors.LightSource.blend_soft_light.html">7.2.4.3. matplotlib.colors.LightSource.blend_soft_light</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.colors.LightSource.hillshade.html">7.2.4.4. matplotlib.colors.LightSource.hillshade</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.colors.LightSource.shade.html">7.2.4.5. matplotlib.colors.LightSource.shade</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.colors.LightSource.shade_rgb.html">7.2.4.6. matplotlib.colors.LightSource.shade_rgb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">7.2.4.1. Methods</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.colors.LinearSegmentedColormap.html">7.2.5. matplotlib.colors.LinearSegmentedColormap</a></li>
@@ -113,7 +108,6 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.colors.Normalize.html">7.2.9. matplotlib.colors.Normalize</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.colors.PowerNorm.html">7.2.10. matplotlib.colors.PowerNorm</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.colors.SymLogNorm.html">7.2.11. matplotlib.colors.SymLogNorm</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.colors.zip.html">7.2.12. matplotlib.colors.zip</a></li>
 </ul>
 </li>
 </ul>
@@ -164,7 +158,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -214,7 +208,6 @@
             
   <div class="section" id="matplotlib-colors-lightsource">
 <h1>7.2.4. matplotlib.colors.LightSource<a class="headerlink" href="#matplotlib-colors-lightsource" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.colors.LightSource.__init__.html#matplotlib.colors.LightSource.__init__" title="matplotlib.colors.LightSource.__init__"><code class="xref py py-func docutils literal"><span class="pre">LightSource.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.colors.LightSource">
 <em class="property">class </em><code class="descclassname">matplotlib.colors.</code><code class="descname">LightSource</code><span class="sig-paren">(</span><em>azdeg=315</em>, <em>altdeg=45</em>, <em>hsv_min_val=0</em>, <em>hsv_max_val=1</em>, <em>hsv_min_sat=1</em>, <em>hsv_max_sat=0</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/colors.html#LightSource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.colors.LightSource" title="Permalink to this definition">¶</a></dt>
@@ -225,33 +218,6 @@ clockwise from north and elevation up from the zero plane of the surface.</p>
 <a class="reference internal" href="matplotlib.colors.LightSource.shade_rgb.html#matplotlib.colors.LightSource.shade_rgb" title="matplotlib.colors.LightSource.shade_rgb"><code class="xref py py-meth docutils literal"><span class="pre">shade_rgb()</span></code></a> can be used to combine an rgb image with
 The <a class="reference internal" href="matplotlib.colors.LightSource.shade_rgb.html#matplotlib.colors.LightSource.shade_rgb" title="matplotlib.colors.LightSource.shade_rgb"><code class="xref py py-meth docutils literal"><span class="pre">shade_rgb()</span></code></a>
 The <a class="reference internal" href="matplotlib.colors.LightSource.hillshade.html#matplotlib.colors.LightSource.hillshade" title="matplotlib.colors.LightSource.hillshade"><code class="xref py py-meth docutils literal"><span class="pre">hillshade()</span></code></a> produces an illumination map of a surface.</p>
-<p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.colors.LightSource.blend_hsv.html#matplotlib.colors.LightSource.blend_hsv" title="matplotlib.colors.LightSource.blend_hsv"><code class="xref py py-obj docutils literal"><span class="pre">blend_hsv</span></code></a>(rgb,&nbsp;intensity[,&nbsp;hsv_max_sat,&nbsp;...])</td>
-<td>Take the input data array, convert to HSV values in the given colormap, then adjust those color values to give the impression of a shaded relief map with a specified light source.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.colors.LightSource.blend_overlay.html#matplotlib.colors.LightSource.blend_overlay" title="matplotlib.colors.LightSource.blend_overlay"><code class="xref py py-obj docutils literal"><span class="pre">blend_overlay</span></code></a>(rgb,&nbsp;intensity)</td>
-<td>Combines an rgb image with an intensity map using &#8220;overlay&#8221; blending.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.colors.LightSource.blend_soft_light.html#matplotlib.colors.LightSource.blend_soft_light" title="matplotlib.colors.LightSource.blend_soft_light"><code class="xref py py-obj docutils literal"><span class="pre">blend_soft_light</span></code></a>(rgb,&nbsp;intensity)</td>
-<td>Combines an rgb image with an intensity map using &#8220;soft light&#8221; blending.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.colors.LightSource.hillshade.html#matplotlib.colors.LightSource.hillshade" title="matplotlib.colors.LightSource.hillshade"><code class="xref py py-obj docutils literal"><span class="pre">hillshade</span></code></a>(elevation[,&nbsp;vert_exag,&nbsp;dx,&nbsp;dy,&nbsp;...])</td>
-<td>Calculates the illumination intensity for a surface using the defined azimuth and elevation for the light source.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.colors.LightSource.shade.html#matplotlib.colors.LightSource.shade" title="matplotlib.colors.LightSource.shade"><code class="xref py py-obj docutils literal"><span class="pre">shade</span></code></a>(data,&nbsp;cmap[,&nbsp;norm,&nbsp;blend_mode,&nbsp;vmin,&nbsp;...])</td>
-<td>Combine colormapped data values with an illumination intensity map (a.k.a.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.colors.LightSource.shade_rgb.html#matplotlib.colors.LightSource.shade_rgb" title="matplotlib.colors.LightSource.shade_rgb"><code class="xref py py-obj docutils literal"><span class="pre">shade_rgb</span></code></a>(rgb,&nbsp;elevation[,&nbsp;fraction,&nbsp;...])</td>
-<td>Take the input RGB array (ny*nx*3) adjust their color values to given the impression of a shaded relief map with a specified light source using the elevation (ny*nx).</td>
-</tr>
-</tbody>
-</table>
 <dl class="method">
 <dt id="matplotlib.colors.LightSource.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>azdeg=315</em>, <em>altdeg=45</em>, <em>hsv_min_val=0</em>, <em>hsv_max_val=1</em>, <em>hsv_min_sat=1</em>, <em>hsv_max_sat=0</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/colors.html#LightSource.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.colors.LightSource.__init__" title="Permalink to this definition">¶</a></dt>
@@ -286,6 +252,38 @@ See the documentation for <a class="reference internal" href="matplotlib.colors.
 
 </dd></dl>
 
+<div class="section" id="methods">
+<h2>7.2.4.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.colors.LightSource.__init__.html#matplotlib.colors.LightSource.__init__" title="matplotlib.colors.LightSource.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>([azdeg,&nbsp;altdeg,&nbsp;hsv_min_val,&nbsp;...])</td>
+<td>Specify the azimuth (measured clockwise from south) and altitude (measured up from the plane of the surface) of the light source in degrees.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.colors.LightSource.blend_hsv.html#matplotlib.colors.LightSource.blend_hsv" title="matplotlib.colors.LightSource.blend_hsv"><code class="xref py py-obj docutils literal"><span class="pre">blend_hsv</span></code></a>(rgb,&nbsp;intensity[,&nbsp;hsv_max_sat,&nbsp;...])</td>
+<td>Take the input data array, convert to HSV values in the given colormap, then adjust those color values to give the impression of a shaded relief map with a specified light source.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.colors.LightSource.blend_overlay.html#matplotlib.colors.LightSource.blend_overlay" title="matplotlib.colors.LightSource.blend_overlay"><code class="xref py py-obj docutils literal"><span class="pre">blend_overlay</span></code></a>(rgb,&nbsp;intensity)</td>
+<td>Combines an rgb image with an intensity map using &#8220;overlay&#8221; blending.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.colors.LightSource.blend_soft_light.html#matplotlib.colors.LightSource.blend_soft_light" title="matplotlib.colors.LightSource.blend_soft_light"><code class="xref py py-obj docutils literal"><span class="pre">blend_soft_light</span></code></a>(rgb,&nbsp;intensity)</td>
+<td>Combines an rgb image with an intensity map using &#8220;soft light&#8221; blending.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.colors.LightSource.hillshade.html#matplotlib.colors.LightSource.hillshade" title="matplotlib.colors.LightSource.hillshade"><code class="xref py py-obj docutils literal"><span class="pre">hillshade</span></code></a>(elevation[,&nbsp;vert_exag,&nbsp;dx,&nbsp;dy,&nbsp;...])</td>
+<td>Calculates the illumination intensity for a surface using the defined azimuth and elevation for the light source.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.colors.LightSource.shade.html#matplotlib.colors.LightSource.shade" title="matplotlib.colors.LightSource.shade"><code class="xref py py-obj docutils literal"><span class="pre">shade</span></code></a>(data,&nbsp;cmap[,&nbsp;norm,&nbsp;blend_mode,&nbsp;vmin,&nbsp;...])</td>
+<td>Combine colormapped data values with an illumination intensity map (a.k.a.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.colors.LightSource.shade_rgb.html#matplotlib.colors.LightSource.shade_rgb" title="matplotlib.colors.LightSource.shade_rgb"><code class="xref py py-obj docutils literal"><span class="pre">shade_rgb</span></code></a>(rgb,&nbsp;elevation[,&nbsp;fraction,&nbsp;...])</td>
+<td>Take the input RGB array (ny*nx*3) adjust their color values to given the impression of a shaded relief map with a specified light source using the elevation (ny*nx).</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -295,10 +293,10 @@ See the documentation for <a class="reference internal" href="matplotlib.colors.
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="matplotlib.colors.LightSource.blend_hsv.html" class="btn btn-neutral float-right" title="7.2.4.1. matplotlib.colors.LightSource.blend_hsv" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="matplotlib.colors.LightSource.__init__.html" class="btn btn-neutral float-right" title="7.2.4.1.1. matplotlib.colors.LightSource.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="matplotlib.colors.Colormap.set_under.html" class="btn btn-neutral" title="7.2.3.4. matplotlib.colors.Colormap.set_under" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="matplotlib.colors.Colormap.set_under.html" class="btn btn-neutral" title="7.2.3.1.5. matplotlib.colors.Colormap.set_under" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

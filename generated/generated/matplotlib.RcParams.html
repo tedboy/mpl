@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1.2.1. matplotlib.RcParams &mdash; Matplotlib API 1 documentation</title>
+  <title>1.2.1. matplotlib.RcParams &mdash; My Project v1</title>
   
 
   
@@ -30,10 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="1. matplotlib" href="../matplotlib.html"/>
-        <link rel="next" title="1.2.1.1. matplotlib.RcParams.clear" href="matplotlib.RcParams.clear.html"/>
-        <link rel="prev" title="1.1.39. matplotlib.verify_test_dependencies" href="../matplotlib.verify_test_dependencies.html"/> 
+        <link rel="next" title="1.2.1.1.1. matplotlib.RcParams.__init__" href="matplotlib.RcParams.__init__.html"/>
+        <link rel="prev" title="1.1.37. matplotlib.verify_test_dependencies" href="../matplotlib.verify_test_dependencies.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -89,30 +89,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../matplotlib.html#functions">1.1. Functions</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.html#classes">1.2. Classes</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">1.2.1. matplotlib.RcParams</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.RcParams.clear.html">1.2.1.1. matplotlib.RcParams.clear</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.RcParams.copy.html">1.2.1.2. matplotlib.RcParams.copy</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.RcParams.find_all.html">1.2.1.3. matplotlib.RcParams.find_all</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.RcParams.fromkeys.html">1.2.1.4. matplotlib.RcParams.fromkeys</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.RcParams.get.html">1.2.1.5. matplotlib.RcParams.get</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.RcParams.has_key.html">1.2.1.6. matplotlib.RcParams.has_key</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.RcParams.items.html">1.2.1.7. matplotlib.RcParams.items</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.RcParams.iteritems.html">1.2.1.8. matplotlib.RcParams.iteritems</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.RcParams.iterkeys.html">1.2.1.9. matplotlib.RcParams.iterkeys</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.RcParams.itervalues.html">1.2.1.10. matplotlib.RcParams.itervalues</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.RcParams.keys.html">1.2.1.11. matplotlib.RcParams.keys</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.RcParams.pop.html">1.2.1.12. matplotlib.RcParams.pop</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.RcParams.popitem.html">1.2.1.13. matplotlib.RcParams.popitem</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.RcParams.setdefault.html">1.2.1.14. matplotlib.RcParams.setdefault</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.RcParams.update.html">1.2.1.15. matplotlib.RcParams.update</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.RcParams.values.html">1.2.1.16. matplotlib.RcParams.values</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.RcParams.viewitems.html">1.2.1.17. matplotlib.RcParams.viewitems</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.RcParams.viewkeys.html">1.2.1.18. matplotlib.RcParams.viewkeys</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.RcParams.viewvalues.html">1.2.1.19. matplotlib.RcParams.viewvalues</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">1.2.1.1. Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#attributes">1.2.1.2. Attributes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.Verbose.html">1.2.2. matplotlib.Verbose</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.chain.html">1.2.3. matplotlib.chain</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.rc_context.html">1.2.4. matplotlib.rc_context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.rc_context.html">1.2.3. matplotlib.rc_context</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../matplotlib.html#exceptions">1.3. Exceptions</a></li>
@@ -170,7 +152,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -220,81 +202,110 @@
             
   <div class="section" id="matplotlib-rcparams">
 <h1>1.2.1. matplotlib.RcParams<a class="headerlink" href="#matplotlib-rcparams" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.RcParams.__init__.html#matplotlib.RcParams.__init__" title="matplotlib.RcParams.__init__"><code class="xref py py-func docutils literal"><span class="pre">RcParams.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.RcParams">
 <em class="property">class </em><code class="descclassname">matplotlib.</code><code class="descname">RcParams</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib.html#RcParams"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.RcParams" title="Permalink to this definition">¶</a></dt>
 <dd><p>A dictionary object including validation</p>
 <p>validating functions are defined and associated with rc parameters in
 <code class="xref py py-mod docutils literal"><span class="pre">matplotlib.rcsetup</span></code></p>
-<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="matplotlib.RcParams.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib.html#RcParams.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.RcParams.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="section" id="methods">
+<h2>1.2.1.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="longtable docutils">
 <colgroup>
 <col width="10%" />
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.RcParams.clear.html#matplotlib.RcParams.clear" title="matplotlib.RcParams.clear"><code class="xref py py-obj docutils literal"><span class="pre">clear</span></code></a>(()&nbsp;-&gt;&nbsp;None.&nbsp;&nbsp;Remove&nbsp;all&nbsp;items&nbsp;from&nbsp;D.)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.RcParams.__init__.html#matplotlib.RcParams.__init__" title="matplotlib.RcParams.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>(*args,&nbsp;**kwargs)</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.RcParams.copy.html#matplotlib.RcParams.copy" title="matplotlib.RcParams.copy"><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code></a>(()&nbsp;-&gt;&nbsp;a&nbsp;shallow&nbsp;copy&nbsp;of&nbsp;D)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.RcParams.clear.html#matplotlib.RcParams.clear" title="matplotlib.RcParams.clear"><code class="xref py py-obj docutils literal"><span class="pre">clear</span></code></a>(()&nbsp;-&gt;&nbsp;None.&nbsp;&nbsp;Remove&nbsp;all&nbsp;items&nbsp;from&nbsp;D.)</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.RcParams.find_all.html#matplotlib.RcParams.find_all" title="matplotlib.RcParams.find_all"><code class="xref py py-obj docutils literal"><span class="pre">find_all</span></code></a>(pattern)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.RcParams.copy.html#matplotlib.RcParams.copy" title="matplotlib.RcParams.copy"><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code></a>(()&nbsp;-&gt;&nbsp;a&nbsp;shallow&nbsp;copy&nbsp;of&nbsp;D)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.RcParams.find_all.html#matplotlib.RcParams.find_all" title="matplotlib.RcParams.find_all"><code class="xref py py-obj docutils literal"><span class="pre">find_all</span></code></a>(pattern)</td>
 <td>Return the subset of this RcParams dictionary whose keys match, using <code class="xref py py-func docutils literal"><span class="pre">re.search()</span></code>, the given <code class="docutils literal"><span class="pre">pattern</span></code>.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.RcParams.fromkeys.html#matplotlib.RcParams.fromkeys" title="matplotlib.RcParams.fromkeys"><code class="xref py py-obj docutils literal"><span class="pre">fromkeys</span></code></a>(...)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.RcParams.fromkeys.html#matplotlib.RcParams.fromkeys" title="matplotlib.RcParams.fromkeys"><code class="xref py py-obj docutils literal"><span class="pre">fromkeys</span></code></a>(...)</td>
 <td>v defaults to None.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.RcParams.get.html#matplotlib.RcParams.get" title="matplotlib.RcParams.get"><code class="xref py py-obj docutils literal"><span class="pre">get</span></code></a>((k[,d])&nbsp;-&gt;&nbsp;D[k]&nbsp;if&nbsp;k&nbsp;in&nbsp;D,&nbsp;...)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.RcParams.get.html#matplotlib.RcParams.get" title="matplotlib.RcParams.get"><code class="xref py py-obj docutils literal"><span class="pre">get</span></code></a>((k[,d])&nbsp;-&gt;&nbsp;D[k]&nbsp;if&nbsp;k&nbsp;in&nbsp;D,&nbsp;...)</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.RcParams.has_key.html#matplotlib.RcParams.has_key" title="matplotlib.RcParams.has_key"><code class="xref py py-obj docutils literal"><span class="pre">has_key</span></code></a>((k)&nbsp;-&gt;&nbsp;True&nbsp;if&nbsp;D&nbsp;has&nbsp;a&nbsp;key&nbsp;k,&nbsp;else&nbsp;False)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.RcParams.has_key.html#matplotlib.RcParams.has_key" title="matplotlib.RcParams.has_key"><code class="xref py py-obj docutils literal"><span class="pre">has_key</span></code></a>((k)&nbsp;-&gt;&nbsp;True&nbsp;if&nbsp;D&nbsp;has&nbsp;a&nbsp;key&nbsp;k,&nbsp;else&nbsp;False)</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.RcParams.items.html#matplotlib.RcParams.items" title="matplotlib.RcParams.items"><code class="xref py py-obj docutils literal"><span class="pre">items</span></code></a>(()&nbsp;-&gt;&nbsp;list&nbsp;of&nbsp;D&#8217;s&nbsp;(key,&nbsp;value)&nbsp;pairs,&nbsp;...)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.RcParams.items.html#matplotlib.RcParams.items" title="matplotlib.RcParams.items"><code class="xref py py-obj docutils literal"><span class="pre">items</span></code></a>(()&nbsp;-&gt;&nbsp;list&nbsp;of&nbsp;D&#8217;s&nbsp;(key,&nbsp;value)&nbsp;pairs,&nbsp;...)</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.RcParams.iteritems.html#matplotlib.RcParams.iteritems" title="matplotlib.RcParams.iteritems"><code class="xref py py-obj docutils literal"><span class="pre">iteritems</span></code></a>(()&nbsp;-&gt;&nbsp;an&nbsp;iterator&nbsp;over&nbsp;the&nbsp;(key,&nbsp;...)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.RcParams.iteritems.html#matplotlib.RcParams.iteritems" title="matplotlib.RcParams.iteritems"><code class="xref py py-obj docutils literal"><span class="pre">iteritems</span></code></a>(()&nbsp;-&gt;&nbsp;an&nbsp;iterator&nbsp;over&nbsp;the&nbsp;(key,&nbsp;...)</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.RcParams.iterkeys.html#matplotlib.RcParams.iterkeys" title="matplotlib.RcParams.iterkeys"><code class="xref py py-obj docutils literal"><span class="pre">iterkeys</span></code></a>(()&nbsp;-&gt;&nbsp;an&nbsp;iterator&nbsp;over&nbsp;the&nbsp;keys&nbsp;of&nbsp;D)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.RcParams.iterkeys.html#matplotlib.RcParams.iterkeys" title="matplotlib.RcParams.iterkeys"><code class="xref py py-obj docutils literal"><span class="pre">iterkeys</span></code></a>(()&nbsp;-&gt;&nbsp;an&nbsp;iterator&nbsp;over&nbsp;the&nbsp;keys&nbsp;of&nbsp;D)</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.RcParams.itervalues.html#matplotlib.RcParams.itervalues" title="matplotlib.RcParams.itervalues"><code class="xref py py-obj docutils literal"><span class="pre">itervalues</span></code></a>(...)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.RcParams.itervalues.html#matplotlib.RcParams.itervalues" title="matplotlib.RcParams.itervalues"><code class="xref py py-obj docutils literal"><span class="pre">itervalues</span></code></a>(...)</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.RcParams.keys.html#matplotlib.RcParams.keys" title="matplotlib.RcParams.keys"><code class="xref py py-obj docutils literal"><span class="pre">keys</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.RcParams.keys.html#matplotlib.RcParams.keys" title="matplotlib.RcParams.keys"><code class="xref py py-obj docutils literal"><span class="pre">keys</span></code></a>()</td>
 <td>Return sorted list of keys.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.RcParams.pop.html#matplotlib.RcParams.pop" title="matplotlib.RcParams.pop"><code class="xref py py-obj docutils literal"><span class="pre">pop</span></code></a>((k[,d])&nbsp;-&gt;&nbsp;v,&nbsp;...)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.RcParams.pop.html#matplotlib.RcParams.pop" title="matplotlib.RcParams.pop"><code class="xref py py-obj docutils literal"><span class="pre">pop</span></code></a>((k[,d])&nbsp;-&gt;&nbsp;v,&nbsp;...)</td>
 <td>If key is not found, d is returned if given, otherwise KeyError is raised</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.RcParams.popitem.html#matplotlib.RcParams.popitem" title="matplotlib.RcParams.popitem"><code class="xref py py-obj docutils literal"><span class="pre">popitem</span></code></a>(()&nbsp;-&gt;&nbsp;(k,&nbsp;v),&nbsp;...)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.RcParams.popitem.html#matplotlib.RcParams.popitem" title="matplotlib.RcParams.popitem"><code class="xref py py-obj docutils literal"><span class="pre">popitem</span></code></a>(()&nbsp;-&gt;&nbsp;(k,&nbsp;v),&nbsp;...)</td>
 <td>2-tuple; but raise KeyError if D is empty.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.RcParams.setdefault.html#matplotlib.RcParams.setdefault" title="matplotlib.RcParams.setdefault"><code class="xref py py-obj docutils literal"><span class="pre">setdefault</span></code></a>((k[,d])&nbsp;-&gt;&nbsp;D.get(k,d),&nbsp;...)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.RcParams.setdefault.html#matplotlib.RcParams.setdefault" title="matplotlib.RcParams.setdefault"><code class="xref py py-obj docutils literal"><span class="pre">setdefault</span></code></a>((k[,d])&nbsp;-&gt;&nbsp;D.get(k,d),&nbsp;...)</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.RcParams.update.html#matplotlib.RcParams.update" title="matplotlib.RcParams.update"><code class="xref py py-obj docutils literal"><span class="pre">update</span></code></a>(*args,&nbsp;**kwargs)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.RcParams.update.html#matplotlib.RcParams.update" title="matplotlib.RcParams.update"><code class="xref py py-obj docutils literal"><span class="pre">update</span></code></a>(*args,&nbsp;**kwargs)</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.RcParams.values.html#matplotlib.RcParams.values" title="matplotlib.RcParams.values"><code class="xref py py-obj docutils literal"><span class="pre">values</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.RcParams.values.html#matplotlib.RcParams.values" title="matplotlib.RcParams.values"><code class="xref py py-obj docutils literal"><span class="pre">values</span></code></a>()</td>
 <td>Return values in order of sorted keys.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.RcParams.viewitems.html#matplotlib.RcParams.viewitems" title="matplotlib.RcParams.viewitems"><code class="xref py py-obj docutils literal"><span class="pre">viewitems</span></code></a>(...)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.RcParams.viewitems.html#matplotlib.RcParams.viewitems" title="matplotlib.RcParams.viewitems"><code class="xref py py-obj docutils literal"><span class="pre">viewitems</span></code></a>(...)</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.RcParams.viewkeys.html#matplotlib.RcParams.viewkeys" title="matplotlib.RcParams.viewkeys"><code class="xref py py-obj docutils literal"><span class="pre">viewkeys</span></code></a>(...)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.RcParams.viewkeys.html#matplotlib.RcParams.viewkeys" title="matplotlib.RcParams.viewkeys"><code class="xref py py-obj docutils literal"><span class="pre">viewkeys</span></code></a>(...)</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.RcParams.viewvalues.html#matplotlib.RcParams.viewvalues" title="matplotlib.RcParams.viewvalues"><code class="xref py py-obj docutils literal"><span class="pre">viewvalues</span></code></a>(...)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.RcParams.viewvalues.html#matplotlib.RcParams.viewvalues" title="matplotlib.RcParams.viewvalues"><code class="xref py py-obj docutils literal"><span class="pre">viewvalues</span></code></a>(...)</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
+</div>
+<div class="section" id="attributes">
+<h2>1.2.1.2. Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.RcParams.msg_depr.html#matplotlib.RcParams.msg_depr" title="matplotlib.RcParams.msg_depr"><code class="xref py py-obj docutils literal"><span class="pre">msg_depr</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.RcParams.msg_depr_ignore.html#matplotlib.RcParams.msg_depr_ignore" title="matplotlib.RcParams.msg_depr_ignore"><code class="xref py py-obj docutils literal"><span class="pre">msg_depr_ignore</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.RcParams.validate.html#matplotlib.RcParams.validate" title="matplotlib.RcParams.validate"><code class="xref py py-obj docutils literal"><span class="pre">validate</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -304,10 +315,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="matplotlib.RcParams.clear.html" class="btn btn-neutral float-right" title="1.2.1.1. matplotlib.RcParams.clear" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="matplotlib.RcParams.__init__.html" class="btn btn-neutral float-right" title="1.2.1.1.1. matplotlib.RcParams.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../matplotlib.verify_test_dependencies.html" class="btn btn-neutral" title="1.1.39. matplotlib.verify_test_dependencies" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../matplotlib.verify_test_dependencies.html" class="btn btn-neutral" title="1.1.37. matplotlib.verify_test_dependencies" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

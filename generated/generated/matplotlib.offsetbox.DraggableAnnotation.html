@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>30.2.8. matplotlib.offsetbox.DraggableAnnotation &mdash; Matplotlib API 1 documentation</title>
+  <title>30.2.8. matplotlib.offsetbox.DraggableAnnotation &mdash; My Project v1</title>
   
 
   
@@ -30,10 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="30. matplotlib.offsetbox" href="../matplotlib.offsetbox.html"/>
-        <link rel="next" title="30.2.8.1. matplotlib.offsetbox.DraggableAnnotation.artist_picker" href="matplotlib.offsetbox.DraggableAnnotation.artist_picker.html"/>
-        <link rel="prev" title="30.2.7.92. matplotlib.offsetbox.BboxImage.write_png" href="matplotlib.offsetbox.BboxImage.write_png.html"/> 
+        <link rel="next" title="30.2.8.1.1. matplotlib.offsetbox.DraggableAnnotation.__init__" href="matplotlib.offsetbox.DraggableAnnotation.__init__.html"/>
+        <link rel="prev" title="30.2.7.2.8. matplotlib.offsetbox.BboxImage.zorder" href="matplotlib.offsetbox.BboxImage.zorder.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -125,15 +125,7 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.BboxBase.html">30.2.6. matplotlib.offsetbox.BboxBase</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.BboxImage.html">30.2.7. matplotlib.offsetbox.BboxImage</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">30.2.8. matplotlib.offsetbox.DraggableAnnotation</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.DraggableAnnotation.artist_picker.html">30.2.8.1. matplotlib.offsetbox.DraggableAnnotation.artist_picker</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.DraggableAnnotation.disconnect.html">30.2.8.2. matplotlib.offsetbox.DraggableAnnotation.disconnect</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.DraggableAnnotation.finalize_offset.html">30.2.8.3. matplotlib.offsetbox.DraggableAnnotation.finalize_offset</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.DraggableAnnotation.on_motion.html">30.2.8.4. matplotlib.offsetbox.DraggableAnnotation.on_motion</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.DraggableAnnotation.on_motion_blit.html">30.2.8.5. matplotlib.offsetbox.DraggableAnnotation.on_motion_blit</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.DraggableAnnotation.on_pick.html">30.2.8.6. matplotlib.offsetbox.DraggableAnnotation.on_pick</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.DraggableAnnotation.on_release.html">30.2.8.7. matplotlib.offsetbox.DraggableAnnotation.on_release</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.DraggableAnnotation.save_offset.html">30.2.8.8. matplotlib.offsetbox.DraggableAnnotation.save_offset</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.offsetbox.DraggableAnnotation.update_offset.html">30.2.8.9. matplotlib.offsetbox.DraggableAnnotation.update_offset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">30.2.8.1. Methods</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.DraggableBase.html">30.2.9. matplotlib.offsetbox.DraggableBase</a></li>
@@ -150,8 +142,6 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.TextArea.html">30.2.20. matplotlib.offsetbox.TextArea</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.TransformedBbox.html">30.2.21. matplotlib.offsetbox.TransformedBbox</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.VPacker.html">30.2.22. matplotlib.offsetbox.VPacker</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.xrange.html">30.2.23. matplotlib.offsetbox.xrange</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.offsetbox.zip.html">30.2.24. matplotlib.offsetbox.zip</a></li>
 </ul>
 </li>
 </ul>
@@ -179,7 +169,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -229,48 +219,57 @@
             
   <div class="section" id="matplotlib-offsetbox-draggableannotation">
 <h1>30.2.8. matplotlib.offsetbox.DraggableAnnotation<a class="headerlink" href="#matplotlib-offsetbox-draggableannotation" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.offsetbox.DraggableAnnotation.__init__.html#matplotlib.offsetbox.DraggableAnnotation.__init__" title="matplotlib.offsetbox.DraggableAnnotation.__init__"><code class="xref py py-func docutils literal"><span class="pre">DraggableAnnotation.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.offsetbox.DraggableAnnotation">
 <em class="property">class </em><code class="descclassname">matplotlib.offsetbox.</code><code class="descname">DraggableAnnotation</code><span class="sig-paren">(</span><em>annotation</em>, <em>use_blit=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/offsetbox.html#DraggableAnnotation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.offsetbox.DraggableAnnotation" title="Permalink to this definition">¶</a></dt>
-<dd><p class="rubric">Methods</p>
+<dd><dl class="method">
+<dt id="matplotlib.offsetbox.DraggableAnnotation.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>annotation</em>, <em>use_blit=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/offsetbox.html#DraggableAnnotation.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.offsetbox.DraggableAnnotation.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="section" id="methods">
+<h2>30.2.8.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="longtable docutils">
 <colgroup>
 <col width="10%" />
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.DraggableAnnotation.artist_picker.html#matplotlib.offsetbox.DraggableAnnotation.artist_picker" title="matplotlib.offsetbox.DraggableAnnotation.artist_picker"><code class="xref py py-obj docutils literal"><span class="pre">artist_picker</span></code></a>(artist,&nbsp;evt)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.DraggableAnnotation.__init__.html#matplotlib.offsetbox.DraggableAnnotation.__init__" title="matplotlib.offsetbox.DraggableAnnotation.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>(annotation[,&nbsp;use_blit])</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.DraggableAnnotation.disconnect.html#matplotlib.offsetbox.DraggableAnnotation.disconnect" title="matplotlib.offsetbox.DraggableAnnotation.disconnect"><code class="xref py py-obj docutils literal"><span class="pre">disconnect</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.DraggableAnnotation.artist_picker.html#matplotlib.offsetbox.DraggableAnnotation.artist_picker" title="matplotlib.offsetbox.DraggableAnnotation.artist_picker"><code class="xref py py-obj docutils literal"><span class="pre">artist_picker</span></code></a>(artist,&nbsp;evt)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.DraggableAnnotation.disconnect.html#matplotlib.offsetbox.DraggableAnnotation.disconnect" title="matplotlib.offsetbox.DraggableAnnotation.disconnect"><code class="xref py py-obj docutils literal"><span class="pre">disconnect</span></code></a>()</td>
 <td>disconnect the callbacks</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.DraggableAnnotation.finalize_offset.html#matplotlib.offsetbox.DraggableAnnotation.finalize_offset" title="matplotlib.offsetbox.DraggableAnnotation.finalize_offset"><code class="xref py py-obj docutils literal"><span class="pre">finalize_offset</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.DraggableAnnotation.finalize_offset.html#matplotlib.offsetbox.DraggableAnnotation.finalize_offset" title="matplotlib.offsetbox.DraggableAnnotation.finalize_offset"><code class="xref py py-obj docutils literal"><span class="pre">finalize_offset</span></code></a>()</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.DraggableAnnotation.on_motion.html#matplotlib.offsetbox.DraggableAnnotation.on_motion" title="matplotlib.offsetbox.DraggableAnnotation.on_motion"><code class="xref py py-obj docutils literal"><span class="pre">on_motion</span></code></a>(evt)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.DraggableAnnotation.on_motion.html#matplotlib.offsetbox.DraggableAnnotation.on_motion" title="matplotlib.offsetbox.DraggableAnnotation.on_motion"><code class="xref py py-obj docutils literal"><span class="pre">on_motion</span></code></a>(evt)</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.DraggableAnnotation.on_motion_blit.html#matplotlib.offsetbox.DraggableAnnotation.on_motion_blit" title="matplotlib.offsetbox.DraggableAnnotation.on_motion_blit"><code class="xref py py-obj docutils literal"><span class="pre">on_motion_blit</span></code></a>(evt)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.DraggableAnnotation.on_motion_blit.html#matplotlib.offsetbox.DraggableAnnotation.on_motion_blit" title="matplotlib.offsetbox.DraggableAnnotation.on_motion_blit"><code class="xref py py-obj docutils literal"><span class="pre">on_motion_blit</span></code></a>(evt)</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.DraggableAnnotation.on_pick.html#matplotlib.offsetbox.DraggableAnnotation.on_pick" title="matplotlib.offsetbox.DraggableAnnotation.on_pick"><code class="xref py py-obj docutils literal"><span class="pre">on_pick</span></code></a>(evt)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.DraggableAnnotation.on_pick.html#matplotlib.offsetbox.DraggableAnnotation.on_pick" title="matplotlib.offsetbox.DraggableAnnotation.on_pick"><code class="xref py py-obj docutils literal"><span class="pre">on_pick</span></code></a>(evt)</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.DraggableAnnotation.on_release.html#matplotlib.offsetbox.DraggableAnnotation.on_release" title="matplotlib.offsetbox.DraggableAnnotation.on_release"><code class="xref py py-obj docutils literal"><span class="pre">on_release</span></code></a>(event)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.DraggableAnnotation.on_release.html#matplotlib.offsetbox.DraggableAnnotation.on_release" title="matplotlib.offsetbox.DraggableAnnotation.on_release"><code class="xref py py-obj docutils literal"><span class="pre">on_release</span></code></a>(event)</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.DraggableAnnotation.save_offset.html#matplotlib.offsetbox.DraggableAnnotation.save_offset" title="matplotlib.offsetbox.DraggableAnnotation.save_offset"><code class="xref py py-obj docutils literal"><span class="pre">save_offset</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.DraggableAnnotation.save_offset.html#matplotlib.offsetbox.DraggableAnnotation.save_offset" title="matplotlib.offsetbox.DraggableAnnotation.save_offset"><code class="xref py py-obj docutils literal"><span class="pre">save_offset</span></code></a>()</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.offsetbox.DraggableAnnotation.update_offset.html#matplotlib.offsetbox.DraggableAnnotation.update_offset" title="matplotlib.offsetbox.DraggableAnnotation.update_offset"><code class="xref py py-obj docutils literal"><span class="pre">update_offset</span></code></a>(dx,&nbsp;dy)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.offsetbox.DraggableAnnotation.update_offset.html#matplotlib.offsetbox.DraggableAnnotation.update_offset" title="matplotlib.offsetbox.DraggableAnnotation.update_offset"><code class="xref py py-obj docutils literal"><span class="pre">update_offset</span></code></a>(dx,&nbsp;dy)</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
+</div>
 </div>
 
 
@@ -280,10 +279,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="matplotlib.offsetbox.DraggableAnnotation.artist_picker.html" class="btn btn-neutral float-right" title="30.2.8.1. matplotlib.offsetbox.DraggableAnnotation.artist_picker" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="matplotlib.offsetbox.DraggableAnnotation.__init__.html" class="btn btn-neutral float-right" title="30.2.8.1.1. matplotlib.offsetbox.DraggableAnnotation.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="matplotlib.offsetbox.BboxImage.write_png.html" class="btn btn-neutral" title="30.2.7.92. matplotlib.offsetbox.BboxImage.write_png" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="matplotlib.offsetbox.BboxImage.zorder.html" class="btn btn-neutral" title="30.2.7.2.8. matplotlib.offsetbox.BboxImage.zorder" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

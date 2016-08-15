@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>29.5.13. matplotlib.mlab.PCA &mdash; Matplotlib API 1 documentation</title>
+  <title>29.5.13. matplotlib.mlab.PCA &mdash; My Project v1</title>
   
 
   
@@ -30,10 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="29. matplotlib.mlab" href="../matplotlib.mlab.html"/>
-        <link rel="next" title="29.5.13.1. matplotlib.mlab.PCA.center" href="matplotlib.mlab.PCA.center.html"/>
-        <link rel="prev" title="29.5.12. matplotlib.mlab.GaussianKDE" href="matplotlib.mlab.GaussianKDE.html"/> 
+        <link rel="next" title="29.5.13.1.1. matplotlib.mlab.PCA.__init__" href="matplotlib.mlab.PCA.__init__.html"/>
+        <link rel="prev" title="29.5.12.1.5. matplotlib.mlab.GaussianKDE.silverman_factor" href="matplotlib.mlab.GaussianKDE.silverman_factor.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -132,14 +132,10 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.FormatThousands.html">29.5.11. matplotlib.mlab.FormatThousands</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.GaussianKDE.html">29.5.12. matplotlib.mlab.GaussianKDE</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">29.5.13. matplotlib.mlab.PCA</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.mlab.PCA.center.html">29.5.13.1. matplotlib.mlab.PCA.center</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.mlab.PCA.project.html">29.5.13.2. matplotlib.mlab.PCA.project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">29.5.13.1. Methods</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.Path.html">29.5.14. matplotlib.mlab.Path</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.map.html">29.5.15. matplotlib.mlab.map</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.xrange.html">29.5.16. matplotlib.mlab.xrange</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.mlab.zip.html">29.5.17. matplotlib.mlab.zip</a></li>
 </ul>
 </li>
 </ul>
@@ -168,7 +164,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -218,26 +214,10 @@
             
   <div class="section" id="matplotlib-mlab-pca">
 <h1>29.5.13. matplotlib.mlab.PCA<a class="headerlink" href="#matplotlib-mlab-pca" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.mlab.PCA.__init__.html#matplotlib.mlab.PCA.__init__" title="matplotlib.mlab.PCA.__init__"><code class="xref py py-func docutils literal"><span class="pre">PCA.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.mlab.PCA">
 <em class="property">class </em><code class="descclassname">matplotlib.mlab.</code><code class="descname">PCA</code><span class="sig-paren">(</span><em>a</em>, <em>standardize=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/mlab.html#PCA"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.mlab.PCA" title="Permalink to this definition">¶</a></dt>
-<dd><p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.PCA.center.html#matplotlib.mlab.PCA.center" title="matplotlib.mlab.PCA.center"><code class="xref py py-obj docutils literal"><span class="pre">center</span></code></a>(x)</td>
-<td>center and optionally standardize the data using the mean and sigma</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.PCA.project.html#matplotlib.mlab.PCA.project" title="matplotlib.mlab.PCA.project"><code class="xref py py-obj docutils literal"><span class="pre">project</span></code></a>(x[,&nbsp;minfrac])</td>
-<td>project x onto the principle axes, dropping any axes where fraction</td>
-</tr>
-</tbody>
-</table>
-<dl class="method">
+<dd><dl class="method">
 <dt id="matplotlib.mlab.PCA.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>a</em>, <em>standardize=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/mlab.html#PCA.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.mlab.PCA.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>compute the SVD of a and store data for PCA.  Use project to
@@ -268,6 +248,26 @@ This row is also the 1st eigenvector.</p>
 
 </dd></dl>
 
+<div class="section" id="methods">
+<h2>29.5.13.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.PCA.__init__.html#matplotlib.mlab.PCA.__init__" title="matplotlib.mlab.PCA.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>(a[,&nbsp;standardize])</td>
+<td>compute the SVD of a and store data for PCA.  Use project to</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.mlab.PCA.center.html#matplotlib.mlab.PCA.center" title="matplotlib.mlab.PCA.center"><code class="xref py py-obj docutils literal"><span class="pre">center</span></code></a>(x)</td>
+<td>center and optionally standardize the data using the mean and sigma</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.mlab.PCA.project.html#matplotlib.mlab.PCA.project" title="matplotlib.mlab.PCA.project"><code class="xref py py-obj docutils literal"><span class="pre">project</span></code></a>(x[,&nbsp;minfrac])</td>
+<td>project x onto the principle axes, dropping any axes where fraction</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -277,10 +277,10 @@ This row is also the 1st eigenvector.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="matplotlib.mlab.PCA.center.html" class="btn btn-neutral float-right" title="29.5.13.1. matplotlib.mlab.PCA.center" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="matplotlib.mlab.PCA.__init__.html" class="btn btn-neutral float-right" title="29.5.13.1.1. matplotlib.mlab.PCA.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="matplotlib.mlab.GaussianKDE.html" class="btn btn-neutral" title="29.5.12. matplotlib.mlab.GaussianKDE" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="matplotlib.mlab.GaussianKDE.silverman_factor.html" class="btn btn-neutral" title="29.5.12.1.5. matplotlib.mlab.GaussianKDE.silverman_factor" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

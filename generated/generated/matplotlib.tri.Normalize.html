@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>37.2.4. matplotlib.tri.Normalize &mdash; Matplotlib API 1 documentation</title>
+  <title>37.2.4. matplotlib.tri.Normalize &mdash; My Project v1</title>
   
 
   
@@ -30,9 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="37. matplotlib.tri" href="../matplotlib.tri.html"/>
-        <link rel="prev" title="37.2.3. matplotlib.tri.LinearTriInterpolator" href="matplotlib.tri.LinearTriInterpolator.html"/> 
+        <link rel="next" title="37.2.4.1.1. matplotlib.tri.Normalize.__init__" href="matplotlib.tri.Normalize.__init__.html"/>
+        <link rel="prev" title="37.2.3.2.2. matplotlib.tri.LinearTriInterpolator.docstringgradient" href="matplotlib.tri.LinearTriInterpolator.docstringgradient.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -51,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -127,11 +128,7 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.tri.CubicTriInterpolator.html">37.2.2. matplotlib.tri.CubicTriInterpolator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.tri.LinearTriInterpolator.html">37.2.3. matplotlib.tri.LinearTriInterpolator</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">37.2.4. matplotlib.tri.Normalize</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.Normalize.autoscale.html">37.2.4.1. matplotlib.tri.Normalize.autoscale</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.Normalize.autoscale_None.html">37.2.4.2. matplotlib.tri.Normalize.autoscale_None</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.Normalize.inverse.html">37.2.4.3. matplotlib.tri.Normalize.inverse</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.Normalize.process_value.html">37.2.4.4. matplotlib.tri.Normalize.process_value</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.tri.Normalize.scaled.html">37.2.4.5. matplotlib.tri.Normalize.scaled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">37.2.4.1. Methods</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.tri.PolyCollection.html">37.2.5. matplotlib.tri.PolyCollection</a></li>
@@ -164,7 +161,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -214,39 +211,11 @@
             
   <div class="section" id="matplotlib-tri-normalize">
 <h1>37.2.4. matplotlib.tri.Normalize<a class="headerlink" href="#matplotlib-tri-normalize" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.tri.Normalize.__init__.html#matplotlib.tri.Normalize.__init__" title="matplotlib.tri.Normalize.__init__"><code class="xref py py-func docutils literal"><span class="pre">Normalize.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.tri.Normalize">
 <em class="property">class </em><code class="descclassname">matplotlib.tri.</code><code class="descname">Normalize</code><span class="sig-paren">(</span><em>vmin=None</em>, <em>vmax=None</em>, <em>clip=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/colors.html#Normalize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.tri.Normalize" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class which, when called, can normalize data into
 the <code class="docutils literal"><span class="pre">[0.0,</span> <span class="pre">1.0]</span></code> interval.</p>
-<p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">__call__</span></code>(value[,&nbsp;clip])</td>
-<td>Normalize <em>value</em> data in the <code class="docutils literal"><span class="pre">[vmin,</span> <span class="pre">vmax]</span></code> interval into the <code class="docutils literal"><span class="pre">[0.0,</span> <span class="pre">1.0]</span></code> interval and return it.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.Normalize.autoscale.html#matplotlib.tri.Normalize.autoscale" title="matplotlib.tri.Normalize.autoscale"><code class="xref py py-obj docutils literal"><span class="pre">autoscale</span></code></a>(A)</td>
-<td>Set <em>vmin</em>, <em>vmax</em> to min, max of <em>A</em>.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.Normalize.autoscale_None.html#matplotlib.tri.Normalize.autoscale_None" title="matplotlib.tri.Normalize.autoscale_None"><code class="xref py py-obj docutils literal"><span class="pre">autoscale_None</span></code></a>(A)</td>
-<td>autoscale only None-valued vmin or vmax</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.Normalize.inverse.html#matplotlib.tri.Normalize.inverse" title="matplotlib.tri.Normalize.inverse"><code class="xref py py-obj docutils literal"><span class="pre">inverse</span></code></a>(value)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.Normalize.process_value.html#matplotlib.tri.Normalize.process_value" title="matplotlib.tri.Normalize.process_value"><code class="xref py py-obj docutils literal"><span class="pre">process_value</span></code></a>(value)</td>
-<td>Homogenize the input <em>value</em> for easy and efficient normalization.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.Normalize.scaled.html#matplotlib.tri.Normalize.scaled" title="matplotlib.tri.Normalize.scaled"><code class="xref py py-obj docutils literal"><span class="pre">scaled</span></code></a>()</td>
-<td>return true if vmin and vmax set</td>
-</tr>
-</tbody>
-</table>
 <dl class="method">
 <dt id="matplotlib.tri.Normalize.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>vmin=None</em>, <em>vmax=None</em>, <em>clip=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/colors.html#Normalize.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.tri.Normalize.__init__" title="Permalink to this definition">¶</a></dt>
@@ -269,6 +238,35 @@ likely to lead to surprises; therefore the default is
 
 </dd></dl>
 
+<div class="section" id="methods">
+<h2>37.2.4.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.Normalize.__init__.html#matplotlib.tri.Normalize.__init__" title="matplotlib.tri.Normalize.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>([vmin,&nbsp;vmax,&nbsp;clip])</td>
+<td>If <em>vmin</em> or <em>vmax</em> is not given, they are initialized from the minimum and maximum value respectively of the first input processed.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.Normalize.autoscale.html#matplotlib.tri.Normalize.autoscale" title="matplotlib.tri.Normalize.autoscale"><code class="xref py py-obj docutils literal"><span class="pre">autoscale</span></code></a>(A)</td>
+<td>Set <em>vmin</em>, <em>vmax</em> to min, max of <em>A</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.Normalize.autoscale_None.html#matplotlib.tri.Normalize.autoscale_None" title="matplotlib.tri.Normalize.autoscale_None"><code class="xref py py-obj docutils literal"><span class="pre">autoscale_None</span></code></a>(A)</td>
+<td>autoscale only None-valued vmin or vmax</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.Normalize.inverse.html#matplotlib.tri.Normalize.inverse" title="matplotlib.tri.Normalize.inverse"><code class="xref py py-obj docutils literal"><span class="pre">inverse</span></code></a>(value)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.tri.Normalize.process_value.html#matplotlib.tri.Normalize.process_value" title="matplotlib.tri.Normalize.process_value"><code class="xref py py-obj docutils literal"><span class="pre">process_value</span></code></a>(value)</td>
+<td>Homogenize the input <em>value</em> for easy and efficient normalization.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.tri.Normalize.scaled.html#matplotlib.tri.Normalize.scaled" title="matplotlib.tri.Normalize.scaled"><code class="xref py py-obj docutils literal"><span class="pre">scaled</span></code></a>()</td>
+<td>return true if vmin and vmax set</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -278,8 +276,10 @@ likely to lead to surprises; therefore the default is
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="matplotlib.tri.Normalize.__init__.html" class="btn btn-neutral float-right" title="37.2.4.1.1. matplotlib.tri.Normalize.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="matplotlib.tri.LinearTriInterpolator.html" class="btn btn-neutral" title="37.2.3. matplotlib.tri.LinearTriInterpolator" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="matplotlib.tri.LinearTriInterpolator.docstringgradient.html" class="btn btn-neutral" title="37.2.3.2.2. matplotlib.tri.LinearTriInterpolator.docstringgradient" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

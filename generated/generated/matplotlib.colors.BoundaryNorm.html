@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>7.2.1. matplotlib.colors.BoundaryNorm &mdash; Matplotlib API 1 documentation</title>
+  <title>7.2.1. matplotlib.colors.BoundaryNorm &mdash; My Project v1</title>
   
 
   
@@ -30,8 +30,9 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="7. matplotlib.colors" href="../matplotlib.colors.html"/>
+        <link rel="next" title="7.2.1.1.1. matplotlib.colors.BoundaryNorm.__init__" href="matplotlib.colors.BoundaryNorm.__init__.html"/>
         <link rel="prev" title="7.1.7. matplotlib.colors.rgb_to_hsv" href="../matplotlib.colors.rgb_to_hsv.html"/> 
 
   
@@ -51,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -94,11 +95,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../matplotlib.colors.html#functions">7.1. Functions</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.colors.html#classes">7.2. Classes</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">7.2.1. matplotlib.colors.BoundaryNorm</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.colors.BoundaryNorm.autoscale.html">7.2.1.1. matplotlib.colors.BoundaryNorm.autoscale</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.colors.BoundaryNorm.autoscale_None.html">7.2.1.2. matplotlib.colors.BoundaryNorm.autoscale_None</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.colors.BoundaryNorm.inverse.html">7.2.1.3. matplotlib.colors.BoundaryNorm.inverse</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.colors.BoundaryNorm.process_value.html">7.2.1.4. matplotlib.colors.BoundaryNorm.process_value</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.colors.BoundaryNorm.scaled.html">7.2.1.5. matplotlib.colors.BoundaryNorm.scaled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">7.2.1.1. Methods</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.colors.ColorConverter.html">7.2.2. matplotlib.colors.ColorConverter</a></li>
@@ -111,7 +108,6 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.colors.Normalize.html">7.2.9. matplotlib.colors.Normalize</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.colors.PowerNorm.html">7.2.10. matplotlib.colors.PowerNorm</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.colors.SymLogNorm.html">7.2.11. matplotlib.colors.SymLogNorm</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.colors.zip.html">7.2.12. matplotlib.colors.zip</a></li>
 </ul>
 </li>
 </ul>
@@ -162,7 +158,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -212,7 +208,6 @@
             
   <div class="section" id="matplotlib-colors-boundarynorm">
 <h1>7.2.1. matplotlib.colors.BoundaryNorm<a class="headerlink" href="#matplotlib-colors-boundarynorm" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.colors.BoundaryNorm.__init__.html#matplotlib.colors.BoundaryNorm.__init__" title="matplotlib.colors.BoundaryNorm.__init__"><code class="xref py py-func docutils literal"><span class="pre">BoundaryNorm.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.colors.BoundaryNorm">
 <em class="property">class </em><code class="descclassname">matplotlib.colors.</code><code class="descname">BoundaryNorm</code><span class="sig-paren">(</span><em>boundaries</em>, <em>ncolors</em>, <em>clip=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/colors.html#BoundaryNorm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.colors.BoundaryNorm" title="Permalink to this definition">¶</a></dt>
@@ -224,33 +219,6 @@ interval 0-1.</p>
 piece-wise linear interpolation, but using integers seems
 simpler, and reduces the number of conversions back and forth
 between integer and floating point.</p>
-<p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">__call__</span></code>(value[,&nbsp;clip])</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.colors.BoundaryNorm.autoscale.html#matplotlib.colors.BoundaryNorm.autoscale" title="matplotlib.colors.BoundaryNorm.autoscale"><code class="xref py py-obj docutils literal"><span class="pre">autoscale</span></code></a>(A)</td>
-<td>Set <em>vmin</em>, <em>vmax</em> to min, max of <em>A</em>.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.colors.BoundaryNorm.autoscale_None.html#matplotlib.colors.BoundaryNorm.autoscale_None" title="matplotlib.colors.BoundaryNorm.autoscale_None"><code class="xref py py-obj docutils literal"><span class="pre">autoscale_None</span></code></a>(A)</td>
-<td>autoscale only None-valued vmin or vmax</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.colors.BoundaryNorm.inverse.html#matplotlib.colors.BoundaryNorm.inverse" title="matplotlib.colors.BoundaryNorm.inverse"><code class="xref py py-obj docutils literal"><span class="pre">inverse</span></code></a>(value)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.colors.BoundaryNorm.process_value.html#matplotlib.colors.BoundaryNorm.process_value" title="matplotlib.colors.BoundaryNorm.process_value"><code class="xref py py-obj docutils literal"><span class="pre">process_value</span></code></a>(value)</td>
-<td>Homogenize the input <em>value</em> for easy and efficient normalization.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.colors.BoundaryNorm.scaled.html#matplotlib.colors.BoundaryNorm.scaled" title="matplotlib.colors.BoundaryNorm.scaled"><code class="xref py py-obj docutils literal"><span class="pre">scaled</span></code></a>()</td>
-<td>return true if vmin and vmax set</td>
-</tr>
-</tbody>
-</table>
 <dl class="method">
 <dt id="matplotlib.colors.BoundaryNorm.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>boundaries</em>, <em>ncolors</em>, <em>clip=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/colors.html#BoundaryNorm.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.colors.BoundaryNorm.__init__" title="Permalink to this definition">¶</a></dt>
@@ -277,6 +245,35 @@ are mapped to 0 if low and ncolors-1 if high.</p>
 
 </dd></dl>
 
+<div class="section" id="methods">
+<h2>7.2.1.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.colors.BoundaryNorm.__init__.html#matplotlib.colors.BoundaryNorm.__init__" title="matplotlib.colors.BoundaryNorm.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>(boundaries,&nbsp;ncolors[,&nbsp;clip])</td>
+<td><em>boundaries</em></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.colors.BoundaryNorm.autoscale.html#matplotlib.colors.BoundaryNorm.autoscale" title="matplotlib.colors.BoundaryNorm.autoscale"><code class="xref py py-obj docutils literal"><span class="pre">autoscale</span></code></a>(A)</td>
+<td>Set <em>vmin</em>, <em>vmax</em> to min, max of <em>A</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.colors.BoundaryNorm.autoscale_None.html#matplotlib.colors.BoundaryNorm.autoscale_None" title="matplotlib.colors.BoundaryNorm.autoscale_None"><code class="xref py py-obj docutils literal"><span class="pre">autoscale_None</span></code></a>(A)</td>
+<td>autoscale only None-valued vmin or vmax</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.colors.BoundaryNorm.inverse.html#matplotlib.colors.BoundaryNorm.inverse" title="matplotlib.colors.BoundaryNorm.inverse"><code class="xref py py-obj docutils literal"><span class="pre">inverse</span></code></a>(value)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.colors.BoundaryNorm.process_value.html#matplotlib.colors.BoundaryNorm.process_value" title="matplotlib.colors.BoundaryNorm.process_value"><code class="xref py py-obj docutils literal"><span class="pre">process_value</span></code></a>(value)</td>
+<td>Homogenize the input <em>value</em> for easy and efficient normalization.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.colors.BoundaryNorm.scaled.html#matplotlib.colors.BoundaryNorm.scaled" title="matplotlib.colors.BoundaryNorm.scaled"><code class="xref py py-obj docutils literal"><span class="pre">scaled</span></code></a>()</td>
+<td>return true if vmin and vmax set</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -285,6 +282,8 @@ are mapped to 0 if low and ncolors-1 if high.</p>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.colors.BoundaryNorm.__init__.html" class="btn btn-neutral float-right" title="7.2.1.1.1. matplotlib.colors.BoundaryNorm.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../matplotlib.colors.rgb_to_hsv.html" class="btn btn-neutral" title="7.1.7. matplotlib.colors.rgb_to_hsv" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>

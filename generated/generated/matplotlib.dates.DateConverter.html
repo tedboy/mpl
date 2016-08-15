@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>22.4.3. matplotlib.dates.DateConverter &mdash; Matplotlib API 1 documentation</title>
+  <title>22.4.3. matplotlib.dates.DateConverter &mdash; My Project v1</title>
   
 
   
@@ -30,10 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="22. matplotlib.dates" href="../matplotlib.dates.html"/>
-        <link rel="next" title="22.4.3.1. matplotlib.dates.DateConverter.axisinfo" href="matplotlib.dates.DateConverter.axisinfo.html"/>
-        <link rel="prev" title="22.4.2.18. matplotlib.dates.AutoDateLocator.zoom" href="matplotlib.dates.AutoDateLocator.zoom.html"/> 
+        <link rel="next" title="22.4.3.1.1. matplotlib.dates.DateConverter.axisinfo" href="matplotlib.dates.DateConverter.axisinfo.html"/>
+        <link rel="prev" title="22.4.2.2.3. matplotlib.dates.AutoDateLocator.hms0d" href="matplotlib.dates.AutoDateLocator.hms0d.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -114,10 +114,7 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.AutoDateFormatter.html">22.4.1. matplotlib.dates.AutoDateFormatter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.AutoDateLocator.html">22.4.2. matplotlib.dates.AutoDateLocator</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">22.4.3. matplotlib.dates.DateConverter</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.DateConverter.axisinfo.html">22.4.3.1. matplotlib.dates.DateConverter.axisinfo</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.DateConverter.convert.html">22.4.3.2. matplotlib.dates.DateConverter.convert</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.DateConverter.default_units.html">22.4.3.3. matplotlib.dates.DateConverter.default_units</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.dates.DateConverter.is_numlike.html">22.4.3.4. matplotlib.dates.DateConverter.is_numlike</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">22.4.3.1. Methods</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.DateFormatter.html">22.4.4. matplotlib.dates.DateFormatter</a></li>
@@ -133,12 +130,8 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.WeekdayLocator.html">22.4.14. matplotlib.dates.WeekdayLocator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.YearLocator.html">22.4.15. matplotlib.dates.YearLocator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.bytespdate2num.html">22.4.16. matplotlib.dates.bytespdate2num</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.relativedelta.html">22.4.17. matplotlib.dates.relativedelta</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.rrule.html">22.4.18. matplotlib.dates.rrule</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.rrulewrapper.html">22.4.19. matplotlib.dates.rrulewrapper</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.strpdate2num.html">22.4.20. matplotlib.dates.strpdate2num</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.xrange.html">22.4.21. matplotlib.dates.xrange</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.zip.html">22.4.22. matplotlib.dates.zip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.rrulewrapper.html">22.4.17. matplotlib.dates.rrulewrapper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.dates.strpdate2num.html">22.4.18. matplotlib.dates.strpdate2num</a></li>
 </ul>
 </li>
 </ul>
@@ -174,7 +167,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -224,7 +217,6 @@
             
   <div class="section" id="matplotlib-dates-dateconverter">
 <h1>22.4.3. matplotlib.dates.DateConverter<a class="headerlink" href="#matplotlib-dates-dateconverter" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="#matplotlib.dates.DateConverter.__init__" title="matplotlib.dates.DateConverter.__init__"><code class="xref py py-func docutils literal"><span class="pre">DateConverter.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.dates.DateConverter">
 <em class="property">class </em><code class="descclassname">matplotlib.dates.</code><code class="descname">DateConverter</code><a class="reference internal" href="../../_modules/matplotlib/dates.html#DateConverter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.dates.DateConverter" title="Permalink to this definition">¶</a></dt>
@@ -232,7 +224,16 @@
 or for date/time data represented as it would be converted
 by <a class="reference internal" href="../matplotlib.dates.date2num.html#matplotlib.dates.date2num" title="matplotlib.dates.date2num"><code class="xref py py-func docutils literal"><span class="pre">date2num()</span></code></a>.</p>
 <p>The &#8216;unit&#8217; tag for such data is None or a tzinfo instance.</p>
-<p class="rubric">Methods</p>
+<dl class="attribute">
+<dt id="matplotlib.dates.DateConverter.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#matplotlib.dates.DateConverter.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(...) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="section" id="methods">
+<h2>22.4.3.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="longtable docutils">
 <colgroup>
 <col width="10%" />
@@ -253,14 +254,7 @@ by <a class="reference internal" href="../matplotlib.dates.date2num.html#matplot
 </tr>
 </tbody>
 </table>
-<dl class="attribute">
-<dt id="matplotlib.dates.DateConverter.__init__">
-<code class="descname">__init__</code><a class="headerlink" href="#matplotlib.dates.DateConverter.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>x.__init__(...) initializes x; see help(type(x)) for signature</p>
-</dd></dl>
-
-</dd></dl>
-
+</div>
 </div>
 
 
@@ -270,10 +264,10 @@ by <a class="reference internal" href="../matplotlib.dates.date2num.html#matplot
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="matplotlib.dates.DateConverter.axisinfo.html" class="btn btn-neutral float-right" title="22.4.3.1. matplotlib.dates.DateConverter.axisinfo" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="matplotlib.dates.DateConverter.axisinfo.html" class="btn btn-neutral float-right" title="22.4.3.1.1. matplotlib.dates.DateConverter.axisinfo" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="matplotlib.dates.AutoDateLocator.zoom.html" class="btn btn-neutral" title="22.4.2.18. matplotlib.dates.AutoDateLocator.zoom" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="matplotlib.dates.AutoDateLocator.hms0d.html" class="btn btn-neutral" title="22.4.2.2.3. matplotlib.dates.AutoDateLocator.hms0d" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

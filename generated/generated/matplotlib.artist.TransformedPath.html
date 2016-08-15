@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>18.2.8. matplotlib.artist.TransformedPath &mdash; Matplotlib API 1 documentation</title>
+  <title>18.2.8. matplotlib.artist.TransformedPath &mdash; My Project v1</title>
   
 
   
@@ -30,10 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="18. matplotlib.artist" href="../matplotlib.artist.html"/>
-        <link rel="next" title="18.2.8.1. matplotlib.artist.TransformedPath.frozen" href="matplotlib.artist.TransformedPath.frozen.html"/>
-        <link rel="prev" title="18.2.7.48. matplotlib.artist.TransformedBbox.union" href="matplotlib.artist.TransformedBbox.union.html"/> 
+        <link rel="next" title="18.2.8.1.1. matplotlib.artist.TransformedPath.__init__" href="matplotlib.artist.TransformedPath.__init__.html"/>
+        <link rel="prev" title="18.2.7.2.26. matplotlib.artist.TransformedBbox.ymin" href="matplotlib.artist.TransformedBbox.ymin.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -113,13 +113,8 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.artist.Transform.html">18.2.6. matplotlib.artist.Transform</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.artist.TransformedBbox.html">18.2.7. matplotlib.artist.TransformedBbox</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">18.2.8. matplotlib.artist.TransformedPath</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.TransformedPath.frozen.html">18.2.8.1. matplotlib.artist.TransformedPath.frozen</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.TransformedPath.get_affine.html">18.2.8.2. matplotlib.artist.TransformedPath.get_affine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.TransformedPath.get_fully_transformed_path.html">18.2.8.3. matplotlib.artist.TransformedPath.get_fully_transformed_path</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.TransformedPath.get_transformed_path_and_affine.html">18.2.8.4. matplotlib.artist.TransformedPath.get_transformed_path_and_affine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.TransformedPath.get_transformed_points_and_affine.html">18.2.8.5. matplotlib.artist.TransformedPath.get_transformed_points_and_affine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.TransformedPath.invalidate.html">18.2.8.6. matplotlib.artist.TransformedPath.invalidate</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.artist.TransformedPath.set_children.html">18.2.8.7. matplotlib.artist.TransformedPath.set_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">18.2.8.1. Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#attributes">18.2.8.2. Attributes</a></li>
 </ul>
 </li>
 </ul>
@@ -162,7 +157,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -212,7 +207,6 @@
             
   <div class="section" id="matplotlib-artist-transformedpath">
 <h1>18.2.8. matplotlib.artist.TransformedPath<a class="headerlink" href="#matplotlib-artist-transformedpath" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.artist.TransformedPath.__init__.html#matplotlib.artist.TransformedPath.__init__" title="matplotlib.artist.TransformedPath.__init__"><code class="xref py py-func docutils literal"><span class="pre">TransformedPath.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.artist.TransformedPath">
 <em class="property">class </em><code class="descclassname">matplotlib.artist.</code><code class="descname">TransformedPath</code><span class="sig-paren">(</span><em>path</em>, <em>transform</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/transforms.html#TransformedPath"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.artist.TransformedPath" title="Permalink to this definition">¶</a></dt>
@@ -225,36 +219,6 @@ changes.</p>
 <p class="last">Paths are considered immutable by this class. Any update to the
 path&#8217;s vertices/codes will not trigger a transform recomputation.</p>
 </div>
-<p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.TransformedPath.frozen.html#matplotlib.artist.TransformedPath.frozen" title="matplotlib.artist.TransformedPath.frozen"><code class="xref py py-obj docutils literal"><span class="pre">frozen</span></code></a>()</td>
-<td>Returns a frozen copy of this transform node.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.TransformedPath.get_affine.html#matplotlib.artist.TransformedPath.get_affine" title="matplotlib.artist.TransformedPath.get_affine"><code class="xref py py-obj docutils literal"><span class="pre">get_affine</span></code></a>()</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.TransformedPath.get_fully_transformed_path.html#matplotlib.artist.TransformedPath.get_fully_transformed_path" title="matplotlib.artist.TransformedPath.get_fully_transformed_path"><code class="xref py py-obj docutils literal"><span class="pre">get_fully_transformed_path</span></code></a>()</td>
-<td>Return a fully-transformed copy of the child path.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.TransformedPath.get_transformed_path_and_affine.html#matplotlib.artist.TransformedPath.get_transformed_path_and_affine" title="matplotlib.artist.TransformedPath.get_transformed_path_and_affine"><code class="xref py py-obj docutils literal"><span class="pre">get_transformed_path_and_affine</span></code></a>()</td>
-<td>Return a copy of the child path, with the non-affine part of the transform already applied, along with the affine part of the path necessary to complete the transformation.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.TransformedPath.get_transformed_points_and_affine.html#matplotlib.artist.TransformedPath.get_transformed_points_and_affine" title="matplotlib.artist.TransformedPath.get_transformed_points_and_affine"><code class="xref py py-obj docutils literal"><span class="pre">get_transformed_points_and_affine</span></code></a>()</td>
-<td>Return a copy of the child path, with the non-affine part of the transform already applied, along with the affine part of the path necessary to complete the transformation.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.TransformedPath.invalidate.html#matplotlib.artist.TransformedPath.invalidate" title="matplotlib.artist.TransformedPath.invalidate"><code class="xref py py-obj docutils literal"><span class="pre">invalidate</span></code></a>()</td>
-<td>Invalidate this <code class="xref py py-class docutils literal"><span class="pre">TransformNode</span></code> and triggers an invalidation of its ancestors.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.TransformedPath.set_children.html#matplotlib.artist.TransformedPath.set_children" title="matplotlib.artist.TransformedPath.set_children"><code class="xref py py-obj docutils literal"><span class="pre">set_children</span></code></a>(*children)</td>
-<td>Set the children of the transform, to let the invalidation system know which transforms can invalidate this transform.</td>
-</tr>
-</tbody>
-</table>
 <dl class="method">
 <dt id="matplotlib.artist.TransformedPath.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>path</em>, <em>transform</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/transforms.html#TransformedPath.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.artist.TransformedPath.__init__" title="Permalink to this definition">¶</a></dt>
@@ -264,6 +228,70 @@ path&#8217;s vertices/codes will not trigger a transform recomputation.</p>
 
 </dd></dl>
 
+<div class="section" id="methods">
+<h2>18.2.8.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.TransformedPath.__init__.html#matplotlib.artist.TransformedPath.__init__" title="matplotlib.artist.TransformedPath.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>(path,&nbsp;transform)</td>
+<td>Create a new <a class="reference internal" href="#matplotlib.artist.TransformedPath" title="matplotlib.artist.TransformedPath"><code class="xref py py-class docutils literal"><span class="pre">TransformedPath</span></code></a> from the given <a class="reference internal" href="matplotlib.path.Path.html#matplotlib.path.Path" title="matplotlib.path.Path"><code class="xref py py-class docutils literal"><span class="pre">Path</span></code></a> and <a class="reference internal" href="matplotlib.artist.Transform.html#matplotlib.artist.Transform" title="matplotlib.artist.Transform"><code class="xref py py-class docutils literal"><span class="pre">Transform</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.TransformedPath.frozen.html#matplotlib.artist.TransformedPath.frozen" title="matplotlib.artist.TransformedPath.frozen"><code class="xref py py-obj docutils literal"><span class="pre">frozen</span></code></a>()</td>
+<td>Returns a frozen copy of this transform node.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.TransformedPath.get_affine.html#matplotlib.artist.TransformedPath.get_affine" title="matplotlib.artist.TransformedPath.get_affine"><code class="xref py py-obj docutils literal"><span class="pre">get_affine</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.TransformedPath.get_fully_transformed_path.html#matplotlib.artist.TransformedPath.get_fully_transformed_path" title="matplotlib.artist.TransformedPath.get_fully_transformed_path"><code class="xref py py-obj docutils literal"><span class="pre">get_fully_transformed_path</span></code></a>()</td>
+<td>Return a fully-transformed copy of the child path.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.TransformedPath.get_transformed_path_and_affine.html#matplotlib.artist.TransformedPath.get_transformed_path_and_affine" title="matplotlib.artist.TransformedPath.get_transformed_path_and_affine"><code class="xref py py-obj docutils literal"><span class="pre">get_transformed_path_and_affine</span></code></a>()</td>
+<td>Return a copy of the child path, with the non-affine part of the transform already applied, along with the affine part of the path necessary to complete the transformation.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.TransformedPath.get_transformed_points_and_affine.html#matplotlib.artist.TransformedPath.get_transformed_points_and_affine" title="matplotlib.artist.TransformedPath.get_transformed_points_and_affine"><code class="xref py py-obj docutils literal"><span class="pre">get_transformed_points_and_affine</span></code></a>()</td>
+<td>Return a copy of the child path, with the non-affine part of the transform already applied, along with the affine part of the path necessary to complete the transformation.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.TransformedPath.invalidate.html#matplotlib.artist.TransformedPath.invalidate" title="matplotlib.artist.TransformedPath.invalidate"><code class="xref py py-obj docutils literal"><span class="pre">invalidate</span></code></a>()</td>
+<td>Invalidate this <code class="xref py py-class docutils literal"><span class="pre">TransformNode</span></code> and triggers an invalidation of its ancestors.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.TransformedPath.set_children.html#matplotlib.artist.TransformedPath.set_children" title="matplotlib.artist.TransformedPath.set_children"><code class="xref py py-obj docutils literal"><span class="pre">set_children</span></code></a>(*children)</td>
+<td>Set the children of the transform, to let the invalidation system know which transforms can invalidate this transform.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attributes">
+<h2>18.2.8.2. Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.TransformedPath.INVALID.html#matplotlib.artist.TransformedPath.INVALID" title="matplotlib.artist.TransformedPath.INVALID"><code class="xref py py-obj docutils literal"><span class="pre">INVALID</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.TransformedPath.INVALID_AFFINE.html#matplotlib.artist.TransformedPath.INVALID_AFFINE" title="matplotlib.artist.TransformedPath.INVALID_AFFINE"><code class="xref py py-obj docutils literal"><span class="pre">INVALID_AFFINE</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.TransformedPath.INVALID_NON_AFFINE.html#matplotlib.artist.TransformedPath.INVALID_NON_AFFINE" title="matplotlib.artist.TransformedPath.INVALID_NON_AFFINE"><code class="xref py py-obj docutils literal"><span class="pre">INVALID_NON_AFFINE</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.TransformedPath.is_affine.html#matplotlib.artist.TransformedPath.is_affine" title="matplotlib.artist.TransformedPath.is_affine"><code class="xref py py-obj docutils literal"><span class="pre">is_affine</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.artist.TransformedPath.is_bbox.html#matplotlib.artist.TransformedPath.is_bbox" title="matplotlib.artist.TransformedPath.is_bbox"><code class="xref py py-obj docutils literal"><span class="pre">is_bbox</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.artist.TransformedPath.pass_through.html#matplotlib.artist.TransformedPath.pass_through" title="matplotlib.artist.TransformedPath.pass_through"><code class="xref py py-obj docutils literal"><span class="pre">pass_through</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -273,10 +301,10 @@ path&#8217;s vertices/codes will not trigger a transform recomputation.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="matplotlib.artist.TransformedPath.frozen.html" class="btn btn-neutral float-right" title="18.2.8.1. matplotlib.artist.TransformedPath.frozen" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="matplotlib.artist.TransformedPath.__init__.html" class="btn btn-neutral float-right" title="18.2.8.1.1. matplotlib.artist.TransformedPath.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="matplotlib.artist.TransformedBbox.union.html" class="btn btn-neutral" title="18.2.7.48. matplotlib.artist.TransformedBbox.union" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="matplotlib.artist.TransformedBbox.ymin.html" class="btn btn-neutral" title="18.2.7.2.26. matplotlib.artist.TransformedBbox.ymin" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

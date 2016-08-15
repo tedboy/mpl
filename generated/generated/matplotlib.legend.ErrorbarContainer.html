@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>9.2.11. matplotlib.legend.ErrorbarContainer &mdash; Matplotlib API 1 documentation</title>
+  <title>9.2.11. matplotlib.legend.ErrorbarContainer &mdash; My Project v1</title>
   
 
   
@@ -30,10 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="9. matplotlib.legend" href="../matplotlib.legend.html"/>
-        <link rel="next" title="9.2.11.1. matplotlib.legend.ErrorbarContainer.add_callback" href="matplotlib.legend.ErrorbarContainer.add_callback.html"/>
-        <link rel="prev" title="9.2.10.76. matplotlib.legend.DrawingArea.update_from" href="matplotlib.legend.DrawingArea.update_from.html"/> 
+        <link rel="next" title="9.2.11.1.1. matplotlib.legend.ErrorbarContainer.__init__" href="matplotlib.legend.ErrorbarContainer.__init__.html"/>
+        <link rel="prev" title="9.2.10.2.6. matplotlib.legend.DrawingArea.zorder" href="matplotlib.legend.DrawingArea.zorder.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -107,16 +107,7 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.DraggableOffsetBox.html">9.2.9. matplotlib.legend.DraggableOffsetBox</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.DrawingArea.html">9.2.10. matplotlib.legend.DrawingArea</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">9.2.11. matplotlib.legend.ErrorbarContainer</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.ErrorbarContainer.add_callback.html">9.2.11.1. matplotlib.legend.ErrorbarContainer.add_callback</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.ErrorbarContainer.count.html">9.2.11.2. matplotlib.legend.ErrorbarContainer.count</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.ErrorbarContainer.get_children.html">9.2.11.3. matplotlib.legend.ErrorbarContainer.get_children</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.ErrorbarContainer.get_label.html">9.2.11.4. matplotlib.legend.ErrorbarContainer.get_label</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.ErrorbarContainer.index.html">9.2.11.5. matplotlib.legend.ErrorbarContainer.index</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.ErrorbarContainer.pchanged.html">9.2.11.6. matplotlib.legend.ErrorbarContainer.pchanged</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.ErrorbarContainer.remove.html">9.2.11.7. matplotlib.legend.ErrorbarContainer.remove</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.ErrorbarContainer.remove_callback.html">9.2.11.8. matplotlib.legend.ErrorbarContainer.remove_callback</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.ErrorbarContainer.set_label.html">9.2.11.9. matplotlib.legend.ErrorbarContainer.set_label</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.ErrorbarContainer.set_remove_method.html">9.2.11.10. matplotlib.legend.ErrorbarContainer.set_remove_method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">9.2.11.1. Methods</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.FancyBboxPatch.html">9.2.12. matplotlib.legend.FancyBboxPatch</a></li>
@@ -136,7 +127,6 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.TransformedBbox.html">9.2.26. matplotlib.legend.TransformedBbox</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.VPacker.html">9.2.27. matplotlib.legend.VPacker</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.silent_list.html">9.2.28. matplotlib.legend.silent_list</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.xrange.html">9.2.29. matplotlib.legend.xrange</a></li>
 </ul>
 </li>
 </ul>
@@ -185,7 +175,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -235,51 +225,60 @@
             
   <div class="section" id="matplotlib-legend-errorbarcontainer">
 <h1>9.2.11. matplotlib.legend.ErrorbarContainer<a class="headerlink" href="#matplotlib-legend-errorbarcontainer" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.legend.ErrorbarContainer.__init__.html#matplotlib.legend.ErrorbarContainer.__init__" title="matplotlib.legend.ErrorbarContainer.__init__"><code class="xref py py-func docutils literal"><span class="pre">ErrorbarContainer.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.legend.ErrorbarContainer">
 <em class="property">class </em><code class="descclassname">matplotlib.legend.</code><code class="descname">ErrorbarContainer</code><span class="sig-paren">(</span><em>lines</em>, <em>has_xerr=False</em>, <em>has_yerr=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/container.html#ErrorbarContainer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.legend.ErrorbarContainer" title="Permalink to this definition">¶</a></dt>
-<dd><p class="rubric">Methods</p>
+<dd><dl class="method">
+<dt id="matplotlib.legend.ErrorbarContainer.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>lines</em>, <em>has_xerr=False</em>, <em>has_yerr=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/container.html#ErrorbarContainer.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.legend.ErrorbarContainer.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="section" id="methods">
+<h2>9.2.11.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="longtable docutils">
 <colgroup>
 <col width="10%" />
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.ErrorbarContainer.add_callback.html#matplotlib.legend.ErrorbarContainer.add_callback" title="matplotlib.legend.ErrorbarContainer.add_callback"><code class="xref py py-obj docutils literal"><span class="pre">add_callback</span></code></a>(func)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.ErrorbarContainer.__init__.html#matplotlib.legend.ErrorbarContainer.__init__" title="matplotlib.legend.ErrorbarContainer.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>(lines[,&nbsp;has_xerr,&nbsp;has_yerr])</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.ErrorbarContainer.add_callback.html#matplotlib.legend.ErrorbarContainer.add_callback" title="matplotlib.legend.ErrorbarContainer.add_callback"><code class="xref py py-obj docutils literal"><span class="pre">add_callback</span></code></a>(func)</td>
 <td>Adds a callback function that will be called whenever one of the <a class="reference internal" href="matplotlib.legend.Artist.html#matplotlib.legend.Artist" title="matplotlib.legend.Artist"><code class="xref py py-class docutils literal"><span class="pre">Artist</span></code></a>&#8216;s properties changes.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.ErrorbarContainer.count.html#matplotlib.legend.ErrorbarContainer.count" title="matplotlib.legend.ErrorbarContainer.count"><code class="xref py py-obj docutils literal"><span class="pre">count</span></code></a>(...)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.ErrorbarContainer.count.html#matplotlib.legend.ErrorbarContainer.count" title="matplotlib.legend.ErrorbarContainer.count"><code class="xref py py-obj docutils literal"><span class="pre">count</span></code></a>(...)</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.ErrorbarContainer.get_children.html#matplotlib.legend.ErrorbarContainer.get_children" title="matplotlib.legend.ErrorbarContainer.get_children"><code class="xref py py-obj docutils literal"><span class="pre">get_children</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.ErrorbarContainer.get_children.html#matplotlib.legend.ErrorbarContainer.get_children" title="matplotlib.legend.ErrorbarContainer.get_children"><code class="xref py py-obj docutils literal"><span class="pre">get_children</span></code></a>()</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.ErrorbarContainer.get_label.html#matplotlib.legend.ErrorbarContainer.get_label" title="matplotlib.legend.ErrorbarContainer.get_label"><code class="xref py py-obj docutils literal"><span class="pre">get_label</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.ErrorbarContainer.get_label.html#matplotlib.legend.ErrorbarContainer.get_label" title="matplotlib.legend.ErrorbarContainer.get_label"><code class="xref py py-obj docutils literal"><span class="pre">get_label</span></code></a>()</td>
 <td>Get the label used for this artist in the legend.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.ErrorbarContainer.index.html#matplotlib.legend.ErrorbarContainer.index" title="matplotlib.legend.ErrorbarContainer.index"><code class="xref py py-obj docutils literal"><span class="pre">index</span></code></a>((value,&nbsp;[start,&nbsp;...)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.ErrorbarContainer.index.html#matplotlib.legend.ErrorbarContainer.index" title="matplotlib.legend.ErrorbarContainer.index"><code class="xref py py-obj docutils literal"><span class="pre">index</span></code></a>((value,&nbsp;[start,&nbsp;...)</td>
 <td>Raises ValueError if the value is not present.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.ErrorbarContainer.pchanged.html#matplotlib.legend.ErrorbarContainer.pchanged" title="matplotlib.legend.ErrorbarContainer.pchanged"><code class="xref py py-obj docutils literal"><span class="pre">pchanged</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.ErrorbarContainer.pchanged.html#matplotlib.legend.ErrorbarContainer.pchanged" title="matplotlib.legend.ErrorbarContainer.pchanged"><code class="xref py py-obj docutils literal"><span class="pre">pchanged</span></code></a>()</td>
 <td>Fire an event when property changed, calling all of the registered callbacks.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.ErrorbarContainer.remove.html#matplotlib.legend.ErrorbarContainer.remove" title="matplotlib.legend.ErrorbarContainer.remove"><code class="xref py py-obj docutils literal"><span class="pre">remove</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.ErrorbarContainer.remove.html#matplotlib.legend.ErrorbarContainer.remove" title="matplotlib.legend.ErrorbarContainer.remove"><code class="xref py py-obj docutils literal"><span class="pre">remove</span></code></a>()</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.ErrorbarContainer.remove_callback.html#matplotlib.legend.ErrorbarContainer.remove_callback" title="matplotlib.legend.ErrorbarContainer.remove_callback"><code class="xref py py-obj docutils literal"><span class="pre">remove_callback</span></code></a>(oid)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.ErrorbarContainer.remove_callback.html#matplotlib.legend.ErrorbarContainer.remove_callback" title="matplotlib.legend.ErrorbarContainer.remove_callback"><code class="xref py py-obj docutils literal"><span class="pre">remove_callback</span></code></a>(oid)</td>
 <td>Remove a callback based on its <em>id</em>.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.ErrorbarContainer.set_label.html#matplotlib.legend.ErrorbarContainer.set_label" title="matplotlib.legend.ErrorbarContainer.set_label"><code class="xref py py-obj docutils literal"><span class="pre">set_label</span></code></a>(s)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.ErrorbarContainer.set_label.html#matplotlib.legend.ErrorbarContainer.set_label" title="matplotlib.legend.ErrorbarContainer.set_label"><code class="xref py py-obj docutils literal"><span class="pre">set_label</span></code></a>(s)</td>
 <td>Set the label to <em>s</em> for auto legend.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.ErrorbarContainer.set_remove_method.html#matplotlib.legend.ErrorbarContainer.set_remove_method" title="matplotlib.legend.ErrorbarContainer.set_remove_method"><code class="xref py py-obj docutils literal"><span class="pre">set_remove_method</span></code></a>(f)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.ErrorbarContainer.set_remove_method.html#matplotlib.legend.ErrorbarContainer.set_remove_method" title="matplotlib.legend.ErrorbarContainer.set_remove_method"><code class="xref py py-obj docutils literal"><span class="pre">set_remove_method</span></code></a>(f)</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
+</div>
 </div>
 
 
@@ -289,10 +288,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="matplotlib.legend.ErrorbarContainer.add_callback.html" class="btn btn-neutral float-right" title="9.2.11.1. matplotlib.legend.ErrorbarContainer.add_callback" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="matplotlib.legend.ErrorbarContainer.__init__.html" class="btn btn-neutral float-right" title="9.2.11.1.1. matplotlib.legend.ErrorbarContainer.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="matplotlib.legend.DrawingArea.update_from.html" class="btn btn-neutral" title="9.2.10.76. matplotlib.legend.DrawingArea.update_from" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="matplotlib.legend.DrawingArea.zorder.html" class="btn btn-neutral" title="9.2.10.2.6. matplotlib.legend.DrawingArea.zorder" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

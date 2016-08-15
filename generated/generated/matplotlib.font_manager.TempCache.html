@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>25.2.5. matplotlib.font_manager.TempCache &mdash; Matplotlib API 1 documentation</title>
+  <title>25.2.4. matplotlib.font_manager.TempCache &mdash; My Project v1</title>
   
 
   
@@ -30,10 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="25. matplotlib.font_manager" href="../matplotlib.font_manager.html"/>
-        <link rel="next" title="25.2.5.1. matplotlib.font_manager.TempCache.get" href="matplotlib.font_manager.TempCache.get.html"/>
-        <link rel="prev" title="25.2.4. matplotlib.font_manager.Iterable" href="matplotlib.font_manager.Iterable.html"/> 
+        <link rel="next" title="25.2.4.1.1. matplotlib.font_manager.TempCache.__init__" href="matplotlib.font_manager.TempCache.__init__.html"/>
+        <link rel="prev" title="25.2.3.1.23. matplotlib.font_manager.FontProperties.set_weight" href="matplotlib.font_manager.FontProperties.set_weight.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -115,11 +115,9 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.font_manager.FontEntry.html">25.2.1. matplotlib.font_manager.FontEntry</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.font_manager.FontManager.html">25.2.2. matplotlib.font_manager.FontManager</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.font_manager.FontProperties.html">25.2.3. matplotlib.font_manager.FontProperties</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.font_manager.Iterable.html">25.2.4. matplotlib.font_manager.Iterable</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">25.2.5. matplotlib.font_manager.TempCache</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.font_manager.TempCache.get.html">25.2.5.1. matplotlib.font_manager.TempCache.get</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.font_manager.TempCache.make_rcparams_key.html">25.2.5.2. matplotlib.font_manager.TempCache.make_rcparams_key</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.font_manager.TempCache.set.html">25.2.5.3. matplotlib.font_manager.TempCache.set</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">25.2.4. matplotlib.font_manager.TempCache</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#methods">25.2.4.1. Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#attributes">25.2.4.2. Attributes</a></li>
 </ul>
 </li>
 </ul>
@@ -154,7 +152,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -185,7 +183,7 @@
         
           <li><a href="../matplotlib.font_manager.html">25. matplotlib.font_manager</a> &raquo;</li>
         
-      <li>25.2.5. matplotlib.font_manager.TempCache</li>
+      <li>25.2.4. matplotlib.font_manager.TempCache</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -203,8 +201,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="matplotlib-font-manager-tempcache">
-<h1>25.2.5. matplotlib.font_manager.TempCache<a class="headerlink" href="#matplotlib-font-manager-tempcache" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.font_manager.TempCache.__init__.html#matplotlib.font_manager.TempCache.__init__" title="matplotlib.font_manager.TempCache.__init__"><code class="xref py py-func docutils literal"><span class="pre">TempCache.__init__()</span></code></a></p>
+<h1>25.2.4. matplotlib.font_manager.TempCache<a class="headerlink" href="#matplotlib-font-manager-tempcache" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="matplotlib.font_manager.TempCache">
 <em class="property">class </em><code class="descclassname">matplotlib.font_manager.</code><code class="descname">TempCache</code><a class="reference internal" href="../../_modules/matplotlib/font_manager.html#TempCache"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.font_manager.TempCache" title="Permalink to this definition">¶</a></dt>
@@ -213,26 +210,50 @@ and (b) invalidated whenever certain font-related
 rcParams&#8212;namely the family lookup lists&#8212;are changed or the
 font cache is reloaded.  This avoids the expensive linear search
 through all fonts every time a font is looked up.</p>
-<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="matplotlib.font_manager.TempCache.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/font_manager.html#TempCache.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.font_manager.TempCache.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="section" id="methods">
+<h2>25.2.4.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="longtable docutils">
 <colgroup>
 <col width="10%" />
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.font_manager.TempCache.get.html#matplotlib.font_manager.TempCache.get" title="matplotlib.font_manager.TempCache.get"><code class="xref py py-obj docutils literal"><span class="pre">get</span></code></a>(prop)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.font_manager.TempCache.__init__.html#matplotlib.font_manager.TempCache.__init__" title="matplotlib.font_manager.TempCache.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>()</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.font_manager.TempCache.make_rcparams_key.html#matplotlib.font_manager.TempCache.make_rcparams_key" title="matplotlib.font_manager.TempCache.make_rcparams_key"><code class="xref py py-obj docutils literal"><span class="pre">make_rcparams_key</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.font_manager.TempCache.get.html#matplotlib.font_manager.TempCache.get" title="matplotlib.font_manager.TempCache.get"><code class="xref py py-obj docutils literal"><span class="pre">get</span></code></a>(prop)</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.font_manager.TempCache.set.html#matplotlib.font_manager.TempCache.set" title="matplotlib.font_manager.TempCache.set"><code class="xref py py-obj docutils literal"><span class="pre">set</span></code></a>(prop,&nbsp;value)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.font_manager.TempCache.make_rcparams_key.html#matplotlib.font_manager.TempCache.make_rcparams_key" title="matplotlib.font_manager.TempCache.make_rcparams_key"><code class="xref py py-obj docutils literal"><span class="pre">make_rcparams_key</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.font_manager.TempCache.set.html#matplotlib.font_manager.TempCache.set" title="matplotlib.font_manager.TempCache.set"><code class="xref py py-obj docutils literal"><span class="pre">set</span></code></a>(prop,&nbsp;value)</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
+</div>
+<div class="section" id="attributes">
+<h2>25.2.4.2. Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.font_manager.TempCache.invalidating_rcparams.html#matplotlib.font_manager.TempCache.invalidating_rcparams" title="matplotlib.font_manager.TempCache.invalidating_rcparams"><code class="xref py py-obj docutils literal"><span class="pre">invalidating_rcparams</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -242,10 +263,10 @@ through all fonts every time a font is looked up.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="matplotlib.font_manager.TempCache.get.html" class="btn btn-neutral float-right" title="25.2.5.1. matplotlib.font_manager.TempCache.get" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="matplotlib.font_manager.TempCache.__init__.html" class="btn btn-neutral float-right" title="25.2.4.1.1. matplotlib.font_manager.TempCache.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="matplotlib.font_manager.Iterable.html" class="btn btn-neutral" title="25.2.4. matplotlib.font_manager.Iterable" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="matplotlib.font_manager.FontProperties.set_weight.html" class="btn btn-neutral" title="25.2.3.1.23. matplotlib.font_manager.FontProperties.set_weight" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

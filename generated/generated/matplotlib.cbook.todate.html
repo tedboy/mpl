@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>20.2.17. matplotlib.cbook.todate &mdash; Matplotlib API 1 documentation</title>
+  <title>20.2.14. matplotlib.cbook.todate &mdash; My Project v1</title>
   
 
   
@@ -30,9 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="20. matplotlib.cbook" href="../matplotlib.cbook.html"/>
-        <link rel="prev" title="20.2.16.9. matplotlib.cbook.silent_list.sort" href="matplotlib.cbook.silent_list.sort.html"/> 
+        <link rel="next" title="20.2.14.1.1. matplotlib.cbook.todate.__init__" href="matplotlib.cbook.todate.__init__.html"/>
+        <link rel="prev" title="20.2.13.1.10. matplotlib.cbook.silent_list.sort" href="matplotlib.cbook.silent_list.sort.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -51,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -115,23 +116,18 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.RingBuffer.html">20.2.7. matplotlib.cbook.RingBuffer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.Sorter.html">20.2.8. matplotlib.cbook.Sorter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.Stack.html">20.2.9. matplotlib.cbook.Stack</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.WeakKeyDictionary.html">20.2.10. matplotlib.cbook.WeakKeyDictionary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.Xlator.html">20.2.11. matplotlib.cbook.Xlator</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.converter.html">20.2.12. matplotlib.cbook.converter</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.maxdict.html">20.2.13. matplotlib.cbook.maxdict</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.ref.html">20.2.14. matplotlib.cbook.ref</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.repeat.html">20.2.15. matplotlib.cbook.repeat</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.silent_list.html">20.2.16. matplotlib.cbook.silent_list</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">20.2.17. matplotlib.cbook.todate</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.cbook.todate.is_missing.html">20.2.17.1. matplotlib.cbook.todate.is_missing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.Xlator.html">20.2.10. matplotlib.cbook.Xlator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.converter.html">20.2.11. matplotlib.cbook.converter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.maxdict.html">20.2.12. matplotlib.cbook.maxdict</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.silent_list.html">20.2.13. matplotlib.cbook.silent_list</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">20.2.14. matplotlib.cbook.todate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#methods">20.2.14.1. Methods</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.todatetime.html">20.2.18. matplotlib.cbook.todatetime</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.tofloat.html">20.2.19. matplotlib.cbook.tofloat</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.toint.html">20.2.20. matplotlib.cbook.toint</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.tostr.html">20.2.21. matplotlib.cbook.tostr</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.xrange.html">20.2.22. matplotlib.cbook.xrange</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.zip.html">20.2.23. matplotlib.cbook.zip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.todatetime.html">20.2.15. matplotlib.cbook.todatetime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.tofloat.html">20.2.16. matplotlib.cbook.tofloat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.toint.html">20.2.17. matplotlib.cbook.toint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.cbook.tostr.html">20.2.18. matplotlib.cbook.tostr</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../matplotlib.cbook.html#exceptions">20.3. Exceptions</a></li>
@@ -170,7 +166,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -201,7 +197,7 @@
         
           <li><a href="../matplotlib.cbook.html">20. matplotlib.cbook</a> &raquo;</li>
         
-      <li>20.2.17. matplotlib.cbook.todate</li>
+      <li>20.2.14. matplotlib.cbook.todate</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -219,27 +215,11 @@
            <div itemprop="articleBody">
             
   <div class="section" id="matplotlib-cbook-todate">
-<h1>20.2.17. matplotlib.cbook.todate<a class="headerlink" href="#matplotlib-cbook-todate" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.cbook.todate.__init__.html#matplotlib.cbook.todate.__init__" title="matplotlib.cbook.todate.__init__"><code class="xref py py-func docutils literal"><span class="pre">todate.__init__()</span></code></a></p>
+<h1>20.2.14. matplotlib.cbook.todate<a class="headerlink" href="#matplotlib-cbook-todate" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="matplotlib.cbook.todate">
 <em class="property">class </em><code class="descclassname">matplotlib.cbook.</code><code class="descname">todate</code><span class="sig-paren">(</span><em>fmt=u'%Y-%m-%d'</em>, <em>missing=u'Null'</em>, <em>missingval=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/cbook.html#todate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.cbook.todate" title="Permalink to this definition">¶</a></dt>
 <dd><p>convert to a date or None</p>
-<p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">__call__</span></code>(s)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.cbook.todate.is_missing.html#matplotlib.cbook.todate.is_missing" title="matplotlib.cbook.todate.is_missing"><code class="xref py py-obj docutils literal"><span class="pre">is_missing</span></code></a>(s)</td>
-<td></td>
-</tr>
-</tbody>
-</table>
 <dl class="method">
 <dt id="matplotlib.cbook.todate.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>fmt=u'%Y-%m-%d'</em>, <em>missing=u'Null'</em>, <em>missingval=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/cbook.html#todate.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.cbook.todate.__init__" title="Permalink to this definition">¶</a></dt>
@@ -248,6 +228,23 @@
 
 </dd></dl>
 
+<div class="section" id="methods">
+<h2>20.2.14.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.cbook.todate.__init__.html#matplotlib.cbook.todate.__init__" title="matplotlib.cbook.todate.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>([fmt,&nbsp;missing,&nbsp;missingval])</td>
+<td>use a <code class="xref py py-func docutils literal"><span class="pre">time.strptime()</span></code> format string for conversion</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.cbook.todate.is_missing.html#matplotlib.cbook.todate.is_missing" title="matplotlib.cbook.todate.is_missing"><code class="xref py py-obj docutils literal"><span class="pre">is_missing</span></code></a>(s)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -257,8 +254,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="matplotlib.cbook.todate.__init__.html" class="btn btn-neutral float-right" title="20.2.14.1.1. matplotlib.cbook.todate.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="matplotlib.cbook.silent_list.sort.html" class="btn btn-neutral" title="20.2.16.9. matplotlib.cbook.silent_list.sort" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="matplotlib.cbook.silent_list.sort.html" class="btn btn-neutral" title="20.2.13.1.10. matplotlib.cbook.silent_list.sort" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

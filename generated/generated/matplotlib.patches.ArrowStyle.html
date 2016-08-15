@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>12.2.3. matplotlib.patches.ArrowStyle &mdash; Matplotlib API 1 documentation</title>
+  <title>12.2.3. matplotlib.patches.ArrowStyle &mdash; My Project v1</title>
   
 
   
@@ -30,9 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="12. matplotlib.patches" href="../matplotlib.patches.html"/>
-        <link rel="prev" title="12.2.2.103. matplotlib.patches.Arrow.update_from" href="matplotlib.patches.Arrow.update_from.html"/> 
+        <link rel="next" title="12.2.3.1.1. matplotlib.patches.ArrowStyle.get_styles" href="matplotlib.patches.ArrowStyle.get_styles.html"/>
+        <link rel="prev" title="12.2.2.2.8. matplotlib.patches.Arrow.zorder" href="matplotlib.patches.Arrow.zorder.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -51,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -101,9 +102,7 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Arc.html">12.2.1. matplotlib.patches.Arc</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Arrow.html">12.2.2. matplotlib.patches.Arrow</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">12.2.3. matplotlib.patches.ArrowStyle</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.ArrowStyle.get_styles.html">12.2.3.1. matplotlib.patches.ArrowStyle.get_styles</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.ArrowStyle.pprint_styles.html">12.2.3.2. matplotlib.patches.ArrowStyle.pprint_styles</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.ArrowStyle.register.html">12.2.3.3. matplotlib.patches.ArrowStyle.register</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">12.2.3.1. Methods</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.BoxStyle.html">12.2.4. matplotlib.patches.BoxStyle</a></li>
@@ -124,8 +123,6 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Shadow.html">12.2.19. matplotlib.patches.Shadow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Wedge.html">12.2.20. matplotlib.patches.Wedge</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.YAArrow.html">12.2.21. matplotlib.patches.YAArrow</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.map.html">12.2.22. matplotlib.patches.map</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.zip.html">12.2.23. matplotlib.patches.zip</a></li>
 </ul>
 </li>
 </ul>
@@ -171,7 +168,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -221,7 +218,6 @@
             
   <div class="section" id="matplotlib-patches-arrowstyle">
 <h1>12.2.3. matplotlib.patches.ArrowStyle<a class="headerlink" href="#matplotlib-patches-arrowstyle" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="#matplotlib.patches.ArrowStyle.__init__" title="matplotlib.patches.ArrowStyle.__init__"><code class="xref py py-func docutils literal"><span class="pre">ArrowStyle.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.patches.ArrowStyle">
 <em class="property">class </em><code class="descclassname">matplotlib.patches.</code><code class="descname">ArrowStyle</code><a class="reference internal" href="../../_modules/matplotlib/patches.html#ArrowStyle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.patches.ArrowStyle" title="Permalink to this definition">¶</a></dt>
@@ -326,55 +322,22 @@ meaning as in <a class="reference internal" href="matplotlib.patches.BoxStyle.ht
 stroked. This is meant to be used to correct the location of the
 head so that it does not overshoot the destination point, but not all
 classes support it.</p>
-<p class="rubric">Methods</p>
+<dl class="attribute">
+<dt id="matplotlib.patches.ArrowStyle.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#matplotlib.patches.ArrowStyle.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(...) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="section" id="methods">
+<h2>12.2.3.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="longtable docutils">
 <colgroup>
 <col width="10%" />
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">BarAB</span></code>([widthA,&nbsp;angleA,&nbsp;widthB,&nbsp;angleB])</td>
-<td>An arrow with a bar(|) at both ends.</td>
-</tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">BracketA</span></code>([widthA,&nbsp;lengthA,&nbsp;angleA])</td>
-<td>An arrow with a bracket(])  at its end.</td>
-</tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">BracketAB</span></code>([widthA,&nbsp;lengthA,&nbsp;angleA,&nbsp;widthB,&nbsp;...])</td>
-<td>An arrow with a bracket(])  at both ends.</td>
-</tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">BracketB</span></code>([widthB,&nbsp;lengthB,&nbsp;angleB])</td>
-<td>An arrow with a bracket([)  at its end.</td>
-</tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">Curve</span></code>()</td>
-<td>A simple curve without any arrow head.</td>
-</tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">CurveA</span></code>([head_length,&nbsp;head_width])</td>
-<td>An arrow with a head at its begin point.</td>
-</tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">CurveAB</span></code>([head_length,&nbsp;head_width])</td>
-<td>An arrow with heads both at the begin and the end point.</td>
-</tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">CurveB</span></code>([head_length,&nbsp;head_width])</td>
-<td>An arrow with a head at its end point.</td>
-</tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">CurveFilledA</span></code>([head_length,&nbsp;head_width])</td>
-<td>An arrow with filled triangle head at the begin.</td>
-</tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">CurveFilledAB</span></code>([head_length,&nbsp;head_width])</td>
-<td>An arrow with filled triangle heads both at the begin and the end point.</td>
-</tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">CurveFilledB</span></code>([head_length,&nbsp;head_width])</td>
-<td>An arrow with filled triangle head at the end.</td>
-</tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">Fancy</span></code>([head_length,&nbsp;head_width,&nbsp;tail_width])</td>
-<td>A fancy arrow.</td>
-</tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">Simple</span></code>([head_length,&nbsp;head_width,&nbsp;tail_width])</td>
-<td>A simple arrow.</td>
-</tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">Wedge</span></code>([tail_width,&nbsp;shrink_factor])</td>
-<td>Wedge(?) shape.</td>
-</tr>
 <tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.ArrowStyle.get_styles.html#matplotlib.patches.ArrowStyle.get_styles" title="matplotlib.patches.ArrowStyle.get_styles"><code class="xref py py-obj docutils literal"><span class="pre">get_styles</span></code></a>(klass)</td>
 <td>A class method which returns a dictionary of available styles.</td>
 </tr>
@@ -386,14 +349,7 @@ classes support it.</p>
 </tr>
 </tbody>
 </table>
-<dl class="attribute">
-<dt id="matplotlib.patches.ArrowStyle.__init__">
-<code class="descname">__init__</code><a class="headerlink" href="#matplotlib.patches.ArrowStyle.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>x.__init__(...) initializes x; see help(type(x)) for signature</p>
-</dd></dl>
-
-</dd></dl>
-
+</div>
 </div>
 
 
@@ -403,8 +359,10 @@ classes support it.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="matplotlib.patches.ArrowStyle.get_styles.html" class="btn btn-neutral float-right" title="12.2.3.1.1. matplotlib.patches.ArrowStyle.get_styles" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="matplotlib.patches.Arrow.update_from.html" class="btn btn-neutral" title="12.2.2.103. matplotlib.patches.Arrow.update_from" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="matplotlib.patches.Arrow.zorder.html" class="btn btn-neutral" title="12.2.2.2.8. matplotlib.patches.Arrow.zorder" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

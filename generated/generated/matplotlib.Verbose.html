@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1.2.2. matplotlib.Verbose &mdash; Matplotlib API 1 documentation</title>
+  <title>1.2.2. matplotlib.Verbose &mdash; My Project v1</title>
   
 
   
@@ -30,10 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="1. matplotlib" href="../matplotlib.html"/>
-        <link rel="next" title="1.2.2.1. matplotlib.Verbose.ge" href="matplotlib.Verbose.ge.html"/>
-        <link rel="prev" title="1.2.1.19. matplotlib.RcParams.viewvalues" href="matplotlib.RcParams.viewvalues.html"/> 
+        <link rel="next" title="1.2.2.1.1. matplotlib.Verbose.__init__" href="matplotlib.Verbose.__init__.html"/>
+        <link rel="prev" title="1.2.1.2.3. matplotlib.RcParams.validate" href="matplotlib.RcParams.validate.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -90,15 +90,11 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.html#classes">1.2. Classes</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.RcParams.html">1.2.1. matplotlib.RcParams</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">1.2.2. matplotlib.Verbose</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.Verbose.ge.html">1.2.2.1. matplotlib.Verbose.ge</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.Verbose.report.html">1.2.2.2. matplotlib.Verbose.report</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.Verbose.set_fileo.html">1.2.2.3. matplotlib.Verbose.set_fileo</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.Verbose.set_level.html">1.2.2.4. matplotlib.Verbose.set_level</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.Verbose.wrap.html">1.2.2.5. matplotlib.Verbose.wrap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">1.2.2.1. Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#attributes">1.2.2.2. Attributes</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.chain.html">1.2.3. matplotlib.chain</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.rc_context.html">1.2.4. matplotlib.rc_context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matplotlib.rc_context.html">1.2.3. matplotlib.rc_context</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../matplotlib.html#exceptions">1.3. Exceptions</a></li>
@@ -156,7 +152,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -206,38 +202,73 @@
             
   <div class="section" id="matplotlib-verbose">
 <h1>1.2.2. matplotlib.Verbose<a class="headerlink" href="#matplotlib-verbose" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.Verbose.__init__.html#matplotlib.Verbose.__init__" title="matplotlib.Verbose.__init__"><code class="xref py py-func docutils literal"><span class="pre">Verbose.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.Verbose">
 <em class="property">class </em><code class="descclassname">matplotlib.</code><code class="descname">Verbose</code><a class="reference internal" href="../../_modules/matplotlib.html#Verbose"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.Verbose" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class to handle reporting.  Set the fileo attribute to any file
 instance to handle the output.  Default is sys.stdout</p>
-<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="matplotlib.Verbose.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib.html#Verbose.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.Verbose.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="section" id="methods">
+<h2>1.2.2.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="longtable docutils">
 <colgroup>
 <col width="10%" />
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.Verbose.ge.html#matplotlib.Verbose.ge" title="matplotlib.Verbose.ge"><code class="xref py py-obj docutils literal"><span class="pre">ge</span></code></a>(level)</td>
-<td>return true if self.level is &gt;= level</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.Verbose.report.html#matplotlib.Verbose.report" title="matplotlib.Verbose.report"><code class="xref py py-obj docutils literal"><span class="pre">report</span></code></a>(s[,&nbsp;level])</td>
-<td>print message s to self.fileo if self.level&gt;=level.  Return</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.Verbose.set_fileo.html#matplotlib.Verbose.set_fileo" title="matplotlib.Verbose.set_fileo"><code class="xref py py-obj docutils literal"><span class="pre">set_fileo</span></code></a>(fname)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.Verbose.__init__.html#matplotlib.Verbose.__init__" title="matplotlib.Verbose.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>()</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.Verbose.set_level.html#matplotlib.Verbose.set_level" title="matplotlib.Verbose.set_level"><code class="xref py py-obj docutils literal"><span class="pre">set_level</span></code></a>(level)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.Verbose.ge.html#matplotlib.Verbose.ge" title="matplotlib.Verbose.ge"><code class="xref py py-obj docutils literal"><span class="pre">ge</span></code></a>(level)</td>
+<td>return true if self.level is &gt;= level</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.Verbose.report.html#matplotlib.Verbose.report" title="matplotlib.Verbose.report"><code class="xref py py-obj docutils literal"><span class="pre">report</span></code></a>(s[,&nbsp;level])</td>
+<td>print message s to self.fileo if self.level&gt;=level.  Return</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.Verbose.set_fileo.html#matplotlib.Verbose.set_fileo" title="matplotlib.Verbose.set_fileo"><code class="xref py py-obj docutils literal"><span class="pre">set_fileo</span></code></a>(fname)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.Verbose.set_level.html#matplotlib.Verbose.set_level" title="matplotlib.Verbose.set_level"><code class="xref py py-obj docutils literal"><span class="pre">set_level</span></code></a>(level)</td>
 <td>set the verbosity to one of the Verbose.levels strings</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.Verbose.wrap.html#matplotlib.Verbose.wrap" title="matplotlib.Verbose.wrap"><code class="xref py py-obj docutils literal"><span class="pre">wrap</span></code></a>(fmt,&nbsp;func[,&nbsp;level,&nbsp;always])</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.Verbose.wrap.html#matplotlib.Verbose.wrap" title="matplotlib.Verbose.wrap"><code class="xref py py-obj docutils literal"><span class="pre">wrap</span></code></a>(fmt,&nbsp;func[,&nbsp;level,&nbsp;always])</td>
 <td>return a callable function that wraps func and reports it</td>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
+</div>
+<div class="section" id="attributes">
+<h2>1.2.2.2. Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.Verbose.arg.html#matplotlib.Verbose.arg" title="matplotlib.Verbose.arg"><code class="xref py py-obj docutils literal"><span class="pre">arg</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.Verbose.i.html#matplotlib.Verbose.i" title="matplotlib.Verbose.i"><code class="xref py py-obj docutils literal"><span class="pre">i</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.Verbose.level.html#matplotlib.Verbose.level" title="matplotlib.Verbose.level"><code class="xref py py-obj docutils literal"><span class="pre">level</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.Verbose.levels.html#matplotlib.Verbose.levels" title="matplotlib.Verbose.levels"><code class="xref py py-obj docutils literal"><span class="pre">levels</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.Verbose.vald.html#matplotlib.Verbose.vald" title="matplotlib.Verbose.vald"><code class="xref py py-obj docutils literal"><span class="pre">vald</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -247,10 +278,10 @@ instance to handle the output.  Default is sys.stdout</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="matplotlib.Verbose.ge.html" class="btn btn-neutral float-right" title="1.2.2.1. matplotlib.Verbose.ge" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="matplotlib.Verbose.__init__.html" class="btn btn-neutral float-right" title="1.2.2.1.1. matplotlib.Verbose.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="matplotlib.RcParams.viewvalues.html" class="btn btn-neutral" title="1.2.1.19. matplotlib.RcParams.viewvalues" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="matplotlib.RcParams.validate.html" class="btn btn-neutral" title="1.2.1.2.3. matplotlib.RcParams.validate" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>33.2.5. matplotlib.sankey.Sankey &mdash; Matplotlib API 1 documentation</title>
+  <title>33.2.5. matplotlib.sankey.Sankey &mdash; My Project v1</title>
   
 
   
@@ -30,10 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="33. matplotlib.sankey" href="../matplotlib.sankey.html"/>
-        <link rel="next" title="33.2.5.1. matplotlib.sankey.Sankey.add" href="matplotlib.sankey.Sankey.add.html"/>
-        <link rel="prev" title="33.2.4.103. matplotlib.sankey.PathPatch.update_from" href="matplotlib.sankey.PathPatch.update_from.html"/> 
+        <link rel="next" title="33.2.5.1.1. matplotlib.sankey.Sankey.__init__" href="matplotlib.sankey.Sankey.__init__.html"/>
+        <link rel="prev" title="33.2.4.2.8. matplotlib.sankey.PathPatch.zorder" href="matplotlib.sankey.PathPatch.zorder.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -125,11 +125,9 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.sankey.Path.html">33.2.3. matplotlib.sankey.Path</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.sankey.PathPatch.html">33.2.4. matplotlib.sankey.PathPatch</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">33.2.5. matplotlib.sankey.Sankey</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.sankey.Sankey.add.html">33.2.5.1. matplotlib.sankey.Sankey.add</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.sankey.Sankey.finish.html">33.2.5.2. matplotlib.sankey.Sankey.finish</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">33.2.5.1. Methods</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.sankey.zip.html">33.2.6. matplotlib.sankey.zip</a></li>
 </ul>
 </li>
 </ul>
@@ -154,7 +152,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -204,7 +202,6 @@
             
   <div class="section" id="matplotlib-sankey-sankey">
 <h1>33.2.5. matplotlib.sankey.Sankey<a class="headerlink" href="#matplotlib-sankey-sankey" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.sankey.Sankey.__init__.html#matplotlib.sankey.Sankey.__init__" title="matplotlib.sankey.Sankey.__init__"><code class="xref py py-func docutils literal"><span class="pre">Sankey.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.sankey.Sankey">
 <em class="property">class </em><code class="descclassname">matplotlib.sankey.</code><code class="descname">Sankey</code><span class="sig-paren">(</span><em>ax=None</em>, <em>scale=1.0</em>, <em>unit=u''</em>, <em>format=u'%G'</em>, <em>gap=0.25</em>, <em>radius=0.1</em>, <em>shoulder=0.03</em>, <em>offset=0.15</em>, <em>head_angle=100</em>, <em>margin=0.4</em>, <em>tolerance=1e-06</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/sankey.html#Sankey"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.sankey.Sankey" title="Permalink to this definition">¶</a></dt>
@@ -215,21 +212,6 @@ the width of the arrows is shown proportionally to the flow
 quantity.  They are typically used to visualize energy or
 material or cost transfers between processes.
 <a class="reference external" href="http://en.wikipedia.org/wiki/Sankey_diagram">Wikipedia (6/1/2011)</a></div></blockquote>
-<p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.sankey.Sankey.add.html#matplotlib.sankey.Sankey.add" title="matplotlib.sankey.Sankey.add"><code class="xref py py-obj docutils literal"><span class="pre">add</span></code></a>([patchlabel,&nbsp;flows,&nbsp;orientations,&nbsp;...])</td>
-<td>Add a simple Sankey diagram with flows at the same hierarchical level.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.sankey.Sankey.finish.html#matplotlib.sankey.Sankey.finish" title="matplotlib.sankey.Sankey.finish"><code class="xref py py-obj docutils literal"><span class="pre">finish</span></code></a>()</td>
-<td>Adjust the axes and return a list of information about the Sankey subdiagram(s).</td>
-</tr>
-</tbody>
-</table>
 <dl class="method">
 <dt id="matplotlib.sankey.Sankey.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>ax=None</em>, <em>scale=1.0</em>, <em>unit=u''</em>, <em>format=u'%G'</em>, <em>gap=0.25</em>, <em>radius=0.1</em>, <em>shoulder=0.03</em>, <em>offset=0.15</em>, <em>head_angle=100</em>, <em>margin=0.4</em>, <em>tolerance=1e-06</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/sankey.html#Sankey.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.sankey.Sankey.__init__" title="Permalink to this definition">¶</a></dt>
@@ -339,6 +321,26 @@ to <a class="reference internal" href="matplotlib.sankey.Sankey.add.html#matplot
 
 </dd></dl>
 
+<div class="section" id="methods">
+<h2>33.2.5.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.sankey.Sankey.__init__.html#matplotlib.sankey.Sankey.__init__" title="matplotlib.sankey.Sankey.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>([ax,&nbsp;scale,&nbsp;unit,&nbsp;format,&nbsp;gap,&nbsp;...])</td>
+<td>Create a new Sankey instance.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.sankey.Sankey.add.html#matplotlib.sankey.Sankey.add" title="matplotlib.sankey.Sankey.add"><code class="xref py py-obj docutils literal"><span class="pre">add</span></code></a>([patchlabel,&nbsp;flows,&nbsp;orientations,&nbsp;...])</td>
+<td>Add a simple Sankey diagram with flows at the same hierarchical level.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.sankey.Sankey.finish.html#matplotlib.sankey.Sankey.finish" title="matplotlib.sankey.Sankey.finish"><code class="xref py py-obj docutils literal"><span class="pre">finish</span></code></a>()</td>
+<td>Adjust the axes and return a list of information about the Sankey subdiagram(s).</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -348,10 +350,10 @@ to <a class="reference internal" href="matplotlib.sankey.Sankey.add.html#matplot
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="matplotlib.sankey.Sankey.add.html" class="btn btn-neutral float-right" title="33.2.5.1. matplotlib.sankey.Sankey.add" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="matplotlib.sankey.Sankey.__init__.html" class="btn btn-neutral float-right" title="33.2.5.1.1. matplotlib.sankey.Sankey.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="matplotlib.sankey.PathPatch.update_from.html" class="btn btn-neutral" title="33.2.4.103. matplotlib.sankey.PathPatch.update_from" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="matplotlib.sankey.PathPatch.zorder.html" class="btn btn-neutral" title="33.2.4.2.8. matplotlib.sankey.PathPatch.zorder" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

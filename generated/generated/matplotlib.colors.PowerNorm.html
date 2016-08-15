@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>7.2.10. matplotlib.colors.PowerNorm &mdash; Matplotlib API 1 documentation</title>
+  <title>7.2.10. matplotlib.colors.PowerNorm &mdash; My Project v1</title>
   
 
   
@@ -30,9 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="7. matplotlib.colors" href="../matplotlib.colors.html"/>
-        <link rel="prev" title="7.2.9.5. matplotlib.colors.Normalize.scaled" href="matplotlib.colors.Normalize.scaled.html"/> 
+        <link rel="next" title="7.2.10.1.1. matplotlib.colors.PowerNorm.__init__" href="matplotlib.colors.PowerNorm.__init__.html"/>
+        <link rel="prev" title="7.2.9.1.6. matplotlib.colors.Normalize.scaled" href="matplotlib.colors.Normalize.scaled.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -51,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -103,15 +104,10 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.colors.NoNorm.html">7.2.8. matplotlib.colors.NoNorm</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.colors.Normalize.html">7.2.9. matplotlib.colors.Normalize</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">7.2.10. matplotlib.colors.PowerNorm</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.colors.PowerNorm.autoscale.html">7.2.10.1. matplotlib.colors.PowerNorm.autoscale</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.colors.PowerNorm.autoscale_None.html">7.2.10.2. matplotlib.colors.PowerNorm.autoscale_None</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.colors.PowerNorm.inverse.html">7.2.10.3. matplotlib.colors.PowerNorm.inverse</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.colors.PowerNorm.process_value.html">7.2.10.4. matplotlib.colors.PowerNorm.process_value</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.colors.PowerNorm.scaled.html">7.2.10.5. matplotlib.colors.PowerNorm.scaled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">7.2.10.1. Methods</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.colors.SymLogNorm.html">7.2.11. matplotlib.colors.SymLogNorm</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.colors.zip.html">7.2.12. matplotlib.colors.zip</a></li>
 </ul>
 </li>
 </ul>
@@ -162,7 +158,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -212,20 +208,27 @@
             
   <div class="section" id="matplotlib-colors-powernorm">
 <h1>7.2.10. matplotlib.colors.PowerNorm<a class="headerlink" href="#matplotlib-colors-powernorm" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.colors.PowerNorm.__init__.html#matplotlib.colors.PowerNorm.__init__" title="matplotlib.colors.PowerNorm.__init__"><code class="xref py py-func docutils literal"><span class="pre">PowerNorm.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.colors.PowerNorm">
 <em class="property">class </em><code class="descclassname">matplotlib.colors.</code><code class="descname">PowerNorm</code><span class="sig-paren">(</span><em>gamma</em>, <em>vmin=None</em>, <em>vmax=None</em>, <em>clip=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/colors.html#PowerNorm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.colors.PowerNorm" title="Permalink to this definition">¶</a></dt>
 <dd><p>Normalize a given value to the <code class="docutils literal"><span class="pre">[0,</span> <span class="pre">1]</span></code> interval with a power-law
 scaling. This will clip any negative data points to 0.</p>
-<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="matplotlib.colors.PowerNorm.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>gamma</em>, <em>vmin=None</em>, <em>vmax=None</em>, <em>clip=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/colors.html#PowerNorm.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.colors.PowerNorm.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="section" id="methods">
+<h2>7.2.10.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="longtable docutils">
 <colgroup>
 <col width="10%" />
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">__call__</span></code>(value[,&nbsp;clip])</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.colors.PowerNorm.__init__.html#matplotlib.colors.PowerNorm.__init__" title="matplotlib.colors.PowerNorm.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>(gamma[,&nbsp;vmin,&nbsp;vmax,&nbsp;clip])</td>
 <td></td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="matplotlib.colors.PowerNorm.autoscale.html#matplotlib.colors.PowerNorm.autoscale" title="matplotlib.colors.PowerNorm.autoscale"><code class="xref py py-obj docutils literal"><span class="pre">autoscale</span></code></a>(A)</td>
@@ -245,8 +248,7 @@ scaling. This will clip any negative data points to 0.</p>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
+</div>
 </div>
 
 
@@ -256,8 +258,10 @@ scaling. This will clip any negative data points to 0.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="matplotlib.colors.PowerNorm.__init__.html" class="btn btn-neutral float-right" title="7.2.10.1.1. matplotlib.colors.PowerNorm.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="matplotlib.colors.Normalize.scaled.html" class="btn btn-neutral" title="7.2.9.5. matplotlib.colors.Normalize.scaled" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="matplotlib.colors.Normalize.scaled.html" class="btn btn-neutral" title="7.2.9.1.6. matplotlib.colors.Normalize.scaled" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

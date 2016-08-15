@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.2.15. matplotlib.pyplot.GridSpec &mdash; Matplotlib API 1 documentation</title>
+  <title>2.2.15. matplotlib.pyplot.GridSpec &mdash; My Project v1</title>
   
 
   
@@ -30,10 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="2. matplotlib.pyplot" href="../matplotlib.pyplot.html"/>
-        <link rel="next" title="2.2.15.1. matplotlib.pyplot.GridSpec.get_geometry" href="matplotlib.pyplot.GridSpec.get_geometry.html"/>
-        <link rel="prev" title="2.2.14.10. matplotlib.pyplot.FuncFormatter.set_view_interval" href="matplotlib.pyplot.FuncFormatter.set_view_interval.html"/> 
+        <link rel="next" title="2.2.15.1.1. matplotlib.pyplot.GridSpec.__init__" href="matplotlib.pyplot.GridSpec.__init__.html"/>
+        <link rel="prev" title="2.2.14.2.2. matplotlib.pyplot.FuncFormatter.locs" href="matplotlib.pyplot.FuncFormatter.locs.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -104,17 +104,7 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.Formatter.html">2.2.13. matplotlib.pyplot.Formatter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.FuncFormatter.html">2.2.14. matplotlib.pyplot.FuncFormatter</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">2.2.15. matplotlib.pyplot.GridSpec</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.GridSpec.get_geometry.html">2.2.15.1. matplotlib.pyplot.GridSpec.get_geometry</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.GridSpec.get_grid_positions.html">2.2.15.2. matplotlib.pyplot.GridSpec.get_grid_positions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.GridSpec.get_height_ratios.html">2.2.15.3. matplotlib.pyplot.GridSpec.get_height_ratios</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.GridSpec.get_subplot_params.html">2.2.15.4. matplotlib.pyplot.GridSpec.get_subplot_params</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.GridSpec.get_width_ratios.html">2.2.15.5. matplotlib.pyplot.GridSpec.get_width_ratios</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.GridSpec.locally_modified_subplot_params.html">2.2.15.6. matplotlib.pyplot.GridSpec.locally_modified_subplot_params</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.GridSpec.new_subplotspec.html">2.2.15.7. matplotlib.pyplot.GridSpec.new_subplotspec</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.GridSpec.set_height_ratios.html">2.2.15.8. matplotlib.pyplot.GridSpec.set_height_ratios</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.GridSpec.set_width_ratios.html">2.2.15.9. matplotlib.pyplot.GridSpec.set_width_ratios</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.GridSpec.tight_layout.html">2.2.15.10. matplotlib.pyplot.GridSpec.tight_layout</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.GridSpec.update.html">2.2.15.11. matplotlib.pyplot.GridSpec.update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">2.2.15.1. Methods</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.IndexLocator.html">2.2.16. matplotlib.pyplot.IndexLocator</a></li>
@@ -196,7 +186,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -246,55 +236,12 @@
             
   <div class="section" id="matplotlib-pyplot-gridspec">
 <h1>2.2.15. matplotlib.pyplot.GridSpec<a class="headerlink" href="#matplotlib-pyplot-gridspec" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.pyplot.GridSpec.__init__.html#matplotlib.pyplot.GridSpec.__init__" title="matplotlib.pyplot.GridSpec.__init__"><code class="xref py py-func docutils literal"><span class="pre">GridSpec.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.pyplot.GridSpec">
 <em class="property">class </em><code class="descclassname">matplotlib.pyplot.</code><code class="descname">GridSpec</code><span class="sig-paren">(</span><em>nrows</em>, <em>ncols</em>, <em>left=None</em>, <em>bottom=None</em>, <em>right=None</em>, <em>top=None</em>, <em>wspace=None</em>, <em>hspace=None</em>, <em>width_ratios=None</em>, <em>height_ratios=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/gridspec.html#GridSpec"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.pyplot.GridSpec" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class that specifies the geometry of the grid that a subplot
 will be placed. The location of grid is determined by similar way
 as the SubplotParams.</p>
-<p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.GridSpec.get_geometry.html#matplotlib.pyplot.GridSpec.get_geometry" title="matplotlib.pyplot.GridSpec.get_geometry"><code class="xref py py-obj docutils literal"><span class="pre">get_geometry</span></code></a>()</td>
-<td>get the geometry of the grid, e.g., 2,3</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.GridSpec.get_grid_positions.html#matplotlib.pyplot.GridSpec.get_grid_positions" title="matplotlib.pyplot.GridSpec.get_grid_positions"><code class="xref py py-obj docutils literal"><span class="pre">get_grid_positions</span></code></a>(fig)</td>
-<td>return lists of bottom and top position of rows, left and</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.GridSpec.get_height_ratios.html#matplotlib.pyplot.GridSpec.get_height_ratios" title="matplotlib.pyplot.GridSpec.get_height_ratios"><code class="xref py py-obj docutils literal"><span class="pre">get_height_ratios</span></code></a>()</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.GridSpec.get_subplot_params.html#matplotlib.pyplot.GridSpec.get_subplot_params" title="matplotlib.pyplot.GridSpec.get_subplot_params"><code class="xref py py-obj docutils literal"><span class="pre">get_subplot_params</span></code></a>([fig])</td>
-<td>return a dictionary of subplot layout parameters. The default</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.GridSpec.get_width_ratios.html#matplotlib.pyplot.GridSpec.get_width_ratios" title="matplotlib.pyplot.GridSpec.get_width_ratios"><code class="xref py py-obj docutils literal"><span class="pre">get_width_ratios</span></code></a>()</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.GridSpec.locally_modified_subplot_params.html#matplotlib.pyplot.GridSpec.locally_modified_subplot_params" title="matplotlib.pyplot.GridSpec.locally_modified_subplot_params"><code class="xref py py-obj docutils literal"><span class="pre">locally_modified_subplot_params</span></code></a>()</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.GridSpec.new_subplotspec.html#matplotlib.pyplot.GridSpec.new_subplotspec" title="matplotlib.pyplot.GridSpec.new_subplotspec"><code class="xref py py-obj docutils literal"><span class="pre">new_subplotspec</span></code></a>(loc[,&nbsp;rowspan,&nbsp;colspan])</td>
-<td>create and return a SuplotSpec instance.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.GridSpec.set_height_ratios.html#matplotlib.pyplot.GridSpec.set_height_ratios" title="matplotlib.pyplot.GridSpec.set_height_ratios"><code class="xref py py-obj docutils literal"><span class="pre">set_height_ratios</span></code></a>(height_ratios)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.GridSpec.set_width_ratios.html#matplotlib.pyplot.GridSpec.set_width_ratios" title="matplotlib.pyplot.GridSpec.set_width_ratios"><code class="xref py py-obj docutils literal"><span class="pre">set_width_ratios</span></code></a>(width_ratios)</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.GridSpec.tight_layout.html#matplotlib.pyplot.GridSpec.tight_layout" title="matplotlib.pyplot.GridSpec.tight_layout"><code class="xref py py-obj docutils literal"><span class="pre">tight_layout</span></code></a>(fig[,&nbsp;renderer,&nbsp;pad,&nbsp;h_pad,&nbsp;...])</td>
-<td>Adjust subplot parameters to give specified padding.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.GridSpec.update.html#matplotlib.pyplot.GridSpec.update" title="matplotlib.pyplot.GridSpec.update"><code class="xref py py-obj docutils literal"><span class="pre">update</span></code></a>(**kwargs)</td>
-<td>Update the current values.</td>
-</tr>
-</tbody>
-</table>
 <dl class="method">
 <dt id="matplotlib.pyplot.GridSpec.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>nrows</em>, <em>ncols</em>, <em>left=None</em>, <em>bottom=None</em>, <em>right=None</em>, <em>top=None</em>, <em>wspace=None</em>, <em>hspace=None</em>, <em>width_ratios=None</em>, <em>height_ratios=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/gridspec.html#GridSpec.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.pyplot.GridSpec.__init__" title="Permalink to this definition">¶</a></dt>
@@ -305,6 +252,53 @@ grid need to be set. Optionally, the subplot layout parameters
 
 </dd></dl>
 
+<div class="section" id="methods">
+<h2>2.2.15.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.GridSpec.__init__.html#matplotlib.pyplot.GridSpec.__init__" title="matplotlib.pyplot.GridSpec.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>(nrows,&nbsp;ncols[,&nbsp;left,&nbsp;bottom,&nbsp;...])</td>
+<td>The number of rows and number of columns of the grid need to be set.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.GridSpec.get_geometry.html#matplotlib.pyplot.GridSpec.get_geometry" title="matplotlib.pyplot.GridSpec.get_geometry"><code class="xref py py-obj docutils literal"><span class="pre">get_geometry</span></code></a>()</td>
+<td>get the geometry of the grid, e.g., 2,3</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.GridSpec.get_grid_positions.html#matplotlib.pyplot.GridSpec.get_grid_positions" title="matplotlib.pyplot.GridSpec.get_grid_positions"><code class="xref py py-obj docutils literal"><span class="pre">get_grid_positions</span></code></a>(fig)</td>
+<td>return lists of bottom and top position of rows, left and</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.GridSpec.get_height_ratios.html#matplotlib.pyplot.GridSpec.get_height_ratios" title="matplotlib.pyplot.GridSpec.get_height_ratios"><code class="xref py py-obj docutils literal"><span class="pre">get_height_ratios</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.GridSpec.get_subplot_params.html#matplotlib.pyplot.GridSpec.get_subplot_params" title="matplotlib.pyplot.GridSpec.get_subplot_params"><code class="xref py py-obj docutils literal"><span class="pre">get_subplot_params</span></code></a>([fig])</td>
+<td>return a dictionary of subplot layout parameters. The default</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.GridSpec.get_width_ratios.html#matplotlib.pyplot.GridSpec.get_width_ratios" title="matplotlib.pyplot.GridSpec.get_width_ratios"><code class="xref py py-obj docutils literal"><span class="pre">get_width_ratios</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.GridSpec.locally_modified_subplot_params.html#matplotlib.pyplot.GridSpec.locally_modified_subplot_params" title="matplotlib.pyplot.GridSpec.locally_modified_subplot_params"><code class="xref py py-obj docutils literal"><span class="pre">locally_modified_subplot_params</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.GridSpec.new_subplotspec.html#matplotlib.pyplot.GridSpec.new_subplotspec" title="matplotlib.pyplot.GridSpec.new_subplotspec"><code class="xref py py-obj docutils literal"><span class="pre">new_subplotspec</span></code></a>(loc[,&nbsp;rowspan,&nbsp;colspan])</td>
+<td>create and return a SuplotSpec instance.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.GridSpec.set_height_ratios.html#matplotlib.pyplot.GridSpec.set_height_ratios" title="matplotlib.pyplot.GridSpec.set_height_ratios"><code class="xref py py-obj docutils literal"><span class="pre">set_height_ratios</span></code></a>(height_ratios)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.GridSpec.set_width_ratios.html#matplotlib.pyplot.GridSpec.set_width_ratios" title="matplotlib.pyplot.GridSpec.set_width_ratios"><code class="xref py py-obj docutils literal"><span class="pre">set_width_ratios</span></code></a>(width_ratios)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.GridSpec.tight_layout.html#matplotlib.pyplot.GridSpec.tight_layout" title="matplotlib.pyplot.GridSpec.tight_layout"><code class="xref py py-obj docutils literal"><span class="pre">tight_layout</span></code></a>(fig[,&nbsp;renderer,&nbsp;pad,&nbsp;h_pad,&nbsp;...])</td>
+<td>Adjust subplot parameters to give specified padding.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.GridSpec.update.html#matplotlib.pyplot.GridSpec.update" title="matplotlib.pyplot.GridSpec.update"><code class="xref py py-obj docutils literal"><span class="pre">update</span></code></a>(**kwargs)</td>
+<td>Update the current values.</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -314,10 +308,10 @@ grid need to be set. Optionally, the subplot layout parameters
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="matplotlib.pyplot.GridSpec.get_geometry.html" class="btn btn-neutral float-right" title="2.2.15.1. matplotlib.pyplot.GridSpec.get_geometry" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="matplotlib.pyplot.GridSpec.__init__.html" class="btn btn-neutral float-right" title="2.2.15.1.1. matplotlib.pyplot.GridSpec.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="matplotlib.pyplot.FuncFormatter.set_view_interval.html" class="btn btn-neutral" title="2.2.14.10. matplotlib.pyplot.FuncFormatter.set_view_interval" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="matplotlib.pyplot.FuncFormatter.locs.html" class="btn btn-neutral" title="2.2.14.2.2. matplotlib.pyplot.FuncFormatter.locs" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

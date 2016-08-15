@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>14.2.17. matplotlib.text.TextWithDash &mdash; Matplotlib API 1 documentation</title>
+  <title>14.2.17. matplotlib.text.TextWithDash &mdash; My Project v1</title>
   
 
   
@@ -30,10 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="14. matplotlib.text" href="../matplotlib.text.html"/>
-        <link rel="next" title="14.2.17.1. matplotlib.text.TextWithDash.axes" href="matplotlib.text.TextWithDash.axes.html"/>
-        <link rel="prev" title="14.2.16.36. matplotlib.text.TextPath.wedge" href="matplotlib.text.TextPath.wedge.html"/> 
+        <link rel="next" title="14.2.17.1.1. matplotlib.text.TextWithDash.__init__" href="matplotlib.text.TextWithDash.__init__.html"/>
+        <link rel="prev" title="14.2.16.2.13. matplotlib.text.TextPath.vertices" href="matplotlib.text.TextPath.vertices.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -118,154 +118,12 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.text.Text.html">14.2.15. matplotlib.text.Text</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.text.TextPath.html">14.2.16. matplotlib.text.TextPath</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">14.2.17. matplotlib.text.TextWithDash</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.axes.html">14.2.17.1. matplotlib.text.TextWithDash.axes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.mouseover.html">14.2.17.2. matplotlib.text.TextWithDash.mouseover</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.stale.html">14.2.17.3. matplotlib.text.TextWithDash.stale</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.add_callback.html">14.2.17.4. matplotlib.text.TextWithDash.add_callback</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.contains.html">14.2.17.5. matplotlib.text.TextWithDash.contains</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.convert_xunits.html">14.2.17.6. matplotlib.text.TextWithDash.convert_xunits</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.convert_yunits.html">14.2.17.7. matplotlib.text.TextWithDash.convert_yunits</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.draw.html">14.2.17.8. matplotlib.text.TextWithDash.draw</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.findobj.html">14.2.17.9. matplotlib.text.TextWithDash.findobj</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.format_cursor_data.html">14.2.17.10. matplotlib.text.TextWithDash.format_cursor_data</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_agg_filter.html">14.2.17.11. matplotlib.text.TextWithDash.get_agg_filter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_alpha.html">14.2.17.12. matplotlib.text.TextWithDash.get_alpha</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_animated.html">14.2.17.13. matplotlib.text.TextWithDash.get_animated</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_axes.html">14.2.17.14. matplotlib.text.TextWithDash.get_axes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_bbox_patch.html">14.2.17.15. matplotlib.text.TextWithDash.get_bbox_patch</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_children.html">14.2.17.16. matplotlib.text.TextWithDash.get_children</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_clip_box.html">14.2.17.17. matplotlib.text.TextWithDash.get_clip_box</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_clip_on.html">14.2.17.18. matplotlib.text.TextWithDash.get_clip_on</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_clip_path.html">14.2.17.19. matplotlib.text.TextWithDash.get_clip_path</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_color.html">14.2.17.20. matplotlib.text.TextWithDash.get_color</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_contains.html">14.2.17.21. matplotlib.text.TextWithDash.get_contains</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_cursor_data.html">14.2.17.22. matplotlib.text.TextWithDash.get_cursor_data</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_dashdirection.html">14.2.17.23. matplotlib.text.TextWithDash.get_dashdirection</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_dashlength.html">14.2.17.24. matplotlib.text.TextWithDash.get_dashlength</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_dashpad.html">14.2.17.25. matplotlib.text.TextWithDash.get_dashpad</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_dashpush.html">14.2.17.26. matplotlib.text.TextWithDash.get_dashpush</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_dashrotation.html">14.2.17.27. matplotlib.text.TextWithDash.get_dashrotation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_family.html">14.2.17.28. matplotlib.text.TextWithDash.get_family</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_figure.html">14.2.17.29. matplotlib.text.TextWithDash.get_figure</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_font_properties.html">14.2.17.30. matplotlib.text.TextWithDash.get_font_properties</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_fontfamily.html">14.2.17.31. matplotlib.text.TextWithDash.get_fontfamily</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_fontname.html">14.2.17.32. matplotlib.text.TextWithDash.get_fontname</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_fontproperties.html">14.2.17.33. matplotlib.text.TextWithDash.get_fontproperties</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_fontsize.html">14.2.17.34. matplotlib.text.TextWithDash.get_fontsize</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_fontstretch.html">14.2.17.35. matplotlib.text.TextWithDash.get_fontstretch</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_fontstyle.html">14.2.17.36. matplotlib.text.TextWithDash.get_fontstyle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_fontvariant.html">14.2.17.37. matplotlib.text.TextWithDash.get_fontvariant</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_fontweight.html">14.2.17.38. matplotlib.text.TextWithDash.get_fontweight</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_gid.html">14.2.17.39. matplotlib.text.TextWithDash.get_gid</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_ha.html">14.2.17.40. matplotlib.text.TextWithDash.get_ha</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_horizontalalignment.html">14.2.17.41. matplotlib.text.TextWithDash.get_horizontalalignment</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_label.html">14.2.17.42. matplotlib.text.TextWithDash.get_label</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_name.html">14.2.17.43. matplotlib.text.TextWithDash.get_name</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_path_effects.html">14.2.17.44. matplotlib.text.TextWithDash.get_path_effects</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_picker.html">14.2.17.45. matplotlib.text.TextWithDash.get_picker</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_position.html">14.2.17.46. matplotlib.text.TextWithDash.get_position</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_prop_tup.html">14.2.17.47. matplotlib.text.TextWithDash.get_prop_tup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_rasterized.html">14.2.17.48. matplotlib.text.TextWithDash.get_rasterized</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_rotation.html">14.2.17.49. matplotlib.text.TextWithDash.get_rotation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_rotation_mode.html">14.2.17.50. matplotlib.text.TextWithDash.get_rotation_mode</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_size.html">14.2.17.51. matplotlib.text.TextWithDash.get_size</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_sketch_params.html">14.2.17.52. matplotlib.text.TextWithDash.get_sketch_params</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_snap.html">14.2.17.53. matplotlib.text.TextWithDash.get_snap</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_stretch.html">14.2.17.54. matplotlib.text.TextWithDash.get_stretch</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_style.html">14.2.17.55. matplotlib.text.TextWithDash.get_style</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_text.html">14.2.17.56. matplotlib.text.TextWithDash.get_text</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_transform.html">14.2.17.57. matplotlib.text.TextWithDash.get_transform</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_transformed_clip_path_and_affine.html">14.2.17.58. matplotlib.text.TextWithDash.get_transformed_clip_path_and_affine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_unitless_position.html">14.2.17.59. matplotlib.text.TextWithDash.get_unitless_position</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_url.html">14.2.17.60. matplotlib.text.TextWithDash.get_url</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_usetex.html">14.2.17.61. matplotlib.text.TextWithDash.get_usetex</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_va.html">14.2.17.62. matplotlib.text.TextWithDash.get_va</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_variant.html">14.2.17.63. matplotlib.text.TextWithDash.get_variant</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_verticalalignment.html">14.2.17.64. matplotlib.text.TextWithDash.get_verticalalignment</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_visible.html">14.2.17.65. matplotlib.text.TextWithDash.get_visible</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_weight.html">14.2.17.66. matplotlib.text.TextWithDash.get_weight</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_window_extent.html">14.2.17.67. matplotlib.text.TextWithDash.get_window_extent</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_wrap.html">14.2.17.68. matplotlib.text.TextWithDash.get_wrap</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.get_zorder.html">14.2.17.69. matplotlib.text.TextWithDash.get_zorder</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.have_units.html">14.2.17.70. matplotlib.text.TextWithDash.have_units</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.hitlist.html">14.2.17.71. matplotlib.text.TextWithDash.hitlist</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.is_figure_set.html">14.2.17.72. matplotlib.text.TextWithDash.is_figure_set</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.is_math_text.html">14.2.17.73. matplotlib.text.TextWithDash.is_math_text</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.is_transform_set.html">14.2.17.74. matplotlib.text.TextWithDash.is_transform_set</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.pchanged.html">14.2.17.75. matplotlib.text.TextWithDash.pchanged</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.pick.html">14.2.17.76. matplotlib.text.TextWithDash.pick</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.pickable.html">14.2.17.77. matplotlib.text.TextWithDash.pickable</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.properties.html">14.2.17.78. matplotlib.text.TextWithDash.properties</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.remove.html">14.2.17.79. matplotlib.text.TextWithDash.remove</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.remove_callback.html">14.2.17.80. matplotlib.text.TextWithDash.remove_callback</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set.html">14.2.17.81. matplotlib.text.TextWithDash.set</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_agg_filter.html">14.2.17.82. matplotlib.text.TextWithDash.set_agg_filter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_alpha.html">14.2.17.83. matplotlib.text.TextWithDash.set_alpha</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_animated.html">14.2.17.84. matplotlib.text.TextWithDash.set_animated</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_axes.html">14.2.17.85. matplotlib.text.TextWithDash.set_axes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_backgroundcolor.html">14.2.17.86. matplotlib.text.TextWithDash.set_backgroundcolor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_bbox.html">14.2.17.87. matplotlib.text.TextWithDash.set_bbox</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_clip_box.html">14.2.17.88. matplotlib.text.TextWithDash.set_clip_box</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_clip_on.html">14.2.17.89. matplotlib.text.TextWithDash.set_clip_on</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_clip_path.html">14.2.17.90. matplotlib.text.TextWithDash.set_clip_path</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_color.html">14.2.17.91. matplotlib.text.TextWithDash.set_color</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_contains.html">14.2.17.92. matplotlib.text.TextWithDash.set_contains</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_dashdirection.html">14.2.17.93. matplotlib.text.TextWithDash.set_dashdirection</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_dashlength.html">14.2.17.94. matplotlib.text.TextWithDash.set_dashlength</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_dashpad.html">14.2.17.95. matplotlib.text.TextWithDash.set_dashpad</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_dashpush.html">14.2.17.96. matplotlib.text.TextWithDash.set_dashpush</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_dashrotation.html">14.2.17.97. matplotlib.text.TextWithDash.set_dashrotation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_family.html">14.2.17.98. matplotlib.text.TextWithDash.set_family</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_figure.html">14.2.17.99. matplotlib.text.TextWithDash.set_figure</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_font_properties.html">14.2.17.100. matplotlib.text.TextWithDash.set_font_properties</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_fontname.html">14.2.17.101. matplotlib.text.TextWithDash.set_fontname</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_fontproperties.html">14.2.17.102. matplotlib.text.TextWithDash.set_fontproperties</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_fontsize.html">14.2.17.103. matplotlib.text.TextWithDash.set_fontsize</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_fontstretch.html">14.2.17.104. matplotlib.text.TextWithDash.set_fontstretch</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_fontstyle.html">14.2.17.105. matplotlib.text.TextWithDash.set_fontstyle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_fontvariant.html">14.2.17.106. matplotlib.text.TextWithDash.set_fontvariant</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_fontweight.html">14.2.17.107. matplotlib.text.TextWithDash.set_fontweight</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_gid.html">14.2.17.108. matplotlib.text.TextWithDash.set_gid</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_ha.html">14.2.17.109. matplotlib.text.TextWithDash.set_ha</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_horizontalalignment.html">14.2.17.110. matplotlib.text.TextWithDash.set_horizontalalignment</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_label.html">14.2.17.111. matplotlib.text.TextWithDash.set_label</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_linespacing.html">14.2.17.112. matplotlib.text.TextWithDash.set_linespacing</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_ma.html">14.2.17.113. matplotlib.text.TextWithDash.set_ma</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_multialignment.html">14.2.17.114. matplotlib.text.TextWithDash.set_multialignment</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_name.html">14.2.17.115. matplotlib.text.TextWithDash.set_name</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_path_effects.html">14.2.17.116. matplotlib.text.TextWithDash.set_path_effects</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_picker.html">14.2.17.117. matplotlib.text.TextWithDash.set_picker</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_position.html">14.2.17.118. matplotlib.text.TextWithDash.set_position</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_rasterized.html">14.2.17.119. matplotlib.text.TextWithDash.set_rasterized</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_rotation.html">14.2.17.120. matplotlib.text.TextWithDash.set_rotation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_rotation_mode.html">14.2.17.121. matplotlib.text.TextWithDash.set_rotation_mode</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_size.html">14.2.17.122. matplotlib.text.TextWithDash.set_size</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_sketch_params.html">14.2.17.123. matplotlib.text.TextWithDash.set_sketch_params</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_snap.html">14.2.17.124. matplotlib.text.TextWithDash.set_snap</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_stretch.html">14.2.17.125. matplotlib.text.TextWithDash.set_stretch</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_style.html">14.2.17.126. matplotlib.text.TextWithDash.set_style</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_text.html">14.2.17.127. matplotlib.text.TextWithDash.set_text</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_transform.html">14.2.17.128. matplotlib.text.TextWithDash.set_transform</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_url.html">14.2.17.129. matplotlib.text.TextWithDash.set_url</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_usetex.html">14.2.17.130. matplotlib.text.TextWithDash.set_usetex</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_va.html">14.2.17.131. matplotlib.text.TextWithDash.set_va</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_variant.html">14.2.17.132. matplotlib.text.TextWithDash.set_variant</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_verticalalignment.html">14.2.17.133. matplotlib.text.TextWithDash.set_verticalalignment</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_visible.html">14.2.17.134. matplotlib.text.TextWithDash.set_visible</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_weight.html">14.2.17.135. matplotlib.text.TextWithDash.set_weight</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_wrap.html">14.2.17.136. matplotlib.text.TextWithDash.set_wrap</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_x.html">14.2.17.137. matplotlib.text.TextWithDash.set_x</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_y.html">14.2.17.138. matplotlib.text.TextWithDash.set_y</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.set_zorder.html">14.2.17.139. matplotlib.text.TextWithDash.set_zorder</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.update.html">14.2.17.140. matplotlib.text.TextWithDash.update</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.update_bbox_position_size.html">14.2.17.141. matplotlib.text.TextWithDash.update_bbox_position_size</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.update_coords.html">14.2.17.142. matplotlib.text.TextWithDash.update_coords</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.TextWithDash.update_from.html">14.2.17.143. matplotlib.text.TextWithDash.update_from</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">14.2.17.1. Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#attributes">14.2.17.2. Attributes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.text.Transform.html">14.2.18. matplotlib.text.Transform</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.text.maxdict.html">14.2.19. matplotlib.text.maxdict</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.zip.html">14.2.20. matplotlib.text.zip</a></li>
 </ul>
 </li>
 </ul>
@@ -309,7 +167,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -359,7 +217,6 @@
             
   <div class="section" id="matplotlib-text-textwithdash">
 <h1>14.2.17. matplotlib.text.TextWithDash<a class="headerlink" href="#matplotlib-text-textwithdash" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.text.TextWithDash.__init__.html#matplotlib.text.TextWithDash.__init__" title="matplotlib.text.TextWithDash.__init__"><code class="xref py py-func docutils literal"><span class="pre">TextWithDash.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.text.TextWithDash">
 <em class="property">class </em><code class="descclassname">matplotlib.text.</code><code class="descname">TextWithDash</code><span class="sig-paren">(</span><em>x=0</em>, <em>y=0</em>, <em>text=u''</em>, <em>color=None</em>, <em>verticalalignment=u'center'</em>, <em>horizontalalignment=u'center'</em>, <em>multialignment=None</em>, <em>fontproperties=None</em>, <em>rotation=None</em>, <em>linespacing=None</em>, <em>dashlength=0.0</em>, <em>dashdirection=0</em>, <em>dashrotation=None</em>, <em>dashpad=3</em>, <em>dashpush=0</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/text.html#TextWithDash"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.text.TextWithDash" title="Permalink to this definition">¶</a></dt>
@@ -407,455 +264,473 @@ backend used.</p>
 or whether that&#8217;s sufficient for providing the object bounding
 box.</p>
 </div>
-<p class="rubric">Attributes</p>
+<dl class="method">
+<dt id="matplotlib.text.TextWithDash.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>x=0</em>, <em>y=0</em>, <em>text=u''</em>, <em>color=None</em>, <em>verticalalignment=u'center'</em>, <em>horizontalalignment=u'center'</em>, <em>multialignment=None</em>, <em>fontproperties=None</em>, <em>rotation=None</em>, <em>linespacing=None</em>, <em>dashlength=0.0</em>, <em>dashdirection=0</em>, <em>dashrotation=None</em>, <em>dashpad=3</em>, <em>dashpush=0</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/text.html#TextWithDash.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.text.TextWithDash.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="section" id="methods">
+<h2>14.2.17.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="longtable docutils">
 <colgroup>
 <col width="10%" />
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.axes.html#matplotlib.text.TextWithDash.axes" title="matplotlib.text.TextWithDash.axes"><code class="xref py py-obj docutils literal"><span class="pre">axes</span></code></a></td>
-<td>The <a class="reference internal" href="matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instance the artist resides in, or <em>None</em>.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.mouseover.html#matplotlib.text.TextWithDash.mouseover" title="matplotlib.text.TextWithDash.mouseover"><code class="xref py py-obj docutils literal"><span class="pre">mouseover</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.__init__.html#matplotlib.text.TextWithDash.__init__" title="matplotlib.text.TextWithDash.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>([x,&nbsp;y,&nbsp;text,&nbsp;color,&nbsp;...])</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.stale.html#matplotlib.text.TextWithDash.stale" title="matplotlib.text.TextWithDash.stale"><code class="xref py py-obj docutils literal"><span class="pre">stale</span></code></a></td>
-<td>If the artist is &#8216;stale&#8217; and needs to be re-drawn for the output to match the internal state of the artist.</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.add_callback.html#matplotlib.text.TextWithDash.add_callback" title="matplotlib.text.TextWithDash.add_callback"><code class="xref py py-obj docutils literal"><span class="pre">add_callback</span></code></a>(func)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.add_callback.html#matplotlib.text.TextWithDash.add_callback" title="matplotlib.text.TextWithDash.add_callback"><code class="xref py py-obj docutils literal"><span class="pre">add_callback</span></code></a>(func)</td>
 <td>Adds a callback function that will be called whenever one of the <a class="reference internal" href="matplotlib.text.Artist.html#matplotlib.text.Artist" title="matplotlib.text.Artist"><code class="xref py py-class docutils literal"><span class="pre">Artist</span></code></a>&#8216;s properties changes.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.contains.html#matplotlib.text.TextWithDash.contains" title="matplotlib.text.TextWithDash.contains"><code class="xref py py-obj docutils literal"><span class="pre">contains</span></code></a>(mouseevent)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.contains.html#matplotlib.text.TextWithDash.contains" title="matplotlib.text.TextWithDash.contains"><code class="xref py py-obj docutils literal"><span class="pre">contains</span></code></a>(mouseevent)</td>
 <td>Test whether the mouse event occurred in the patch.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.convert_xunits.html#matplotlib.text.TextWithDash.convert_xunits" title="matplotlib.text.TextWithDash.convert_xunits"><code class="xref py py-obj docutils literal"><span class="pre">convert_xunits</span></code></a>(x)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.convert_xunits.html#matplotlib.text.TextWithDash.convert_xunits" title="matplotlib.text.TextWithDash.convert_xunits"><code class="xref py py-obj docutils literal"><span class="pre">convert_xunits</span></code></a>(x)</td>
 <td>For artists in an axes, if the xaxis has units support,</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.convert_yunits.html#matplotlib.text.TextWithDash.convert_yunits" title="matplotlib.text.TextWithDash.convert_yunits"><code class="xref py py-obj docutils literal"><span class="pre">convert_yunits</span></code></a>(y)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.convert_yunits.html#matplotlib.text.TextWithDash.convert_yunits" title="matplotlib.text.TextWithDash.convert_yunits"><code class="xref py py-obj docutils literal"><span class="pre">convert_yunits</span></code></a>(y)</td>
 <td>For artists in an axes, if the yaxis has units support,</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.draw.html#matplotlib.text.TextWithDash.draw" title="matplotlib.text.TextWithDash.draw"><code class="xref py py-obj docutils literal"><span class="pre">draw</span></code></a>(renderer)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.draw.html#matplotlib.text.TextWithDash.draw" title="matplotlib.text.TextWithDash.draw"><code class="xref py py-obj docutils literal"><span class="pre">draw</span></code></a>(renderer)</td>
 <td>Draw the <a class="reference internal" href="#matplotlib.text.TextWithDash" title="matplotlib.text.TextWithDash"><code class="xref py py-class docutils literal"><span class="pre">TextWithDash</span></code></a> object to the given <em>renderer</em>.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.findobj.html#matplotlib.text.TextWithDash.findobj" title="matplotlib.text.TextWithDash.findobj"><code class="xref py py-obj docutils literal"><span class="pre">findobj</span></code></a>([match,&nbsp;include_self])</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.findobj.html#matplotlib.text.TextWithDash.findobj" title="matplotlib.text.TextWithDash.findobj"><code class="xref py py-obj docutils literal"><span class="pre">findobj</span></code></a>([match,&nbsp;include_self])</td>
 <td>Find artist objects.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.format_cursor_data.html#matplotlib.text.TextWithDash.format_cursor_data" title="matplotlib.text.TextWithDash.format_cursor_data"><code class="xref py py-obj docutils literal"><span class="pre">format_cursor_data</span></code></a>(data)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.format_cursor_data.html#matplotlib.text.TextWithDash.format_cursor_data" title="matplotlib.text.TextWithDash.format_cursor_data"><code class="xref py py-obj docutils literal"><span class="pre">format_cursor_data</span></code></a>(data)</td>
 <td>Return <em>cursor data</em> string formatted.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_agg_filter.html#matplotlib.text.TextWithDash.get_agg_filter" title="matplotlib.text.TextWithDash.get_agg_filter"><code class="xref py py-obj docutils literal"><span class="pre">get_agg_filter</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_agg_filter.html#matplotlib.text.TextWithDash.get_agg_filter" title="matplotlib.text.TextWithDash.get_agg_filter"><code class="xref py py-obj docutils literal"><span class="pre">get_agg_filter</span></code></a>()</td>
 <td>return filter function to be used for agg filter</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_alpha.html#matplotlib.text.TextWithDash.get_alpha" title="matplotlib.text.TextWithDash.get_alpha"><code class="xref py py-obj docutils literal"><span class="pre">get_alpha</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_alpha.html#matplotlib.text.TextWithDash.get_alpha" title="matplotlib.text.TextWithDash.get_alpha"><code class="xref py py-obj docutils literal"><span class="pre">get_alpha</span></code></a>()</td>
 <td>Return the alpha value used for blending - not supported on all</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_animated.html#matplotlib.text.TextWithDash.get_animated" title="matplotlib.text.TextWithDash.get_animated"><code class="xref py py-obj docutils literal"><span class="pre">get_animated</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_animated.html#matplotlib.text.TextWithDash.get_animated" title="matplotlib.text.TextWithDash.get_animated"><code class="xref py py-obj docutils literal"><span class="pre">get_animated</span></code></a>()</td>
 <td>Return the artist&#8217;s animated state</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_axes.html#matplotlib.text.TextWithDash.get_axes" title="matplotlib.text.TextWithDash.get_axes"><code class="xref py py-obj docutils literal"><span class="pre">get_axes</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_axes.html#matplotlib.text.TextWithDash.get_axes" title="matplotlib.text.TextWithDash.get_axes"><code class="xref py py-obj docutils literal"><span class="pre">get_axes</span></code></a>()</td>
 <td>Return the <a class="reference internal" href="matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instance the artist resides in, or <em>None</em>.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_bbox_patch.html#matplotlib.text.TextWithDash.get_bbox_patch" title="matplotlib.text.TextWithDash.get_bbox_patch"><code class="xref py py-obj docutils literal"><span class="pre">get_bbox_patch</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_bbox_patch.html#matplotlib.text.TextWithDash.get_bbox_patch" title="matplotlib.text.TextWithDash.get_bbox_patch"><code class="xref py py-obj docutils literal"><span class="pre">get_bbox_patch</span></code></a>()</td>
 <td>Return the bbox Patch object.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_children.html#matplotlib.text.TextWithDash.get_children" title="matplotlib.text.TextWithDash.get_children"><code class="xref py py-obj docutils literal"><span class="pre">get_children</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_children.html#matplotlib.text.TextWithDash.get_children" title="matplotlib.text.TextWithDash.get_children"><code class="xref py py-obj docutils literal"><span class="pre">get_children</span></code></a>()</td>
 <td>Return a list of the child <code class="xref py py-class docutils literal"><span class="pre">Artist`s</span> <span class="pre">this</span> <span class="pre">:class:`Artist</span></code> contains.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_clip_box.html#matplotlib.text.TextWithDash.get_clip_box" title="matplotlib.text.TextWithDash.get_clip_box"><code class="xref py py-obj docutils literal"><span class="pre">get_clip_box</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_clip_box.html#matplotlib.text.TextWithDash.get_clip_box" title="matplotlib.text.TextWithDash.get_clip_box"><code class="xref py py-obj docutils literal"><span class="pre">get_clip_box</span></code></a>()</td>
 <td>Return artist clipbox</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_clip_on.html#matplotlib.text.TextWithDash.get_clip_on" title="matplotlib.text.TextWithDash.get_clip_on"><code class="xref py py-obj docutils literal"><span class="pre">get_clip_on</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_clip_on.html#matplotlib.text.TextWithDash.get_clip_on" title="matplotlib.text.TextWithDash.get_clip_on"><code class="xref py py-obj docutils literal"><span class="pre">get_clip_on</span></code></a>()</td>
 <td>Return whether artist uses clipping</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_clip_path.html#matplotlib.text.TextWithDash.get_clip_path" title="matplotlib.text.TextWithDash.get_clip_path"><code class="xref py py-obj docutils literal"><span class="pre">get_clip_path</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_clip_path.html#matplotlib.text.TextWithDash.get_clip_path" title="matplotlib.text.TextWithDash.get_clip_path"><code class="xref py py-obj docutils literal"><span class="pre">get_clip_path</span></code></a>()</td>
 <td>Return artist clip path</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_color.html#matplotlib.text.TextWithDash.get_color" title="matplotlib.text.TextWithDash.get_color"><code class="xref py py-obj docutils literal"><span class="pre">get_color</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_color.html#matplotlib.text.TextWithDash.get_color" title="matplotlib.text.TextWithDash.get_color"><code class="xref py py-obj docutils literal"><span class="pre">get_color</span></code></a>()</td>
 <td>Return the color of the text</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_contains.html#matplotlib.text.TextWithDash.get_contains" title="matplotlib.text.TextWithDash.get_contains"><code class="xref py py-obj docutils literal"><span class="pre">get_contains</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_contains.html#matplotlib.text.TextWithDash.get_contains" title="matplotlib.text.TextWithDash.get_contains"><code class="xref py py-obj docutils literal"><span class="pre">get_contains</span></code></a>()</td>
 <td>Return the _contains test used by the artist, or <em>None</em> for default.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_cursor_data.html#matplotlib.text.TextWithDash.get_cursor_data" title="matplotlib.text.TextWithDash.get_cursor_data"><code class="xref py py-obj docutils literal"><span class="pre">get_cursor_data</span></code></a>(event)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_cursor_data.html#matplotlib.text.TextWithDash.get_cursor_data" title="matplotlib.text.TextWithDash.get_cursor_data"><code class="xref py py-obj docutils literal"><span class="pre">get_cursor_data</span></code></a>(event)</td>
 <td>Get the cursor data for a given event.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_dashdirection.html#matplotlib.text.TextWithDash.get_dashdirection" title="matplotlib.text.TextWithDash.get_dashdirection"><code class="xref py py-obj docutils literal"><span class="pre">get_dashdirection</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_dashdirection.html#matplotlib.text.TextWithDash.get_dashdirection" title="matplotlib.text.TextWithDash.get_dashdirection"><code class="xref py py-obj docutils literal"><span class="pre">get_dashdirection</span></code></a>()</td>
 <td>Get the direction dash.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_dashlength.html#matplotlib.text.TextWithDash.get_dashlength" title="matplotlib.text.TextWithDash.get_dashlength"><code class="xref py py-obj docutils literal"><span class="pre">get_dashlength</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_dashlength.html#matplotlib.text.TextWithDash.get_dashlength" title="matplotlib.text.TextWithDash.get_dashlength"><code class="xref py py-obj docutils literal"><span class="pre">get_dashlength</span></code></a>()</td>
 <td>Get the length of the dash.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_dashpad.html#matplotlib.text.TextWithDash.get_dashpad" title="matplotlib.text.TextWithDash.get_dashpad"><code class="xref py py-obj docutils literal"><span class="pre">get_dashpad</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_dashpad.html#matplotlib.text.TextWithDash.get_dashpad" title="matplotlib.text.TextWithDash.get_dashpad"><code class="xref py py-obj docutils literal"><span class="pre">get_dashpad</span></code></a>()</td>
 <td>Get the extra spacing between the dash and the text, in canvas units.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_dashpush.html#matplotlib.text.TextWithDash.get_dashpush" title="matplotlib.text.TextWithDash.get_dashpush"><code class="xref py py-obj docutils literal"><span class="pre">get_dashpush</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_dashpush.html#matplotlib.text.TextWithDash.get_dashpush" title="matplotlib.text.TextWithDash.get_dashpush"><code class="xref py py-obj docutils literal"><span class="pre">get_dashpush</span></code></a>()</td>
 <td>Get the extra spacing between the dash and the specified text position, in canvas units.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_dashrotation.html#matplotlib.text.TextWithDash.get_dashrotation" title="matplotlib.text.TextWithDash.get_dashrotation"><code class="xref py py-obj docutils literal"><span class="pre">get_dashrotation</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_dashrotation.html#matplotlib.text.TextWithDash.get_dashrotation" title="matplotlib.text.TextWithDash.get_dashrotation"><code class="xref py py-obj docutils literal"><span class="pre">get_dashrotation</span></code></a>()</td>
 <td>Get the rotation of the dash in degrees.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_family.html#matplotlib.text.TextWithDash.get_family" title="matplotlib.text.TextWithDash.get_family"><code class="xref py py-obj docutils literal"><span class="pre">get_family</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_family.html#matplotlib.text.TextWithDash.get_family" title="matplotlib.text.TextWithDash.get_family"><code class="xref py py-obj docutils literal"><span class="pre">get_family</span></code></a>()</td>
 <td>Return the list of font families used for font lookup</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_figure.html#matplotlib.text.TextWithDash.get_figure" title="matplotlib.text.TextWithDash.get_figure"><code class="xref py py-obj docutils literal"><span class="pre">get_figure</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_figure.html#matplotlib.text.TextWithDash.get_figure" title="matplotlib.text.TextWithDash.get_figure"><code class="xref py py-obj docutils literal"><span class="pre">get_figure</span></code></a>()</td>
 <td>return the figure instance the artist belongs to</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_font_properties.html#matplotlib.text.TextWithDash.get_font_properties" title="matplotlib.text.TextWithDash.get_font_properties"><code class="xref py py-obj docutils literal"><span class="pre">get_font_properties</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_font_properties.html#matplotlib.text.TextWithDash.get_font_properties" title="matplotlib.text.TextWithDash.get_font_properties"><code class="xref py py-obj docutils literal"><span class="pre">get_font_properties</span></code></a>()</td>
 <td>alias for get_fontproperties</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_fontfamily.html#matplotlib.text.TextWithDash.get_fontfamily" title="matplotlib.text.TextWithDash.get_fontfamily"><code class="xref py py-obj docutils literal"><span class="pre">get_fontfamily</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_fontfamily.html#matplotlib.text.TextWithDash.get_fontfamily" title="matplotlib.text.TextWithDash.get_fontfamily"><code class="xref py py-obj docutils literal"><span class="pre">get_fontfamily</span></code></a>()</td>
 <td>alias for get_family</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_fontname.html#matplotlib.text.TextWithDash.get_fontname" title="matplotlib.text.TextWithDash.get_fontname"><code class="xref py py-obj docutils literal"><span class="pre">get_fontname</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_fontname.html#matplotlib.text.TextWithDash.get_fontname" title="matplotlib.text.TextWithDash.get_fontname"><code class="xref py py-obj docutils literal"><span class="pre">get_fontname</span></code></a>()</td>
 <td>alias for get_name</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_fontproperties.html#matplotlib.text.TextWithDash.get_fontproperties" title="matplotlib.text.TextWithDash.get_fontproperties"><code class="xref py py-obj docutils literal"><span class="pre">get_fontproperties</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_fontproperties.html#matplotlib.text.TextWithDash.get_fontproperties" title="matplotlib.text.TextWithDash.get_fontproperties"><code class="xref py py-obj docutils literal"><span class="pre">get_fontproperties</span></code></a>()</td>
 <td>Return the <code class="xref py py-class docutils literal"><span class="pre">FontProperties</span></code> object</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_fontsize.html#matplotlib.text.TextWithDash.get_fontsize" title="matplotlib.text.TextWithDash.get_fontsize"><code class="xref py py-obj docutils literal"><span class="pre">get_fontsize</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_fontsize.html#matplotlib.text.TextWithDash.get_fontsize" title="matplotlib.text.TextWithDash.get_fontsize"><code class="xref py py-obj docutils literal"><span class="pre">get_fontsize</span></code></a>()</td>
 <td>alias for get_size</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_fontstretch.html#matplotlib.text.TextWithDash.get_fontstretch" title="matplotlib.text.TextWithDash.get_fontstretch"><code class="xref py py-obj docutils literal"><span class="pre">get_fontstretch</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_fontstretch.html#matplotlib.text.TextWithDash.get_fontstretch" title="matplotlib.text.TextWithDash.get_fontstretch"><code class="xref py py-obj docutils literal"><span class="pre">get_fontstretch</span></code></a>()</td>
 <td>alias for get_stretch</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_fontstyle.html#matplotlib.text.TextWithDash.get_fontstyle" title="matplotlib.text.TextWithDash.get_fontstyle"><code class="xref py py-obj docutils literal"><span class="pre">get_fontstyle</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_fontstyle.html#matplotlib.text.TextWithDash.get_fontstyle" title="matplotlib.text.TextWithDash.get_fontstyle"><code class="xref py py-obj docutils literal"><span class="pre">get_fontstyle</span></code></a>()</td>
 <td>alias for get_style</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_fontvariant.html#matplotlib.text.TextWithDash.get_fontvariant" title="matplotlib.text.TextWithDash.get_fontvariant"><code class="xref py py-obj docutils literal"><span class="pre">get_fontvariant</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_fontvariant.html#matplotlib.text.TextWithDash.get_fontvariant" title="matplotlib.text.TextWithDash.get_fontvariant"><code class="xref py py-obj docutils literal"><span class="pre">get_fontvariant</span></code></a>()</td>
 <td>alias for get_variant</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_fontweight.html#matplotlib.text.TextWithDash.get_fontweight" title="matplotlib.text.TextWithDash.get_fontweight"><code class="xref py py-obj docutils literal"><span class="pre">get_fontweight</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_fontweight.html#matplotlib.text.TextWithDash.get_fontweight" title="matplotlib.text.TextWithDash.get_fontweight"><code class="xref py py-obj docutils literal"><span class="pre">get_fontweight</span></code></a>()</td>
 <td>alias for get_weight</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_gid.html#matplotlib.text.TextWithDash.get_gid" title="matplotlib.text.TextWithDash.get_gid"><code class="xref py py-obj docutils literal"><span class="pre">get_gid</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_gid.html#matplotlib.text.TextWithDash.get_gid" title="matplotlib.text.TextWithDash.get_gid"><code class="xref py py-obj docutils literal"><span class="pre">get_gid</span></code></a>()</td>
 <td>Returns the group id</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_ha.html#matplotlib.text.TextWithDash.get_ha" title="matplotlib.text.TextWithDash.get_ha"><code class="xref py py-obj docutils literal"><span class="pre">get_ha</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_ha.html#matplotlib.text.TextWithDash.get_ha" title="matplotlib.text.TextWithDash.get_ha"><code class="xref py py-obj docutils literal"><span class="pre">get_ha</span></code></a>()</td>
 <td>alias for get_horizontalalignment</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_horizontalalignment.html#matplotlib.text.TextWithDash.get_horizontalalignment" title="matplotlib.text.TextWithDash.get_horizontalalignment"><code class="xref py py-obj docutils literal"><span class="pre">get_horizontalalignment</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_horizontalalignment.html#matplotlib.text.TextWithDash.get_horizontalalignment" title="matplotlib.text.TextWithDash.get_horizontalalignment"><code class="xref py py-obj docutils literal"><span class="pre">get_horizontalalignment</span></code></a>()</td>
 <td>Return the horizontal alignment as string.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_label.html#matplotlib.text.TextWithDash.get_label" title="matplotlib.text.TextWithDash.get_label"><code class="xref py py-obj docutils literal"><span class="pre">get_label</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_label.html#matplotlib.text.TextWithDash.get_label" title="matplotlib.text.TextWithDash.get_label"><code class="xref py py-obj docutils literal"><span class="pre">get_label</span></code></a>()</td>
 <td>Get the label used for this artist in the legend.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_name.html#matplotlib.text.TextWithDash.get_name" title="matplotlib.text.TextWithDash.get_name"><code class="xref py py-obj docutils literal"><span class="pre">get_name</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_name.html#matplotlib.text.TextWithDash.get_name" title="matplotlib.text.TextWithDash.get_name"><code class="xref py py-obj docutils literal"><span class="pre">get_name</span></code></a>()</td>
 <td>Return the font name as string</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_path_effects.html#matplotlib.text.TextWithDash.get_path_effects" title="matplotlib.text.TextWithDash.get_path_effects"><code class="xref py py-obj docutils literal"><span class="pre">get_path_effects</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_path_effects.html#matplotlib.text.TextWithDash.get_path_effects" title="matplotlib.text.TextWithDash.get_path_effects"><code class="xref py py-obj docutils literal"><span class="pre">get_path_effects</span></code></a>()</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_picker.html#matplotlib.text.TextWithDash.get_picker" title="matplotlib.text.TextWithDash.get_picker"><code class="xref py py-obj docutils literal"><span class="pre">get_picker</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_picker.html#matplotlib.text.TextWithDash.get_picker" title="matplotlib.text.TextWithDash.get_picker"><code class="xref py py-obj docutils literal"><span class="pre">get_picker</span></code></a>()</td>
 <td>Return the picker object used by this artist</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_position.html#matplotlib.text.TextWithDash.get_position" title="matplotlib.text.TextWithDash.get_position"><code class="xref py py-obj docutils literal"><span class="pre">get_position</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_position.html#matplotlib.text.TextWithDash.get_position" title="matplotlib.text.TextWithDash.get_position"><code class="xref py py-obj docutils literal"><span class="pre">get_position</span></code></a>()</td>
 <td>Return the position of the text as a tuple (<em>x</em>, <em>y</em>)</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_prop_tup.html#matplotlib.text.TextWithDash.get_prop_tup" title="matplotlib.text.TextWithDash.get_prop_tup"><code class="xref py py-obj docutils literal"><span class="pre">get_prop_tup</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_prop_tup.html#matplotlib.text.TextWithDash.get_prop_tup" title="matplotlib.text.TextWithDash.get_prop_tup"><code class="xref py py-obj docutils literal"><span class="pre">get_prop_tup</span></code></a>()</td>
 <td>Return a hashable tuple of properties.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_rasterized.html#matplotlib.text.TextWithDash.get_rasterized" title="matplotlib.text.TextWithDash.get_rasterized"><code class="xref py py-obj docutils literal"><span class="pre">get_rasterized</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_rasterized.html#matplotlib.text.TextWithDash.get_rasterized" title="matplotlib.text.TextWithDash.get_rasterized"><code class="xref py py-obj docutils literal"><span class="pre">get_rasterized</span></code></a>()</td>
 <td>return True if the artist is to be rasterized</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_rotation.html#matplotlib.text.TextWithDash.get_rotation" title="matplotlib.text.TextWithDash.get_rotation"><code class="xref py py-obj docutils literal"><span class="pre">get_rotation</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_rotation.html#matplotlib.text.TextWithDash.get_rotation" title="matplotlib.text.TextWithDash.get_rotation"><code class="xref py py-obj docutils literal"><span class="pre">get_rotation</span></code></a>()</td>
 <td>return the text angle as float in degrees</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_rotation_mode.html#matplotlib.text.TextWithDash.get_rotation_mode" title="matplotlib.text.TextWithDash.get_rotation_mode"><code class="xref py py-obj docutils literal"><span class="pre">get_rotation_mode</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_rotation_mode.html#matplotlib.text.TextWithDash.get_rotation_mode" title="matplotlib.text.TextWithDash.get_rotation_mode"><code class="xref py py-obj docutils literal"><span class="pre">get_rotation_mode</span></code></a>()</td>
 <td>get text rotation mode</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_size.html#matplotlib.text.TextWithDash.get_size" title="matplotlib.text.TextWithDash.get_size"><code class="xref py py-obj docutils literal"><span class="pre">get_size</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_size.html#matplotlib.text.TextWithDash.get_size" title="matplotlib.text.TextWithDash.get_size"><code class="xref py py-obj docutils literal"><span class="pre">get_size</span></code></a>()</td>
 <td>Return the font size as integer</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_sketch_params.html#matplotlib.text.TextWithDash.get_sketch_params" title="matplotlib.text.TextWithDash.get_sketch_params"><code class="xref py py-obj docutils literal"><span class="pre">get_sketch_params</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_sketch_params.html#matplotlib.text.TextWithDash.get_sketch_params" title="matplotlib.text.TextWithDash.get_sketch_params"><code class="xref py py-obj docutils literal"><span class="pre">get_sketch_params</span></code></a>()</td>
 <td>Returns the sketch parameters for the artist.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_snap.html#matplotlib.text.TextWithDash.get_snap" title="matplotlib.text.TextWithDash.get_snap"><code class="xref py py-obj docutils literal"><span class="pre">get_snap</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_snap.html#matplotlib.text.TextWithDash.get_snap" title="matplotlib.text.TextWithDash.get_snap"><code class="xref py py-obj docutils literal"><span class="pre">get_snap</span></code></a>()</td>
 <td>Returns the snap setting which may be:</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_stretch.html#matplotlib.text.TextWithDash.get_stretch" title="matplotlib.text.TextWithDash.get_stretch"><code class="xref py py-obj docutils literal"><span class="pre">get_stretch</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_stretch.html#matplotlib.text.TextWithDash.get_stretch" title="matplotlib.text.TextWithDash.get_stretch"><code class="xref py py-obj docutils literal"><span class="pre">get_stretch</span></code></a>()</td>
 <td>Get the font stretch as a string or number</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_style.html#matplotlib.text.TextWithDash.get_style" title="matplotlib.text.TextWithDash.get_style"><code class="xref py py-obj docutils literal"><span class="pre">get_style</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_style.html#matplotlib.text.TextWithDash.get_style" title="matplotlib.text.TextWithDash.get_style"><code class="xref py py-obj docutils literal"><span class="pre">get_style</span></code></a>()</td>
 <td>Return the font style as string</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_text.html#matplotlib.text.TextWithDash.get_text" title="matplotlib.text.TextWithDash.get_text"><code class="xref py py-obj docutils literal"><span class="pre">get_text</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_text.html#matplotlib.text.TextWithDash.get_text" title="matplotlib.text.TextWithDash.get_text"><code class="xref py py-obj docutils literal"><span class="pre">get_text</span></code></a>()</td>
 <td>Get the text as string</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_transform.html#matplotlib.text.TextWithDash.get_transform" title="matplotlib.text.TextWithDash.get_transform"><code class="xref py py-obj docutils literal"><span class="pre">get_transform</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_transform.html#matplotlib.text.TextWithDash.get_transform" title="matplotlib.text.TextWithDash.get_transform"><code class="xref py py-obj docutils literal"><span class="pre">get_transform</span></code></a>()</td>
 <td>Return the <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code> instance used by this artist.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_transformed_clip_path_and_affine.html#matplotlib.text.TextWithDash.get_transformed_clip_path_and_affine" title="matplotlib.text.TextWithDash.get_transformed_clip_path_and_affine"><code class="xref py py-obj docutils literal"><span class="pre">get_transformed_clip_path_and_affine</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_transformed_clip_path_and_affine.html#matplotlib.text.TextWithDash.get_transformed_clip_path_and_affine" title="matplotlib.text.TextWithDash.get_transformed_clip_path_and_affine"><code class="xref py py-obj docutils literal"><span class="pre">get_transformed_clip_path_and_affine</span></code></a>()</td>
 <td>Return the clip path with the non-affine part of its transformation applied, and the remaining affine part of its transformation.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_unitless_position.html#matplotlib.text.TextWithDash.get_unitless_position" title="matplotlib.text.TextWithDash.get_unitless_position"><code class="xref py py-obj docutils literal"><span class="pre">get_unitless_position</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_unitless_position.html#matplotlib.text.TextWithDash.get_unitless_position" title="matplotlib.text.TextWithDash.get_unitless_position"><code class="xref py py-obj docutils literal"><span class="pre">get_unitless_position</span></code></a>()</td>
 <td>Return the unitless position of the text as a tuple (<em>x</em>, <em>y</em>)</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_url.html#matplotlib.text.TextWithDash.get_url" title="matplotlib.text.TextWithDash.get_url"><code class="xref py py-obj docutils literal"><span class="pre">get_url</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_url.html#matplotlib.text.TextWithDash.get_url" title="matplotlib.text.TextWithDash.get_url"><code class="xref py py-obj docutils literal"><span class="pre">get_url</span></code></a>()</td>
 <td>Returns the url</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_usetex.html#matplotlib.text.TextWithDash.get_usetex" title="matplotlib.text.TextWithDash.get_usetex"><code class="xref py py-obj docutils literal"><span class="pre">get_usetex</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_usetex.html#matplotlib.text.TextWithDash.get_usetex" title="matplotlib.text.TextWithDash.get_usetex"><code class="xref py py-obj docutils literal"><span class="pre">get_usetex</span></code></a>()</td>
 <td>Return whether this <cite>Text</cite> object will render using TeX.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_va.html#matplotlib.text.TextWithDash.get_va" title="matplotlib.text.TextWithDash.get_va"><code class="xref py py-obj docutils literal"><span class="pre">get_va</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_va.html#matplotlib.text.TextWithDash.get_va" title="matplotlib.text.TextWithDash.get_va"><code class="xref py py-obj docutils literal"><span class="pre">get_va</span></code></a>()</td>
 <td>alias for <code class="xref py py-meth docutils literal"><span class="pre">getverticalalignment()</span></code></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_variant.html#matplotlib.text.TextWithDash.get_variant" title="matplotlib.text.TextWithDash.get_variant"><code class="xref py py-obj docutils literal"><span class="pre">get_variant</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_variant.html#matplotlib.text.TextWithDash.get_variant" title="matplotlib.text.TextWithDash.get_variant"><code class="xref py py-obj docutils literal"><span class="pre">get_variant</span></code></a>()</td>
 <td>Return the font variant as a string</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_verticalalignment.html#matplotlib.text.TextWithDash.get_verticalalignment" title="matplotlib.text.TextWithDash.get_verticalalignment"><code class="xref py py-obj docutils literal"><span class="pre">get_verticalalignment</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_verticalalignment.html#matplotlib.text.TextWithDash.get_verticalalignment" title="matplotlib.text.TextWithDash.get_verticalalignment"><code class="xref py py-obj docutils literal"><span class="pre">get_verticalalignment</span></code></a>()</td>
 <td>Return the vertical alignment as string.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_visible.html#matplotlib.text.TextWithDash.get_visible" title="matplotlib.text.TextWithDash.get_visible"><code class="xref py py-obj docutils literal"><span class="pre">get_visible</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_visible.html#matplotlib.text.TextWithDash.get_visible" title="matplotlib.text.TextWithDash.get_visible"><code class="xref py py-obj docutils literal"><span class="pre">get_visible</span></code></a>()</td>
 <td>Return the artist&#8217;s visiblity</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_weight.html#matplotlib.text.TextWithDash.get_weight" title="matplotlib.text.TextWithDash.get_weight"><code class="xref py py-obj docutils literal"><span class="pre">get_weight</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_weight.html#matplotlib.text.TextWithDash.get_weight" title="matplotlib.text.TextWithDash.get_weight"><code class="xref py py-obj docutils literal"><span class="pre">get_weight</span></code></a>()</td>
 <td>Get the font weight as string or number</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_window_extent.html#matplotlib.text.TextWithDash.get_window_extent" title="matplotlib.text.TextWithDash.get_window_extent"><code class="xref py py-obj docutils literal"><span class="pre">get_window_extent</span></code></a>([renderer])</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_window_extent.html#matplotlib.text.TextWithDash.get_window_extent" title="matplotlib.text.TextWithDash.get_window_extent"><code class="xref py py-obj docutils literal"><span class="pre">get_window_extent</span></code></a>([renderer])</td>
 <td>Return a <code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code> object bounding the text, in display units.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_wrap.html#matplotlib.text.TextWithDash.get_wrap" title="matplotlib.text.TextWithDash.get_wrap"><code class="xref py py-obj docutils literal"><span class="pre">get_wrap</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_wrap.html#matplotlib.text.TextWithDash.get_wrap" title="matplotlib.text.TextWithDash.get_wrap"><code class="xref py py-obj docutils literal"><span class="pre">get_wrap</span></code></a>()</td>
 <td>Returns the wrapping state for the text.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_zorder.html#matplotlib.text.TextWithDash.get_zorder" title="matplotlib.text.TextWithDash.get_zorder"><code class="xref py py-obj docutils literal"><span class="pre">get_zorder</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.get_zorder.html#matplotlib.text.TextWithDash.get_zorder" title="matplotlib.text.TextWithDash.get_zorder"><code class="xref py py-obj docutils literal"><span class="pre">get_zorder</span></code></a>()</td>
 <td>Return the <a class="reference internal" href="matplotlib.text.Artist.html#matplotlib.text.Artist" title="matplotlib.text.Artist"><code class="xref py py-class docutils literal"><span class="pre">Artist</span></code></a>&#8216;s zorder.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.have_units.html#matplotlib.text.TextWithDash.have_units" title="matplotlib.text.TextWithDash.have_units"><code class="xref py py-obj docutils literal"><span class="pre">have_units</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.have_units.html#matplotlib.text.TextWithDash.have_units" title="matplotlib.text.TextWithDash.have_units"><code class="xref py py-obj docutils literal"><span class="pre">have_units</span></code></a>()</td>
 <td>Return <em>True</em> if units are set on the <em>x</em> or <em>y</em> axes</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.hitlist.html#matplotlib.text.TextWithDash.hitlist" title="matplotlib.text.TextWithDash.hitlist"><code class="xref py py-obj docutils literal"><span class="pre">hitlist</span></code></a>(event)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.hitlist.html#matplotlib.text.TextWithDash.hitlist" title="matplotlib.text.TextWithDash.hitlist"><code class="xref py py-obj docutils literal"><span class="pre">hitlist</span></code></a>(event)</td>
 <td>List the children of the artist which contain the mouse event <em>event</em>.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.is_figure_set.html#matplotlib.text.TextWithDash.is_figure_set" title="matplotlib.text.TextWithDash.is_figure_set"><code class="xref py py-obj docutils literal"><span class="pre">is_figure_set</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.is_figure_set.html#matplotlib.text.TextWithDash.is_figure_set" title="matplotlib.text.TextWithDash.is_figure_set"><code class="xref py py-obj docutils literal"><span class="pre">is_figure_set</span></code></a>()</td>
 <td>Returns True if the artist is assigned to a <a class="reference internal" href="matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure"><code class="xref py py-class docutils literal"><span class="pre">Figure</span></code></a>.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.is_math_text.html#matplotlib.text.TextWithDash.is_math_text" title="matplotlib.text.TextWithDash.is_math_text"><code class="xref py py-obj docutils literal"><span class="pre">is_math_text</span></code></a>(s)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.is_math_text.html#matplotlib.text.TextWithDash.is_math_text" title="matplotlib.text.TextWithDash.is_math_text"><code class="xref py py-obj docutils literal"><span class="pre">is_math_text</span></code></a>(s)</td>
 <td>Returns a cleaned string and a boolean flag.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.is_transform_set.html#matplotlib.text.TextWithDash.is_transform_set" title="matplotlib.text.TextWithDash.is_transform_set"><code class="xref py py-obj docutils literal"><span class="pre">is_transform_set</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.is_transform_set.html#matplotlib.text.TextWithDash.is_transform_set" title="matplotlib.text.TextWithDash.is_transform_set"><code class="xref py py-obj docutils literal"><span class="pre">is_transform_set</span></code></a>()</td>
 <td>Returns <em>True</em> if <a class="reference internal" href="matplotlib.text.Artist.html#matplotlib.text.Artist" title="matplotlib.text.Artist"><code class="xref py py-class docutils literal"><span class="pre">Artist</span></code></a> has a transform explicitly set.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.pchanged.html#matplotlib.text.TextWithDash.pchanged" title="matplotlib.text.TextWithDash.pchanged"><code class="xref py py-obj docutils literal"><span class="pre">pchanged</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.pchanged.html#matplotlib.text.TextWithDash.pchanged" title="matplotlib.text.TextWithDash.pchanged"><code class="xref py py-obj docutils literal"><span class="pre">pchanged</span></code></a>()</td>
 <td>Fire an event when property changed, calling all of the registered callbacks.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.pick.html#matplotlib.text.TextWithDash.pick" title="matplotlib.text.TextWithDash.pick"><code class="xref py py-obj docutils literal"><span class="pre">pick</span></code></a>(mouseevent)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.pick.html#matplotlib.text.TextWithDash.pick" title="matplotlib.text.TextWithDash.pick"><code class="xref py py-obj docutils literal"><span class="pre">pick</span></code></a>(mouseevent)</td>
 <td>call signature:</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.pickable.html#matplotlib.text.TextWithDash.pickable" title="matplotlib.text.TextWithDash.pickable"><code class="xref py py-obj docutils literal"><span class="pre">pickable</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.pickable.html#matplotlib.text.TextWithDash.pickable" title="matplotlib.text.TextWithDash.pickable"><code class="xref py py-obj docutils literal"><span class="pre">pickable</span></code></a>()</td>
 <td>Return <em>True</em> if <a class="reference internal" href="matplotlib.text.Artist.html#matplotlib.text.Artist" title="matplotlib.text.Artist"><code class="xref py py-class docutils literal"><span class="pre">Artist</span></code></a> is pickable.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.properties.html#matplotlib.text.TextWithDash.properties" title="matplotlib.text.TextWithDash.properties"><code class="xref py py-obj docutils literal"><span class="pre">properties</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.properties.html#matplotlib.text.TextWithDash.properties" title="matplotlib.text.TextWithDash.properties"><code class="xref py py-obj docutils literal"><span class="pre">properties</span></code></a>()</td>
 <td>return a dictionary mapping property name -&gt; value for all Artist props</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.remove.html#matplotlib.text.TextWithDash.remove" title="matplotlib.text.TextWithDash.remove"><code class="xref py py-obj docutils literal"><span class="pre">remove</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.remove.html#matplotlib.text.TextWithDash.remove" title="matplotlib.text.TextWithDash.remove"><code class="xref py py-obj docutils literal"><span class="pre">remove</span></code></a>()</td>
 <td>Remove the artist from the figure if possible.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.remove_callback.html#matplotlib.text.TextWithDash.remove_callback" title="matplotlib.text.TextWithDash.remove_callback"><code class="xref py py-obj docutils literal"><span class="pre">remove_callback</span></code></a>(oid)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.remove_callback.html#matplotlib.text.TextWithDash.remove_callback" title="matplotlib.text.TextWithDash.remove_callback"><code class="xref py py-obj docutils literal"><span class="pre">remove_callback</span></code></a>(oid)</td>
 <td>Remove a callback based on its <em>id</em>.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set.html#matplotlib.text.TextWithDash.set" title="matplotlib.text.TextWithDash.set"><code class="xref py py-obj docutils literal"><span class="pre">set</span></code></a>(**kwargs)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set.html#matplotlib.text.TextWithDash.set" title="matplotlib.text.TextWithDash.set"><code class="xref py py-obj docutils literal"><span class="pre">set</span></code></a>(**kwargs)</td>
 <td>A property batch setter.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_agg_filter.html#matplotlib.text.TextWithDash.set_agg_filter" title="matplotlib.text.TextWithDash.set_agg_filter"><code class="xref py py-obj docutils literal"><span class="pre">set_agg_filter</span></code></a>(filter_func)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_agg_filter.html#matplotlib.text.TextWithDash.set_agg_filter" title="matplotlib.text.TextWithDash.set_agg_filter"><code class="xref py py-obj docutils literal"><span class="pre">set_agg_filter</span></code></a>(filter_func)</td>
 <td>set agg_filter fuction.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_alpha.html#matplotlib.text.TextWithDash.set_alpha" title="matplotlib.text.TextWithDash.set_alpha"><code class="xref py py-obj docutils literal"><span class="pre">set_alpha</span></code></a>(alpha)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_alpha.html#matplotlib.text.TextWithDash.set_alpha" title="matplotlib.text.TextWithDash.set_alpha"><code class="xref py py-obj docutils literal"><span class="pre">set_alpha</span></code></a>(alpha)</td>
 <td>Set the alpha value used for blending - not supported on all backends.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_animated.html#matplotlib.text.TextWithDash.set_animated" title="matplotlib.text.TextWithDash.set_animated"><code class="xref py py-obj docutils literal"><span class="pre">set_animated</span></code></a>(b)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_animated.html#matplotlib.text.TextWithDash.set_animated" title="matplotlib.text.TextWithDash.set_animated"><code class="xref py py-obj docutils literal"><span class="pre">set_animated</span></code></a>(b)</td>
 <td>Set the artist&#8217;s animation state.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_axes.html#matplotlib.text.TextWithDash.set_axes" title="matplotlib.text.TextWithDash.set_axes"><code class="xref py py-obj docutils literal"><span class="pre">set_axes</span></code></a>(axes)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_axes.html#matplotlib.text.TextWithDash.set_axes" title="matplotlib.text.TextWithDash.set_axes"><code class="xref py py-obj docutils literal"><span class="pre">set_axes</span></code></a>(axes)</td>
 <td>Set the <a class="reference internal" href="matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instance in which the artist resides, if any.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_backgroundcolor.html#matplotlib.text.TextWithDash.set_backgroundcolor" title="matplotlib.text.TextWithDash.set_backgroundcolor"><code class="xref py py-obj docutils literal"><span class="pre">set_backgroundcolor</span></code></a>(color)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_backgroundcolor.html#matplotlib.text.TextWithDash.set_backgroundcolor" title="matplotlib.text.TextWithDash.set_backgroundcolor"><code class="xref py py-obj docutils literal"><span class="pre">set_backgroundcolor</span></code></a>(color)</td>
 <td>Set the background color of the text by updating the bbox.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_bbox.html#matplotlib.text.TextWithDash.set_bbox" title="matplotlib.text.TextWithDash.set_bbox"><code class="xref py py-obj docutils literal"><span class="pre">set_bbox</span></code></a>(rectprops)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_bbox.html#matplotlib.text.TextWithDash.set_bbox" title="matplotlib.text.TextWithDash.set_bbox"><code class="xref py py-obj docutils literal"><span class="pre">set_bbox</span></code></a>(rectprops)</td>
 <td>Draw a bounding box around self.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_clip_box.html#matplotlib.text.TextWithDash.set_clip_box" title="matplotlib.text.TextWithDash.set_clip_box"><code class="xref py py-obj docutils literal"><span class="pre">set_clip_box</span></code></a>(clipbox)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_clip_box.html#matplotlib.text.TextWithDash.set_clip_box" title="matplotlib.text.TextWithDash.set_clip_box"><code class="xref py py-obj docutils literal"><span class="pre">set_clip_box</span></code></a>(clipbox)</td>
 <td>Set the artist&#8217;s clip <code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code>.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_clip_on.html#matplotlib.text.TextWithDash.set_clip_on" title="matplotlib.text.TextWithDash.set_clip_on"><code class="xref py py-obj docutils literal"><span class="pre">set_clip_on</span></code></a>(b)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_clip_on.html#matplotlib.text.TextWithDash.set_clip_on" title="matplotlib.text.TextWithDash.set_clip_on"><code class="xref py py-obj docutils literal"><span class="pre">set_clip_on</span></code></a>(b)</td>
 <td>Set whether artist uses clipping.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_clip_path.html#matplotlib.text.TextWithDash.set_clip_path" title="matplotlib.text.TextWithDash.set_clip_path"><code class="xref py py-obj docutils literal"><span class="pre">set_clip_path</span></code></a>(path[,&nbsp;transform])</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_clip_path.html#matplotlib.text.TextWithDash.set_clip_path" title="matplotlib.text.TextWithDash.set_clip_path"><code class="xref py py-obj docutils literal"><span class="pre">set_clip_path</span></code></a>(path[,&nbsp;transform])</td>
 <td>Set the artist&#8217;s clip path, which may be:</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_color.html#matplotlib.text.TextWithDash.set_color" title="matplotlib.text.TextWithDash.set_color"><code class="xref py py-obj docutils literal"><span class="pre">set_color</span></code></a>(color)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_color.html#matplotlib.text.TextWithDash.set_color" title="matplotlib.text.TextWithDash.set_color"><code class="xref py py-obj docutils literal"><span class="pre">set_color</span></code></a>(color)</td>
 <td>Set the foreground color of the text</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_contains.html#matplotlib.text.TextWithDash.set_contains" title="matplotlib.text.TextWithDash.set_contains"><code class="xref py py-obj docutils literal"><span class="pre">set_contains</span></code></a>(picker)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_contains.html#matplotlib.text.TextWithDash.set_contains" title="matplotlib.text.TextWithDash.set_contains"><code class="xref py py-obj docutils literal"><span class="pre">set_contains</span></code></a>(picker)</td>
 <td>Replace the contains test used by this artist.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_dashdirection.html#matplotlib.text.TextWithDash.set_dashdirection" title="matplotlib.text.TextWithDash.set_dashdirection"><code class="xref py py-obj docutils literal"><span class="pre">set_dashdirection</span></code></a>(dd)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_dashdirection.html#matplotlib.text.TextWithDash.set_dashdirection" title="matplotlib.text.TextWithDash.set_dashdirection"><code class="xref py py-obj docutils literal"><span class="pre">set_dashdirection</span></code></a>(dd)</td>
 <td>Set the direction of the dash following the text.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_dashlength.html#matplotlib.text.TextWithDash.set_dashlength" title="matplotlib.text.TextWithDash.set_dashlength"><code class="xref py py-obj docutils literal"><span class="pre">set_dashlength</span></code></a>(dl)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_dashlength.html#matplotlib.text.TextWithDash.set_dashlength" title="matplotlib.text.TextWithDash.set_dashlength"><code class="xref py py-obj docutils literal"><span class="pre">set_dashlength</span></code></a>(dl)</td>
 <td>Set the length of the dash.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_dashpad.html#matplotlib.text.TextWithDash.set_dashpad" title="matplotlib.text.TextWithDash.set_dashpad"><code class="xref py py-obj docutils literal"><span class="pre">set_dashpad</span></code></a>(dp)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_dashpad.html#matplotlib.text.TextWithDash.set_dashpad" title="matplotlib.text.TextWithDash.set_dashpad"><code class="xref py py-obj docutils literal"><span class="pre">set_dashpad</span></code></a>(dp)</td>
 <td>Set the &#8220;pad&#8221; of the TextWithDash, which is the extra spacing between the dash and the text, in canvas units.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_dashpush.html#matplotlib.text.TextWithDash.set_dashpush" title="matplotlib.text.TextWithDash.set_dashpush"><code class="xref py py-obj docutils literal"><span class="pre">set_dashpush</span></code></a>(dp)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_dashpush.html#matplotlib.text.TextWithDash.set_dashpush" title="matplotlib.text.TextWithDash.set_dashpush"><code class="xref py py-obj docutils literal"><span class="pre">set_dashpush</span></code></a>(dp)</td>
 <td>Set the &#8220;push&#8221; of the TextWithDash, which is the extra spacing between the beginning of the dash and the specified position.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_dashrotation.html#matplotlib.text.TextWithDash.set_dashrotation" title="matplotlib.text.TextWithDash.set_dashrotation"><code class="xref py py-obj docutils literal"><span class="pre">set_dashrotation</span></code></a>(dr)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_dashrotation.html#matplotlib.text.TextWithDash.set_dashrotation" title="matplotlib.text.TextWithDash.set_dashrotation"><code class="xref py py-obj docutils literal"><span class="pre">set_dashrotation</span></code></a>(dr)</td>
 <td>Set the rotation of the dash, in degrees</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_family.html#matplotlib.text.TextWithDash.set_family" title="matplotlib.text.TextWithDash.set_family"><code class="xref py py-obj docutils literal"><span class="pre">set_family</span></code></a>(fontname)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_family.html#matplotlib.text.TextWithDash.set_family" title="matplotlib.text.TextWithDash.set_family"><code class="xref py py-obj docutils literal"><span class="pre">set_family</span></code></a>(fontname)</td>
 <td>Set the font family.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_figure.html#matplotlib.text.TextWithDash.set_figure" title="matplotlib.text.TextWithDash.set_figure"><code class="xref py py-obj docutils literal"><span class="pre">set_figure</span></code></a>(fig)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_figure.html#matplotlib.text.TextWithDash.set_figure" title="matplotlib.text.TextWithDash.set_figure"><code class="xref py py-obj docutils literal"><span class="pre">set_figure</span></code></a>(fig)</td>
 <td>Set the figure instance the artist belong to.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_font_properties.html#matplotlib.text.TextWithDash.set_font_properties" title="matplotlib.text.TextWithDash.set_font_properties"><code class="xref py py-obj docutils literal"><span class="pre">set_font_properties</span></code></a>(fp)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_font_properties.html#matplotlib.text.TextWithDash.set_font_properties" title="matplotlib.text.TextWithDash.set_font_properties"><code class="xref py py-obj docutils literal"><span class="pre">set_font_properties</span></code></a>(fp)</td>
 <td>alias for set_fontproperties</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_fontname.html#matplotlib.text.TextWithDash.set_fontname" title="matplotlib.text.TextWithDash.set_fontname"><code class="xref py py-obj docutils literal"><span class="pre">set_fontname</span></code></a>(fontname)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_fontname.html#matplotlib.text.TextWithDash.set_fontname" title="matplotlib.text.TextWithDash.set_fontname"><code class="xref py py-obj docutils literal"><span class="pre">set_fontname</span></code></a>(fontname)</td>
 <td>alias for set_family</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_fontproperties.html#matplotlib.text.TextWithDash.set_fontproperties" title="matplotlib.text.TextWithDash.set_fontproperties"><code class="xref py py-obj docutils literal"><span class="pre">set_fontproperties</span></code></a>(fp)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_fontproperties.html#matplotlib.text.TextWithDash.set_fontproperties" title="matplotlib.text.TextWithDash.set_fontproperties"><code class="xref py py-obj docutils literal"><span class="pre">set_fontproperties</span></code></a>(fp)</td>
 <td>Set the font properties that control the text.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_fontsize.html#matplotlib.text.TextWithDash.set_fontsize" title="matplotlib.text.TextWithDash.set_fontsize"><code class="xref py py-obj docutils literal"><span class="pre">set_fontsize</span></code></a>(fontsize)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_fontsize.html#matplotlib.text.TextWithDash.set_fontsize" title="matplotlib.text.TextWithDash.set_fontsize"><code class="xref py py-obj docutils literal"><span class="pre">set_fontsize</span></code></a>(fontsize)</td>
 <td>alias for set_size</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_fontstretch.html#matplotlib.text.TextWithDash.set_fontstretch" title="matplotlib.text.TextWithDash.set_fontstretch"><code class="xref py py-obj docutils literal"><span class="pre">set_fontstretch</span></code></a>(stretch)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_fontstretch.html#matplotlib.text.TextWithDash.set_fontstretch" title="matplotlib.text.TextWithDash.set_fontstretch"><code class="xref py py-obj docutils literal"><span class="pre">set_fontstretch</span></code></a>(stretch)</td>
 <td>alias for set_stretch</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_fontstyle.html#matplotlib.text.TextWithDash.set_fontstyle" title="matplotlib.text.TextWithDash.set_fontstyle"><code class="xref py py-obj docutils literal"><span class="pre">set_fontstyle</span></code></a>(fontstyle)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_fontstyle.html#matplotlib.text.TextWithDash.set_fontstyle" title="matplotlib.text.TextWithDash.set_fontstyle"><code class="xref py py-obj docutils literal"><span class="pre">set_fontstyle</span></code></a>(fontstyle)</td>
 <td>alias for set_style</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_fontvariant.html#matplotlib.text.TextWithDash.set_fontvariant" title="matplotlib.text.TextWithDash.set_fontvariant"><code class="xref py py-obj docutils literal"><span class="pre">set_fontvariant</span></code></a>(variant)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_fontvariant.html#matplotlib.text.TextWithDash.set_fontvariant" title="matplotlib.text.TextWithDash.set_fontvariant"><code class="xref py py-obj docutils literal"><span class="pre">set_fontvariant</span></code></a>(variant)</td>
 <td>alias for set_variant</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_fontweight.html#matplotlib.text.TextWithDash.set_fontweight" title="matplotlib.text.TextWithDash.set_fontweight"><code class="xref py py-obj docutils literal"><span class="pre">set_fontweight</span></code></a>(weight)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_fontweight.html#matplotlib.text.TextWithDash.set_fontweight" title="matplotlib.text.TextWithDash.set_fontweight"><code class="xref py py-obj docutils literal"><span class="pre">set_fontweight</span></code></a>(weight)</td>
 <td>alias for set_weight</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_gid.html#matplotlib.text.TextWithDash.set_gid" title="matplotlib.text.TextWithDash.set_gid"><code class="xref py py-obj docutils literal"><span class="pre">set_gid</span></code></a>(gid)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_gid.html#matplotlib.text.TextWithDash.set_gid" title="matplotlib.text.TextWithDash.set_gid"><code class="xref py py-obj docutils literal"><span class="pre">set_gid</span></code></a>(gid)</td>
 <td>Sets the (group) id for the artist</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_ha.html#matplotlib.text.TextWithDash.set_ha" title="matplotlib.text.TextWithDash.set_ha"><code class="xref py py-obj docutils literal"><span class="pre">set_ha</span></code></a>(align)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_ha.html#matplotlib.text.TextWithDash.set_ha" title="matplotlib.text.TextWithDash.set_ha"><code class="xref py py-obj docutils literal"><span class="pre">set_ha</span></code></a>(align)</td>
 <td>alias for set_horizontalalignment</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_horizontalalignment.html#matplotlib.text.TextWithDash.set_horizontalalignment" title="matplotlib.text.TextWithDash.set_horizontalalignment"><code class="xref py py-obj docutils literal"><span class="pre">set_horizontalalignment</span></code></a>(align)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_horizontalalignment.html#matplotlib.text.TextWithDash.set_horizontalalignment" title="matplotlib.text.TextWithDash.set_horizontalalignment"><code class="xref py py-obj docutils literal"><span class="pre">set_horizontalalignment</span></code></a>(align)</td>
 <td>Set the horizontal alignment to one of</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_label.html#matplotlib.text.TextWithDash.set_label" title="matplotlib.text.TextWithDash.set_label"><code class="xref py py-obj docutils literal"><span class="pre">set_label</span></code></a>(s)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_label.html#matplotlib.text.TextWithDash.set_label" title="matplotlib.text.TextWithDash.set_label"><code class="xref py py-obj docutils literal"><span class="pre">set_label</span></code></a>(s)</td>
 <td>Set the label to <em>s</em> for auto legend.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_linespacing.html#matplotlib.text.TextWithDash.set_linespacing" title="matplotlib.text.TextWithDash.set_linespacing"><code class="xref py py-obj docutils literal"><span class="pre">set_linespacing</span></code></a>(spacing)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_linespacing.html#matplotlib.text.TextWithDash.set_linespacing" title="matplotlib.text.TextWithDash.set_linespacing"><code class="xref py py-obj docutils literal"><span class="pre">set_linespacing</span></code></a>(spacing)</td>
 <td>Set the line spacing as a multiple of the font size.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_ma.html#matplotlib.text.TextWithDash.set_ma" title="matplotlib.text.TextWithDash.set_ma"><code class="xref py py-obj docutils literal"><span class="pre">set_ma</span></code></a>(align)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_ma.html#matplotlib.text.TextWithDash.set_ma" title="matplotlib.text.TextWithDash.set_ma"><code class="xref py py-obj docutils literal"><span class="pre">set_ma</span></code></a>(align)</td>
 <td>alias for set_verticalalignment</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_multialignment.html#matplotlib.text.TextWithDash.set_multialignment" title="matplotlib.text.TextWithDash.set_multialignment"><code class="xref py py-obj docutils literal"><span class="pre">set_multialignment</span></code></a>(align)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_multialignment.html#matplotlib.text.TextWithDash.set_multialignment" title="matplotlib.text.TextWithDash.set_multialignment"><code class="xref py py-obj docutils literal"><span class="pre">set_multialignment</span></code></a>(align)</td>
 <td>Set the alignment for multiple lines layout.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_name.html#matplotlib.text.TextWithDash.set_name" title="matplotlib.text.TextWithDash.set_name"><code class="xref py py-obj docutils literal"><span class="pre">set_name</span></code></a>(fontname)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_name.html#matplotlib.text.TextWithDash.set_name" title="matplotlib.text.TextWithDash.set_name"><code class="xref py py-obj docutils literal"><span class="pre">set_name</span></code></a>(fontname)</td>
 <td>alias for set_family</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_path_effects.html#matplotlib.text.TextWithDash.set_path_effects" title="matplotlib.text.TextWithDash.set_path_effects"><code class="xref py py-obj docutils literal"><span class="pre">set_path_effects</span></code></a>(path_effects)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_path_effects.html#matplotlib.text.TextWithDash.set_path_effects" title="matplotlib.text.TextWithDash.set_path_effects"><code class="xref py py-obj docutils literal"><span class="pre">set_path_effects</span></code></a>(path_effects)</td>
 <td>set path_effects, which should be a list of instances of</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_picker.html#matplotlib.text.TextWithDash.set_picker" title="matplotlib.text.TextWithDash.set_picker"><code class="xref py py-obj docutils literal"><span class="pre">set_picker</span></code></a>(picker)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_picker.html#matplotlib.text.TextWithDash.set_picker" title="matplotlib.text.TextWithDash.set_picker"><code class="xref py py-obj docutils literal"><span class="pre">set_picker</span></code></a>(picker)</td>
 <td>Set the epsilon for picking used by this artist</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_position.html#matplotlib.text.TextWithDash.set_position" title="matplotlib.text.TextWithDash.set_position"><code class="xref py py-obj docutils literal"><span class="pre">set_position</span></code></a>(xy)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_position.html#matplotlib.text.TextWithDash.set_position" title="matplotlib.text.TextWithDash.set_position"><code class="xref py py-obj docutils literal"><span class="pre">set_position</span></code></a>(xy)</td>
 <td>Set the (<em>x</em>, <em>y</em>) position of the <a class="reference internal" href="#matplotlib.text.TextWithDash" title="matplotlib.text.TextWithDash"><code class="xref py py-class docutils literal"><span class="pre">TextWithDash</span></code></a>.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_rasterized.html#matplotlib.text.TextWithDash.set_rasterized" title="matplotlib.text.TextWithDash.set_rasterized"><code class="xref py py-obj docutils literal"><span class="pre">set_rasterized</span></code></a>(rasterized)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_rasterized.html#matplotlib.text.TextWithDash.set_rasterized" title="matplotlib.text.TextWithDash.set_rasterized"><code class="xref py py-obj docutils literal"><span class="pre">set_rasterized</span></code></a>(rasterized)</td>
 <td>Force rasterized (bitmap) drawing in vector backend output.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_rotation.html#matplotlib.text.TextWithDash.set_rotation" title="matplotlib.text.TextWithDash.set_rotation"><code class="xref py py-obj docutils literal"><span class="pre">set_rotation</span></code></a>(s)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_rotation.html#matplotlib.text.TextWithDash.set_rotation" title="matplotlib.text.TextWithDash.set_rotation"><code class="xref py py-obj docutils literal"><span class="pre">set_rotation</span></code></a>(s)</td>
 <td>Set the rotation of the text</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_rotation_mode.html#matplotlib.text.TextWithDash.set_rotation_mode" title="matplotlib.text.TextWithDash.set_rotation_mode"><code class="xref py py-obj docutils literal"><span class="pre">set_rotation_mode</span></code></a>(m)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_rotation_mode.html#matplotlib.text.TextWithDash.set_rotation_mode" title="matplotlib.text.TextWithDash.set_rotation_mode"><code class="xref py py-obj docutils literal"><span class="pre">set_rotation_mode</span></code></a>(m)</td>
 <td>set text rotation mode. If &#8220;anchor&#8221;, the un-rotated text</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_size.html#matplotlib.text.TextWithDash.set_size" title="matplotlib.text.TextWithDash.set_size"><code class="xref py py-obj docutils literal"><span class="pre">set_size</span></code></a>(fontsize)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_size.html#matplotlib.text.TextWithDash.set_size" title="matplotlib.text.TextWithDash.set_size"><code class="xref py py-obj docutils literal"><span class="pre">set_size</span></code></a>(fontsize)</td>
 <td>Set the font size.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_sketch_params.html#matplotlib.text.TextWithDash.set_sketch_params" title="matplotlib.text.TextWithDash.set_sketch_params"><code class="xref py py-obj docutils literal"><span class="pre">set_sketch_params</span></code></a>([scale,&nbsp;length,&nbsp;randomness])</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_sketch_params.html#matplotlib.text.TextWithDash.set_sketch_params" title="matplotlib.text.TextWithDash.set_sketch_params"><code class="xref py py-obj docutils literal"><span class="pre">set_sketch_params</span></code></a>([scale,&nbsp;length,&nbsp;randomness])</td>
 <td>Sets the sketch parameters.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_snap.html#matplotlib.text.TextWithDash.set_snap" title="matplotlib.text.TextWithDash.set_snap"><code class="xref py py-obj docutils literal"><span class="pre">set_snap</span></code></a>(snap)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_snap.html#matplotlib.text.TextWithDash.set_snap" title="matplotlib.text.TextWithDash.set_snap"><code class="xref py py-obj docutils literal"><span class="pre">set_snap</span></code></a>(snap)</td>
 <td>Sets the snap setting which may be:</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_stretch.html#matplotlib.text.TextWithDash.set_stretch" title="matplotlib.text.TextWithDash.set_stretch"><code class="xref py py-obj docutils literal"><span class="pre">set_stretch</span></code></a>(stretch)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_stretch.html#matplotlib.text.TextWithDash.set_stretch" title="matplotlib.text.TextWithDash.set_stretch"><code class="xref py py-obj docutils literal"><span class="pre">set_stretch</span></code></a>(stretch)</td>
 <td>Set the font stretch (horizontal condensation or expansion).</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_style.html#matplotlib.text.TextWithDash.set_style" title="matplotlib.text.TextWithDash.set_style"><code class="xref py py-obj docutils literal"><span class="pre">set_style</span></code></a>(fontstyle)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_style.html#matplotlib.text.TextWithDash.set_style" title="matplotlib.text.TextWithDash.set_style"><code class="xref py py-obj docutils literal"><span class="pre">set_style</span></code></a>(fontstyle)</td>
 <td>Set the font style.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_text.html#matplotlib.text.TextWithDash.set_text" title="matplotlib.text.TextWithDash.set_text"><code class="xref py py-obj docutils literal"><span class="pre">set_text</span></code></a>(s)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_text.html#matplotlib.text.TextWithDash.set_text" title="matplotlib.text.TextWithDash.set_text"><code class="xref py py-obj docutils literal"><span class="pre">set_text</span></code></a>(s)</td>
 <td>Set the text string <em>s</em></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_transform.html#matplotlib.text.TextWithDash.set_transform" title="matplotlib.text.TextWithDash.set_transform"><code class="xref py py-obj docutils literal"><span class="pre">set_transform</span></code></a>(t)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_transform.html#matplotlib.text.TextWithDash.set_transform" title="matplotlib.text.TextWithDash.set_transform"><code class="xref py py-obj docutils literal"><span class="pre">set_transform</span></code></a>(t)</td>
 <td>Set the <code class="xref py py-class docutils literal"><span class="pre">matplotlib.transforms.Transform</span></code> instance used by this artist.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_url.html#matplotlib.text.TextWithDash.set_url" title="matplotlib.text.TextWithDash.set_url"><code class="xref py py-obj docutils literal"><span class="pre">set_url</span></code></a>(url)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_url.html#matplotlib.text.TextWithDash.set_url" title="matplotlib.text.TextWithDash.set_url"><code class="xref py py-obj docutils literal"><span class="pre">set_url</span></code></a>(url)</td>
 <td>Sets the url for the artist</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_usetex.html#matplotlib.text.TextWithDash.set_usetex" title="matplotlib.text.TextWithDash.set_usetex"><code class="xref py py-obj docutils literal"><span class="pre">set_usetex</span></code></a>(usetex)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_usetex.html#matplotlib.text.TextWithDash.set_usetex" title="matplotlib.text.TextWithDash.set_usetex"><code class="xref py py-obj docutils literal"><span class="pre">set_usetex</span></code></a>(usetex)</td>
 <td>Set this <cite>Text</cite> object to render using TeX (or not).</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_va.html#matplotlib.text.TextWithDash.set_va" title="matplotlib.text.TextWithDash.set_va"><code class="xref py py-obj docutils literal"><span class="pre">set_va</span></code></a>(align)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_va.html#matplotlib.text.TextWithDash.set_va" title="matplotlib.text.TextWithDash.set_va"><code class="xref py py-obj docutils literal"><span class="pre">set_va</span></code></a>(align)</td>
 <td>alias for set_verticalalignment</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_variant.html#matplotlib.text.TextWithDash.set_variant" title="matplotlib.text.TextWithDash.set_variant"><code class="xref py py-obj docutils literal"><span class="pre">set_variant</span></code></a>(variant)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_variant.html#matplotlib.text.TextWithDash.set_variant" title="matplotlib.text.TextWithDash.set_variant"><code class="xref py py-obj docutils literal"><span class="pre">set_variant</span></code></a>(variant)</td>
 <td>Set the font variant, either &#8216;normal&#8217; or &#8216;small-caps&#8217;.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_verticalalignment.html#matplotlib.text.TextWithDash.set_verticalalignment" title="matplotlib.text.TextWithDash.set_verticalalignment"><code class="xref py py-obj docutils literal"><span class="pre">set_verticalalignment</span></code></a>(align)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_verticalalignment.html#matplotlib.text.TextWithDash.set_verticalalignment" title="matplotlib.text.TextWithDash.set_verticalalignment"><code class="xref py py-obj docutils literal"><span class="pre">set_verticalalignment</span></code></a>(align)</td>
 <td>Set the vertical alignment</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_visible.html#matplotlib.text.TextWithDash.set_visible" title="matplotlib.text.TextWithDash.set_visible"><code class="xref py py-obj docutils literal"><span class="pre">set_visible</span></code></a>(b)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_visible.html#matplotlib.text.TextWithDash.set_visible" title="matplotlib.text.TextWithDash.set_visible"><code class="xref py py-obj docutils literal"><span class="pre">set_visible</span></code></a>(b)</td>
 <td>Set the artist&#8217;s visiblity.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_weight.html#matplotlib.text.TextWithDash.set_weight" title="matplotlib.text.TextWithDash.set_weight"><code class="xref py py-obj docutils literal"><span class="pre">set_weight</span></code></a>(weight)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_weight.html#matplotlib.text.TextWithDash.set_weight" title="matplotlib.text.TextWithDash.set_weight"><code class="xref py py-obj docutils literal"><span class="pre">set_weight</span></code></a>(weight)</td>
 <td>Set the font weight.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_wrap.html#matplotlib.text.TextWithDash.set_wrap" title="matplotlib.text.TextWithDash.set_wrap"><code class="xref py py-obj docutils literal"><span class="pre">set_wrap</span></code></a>(wrap)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_wrap.html#matplotlib.text.TextWithDash.set_wrap" title="matplotlib.text.TextWithDash.set_wrap"><code class="xref py py-obj docutils literal"><span class="pre">set_wrap</span></code></a>(wrap)</td>
 <td>Sets the wrapping state for the text.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_x.html#matplotlib.text.TextWithDash.set_x" title="matplotlib.text.TextWithDash.set_x"><code class="xref py py-obj docutils literal"><span class="pre">set_x</span></code></a>(x)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_x.html#matplotlib.text.TextWithDash.set_x" title="matplotlib.text.TextWithDash.set_x"><code class="xref py py-obj docutils literal"><span class="pre">set_x</span></code></a>(x)</td>
 <td>Set the <em>x</em> position of the <a class="reference internal" href="#matplotlib.text.TextWithDash" title="matplotlib.text.TextWithDash"><code class="xref py py-class docutils literal"><span class="pre">TextWithDash</span></code></a>.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_y.html#matplotlib.text.TextWithDash.set_y" title="matplotlib.text.TextWithDash.set_y"><code class="xref py py-obj docutils literal"><span class="pre">set_y</span></code></a>(y)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_y.html#matplotlib.text.TextWithDash.set_y" title="matplotlib.text.TextWithDash.set_y"><code class="xref py py-obj docutils literal"><span class="pre">set_y</span></code></a>(y)</td>
 <td>Set the <em>y</em> position of the <a class="reference internal" href="#matplotlib.text.TextWithDash" title="matplotlib.text.TextWithDash"><code class="xref py py-class docutils literal"><span class="pre">TextWithDash</span></code></a>.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_zorder.html#matplotlib.text.TextWithDash.set_zorder" title="matplotlib.text.TextWithDash.set_zorder"><code class="xref py py-obj docutils literal"><span class="pre">set_zorder</span></code></a>(level)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.set_zorder.html#matplotlib.text.TextWithDash.set_zorder" title="matplotlib.text.TextWithDash.set_zorder"><code class="xref py py-obj docutils literal"><span class="pre">set_zorder</span></code></a>(level)</td>
 <td>Set the zorder for the artist.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.update.html#matplotlib.text.TextWithDash.update" title="matplotlib.text.TextWithDash.update"><code class="xref py py-obj docutils literal"><span class="pre">update</span></code></a>(kwargs)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.update.html#matplotlib.text.TextWithDash.update" title="matplotlib.text.TextWithDash.update"><code class="xref py py-obj docutils literal"><span class="pre">update</span></code></a>(kwargs)</td>
 <td>Update properties from a dictionary.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.update_bbox_position_size.html#matplotlib.text.TextWithDash.update_bbox_position_size" title="matplotlib.text.TextWithDash.update_bbox_position_size"><code class="xref py py-obj docutils literal"><span class="pre">update_bbox_position_size</span></code></a>(renderer)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.update_bbox_position_size.html#matplotlib.text.TextWithDash.update_bbox_position_size" title="matplotlib.text.TextWithDash.update_bbox_position_size"><code class="xref py py-obj docutils literal"><span class="pre">update_bbox_position_size</span></code></a>(renderer)</td>
 <td>Update the location and the size of the bbox.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.update_coords.html#matplotlib.text.TextWithDash.update_coords" title="matplotlib.text.TextWithDash.update_coords"><code class="xref py py-obj docutils literal"><span class="pre">update_coords</span></code></a>(renderer)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.update_coords.html#matplotlib.text.TextWithDash.update_coords" title="matplotlib.text.TextWithDash.update_coords"><code class="xref py py-obj docutils literal"><span class="pre">update_coords</span></code></a>(renderer)</td>
 <td>Computes the actual <em>x</em>, <em>y</em> coordinates for text based on the input <em>x</em>, <em>y</em> and the <em>dashlength</em>.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.update_from.html#matplotlib.text.TextWithDash.update_from" title="matplotlib.text.TextWithDash.update_from"><code class="xref py py-obj docutils literal"><span class="pre">update_from</span></code></a>(other)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.update_from.html#matplotlib.text.TextWithDash.update_from" title="matplotlib.text.TextWithDash.update_from"><code class="xref py py-obj docutils literal"><span class="pre">update_from</span></code></a>(other)</td>
 <td>Copy properties from other to self</td>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
+</div>
+<div class="section" id="attributes">
+<h2>14.2.17.2. Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.aname.html#matplotlib.text.TextWithDash.aname" title="matplotlib.text.TextWithDash.aname"><code class="xref py py-obj docutils literal"><span class="pre">aname</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.axes.html#matplotlib.text.TextWithDash.axes" title="matplotlib.text.TextWithDash.axes"><code class="xref py py-obj docutils literal"><span class="pre">axes</span></code></a></td>
+<td>The <a class="reference internal" href="matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instance the artist resides in, or <em>None</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.mouseover.html#matplotlib.text.TextWithDash.mouseover" title="matplotlib.text.TextWithDash.mouseover"><code class="xref py py-obj docutils literal"><span class="pre">mouseover</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.TextWithDash.stale.html#matplotlib.text.TextWithDash.stale" title="matplotlib.text.TextWithDash.stale"><code class="xref py py-obj docutils literal"><span class="pre">stale</span></code></a></td>
+<td>If the artist is &#8216;stale&#8217; and needs to be re-drawn for the output to match the internal state of the artist.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.TextWithDash.zorder.html#matplotlib.text.TextWithDash.zorder" title="matplotlib.text.TextWithDash.zorder"><code class="xref py py-obj docutils literal"><span class="pre">zorder</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -865,10 +740,10 @@ box.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="matplotlib.text.TextWithDash.axes.html" class="btn btn-neutral float-right" title="14.2.17.1. matplotlib.text.TextWithDash.axes" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="matplotlib.text.TextWithDash.__init__.html" class="btn btn-neutral float-right" title="14.2.17.1.1. matplotlib.text.TextWithDash.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="matplotlib.text.TextPath.wedge.html" class="btn btn-neutral" title="14.2.16.36. matplotlib.text.TextPath.wedge" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="matplotlib.text.TextPath.vertices.html" class="btn btn-neutral" title="14.2.16.2.13. matplotlib.text.TextPath.vertices" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.2.26. matplotlib.pyplot.Normalize &mdash; Matplotlib API 1 documentation</title>
+  <title>2.2.26. matplotlib.pyplot.Normalize &mdash; My Project v1</title>
   
 
   
@@ -30,9 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="2. matplotlib.pyplot" href="../matplotlib.pyplot.html"/>
-        <link rel="prev" title="2.2.25.13. matplotlib.pyplot.MultipleLocator.zoom" href="matplotlib.pyplot.MultipleLocator.zoom.html"/> 
+        <link rel="next" title="2.2.26.1.1. matplotlib.pyplot.Normalize.__init__" href="matplotlib.pyplot.Normalize.__init__.html"/>
+        <link rel="prev" title="2.2.25.2.2. matplotlib.pyplot.MultipleLocator.axis" href="matplotlib.pyplot.MultipleLocator.axis.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -51,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -114,11 +115,7 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.MaxNLocator.html">2.2.24. matplotlib.pyplot.MaxNLocator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.MultipleLocator.html">2.2.25. matplotlib.pyplot.MultipleLocator</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">2.2.26. matplotlib.pyplot.Normalize</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Normalize.autoscale.html">2.2.26.1. matplotlib.pyplot.Normalize.autoscale</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Normalize.autoscale_None.html">2.2.26.2. matplotlib.pyplot.Normalize.autoscale_None</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Normalize.inverse.html">2.2.26.3. matplotlib.pyplot.Normalize.inverse</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Normalize.process_value.html">2.2.26.4. matplotlib.pyplot.Normalize.process_value</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.pyplot.Normalize.scaled.html">2.2.26.5. matplotlib.pyplot.Normalize.scaled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">2.2.26.1. Methods</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.pyplot.NullFormatter.html">2.2.27. matplotlib.pyplot.NullFormatter</a></li>
@@ -189,7 +186,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -239,39 +236,11 @@
             
   <div class="section" id="matplotlib-pyplot-normalize">
 <h1>2.2.26. matplotlib.pyplot.Normalize<a class="headerlink" href="#matplotlib-pyplot-normalize" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.pyplot.Normalize.__init__.html#matplotlib.pyplot.Normalize.__init__" title="matplotlib.pyplot.Normalize.__init__"><code class="xref py py-func docutils literal"><span class="pre">Normalize.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.pyplot.Normalize">
 <em class="property">class </em><code class="descclassname">matplotlib.pyplot.</code><code class="descname">Normalize</code><span class="sig-paren">(</span><em>vmin=None</em>, <em>vmax=None</em>, <em>clip=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/colors.html#Normalize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.pyplot.Normalize" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class which, when called, can normalize data into
 the <code class="docutils literal"><span class="pre">[0.0,</span> <span class="pre">1.0]</span></code> interval.</p>
-<p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">__call__</span></code>(value[,&nbsp;clip])</td>
-<td>Normalize <em>value</em> data in the <code class="docutils literal"><span class="pre">[vmin,</span> <span class="pre">vmax]</span></code> interval into the <code class="docutils literal"><span class="pre">[0.0,</span> <span class="pre">1.0]</span></code> interval and return it.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Normalize.autoscale.html#matplotlib.pyplot.Normalize.autoscale" title="matplotlib.pyplot.Normalize.autoscale"><code class="xref py py-obj docutils literal"><span class="pre">autoscale</span></code></a>(A)</td>
-<td>Set <em>vmin</em>, <em>vmax</em> to min, max of <em>A</em>.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Normalize.autoscale_None.html#matplotlib.pyplot.Normalize.autoscale_None" title="matplotlib.pyplot.Normalize.autoscale_None"><code class="xref py py-obj docutils literal"><span class="pre">autoscale_None</span></code></a>(A)</td>
-<td>autoscale only None-valued vmin or vmax</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Normalize.inverse.html#matplotlib.pyplot.Normalize.inverse" title="matplotlib.pyplot.Normalize.inverse"><code class="xref py py-obj docutils literal"><span class="pre">inverse</span></code></a>(value)</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Normalize.process_value.html#matplotlib.pyplot.Normalize.process_value" title="matplotlib.pyplot.Normalize.process_value"><code class="xref py py-obj docutils literal"><span class="pre">process_value</span></code></a>(value)</td>
-<td>Homogenize the input <em>value</em> for easy and efficient normalization.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Normalize.scaled.html#matplotlib.pyplot.Normalize.scaled" title="matplotlib.pyplot.Normalize.scaled"><code class="xref py py-obj docutils literal"><span class="pre">scaled</span></code></a>()</td>
-<td>return true if vmin and vmax set</td>
-</tr>
-</tbody>
-</table>
 <dl class="method">
 <dt id="matplotlib.pyplot.Normalize.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>vmin=None</em>, <em>vmax=None</em>, <em>clip=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/colors.html#Normalize.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.pyplot.Normalize.__init__" title="Permalink to this definition">¶</a></dt>
@@ -294,6 +263,35 @@ likely to lead to surprises; therefore the default is
 
 </dd></dl>
 
+<div class="section" id="methods">
+<h2>2.2.26.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Normalize.__init__.html#matplotlib.pyplot.Normalize.__init__" title="matplotlib.pyplot.Normalize.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>([vmin,&nbsp;vmax,&nbsp;clip])</td>
+<td>If <em>vmin</em> or <em>vmax</em> is not given, they are initialized from the minimum and maximum value respectively of the first input processed.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Normalize.autoscale.html#matplotlib.pyplot.Normalize.autoscale" title="matplotlib.pyplot.Normalize.autoscale"><code class="xref py py-obj docutils literal"><span class="pre">autoscale</span></code></a>(A)</td>
+<td>Set <em>vmin</em>, <em>vmax</em> to min, max of <em>A</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Normalize.autoscale_None.html#matplotlib.pyplot.Normalize.autoscale_None" title="matplotlib.pyplot.Normalize.autoscale_None"><code class="xref py py-obj docutils literal"><span class="pre">autoscale_None</span></code></a>(A)</td>
+<td>autoscale only None-valued vmin or vmax</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Normalize.inverse.html#matplotlib.pyplot.Normalize.inverse" title="matplotlib.pyplot.Normalize.inverse"><code class="xref py py-obj docutils literal"><span class="pre">inverse</span></code></a>(value)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.pyplot.Normalize.process_value.html#matplotlib.pyplot.Normalize.process_value" title="matplotlib.pyplot.Normalize.process_value"><code class="xref py py-obj docutils literal"><span class="pre">process_value</span></code></a>(value)</td>
+<td>Homogenize the input <em>value</em> for easy and efficient normalization.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.pyplot.Normalize.scaled.html#matplotlib.pyplot.Normalize.scaled" title="matplotlib.pyplot.Normalize.scaled"><code class="xref py py-obj docutils literal"><span class="pre">scaled</span></code></a>()</td>
+<td>return true if vmin and vmax set</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -303,8 +301,10 @@ likely to lead to surprises; therefore the default is
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="matplotlib.pyplot.Normalize.__init__.html" class="btn btn-neutral float-right" title="2.2.26.1.1. matplotlib.pyplot.Normalize.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="matplotlib.pyplot.MultipleLocator.zoom.html" class="btn btn-neutral" title="2.2.25.13. matplotlib.pyplot.MultipleLocator.zoom" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="matplotlib.pyplot.MultipleLocator.axis.html" class="btn btn-neutral" title="2.2.25.2.2. matplotlib.pyplot.MultipleLocator.axis" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

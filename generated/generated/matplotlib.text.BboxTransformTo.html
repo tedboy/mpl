@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>14.2.6. matplotlib.text.BboxTransformTo &mdash; Matplotlib API 1 documentation</title>
+  <title>14.2.6. matplotlib.text.BboxTransformTo &mdash; My Project v1</title>
   
 
   
@@ -30,10 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="14. matplotlib.text" href="../matplotlib.text.html"/>
-        <link rel="next" title="14.2.6.1. matplotlib.text.BboxTransformTo.depth" href="matplotlib.text.BboxTransformTo.depth.html"/>
-        <link rel="prev" title="14.2.5.48. matplotlib.text.BboxBase.union" href="matplotlib.text.BboxBase.union.html"/> 
+        <link rel="next" title="14.2.6.1.1. matplotlib.text.BboxTransformTo.__init__" href="matplotlib.text.BboxTransformTo.__init__.html"/>
+        <link rel="prev" title="14.2.5.2.26. matplotlib.text.BboxBase.ymin" href="matplotlib.text.BboxBase.ymin.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -107,26 +107,8 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.text.Bbox.html">14.2.4. matplotlib.text.Bbox</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.text.BboxBase.html">14.2.5. matplotlib.text.BboxBase</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">14.2.6. matplotlib.text.BboxTransformTo</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.BboxTransformTo.depth.html">14.2.6.1. matplotlib.text.BboxTransformTo.depth</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.BboxTransformTo.contains_branch.html">14.2.6.2. matplotlib.text.BboxTransformTo.contains_branch</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.BboxTransformTo.contains_branch_seperately.html">14.2.6.3. matplotlib.text.BboxTransformTo.contains_branch_seperately</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.BboxTransformTo.frozen.html">14.2.6.4. matplotlib.text.BboxTransformTo.frozen</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.BboxTransformTo.get_affine.html">14.2.6.5. matplotlib.text.BboxTransformTo.get_affine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.BboxTransformTo.get_matrix.html">14.2.6.6. matplotlib.text.BboxTransformTo.get_matrix</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.BboxTransformTo.invalidate.html">14.2.6.7. matplotlib.text.BboxTransformTo.invalidate</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.BboxTransformTo.inverted.html">14.2.6.8. matplotlib.text.BboxTransformTo.inverted</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.BboxTransformTo.matrix_from_values.html">14.2.6.9. matplotlib.text.BboxTransformTo.matrix_from_values</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.BboxTransformTo.set_children.html">14.2.6.10. matplotlib.text.BboxTransformTo.set_children</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.BboxTransformTo.to_values.html">14.2.6.11. matplotlib.text.BboxTransformTo.to_values</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.BboxTransformTo.transform.html">14.2.6.12. matplotlib.text.BboxTransformTo.transform</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.BboxTransformTo.transform_affine.html">14.2.6.13. matplotlib.text.BboxTransformTo.transform_affine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.BboxTransformTo.transform_angles.html">14.2.6.14. matplotlib.text.BboxTransformTo.transform_angles</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.BboxTransformTo.transform_bbox.html">14.2.6.15. matplotlib.text.BboxTransformTo.transform_bbox</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.BboxTransformTo.transform_non_affine.html">14.2.6.16. matplotlib.text.BboxTransformTo.transform_non_affine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.BboxTransformTo.transform_path.html">14.2.6.17. matplotlib.text.BboxTransformTo.transform_path</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.BboxTransformTo.transform_path_affine.html">14.2.6.18. matplotlib.text.BboxTransformTo.transform_path_affine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.BboxTransformTo.transform_path_non_affine.html">14.2.6.19. matplotlib.text.BboxTransformTo.transform_path_non_affine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.text.BboxTransformTo.transform_point.html">14.2.6.20. matplotlib.text.BboxTransformTo.transform_point</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">14.2.6.1. Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#attributes">14.2.6.2. Attributes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.text.FancyArrowPatch.html">14.2.7. matplotlib.text.FancyArrowPatch</a></li>
@@ -142,7 +124,6 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.text.TextWithDash.html">14.2.17. matplotlib.text.TextWithDash</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.text.Transform.html">14.2.18. matplotlib.text.Transform</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.text.maxdict.html">14.2.19. matplotlib.text.maxdict</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.text.zip.html">14.2.20. matplotlib.text.zip</a></li>
 </ul>
 </li>
 </ul>
@@ -186,7 +167,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -236,91 +217,12 @@
             
   <div class="section" id="matplotlib-text-bboxtransformto">
 <h1>14.2.6. matplotlib.text.BboxTransformTo<a class="headerlink" href="#matplotlib-text-bboxtransformto" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.text.BboxTransformTo.__init__.html#matplotlib.text.BboxTransformTo.__init__" title="matplotlib.text.BboxTransformTo.__init__"><code class="xref py py-func docutils literal"><span class="pre">BboxTransformTo.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.text.BboxTransformTo">
 <em class="property">class </em><code class="descclassname">matplotlib.text.</code><code class="descname">BboxTransformTo</code><span class="sig-paren">(</span><em>boxout</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/transforms.html#BboxTransformTo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.text.BboxTransformTo" title="Permalink to this definition">¶</a></dt>
 <dd><p><a class="reference internal" href="#matplotlib.text.BboxTransformTo" title="matplotlib.text.BboxTransformTo"><code class="xref py py-class docutils literal"><span class="pre">BboxTransformTo</span></code></a> is a transformation that linearly
 transforms points from the unit bounding box to a given
 <a class="reference internal" href="matplotlib.text.Bbox.html#matplotlib.text.Bbox" title="matplotlib.text.Bbox"><code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code></a>.</p>
-<p class="rubric">Attributes</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.depth.html#matplotlib.text.BboxTransformTo.depth" title="matplotlib.text.BboxTransformTo.depth"><code class="xref py py-obj docutils literal"><span class="pre">depth</span></code></a></td>
-<td>Returns the number of transforms which have been chained together to form this Transform instance.</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.contains_branch.html#matplotlib.text.BboxTransformTo.contains_branch" title="matplotlib.text.BboxTransformTo.contains_branch"><code class="xref py py-obj docutils literal"><span class="pre">contains_branch</span></code></a>(other)</td>
-<td>Return whether the given transform is a sub-tree of this transform.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.contains_branch_seperately.html#matplotlib.text.BboxTransformTo.contains_branch_seperately" title="matplotlib.text.BboxTransformTo.contains_branch_seperately"><code class="xref py py-obj docutils literal"><span class="pre">contains_branch_seperately</span></code></a>(other_transform)</td>
-<td>Returns whether the given branch is a sub-tree of this transform on each seperate dimension.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.frozen.html#matplotlib.text.BboxTransformTo.frozen" title="matplotlib.text.BboxTransformTo.frozen"><code class="xref py py-obj docutils literal"><span class="pre">frozen</span></code></a>()</td>
-<td>Returns a frozen copy of this transform node.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.get_affine.html#matplotlib.text.BboxTransformTo.get_affine" title="matplotlib.text.BboxTransformTo.get_affine"><code class="xref py py-obj docutils literal"><span class="pre">get_affine</span></code></a>()</td>
-<td>Get the affine part of this transform.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.get_matrix.html#matplotlib.text.BboxTransformTo.get_matrix" title="matplotlib.text.BboxTransformTo.get_matrix"><code class="xref py py-obj docutils literal"><span class="pre">get_matrix</span></code></a>()</td>
-<td>Get the Affine transformation array for the affine part of this transform.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.invalidate.html#matplotlib.text.BboxTransformTo.invalidate" title="matplotlib.text.BboxTransformTo.invalidate"><code class="xref py py-obj docutils literal"><span class="pre">invalidate</span></code></a>()</td>
-<td>Invalidate this <code class="xref py py-class docutils literal"><span class="pre">TransformNode</span></code> and triggers an invalidation of its ancestors.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.inverted.html#matplotlib.text.BboxTransformTo.inverted" title="matplotlib.text.BboxTransformTo.inverted"><code class="xref py py-obj docutils literal"><span class="pre">inverted</span></code></a>()</td>
-<td>Return the corresponding inverse transformation.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.matrix_from_values.html#matplotlib.text.BboxTransformTo.matrix_from_values" title="matplotlib.text.BboxTransformTo.matrix_from_values"><code class="xref py py-obj docutils literal"><span class="pre">matrix_from_values</span></code></a>(a,&nbsp;b,&nbsp;c,&nbsp;d,&nbsp;e,&nbsp;f)</td>
-<td>(staticmethod) Create a new transformation matrix as a 3x3</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.set_children.html#matplotlib.text.BboxTransformTo.set_children" title="matplotlib.text.BboxTransformTo.set_children"><code class="xref py py-obj docutils literal"><span class="pre">set_children</span></code></a>(*children)</td>
-<td>Set the children of the transform, to let the invalidation system know which transforms can invalidate this transform.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.to_values.html#matplotlib.text.BboxTransformTo.to_values" title="matplotlib.text.BboxTransformTo.to_values"><code class="xref py py-obj docutils literal"><span class="pre">to_values</span></code></a>()</td>
-<td>Return the values of the matrix as a sequence (a,b,c,d,e,f)</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.transform.html#matplotlib.text.BboxTransformTo.transform" title="matplotlib.text.BboxTransformTo.transform"><code class="xref py py-obj docutils literal"><span class="pre">transform</span></code></a>(values)</td>
-<td>Performs the transformation on the given array of values.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.transform_affine.html#matplotlib.text.BboxTransformTo.transform_affine" title="matplotlib.text.BboxTransformTo.transform_affine"><code class="xref py py-obj docutils literal"><span class="pre">transform_affine</span></code></a>(points)</td>
-<td>Performs only the affine part of this transformation on the given array of values.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.transform_angles.html#matplotlib.text.BboxTransformTo.transform_angles" title="matplotlib.text.BboxTransformTo.transform_angles"><code class="xref py py-obj docutils literal"><span class="pre">transform_angles</span></code></a>(angles,&nbsp;pts[,&nbsp;radians,&nbsp;pushoff])</td>
-<td>Performs transformation on a set of angles anchored at specific locations.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.transform_bbox.html#matplotlib.text.BboxTransformTo.transform_bbox" title="matplotlib.text.BboxTransformTo.transform_bbox"><code class="xref py py-obj docutils literal"><span class="pre">transform_bbox</span></code></a>(bbox)</td>
-<td>Transform the given bounding box.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.transform_non_affine.html#matplotlib.text.BboxTransformTo.transform_non_affine" title="matplotlib.text.BboxTransformTo.transform_non_affine"><code class="xref py py-obj docutils literal"><span class="pre">transform_non_affine</span></code></a>(points)</td>
-<td>Performs only the non-affine part of the transformation.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.transform_path.html#matplotlib.text.BboxTransformTo.transform_path" title="matplotlib.text.BboxTransformTo.transform_path"><code class="xref py py-obj docutils literal"><span class="pre">transform_path</span></code></a>(path)</td>
-<td>Returns a transformed path.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.transform_path_affine.html#matplotlib.text.BboxTransformTo.transform_path_affine" title="matplotlib.text.BboxTransformTo.transform_path_affine"><code class="xref py py-obj docutils literal"><span class="pre">transform_path_affine</span></code></a>(path)</td>
-<td>Returns a path, transformed only by the affine part of this transform.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.transform_path_non_affine.html#matplotlib.text.BboxTransformTo.transform_path_non_affine" title="matplotlib.text.BboxTransformTo.transform_path_non_affine"><code class="xref py py-obj docutils literal"><span class="pre">transform_path_non_affine</span></code></a>(path)</td>
-<td>Returns a path, transformed only by the non-affine part of this transform.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.transform_point.html#matplotlib.text.BboxTransformTo.transform_point" title="matplotlib.text.BboxTransformTo.transform_point"><code class="xref py py-obj docutils literal"><span class="pre">transform_point</span></code></a>(point)</td>
-<td>A convenience function that returns the transformed copy of a single point.</td>
-</tr>
-</tbody>
-</table>
 <dl class="method">
 <dt id="matplotlib.text.BboxTransformTo.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>boxout</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/transforms.html#BboxTransformTo.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.text.BboxTransformTo.__init__" title="Permalink to this definition">¶</a></dt>
@@ -330,6 +232,121 @@ points from the unit bounding box to <em>boxout</em>.</p>
 
 </dd></dl>
 
+<div class="section" id="methods">
+<h2>14.2.6.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.__init__.html#matplotlib.text.BboxTransformTo.__init__" title="matplotlib.text.BboxTransformTo.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>(boxout,&nbsp;**kwargs)</td>
+<td>Create a new <a class="reference internal" href="#matplotlib.text.BboxTransformTo" title="matplotlib.text.BboxTransformTo"><code class="xref py py-class docutils literal"><span class="pre">BboxTransformTo</span></code></a> that linearly transforms points from the unit bounding box to <em>boxout</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.contains_branch.html#matplotlib.text.BboxTransformTo.contains_branch" title="matplotlib.text.BboxTransformTo.contains_branch"><code class="xref py py-obj docutils literal"><span class="pre">contains_branch</span></code></a>(other)</td>
+<td>Return whether the given transform is a sub-tree of this transform.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.contains_branch_seperately.html#matplotlib.text.BboxTransformTo.contains_branch_seperately" title="matplotlib.text.BboxTransformTo.contains_branch_seperately"><code class="xref py py-obj docutils literal"><span class="pre">contains_branch_seperately</span></code></a>(other_transform)</td>
+<td>Returns whether the given branch is a sub-tree of this transform on each seperate dimension.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.frozen.html#matplotlib.text.BboxTransformTo.frozen" title="matplotlib.text.BboxTransformTo.frozen"><code class="xref py py-obj docutils literal"><span class="pre">frozen</span></code></a>()</td>
+<td>Returns a frozen copy of this transform node.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.get_affine.html#matplotlib.text.BboxTransformTo.get_affine" title="matplotlib.text.BboxTransformTo.get_affine"><code class="xref py py-obj docutils literal"><span class="pre">get_affine</span></code></a>()</td>
+<td>Get the affine part of this transform.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.get_matrix.html#matplotlib.text.BboxTransformTo.get_matrix" title="matplotlib.text.BboxTransformTo.get_matrix"><code class="xref py py-obj docutils literal"><span class="pre">get_matrix</span></code></a>()</td>
+<td>Get the Affine transformation array for the affine part of this transform.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.invalidate.html#matplotlib.text.BboxTransformTo.invalidate" title="matplotlib.text.BboxTransformTo.invalidate"><code class="xref py py-obj docutils literal"><span class="pre">invalidate</span></code></a>()</td>
+<td>Invalidate this <code class="xref py py-class docutils literal"><span class="pre">TransformNode</span></code> and triggers an invalidation of its ancestors.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.inverted.html#matplotlib.text.BboxTransformTo.inverted" title="matplotlib.text.BboxTransformTo.inverted"><code class="xref py py-obj docutils literal"><span class="pre">inverted</span></code></a>()</td>
+<td>Return the corresponding inverse transformation.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.matrix_from_values.html#matplotlib.text.BboxTransformTo.matrix_from_values" title="matplotlib.text.BboxTransformTo.matrix_from_values"><code class="xref py py-obj docutils literal"><span class="pre">matrix_from_values</span></code></a>(a,&nbsp;b,&nbsp;c,&nbsp;d,&nbsp;e,&nbsp;f)</td>
+<td>(staticmethod) Create a new transformation matrix as a 3x3</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.set_children.html#matplotlib.text.BboxTransformTo.set_children" title="matplotlib.text.BboxTransformTo.set_children"><code class="xref py py-obj docutils literal"><span class="pre">set_children</span></code></a>(*children)</td>
+<td>Set the children of the transform, to let the invalidation system know which transforms can invalidate this transform.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.to_values.html#matplotlib.text.BboxTransformTo.to_values" title="matplotlib.text.BboxTransformTo.to_values"><code class="xref py py-obj docutils literal"><span class="pre">to_values</span></code></a>()</td>
+<td>Return the values of the matrix as a sequence (a,b,c,d,e,f)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.transform.html#matplotlib.text.BboxTransformTo.transform" title="matplotlib.text.BboxTransformTo.transform"><code class="xref py py-obj docutils literal"><span class="pre">transform</span></code></a>(values)</td>
+<td>Performs the transformation on the given array of values.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.transform_affine.html#matplotlib.text.BboxTransformTo.transform_affine" title="matplotlib.text.BboxTransformTo.transform_affine"><code class="xref py py-obj docutils literal"><span class="pre">transform_affine</span></code></a>(points)</td>
+<td>Performs only the affine part of this transformation on the given array of values.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.transform_angles.html#matplotlib.text.BboxTransformTo.transform_angles" title="matplotlib.text.BboxTransformTo.transform_angles"><code class="xref py py-obj docutils literal"><span class="pre">transform_angles</span></code></a>(angles,&nbsp;pts[,&nbsp;radians,&nbsp;pushoff])</td>
+<td>Performs transformation on a set of angles anchored at specific locations.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.transform_bbox.html#matplotlib.text.BboxTransformTo.transform_bbox" title="matplotlib.text.BboxTransformTo.transform_bbox"><code class="xref py py-obj docutils literal"><span class="pre">transform_bbox</span></code></a>(bbox)</td>
+<td>Transform the given bounding box.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.transform_non_affine.html#matplotlib.text.BboxTransformTo.transform_non_affine" title="matplotlib.text.BboxTransformTo.transform_non_affine"><code class="xref py py-obj docutils literal"><span class="pre">transform_non_affine</span></code></a>(points)</td>
+<td>Performs only the non-affine part of the transformation.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.transform_path.html#matplotlib.text.BboxTransformTo.transform_path" title="matplotlib.text.BboxTransformTo.transform_path"><code class="xref py py-obj docutils literal"><span class="pre">transform_path</span></code></a>(path)</td>
+<td>Returns a transformed path.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.transform_path_affine.html#matplotlib.text.BboxTransformTo.transform_path_affine" title="matplotlib.text.BboxTransformTo.transform_path_affine"><code class="xref py py-obj docutils literal"><span class="pre">transform_path_affine</span></code></a>(path)</td>
+<td>Returns a path, transformed only by the affine part of this transform.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.transform_path_non_affine.html#matplotlib.text.BboxTransformTo.transform_path_non_affine" title="matplotlib.text.BboxTransformTo.transform_path_non_affine"><code class="xref py py-obj docutils literal"><span class="pre">transform_path_non_affine</span></code></a>(path)</td>
+<td>Returns a path, transformed only by the non-affine part of this transform.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.transform_point.html#matplotlib.text.BboxTransformTo.transform_point" title="matplotlib.text.BboxTransformTo.transform_point"><code class="xref py py-obj docutils literal"><span class="pre">transform_point</span></code></a>(point)</td>
+<td>A convenience function that returns the transformed copy of a single point.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attributes">
+<h2>14.2.6.2. Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.INVALID.html#matplotlib.text.BboxTransformTo.INVALID" title="matplotlib.text.BboxTransformTo.INVALID"><code class="xref py py-obj docutils literal"><span class="pre">INVALID</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.INVALID_AFFINE.html#matplotlib.text.BboxTransformTo.INVALID_AFFINE" title="matplotlib.text.BboxTransformTo.INVALID_AFFINE"><code class="xref py py-obj docutils literal"><span class="pre">INVALID_AFFINE</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.INVALID_NON_AFFINE.html#matplotlib.text.BboxTransformTo.INVALID_NON_AFFINE" title="matplotlib.text.BboxTransformTo.INVALID_NON_AFFINE"><code class="xref py py-obj docutils literal"><span class="pre">INVALID_NON_AFFINE</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.depth.html#matplotlib.text.BboxTransformTo.depth" title="matplotlib.text.BboxTransformTo.depth"><code class="xref py py-obj docutils literal"><span class="pre">depth</span></code></a></td>
+<td>Returns the number of transforms which have been chained together to form this Transform instance.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.has_inverse.html#matplotlib.text.BboxTransformTo.has_inverse" title="matplotlib.text.BboxTransformTo.has_inverse"><code class="xref py py-obj docutils literal"><span class="pre">has_inverse</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.input_dims.html#matplotlib.text.BboxTransformTo.input_dims" title="matplotlib.text.BboxTransformTo.input_dims"><code class="xref py py-obj docutils literal"><span class="pre">input_dims</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.is_affine.html#matplotlib.text.BboxTransformTo.is_affine" title="matplotlib.text.BboxTransformTo.is_affine"><code class="xref py py-obj docutils literal"><span class="pre">is_affine</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.is_bbox.html#matplotlib.text.BboxTransformTo.is_bbox" title="matplotlib.text.BboxTransformTo.is_bbox"><code class="xref py py-obj docutils literal"><span class="pre">is_bbox</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.is_separable.html#matplotlib.text.BboxTransformTo.is_separable" title="matplotlib.text.BboxTransformTo.is_separable"><code class="xref py py-obj docutils literal"><span class="pre">is_separable</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.output_dims.html#matplotlib.text.BboxTransformTo.output_dims" title="matplotlib.text.BboxTransformTo.output_dims"><code class="xref py py-obj docutils literal"><span class="pre">output_dims</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.text.BboxTransformTo.pass_through.html#matplotlib.text.BboxTransformTo.pass_through" title="matplotlib.text.BboxTransformTo.pass_through"><code class="xref py py-obj docutils literal"><span class="pre">pass_through</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -339,10 +356,10 @@ points from the unit bounding box to <em>boxout</em>.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="matplotlib.text.BboxTransformTo.depth.html" class="btn btn-neutral float-right" title="14.2.6.1. matplotlib.text.BboxTransformTo.depth" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="matplotlib.text.BboxTransformTo.__init__.html" class="btn btn-neutral float-right" title="14.2.6.1.1. matplotlib.text.BboxTransformTo.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="matplotlib.text.BboxBase.union.html" class="btn btn-neutral" title="14.2.5.48. matplotlib.text.BboxBase.union" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="matplotlib.text.BboxBase.ymin.html" class="btn btn-neutral" title="14.2.5.2.26. matplotlib.text.BboxBase.ymin" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

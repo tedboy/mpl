@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>10.2.5. matplotlib.lines.MarkerStyle &mdash; Matplotlib API 1 documentation</title>
+  <title>10.2.5. matplotlib.lines.MarkerStyle &mdash; My Project v1</title>
   
 
   
@@ -30,10 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="10. matplotlib.lines" href="../matplotlib.lines.html"/>
-        <link rel="next" title="10.2.5.1. matplotlib.lines.MarkerStyle.get_alt_path" href="matplotlib.lines.MarkerStyle.get_alt_path.html"/>
-        <link rel="prev" title="10.2.4.133. matplotlib.lines.Line2D.update_from" href="matplotlib.lines.Line2D.update_from.html"/> 
+        <link rel="next" title="10.2.5.1.1. matplotlib.lines.MarkerStyle.__init__" href="matplotlib.lines.MarkerStyle.__init__.html"/>
+        <link rel="prev" title="10.2.4.2.13. matplotlib.lines.Line2D.zorder" href="matplotlib.lines.Line2D.zorder.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -102,18 +102,8 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.lines.IdentityTransform.html">10.2.3. matplotlib.lines.IdentityTransform</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.lines.Line2D.html">10.2.4. matplotlib.lines.Line2D</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">10.2.5. matplotlib.lines.MarkerStyle</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.MarkerStyle.get_alt_path.html">10.2.5.1. matplotlib.lines.MarkerStyle.get_alt_path</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.MarkerStyle.get_alt_transform.html">10.2.5.2. matplotlib.lines.MarkerStyle.get_alt_transform</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.MarkerStyle.get_capstyle.html">10.2.5.3. matplotlib.lines.MarkerStyle.get_capstyle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.MarkerStyle.get_fillstyle.html">10.2.5.4. matplotlib.lines.MarkerStyle.get_fillstyle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.MarkerStyle.get_joinstyle.html">10.2.5.5. matplotlib.lines.MarkerStyle.get_joinstyle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.MarkerStyle.get_marker.html">10.2.5.6. matplotlib.lines.MarkerStyle.get_marker</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.MarkerStyle.get_path.html">10.2.5.7. matplotlib.lines.MarkerStyle.get_path</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.MarkerStyle.get_snap_threshold.html">10.2.5.8. matplotlib.lines.MarkerStyle.get_snap_threshold</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.MarkerStyle.get_transform.html">10.2.5.9. matplotlib.lines.MarkerStyle.get_transform</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.MarkerStyle.is_filled.html">10.2.5.10. matplotlib.lines.MarkerStyle.is_filled</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.MarkerStyle.set_fillstyle.html">10.2.5.11. matplotlib.lines.MarkerStyle.set_fillstyle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.lines.MarkerStyle.set_marker.html">10.2.5.12. matplotlib.lines.MarkerStyle.set_marker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">10.2.5.1. Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#attributes">10.2.5.2. Attributes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.lines.Path.html">10.2.6. matplotlib.lines.Path</a></li>
@@ -166,7 +156,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -216,56 +206,10 @@
             
   <div class="section" id="matplotlib-lines-markerstyle">
 <h1>10.2.5. matplotlib.lines.MarkerStyle<a class="headerlink" href="#matplotlib-lines-markerstyle" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.lines.MarkerStyle.__init__.html#matplotlib.lines.MarkerStyle.__init__" title="matplotlib.lines.MarkerStyle.__init__"><code class="xref py py-func docutils literal"><span class="pre">MarkerStyle.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.lines.MarkerStyle">
 <em class="property">class </em><code class="descclassname">matplotlib.lines.</code><code class="descname">MarkerStyle</code><span class="sig-paren">(</span><em>marker=None</em>, <em>fillstyle=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/markers.html#MarkerStyle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.lines.MarkerStyle" title="Permalink to this definition">¶</a></dt>
-<dd><p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.lines.MarkerStyle.get_alt_path.html#matplotlib.lines.MarkerStyle.get_alt_path" title="matplotlib.lines.MarkerStyle.get_alt_path"><code class="xref py py-obj docutils literal"><span class="pre">get_alt_path</span></code></a>()</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.lines.MarkerStyle.get_alt_transform.html#matplotlib.lines.MarkerStyle.get_alt_transform" title="matplotlib.lines.MarkerStyle.get_alt_transform"><code class="xref py py-obj docutils literal"><span class="pre">get_alt_transform</span></code></a>()</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.lines.MarkerStyle.get_capstyle.html#matplotlib.lines.MarkerStyle.get_capstyle" title="matplotlib.lines.MarkerStyle.get_capstyle"><code class="xref py py-obj docutils literal"><span class="pre">get_capstyle</span></code></a>()</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.lines.MarkerStyle.get_fillstyle.html#matplotlib.lines.MarkerStyle.get_fillstyle" title="matplotlib.lines.MarkerStyle.get_fillstyle"><code class="xref py py-obj docutils literal"><span class="pre">get_fillstyle</span></code></a>()</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.lines.MarkerStyle.get_joinstyle.html#matplotlib.lines.MarkerStyle.get_joinstyle" title="matplotlib.lines.MarkerStyle.get_joinstyle"><code class="xref py py-obj docutils literal"><span class="pre">get_joinstyle</span></code></a>()</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.lines.MarkerStyle.get_marker.html#matplotlib.lines.MarkerStyle.get_marker" title="matplotlib.lines.MarkerStyle.get_marker"><code class="xref py py-obj docutils literal"><span class="pre">get_marker</span></code></a>()</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.lines.MarkerStyle.get_path.html#matplotlib.lines.MarkerStyle.get_path" title="matplotlib.lines.MarkerStyle.get_path"><code class="xref py py-obj docutils literal"><span class="pre">get_path</span></code></a>()</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.lines.MarkerStyle.get_snap_threshold.html#matplotlib.lines.MarkerStyle.get_snap_threshold" title="matplotlib.lines.MarkerStyle.get_snap_threshold"><code class="xref py py-obj docutils literal"><span class="pre">get_snap_threshold</span></code></a>()</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.lines.MarkerStyle.get_transform.html#matplotlib.lines.MarkerStyle.get_transform" title="matplotlib.lines.MarkerStyle.get_transform"><code class="xref py py-obj docutils literal"><span class="pre">get_transform</span></code></a>()</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.lines.MarkerStyle.is_filled.html#matplotlib.lines.MarkerStyle.is_filled" title="matplotlib.lines.MarkerStyle.is_filled"><code class="xref py py-obj docutils literal"><span class="pre">is_filled</span></code></a>()</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.lines.MarkerStyle.set_fillstyle.html#matplotlib.lines.MarkerStyle.set_fillstyle" title="matplotlib.lines.MarkerStyle.set_fillstyle"><code class="xref py py-obj docutils literal"><span class="pre">set_fillstyle</span></code></a>(fillstyle)</td>
-<td>Sets fillstyle</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.lines.MarkerStyle.set_marker.html#matplotlib.lines.MarkerStyle.set_marker" title="matplotlib.lines.MarkerStyle.set_marker"><code class="xref py py-obj docutils literal"><span class="pre">set_marker</span></code></a>(marker)</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<dl class="method">
+<dd><dl class="method">
 <dt id="matplotlib.lines.MarkerStyle.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>marker=None</em>, <em>fillstyle=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/markers.html#MarkerStyle.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.lines.MarkerStyle.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>MarkerStyle</p>
@@ -307,6 +251,76 @@
 
 </dd></dl>
 
+<div class="section" id="methods">
+<h2>10.2.5.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.lines.MarkerStyle.__init__.html#matplotlib.lines.MarkerStyle.__init__" title="matplotlib.lines.MarkerStyle.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>([marker,&nbsp;fillstyle])</td>
+<td>MarkerStyle</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.lines.MarkerStyle.get_alt_path.html#matplotlib.lines.MarkerStyle.get_alt_path" title="matplotlib.lines.MarkerStyle.get_alt_path"><code class="xref py py-obj docutils literal"><span class="pre">get_alt_path</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.lines.MarkerStyle.get_alt_transform.html#matplotlib.lines.MarkerStyle.get_alt_transform" title="matplotlib.lines.MarkerStyle.get_alt_transform"><code class="xref py py-obj docutils literal"><span class="pre">get_alt_transform</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.lines.MarkerStyle.get_capstyle.html#matplotlib.lines.MarkerStyle.get_capstyle" title="matplotlib.lines.MarkerStyle.get_capstyle"><code class="xref py py-obj docutils literal"><span class="pre">get_capstyle</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.lines.MarkerStyle.get_fillstyle.html#matplotlib.lines.MarkerStyle.get_fillstyle" title="matplotlib.lines.MarkerStyle.get_fillstyle"><code class="xref py py-obj docutils literal"><span class="pre">get_fillstyle</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.lines.MarkerStyle.get_joinstyle.html#matplotlib.lines.MarkerStyle.get_joinstyle" title="matplotlib.lines.MarkerStyle.get_joinstyle"><code class="xref py py-obj docutils literal"><span class="pre">get_joinstyle</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.lines.MarkerStyle.get_marker.html#matplotlib.lines.MarkerStyle.get_marker" title="matplotlib.lines.MarkerStyle.get_marker"><code class="xref py py-obj docutils literal"><span class="pre">get_marker</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.lines.MarkerStyle.get_path.html#matplotlib.lines.MarkerStyle.get_path" title="matplotlib.lines.MarkerStyle.get_path"><code class="xref py py-obj docutils literal"><span class="pre">get_path</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.lines.MarkerStyle.get_snap_threshold.html#matplotlib.lines.MarkerStyle.get_snap_threshold" title="matplotlib.lines.MarkerStyle.get_snap_threshold"><code class="xref py py-obj docutils literal"><span class="pre">get_snap_threshold</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.lines.MarkerStyle.get_transform.html#matplotlib.lines.MarkerStyle.get_transform" title="matplotlib.lines.MarkerStyle.get_transform"><code class="xref py py-obj docutils literal"><span class="pre">get_transform</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.lines.MarkerStyle.is_filled.html#matplotlib.lines.MarkerStyle.is_filled" title="matplotlib.lines.MarkerStyle.is_filled"><code class="xref py py-obj docutils literal"><span class="pre">is_filled</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.lines.MarkerStyle.set_fillstyle.html#matplotlib.lines.MarkerStyle.set_fillstyle" title="matplotlib.lines.MarkerStyle.set_fillstyle"><code class="xref py py-obj docutils literal"><span class="pre">set_fillstyle</span></code></a>(fillstyle)</td>
+<td>Sets fillstyle</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.lines.MarkerStyle.set_marker.html#matplotlib.lines.MarkerStyle.set_marker" title="matplotlib.lines.MarkerStyle.set_marker"><code class="xref py py-obj docutils literal"><span class="pre">set_marker</span></code></a>(marker)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attributes">
+<h2>10.2.5.2. Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.lines.MarkerStyle.filled_markers.html#matplotlib.lines.MarkerStyle.filled_markers" title="matplotlib.lines.MarkerStyle.filled_markers"><code class="xref py py-obj docutils literal"><span class="pre">filled_markers</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.lines.MarkerStyle.fillstyles.html#matplotlib.lines.MarkerStyle.fillstyles" title="matplotlib.lines.MarkerStyle.fillstyles"><code class="xref py py-obj docutils literal"><span class="pre">fillstyles</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.lines.MarkerStyle.markers.html#matplotlib.lines.MarkerStyle.markers" title="matplotlib.lines.MarkerStyle.markers"><code class="xref py py-obj docutils literal"><span class="pre">markers</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -316,10 +330,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="matplotlib.lines.MarkerStyle.get_alt_path.html" class="btn btn-neutral float-right" title="10.2.5.1. matplotlib.lines.MarkerStyle.get_alt_path" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="matplotlib.lines.MarkerStyle.__init__.html" class="btn btn-neutral float-right" title="10.2.5.1.1. matplotlib.lines.MarkerStyle.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="matplotlib.lines.Line2D.update_from.html" class="btn btn-neutral" title="10.2.4.133. matplotlib.lines.Line2D.update_from" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="matplotlib.lines.Line2D.zorder.html" class="btn btn-neutral" title="10.2.4.2.13. matplotlib.lines.Line2D.zorder" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

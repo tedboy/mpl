@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>9.2.2. matplotlib.legend.BarContainer &mdash; Matplotlib API 1 documentation</title>
+  <title>9.2.2. matplotlib.legend.BarContainer &mdash; My Project v1</title>
   
 
   
@@ -30,10 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="9. matplotlib.legend" href="../matplotlib.legend.html"/>
-        <link rel="next" title="9.2.2.1. matplotlib.legend.BarContainer.add_callback" href="matplotlib.legend.BarContainer.add_callback.html"/>
-        <link rel="prev" title="9.2.1.67. matplotlib.legend.Artist.update_from" href="matplotlib.legend.Artist.update_from.html"/> 
+        <link rel="next" title="9.2.2.1.1. matplotlib.legend.BarContainer.__init__" href="matplotlib.legend.BarContainer.__init__.html"/>
+        <link rel="prev" title="9.2.1.2.5. matplotlib.legend.Artist.zorder" href="matplotlib.legend.Artist.zorder.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -98,16 +98,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../matplotlib.legend.html#classes">9.2. Classes</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.Artist.html">9.2.1. matplotlib.legend.Artist</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">9.2.2. matplotlib.legend.BarContainer</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.BarContainer.add_callback.html">9.2.2.1. matplotlib.legend.BarContainer.add_callback</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.BarContainer.count.html">9.2.2.2. matplotlib.legend.BarContainer.count</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.BarContainer.get_children.html">9.2.2.3. matplotlib.legend.BarContainer.get_children</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.BarContainer.get_label.html">9.2.2.4. matplotlib.legend.BarContainer.get_label</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.BarContainer.index.html">9.2.2.5. matplotlib.legend.BarContainer.index</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.BarContainer.pchanged.html">9.2.2.6. matplotlib.legend.BarContainer.pchanged</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.BarContainer.remove.html">9.2.2.7. matplotlib.legend.BarContainer.remove</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.BarContainer.remove_callback.html">9.2.2.8. matplotlib.legend.BarContainer.remove_callback</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.BarContainer.set_label.html">9.2.2.9. matplotlib.legend.BarContainer.set_label</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.legend.BarContainer.set_remove_method.html">9.2.2.10. matplotlib.legend.BarContainer.set_remove_method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">9.2.2.1. Methods</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.Bbox.html">9.2.3. matplotlib.legend.Bbox</a></li>
@@ -136,7 +127,6 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.TransformedBbox.html">9.2.26. matplotlib.legend.TransformedBbox</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.VPacker.html">9.2.27. matplotlib.legend.VPacker</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.silent_list.html">9.2.28. matplotlib.legend.silent_list</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.legend.xrange.html">9.2.29. matplotlib.legend.xrange</a></li>
 </ul>
 </li>
 </ul>
@@ -185,7 +175,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -235,51 +225,60 @@
             
   <div class="section" id="matplotlib-legend-barcontainer">
 <h1>9.2.2. matplotlib.legend.BarContainer<a class="headerlink" href="#matplotlib-legend-barcontainer" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.legend.BarContainer.__init__.html#matplotlib.legend.BarContainer.__init__" title="matplotlib.legend.BarContainer.__init__"><code class="xref py py-func docutils literal"><span class="pre">BarContainer.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.legend.BarContainer">
 <em class="property">class </em><code class="descclassname">matplotlib.legend.</code><code class="descname">BarContainer</code><span class="sig-paren">(</span><em>patches</em>, <em>errorbar=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/container.html#BarContainer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.legend.BarContainer" title="Permalink to this definition">¶</a></dt>
-<dd><p class="rubric">Methods</p>
+<dd><dl class="method">
+<dt id="matplotlib.legend.BarContainer.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>patches</em>, <em>errorbar=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/container.html#BarContainer.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.legend.BarContainer.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="section" id="methods">
+<h2>9.2.2.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="longtable docutils">
 <colgroup>
 <col width="10%" />
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.BarContainer.add_callback.html#matplotlib.legend.BarContainer.add_callback" title="matplotlib.legend.BarContainer.add_callback"><code class="xref py py-obj docutils literal"><span class="pre">add_callback</span></code></a>(func)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.BarContainer.__init__.html#matplotlib.legend.BarContainer.__init__" title="matplotlib.legend.BarContainer.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>(patches[,&nbsp;errorbar])</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.BarContainer.add_callback.html#matplotlib.legend.BarContainer.add_callback" title="matplotlib.legend.BarContainer.add_callback"><code class="xref py py-obj docutils literal"><span class="pre">add_callback</span></code></a>(func)</td>
 <td>Adds a callback function that will be called whenever one of the <a class="reference internal" href="matplotlib.legend.Artist.html#matplotlib.legend.Artist" title="matplotlib.legend.Artist"><code class="xref py py-class docutils literal"><span class="pre">Artist</span></code></a>&#8216;s properties changes.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.BarContainer.count.html#matplotlib.legend.BarContainer.count" title="matplotlib.legend.BarContainer.count"><code class="xref py py-obj docutils literal"><span class="pre">count</span></code></a>(...)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.BarContainer.count.html#matplotlib.legend.BarContainer.count" title="matplotlib.legend.BarContainer.count"><code class="xref py py-obj docutils literal"><span class="pre">count</span></code></a>(...)</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.BarContainer.get_children.html#matplotlib.legend.BarContainer.get_children" title="matplotlib.legend.BarContainer.get_children"><code class="xref py py-obj docutils literal"><span class="pre">get_children</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.BarContainer.get_children.html#matplotlib.legend.BarContainer.get_children" title="matplotlib.legend.BarContainer.get_children"><code class="xref py py-obj docutils literal"><span class="pre">get_children</span></code></a>()</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.BarContainer.get_label.html#matplotlib.legend.BarContainer.get_label" title="matplotlib.legend.BarContainer.get_label"><code class="xref py py-obj docutils literal"><span class="pre">get_label</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.BarContainer.get_label.html#matplotlib.legend.BarContainer.get_label" title="matplotlib.legend.BarContainer.get_label"><code class="xref py py-obj docutils literal"><span class="pre">get_label</span></code></a>()</td>
 <td>Get the label used for this artist in the legend.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.BarContainer.index.html#matplotlib.legend.BarContainer.index" title="matplotlib.legend.BarContainer.index"><code class="xref py py-obj docutils literal"><span class="pre">index</span></code></a>((value,&nbsp;[start,&nbsp;...)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.BarContainer.index.html#matplotlib.legend.BarContainer.index" title="matplotlib.legend.BarContainer.index"><code class="xref py py-obj docutils literal"><span class="pre">index</span></code></a>((value,&nbsp;[start,&nbsp;...)</td>
 <td>Raises ValueError if the value is not present.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.BarContainer.pchanged.html#matplotlib.legend.BarContainer.pchanged" title="matplotlib.legend.BarContainer.pchanged"><code class="xref py py-obj docutils literal"><span class="pre">pchanged</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.BarContainer.pchanged.html#matplotlib.legend.BarContainer.pchanged" title="matplotlib.legend.BarContainer.pchanged"><code class="xref py py-obj docutils literal"><span class="pre">pchanged</span></code></a>()</td>
 <td>Fire an event when property changed, calling all of the registered callbacks.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.BarContainer.remove.html#matplotlib.legend.BarContainer.remove" title="matplotlib.legend.BarContainer.remove"><code class="xref py py-obj docutils literal"><span class="pre">remove</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.BarContainer.remove.html#matplotlib.legend.BarContainer.remove" title="matplotlib.legend.BarContainer.remove"><code class="xref py py-obj docutils literal"><span class="pre">remove</span></code></a>()</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.BarContainer.remove_callback.html#matplotlib.legend.BarContainer.remove_callback" title="matplotlib.legend.BarContainer.remove_callback"><code class="xref py py-obj docutils literal"><span class="pre">remove_callback</span></code></a>(oid)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.BarContainer.remove_callback.html#matplotlib.legend.BarContainer.remove_callback" title="matplotlib.legend.BarContainer.remove_callback"><code class="xref py py-obj docutils literal"><span class="pre">remove_callback</span></code></a>(oid)</td>
 <td>Remove a callback based on its <em>id</em>.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.BarContainer.set_label.html#matplotlib.legend.BarContainer.set_label" title="matplotlib.legend.BarContainer.set_label"><code class="xref py py-obj docutils literal"><span class="pre">set_label</span></code></a>(s)</td>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.BarContainer.set_label.html#matplotlib.legend.BarContainer.set_label" title="matplotlib.legend.BarContainer.set_label"><code class="xref py py-obj docutils literal"><span class="pre">set_label</span></code></a>(s)</td>
 <td>Set the label to <em>s</em> for auto legend.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.legend.BarContainer.set_remove_method.html#matplotlib.legend.BarContainer.set_remove_method" title="matplotlib.legend.BarContainer.set_remove_method"><code class="xref py py-obj docutils literal"><span class="pre">set_remove_method</span></code></a>(f)</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.legend.BarContainer.set_remove_method.html#matplotlib.legend.BarContainer.set_remove_method" title="matplotlib.legend.BarContainer.set_remove_method"><code class="xref py py-obj docutils literal"><span class="pre">set_remove_method</span></code></a>(f)</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
+</div>
 </div>
 
 
@@ -289,10 +288,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="matplotlib.legend.BarContainer.add_callback.html" class="btn btn-neutral float-right" title="9.2.2.1. matplotlib.legend.BarContainer.add_callback" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="matplotlib.legend.BarContainer.__init__.html" class="btn btn-neutral float-right" title="9.2.2.1.1. matplotlib.legend.BarContainer.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="matplotlib.legend.Artist.update_from.html" class="btn btn-neutral" title="9.2.1.67. matplotlib.legend.Artist.update_from" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="matplotlib.legend.Artist.zorder.html" class="btn btn-neutral" title="9.2.1.2.5. matplotlib.legend.Artist.zorder" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

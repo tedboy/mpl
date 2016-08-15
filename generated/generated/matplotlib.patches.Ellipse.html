@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>12.2.9. matplotlib.patches.Ellipse &mdash; Matplotlib API 1 documentation</title>
+  <title>12.2.9. matplotlib.patches.Ellipse &mdash; My Project v1</title>
   
 
   
@@ -30,10 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="12. matplotlib.patches" href="../matplotlib.patches.html"/>
-        <link rel="next" title="12.2.9.1. matplotlib.patches.Ellipse.axes" href="matplotlib.patches.Ellipse.axes.html"/>
-        <link rel="prev" title="12.2.8.3. matplotlib.patches.ConnectionStyle.register" href="matplotlib.patches.ConnectionStyle.register.html"/> 
+        <link rel="next" title="12.2.9.1.1. matplotlib.patches.Ellipse.__init__" href="matplotlib.patches.Ellipse.__init__.html"/>
+        <link rel="prev" title="12.2.8.1.3. matplotlib.patches.ConnectionStyle.register" href="matplotlib.patches.ConnectionStyle.register.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -52,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -108,109 +108,8 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.ConnectionPatch.html">12.2.7. matplotlib.patches.ConnectionPatch</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.ConnectionStyle.html">12.2.8. matplotlib.patches.ConnectionStyle</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">12.2.9. matplotlib.patches.Ellipse</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.axes.html">12.2.9.1. matplotlib.patches.Ellipse.axes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.fill.html">12.2.9.2. matplotlib.patches.Ellipse.fill</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.mouseover.html">12.2.9.3. matplotlib.patches.Ellipse.mouseover</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.stale.html">12.2.9.4. matplotlib.patches.Ellipse.stale</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.add_callback.html">12.2.9.5. matplotlib.patches.Ellipse.add_callback</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.contains.html">12.2.9.6. matplotlib.patches.Ellipse.contains</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.contains_point.html">12.2.9.7. matplotlib.patches.Ellipse.contains_point</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.convert_xunits.html">12.2.9.8. matplotlib.patches.Ellipse.convert_xunits</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.convert_yunits.html">12.2.9.9. matplotlib.patches.Ellipse.convert_yunits</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.draw.html">12.2.9.10. matplotlib.patches.Ellipse.draw</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.findobj.html">12.2.9.11. matplotlib.patches.Ellipse.findobj</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.format_cursor_data.html">12.2.9.12. matplotlib.patches.Ellipse.format_cursor_data</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_aa.html">12.2.9.13. matplotlib.patches.Ellipse.get_aa</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_agg_filter.html">12.2.9.14. matplotlib.patches.Ellipse.get_agg_filter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_alpha.html">12.2.9.15. matplotlib.patches.Ellipse.get_alpha</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_animated.html">12.2.9.16. matplotlib.patches.Ellipse.get_animated</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_antialiased.html">12.2.9.17. matplotlib.patches.Ellipse.get_antialiased</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_axes.html">12.2.9.18. matplotlib.patches.Ellipse.get_axes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_capstyle.html">12.2.9.19. matplotlib.patches.Ellipse.get_capstyle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_children.html">12.2.9.20. matplotlib.patches.Ellipse.get_children</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_clip_box.html">12.2.9.21. matplotlib.patches.Ellipse.get_clip_box</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_clip_on.html">12.2.9.22. matplotlib.patches.Ellipse.get_clip_on</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_clip_path.html">12.2.9.23. matplotlib.patches.Ellipse.get_clip_path</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_contains.html">12.2.9.24. matplotlib.patches.Ellipse.get_contains</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_cursor_data.html">12.2.9.25. matplotlib.patches.Ellipse.get_cursor_data</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_data_transform.html">12.2.9.26. matplotlib.patches.Ellipse.get_data_transform</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_ec.html">12.2.9.27. matplotlib.patches.Ellipse.get_ec</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_edgecolor.html">12.2.9.28. matplotlib.patches.Ellipse.get_edgecolor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_extents.html">12.2.9.29. matplotlib.patches.Ellipse.get_extents</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_facecolor.html">12.2.9.30. matplotlib.patches.Ellipse.get_facecolor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_fc.html">12.2.9.31. matplotlib.patches.Ellipse.get_fc</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_figure.html">12.2.9.32. matplotlib.patches.Ellipse.get_figure</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_fill.html">12.2.9.33. matplotlib.patches.Ellipse.get_fill</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_gid.html">12.2.9.34. matplotlib.patches.Ellipse.get_gid</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_hatch.html">12.2.9.35. matplotlib.patches.Ellipse.get_hatch</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_joinstyle.html">12.2.9.36. matplotlib.patches.Ellipse.get_joinstyle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_label.html">12.2.9.37. matplotlib.patches.Ellipse.get_label</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_linestyle.html">12.2.9.38. matplotlib.patches.Ellipse.get_linestyle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_linewidth.html">12.2.9.39. matplotlib.patches.Ellipse.get_linewidth</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_ls.html">12.2.9.40. matplotlib.patches.Ellipse.get_ls</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_lw.html">12.2.9.41. matplotlib.patches.Ellipse.get_lw</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_patch_transform.html">12.2.9.42. matplotlib.patches.Ellipse.get_patch_transform</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_path.html">12.2.9.43. matplotlib.patches.Ellipse.get_path</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_path_effects.html">12.2.9.44. matplotlib.patches.Ellipse.get_path_effects</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_picker.html">12.2.9.45. matplotlib.patches.Ellipse.get_picker</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_rasterized.html">12.2.9.46. matplotlib.patches.Ellipse.get_rasterized</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_sketch_params.html">12.2.9.47. matplotlib.patches.Ellipse.get_sketch_params</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_snap.html">12.2.9.48. matplotlib.patches.Ellipse.get_snap</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_transform.html">12.2.9.49. matplotlib.patches.Ellipse.get_transform</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_transformed_clip_path_and_affine.html">12.2.9.50. matplotlib.patches.Ellipse.get_transformed_clip_path_and_affine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_url.html">12.2.9.51. matplotlib.patches.Ellipse.get_url</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_verts.html">12.2.9.52. matplotlib.patches.Ellipse.get_verts</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_visible.html">12.2.9.53. matplotlib.patches.Ellipse.get_visible</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_window_extent.html">12.2.9.54. matplotlib.patches.Ellipse.get_window_extent</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.get_zorder.html">12.2.9.55. matplotlib.patches.Ellipse.get_zorder</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.have_units.html">12.2.9.56. matplotlib.patches.Ellipse.have_units</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.hitlist.html">12.2.9.57. matplotlib.patches.Ellipse.hitlist</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.is_figure_set.html">12.2.9.58. matplotlib.patches.Ellipse.is_figure_set</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.is_transform_set.html">12.2.9.59. matplotlib.patches.Ellipse.is_transform_set</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.pchanged.html">12.2.9.60. matplotlib.patches.Ellipse.pchanged</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.pick.html">12.2.9.61. matplotlib.patches.Ellipse.pick</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.pickable.html">12.2.9.62. matplotlib.patches.Ellipse.pickable</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.properties.html">12.2.9.63. matplotlib.patches.Ellipse.properties</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.remove.html">12.2.9.64. matplotlib.patches.Ellipse.remove</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.remove_callback.html">12.2.9.65. matplotlib.patches.Ellipse.remove_callback</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.set.html">12.2.9.66. matplotlib.patches.Ellipse.set</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.set_aa.html">12.2.9.67. matplotlib.patches.Ellipse.set_aa</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.set_agg_filter.html">12.2.9.68. matplotlib.patches.Ellipse.set_agg_filter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.set_alpha.html">12.2.9.69. matplotlib.patches.Ellipse.set_alpha</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.set_animated.html">12.2.9.70. matplotlib.patches.Ellipse.set_animated</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.set_antialiased.html">12.2.9.71. matplotlib.patches.Ellipse.set_antialiased</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.set_axes.html">12.2.9.72. matplotlib.patches.Ellipse.set_axes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.set_capstyle.html">12.2.9.73. matplotlib.patches.Ellipse.set_capstyle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.set_clip_box.html">12.2.9.74. matplotlib.patches.Ellipse.set_clip_box</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.set_clip_on.html">12.2.9.75. matplotlib.patches.Ellipse.set_clip_on</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.set_clip_path.html">12.2.9.76. matplotlib.patches.Ellipse.set_clip_path</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.set_color.html">12.2.9.77. matplotlib.patches.Ellipse.set_color</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.set_contains.html">12.2.9.78. matplotlib.patches.Ellipse.set_contains</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.set_ec.html">12.2.9.79. matplotlib.patches.Ellipse.set_ec</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.set_edgecolor.html">12.2.9.80. matplotlib.patches.Ellipse.set_edgecolor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.set_facecolor.html">12.2.9.81. matplotlib.patches.Ellipse.set_facecolor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.set_fc.html">12.2.9.82. matplotlib.patches.Ellipse.set_fc</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.set_figure.html">12.2.9.83. matplotlib.patches.Ellipse.set_figure</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.set_fill.html">12.2.9.84. matplotlib.patches.Ellipse.set_fill</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.set_gid.html">12.2.9.85. matplotlib.patches.Ellipse.set_gid</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.set_hatch.html">12.2.9.86. matplotlib.patches.Ellipse.set_hatch</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.set_joinstyle.html">12.2.9.87. matplotlib.patches.Ellipse.set_joinstyle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.set_label.html">12.2.9.88. matplotlib.patches.Ellipse.set_label</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.set_linestyle.html">12.2.9.89. matplotlib.patches.Ellipse.set_linestyle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.set_linewidth.html">12.2.9.90. matplotlib.patches.Ellipse.set_linewidth</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.set_ls.html">12.2.9.91. matplotlib.patches.Ellipse.set_ls</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.set_lw.html">12.2.9.92. matplotlib.patches.Ellipse.set_lw</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.set_path_effects.html">12.2.9.93. matplotlib.patches.Ellipse.set_path_effects</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.set_picker.html">12.2.9.94. matplotlib.patches.Ellipse.set_picker</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.set_rasterized.html">12.2.9.95. matplotlib.patches.Ellipse.set_rasterized</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.set_sketch_params.html">12.2.9.96. matplotlib.patches.Ellipse.set_sketch_params</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.set_snap.html">12.2.9.97. matplotlib.patches.Ellipse.set_snap</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.set_transform.html">12.2.9.98. matplotlib.patches.Ellipse.set_transform</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.set_url.html">12.2.9.99. matplotlib.patches.Ellipse.set_url</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.set_visible.html">12.2.9.100. matplotlib.patches.Ellipse.set_visible</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.set_zorder.html">12.2.9.101. matplotlib.patches.Ellipse.set_zorder</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.update.html">12.2.9.102. matplotlib.patches.Ellipse.update</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.patches.Ellipse.update_from.html">12.2.9.103. matplotlib.patches.Ellipse.update_from</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">12.2.9.1. Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#attributes">12.2.9.2. Attributes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.FancyArrow.html">12.2.10. matplotlib.patches.FancyArrow</a></li>
@@ -225,8 +124,6 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Shadow.html">12.2.19. matplotlib.patches.Shadow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.Wedge.html">12.2.20. matplotlib.patches.Wedge</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.YAArrow.html">12.2.21. matplotlib.patches.YAArrow</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.map.html">12.2.22. matplotlib.patches.map</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.patches.zip.html">12.2.23. matplotlib.patches.zip</a></li>
 </ul>
 </li>
 </ul>
@@ -272,7 +169,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -322,338 +219,10 @@
             
   <div class="section" id="matplotlib-patches-ellipse">
 <h1>12.2.9. matplotlib.patches.Ellipse<a class="headerlink" href="#matplotlib-patches-ellipse" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.patches.Ellipse.__init__.html#matplotlib.patches.Ellipse.__init__" title="matplotlib.patches.Ellipse.__init__"><code class="xref py py-func docutils literal"><span class="pre">Ellipse.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.patches.Ellipse">
 <em class="property">class </em><code class="descclassname">matplotlib.patches.</code><code class="descname">Ellipse</code><span class="sig-paren">(</span><em>xy</em>, <em>width</em>, <em>height</em>, <em>angle=0.0</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/patches.html#Ellipse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.patches.Ellipse" title="Permalink to this definition">¶</a></dt>
 <dd><p>A scale-free ellipse.</p>
-<p class="rubric">Attributes</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.axes.html#matplotlib.patches.Ellipse.axes" title="matplotlib.patches.Ellipse.axes"><code class="xref py py-obj docutils literal"><span class="pre">axes</span></code></a></td>
-<td>The <a class="reference internal" href="matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instance the artist resides in, or <em>None</em>.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.fill.html#matplotlib.patches.Ellipse.fill" title="matplotlib.patches.Ellipse.fill"><code class="xref py py-obj docutils literal"><span class="pre">fill</span></code></a></td>
-<td>return whether fill is set</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.mouseover.html#matplotlib.patches.Ellipse.mouseover" title="matplotlib.patches.Ellipse.mouseover"><code class="xref py py-obj docutils literal"><span class="pre">mouseover</span></code></a></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.stale.html#matplotlib.patches.Ellipse.stale" title="matplotlib.patches.Ellipse.stale"><code class="xref py py-obj docutils literal"><span class="pre">stale</span></code></a></td>
-<td>If the artist is &#8216;stale&#8217; and needs to be re-drawn for the output to match the internal state of the artist.</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.add_callback.html#matplotlib.patches.Ellipse.add_callback" title="matplotlib.patches.Ellipse.add_callback"><code class="xref py py-obj docutils literal"><span class="pre">add_callback</span></code></a>(func)</td>
-<td>Adds a callback function that will be called whenever one of the <code class="xref py py-class docutils literal"><span class="pre">Artist</span></code>&#8216;s properties changes.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.contains.html#matplotlib.patches.Ellipse.contains" title="matplotlib.patches.Ellipse.contains"><code class="xref py py-obj docutils literal"><span class="pre">contains</span></code></a>(mouseevent[,&nbsp;radius])</td>
-<td>Test whether the mouse event occurred in the patch.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.contains_point.html#matplotlib.patches.Ellipse.contains_point" title="matplotlib.patches.Ellipse.contains_point"><code class="xref py py-obj docutils literal"><span class="pre">contains_point</span></code></a>(point[,&nbsp;radius])</td>
-<td>Returns <em>True</em> if the given point is inside the path (transformed with its transform attribute).</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.convert_xunits.html#matplotlib.patches.Ellipse.convert_xunits" title="matplotlib.patches.Ellipse.convert_xunits"><code class="xref py py-obj docutils literal"><span class="pre">convert_xunits</span></code></a>(x)</td>
-<td>For artists in an axes, if the xaxis has units support,</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.convert_yunits.html#matplotlib.patches.Ellipse.convert_yunits" title="matplotlib.patches.Ellipse.convert_yunits"><code class="xref py py-obj docutils literal"><span class="pre">convert_yunits</span></code></a>(y)</td>
-<td>For artists in an axes, if the yaxis has units support,</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.draw.html#matplotlib.patches.Ellipse.draw" title="matplotlib.patches.Ellipse.draw"><code class="xref py py-obj docutils literal"><span class="pre">draw</span></code></a>(artist,&nbsp;renderer,&nbsp;*args,&nbsp;**kwargs)</td>
-<td>Draw the <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a> to the given <em>renderer</em>.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.findobj.html#matplotlib.patches.Ellipse.findobj" title="matplotlib.patches.Ellipse.findobj"><code class="xref py py-obj docutils literal"><span class="pre">findobj</span></code></a>([match,&nbsp;include_self])</td>
-<td>Find artist objects.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.format_cursor_data.html#matplotlib.patches.Ellipse.format_cursor_data" title="matplotlib.patches.Ellipse.format_cursor_data"><code class="xref py py-obj docutils literal"><span class="pre">format_cursor_data</span></code></a>(data)</td>
-<td>Return <em>cursor data</em> string formatted.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_aa.html#matplotlib.patches.Ellipse.get_aa" title="matplotlib.patches.Ellipse.get_aa"><code class="xref py py-obj docutils literal"><span class="pre">get_aa</span></code></a>()</td>
-<td>Returns True if the <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a> is to be drawn with antialiasing.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_agg_filter.html#matplotlib.patches.Ellipse.get_agg_filter" title="matplotlib.patches.Ellipse.get_agg_filter"><code class="xref py py-obj docutils literal"><span class="pre">get_agg_filter</span></code></a>()</td>
-<td>return filter function to be used for agg filter</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_alpha.html#matplotlib.patches.Ellipse.get_alpha" title="matplotlib.patches.Ellipse.get_alpha"><code class="xref py py-obj docutils literal"><span class="pre">get_alpha</span></code></a>()</td>
-<td>Return the alpha value used for blending - not supported on all</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_animated.html#matplotlib.patches.Ellipse.get_animated" title="matplotlib.patches.Ellipse.get_animated"><code class="xref py py-obj docutils literal"><span class="pre">get_animated</span></code></a>()</td>
-<td>Return the artist&#8217;s animated state</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_antialiased.html#matplotlib.patches.Ellipse.get_antialiased" title="matplotlib.patches.Ellipse.get_antialiased"><code class="xref py py-obj docutils literal"><span class="pre">get_antialiased</span></code></a>()</td>
-<td>Returns True if the <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a> is to be drawn with antialiasing.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_axes.html#matplotlib.patches.Ellipse.get_axes" title="matplotlib.patches.Ellipse.get_axes"><code class="xref py py-obj docutils literal"><span class="pre">get_axes</span></code></a>()</td>
-<td>Return the <a class="reference internal" href="matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instance the artist resides in, or <em>None</em>.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_capstyle.html#matplotlib.patches.Ellipse.get_capstyle" title="matplotlib.patches.Ellipse.get_capstyle"><code class="xref py py-obj docutils literal"><span class="pre">get_capstyle</span></code></a>()</td>
-<td>Return the current capstyle</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_children.html#matplotlib.patches.Ellipse.get_children" title="matplotlib.patches.Ellipse.get_children"><code class="xref py py-obj docutils literal"><span class="pre">get_children</span></code></a>()</td>
-<td>Return a list of the child <code class="xref py py-class docutils literal"><span class="pre">Artist`s</span> <span class="pre">this</span> <span class="pre">:class:`Artist</span></code> contains.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_clip_box.html#matplotlib.patches.Ellipse.get_clip_box" title="matplotlib.patches.Ellipse.get_clip_box"><code class="xref py py-obj docutils literal"><span class="pre">get_clip_box</span></code></a>()</td>
-<td>Return artist clipbox</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_clip_on.html#matplotlib.patches.Ellipse.get_clip_on" title="matplotlib.patches.Ellipse.get_clip_on"><code class="xref py py-obj docutils literal"><span class="pre">get_clip_on</span></code></a>()</td>
-<td>Return whether artist uses clipping</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_clip_path.html#matplotlib.patches.Ellipse.get_clip_path" title="matplotlib.patches.Ellipse.get_clip_path"><code class="xref py py-obj docutils literal"><span class="pre">get_clip_path</span></code></a>()</td>
-<td>Return artist clip path</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_contains.html#matplotlib.patches.Ellipse.get_contains" title="matplotlib.patches.Ellipse.get_contains"><code class="xref py py-obj docutils literal"><span class="pre">get_contains</span></code></a>()</td>
-<td>Return the _contains test used by the artist, or <em>None</em> for default.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_cursor_data.html#matplotlib.patches.Ellipse.get_cursor_data" title="matplotlib.patches.Ellipse.get_cursor_data"><code class="xref py py-obj docutils literal"><span class="pre">get_cursor_data</span></code></a>(event)</td>
-<td>Get the cursor data for a given event.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_data_transform.html#matplotlib.patches.Ellipse.get_data_transform" title="matplotlib.patches.Ellipse.get_data_transform"><code class="xref py py-obj docutils literal"><span class="pre">get_data_transform</span></code></a>()</td>
-<td>Return the <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code> instance which maps data coordinates to physical coordinates.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_ec.html#matplotlib.patches.Ellipse.get_ec" title="matplotlib.patches.Ellipse.get_ec"><code class="xref py py-obj docutils literal"><span class="pre">get_ec</span></code></a>()</td>
-<td>Return the edge color of the <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a>.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_edgecolor.html#matplotlib.patches.Ellipse.get_edgecolor" title="matplotlib.patches.Ellipse.get_edgecolor"><code class="xref py py-obj docutils literal"><span class="pre">get_edgecolor</span></code></a>()</td>
-<td>Return the edge color of the <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a>.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_extents.html#matplotlib.patches.Ellipse.get_extents" title="matplotlib.patches.Ellipse.get_extents"><code class="xref py py-obj docutils literal"><span class="pre">get_extents</span></code></a>()</td>
-<td>Return a <code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code> object defining the axis-aligned extents of the <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a>.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_facecolor.html#matplotlib.patches.Ellipse.get_facecolor" title="matplotlib.patches.Ellipse.get_facecolor"><code class="xref py py-obj docutils literal"><span class="pre">get_facecolor</span></code></a>()</td>
-<td>Return the face color of the <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a>.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_fc.html#matplotlib.patches.Ellipse.get_fc" title="matplotlib.patches.Ellipse.get_fc"><code class="xref py py-obj docutils literal"><span class="pre">get_fc</span></code></a>()</td>
-<td>Return the face color of the <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a>.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_figure.html#matplotlib.patches.Ellipse.get_figure" title="matplotlib.patches.Ellipse.get_figure"><code class="xref py py-obj docutils literal"><span class="pre">get_figure</span></code></a>()</td>
-<td>Return the <a class="reference internal" href="matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure"><code class="xref py py-class docutils literal"><span class="pre">Figure</span></code></a> instance the artist belongs to.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_fill.html#matplotlib.patches.Ellipse.get_fill" title="matplotlib.patches.Ellipse.get_fill"><code class="xref py py-obj docutils literal"><span class="pre">get_fill</span></code></a>()</td>
-<td>return whether fill is set</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_gid.html#matplotlib.patches.Ellipse.get_gid" title="matplotlib.patches.Ellipse.get_gid"><code class="xref py py-obj docutils literal"><span class="pre">get_gid</span></code></a>()</td>
-<td>Returns the group id</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_hatch.html#matplotlib.patches.Ellipse.get_hatch" title="matplotlib.patches.Ellipse.get_hatch"><code class="xref py py-obj docutils literal"><span class="pre">get_hatch</span></code></a>()</td>
-<td>Return the current hatching pattern</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_joinstyle.html#matplotlib.patches.Ellipse.get_joinstyle" title="matplotlib.patches.Ellipse.get_joinstyle"><code class="xref py py-obj docutils literal"><span class="pre">get_joinstyle</span></code></a>()</td>
-<td>Return the current joinstyle</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_label.html#matplotlib.patches.Ellipse.get_label" title="matplotlib.patches.Ellipse.get_label"><code class="xref py py-obj docutils literal"><span class="pre">get_label</span></code></a>()</td>
-<td>Get the label used for this artist in the legend.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_linestyle.html#matplotlib.patches.Ellipse.get_linestyle" title="matplotlib.patches.Ellipse.get_linestyle"><code class="xref py py-obj docutils literal"><span class="pre">get_linestyle</span></code></a>()</td>
-<td>Return the linestyle.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_linewidth.html#matplotlib.patches.Ellipse.get_linewidth" title="matplotlib.patches.Ellipse.get_linewidth"><code class="xref py py-obj docutils literal"><span class="pre">get_linewidth</span></code></a>()</td>
-<td>Return the line width in points.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_ls.html#matplotlib.patches.Ellipse.get_ls" title="matplotlib.patches.Ellipse.get_ls"><code class="xref py py-obj docutils literal"><span class="pre">get_ls</span></code></a>()</td>
-<td>Return the linestyle.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_lw.html#matplotlib.patches.Ellipse.get_lw" title="matplotlib.patches.Ellipse.get_lw"><code class="xref py py-obj docutils literal"><span class="pre">get_lw</span></code></a>()</td>
-<td>Return the line width in points.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_patch_transform.html#matplotlib.patches.Ellipse.get_patch_transform" title="matplotlib.patches.Ellipse.get_patch_transform"><code class="xref py py-obj docutils literal"><span class="pre">get_patch_transform</span></code></a>()</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_path.html#matplotlib.patches.Ellipse.get_path" title="matplotlib.patches.Ellipse.get_path"><code class="xref py py-obj docutils literal"><span class="pre">get_path</span></code></a>()</td>
-<td>Return the vertices of the rectangle</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_path_effects.html#matplotlib.patches.Ellipse.get_path_effects" title="matplotlib.patches.Ellipse.get_path_effects"><code class="xref py py-obj docutils literal"><span class="pre">get_path_effects</span></code></a>()</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_picker.html#matplotlib.patches.Ellipse.get_picker" title="matplotlib.patches.Ellipse.get_picker"><code class="xref py py-obj docutils literal"><span class="pre">get_picker</span></code></a>()</td>
-<td>Return the picker object used by this artist</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_rasterized.html#matplotlib.patches.Ellipse.get_rasterized" title="matplotlib.patches.Ellipse.get_rasterized"><code class="xref py py-obj docutils literal"><span class="pre">get_rasterized</span></code></a>()</td>
-<td>return True if the artist is to be rasterized</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_sketch_params.html#matplotlib.patches.Ellipse.get_sketch_params" title="matplotlib.patches.Ellipse.get_sketch_params"><code class="xref py py-obj docutils literal"><span class="pre">get_sketch_params</span></code></a>()</td>
-<td>Returns the sketch parameters for the artist.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_snap.html#matplotlib.patches.Ellipse.get_snap" title="matplotlib.patches.Ellipse.get_snap"><code class="xref py py-obj docutils literal"><span class="pre">get_snap</span></code></a>()</td>
-<td>Returns the snap setting which may be:</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_transform.html#matplotlib.patches.Ellipse.get_transform" title="matplotlib.patches.Ellipse.get_transform"><code class="xref py py-obj docutils literal"><span class="pre">get_transform</span></code></a>()</td>
-<td>Return the <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code> applied to the <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a>.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_transformed_clip_path_and_affine.html#matplotlib.patches.Ellipse.get_transformed_clip_path_and_affine" title="matplotlib.patches.Ellipse.get_transformed_clip_path_and_affine"><code class="xref py py-obj docutils literal"><span class="pre">get_transformed_clip_path_and_affine</span></code></a>()</td>
-<td>Return the clip path with the non-affine part of its transformation applied, and the remaining affine part of its transformation.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_url.html#matplotlib.patches.Ellipse.get_url" title="matplotlib.patches.Ellipse.get_url"><code class="xref py py-obj docutils literal"><span class="pre">get_url</span></code></a>()</td>
-<td>Returns the url</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_verts.html#matplotlib.patches.Ellipse.get_verts" title="matplotlib.patches.Ellipse.get_verts"><code class="xref py py-obj docutils literal"><span class="pre">get_verts</span></code></a>()</td>
-<td>Return a copy of the vertices used in this patch</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_visible.html#matplotlib.patches.Ellipse.get_visible" title="matplotlib.patches.Ellipse.get_visible"><code class="xref py py-obj docutils literal"><span class="pre">get_visible</span></code></a>()</td>
-<td>Return the artist&#8217;s visiblity</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_window_extent.html#matplotlib.patches.Ellipse.get_window_extent" title="matplotlib.patches.Ellipse.get_window_extent"><code class="xref py py-obj docutils literal"><span class="pre">get_window_extent</span></code></a>([renderer])</td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_zorder.html#matplotlib.patches.Ellipse.get_zorder" title="matplotlib.patches.Ellipse.get_zorder"><code class="xref py py-obj docutils literal"><span class="pre">get_zorder</span></code></a>()</td>
-<td>Return the <code class="xref py py-class docutils literal"><span class="pre">Artist</span></code>&#8216;s zorder.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.have_units.html#matplotlib.patches.Ellipse.have_units" title="matplotlib.patches.Ellipse.have_units"><code class="xref py py-obj docutils literal"><span class="pre">have_units</span></code></a>()</td>
-<td>Return <em>True</em> if units are set on the <em>x</em> or <em>y</em> axes</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.hitlist.html#matplotlib.patches.Ellipse.hitlist" title="matplotlib.patches.Ellipse.hitlist"><code class="xref py py-obj docutils literal"><span class="pre">hitlist</span></code></a>(event)</td>
-<td>List the children of the artist which contain the mouse event <em>event</em>.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.is_figure_set.html#matplotlib.patches.Ellipse.is_figure_set" title="matplotlib.patches.Ellipse.is_figure_set"><code class="xref py py-obj docutils literal"><span class="pre">is_figure_set</span></code></a>()</td>
-<td>Returns True if the artist is assigned to a <a class="reference internal" href="matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure"><code class="xref py py-class docutils literal"><span class="pre">Figure</span></code></a>.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.is_transform_set.html#matplotlib.patches.Ellipse.is_transform_set" title="matplotlib.patches.Ellipse.is_transform_set"><code class="xref py py-obj docutils literal"><span class="pre">is_transform_set</span></code></a>()</td>
-<td>Returns <em>True</em> if <code class="xref py py-class docutils literal"><span class="pre">Artist</span></code> has a transform explicitly set.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.pchanged.html#matplotlib.patches.Ellipse.pchanged" title="matplotlib.patches.Ellipse.pchanged"><code class="xref py py-obj docutils literal"><span class="pre">pchanged</span></code></a>()</td>
-<td>Fire an event when property changed, calling all of the registered callbacks.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.pick.html#matplotlib.patches.Ellipse.pick" title="matplotlib.patches.Ellipse.pick"><code class="xref py py-obj docutils literal"><span class="pre">pick</span></code></a>(mouseevent)</td>
-<td>call signature:</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.pickable.html#matplotlib.patches.Ellipse.pickable" title="matplotlib.patches.Ellipse.pickable"><code class="xref py py-obj docutils literal"><span class="pre">pickable</span></code></a>()</td>
-<td>Return <em>True</em> if <code class="xref py py-class docutils literal"><span class="pre">Artist</span></code> is pickable.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.properties.html#matplotlib.patches.Ellipse.properties" title="matplotlib.patches.Ellipse.properties"><code class="xref py py-obj docutils literal"><span class="pre">properties</span></code></a>()</td>
-<td>return a dictionary mapping property name -&gt; value for all Artist props</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.remove.html#matplotlib.patches.Ellipse.remove" title="matplotlib.patches.Ellipse.remove"><code class="xref py py-obj docutils literal"><span class="pre">remove</span></code></a>()</td>
-<td>Remove the artist from the figure if possible.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.remove_callback.html#matplotlib.patches.Ellipse.remove_callback" title="matplotlib.patches.Ellipse.remove_callback"><code class="xref py py-obj docutils literal"><span class="pre">remove_callback</span></code></a>(oid)</td>
-<td>Remove a callback based on its <em>id</em>.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set.html#matplotlib.patches.Ellipse.set" title="matplotlib.patches.Ellipse.set"><code class="xref py py-obj docutils literal"><span class="pre">set</span></code></a>(**kwargs)</td>
-<td>A property batch setter.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_aa.html#matplotlib.patches.Ellipse.set_aa" title="matplotlib.patches.Ellipse.set_aa"><code class="xref py py-obj docutils literal"><span class="pre">set_aa</span></code></a>(aa)</td>
-<td>alias for set_antialiased</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_agg_filter.html#matplotlib.patches.Ellipse.set_agg_filter" title="matplotlib.patches.Ellipse.set_agg_filter"><code class="xref py py-obj docutils literal"><span class="pre">set_agg_filter</span></code></a>(filter_func)</td>
-<td>set agg_filter fuction.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_alpha.html#matplotlib.patches.Ellipse.set_alpha" title="matplotlib.patches.Ellipse.set_alpha"><code class="xref py py-obj docutils literal"><span class="pre">set_alpha</span></code></a>(alpha)</td>
-<td>Set the alpha tranparency of the patch.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_animated.html#matplotlib.patches.Ellipse.set_animated" title="matplotlib.patches.Ellipse.set_animated"><code class="xref py py-obj docutils literal"><span class="pre">set_animated</span></code></a>(b)</td>
-<td>Set the artist&#8217;s animation state.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_antialiased.html#matplotlib.patches.Ellipse.set_antialiased" title="matplotlib.patches.Ellipse.set_antialiased"><code class="xref py py-obj docutils literal"><span class="pre">set_antialiased</span></code></a>(aa)</td>
-<td>Set whether to use antialiased rendering</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_axes.html#matplotlib.patches.Ellipse.set_axes" title="matplotlib.patches.Ellipse.set_axes"><code class="xref py py-obj docutils literal"><span class="pre">set_axes</span></code></a>(axes)</td>
-<td>Set the <a class="reference internal" href="matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instance in which the artist resides, if any.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_capstyle.html#matplotlib.patches.Ellipse.set_capstyle" title="matplotlib.patches.Ellipse.set_capstyle"><code class="xref py py-obj docutils literal"><span class="pre">set_capstyle</span></code></a>(s)</td>
-<td>Set the patch capstyle</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_clip_box.html#matplotlib.patches.Ellipse.set_clip_box" title="matplotlib.patches.Ellipse.set_clip_box"><code class="xref py py-obj docutils literal"><span class="pre">set_clip_box</span></code></a>(clipbox)</td>
-<td>Set the artist&#8217;s clip <code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code>.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_clip_on.html#matplotlib.patches.Ellipse.set_clip_on" title="matplotlib.patches.Ellipse.set_clip_on"><code class="xref py py-obj docutils literal"><span class="pre">set_clip_on</span></code></a>(b)</td>
-<td>Set whether artist uses clipping.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_clip_path.html#matplotlib.patches.Ellipse.set_clip_path" title="matplotlib.patches.Ellipse.set_clip_path"><code class="xref py py-obj docutils literal"><span class="pre">set_clip_path</span></code></a>(path[,&nbsp;transform])</td>
-<td>Set the artist&#8217;s clip path, which may be:</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_color.html#matplotlib.patches.Ellipse.set_color" title="matplotlib.patches.Ellipse.set_color"><code class="xref py py-obj docutils literal"><span class="pre">set_color</span></code></a>(c)</td>
-<td>Set both the edgecolor and the facecolor.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_contains.html#matplotlib.patches.Ellipse.set_contains" title="matplotlib.patches.Ellipse.set_contains"><code class="xref py py-obj docutils literal"><span class="pre">set_contains</span></code></a>(picker)</td>
-<td>Replace the contains test used by this artist.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_ec.html#matplotlib.patches.Ellipse.set_ec" title="matplotlib.patches.Ellipse.set_ec"><code class="xref py py-obj docutils literal"><span class="pre">set_ec</span></code></a>(color)</td>
-<td>alias for set_edgecolor</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_edgecolor.html#matplotlib.patches.Ellipse.set_edgecolor" title="matplotlib.patches.Ellipse.set_edgecolor"><code class="xref py py-obj docutils literal"><span class="pre">set_edgecolor</span></code></a>(color)</td>
-<td>Set the patch edge color</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_facecolor.html#matplotlib.patches.Ellipse.set_facecolor" title="matplotlib.patches.Ellipse.set_facecolor"><code class="xref py py-obj docutils literal"><span class="pre">set_facecolor</span></code></a>(color)</td>
-<td>Set the patch face color</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_fc.html#matplotlib.patches.Ellipse.set_fc" title="matplotlib.patches.Ellipse.set_fc"><code class="xref py py-obj docutils literal"><span class="pre">set_fc</span></code></a>(color)</td>
-<td>alias for set_facecolor</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_figure.html#matplotlib.patches.Ellipse.set_figure" title="matplotlib.patches.Ellipse.set_figure"><code class="xref py py-obj docutils literal"><span class="pre">set_figure</span></code></a>(fig)</td>
-<td>Set the <a class="reference internal" href="matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure"><code class="xref py py-class docutils literal"><span class="pre">Figure</span></code></a> instance the artist belongs to.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_fill.html#matplotlib.patches.Ellipse.set_fill" title="matplotlib.patches.Ellipse.set_fill"><code class="xref py py-obj docutils literal"><span class="pre">set_fill</span></code></a>(b)</td>
-<td>Set whether to fill the patch</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_gid.html#matplotlib.patches.Ellipse.set_gid" title="matplotlib.patches.Ellipse.set_gid"><code class="xref py py-obj docutils literal"><span class="pre">set_gid</span></code></a>(gid)</td>
-<td>Sets the (group) id for the artist</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_hatch.html#matplotlib.patches.Ellipse.set_hatch" title="matplotlib.patches.Ellipse.set_hatch"><code class="xref py py-obj docutils literal"><span class="pre">set_hatch</span></code></a>(hatch)</td>
-<td>Set the hatching pattern</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_joinstyle.html#matplotlib.patches.Ellipse.set_joinstyle" title="matplotlib.patches.Ellipse.set_joinstyle"><code class="xref py py-obj docutils literal"><span class="pre">set_joinstyle</span></code></a>(s)</td>
-<td>Set the patch joinstyle</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_label.html#matplotlib.patches.Ellipse.set_label" title="matplotlib.patches.Ellipse.set_label"><code class="xref py py-obj docutils literal"><span class="pre">set_label</span></code></a>(s)</td>
-<td>Set the label to <em>s</em> for auto legend.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_linestyle.html#matplotlib.patches.Ellipse.set_linestyle" title="matplotlib.patches.Ellipse.set_linestyle"><code class="xref py py-obj docutils literal"><span class="pre">set_linestyle</span></code></a>(ls)</td>
-<td>Set the patch linestyle</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_linewidth.html#matplotlib.patches.Ellipse.set_linewidth" title="matplotlib.patches.Ellipse.set_linewidth"><code class="xref py py-obj docutils literal"><span class="pre">set_linewidth</span></code></a>(w)</td>
-<td>Set the patch linewidth in points</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_ls.html#matplotlib.patches.Ellipse.set_ls" title="matplotlib.patches.Ellipse.set_ls"><code class="xref py py-obj docutils literal"><span class="pre">set_ls</span></code></a>(ls)</td>
-<td>alias for set_linestyle</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_lw.html#matplotlib.patches.Ellipse.set_lw" title="matplotlib.patches.Ellipse.set_lw"><code class="xref py py-obj docutils literal"><span class="pre">set_lw</span></code></a>(lw)</td>
-<td>alias for set_linewidth</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_path_effects.html#matplotlib.patches.Ellipse.set_path_effects" title="matplotlib.patches.Ellipse.set_path_effects"><code class="xref py py-obj docutils literal"><span class="pre">set_path_effects</span></code></a>(path_effects)</td>
-<td>set path_effects, which should be a list of instances of</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_picker.html#matplotlib.patches.Ellipse.set_picker" title="matplotlib.patches.Ellipse.set_picker"><code class="xref py py-obj docutils literal"><span class="pre">set_picker</span></code></a>(picker)</td>
-<td>Set the epsilon for picking used by this artist</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_rasterized.html#matplotlib.patches.Ellipse.set_rasterized" title="matplotlib.patches.Ellipse.set_rasterized"><code class="xref py py-obj docutils literal"><span class="pre">set_rasterized</span></code></a>(rasterized)</td>
-<td>Force rasterized (bitmap) drawing in vector backend output.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_sketch_params.html#matplotlib.patches.Ellipse.set_sketch_params" title="matplotlib.patches.Ellipse.set_sketch_params"><code class="xref py py-obj docutils literal"><span class="pre">set_sketch_params</span></code></a>([scale,&nbsp;length,&nbsp;randomness])</td>
-<td>Sets the sketch parameters.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_snap.html#matplotlib.patches.Ellipse.set_snap" title="matplotlib.patches.Ellipse.set_snap"><code class="xref py py-obj docutils literal"><span class="pre">set_snap</span></code></a>(snap)</td>
-<td>Sets the snap setting which may be:</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_transform.html#matplotlib.patches.Ellipse.set_transform" title="matplotlib.patches.Ellipse.set_transform"><code class="xref py py-obj docutils literal"><span class="pre">set_transform</span></code></a>(t)</td>
-<td>Set the <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code> instance used by this artist.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_url.html#matplotlib.patches.Ellipse.set_url" title="matplotlib.patches.Ellipse.set_url"><code class="xref py py-obj docutils literal"><span class="pre">set_url</span></code></a>(url)</td>
-<td>Sets the url for the artist</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_visible.html#matplotlib.patches.Ellipse.set_visible" title="matplotlib.patches.Ellipse.set_visible"><code class="xref py py-obj docutils literal"><span class="pre">set_visible</span></code></a>(b)</td>
-<td>Set the artist&#8217;s visiblity.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_zorder.html#matplotlib.patches.Ellipse.set_zorder" title="matplotlib.patches.Ellipse.set_zorder"><code class="xref py py-obj docutils literal"><span class="pre">set_zorder</span></code></a>(level)</td>
-<td>Set the zorder for the artist.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.update.html#matplotlib.patches.Ellipse.update" title="matplotlib.patches.Ellipse.update"><code class="xref py py-obj docutils literal"><span class="pre">update</span></code></a>(props)</td>
-<td>Update the properties of this <code class="xref py py-class docutils literal"><span class="pre">Artist</span></code> from the dictionary <em>prop</em>.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.update_from.html#matplotlib.patches.Ellipse.update_from" title="matplotlib.patches.Ellipse.update_from"><code class="xref py py-obj docutils literal"><span class="pre">update_from</span></code></a>(other)</td>
-<td>Updates this <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a> from the properties of <em>other</em>.</td>
-</tr>
-</tbody>
-</table>
 <dl class="method">
 <dt id="matplotlib.patches.Ellipse.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>xy</em>, <em>width</em>, <em>height</em>, <em>angle=0.0</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/patches.html#Ellipse.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.patches.Ellipse.__init__" title="Permalink to this definition">¶</a></dt>
@@ -702,6 +271,352 @@ zorder: any number</dd>
 
 </dd></dl>
 
+<div class="section" id="methods">
+<h2>12.2.9.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.__init__.html#matplotlib.patches.Ellipse.__init__" title="matplotlib.patches.Ellipse.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>(xy,&nbsp;width,&nbsp;height[,&nbsp;angle])</td>
+<td><em>xy</em></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.add_callback.html#matplotlib.patches.Ellipse.add_callback" title="matplotlib.patches.Ellipse.add_callback"><code class="xref py py-obj docutils literal"><span class="pre">add_callback</span></code></a>(func)</td>
+<td>Adds a callback function that will be called whenever one of the <code class="xref py py-class docutils literal"><span class="pre">Artist</span></code>&#8216;s properties changes.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.contains.html#matplotlib.patches.Ellipse.contains" title="matplotlib.patches.Ellipse.contains"><code class="xref py py-obj docutils literal"><span class="pre">contains</span></code></a>(mouseevent[,&nbsp;radius])</td>
+<td>Test whether the mouse event occurred in the patch.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.contains_point.html#matplotlib.patches.Ellipse.contains_point" title="matplotlib.patches.Ellipse.contains_point"><code class="xref py py-obj docutils literal"><span class="pre">contains_point</span></code></a>(point[,&nbsp;radius])</td>
+<td>Returns <em>True</em> if the given point is inside the path (transformed with its transform attribute).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.convert_xunits.html#matplotlib.patches.Ellipse.convert_xunits" title="matplotlib.patches.Ellipse.convert_xunits"><code class="xref py py-obj docutils literal"><span class="pre">convert_xunits</span></code></a>(x)</td>
+<td>For artists in an axes, if the xaxis has units support,</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.convert_yunits.html#matplotlib.patches.Ellipse.convert_yunits" title="matplotlib.patches.Ellipse.convert_yunits"><code class="xref py py-obj docutils literal"><span class="pre">convert_yunits</span></code></a>(y)</td>
+<td>For artists in an axes, if the yaxis has units support,</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.draw.html#matplotlib.patches.Ellipse.draw" title="matplotlib.patches.Ellipse.draw"><code class="xref py py-obj docutils literal"><span class="pre">draw</span></code></a>(artist,&nbsp;renderer,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Draw the <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a> to the given <em>renderer</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.findobj.html#matplotlib.patches.Ellipse.findobj" title="matplotlib.patches.Ellipse.findobj"><code class="xref py py-obj docutils literal"><span class="pre">findobj</span></code></a>([match,&nbsp;include_self])</td>
+<td>Find artist objects.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.format_cursor_data.html#matplotlib.patches.Ellipse.format_cursor_data" title="matplotlib.patches.Ellipse.format_cursor_data"><code class="xref py py-obj docutils literal"><span class="pre">format_cursor_data</span></code></a>(data)</td>
+<td>Return <em>cursor data</em> string formatted.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_aa.html#matplotlib.patches.Ellipse.get_aa" title="matplotlib.patches.Ellipse.get_aa"><code class="xref py py-obj docutils literal"><span class="pre">get_aa</span></code></a>()</td>
+<td>Returns True if the <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a> is to be drawn with antialiasing.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_agg_filter.html#matplotlib.patches.Ellipse.get_agg_filter" title="matplotlib.patches.Ellipse.get_agg_filter"><code class="xref py py-obj docutils literal"><span class="pre">get_agg_filter</span></code></a>()</td>
+<td>return filter function to be used for agg filter</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_alpha.html#matplotlib.patches.Ellipse.get_alpha" title="matplotlib.patches.Ellipse.get_alpha"><code class="xref py py-obj docutils literal"><span class="pre">get_alpha</span></code></a>()</td>
+<td>Return the alpha value used for blending - not supported on all</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_animated.html#matplotlib.patches.Ellipse.get_animated" title="matplotlib.patches.Ellipse.get_animated"><code class="xref py py-obj docutils literal"><span class="pre">get_animated</span></code></a>()</td>
+<td>Return the artist&#8217;s animated state</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_antialiased.html#matplotlib.patches.Ellipse.get_antialiased" title="matplotlib.patches.Ellipse.get_antialiased"><code class="xref py py-obj docutils literal"><span class="pre">get_antialiased</span></code></a>()</td>
+<td>Returns True if the <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a> is to be drawn with antialiasing.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_axes.html#matplotlib.patches.Ellipse.get_axes" title="matplotlib.patches.Ellipse.get_axes"><code class="xref py py-obj docutils literal"><span class="pre">get_axes</span></code></a>()</td>
+<td>Return the <a class="reference internal" href="matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instance the artist resides in, or <em>None</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_capstyle.html#matplotlib.patches.Ellipse.get_capstyle" title="matplotlib.patches.Ellipse.get_capstyle"><code class="xref py py-obj docutils literal"><span class="pre">get_capstyle</span></code></a>()</td>
+<td>Return the current capstyle</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_children.html#matplotlib.patches.Ellipse.get_children" title="matplotlib.patches.Ellipse.get_children"><code class="xref py py-obj docutils literal"><span class="pre">get_children</span></code></a>()</td>
+<td>Return a list of the child <code class="xref py py-class docutils literal"><span class="pre">Artist`s</span> <span class="pre">this</span> <span class="pre">:class:`Artist</span></code> contains.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_clip_box.html#matplotlib.patches.Ellipse.get_clip_box" title="matplotlib.patches.Ellipse.get_clip_box"><code class="xref py py-obj docutils literal"><span class="pre">get_clip_box</span></code></a>()</td>
+<td>Return artist clipbox</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_clip_on.html#matplotlib.patches.Ellipse.get_clip_on" title="matplotlib.patches.Ellipse.get_clip_on"><code class="xref py py-obj docutils literal"><span class="pre">get_clip_on</span></code></a>()</td>
+<td>Return whether artist uses clipping</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_clip_path.html#matplotlib.patches.Ellipse.get_clip_path" title="matplotlib.patches.Ellipse.get_clip_path"><code class="xref py py-obj docutils literal"><span class="pre">get_clip_path</span></code></a>()</td>
+<td>Return artist clip path</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_contains.html#matplotlib.patches.Ellipse.get_contains" title="matplotlib.patches.Ellipse.get_contains"><code class="xref py py-obj docutils literal"><span class="pre">get_contains</span></code></a>()</td>
+<td>Return the _contains test used by the artist, or <em>None</em> for default.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_cursor_data.html#matplotlib.patches.Ellipse.get_cursor_data" title="matplotlib.patches.Ellipse.get_cursor_data"><code class="xref py py-obj docutils literal"><span class="pre">get_cursor_data</span></code></a>(event)</td>
+<td>Get the cursor data for a given event.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_data_transform.html#matplotlib.patches.Ellipse.get_data_transform" title="matplotlib.patches.Ellipse.get_data_transform"><code class="xref py py-obj docutils literal"><span class="pre">get_data_transform</span></code></a>()</td>
+<td>Return the <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code> instance which maps data coordinates to physical coordinates.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_ec.html#matplotlib.patches.Ellipse.get_ec" title="matplotlib.patches.Ellipse.get_ec"><code class="xref py py-obj docutils literal"><span class="pre">get_ec</span></code></a>()</td>
+<td>Return the edge color of the <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_edgecolor.html#matplotlib.patches.Ellipse.get_edgecolor" title="matplotlib.patches.Ellipse.get_edgecolor"><code class="xref py py-obj docutils literal"><span class="pre">get_edgecolor</span></code></a>()</td>
+<td>Return the edge color of the <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_extents.html#matplotlib.patches.Ellipse.get_extents" title="matplotlib.patches.Ellipse.get_extents"><code class="xref py py-obj docutils literal"><span class="pre">get_extents</span></code></a>()</td>
+<td>Return a <code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code> object defining the axis-aligned extents of the <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_facecolor.html#matplotlib.patches.Ellipse.get_facecolor" title="matplotlib.patches.Ellipse.get_facecolor"><code class="xref py py-obj docutils literal"><span class="pre">get_facecolor</span></code></a>()</td>
+<td>Return the face color of the <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_fc.html#matplotlib.patches.Ellipse.get_fc" title="matplotlib.patches.Ellipse.get_fc"><code class="xref py py-obj docutils literal"><span class="pre">get_fc</span></code></a>()</td>
+<td>Return the face color of the <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_figure.html#matplotlib.patches.Ellipse.get_figure" title="matplotlib.patches.Ellipse.get_figure"><code class="xref py py-obj docutils literal"><span class="pre">get_figure</span></code></a>()</td>
+<td>Return the <a class="reference internal" href="matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure"><code class="xref py py-class docutils literal"><span class="pre">Figure</span></code></a> instance the artist belongs to.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_fill.html#matplotlib.patches.Ellipse.get_fill" title="matplotlib.patches.Ellipse.get_fill"><code class="xref py py-obj docutils literal"><span class="pre">get_fill</span></code></a>()</td>
+<td>return whether fill is set</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_gid.html#matplotlib.patches.Ellipse.get_gid" title="matplotlib.patches.Ellipse.get_gid"><code class="xref py py-obj docutils literal"><span class="pre">get_gid</span></code></a>()</td>
+<td>Returns the group id</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_hatch.html#matplotlib.patches.Ellipse.get_hatch" title="matplotlib.patches.Ellipse.get_hatch"><code class="xref py py-obj docutils literal"><span class="pre">get_hatch</span></code></a>()</td>
+<td>Return the current hatching pattern</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_joinstyle.html#matplotlib.patches.Ellipse.get_joinstyle" title="matplotlib.patches.Ellipse.get_joinstyle"><code class="xref py py-obj docutils literal"><span class="pre">get_joinstyle</span></code></a>()</td>
+<td>Return the current joinstyle</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_label.html#matplotlib.patches.Ellipse.get_label" title="matplotlib.patches.Ellipse.get_label"><code class="xref py py-obj docutils literal"><span class="pre">get_label</span></code></a>()</td>
+<td>Get the label used for this artist in the legend.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_linestyle.html#matplotlib.patches.Ellipse.get_linestyle" title="matplotlib.patches.Ellipse.get_linestyle"><code class="xref py py-obj docutils literal"><span class="pre">get_linestyle</span></code></a>()</td>
+<td>Return the linestyle.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_linewidth.html#matplotlib.patches.Ellipse.get_linewidth" title="matplotlib.patches.Ellipse.get_linewidth"><code class="xref py py-obj docutils literal"><span class="pre">get_linewidth</span></code></a>()</td>
+<td>Return the line width in points.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_ls.html#matplotlib.patches.Ellipse.get_ls" title="matplotlib.patches.Ellipse.get_ls"><code class="xref py py-obj docutils literal"><span class="pre">get_ls</span></code></a>()</td>
+<td>Return the linestyle.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_lw.html#matplotlib.patches.Ellipse.get_lw" title="matplotlib.patches.Ellipse.get_lw"><code class="xref py py-obj docutils literal"><span class="pre">get_lw</span></code></a>()</td>
+<td>Return the line width in points.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_patch_transform.html#matplotlib.patches.Ellipse.get_patch_transform" title="matplotlib.patches.Ellipse.get_patch_transform"><code class="xref py py-obj docutils literal"><span class="pre">get_patch_transform</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_path.html#matplotlib.patches.Ellipse.get_path" title="matplotlib.patches.Ellipse.get_path"><code class="xref py py-obj docutils literal"><span class="pre">get_path</span></code></a>()</td>
+<td>Return the vertices of the rectangle</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_path_effects.html#matplotlib.patches.Ellipse.get_path_effects" title="matplotlib.patches.Ellipse.get_path_effects"><code class="xref py py-obj docutils literal"><span class="pre">get_path_effects</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_picker.html#matplotlib.patches.Ellipse.get_picker" title="matplotlib.patches.Ellipse.get_picker"><code class="xref py py-obj docutils literal"><span class="pre">get_picker</span></code></a>()</td>
+<td>Return the picker object used by this artist</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_rasterized.html#matplotlib.patches.Ellipse.get_rasterized" title="matplotlib.patches.Ellipse.get_rasterized"><code class="xref py py-obj docutils literal"><span class="pre">get_rasterized</span></code></a>()</td>
+<td>return True if the artist is to be rasterized</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_sketch_params.html#matplotlib.patches.Ellipse.get_sketch_params" title="matplotlib.patches.Ellipse.get_sketch_params"><code class="xref py py-obj docutils literal"><span class="pre">get_sketch_params</span></code></a>()</td>
+<td>Returns the sketch parameters for the artist.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_snap.html#matplotlib.patches.Ellipse.get_snap" title="matplotlib.patches.Ellipse.get_snap"><code class="xref py py-obj docutils literal"><span class="pre">get_snap</span></code></a>()</td>
+<td>Returns the snap setting which may be:</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_transform.html#matplotlib.patches.Ellipse.get_transform" title="matplotlib.patches.Ellipse.get_transform"><code class="xref py py-obj docutils literal"><span class="pre">get_transform</span></code></a>()</td>
+<td>Return the <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code> applied to the <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_transformed_clip_path_and_affine.html#matplotlib.patches.Ellipse.get_transformed_clip_path_and_affine" title="matplotlib.patches.Ellipse.get_transformed_clip_path_and_affine"><code class="xref py py-obj docutils literal"><span class="pre">get_transformed_clip_path_and_affine</span></code></a>()</td>
+<td>Return the clip path with the non-affine part of its transformation applied, and the remaining affine part of its transformation.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_url.html#matplotlib.patches.Ellipse.get_url" title="matplotlib.patches.Ellipse.get_url"><code class="xref py py-obj docutils literal"><span class="pre">get_url</span></code></a>()</td>
+<td>Returns the url</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_verts.html#matplotlib.patches.Ellipse.get_verts" title="matplotlib.patches.Ellipse.get_verts"><code class="xref py py-obj docutils literal"><span class="pre">get_verts</span></code></a>()</td>
+<td>Return a copy of the vertices used in this patch</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_visible.html#matplotlib.patches.Ellipse.get_visible" title="matplotlib.patches.Ellipse.get_visible"><code class="xref py py-obj docutils literal"><span class="pre">get_visible</span></code></a>()</td>
+<td>Return the artist&#8217;s visiblity</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_window_extent.html#matplotlib.patches.Ellipse.get_window_extent" title="matplotlib.patches.Ellipse.get_window_extent"><code class="xref py py-obj docutils literal"><span class="pre">get_window_extent</span></code></a>([renderer])</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.get_zorder.html#matplotlib.patches.Ellipse.get_zorder" title="matplotlib.patches.Ellipse.get_zorder"><code class="xref py py-obj docutils literal"><span class="pre">get_zorder</span></code></a>()</td>
+<td>Return the <code class="xref py py-class docutils literal"><span class="pre">Artist</span></code>&#8216;s zorder.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.have_units.html#matplotlib.patches.Ellipse.have_units" title="matplotlib.patches.Ellipse.have_units"><code class="xref py py-obj docutils literal"><span class="pre">have_units</span></code></a>()</td>
+<td>Return <em>True</em> if units are set on the <em>x</em> or <em>y</em> axes</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.hitlist.html#matplotlib.patches.Ellipse.hitlist" title="matplotlib.patches.Ellipse.hitlist"><code class="xref py py-obj docutils literal"><span class="pre">hitlist</span></code></a>(event)</td>
+<td>List the children of the artist which contain the mouse event <em>event</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.is_figure_set.html#matplotlib.patches.Ellipse.is_figure_set" title="matplotlib.patches.Ellipse.is_figure_set"><code class="xref py py-obj docutils literal"><span class="pre">is_figure_set</span></code></a>()</td>
+<td>Returns True if the artist is assigned to a <a class="reference internal" href="matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure"><code class="xref py py-class docutils literal"><span class="pre">Figure</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.is_transform_set.html#matplotlib.patches.Ellipse.is_transform_set" title="matplotlib.patches.Ellipse.is_transform_set"><code class="xref py py-obj docutils literal"><span class="pre">is_transform_set</span></code></a>()</td>
+<td>Returns <em>True</em> if <code class="xref py py-class docutils literal"><span class="pre">Artist</span></code> has a transform explicitly set.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.pchanged.html#matplotlib.patches.Ellipse.pchanged" title="matplotlib.patches.Ellipse.pchanged"><code class="xref py py-obj docutils literal"><span class="pre">pchanged</span></code></a>()</td>
+<td>Fire an event when property changed, calling all of the registered callbacks.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.pick.html#matplotlib.patches.Ellipse.pick" title="matplotlib.patches.Ellipse.pick"><code class="xref py py-obj docutils literal"><span class="pre">pick</span></code></a>(mouseevent)</td>
+<td>call signature:</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.pickable.html#matplotlib.patches.Ellipse.pickable" title="matplotlib.patches.Ellipse.pickable"><code class="xref py py-obj docutils literal"><span class="pre">pickable</span></code></a>()</td>
+<td>Return <em>True</em> if <code class="xref py py-class docutils literal"><span class="pre">Artist</span></code> is pickable.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.properties.html#matplotlib.patches.Ellipse.properties" title="matplotlib.patches.Ellipse.properties"><code class="xref py py-obj docutils literal"><span class="pre">properties</span></code></a>()</td>
+<td>return a dictionary mapping property name -&gt; value for all Artist props</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.remove.html#matplotlib.patches.Ellipse.remove" title="matplotlib.patches.Ellipse.remove"><code class="xref py py-obj docutils literal"><span class="pre">remove</span></code></a>()</td>
+<td>Remove the artist from the figure if possible.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.remove_callback.html#matplotlib.patches.Ellipse.remove_callback" title="matplotlib.patches.Ellipse.remove_callback"><code class="xref py py-obj docutils literal"><span class="pre">remove_callback</span></code></a>(oid)</td>
+<td>Remove a callback based on its <em>id</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set.html#matplotlib.patches.Ellipse.set" title="matplotlib.patches.Ellipse.set"><code class="xref py py-obj docutils literal"><span class="pre">set</span></code></a>(**kwargs)</td>
+<td>A property batch setter.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_aa.html#matplotlib.patches.Ellipse.set_aa" title="matplotlib.patches.Ellipse.set_aa"><code class="xref py py-obj docutils literal"><span class="pre">set_aa</span></code></a>(aa)</td>
+<td>alias for set_antialiased</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_agg_filter.html#matplotlib.patches.Ellipse.set_agg_filter" title="matplotlib.patches.Ellipse.set_agg_filter"><code class="xref py py-obj docutils literal"><span class="pre">set_agg_filter</span></code></a>(filter_func)</td>
+<td>set agg_filter fuction.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_alpha.html#matplotlib.patches.Ellipse.set_alpha" title="matplotlib.patches.Ellipse.set_alpha"><code class="xref py py-obj docutils literal"><span class="pre">set_alpha</span></code></a>(alpha)</td>
+<td>Set the alpha tranparency of the patch.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_animated.html#matplotlib.patches.Ellipse.set_animated" title="matplotlib.patches.Ellipse.set_animated"><code class="xref py py-obj docutils literal"><span class="pre">set_animated</span></code></a>(b)</td>
+<td>Set the artist&#8217;s animation state.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_antialiased.html#matplotlib.patches.Ellipse.set_antialiased" title="matplotlib.patches.Ellipse.set_antialiased"><code class="xref py py-obj docutils literal"><span class="pre">set_antialiased</span></code></a>(aa)</td>
+<td>Set whether to use antialiased rendering</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_axes.html#matplotlib.patches.Ellipse.set_axes" title="matplotlib.patches.Ellipse.set_axes"><code class="xref py py-obj docutils literal"><span class="pre">set_axes</span></code></a>(axes)</td>
+<td>Set the <a class="reference internal" href="matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instance in which the artist resides, if any.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_capstyle.html#matplotlib.patches.Ellipse.set_capstyle" title="matplotlib.patches.Ellipse.set_capstyle"><code class="xref py py-obj docutils literal"><span class="pre">set_capstyle</span></code></a>(s)</td>
+<td>Set the patch capstyle</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_clip_box.html#matplotlib.patches.Ellipse.set_clip_box" title="matplotlib.patches.Ellipse.set_clip_box"><code class="xref py py-obj docutils literal"><span class="pre">set_clip_box</span></code></a>(clipbox)</td>
+<td>Set the artist&#8217;s clip <code class="xref py py-class docutils literal"><span class="pre">Bbox</span></code>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_clip_on.html#matplotlib.patches.Ellipse.set_clip_on" title="matplotlib.patches.Ellipse.set_clip_on"><code class="xref py py-obj docutils literal"><span class="pre">set_clip_on</span></code></a>(b)</td>
+<td>Set whether artist uses clipping.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_clip_path.html#matplotlib.patches.Ellipse.set_clip_path" title="matplotlib.patches.Ellipse.set_clip_path"><code class="xref py py-obj docutils literal"><span class="pre">set_clip_path</span></code></a>(path[,&nbsp;transform])</td>
+<td>Set the artist&#8217;s clip path, which may be:</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_color.html#matplotlib.patches.Ellipse.set_color" title="matplotlib.patches.Ellipse.set_color"><code class="xref py py-obj docutils literal"><span class="pre">set_color</span></code></a>(c)</td>
+<td>Set both the edgecolor and the facecolor.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_contains.html#matplotlib.patches.Ellipse.set_contains" title="matplotlib.patches.Ellipse.set_contains"><code class="xref py py-obj docutils literal"><span class="pre">set_contains</span></code></a>(picker)</td>
+<td>Replace the contains test used by this artist.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_ec.html#matplotlib.patches.Ellipse.set_ec" title="matplotlib.patches.Ellipse.set_ec"><code class="xref py py-obj docutils literal"><span class="pre">set_ec</span></code></a>(color)</td>
+<td>alias for set_edgecolor</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_edgecolor.html#matplotlib.patches.Ellipse.set_edgecolor" title="matplotlib.patches.Ellipse.set_edgecolor"><code class="xref py py-obj docutils literal"><span class="pre">set_edgecolor</span></code></a>(color)</td>
+<td>Set the patch edge color</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_facecolor.html#matplotlib.patches.Ellipse.set_facecolor" title="matplotlib.patches.Ellipse.set_facecolor"><code class="xref py py-obj docutils literal"><span class="pre">set_facecolor</span></code></a>(color)</td>
+<td>Set the patch face color</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_fc.html#matplotlib.patches.Ellipse.set_fc" title="matplotlib.patches.Ellipse.set_fc"><code class="xref py py-obj docutils literal"><span class="pre">set_fc</span></code></a>(color)</td>
+<td>alias for set_facecolor</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_figure.html#matplotlib.patches.Ellipse.set_figure" title="matplotlib.patches.Ellipse.set_figure"><code class="xref py py-obj docutils literal"><span class="pre">set_figure</span></code></a>(fig)</td>
+<td>Set the <a class="reference internal" href="matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure"><code class="xref py py-class docutils literal"><span class="pre">Figure</span></code></a> instance the artist belongs to.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_fill.html#matplotlib.patches.Ellipse.set_fill" title="matplotlib.patches.Ellipse.set_fill"><code class="xref py py-obj docutils literal"><span class="pre">set_fill</span></code></a>(b)</td>
+<td>Set whether to fill the patch</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_gid.html#matplotlib.patches.Ellipse.set_gid" title="matplotlib.patches.Ellipse.set_gid"><code class="xref py py-obj docutils literal"><span class="pre">set_gid</span></code></a>(gid)</td>
+<td>Sets the (group) id for the artist</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_hatch.html#matplotlib.patches.Ellipse.set_hatch" title="matplotlib.patches.Ellipse.set_hatch"><code class="xref py py-obj docutils literal"><span class="pre">set_hatch</span></code></a>(hatch)</td>
+<td>Set the hatching pattern</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_joinstyle.html#matplotlib.patches.Ellipse.set_joinstyle" title="matplotlib.patches.Ellipse.set_joinstyle"><code class="xref py py-obj docutils literal"><span class="pre">set_joinstyle</span></code></a>(s)</td>
+<td>Set the patch joinstyle</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_label.html#matplotlib.patches.Ellipse.set_label" title="matplotlib.patches.Ellipse.set_label"><code class="xref py py-obj docutils literal"><span class="pre">set_label</span></code></a>(s)</td>
+<td>Set the label to <em>s</em> for auto legend.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_linestyle.html#matplotlib.patches.Ellipse.set_linestyle" title="matplotlib.patches.Ellipse.set_linestyle"><code class="xref py py-obj docutils literal"><span class="pre">set_linestyle</span></code></a>(ls)</td>
+<td>Set the patch linestyle</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_linewidth.html#matplotlib.patches.Ellipse.set_linewidth" title="matplotlib.patches.Ellipse.set_linewidth"><code class="xref py py-obj docutils literal"><span class="pre">set_linewidth</span></code></a>(w)</td>
+<td>Set the patch linewidth in points</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_ls.html#matplotlib.patches.Ellipse.set_ls" title="matplotlib.patches.Ellipse.set_ls"><code class="xref py py-obj docutils literal"><span class="pre">set_ls</span></code></a>(ls)</td>
+<td>alias for set_linestyle</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_lw.html#matplotlib.patches.Ellipse.set_lw" title="matplotlib.patches.Ellipse.set_lw"><code class="xref py py-obj docutils literal"><span class="pre">set_lw</span></code></a>(lw)</td>
+<td>alias for set_linewidth</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_path_effects.html#matplotlib.patches.Ellipse.set_path_effects" title="matplotlib.patches.Ellipse.set_path_effects"><code class="xref py py-obj docutils literal"><span class="pre">set_path_effects</span></code></a>(path_effects)</td>
+<td>set path_effects, which should be a list of instances of</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_picker.html#matplotlib.patches.Ellipse.set_picker" title="matplotlib.patches.Ellipse.set_picker"><code class="xref py py-obj docutils literal"><span class="pre">set_picker</span></code></a>(picker)</td>
+<td>Set the epsilon for picking used by this artist</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_rasterized.html#matplotlib.patches.Ellipse.set_rasterized" title="matplotlib.patches.Ellipse.set_rasterized"><code class="xref py py-obj docutils literal"><span class="pre">set_rasterized</span></code></a>(rasterized)</td>
+<td>Force rasterized (bitmap) drawing in vector backend output.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_sketch_params.html#matplotlib.patches.Ellipse.set_sketch_params" title="matplotlib.patches.Ellipse.set_sketch_params"><code class="xref py py-obj docutils literal"><span class="pre">set_sketch_params</span></code></a>([scale,&nbsp;length,&nbsp;randomness])</td>
+<td>Sets the sketch parameters.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_snap.html#matplotlib.patches.Ellipse.set_snap" title="matplotlib.patches.Ellipse.set_snap"><code class="xref py py-obj docutils literal"><span class="pre">set_snap</span></code></a>(snap)</td>
+<td>Sets the snap setting which may be:</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_transform.html#matplotlib.patches.Ellipse.set_transform" title="matplotlib.patches.Ellipse.set_transform"><code class="xref py py-obj docutils literal"><span class="pre">set_transform</span></code></a>(t)</td>
+<td>Set the <code class="xref py py-class docutils literal"><span class="pre">Transform</span></code> instance used by this artist.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_url.html#matplotlib.patches.Ellipse.set_url" title="matplotlib.patches.Ellipse.set_url"><code class="xref py py-obj docutils literal"><span class="pre">set_url</span></code></a>(url)</td>
+<td>Sets the url for the artist</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_visible.html#matplotlib.patches.Ellipse.set_visible" title="matplotlib.patches.Ellipse.set_visible"><code class="xref py py-obj docutils literal"><span class="pre">set_visible</span></code></a>(b)</td>
+<td>Set the artist&#8217;s visiblity.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.set_zorder.html#matplotlib.patches.Ellipse.set_zorder" title="matplotlib.patches.Ellipse.set_zorder"><code class="xref py py-obj docutils literal"><span class="pre">set_zorder</span></code></a>(level)</td>
+<td>Set the zorder for the artist.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.update.html#matplotlib.patches.Ellipse.update" title="matplotlib.patches.Ellipse.update"><code class="xref py py-obj docutils literal"><span class="pre">update</span></code></a>(props)</td>
+<td>Update the properties of this <code class="xref py py-class docutils literal"><span class="pre">Artist</span></code> from the dictionary <em>prop</em>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.update_from.html#matplotlib.patches.Ellipse.update_from" title="matplotlib.patches.Ellipse.update_from"><code class="xref py py-obj docutils literal"><span class="pre">update_from</span></code></a>(other)</td>
+<td>Updates this <a class="reference internal" href="matplotlib.patches.Patch.html#matplotlib.patches.Patch" title="matplotlib.patches.Patch"><code class="xref py py-class docutils literal"><span class="pre">Patch</span></code></a> from the properties of <em>other</em>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attributes">
+<h2>12.2.9.2. Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.aname.html#matplotlib.patches.Ellipse.aname" title="matplotlib.patches.Ellipse.aname"><code class="xref py py-obj docutils literal"><span class="pre">aname</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.axes.html#matplotlib.patches.Ellipse.axes" title="matplotlib.patches.Ellipse.axes"><code class="xref py py-obj docutils literal"><span class="pre">axes</span></code></a></td>
+<td>The <a class="reference internal" href="matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><code class="xref py py-class docutils literal"><span class="pre">Axes</span></code></a> instance the artist resides in, or <em>None</em>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.fill.html#matplotlib.patches.Ellipse.fill" title="matplotlib.patches.Ellipse.fill"><code class="xref py py-obj docutils literal"><span class="pre">fill</span></code></a></td>
+<td>return whether fill is set</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.mouseover.html#matplotlib.patches.Ellipse.mouseover" title="matplotlib.patches.Ellipse.mouseover"><code class="xref py py-obj docutils literal"><span class="pre">mouseover</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.stale.html#matplotlib.patches.Ellipse.stale" title="matplotlib.patches.Ellipse.stale"><code class="xref py py-obj docutils literal"><span class="pre">stale</span></code></a></td>
+<td>If the artist is &#8216;stale&#8217; and needs to be re-drawn for the output to match the internal state of the artist.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.validCap.html#matplotlib.patches.Ellipse.validCap" title="matplotlib.patches.Ellipse.validCap"><code class="xref py py-obj docutils literal"><span class="pre">validCap</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.patches.Ellipse.validJoin.html#matplotlib.patches.Ellipse.validJoin" title="matplotlib.patches.Ellipse.validJoin"><code class="xref py py-obj docutils literal"><span class="pre">validJoin</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.patches.Ellipse.zorder.html#matplotlib.patches.Ellipse.zorder" title="matplotlib.patches.Ellipse.zorder"><code class="xref py py-obj docutils literal"><span class="pre">zorder</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -711,10 +626,10 @@ zorder: any number</dd>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="matplotlib.patches.Ellipse.axes.html" class="btn btn-neutral float-right" title="12.2.9.1. matplotlib.patches.Ellipse.axes" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="matplotlib.patches.Ellipse.__init__.html" class="btn btn-neutral float-right" title="12.2.9.1.1. matplotlib.patches.Ellipse.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="matplotlib.patches.ConnectionStyle.register.html" class="btn btn-neutral" title="12.2.8.3. matplotlib.patches.ConnectionStyle.register" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="matplotlib.patches.ConnectionStyle.register.html" class="btn btn-neutral" title="12.2.8.1.3. matplotlib.patches.ConnectionStyle.register" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

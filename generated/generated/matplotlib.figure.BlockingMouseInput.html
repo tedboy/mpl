@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>8.2.8. matplotlib.figure.BlockingMouseInput &mdash; Matplotlib API 1 documentation</title>
+  <title>8.2.8. matplotlib.figure.BlockingMouseInput &mdash; My Project v1</title>
   
 
   
@@ -30,9 +30,10 @@
   
 
   
-    <link rel="top" title="Matplotlib API 1 documentation" href="../../index.html"/>
+    <link rel="top" title="My Project v1" href="../../index.html"/>
         <link rel="up" title="8. matplotlib.figure" href="../matplotlib.figure.html"/>
-        <link rel="prev" title="8.2.7.6. matplotlib.figure.BlockingKeyMouseInput.post_event" href="matplotlib.figure.BlockingKeyMouseInput.post_event.html"/> 
+        <link rel="next" title="8.2.8.1.1. matplotlib.figure.BlockingMouseInput.__init__" href="matplotlib.figure.BlockingMouseInput.__init__.html"/>
+        <link rel="prev" title="8.2.7.1.7. matplotlib.figure.BlockingKeyMouseInput.post_event" href="matplotlib.figure.BlockingKeyMouseInput.post_event.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -51,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Matplotlib API
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -102,19 +103,8 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.BboxTransformTo.html">8.2.6. matplotlib.figure.BboxTransformTo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.BlockingKeyMouseInput.html">8.2.7. matplotlib.figure.BlockingKeyMouseInput</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">8.2.8. matplotlib.figure.BlockingMouseInput</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.BlockingMouseInput.add_click.html">8.2.8.1. matplotlib.figure.BlockingMouseInput.add_click</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.BlockingMouseInput.add_event.html">8.2.8.2. matplotlib.figure.BlockingMouseInput.add_event</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.BlockingMouseInput.cleanup.html">8.2.8.3. matplotlib.figure.BlockingMouseInput.cleanup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.BlockingMouseInput.key_event.html">8.2.8.4. matplotlib.figure.BlockingMouseInput.key_event</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.BlockingMouseInput.mouse_event.html">8.2.8.5. matplotlib.figure.BlockingMouseInput.mouse_event</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.BlockingMouseInput.mouse_event_add.html">8.2.8.6. matplotlib.figure.BlockingMouseInput.mouse_event_add</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.BlockingMouseInput.mouse_event_pop.html">8.2.8.7. matplotlib.figure.BlockingMouseInput.mouse_event_pop</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.BlockingMouseInput.mouse_event_stop.html">8.2.8.8. matplotlib.figure.BlockingMouseInput.mouse_event_stop</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.BlockingMouseInput.on_event.html">8.2.8.9. matplotlib.figure.BlockingMouseInput.on_event</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.BlockingMouseInput.pop.html">8.2.8.10. matplotlib.figure.BlockingMouseInput.pop</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.BlockingMouseInput.pop_click.html">8.2.8.11. matplotlib.figure.BlockingMouseInput.pop_click</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.BlockingMouseInput.pop_event.html">8.2.8.12. matplotlib.figure.BlockingMouseInput.pop_event</a></li>
-<li class="toctree-l4"><a class="reference internal" href="matplotlib.figure.BlockingMouseInput.post_event.html">8.2.8.13. matplotlib.figure.BlockingMouseInput.post_event</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">8.2.8.1. Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#attributes">8.2.8.2. Attributes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.Figure.html">8.2.9. matplotlib.figure.Figure</a></li>
@@ -126,7 +116,6 @@
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.SubplotParams.html">8.2.15. matplotlib.figure.SubplotParams</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.Text.html">8.2.16. matplotlib.figure.Text</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.TransformedBbox.html">8.2.17. matplotlib.figure.TransformedBbox</a></li>
-<li class="toctree-l3"><a class="reference internal" href="matplotlib.figure.itemgetter.html">8.2.18. matplotlib.figure.itemgetter</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../matplotlib.figure.html#exceptions">8.3. Exceptions</a></li>
@@ -177,7 +166,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Matplotlib API</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -227,7 +216,6 @@
             
   <div class="section" id="matplotlib-figure-blockingmouseinput">
 <h1>8.2.8. matplotlib.figure.BlockingMouseInput<a class="headerlink" href="#matplotlib-figure-blockingmouseinput" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="matplotlib.figure.BlockingMouseInput.__init__.html#matplotlib.figure.BlockingMouseInput.__init__" title="matplotlib.figure.BlockingMouseInput.__init__"><code class="xref py py-func docutils literal"><span class="pre">BlockingMouseInput.__init__()</span></code></a></p>
 <dl class="class">
 <dt id="matplotlib.figure.BlockingMouseInput">
 <em class="property">class </em><code class="descclassname">matplotlib.figure.</code><code class="descname">BlockingMouseInput</code><span class="sig-paren">(</span><em>fig</em>, <em>mouse_add=1</em>, <em>mouse_pop=3</em>, <em>mouse_stop=2</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/blocking_input.html#BlockingMouseInput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.figure.BlockingMouseInput" title="Permalink to this definition">¶</a></dt>
@@ -236,15 +224,23 @@ blocking way.</p>
 <p>This class will also retrieve keyboard clicks and treat them like
 appropriate mouse clicks (delete and backspace are like mouse button 3,
 enter is like mouse button 2 and all others are like mouse button 1).</p>
-<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="matplotlib.figure.BlockingMouseInput.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>fig</em>, <em>mouse_add=1</em>, <em>mouse_pop=3</em>, <em>mouse_stop=2</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/matplotlib/blocking_input.html#BlockingMouseInput.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#matplotlib.figure.BlockingMouseInput.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<div class="section" id="methods">
+<h2>8.2.8.1. Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="longtable docutils">
 <colgroup>
 <col width="10%" />
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">__call__</span></code>([n,&nbsp;timeout,&nbsp;show_clicks])</td>
-<td>Blocking call to retrieve n coordinate pairs through mouse clicks.</td>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.figure.BlockingMouseInput.__init__.html#matplotlib.figure.BlockingMouseInput.__init__" title="matplotlib.figure.BlockingMouseInput.__init__"><code class="xref py py-obj docutils literal"><span class="pre">__init__</span></code></a>(fig[,&nbsp;mouse_add,&nbsp;mouse_pop,&nbsp;mouse_stop])</td>
+<td></td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="matplotlib.figure.BlockingMouseInput.add_click.html#matplotlib.figure.BlockingMouseInput.add_click" title="matplotlib.figure.BlockingMouseInput.add_click"><code class="xref py py-obj docutils literal"><span class="pre">add_click</span></code></a>(event)</td>
 <td>This add the coordinates of an event to the list of clicks</td>
@@ -287,8 +283,27 @@ enter is like mouse button 2 and all others are like mouse button 1).</p>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
+</div>
+<div class="section" id="attributes">
+<h2>8.2.8.2. Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.figure.BlockingMouseInput.button_add.html#matplotlib.figure.BlockingMouseInput.button_add" title="matplotlib.figure.BlockingMouseInput.button_add"><code class="xref py py-obj docutils literal"><span class="pre">button_add</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="matplotlib.figure.BlockingMouseInput.button_pop.html#matplotlib.figure.BlockingMouseInput.button_pop" title="matplotlib.figure.BlockingMouseInput.button_pop"><code class="xref py py-obj docutils literal"><span class="pre">button_pop</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="matplotlib.figure.BlockingMouseInput.button_stop.html#matplotlib.figure.BlockingMouseInput.button_stop" title="matplotlib.figure.BlockingMouseInput.button_stop"><code class="xref py py-obj docutils literal"><span class="pre">button_stop</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -298,8 +313,10 @@ enter is like mouse button 2 and all others are like mouse button 1).</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="matplotlib.figure.BlockingMouseInput.__init__.html" class="btn btn-neutral float-right" title="8.2.8.1.1. matplotlib.figure.BlockingMouseInput.__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="matplotlib.figure.BlockingKeyMouseInput.post_event.html" class="btn btn-neutral" title="8.2.7.6. matplotlib.figure.BlockingKeyMouseInput.post_event" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="matplotlib.figure.BlockingKeyMouseInput.post_event.html" class="btn btn-neutral" title="8.2.7.1.7. matplotlib.figure.BlockingKeyMouseInput.post_event" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
